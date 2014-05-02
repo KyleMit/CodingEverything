@@ -1,7 +1,8 @@
 ---
 title: Bootstrap Navbar Active Class with MVC
 tags: [Bootstrap, ASP.NET, MVC, Navbar, HTML, .NET]
-postID: 0
+postID: 7165478563193579153
+filePath: MVCBootstrapNavbar/MVCBootstrapNavbar.md
 ---
 
 The ASP.NET MVC project template comes with Bootstrap scaffolding by default.  And Bootstrap comes with default styling for active navbar links.  So you might find it a little odd that the ASP.NET bootstrap template does not style the active menu item by default.
@@ -115,6 +116,10 @@ There are also two StackOverflow questions that address this as well:
 You can view the full working solution on GitHub in both VB and C#
 
 https://github.com/KyleMit/CodingEverything/tree/master/MVCBootstrapNavbar
+
+----
+
+[Permalink to article](http://www.codingeverything.com/2014/05/mvcbootstrapactivenavbar.html) - Published with markdown via [stackedit.io](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/KyleMit/CodingEverything/master/MVCBootstrapNavbar/MVCBootstrapNavbar.md)
 
 
 [HtmlHelper]: http://msdn.microsoft.com/en-us/library/system.web.mvc.htmlhelper(v=vs.118).aspx
