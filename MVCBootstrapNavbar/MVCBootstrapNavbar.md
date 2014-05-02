@@ -106,10 +106,7 @@ You'll notice that the login pages do not highlight when you navigate to the def
 
 [Chris Way][@ChrisJWay] has a great blog post on [Setting the active link in a Twitter Bootstrap Navbar in ASP.NET MVC][chrisdotnet]. He comes up with a single method to generate the `<li>` element and the `<a>` element nested inside of it since there is largely redundant routing info.  I've opted away from that for maximal flexibility as it locks you into a single method for producing links, but it does provide a terser inline syntax if that's all you need to do.
 
-There are also two StackOverflow questions that address this as well:
-
-* [How to add `active` class to `Html.ActionLink` in ASP.NET MVC][SO 1]
-* [Twitter bootstrap nav in asp.net application active class?][SO 2]
+Also, a lot of the basis for this code was taken from the StackOverflow question [How to add `active` class to `Html.ActionLink` in ASP.NET MVC][SO Question]
 
 ###Source Code:
 
@@ -120,7 +117,6 @@ https://github.com/KyleMit/CodingEverything/tree/master/MVCBootstrapNavbar
 ----
 
 [Permalink to article](http://www.codingeverything.com/2014/05/mvcbootstrapactivenavbar.html) - Published with markdown via [stackedit.io](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/KyleMit/CodingEverything/master/MVCBootstrapNavbar/MVCBootstrapNavbar.md)
-
 
 [HtmlHelper]: http://msdn.microsoft.com/en-us/library/system.web.mvc.htmlhelper(v=vs.118).aspx
 [ViewContext]: http://msdn.microsoft.com/en-us/library/system.web.mvc.viewcontext(v=vs.118).aspx
@@ -134,5 +130,4 @@ https://github.com/KyleMit/CodingEverything/tree/master/MVCBootstrapNavbar
 [@ChrisJWay]: https://twitter.com/ChrisJWay
 [chrisdotnet]: http://chrisondotnet.com/2012/08/setting-active-link-twitter-bootstrap-navbar-aspnet-mvc/
 
-[SO 1]: http://stackoverflow.com/q/20410623/1366033
-[SO 2]: http://stackoverflow.com/q/12017493/1366033
+[SO Question]: http://stackoverflow.com/q/20410623/1366033
