@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" > 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    {# Favicons #}
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/fav/favicon-16x16.png">
+    <link rel="mask-icon" href="/assets/images/icons/fav/safari-pinned-tab.svg" color="#00843d">
+    <meta name="msapplication-TileColor" content="#00843d">
+    <meta name="msapplication-config" content="/assets/images/icons/fav/browserconfig.xml">
+    
+    {# Theme color for browser chrome (chrome android) #}
+    <meta name="theme-color" content="#00843d">
+    <link rel="manifest" href="/manifest.json">
+
+    {% set page_title = title or (renderData and renderData.title) or page.fileSlug %}
+    {% set page_thumbnail = config.baseUrl + (hero or "/assets/images/thumbnail.png") %}
+
+    {# Primary Meta Tags #}
+    <title>{{page_title}}</title>
+    <meta name="title" content="{{page_title}} | Coding Everything">
+    <meta name="description" content="{{summary}}">
+    <link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
+    
+    {# drafts never get crawled, else see config #}
+    {% if draft %}
+        <meta name="robots" content="NOINDEX">
+    {% else %}
+        <meta name="robots" content="{{config.metaRobots}}">
+   {% endif %}
+
+    {# Open Graph / Facebook #}
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
+    <meta property="og:title" content="{{page_title}} | Coding Everything">
+    <meta property="og:description" content="{{summary}}">
+    <meta property="og:image" content="{{page_thumbnail}}">
+
+    {# Twitter #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{page_title}}">
+    <meta name="twitter:description" content="{{summary}}">
+    <meta name="twitter:image" content="{{page_thumbnail}}">
+
+    {# Structured Content #}
+    {# <script type="application/ld+json">{% include ld ignore missing %}</script> #}
+    {% if ld %}
+        <script type="application/ld+json">{% include ld %}</script>
+    {% endif %}
+
+    {# Google Fonts #}
+    {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
+
+    <style type="text/css">
+        /* minimal style sheet if something goes wrong */
+        img[src$=".svg"], svg {max-width: 25px;}
+        {{ collections.bundles.style.templateContent | safe }}
+    </style>
+
+</head>
+
+{# display toc if we're on a post and we got results #}
+{% set tocHtml = content | toc | removeHash | removeParen %}
+{% set displayTOC = (tags | isPostType or toc) and tocHtml %}
+
+<body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
+
+    {# scripts to run asap #}
+    {% set js %} {% include "assets/scripts/init.js" %}{% endset %}
+    <script type="text/javascript">{{ js | jsmin | safe }}</script>
+
+
+    {# hide by default - show if offline #}
+    <div class="banner banner-dark banner-offline">
+        Offline Mode <img src="/assets/images/icons/fa/wifi-slash.svg" class="fa ml-1" alt="WiFi Disonnected">
+    </div>
+
+    <header id="header" class="header">
+        <button class="hamburger nav-toggle" type="button" id="navToggleBody" 
+                aria-haspopup="true" aria-expanded="false" aria-label="Toggle side navbar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <a href="/" aria-label="Home Page" class="brand" >
+            {% include "assets/images/ce.svg" %}
+            <span class="site-title">
+                <span class="coding">Coding </span>
+                <span class="everything">Everything</span>
+            </span>
+        </a>
+
+
+    </header>
+
+
+    <main class="content">
+        
+        {{ content | safe }}
+
+    </main>
+
+    {% if displayTOC %}
+        <aside class="toc">
+            <h3>Contents</h3>
+            {{ tocHtml | safe }}
+        </aside>    
+    {% endif %}
+    
+
+    <footer class="footer">
+        
+        
+        <ul id="footer-nav" class="nav-links">
+            <li>
+                <a class="icon-link" href="https://github.com/KyleMit/CodingEverything/tree/master/{{ page.inputPath }}">
+                    {% include "assets/images/icons/fa/edit.svg" %}
+                    Edit this Page
+                </a>
+            </li>
+            <li>
+                <a class="icon-link" href="https://github.com/KyleMit/CodingEverything/commits/master/{{ page.inputPath }}">
+                    {% include "assets/images/icons/fa/history.svg" %}
+                    View Page History
+                </a>
+            </li>
+        </ul>
+
+        <div class="copy-line">
+            <span class="copyright">&copy; Kyle Mitofsky {% year %} </span>
+        </div>
+
+    </footer>
+
+        
+    {% include "_partials/sidenav.njk" %}
+    
+    <script type="text/javascript">
+        {{ collections.bundles.script.templateContent | safe }}
+
+        {% if pageClass and 'search' in pageClass %}
+            {% set searchJs %}{% include "assets/scripts/search.js" %}{% endset %}
+            {{ searchJs | jsmin | safe }}
+        {% endif %}
+    </script>
+
+
+    {# we only need scroll spy if we have a table of contents #}
+    {% if displayTOC %}
+        <script src="/vendor/scripts/gumshoe.js"></script>
+        <script src="/assets/scripts/scroll-spy.js"></script>  
+    {% endif %}
+    
+
+
+</body>
+
+</html>

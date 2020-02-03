@@ -1,0 +1,386 @@
+/**
+ * GitHub Gist Theme
+ * Author : Anthony Attard - https://github.com/AnthonyAttard
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+ .highlight-theme-gist .hljs {
+    display: block;
+    background: white;
+    padding: 0.5em;
+    color: #333333;
+    overflow-x: auto;
+  }
+  
+  .highlight-theme-gist .hljs-comment,
+  .highlight-theme-gist .hljs-meta {
+    color: #737373;
+  }
+  
+  .highlight-theme-gist .hljs-variable,
+  .highlight-theme-gist .hljs-template-variable,
+  .highlight-theme-gist .hljs-strong,
+  .highlight-theme-gist .hljs-emphasis,
+  .highlight-theme-gist .hljs-quote {
+    color: #df5000;
+  }
+  
+  .highlight-theme-gist .hljs-keyword,
+  .highlight-theme-gist .hljs-selector-tag,
+  .highlight-theme-gist .hljs-type {
+    color: #d73a49;
+  }
+  
+  .highlight-theme-gist .hljs-literal,
+  .highlight-theme-gist .hljs-symbol,
+  .highlight-theme-gist .hljs-bullet,
+  .highlight-theme-gist .hljs-attribute {
+    color: #01759c;
+  }
+  
+  .highlight-theme-gist .hljs-section,
+  .highlight-theme-gist .hljs-name {
+    color: #477742;
+  }
+  
+  .highlight-theme-gist .hljs-tag {
+    color: #333333;
+  }
+  
+  .highlight-theme-gist .hljs-title,
+  .highlight-theme-gist .hljs-attr,
+  .highlight-theme-gist .hljs-selector-id,
+  .highlight-theme-gist .hljs-selector-class,
+  .highlight-theme-gist .hljs-selector-attr,
+  .highlight-theme-gist .hljs-selector-pseudo {
+    color: #6f42c1;
+  }
+  
+  .highlight-theme-gist .hljs-addition {
+    color: #55a532;
+    background-color: #eaffea;
+  }
+  
+  .highlight-theme-gist .hljs-deletion {
+    color: #bd2c00;
+    background-color: #ffecec;
+  }
+  
+  .highlight-theme-gist .hljs-link {
+    text-decoration: underline;
+  }
+  
+  .highlight-theme-gist .hljs-number {
+    color: #005cc5;
+  }
+  
+  .highlight-theme-gist .hljs-string {
+    color: #032f62;
+  }
+  
+  /*
+  
+  github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+  
+  */
+  
+  .highlight-theme-github .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #333;
+    background: #f8f8f8;
+  }
+  
+  .highlight-theme-github .hljs-comment,
+  .highlight-theme-github .hljs-quote {
+    color: #998;
+    font-style: italic;
+  }
+  
+  .highlight-theme-github .hljs-keyword,
+  .highlight-theme-github .hljs-selector-tag,
+  .highlight-theme-github .hljs-subst {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .highlight-theme-github .hljs-number,
+  .highlight-theme-github .hljs-literal,
+  .highlight-theme-github .hljs-variable,
+  .highlight-theme-github .hljs-template-variable,
+  .highlight-theme-github .hljs-tag .hljs-attr {
+    color: #016d6d;
+  }
+  
+  .highlight-theme-github .hljs-string,
+  .highlight-theme-github .hljs-doctag {
+    color: #d14;
+  }
+  
+  .highlight-theme-github .hljs-title,
+  .highlight-theme-github .hljs-section,
+  .highlight-theme-github .hljs-selector-id {
+    color: #900;
+    font-weight: bold;
+  }
+  
+  .highlight-theme-github .hljs-subst {
+    font-weight: normal;
+  }
+  
+  .highlight-theme-github .hljs-type,
+  .highlight-theme-github .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold;
+  }
+  
+  .highlight-theme-github .hljs-tag,
+  .highlight-theme-github .hljs-name,
+  .highlight-theme-github .hljs-attribute,
+  .highlight-theme-github .hljs-attr {
+    color: #000080;
+    font-weight: normal;
+  }
+  
+  .highlight-theme-github .hljs-regexp,
+  .highlight-theme-github .hljs-link {
+    color: #009926;
+  }
+  
+  .highlight-theme-github .hljs-symbol,
+  .highlight-theme-github .hljs-bullet {
+    color: #990073;
+  }
+  
+  .highlight-theme-github .hljs-built_in,
+  .highlight-theme-github .hljs-builtin-name {
+    color: #0086b3;
+  }
+  
+  .highlight-theme-github .hljs-meta {
+    color: #999;
+    font-weight: bold;
+  }
+  
+  .highlight-theme-github .hljs-deletion {
+    background: #fdd;
+  }
+  
+  .highlight-theme-github .hljs-addition {
+    background: #dfd;
+  }
+  
+  .highlight-theme-github .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .highlight-theme-github .hljs-strong {
+    font-weight: bold;
+  }
+  
+  /* Ocean Dark Theme */
+  /* https://github.com/gavsiu */
+  /* Original theme - https://github.com/chriskempson/base16 */
+  
+  /* Ocean Comment */
+  .highlight-theme-ocean .hljs-comment,
+  .highlight-theme-ocean .hljs-quote {
+    color: #98c1a3;
+  }
+  
+  /* Ocean Red */
+  .highlight-theme-ocean .hljs-variable,
+  .highlight-theme-ocean .hljs-template-variable,
+  .highlight-theme-ocean .hljs-tag,
+  .highlight-theme-ocean .hljs-name,
+  .highlight-theme-ocean .hljs-selector-id,
+  .highlight-theme-ocean .hljs-selector-class,
+  .highlight-theme-ocean .hljs-regexp,
+  .highlight-theme-ocean .hljs-deletion {
+    color: #e0838c;
+  }
+  
+  /* Ocean Orange */
+  .highlight-theme-ocean .hljs-number,
+  .highlight-theme-ocean .hljs-built_in,
+  .highlight-theme-ocean .hljs-builtin-name,
+  .highlight-theme-ocean .hljs-literal,
+  .highlight-theme-ocean .hljs-type,
+  .highlight-theme-ocean .hljs-params,
+  .highlight-theme-ocean .hljs-meta,
+  .highlight-theme-ocean .hljs-link {
+    color: #d08770;
+  }
+  
+  /* Ocean Yellow */
+                         .hljs-attribute,
+                         .hljs-attr
+  .highlight-theme-ocean .hljs-attribute,
+  .highlight-theme-ocean .hljs-attr {
+    color: #ebcb8b;
+  }
+  
+  /* Ocean Green */
+                         .hljs-string,
+                         .hljs-symbol,
+                         .hljs-bullet,
+                         .hljs-addition,
+  .highlight-theme-ocean .hljs-string,
+  .highlight-theme-ocean .hljs-symbol,
+  .highlight-theme-ocean .hljs-bullet,
+  .highlight-theme-ocean .hljs-addition {
+    color: #a3be8c;
+  }
+  
+  /* Ocean Blue */
+                         .hljs-title,
+                         .hljs-section,
+  .highlight-theme-ocean .hljs-title,
+  .highlight-theme-ocean .hljs-section {
+    color: #8fa1b3;
+  }
+  
+  /* Ocean Purple */
+                         .hljs-keyword,
+                         .hljs-selector-tag,
+  .highlight-theme-ocean .hljs-keyword,
+  .highlight-theme-ocean .hljs-selector-tag {
+    color: #b48ead;
+  }
+
+                         .hljs,
+  .highlight-theme-ocean .hljs {
+    display: block;
+    overflow-x: auto;
+    background: #2b303b;
+    color: #d6dae0;
+    padding: 0.5em;
+  }
+
+                         .hljs-emphasis,
+  .highlight-theme-ocean .hljs-emphasis {
+    font-style: italic;
+  }
+                         .hljs-strong,
+  .highlight-theme-ocean .hljs-strong {
+    font-weight: bold;
+  }
+  
+  /*
+   * Visual Studio 2015 dark style
+   * Author: Nicolas LLOBERA <nllobera@gmail.com>
+   */
+  
+   .highlight-theme-vs .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #1E1E1E;
+    color: #DCDCDC;
+  }
+  
+  .highlight-theme-vs .hljs-keyword,
+  .highlight-theme-vs .hljs-literal,
+  .highlight-theme-vs .hljs-symbol,
+  .highlight-theme-vs .hljs-name {
+    color: #569CD6;
+  }
+  .highlight-theme-vs .hljs-link {
+    color: #569CD6;
+    text-decoration: underline;
+  }
+  
+  .highlight-theme-vs .hljs-built_in,
+  .highlight-theme-vs .hljs-type {
+    color: #4EC9B0;
+  }
+  
+  .highlight-theme-vs .hljs-number,
+  .highlight-theme-vs .hljs-class {
+    color: #B8D7A3;
+  }
+  
+  .highlight-theme-vs .hljs-string,
+  .highlight-theme-vs .hljs-meta-string {
+    color: #D69D85;
+  }
+  
+  .highlight-theme-vs .hljs-regexp,
+  .highlight-theme-vs .hljs-template-tag {
+    color: #9A5334;
+  }
+  
+  .highlight-theme-vs .hljs-subst,
+  .highlight-theme-vs .hljs-function,
+  .highlight-theme-vs .hljs-title,
+  .highlight-theme-vs .hljs-params,
+  .highlight-theme-vs .hljs-formula {
+    color: #DCDCDC;
+  }
+  
+  .highlight-theme-vs .hljs-comment,
+  .highlight-theme-vs .hljs-quote {
+    color: #57A64A;
+    font-style: italic;
+  }
+  
+  .highlight-theme-vs .hljs-doctag {
+    color: #608B4E;
+  }
+  
+  .highlight-theme-vs .hljs-meta,
+  .highlight-theme-vs .hljs-meta-keyword,
+  .highlight-theme-vs .hljs-tag {
+    color: #9B9B9B;
+  }
+  
+  .highlight-theme-vs .hljs-variable,
+  .highlight-theme-vs .hljs-template-variable {
+    color: #BD63C5;
+  }
+  
+  .highlight-theme-vs .hljs-attr,
+  .highlight-theme-vs .hljs-attribute,
+  .highlight-theme-vs .hljs-attr,
+  .highlight-theme-vs .hljs-builtin-name {
+    color: #9CDCFE;
+  }
+  
+  .highlight-theme-vs .hljs-section {
+    color: gold;
+  }
+  
+  .highlight-theme-vs .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .highlight-theme-vs .hljs-strong {
+    font-weight: bold;
+  }
+  
+  /*.hljs-code {
+    font-family:'Monospace';
+  }*/
+  
+  .highlight-theme-vs .hljs-bullet,
+  .highlight-theme-vs .hljs-selector-tag,
+  .highlight-theme-vs .hljs-selector-id,
+  .highlight-theme-vs .hljs-selector-class,
+  .highlight-theme-vs .hljs-selector-attr,
+  .highlight-theme-vs .hljs-selector-pseudo {
+    color: #D7BA7D;
+  }
+  
+  .highlight-theme-vs .hljs-addition {
+    background-color: #144212;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .highlight-theme-vs .hljs-deletion {
+    background-color: #600;
+    display: inline-block;
+    width: 100%;
+  }
+  

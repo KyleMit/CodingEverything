@@ -1,0 +1,259 @@
+/* fira */
+
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Light.woff2') format('woff2'),
+      url("/assets/fonts/FiraCode-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2'),
+      url("/assets/fonts/FiraCode-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2'),
+      url("/assets/fonts/FiraCode-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Bold.woff2') format('woff2'),
+      url("/assets/fonts/FiraCode-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fira Code VF';
+    src: url('/assets/fonts/FiraCode-VF.woff2') format('woff2-variations'),
+         url('/assets/fonts/FiraCode-VF.woff') format('woff-variations');
+    /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+    font-weight: 300 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  /* roboto */
+  /* roboto-100normal - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100;
+    src:
+      local('Roboto Thin '),
+      local('Roboto-Thin'),
+      url('/assets/fonts/roboto-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-100.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-100italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 100;
+    src:
+      local('Roboto Thin italic'),
+      local('Roboto-Thinitalic'),
+      url('/assets/fonts/roboto-latin-100italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-100italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-300normal - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src:
+      local('Roboto Light '),
+      local('Roboto-Light'),
+      url('/assets/fonts/roboto-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-300.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-300italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 300;
+    src:
+      local('Roboto Light italic'),
+      local('Roboto-Lightitalic'),
+      url('/assets/fonts/roboto-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-300italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-400normal - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local('Roboto Regular '),
+      local('Roboto-Regular'),
+      url('/assets/fonts/roboto-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-400.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-400italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local('Roboto Regular italic'),
+      local('Roboto-Regularitalic'),
+      url('/assets/fonts/roboto-latin-400italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-400italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-500normal - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src:
+      local('Roboto Medium '),
+      local('Roboto-Medium'),
+      url('/assets/fonts/roboto-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-500.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-500italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 500;
+    src:
+      local('Roboto Medium italic'),
+      local('Roboto-Mediumitalic'),
+      url('/assets/fonts/roboto-latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-500italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-700normal - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src:
+      local('Roboto Bold '),
+      local('Roboto-Bold'),
+      url('/assets/fonts/roboto-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-700.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-700italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 700;
+    src:
+      local('Roboto Bold italic'),
+      local('Roboto-Bolditalic'),
+      url('/assets/fonts/roboto-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-700italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-900normal - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src:
+      local('Roboto Black '),
+      local('Roboto-Black'),
+      url('/assets/fonts/roboto-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-900.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* roboto-900italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 900;
+    src:
+      local('Roboto Black italic'),
+      local('Roboto-Blackitalic'),
+      url('/assets/fonts/roboto-latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/roboto-latin-900italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* noto serif */
+  /* noto-serif-400normal - latin */
+@font-face {
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local('Noto Serif Regular '),
+      local('Noto Serif-Regular'),
+      url('/assets/fonts/noto-serif-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/noto-serif-latin-400.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* noto-serif-400italic - latin */
+  @font-face {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local('Noto Serif Regular italic'),
+      local('Noto Serif-Regularitalic'),
+      url('/assets/fonts/noto-serif-latin-400italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/noto-serif-latin-400italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* noto-serif-700normal - latin */
+  @font-face {
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src:
+      local('Noto Serif Bold '),
+      local('Noto Serif-Bold'),
+      url('/assets/fonts/noto-serif-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/noto-serif-latin-700.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  /* noto-serif-700italic - latin */
+  @font-face {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 700;
+    src:
+      local('Noto Serif Bold italic'),
+      local('Noto Serif-Bolditalic'),
+      url('/assets/fonts/noto-serif-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+      url('/assets/fonts/noto-serif-latin-700italic.woff') format('woff'); /* Modern Browsers */
+  }
+  
+  

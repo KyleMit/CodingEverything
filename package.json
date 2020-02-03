@@ -1,0 +1,43 @@
+{
+    "name": "CodingEverything",
+    "version": "0.3.2",
+    "description": "A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it.",
+    "scripts": {
+        "build": "npx cross-env ELEVENTY_ENV=prod npx @11ty/eleventy",
+        "serve": "npx cross-env ELEVENTY_ENV=dev  npx @11ty/eleventy --serve",
+        "clean": "npx rimraf _site",
+        "clear-cache": "npx rimraf tweets",
+        "favicon": "npx real-favicon generate \"./tools/favicon-generator.json\" \"./tools/faviconData.json\" \"./assets/images/icons/fav\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VermontDepartmentOfHealth/docs.git"
+    },
+    "author": "VermontDepartmentOfHealth",
+    "license": "MIT",
+    "dependencies": {
+        "@11ty/eleventy": "^0.10.0",
+        "clean-css": "^4.2.1",
+        "eleventy-plugin-embed-tweet": "^0.2.0",
+        "eleventy-plugin-nesting-toc": "^1.1.0",
+        "firacode": "^2.0.0",
+        "gumshoejs": "^5.1.2",
+        "he": "^1.2.0",
+        "highlightjs": "^9.12.0",
+        "mark.js": "^8.11.1",
+        "markdown-it-anchor": "^5.2.4",
+        "markdown-it-checkbox": "^1.1.0",
+        "markdown-it-deflist": "^2.0.3",
+        "markdown-it-ins": "^3.0.0",
+        "markdown-it-mark": "^3.0.0",
+        "markdown-it-spoiler": "^1.1.1",
+        "terser": "^4.2.1",
+        "typeface-noto-serif": "0.0.72",
+        "typeface-roboto": "0.0.75",
+        "window": "^4.2.6",
+        "zip-a-folder": "0.0.10"
+    },
+    "devDependencies": {
+        "chalk": "^2.4.2"
+    }
+}

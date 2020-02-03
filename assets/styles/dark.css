@@ -1,0 +1,345 @@
+/* dark theme */
+
+body,
+.sidenav,
+.sidenav a,
+footer.footer {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+
+/* typography */
+
+body.color-theme-dark {
+    color: #dadada;
+    background: #272727;
+}
+
+.color-theme-dark h1,
+.color-theme-dark h2,
+.color-theme-dark h3 {
+    color: #dedede;
+}
+
+.color-theme-dark h1,
+.color-theme-dark .page-title,
+.color-theme-dark .post-title {
+    color: #29a6dc;
+}
+
+
+/* layout */
+
+.color-theme-dark .brand {
+    color: #049c4a;
+}
+
+.color-theme-dark .sidenav {
+    background: #02597d;
+}
+
+.color-theme-dark .sidenav a {
+    background: #02597d;
+    border-left: 4px solid #02597d;
+    color: #fff;
+}
+
+.color-theme-dark .toc a {
+    color: #b5c4c9;
+}
+
+.color-theme-dark .toc a:hover,
+.color-theme-dark .toc li.active>a {
+    color: #5db6d9;
+}
+
+.color-theme-dark .toc a::before {
+    content: "{";
+    color: #5db6d9;
+}
+
+.color-theme-dark footer.footer {
+    background: #2d2d2d;
+}
+
+.color-theme-dark .content a,
+.color-theme-dark .footer a {
+    color: #ccc;
+}
+
+.color-theme-dark.page .footer .btn,
+.color-theme-dark.page .page .btn {
+    border: 2px solid #b724b7;
+    color: #b724b7;
+}
+
+.color-theme-dark.page .content .btn:hover,
+.color-theme-dark.page .footer .btn:hover {
+    color: #d641d6;
+    border-color: #d641d6;
+    background: hsl(0, 0%, 11%);
+}
+
+
+/* elements */
+
+.color-theme-dark a>code {
+    /* transparency allows anchor background to be visible */
+    border: 1px solid rgba(72, 64, 52, 0.80);
+    background: rgba(43, 41, 37, 0.40);
+}
+
+.color-theme-dark pre>code {
+    border: none;
+    background: transparent;
+}
+
+.color-theme-dark img {
+    border: 5px solid #111;
+    box-shadow: none
+}
+
+.color-theme-dark .btn-icon img {
+    border: none;
+    box-shadow: none;
+}
+
+.color-theme-dark ins {
+    color: white;
+    background: #195027;
+    border: 1px solid #0b4c1b;
+}
+
+.color-theme-dark mark {
+    color: white;
+    background: #635b00;
+    border: 1px solid #504a00;
+}
+
+.color-theme-dark td>mark {
+    box-shadow: 0 0 0 250px #635b00;
+    border: none;
+}
+
+.color-theme-dark td>ins {
+    box-shadow: 0 0 0 250px #195027;
+    border: none;
+}
+
+.color-theme-dark blockquote {
+    border-left: 2px solid #0073a5;
+    background: #162227;
+}
+
+.color-theme-dark blockquote strong {
+    color: #0e95d0
+}
+
+.color-theme-dark code {
+    border: 1px solid #484034;
+    background: #2b2925;
+}
+
+.color-theme-dark kbd {
+    border: 1px solid #858585;
+    box-shadow: none;
+}
+
+
+/* table */
+
+.color-theme-dark table td,
+.color-theme-dark table th {
+    border-color: #5d5d5d;
+}
+
+.color-theme-dark table th {
+    background-color: hsl(148, 70%, 19%)
+}
+
+.color-theme-dark table tr:hover {
+    background-color: #080808;
+}
+
+.color-theme-dark table tr:nth-child(even) {
+    background-color: #2f2f2f;
+}
+
+.color-theme-dark .content a,
+.color-theme-dark .footer a {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), hsla(198, 100%, 37%, .3) calc(50% - 8px), hsla(198, 100%, 37%, .3) 100%);
+}
+
+
+/* search results */
+
+.color-theme-dark #search-results {
+    border: 1px solid #5f5f5f;
+    background: #1f1f1f;
+}
+
+.color-theme-dark .search-result a:hover {
+    background: #000000;
+}
+
+.color-theme-dark .search-result h2 mark,
+.color-theme-dark dt mark {
+    background: #272d2f;
+    border-radius: 2px;
+    color: #018eca;
+}
+
+.color-theme-dark button#close-search {
+    background: #383838;
+    color: white;
+}
+
+.color-theme-dark button#close-search:hover {
+    background: #505050;
+}
+
+.color-theme-dark form.search input {
+    background: #252525;
+    color: white;
+}
+
+
+/* badges */
+
+.color-theme-dark .content .tag-badge {
+    border: 1px solid #688fa0;
+    background: #313132;
+    transition: background-color .4s ease;
+}
+
+.color-theme-dark .content .tag-badge:hover {
+    background: #2e2e2f;
+}
+
+.color-theme-dark .content span.tag-badge {
+    /* unclickable */
+    background: #272727;
+    border-color: #4b6975;
+}
+
+.color-theme-dark .content span.tag-badge:hover {
+    background: #272727;
+}
+
+.color-theme-dark .category-count {
+    background: #131313;
+}
+
+.color-theme-dark .post-date {
+    color: #b7b7b7;
+}
+
+
+/* post list */
+
+.color-theme-dark .post a {
+    background-image: none;
+}
+
+.color-theme-dark .post a:hover {
+    background: rgba(62, 73, 77, 0.2)
+}
+
+.color-theme-dark .post .post-title {
+    color: #e5f4fa;
+}
+
+.color-theme-dark .post a .post-title {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), hsla(198, 100%, 37%, .2) calc(50% - 8px), hsla(198, 100%, 37%, .2) 100%);
+}
+
+.color-theme-dark .post a:hover .post-title {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), hsla(198, 100%, 37%, .4) calc(50% - 8px), hsla(198, 100%, 37%, .4) 100%);
+}
+
+.color-theme-dark .post a .post-title:hover {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), hsla(198, 100%, 37%, .4) calc(50% - 8px), hsla(198, 100%, 37%, .4) 100%);
+}
+
+
+/* settings */
+
+.color-theme-dark .themes :checked+span {
+    background: #3e527d;
+    border-left: 2px solid #2565f9;
+}
+
+.color-theme-dark .themes label:hover span {
+    background: #3e527d;
+}
+
+
+/* alerts */
+
+.color-theme-dark .alert.alert-warn {
+    background: #593a00;
+    border: 1px solid #7e5100;
+    color: #faf9f7;
+}
+
+.color-theme-dark .alert.alert-warn a {
+    color: #faf9f7;
+}
+
+.color-theme-dark .alert-warn b {
+    color: #f9cc7a;
+}
+
+.color-theme-dark .alert.alert-warn a,
+.color-theme-dark .alert.alert-warn a:hover {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 4px), #704f01 calc(50% - 8px), #704f01 100%);
+}
+
+
+/* tweets */
+
+.color-theme-dark .tweet-card a,
+.color-theme-dark .tweet-card a:hover {
+    background-image: none;
+}
+
+.color-theme-dark blockquote.tweet-card {
+    border: 1px solid grey;
+    background: #162227;
+}
+
+.color-theme-dark .tweet-card:hover {
+    border-color: #9a9ea0;
+}
+
+.color-theme-dark .tweet-card {
+    color: #d6d6d6;
+}
+
+.color-theme-dark .tweet-card a {
+    color: #3b94d9;
+}
+
+.color-theme-dark .tweet-card a:hover {
+    color: #55acee;
+}
+
+.color-theme-dark .tweet-header .tweet-author-name {
+    color: white
+}
+
+.color-theme-dark .tweet-header .tweet-author-name:hover {
+    color: #55acee
+}
+
+.color-theme-dark .tweet-header .tweet-author-handle {
+    color: #8899a6;
+}
+
+.color-theme-dark .tweet-header .tweet-author-handle:hover {
+    color: #a8b3bb;
+}
+
+.color-theme-dark .tweet-footer .tweet-like:hover {
+    color: #e0245e;
+}

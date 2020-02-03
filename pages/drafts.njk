@@ -1,0 +1,36 @@
+---
+layout: default.njk
+title: "Drafts"
+draft: true
+eleventyExcludeFromCollections: true
+permalink: "drafts/index.html"
+summary: "Some (hidden) works in progress"
+---
+
+<h1 class="page-title">
+  {{title}}
+</h1>
+
+<div class="hero">
+{% include "assets/images/undraw_source_code.svg" %}
+</div>
+
+<div class="alert alert-warn">
+  These posts are in <b>Draft Mode</b> and will not be indexed or show up in search.
+</div>
+
+{% set postList = collections.drafts | reverse %}
+{% include "_partials/postList.njk" %}
+
+
+
+<style type="text/css">
+.hero {
+    text-align: center;
+}
+.hero svg {
+    width: 50%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+</style>

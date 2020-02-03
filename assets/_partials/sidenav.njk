@@ -1,0 +1,30 @@
+<nav class="sidenav">
+
+    <button class="hamburger times nav-toggle" type="button" id="navToggleSide" 
+            aria-haspopup="true" aria-expanded="false" aria-label="Toggle side navbar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+
+    <ul class="list-unstyled">
+        <li><a href="/" class='{{ "active" if "/" == page.url }}'>{% include "assets/images/icons/fa/home.svg" %} Home</a></li>
+        <li class="divider"></li>
+        <li><a href="/tags/" class='{{ "active" if "/tags/" in page.url }}'>{% include "assets/images/icons/fa/tags.svg" %} Tags</a></li>
+        <li><a href="/archive/" class='{{ "active" if "/archive/" == page.url }}'>{% include "assets/images/icons/fa/archive.svg" %} Archives</a></li>
+        <li class="divider"></li>
+        <li><a href="/readme.md/" class='{{ "active" if "/readme.md/" == page.url }}'>{% include "assets/images/icons/fa/book-user.svg" %} ReadMe</a></li>
+        <li><a href="/admin/" class='{{ "active" if "/admin/" in page.url }}'>{% include "assets/images/icons/fa/file-edit.svg" %} CMS</a></li>
+        {% if config.ELEVENTY_ENV == 'dev' %}
+            {# Only Display Drafts during local dev #}
+            <li class="divider"></li>
+            <li><a href="/drafts/" class='{{ "active" if "/drafts/" in page.url }}'>{% include "assets/images/icons/fa/digging.svg" %} Drafts</a></li>
+            <li><a href="/notes/" class='{{ "active" if "/notes/" in page.url }}'>{% include "assets/images/icons/fa/sticky-note.svg" %} Notes</a></li>
+        {% endif %}
+        <li class="divider"></li>
+        <li><a href="https://github.com/KyleMit/CodingEverything/issues/">{% include "assets/images/icons/fa/bullhorn.svg" %} Feedback</a></li>
+        <li><a href="https://github.com/KyleMit/CodingEverything">{% include "assets/images/icons/fa/github.svg" %} Source</a></li>
+        <li class="spacer"></li>
+        <li><a href="/settings/">{% include "assets/images/icons/fa/cog.svg" %} Settings</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,15 @@
+---
+layout: default.njk
+title: "All Posts"
+permalink: "archive/index.html"
+summary: "A complete listing of all posts and pages"
+---
+
+
+<h1 class="page-title">
+  {{title}}
+</h1>
+
+{% set postList = collections.published | reverse %}
+{% include "_partials/postList.njk" %}
+

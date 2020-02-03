@@ -1,0 +1,40 @@
+---
+layout: default.njk
+title:  "Sorry, Not Found"
+summary: "Sorry, we couldn't find that page for some reason"
+eleventyExcludeFromCollections: true
+permalink: "404.html"
+pageClass: search
+---
+
+
+<h1 class="page-title">{{title}}</h1>
+
+<p>
+Sorry, we couldn't find the page you were looking for, but you can <a href="/archive/">explore all pages</a> or try our search below:
+</p>
+
+{% include "_partials/search.njk" %}
+
+<div class="hero">
+{% include "assets/images/undraw_not_found.svg" %}
+</div>
+
+
+
+<style type="text/css">
+.hero {
+    margin-top: 2em;
+}
+.hero svg {
+    height: 404px;
+}
+</style>
+
+<script type="text/javascript">
+// prefill search box with path text
+var path = window.location.pathname;
+var text = path.replace("/posts/","").replace("index.html","").replace(".html","").replace(/[/-]/g," ").trim();
+var search = document.getElementById("input-search");
+search.value = text;
+</script>

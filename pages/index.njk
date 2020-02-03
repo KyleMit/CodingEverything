@@ -1,0 +1,31 @@
+---
+layout: default.njk
+title: "Home Page"
+permalink: "index.html"
+summary: "A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it."
+pageClass: 'search'
+---
+
+
+<section class="intro">
+A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it.
+</section>
+
+        
+{% include "_partials/search.njk" %}
+
+<div class="page-title-section mt-1">
+  <h1 class="page-title my-1 ">
+    Recent posts
+  </h1>
+
+  {% include "_partials/displayDensity.njk" %}
+</div>
+
+{% set postList = collections.published | reverse | take(10) %}
+{% include "_partials/postList.njk" %}
+
+{% if collections.published.length > 10 %}
+  <hr>
+  <h3>Showing latest 10 of {{collections.published.length}} - <a href="/archive/">View All Archives</a></h3>
+{% endif %}

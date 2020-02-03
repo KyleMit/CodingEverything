@@ -1,0 +1,21 @@
+---
+layout: default.njk
+pagination:
+  data: taglist
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag.name }}/
+renderData:
+  title: Tagged "{{ tag.name }}"
+---
+<h2><a href="/tags/"> {% include "assets/images/icons/fa/arrow-left.svg" %} All Tags</a></h2>
+
+<h1 class="page-title">Tagged “{{ tag.name }}”</h1>
+
+<section class="intro">
+  {{ tag.description }}
+</section>
+
+
+{% set postList = collections[ tag.name ] %}
+{% include "_partials/postList.njk" %}

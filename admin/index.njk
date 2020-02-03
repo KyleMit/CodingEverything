@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex">
+  <title>Content Manager</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    body.page {
+        background: #fffef9;
+    }
+    div#nc-root {
+        margin-left: 225px;
+    }
+    
+/* sidenav */
+.sidenav {
+  background: #0171a1;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 225px;
+  overflow-x: hidden;
+  padding: 0;
+  z-index: 10;
+  transition: left .3s ease;
+}
+
+.sidenav ul {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 10px 0px;
+}
+
+.sidenav a {
+  color: #e8f6fd;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #0171a1;
+  border-left: 4px solid #0171a1;
+  transition: color .4s ease, border-left-color .4s ease;
+}
+
+.sidenav a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.sidenav a:hover,
+.sidenav a.active {
+  color: #ffffff;
+  border-left-color: #9ae1ff;
+}
+
+.sidenav .divider {
+  height: 1px;
+  min-height: 1px; /* prevent sub-pixel rendering */
+  background: #ffffff33;
+  margin: 5px 18px;
+}
+.sidenav .spacer {
+  flex-grow: 1;
+}
+
+button#navToggleSide {
+    display: none;
+}
+[class*='AppMainContainer'] > [class*='EditorContainer'],
+[class*='AppMainContainer'] > [class*='EditorContainer'] > [class*='ToolbarContainer'] {
+    margin-left: 225px;
+    width: calc(100% - 225px);
+
+}
+
+
+  </style>
+</head>
+<body class="page">
+
+    {% include "_partials/sidenav.njk" %}
+
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@2.9.7/dist/netlify-cms.js"></script>
+  <script>
+      CMS.registerPreviewStyle("/assets/styles/styles.css");
+      CMS.registerPreviewStyle("/assets/styles/fonts.css");
+      CMS.registerPreviewStyle("/assets/styles/hljs.css");
+      CMS.registerPreviewStyle("/assets/styles/preview.css");
+  </script>
+</body>
+</html>

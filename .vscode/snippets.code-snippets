@@ -1,0 +1,32 @@
+{
+    "Frontmatter for Post" : {
+        "prefix": ["frontmatter-post"],
+        "description": "Adds yaml frontmatter for posts",
+        "body": [
+            "---",
+            "title: '${2:Engaging Post Title}'",
+            "summary: '${3:Post description (1 to 2 sentences)}'",
+            "tags: ['post', '${4:tag}']",
+            "authors: ['${5:Your_Name}']",
+            "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+            "draft: ${6|true,false|}",
+            "---",
+            "",
+            "$0"
+
+        ],
+        "scope": "markdown,nunjucks"
+    },
+    "Escape Nunjucks" : {
+        "prefix": "escape-nunjucks",
+        "description": "Wraps current block in nunjcuks raw block",
+        "body": [
+            "<!-- {% raw %} -->",
+            "",
+            "$TM_SELECTED_TEXT",
+            "",
+            "<!-- {% endraw %} -->"
+        ],
+        "scope": "markdown,nunjucks",
+    }
+}

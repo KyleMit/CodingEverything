@@ -1,0 +1,8 @@
+[
+    {"name": "workforce", "description": "For posts about workforce development, onboarding, hiring, training, and managing professional talent"},
+    {"name": "overview", "description": "An overview of products, services, technologies, or domain specific knowledge"},
+    {"name": "how-to", "description": "Step by step instructions on how to install an application, configure your machine, or any other walkthroughs"},
+    {"name": "process", "description": "Detailing our current process workflows for planning, prioritizing, development, and maintenance"},
+    {"name": "redgate", "description": "For posts about using various Redgate tools and features"},
+    {"name": "sql", "description": "Info, tips, and deep dives into SQL syntax and queries"}
+]

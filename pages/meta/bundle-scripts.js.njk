@@ -1,0 +1,18 @@
+---
+permalink: "assets/scripts/bundle.js"
+---
+
+{# capture the JS content as a Nunjucks variable #}
+{% set js %}
+    {% include "assets/scripts/polyfill.js" %}
+    {% include "assets/scripts/nav-toggle.js" %}
+    {% include "assets/scripts/settings-highlight-theme.js" %}
+    {% include "assets/scripts/settings-color-scheme.js" %}
+    {% include "assets/scripts/register-service-worker.js" %}
+    {% include "assets/scripts/offline.js" %}
+    {% include "assets/scripts/copy-snippet.js" %}
+    {% include "assets/scripts/site.js" %}
+{% endset %}
+
+{# feed it through our cssmin filter to minify #}
+{{ js | jsmin | safe }}
