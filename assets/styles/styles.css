@@ -105,7 +105,7 @@ main.content {
 /* sidenav */
 
 .sidenav {
-    background: #453ccb;
+    background: #562bbd;
     color: white;
     position: fixed;
     top: 0;
@@ -132,8 +132,8 @@ main.content {
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    background: #453ccb;
-    border-left: 4px solid #453ccb;
+    background: #562bbd;
+    border-left: 4px solid #562bbd;
     transition: color .4s ease, border-left-color .4s ease;
 }
 
@@ -306,7 +306,7 @@ h1,
 .page-title {
     font-size: 2.1rem;
     font-weight: bold;
-    color: #453ccb;
+    color: #562bbd;
     text-decoration: none;
 }
 
@@ -728,12 +728,38 @@ header.header {
     transition: .4s ease color;
 }
 
+.site-title {
+    margin-top: -4px;
+    line-height: 1;
+}
+
 .site-title .coding {
     color: #f4177f;
+    font-family: 'Fira Code', monospace;
+    font-size: .95em;
+    display: inline-block;
 }
 
 .site-title .everything {
-    color: #453ccb;
+    color: #562bbd;
+    display: inline-block;
+    font-style: italic;
+}
+
+.coding .letter {
+    display: inline-block;
+    font-size: 1.7em;
+    transform: scaleX(0.75)translate(8px, 4px);
+}
+
+.coding .word {
+    background: linear-gradient(to right, #f4177f, #562bbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.everything .letter {
+    font-size: 1.3em;
 }
 
 .brand svg:hover,
@@ -746,21 +772,6 @@ header.header {
     height: 55px;
     width: 55px;
     margin: 0px 20px;
-}
-
-.site-title {
-    margin-top: -4px;
-    margin-left: 1rem;
-}
-
-.site-title .doc {
-    color: #5b9676;
-    font-size: 0.7em;
-    transform: scaleX(0.8);
-}
-
-.site-title .gov {
-    font-size: 1.1em;
 }
 
 
@@ -1517,12 +1528,12 @@ td>mark {
 }
 
 .highlight-theme-ocean .hljs *::-moz-selection {
-    background: #453ccb;
+    background: #562bbd;
     /* WebKit/Blink Browsers */
 }
 
 .highlight-theme-ocean .hljs * ::selection {
-    background: #453ccb;
+    background: #562bbd;
     /* WebKit/Blink Browsers */
 }
 
