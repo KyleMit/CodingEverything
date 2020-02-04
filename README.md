@@ -10,7 +10,8 @@ permalink: 'readme.md/index.html'
 
 A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9f4b70bd-ec3e-4e7e-b036-4446fbcd4b74/deploy-status)](https://app.netlify.com/sites/open-sourced/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c235c25-e00e-4445-b3c1-b215b14df0e8/deploy-status)](https://app.netlify.com/sites/codingeverything/deploys)
+
 
 ## Powered By
 
