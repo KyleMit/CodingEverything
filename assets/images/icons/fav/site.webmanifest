@@ -1,6 +1,6 @@
 {
-    "name": "Doc Gov",
-    "short_name": "Doc Gov",
+    "name": "Coding Everything",
+    "short_name": "Coding Everything",
     "icons": [
         {
             "src": "/assets/images/icons/fav/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#03a64f",
-    "background_color": "#03a64f",
+    "theme_color": "#562bbd",
+    "background_color": "#562bbd",
     "display": "standalone"
 }

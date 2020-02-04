@@ -30,9 +30,9 @@
         },
         "androidChrome": {
             "pictureAspect": "noChange",
-            "themeColor": "#03a64f",
+            "themeColor": "#562bbd",
             "manifest": {
-                "name": "Doc Gov",
+                "name": "Coding Everything",
                 "display": "standalone",
                 "orientation": "notSet",
                 "onConflict": "override",
@@ -45,7 +45,7 @@
         },
         "safariPinnedTab": {
             "pictureAspect": "silhouette",
-            "themeColor": "#03a64f"
+            "themeColor": "#562bbd"
         }
     },
     "settings": {

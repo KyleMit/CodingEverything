@@ -1,5 +1,5 @@
 // update in service-worker.js
-var CACHE = 'doc-gov-cache-v5';
+var CACHE = 'coding-everything-cache-v5';
 
 
 if ('serviceWorker' in navigator) {

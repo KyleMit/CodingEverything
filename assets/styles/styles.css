@@ -106,6 +106,7 @@ main.content {
 
 .sidenav {
     background: #562bbd;
+    background: linear-gradient(180deg, #562bbd 66%, #090979 100%);
     color: white;
     position: fixed;
     top: 0;
@@ -132,8 +133,7 @@ main.content {
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    background: #562bbd;
-    border-left: 4px solid #562bbd;
+    border-left: 4px solid transparent;
     transition: color .4s ease, border-left-color .4s ease;
 }
 
@@ -743,7 +743,6 @@ header.header {
 .site-title .everything {
     color: #562bbd;
     display: inline-block;
-    font-style: italic;
 }
 
 .coding .letter {
@@ -762,10 +761,8 @@ header.header {
     font-size: 1.3em;
 }
 
-.brand svg:hover,
-.brand .site-title:hover .doc,
-.brand .site-title:hover .gov {
-    color: hsla(148, 97%, 33%, 1);
+.everything .word {
+    font-style: italic;
 }
 
 .brand svg {
@@ -1409,7 +1406,7 @@ td>mark {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 280px) {
     .word {
         display: none;
     }
@@ -1567,7 +1564,7 @@ aside::-webkit-scrollbar {
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #0a4b67;
+    background: #381884;
 }
 
 

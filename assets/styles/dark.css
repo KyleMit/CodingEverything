@@ -24,24 +24,19 @@ body.color-theme-dark {
 .color-theme-dark h1,
 .color-theme-dark .page-title,
 .color-theme-dark .post-title {
-    color: #29a6dc;
+    color: #874aff;
 }
 
 
 /* layout */
 
-.color-theme-dark .brand {
-    color: #049c4a;
+.color-theme-dark .site-title .everything {
+    color: #874aff;
 }
 
 .color-theme-dark .sidenav {
-    background: #02597d;
-}
-
-.color-theme-dark .sidenav a {
-    background: #02597d;
-    border-left: 4px solid #02597d;
-    color: #fff;
+    background: #36128c;
+    background: linear-gradient(180deg, #36128c 66%, #060652 100%);
 }
 
 .color-theme-dark .toc a {

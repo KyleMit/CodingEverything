@@ -20,6 +20,7 @@ async function main() {
             let input = `${inputDir}/${dir}`
             let output = `${outputDir}/${inputDir}/${dir}.zip`
             await zipFolder.zip(input, output);
+            console.log(`Writing ${output}`)
         })
 
     } catch (error) {
@@ -37,16 +38,3 @@ async function getDirs(path) {
     }
     return dirs
 }
-
-
-
-
-
-
-// loop through top level folders in 
-
-// zip each
-
-// create output dir
-
-// move zipped folders to output

@@ -3,9 +3,10 @@
     "version": "0.3.2",
     "description": "A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it.",
     "scripts": {
-        "build": "npx cross-env ELEVENTY_ENV=prod npx @11ty/eleventy",
+        "build": "npm run zip && npx cross-env ELEVENTY_ENV=prod npx @11ty/eleventy",
         "serve": "npx cross-env ELEVENTY_ENV=dev  npx @11ty/eleventy --serve",
         "clean": "npx rimraf _site",
+        "zip": "node ./utilities/zip-samples.js",
         "clear-cache": "npx rimraf tweets",
         "favicon": "npx real-favicon generate \"./tools/favicon-generator.json\" \"./tools/faviconData.json\" \"./assets/images/icons/fav\""
     },

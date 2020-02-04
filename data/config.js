@@ -8,7 +8,7 @@ const DEFAULT_DEV_URL = 'http://localhost:8080';
 
 module.exports = {
 
-    PROD_DOMAIN: "docgov.dev",
+    PROD_DOMAIN: "codingeverything.com",
 
     ELEVENTY_ENV: process.env.ELEVENTY_ENV,
 
@@ -23,7 +23,7 @@ module.exports = {
      * Base URL (protocol, domain)
      * For when fully qualified urls are needed.  
      * https://www.netlify.com/docs/continuous-deployment/#environment-variables
-     * Values:  https://docgov.dev/ | 
+     * Values:  http://www.codingeverything.com/ | 
      *          https://5d7c35838fe05f0008d062e5--open-sourced.netlify.com/
      *          https://deploy-preview-x--open-sourced.netlify.com/ |
      *          https://branch--open-sourced.netlify.com | 
