@@ -61,7 +61,7 @@ I worked up what I hope to be an interesting sample of the different methods by 
 
 The form loads by default to only handle the CellValueChanged event itself, which means we will immediately notice the problem at hand.  Changing the active status for a given person will not fire the event until some other object on the form is clicked and receives focus.  Anytime a grid event is handled, a notification will pop-up and fade out.  This helps identify when, and in what order, events are being handled without explicitly having to set breakpoints and wait for the code to catch each event. 
 
-![](https://i.imgur.com/3q1kaKz.png)
+![cell value changed example](https://i.imgur.com/3q1kaKz.png)
 
 In the options group box, you can choose to include event handlers notifications or not.  Also, the drop down list will add / remove handlers so you can easily test out which handlers do what without having to specifically comment out lines of code.
 

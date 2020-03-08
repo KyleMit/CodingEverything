@@ -12,12 +12,12 @@ In Windows 7, MS Outlook seems to be horribly bad at popping up calendar reminde
 ### Step By Step
 
 - **1)**   Hit the Windows Key and type "certificate"
-      *   ![](https://i.imgur.com/jEKNPo6.png)
+      *   ![digital certificate](https://i.imgur.com/jEKNPo6.png)
 - **2)**  Select Digital Certificate for VBA Projects and type in a name for your certificate and hit OK
-      *   ![](https://i.imgur.com/BblTAWZ.png)
+      *   ![create digital certificate](https://i.imgur.com/BblTAWZ.png)
 - **3)** Open Outlook 2010 and Hit <kbd>Alt</kbd> + <kbd>F11</kbd> to start the VBA editor
 - **4)**  In the Project Pane on the left, Expand `Project1` > `Microsoft Outlook Objects` > and double click on `ThisOutlookSession`
-      *   ![](https://i.imgur.com/mlxcL8B.png)
+      *   ![VBA ThisOutlookSession](https://i.imgur.com/mlxcL8B.png)
 - **5)** Paste in the following code exactly:
 
 ```vb
@@ -72,18 +72,18 @@ End Sub
 ```
 
 - **6)**  Sign the Macro by going to Tools > Digital Signature and clicking Choose
-      *   ![](https://i.imgur.com/RcGS2hs.png)
+      *   ![digital signature](https://i.imgur.com/RcGS2hs.png)
 - **7)**  Select the certificate you created earlier and hit OK
-      *   ![](https://i.imgur.com/CDJzfrG.png)
+      *   ![select a certificate](https://i.imgur.com/CDJzfrG.png)
 - **8)** Select OK again, hit <kbd>Ctrl</kbd> + <kbd>S</kbd> to save and exit the VBA window
 -  **9)** To Enable Macros, Go to File > Options and select Trust Center from the left window
-      *   ![](https://i.imgur.com/9SP6oqC.png)
+      *   ![Enable Macros](https://i.imgur.com/9SP6oqC.png)
 - **10)** Run the Trust center by clicking the Trust Center Settings button on the right.
 - **11)** From the Trust Center, select  Macro Settings, and select "Notifications for digitally signed macros, all other macros disabled" and hit OK
-      *   ![](https://i.imgur.com/r9pQ1Pi.png)
+      *   ![Macros Settings](https://i.imgur.com/r9pQ1Pi.png)
 - **12)** Exit Outlook -  It will ask you if you want to save the project, click Yes
 - **13)** Start Outlook - It will give you a security notice.  Select "Trust all documents from this publisher" (You can first confirm that you are the publisher by selecting "Show Signature Details")
-      *   ![](https://i.imgur.com/nD4t5CE.png)
+      *   ![Trust all documents](https://i.imgur.com/nD4t5CE.png)
 - **14)** That’s it!  You’re all set.  You never have to touch any of that code again or miss another meeting (unintentionally)
 
 **UPDATE!**
