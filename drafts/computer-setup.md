@@ -53,7 +53,6 @@ Look Up Computer Stats:
 * [Fiddler](https://www.telerik.com/fiddler)
 * [Postman](https://www.postman.com/)
 
-
 ### DB
 
 * [SQL Server Management Studio (SSMS) 18.4](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
@@ -69,7 +68,7 @@ Look Up Computer Stats:
 ### CLIs
 
 * [DotNet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
-* [Azure CLI]()
+* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows)
 
 ### Image Editing
 
@@ -77,7 +76,6 @@ Look Up Computer Stats:
 * [Paint.NET](https://www.getpaint.net/)
 * [Gimp](https://www.gimp.org/)
 * [Inkscape](https://inkscape.org/)
-
 
 ### Browsers
 
@@ -134,23 +132,25 @@ Look Up Computer Stats:
 [Samsung Dex](https://www.samsung.com/global/galaxy/apps/samsung-dex/)
 [Slack](https://slack.com/downloads/windows)
 
-pluralisght
-hulu
-netlfix
-pandora
+## Video
+
+[Pluralisght](https://www.pluralsight.com/product/downloads)
+[Hulu](https://www.microsoft.com/en-us/p/hulu/9wzdncrfj3l1)
+[Netlfix](https://www.microsoft.com/en-us/p/netflix/9wzdncrfj3tj)
+[Pandora](https://www.microsoft.com/en-us/p/pandora/9wzdncrfj46v)
 
 ## Web Apps
 
-* Github
-* Gist
-* StackOverflow
-* jsFiddle
-* CodePen
-* SQL Fiddle
-* dotNet Fiddle
-* Azure Portal
-* AWS Console
-* Office 365
+* [Github](https://github.com/KyleMit)
+* [Gist](https://gist.github.com/KyleMit)
+* [StackOverflow](https://stackoverflow.com/users/1366033/kylemit)
+* [jsFiddle](http://jsfiddle.net/user/KyleMit/fiddles/)
+* [CodePen](https://codepen.io/KyleMit)
+* [SQL Fiddle](http://sqlfiddle.com/)
+* [.NET Fiddle](https://dotnetfiddle.net/Account/MyFiddles)
+* [Azure Portal](https://portal.azure.com/)
+* [AWS Console](https://aws.amazon.com/)
+* [Office 365](https://outlook.office365.com/)
 
 ## Configuration
 
@@ -159,13 +159,16 @@ pandora
 Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) Extension which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
 
 
-Merge in https://gist.github.com/KyleMit/26d1996a1270eff609db57c41d79a506
-
-Getting code CLI to work
-
-
-
 #### VS Code Extensions
+
+[List extensions](https://stackoverflow.com/a/34339780/1366033)
+
+```bash
+for ext in bierner.github-markdown-preview bierner.markdown-checkbox bierner.markdown-emoji bierner.markdown-preview-github-styles bierner.markdown-yaml-preamble bungcip.better-toml cbrevik.toggle-format-on-save christian-kohler.npm-intellisense christian-kohler.path-intellisense cssho.vscode-svgviewer DavidAnson.vscode-markdownlint DotJoshJohnson.xml eamodio.gitlens EditorConfig.EditorConfig eg2.tslint esbenp.prettier-vscode eseom.nunjucks-template evilz.vscode-reveal fabianlauer.vs-code-xml-format fabiospampinato.vscode-open-in-github HookyQR.beautify ionutvmi.path-autocomplete ionutvmi.reg joaompinto.asciidoctor-vscode johnpapa.vscode-peacock KnisterPeter.vscode-github lextudio.restructuredtext lonefy.vscode-JS-CSS-HTML-formatter lukas-tr.materialdesignicons-intellisense mdickin.markdown-shortcuts mgmcdermott.vscode-language-babel mhutchie.git-graph mikeburgh.xml-format mikestead.dotenv ms-azuretools.vscode-azurefunctions ms-azuretools.vscode-azurestorage ms-azuretools.vscode-docker ms-dotnettools.csharp ms-mssql.mssql ms-python.python ms-vscode-remote.remote-wsl ms-vscode.azure-account ms-vscode.Go ms-vscode.powershell ms-vscode.vscode-typescript-tslint-plugin msjsdiag.debugger-for-chrome naumovs.theme-oceanicnext neilding.language-liquid octref.vetur pflannery.vscode-versionlens rebornix.ruby redhat.vscode-xml redhat.vscode-yaml richie5um2.vscode-sort-json shakram02.bash-beautify Shan.code-settings-sync shd101wyy.markdown-preview-enhanced slevesque.vscode-autohotkey streetsidesoftware.code-spell-checker tomoki1207.pdf vscode-icons-team.vscode-icons wingrunr21.vscode-ruby wix.glean yzhang.markdown-all-in-one
+do
+  code --install-extension $ext
+done
+```
 
 ##### IDE Enhancements
 
@@ -176,15 +179,60 @@ Getting code CLI to work
 * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 * [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 * [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+* [Github Markdown Preview](bierner.github-markdown-preview)
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+* [Markdown Emoji](bierner.markdown-emoji)
 * [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+* [Markdown Shortcuts](mdickin.markdown-shortcuts)
+* [Material Design Icons Intellisense](lukas-tr.materialdesignicons-intellisense)
+* [NPM Intellisense](christian-kohler.npm-intellisense)
 * [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete)
+* [Path Intellisense](christian-kohler.path-intellisense)
 * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-* [VSCode Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
-* [VSCode pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
+* [Remote WSL](ms-vscode-remote.remote-wsl)
+* [Sort JSON](https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json)
+* [Theme Oceanic Next](naumovs.theme-oceanicnext)
+* [Toggle Format on Save](cbrevik.toggle-format-on-save)
 * [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+* [VSCode Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+* [VSCode Open-in-github](fabiospampinato.vscode-open-in-github)
+* [VSCode pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
+* [VSCode Peacock](johnpapa.vscode-peacock)
+* [VSCode Reveal](evilz.vscode-reveal)
+* [VSCode svgviewer](cssho.vscode-svgviewer)
+* [VSCode Versionlens](pflannery.vscode-versionlens)
 
 
+##### Language Support
+
+* [AsciiDoc](https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode)
+* [AutoHotkey](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-autohotkey)
+* [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+* [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+* [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+* [Go](ms-vscode.Go)
+* [Java](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+* [Liquid](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
+* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+* [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+* [Markdown YAML Preamble](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-preamble)
+* [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template)
+* [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell)
+* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+* [REG](https://marketplace.visualstudio.com/items?itemName=ionutvmi.reg)
+* [RestructuredText](lextudio.restructuredtext)
+* [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.ruby)
+* [SQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+* [TSLint](eg2.tslint)
+* [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+* [VSCode JS-CSS-HTML-formatter](lonefy.vscode-JS-CSS-HTML-formatter)
+* [VSCode Language-babel](mgmcdermott.vscode-language-babel)
+* [VSCode Ruby](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby)
+* [XML Format](https://marketplace.visualstudio.com/items?itemName=mikeburgh.xml-format)
+* [XML Formatter](https://marketplace.visualstudio.com/items?itemName=fabianlauer.vs-code-xml-format)
+* [xml](DotJoshJohnson.xml)
+* [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
+* [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 
 ##### App Tool chain
@@ -192,46 +240,12 @@ Getting code CLI to work
 * [Azure Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)
 * [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 * [Azure Storage](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+* [Debugger for Chrome](msjsdiag.debugger-for-chrome)
+* [Glean](wix.glean)
 * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+* [VSCode Docker](ms-azuretools.vscode-docker)
+* [VSCode Github](KnisterPeter.vscode-github)
 
-
-##### Language Support
-
-* [AsciiDoc](https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode)
-* [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
-* [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
-* [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-* [Java](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-* [Liquid](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
-* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-* [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-* [Markdown YAML Preamble](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-preamble)
-* [SQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
-* [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template)
-
-* [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell)
-* [XML Formatter](https://marketplace.visualstudio.com/items?itemName=fabianlauer.vs-code-xml-format)
-* [AutoHotkey](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-autohotkey)
-
-* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-* [REG](https://marketplace.visualstudio.com/items?itemName=ionutvmi.reg)
-* [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.ruby)
-
-* [VSCode Ruby](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby)
-* [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
-* [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
-* [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
-* [XML Format](https://marketplace.visualstudio.com/items?itemName=mikeburgh.xml-format)
-
-
-
-##### Remove
-
-* [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
-* [vscode-java-dependency](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
-* [vscode-java-pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-* [vscode-java-test](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
-* [vscode-maven](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
 
 
 #### VS Code Settings
@@ -240,56 +254,85 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 
 ```json file=settings.json
 {
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "window.restoreWindows": "none",
+    /* editor */
+    "editor.accessibilitySupport": "off",
+    "editor.cursorBlinking": "smooth",
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
-    "window.zoomLevel": 1,
-    "python.jediEnabled": false,
+    "editor.renderWhitespace": "selection",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    "explorer.confirmDelete": false,
+    "emmet.includeLanguages": {
+        "njk": "html",
+        "nunjucks": "html"
+    },
+    "files.associations": {
+        "*.htm": "html",
+        "*.njk": "njk",
+        "*.npmrc": "ini"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true
+    },
+    "files.insertFinalNewline": true,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 1,
+
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
     "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "vscode-icons",
+
+    "zenMode.centerLayout": false,
+
+    /* languages */
+    "html.suggest.html5": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "python.jediEnabled": false,
+
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.associations": {
-        "*.htm": "html"
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.iconTheme": "vscode-icons",
-    "editor.renderWhitespace": "selection",
-    "emmet.includeLanguages": {
-        "nunjucks": "html",
-        "njk": "html"
+    "[njk]": {
+        "editor.defaultFormatter": "eseom.nunjucks-template"
     },
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "editor.minimap.enabled": false,
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "cSpell.userWords": [
-        "automagically",
-        "destructured",
-        "eleventy",
-        "promisify",
-        "shortcode",
-        "walkthrough"
+
+    /* extensions */
+    "peacock.affectActivityBar": false,
+    "sync.gist": "9e22c8ecf6d7f5504edbfffe6dce6dcf",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vsicons.associations.files": [
+        {
+            "extensions": [
+                "njk"
+            ],
+            "format": "svg",
+            "icon": "nunjucks"
+        }
     ],
-    "editor.accessibilitySupport": "off",
-    "[javascript]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    }
+    "vsicons.dontShowNewVersionMessage": true
 }
 ```
 
@@ -449,9 +492,9 @@ clip < ~/.ssh/id_rsa.pub
 [Clone all repos from GitHub](https://gist.github.com/KyleMit/6ae40d4b39167112c675a8b8d744b93b)
 
 ```bash
-curl -s https://api.github.com/users/kylemit/repos?per_page=1000 |jq -r '.[]|.clone_url' |xargs -L1 git clone
-curl -s https://api.github.com/orgs/vtcodecamp/repos?per_page=1000 |jq -r '.[]|.clone_url' |xargs -L1 git clone
-curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=1000 |jq -r '.[]|.clone_url' |xargs -L1 git clone
+curl -s https://api.github.com/users/kylemit/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
+curl -s https://api.github.com/orgs/vtcodecamp/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
+curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
 ```
 
 ### SourceTree
@@ -460,7 +503,14 @@ Set KDiff as source diffing tool
 
 ![Source Tree Diff Tool](/assets/posts/computer-setup/source-tree-diff.png)
 
+[Setup SSH with Sourcetree on Windows](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
+
 ### Windows Terminal Config
+
+Notes.md
+Profile.json
+git.ico
+desktop.png
 
 ### Bash Config
 
@@ -473,6 +523,7 @@ You can [customize the prompt](https://gist.github.com/KyleMit/c491b1ad3985d654f
 ### Powershell Profile
 
 ### NPM
+
 
 [Prefer Offline](https://twitter.com/KyleMitBTV/status/1175793176461938689)
 
@@ -515,6 +566,11 @@ Install them all with:
 npm i -g @11ty/eleventy @vue/cli azure-functions-core-tools cli-real-favicon cli-slides create-react-app cross-env eleventy generator-botkit gh gitignore http-proxy-cli live-server netlify-cli npm reveal-md rimraf serve yo
 ```
 
+```bash
+npm login
+netlify login
+```
+
 eleventy-plugin-embed-tweet
 imgur-downloader
 
@@ -528,10 +584,13 @@ choco list --local-only
 
 * [jq](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
 * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
+* [hub cli](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+* [hub cli](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+
+[Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install jq
-choco install hub
+choco install jq hub firacode-ttf cascadiacode
 ```
 
 Which installs to here:
@@ -549,7 +608,7 @@ Which installs to here:
 
 #### Stylus Settings
 
-#### tampermonkey Settings
+#### Tamper Monkey Settings
 
 ### Windows Settings
 
@@ -565,11 +624,7 @@ Windows Explorer Settings
 
 ![Windows Explorer](/assets/posts/computer-setup/windows-explorer.png)
 
-#### Active Directory Users & Computers
 
-### Fonts
-
-Fira Code
 
 #### Immersive Search
 
@@ -595,3 +650,14 @@ Windows Registry Editor Version 5.00
 
 
 [archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
+
+
+<!-- 
+
+### Work 
+
+#### Active Directory Users & Computers
+
+
+
+-->
