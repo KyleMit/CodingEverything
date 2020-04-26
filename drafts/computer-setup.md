@@ -439,12 +439,16 @@ You can locate/update your git config by running with should be at the path `~/.
 git config --global --edit
 ```
 
-Notably, I like setting an external editor because I'm scared of VIM and also have a [custom alias for pair](https://gist.github.com/KyleMit/69ec21465cfd14d93e6558b90ede223b) to make setting the user info for pair sessions easier
+I like setting an external editor because I'm scared of VIM.  You can confirm the installation path of VS Code by running `which code`
 
 ```ini file=.gitconfig
 [core]
     editor = 'C:\\Users\\kyle.mitofsky\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe' -n -w
+```
 
+Also, I have a [custom alias for pair](https://gist.github.com/KyleMit/69ec21465cfd14d93e6558b90ede223b) to make setting the user info for pair sessions easier
+
+```ini file=.gitconfig
 # https://gist.github.com/KyleMit/69ec21465cfd14d93e6558b90ede223b
 [alias]
     pair = "!f() {                                                           \
