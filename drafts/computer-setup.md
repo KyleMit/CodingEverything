@@ -509,6 +509,22 @@ Set KDiff as source diffing tool
 
 [Setup SSH with Sourcetree on Windows](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
+1. In Source Tree, go to Tools > Create or Import SSH Keys
+
+    ![Create SSH Keys](/assets/posts/computer-setup/create-ssh-keys.png)
+
+2. Generate a Key, save the private .ppk file (probably in `~/.ssh/`), and copy the public key into [github ssh settings](https://github.com/settings/keys)
+
+    ![Generate SSH Key](/assets/posts/computer-setup/generate-ssh-key.png)
+
+3. In Source Tree, go to Tools > Launch SSH Agent
+
+    ![Launch SSH Agent](/assets/posts/computer-setup/launch-ssh-agent.png)
+
+4. In the system tray, open **Pageant (Putty Authentication Agent)** and view or add the private key you created
+
+    ![Pageant](/assets/posts/computer-setup/pageant.png)
+
 ### Windows Terminal Config
 
 Notes.md
