@@ -617,6 +617,11 @@ Which installs to here:
 
 `C:\ProgramData\chocolatey\lib\jq\tools\jq.exe`
 
+### DotNet CLI
+
+```bash
+dotnet tool install --global dotnet-script
+```
 
 ### Auto Hot Key Scripts
 
