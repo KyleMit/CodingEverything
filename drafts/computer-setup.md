@@ -152,7 +152,12 @@ Look Up Computer Stats:
 * [AWS Console](https://aws.amazon.com/)
 * [Office 365](https://outlook.office365.com/)
 
+
+
 ## Configuration
+
+## DotFiles
+
 
 ### VS Code Config
 
@@ -423,6 +428,8 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 ]
 ```
 
+
+
 ### Visual Studio Professional Extensions
 
 ### SSMS Settings
@@ -602,10 +609,11 @@ imgur-downloader
 choco list --local-only
 ```
 
-* [jq](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
+* [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
 * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
-* [hub cli](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
-* [hub cli](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+* [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+* [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+* [sourcetree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
 
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
@@ -635,7 +643,10 @@ dotnet tool install --global dotnet-script
 
 #### Tamper Monkey Settings
 
-### Windows Settings
+
+
+
+## Windows Settings
 
 * [How to Remove the Windows 10 Search Box from the Taskbar](https://www.groovypost.com/howto/remove-windows-10-cortana-search-taskbar/)
 
@@ -649,9 +660,12 @@ Windows Explorer Settings
 
 ![Windows Explorer](/assets/posts/computer-setup/windows-explorer.png)
 
+Remove Start Menu Suggestions
+
+![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
 
 
-#### Immersive Search
+### Immersive Search
 
 [How to Enable or Disable Floating Immersive Search Bar in Windows 10](https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html)
 
@@ -671,7 +685,7 @@ Windows Registry Editor Version 5.00
 "ImmersiveSearchFull"=dword:00000001
 ```
 
-#### Scripts
+### Scripts
 
 
 [archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
