@@ -453,6 +453,14 @@ I like setting an external editor because I'm scared of VIM.  You can confirm th
     editor = 'C:\\Users\\kyle.mitofsky\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe' -n -w
 ```
 
+[Speed up start times](https://stackoverflow.com/a/24045966/1366033)
+
+```bash
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+```
+
 Also, I have a [custom alias for pair](https://gist.github.com/KyleMit/69ec21465cfd14d93e6558b90ede223b) to make setting the user info for pair sessions easier
 
 ```ini file=.gitconfig
@@ -547,6 +555,17 @@ Download [jq](https://stedolan.github.io/jq/download/) and add to C:/libraries/
 
 You can [customize the prompt](https://gist.github.com/KyleMit/c491b1ad3985d654f07151ad2e23eed1)
 
+### Bash Profile
+
+The bash profile is launched  when run as a standalone shell and located at `~/.bash_profile`
+
+```bash
+# add bash rc if it exists
+test -f ~/.bashrc && . ~/.bashrc
+# change directory
+cd c:
+```
+
 ### Powershell Profile
 
 ### NPM
@@ -609,16 +628,19 @@ imgur-downloader
 choco list --local-only
 ```
 
-* [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
-* [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
-* [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
-* [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
-* [sourcetree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
+* Apps
+    * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
+* CLI
+    * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
+    * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
+* Fonts
+    * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+    * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
 
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install jq hub firacode-ttf cascadiacode
+choco install sourcetree jq hub firacode-ttf cascadiacode
 ```
 
 Which installs to here:
