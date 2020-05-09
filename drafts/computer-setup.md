@@ -508,6 +508,8 @@ ssh-add ~/.ssh/id_rsa
 clip < ~/.ssh/id_rsa.pub
 ```
 
+#### Clone All Github Repos
+
 [Clone all repos from GitHub](https://gist.github.com/KyleMit/6ae40d4b39167112c675a8b8d744b93b)
 
 ```bash
@@ -521,6 +523,8 @@ curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=100
 Set KDiff as source diffing tool
 
 ![Source Tree Diff Tool](/assets/posts/computer-setup/source-tree-diff.png)
+
+#### SSH 
 
 [Setup SSH with Sourcetree on Windows](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
@@ -539,6 +543,24 @@ Set KDiff as source diffing tool
 4. In the system tray, open **Pageant (Putty Authentication Agent)** and view or add the private key you created
 
     ![Pageant](/assets/posts/computer-setup/pageant.png)
+
+[Add SSH Key to Source Tree](https://community.atlassian.com/t5/Sourcetree-questions/Using-SourceTree-For-Windows-With-SSH-Keys/qaq-p/254386#M19408)
+
+> Right-click on Pageant icon (in the system tray) > Add Key and select the private key file (.ppk)
+
+#### Clone All Stash Repos
+
+[Stash Rest API](https://docs.atlassian.com/DAC/rest/stash/3.11.6/stash-rest.html#idp2971616)
+[Generate Personal Access Token](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
+[demo in jq play](https://jqplay.org/s/7GXr0QU5OY)
+
+```bash
+curl -H "Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
+     -s https://server-name/stash/rest/api/1.0/projects/VDH/repos?limit=99 | \
+jq -r '.values[].links.clone[] | select(.name=="ssh").href' | \
+xargs -L1 git clone
+```
+
 
 ### Windows Terminal Config
 
