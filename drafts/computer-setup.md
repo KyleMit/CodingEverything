@@ -52,12 +52,20 @@ Look Up Computer Stats:
 * [Docker Desktop](https://www.docker.com/products/docker-desktop)
 * [Fiddler](https://www.telerik.com/fiddler)
 * [Postman](https://www.postman.com/)
+* [Telerik Just Decomplie](https://www.telerik.com/products/decompiler.aspx)
+
 
 ### DB
 
 * [SQL Server Management Studio (SSMS) 18.4](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 * [RedGate ToolBelt](https://www.red-gate.com/products/sql-development/sql-toolbelt/)
 * [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+
+### Admin
+
+* [Wireshark](https://www.wireshark.org/)
+* [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+
 
 ### SDKs
 
@@ -669,7 +677,17 @@ Which installs to here:
 
 `C:\ProgramData\chocolatey\lib\jq\tools\jq.exe`
 
-### DotNet CLI
+
+
+### Dotnet CLI
+
+List Tool versions:
+
+```bash
+dotnet tool list -g
+```
+
+* [dotnet-script](https://github.com/filipw/dotnet-script)
 
 ```bash
 dotnet tool install --global dotnet-script
