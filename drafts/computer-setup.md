@@ -54,6 +54,9 @@ Look Up Computer Stats:
 * [Postman](https://www.postman.com/)
 * [Telerik Just Decomplie](https://www.telerik.com/products/decompiler.aspx)
 
+```
+winget install --id=Google.Chrome -e && winget install --id=Microsoft.VisualStudioCode -e && winget install --id=Microsoft.VisualStudio.Community -e && winget install --id=Notepad++.Notepad++ -e && winget install --id=Atlassian.Sourcetree -e && winget install --id=WinMerge.WinMerge -e && winget install --id=Docker.DockerDesktop -e && winget install --id=Telerik.Fiddler -e && winget install --id=Postman.Postman -e
+```
 
 ### DB
 
@@ -165,6 +168,24 @@ Look Up Computer Stats:
 ## Configuration
 
 ## DotFiles
+
+[Saving DotFiles to Github](https://dotfiles.github.io/)
+
+### Setup
+
+[Storing dotfiles with a *bare* git repo](https://www.atlassian.com/git/tutorials/dotfiles)
+
+```bash
+# create folder ~/.cfg as bare repo
+git init --bare $HOME/.cfg
+# create alias config to interact with git
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# hide untracked files
+config config --local status.showUntrackedFiles no
+# add alias to bash profile
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+```
+
 
 
 ### VS Code Config
@@ -581,9 +602,13 @@ desktop.png
 
 Bash rc file should be located at `~/.bashrc`
 
-Download [jq](https://stedolan.github.io/jq/download/) and add to C:/libraries/
-
 You can [customize the prompt](https://gist.github.com/KyleMit/c491b1ad3985d654f07151ad2e23eed1)
+
+[Retain History in VS Code](https://stackoverflow.com/a/10901227/1366033)
+
+```bash
+PROMPT_COMMAND='history -a'
+```
 
 ### Bash Profile
 
@@ -601,7 +626,7 @@ cd c:
 ### NPM
 
 
-[Prefer Offline](https://twitter.com/KyleMitBTV/status/1175793176461938689)
+During Demos, use [Prefer Offline](https://twitter.com/KyleMitBTV/status/1175793176461938689)
 
 
 ```ini file=.npmrc
@@ -726,6 +751,20 @@ Remove Start Menu Suggestions
 
 ![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
 
+### Disable Aero Shake
+
+[How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
+
+```ini file:DisableAeroShake.reg
+Windows Registry Editor Version 5.00
+
+; Created by: Walter Glenn
+; Tutorial: http://www.howtogeek.com/278996/how-to-disable-aero-shake-in-windows/
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisallowShaking"=dword:00000001
+```
+
 
 ### Immersive Search
 
@@ -735,7 +774,6 @@ Remove Start Menu Suggestions
 Windows Registry Editor Version 5.00
 
 ; Created by: Shawn Brink
-; Created on: May 4th 2019
 ; Tutorial: https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html
 
 
