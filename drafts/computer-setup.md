@@ -54,9 +54,6 @@ Look Up Computer Stats:
 * [Postman](https://www.postman.com/)
 * [Telerik Just Decomplie](https://www.telerik.com/products/decompiler.aspx)
 
-```
-winget install --id=Google.Chrome -e && winget install --id=Microsoft.VisualStudioCode -e && winget install --id=Microsoft.VisualStudio.Community -e && winget install --id=Notepad++.Notepad++ -e && winget install --id=Atlassian.Sourcetree -e && winget install --id=WinMerge.WinMerge -e && winget install --id=Docker.DockerDesktop -e && winget install --id=Telerik.Fiddler -e && winget install --id=Postman.Postman -e
-```
 
 ### DB
 
@@ -68,6 +65,7 @@ winget install --id=Google.Chrome -e && winget install --id=Microsoft.VisualStud
 
 * [Wireshark](https://www.wireshark.org/)
 * [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+* [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
 
 
 ### SDKs
@@ -78,6 +76,7 @@ winget install --id=Google.Chrome -e && winget install --id=Microsoft.VisualStud
 
 ### CLIs
 
+* [Winget CLI](https://github.com/microsoft/winget-cli)
 * [DotNet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows)
 
@@ -166,6 +165,46 @@ winget install --id=Google.Chrome -e && winget install --id=Microsoft.VisualStud
 
 
 ## Configuration
+
+## Winget
+
+```bash file:winstall.bat
+winget install --id=Atlassian.Sourcetree -e 
+winget install --id=Postman.Postman -e 
+winget install --id=Microsoft.VisualStudioCode -e 
+winget install --id=Microsoft.VisualStudio.Community -e 
+winget install --id=Notepad++.Notepad++ -e 
+winget install --id=WinMerge.WinMerge -e 
+winget install --id=Telerik.Fiddler -e 
+winget install --id=Microsoft.AzureStorageExplorer -e 
+winget install --id=Microsoft.AzureDataStudio -e 
+winget install --id=Microsoft.AzureCLI -e 
+winget install --id=WiresharkFoundation.Wireshark -e 
+winget install --id=OpenJS.Nodejs -e 
+winget install --id=Cockos.LICEcap -e 
+winget install --id=Microsoft.dotnet -e 
+winget install --id=Microsoft.dotNetFramework -e 
+winget install --id=GIMP.GIMP -e 
+winget install --id=Inkscape.Inkscape -e 
+winget install --id=Mozilla.Firefox -e 
+winget install --id=SlackTechnologies.Slack -e 
+winget install --id=Valve.Steam -e 
+winget install --id=Microsoft.Teams -e 
+winget install --id=Discord.Discord -e 
+winget install --id=OpenVPNTechnologies.OpenVPN -e 
+winget install --id=GitHub.cli -e 
+winget install --id=Microsoft.PowerBI -e 
+winget install --id=Microsoft.PowerShell -e 
+winget install --id=Microsoft.WindowsTerminal -e 
+winget install --id=MRidgers.Clink -e 
+winget install --id=Armin2208.WindowsAutoNightMode -e 
+winget install --id=7zip.7zip -e 
+winget install --id=Malwarebytes.Malwarebytes -e 
+winget install --id=VideoLAN.VLC -e 
+winget install --id=OBSProject.OBSStudio -e
+winget install --id=CPUID.CPU-Z -e
+winget install --id=Adobe.AdobeAcrobatReaderDC -e
+```
 
 ## DotFiles
 
@@ -457,7 +496,19 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 ]
 ```
 
+### VS Sync Settings
 
+`%APPDATA%\Code\User\syncLocalSettings.json`
+
+```json
+"ignoreUploadFiles": [
+    "Microsoft.NETCore.App.deps.json"
+],
+"ignoreUploadFolders": [
+    "lukas-tr.materialdesignicons-intellisense",
+    "mhutchie.git-graph"
+],
+```
 
 ### Visual Studio Professional Extensions
 
@@ -591,6 +642,7 @@ xargs -L1 git clone
 ```
 
 
+
 ### Windows Terminal Config
 
 Notes.md
@@ -718,6 +770,8 @@ dotnet tool list -g
 dotnet tool install --global dotnet-script
 ```
 
+[dotnet SDKs](https://dotnet.microsoft.com/download/visual-studio-sdks)
+
 ### Auto Hot Key Scripts
 
 ### WinMerge Settings
@@ -734,6 +788,10 @@ dotnet tool install --global dotnet-script
 
 
 ## Windows Settings
+
+[How to rename the User folder in Windows 10?](https://superuser.com/q/890812/180163)
+
+[Why Local Users and Groups is missing in Computer Management on Windows 10 Home?](https://stackoverflow.com/q/41093714/1366033)
 
 * [How to Remove the Windows 10 Search Box from the Taskbar](https://www.groovypost.com/howto/remove-windows-10-cortana-search-taskbar/)
 
