@@ -370,6 +370,9 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 }
 ```
 
+[Gitlens - hide editor actions](https://github.com/eamodio/vscode-gitlens/issues/669)
+
+[Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
 
 #### VS Code Keybindings
 
@@ -452,14 +455,51 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
     },
     {
         "key": ".",
-        "command": ""
+        "command": ""****
     }
 ]
 ```
 
+#### VS Code Snippets
+
+User [Snippets ](https://code.visualstudio.com/docs/editor/userdefinedsnippets) are stored in `%AppData%\Code\User\snippets\` with the `.code-snippets` extension or can be added to individual projects using `.\.vscode\*.code-snippets`
+
+```json file=utilities.code-snippets
+{
+    "Wrap KBD Text" : {
+        "prefix": "surround-kbd",
+        "description": "Wraps current text in kbd tag",
+        "body": [
+            "<kbd>$TM_SELECTED_TEXT</kbd>$0"
+        ],
+        "scope": "markdown",
+    }
+}
+```
+
+Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
+
+```json file=keybindings.json
+{
+    "key": "ctrl+k ctrl+b",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+        "langId": "markdown",
+        "name": "Wrap KBD Text"
+    }
+}
+```
 
 
-### Visual Studio Professional Extensions
+### Visual Studio Config
+
+#### Keybindings
+
+<kbd>Ctrl</kbd> + <kbd>P</kbd> - `Edit.GoToAll` (normally <kbd>Ctrl</kbd> + <kbd>,</kbd>)
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> - `Window.QuickLaunch` (normally <kbd>Ctrl</kbd> + <kbd>Q</kbd>)
+
+#### Extensions
 
 ### SSMS Settings
 
