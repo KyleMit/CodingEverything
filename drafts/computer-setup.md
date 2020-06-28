@@ -229,7 +229,30 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $H
 
 ### VS Code Config
 
-Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) Extension which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
+
+#### VS Code Sync
+
+Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) Extension
+
+Which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
+
+Local overrides are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
+
+```json
+"ignoreUploadFiles": [
+    /* ... */
+    "Microsoft.NETCore.App.deps.json"
+],
+"ignoreUploadFolders": [
+    /* ... */
+    "lukas-tr.materialdesignicons-intellisense",
+    "mhutchie.git-graph"
+],
+"supportedFileExtensions": [
+    /* ... */
+    "txt"
+]
+```
 
 
 #### VS Code Extensions
@@ -323,20 +346,32 @@ done
 
 #### VS Code Settings
 
+[Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
+[Configure Window Title](https://code.visualstudio.com/updates/v1_10#_configurable-window-title)
+
+```json
+{
+    "window.title": "${rootName}${separator}${activeEditorShort}${dirty}"
+}
+```
+
+// TODO embed gist using SSG
+https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf#file-settings-json
+
+
+
 Use the command palette and go to `Preferences: Open Settings (JSON)` which should update the following user settings file: `%AppData%\Code\User\settings.json`
 
 ```json file=settings.json
 {
-    /* editor */
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "smooth",
-    // "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
     "editor.renderWhitespace": "selection",
     "editor.suggestSelection": "first",
-
     "explorer.confirmDelete": false,
     "emmet.includeLanguages": {
         "njk": "html",
@@ -356,23 +391,15 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
     "files.insertFinalNewline": true,
     "git.autofetch": true,
     "git.enableSmartCommit": true,
-
     "window.restoreWindows": "none",
     "window.zoomLevel": 1,
-
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
-    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "vscode-icons",
-
     "zenMode.centerLayout": false,
-
-    /* languages */
     "html.suggest.html5": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "python.jediEnabled": false,
-
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -391,8 +418,6 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-
-    /* extensions */
     "peacock.affectActivityBar": false,
     "sync.gist": "9e22c8ecf6d7f5504edbfffe6dce6dcf",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -403,15 +428,64 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
             ],
             "format": "svg",
             "icon": "nunjucks"
+        },
+        {
+            "extensions": [
+                "kql"
+            ],
+            "format": "svg",
+            "icon": "sql"
         }
     ],
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "markdownlint.config": {
+        "MD012": false,
+    },
+    "markdown-preview-enhanced.frontMatterRenderingOption": "table",
+    "markdownShortcuts.icons.bold": false,
+    "markdownShortcuts.icons.bullets": false,
+    "markdownShortcuts.icons.italic": false,
+    "markdownShortcuts.icons.strikethrough": false,
+    "gitlens.menus": {
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "details": false,
+            "history": false,
+            "remote": false
+        },
+        "editorGroup": false,
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true,
+            "stashInline": true
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true,
+            "stash": true
+        }
+    },
+    "git-graph.showStatusBarItem": false,
+    "python.languageServer": "Microsoft"
 }
 ```
-
-[Gitlens - hide editor actions](https://github.com/eamodio/vscode-gitlens/issues/669)
-
-[Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
 
 #### VS Code Keybindings
 
@@ -499,20 +573,6 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 ]
 ```
 
-### VS Sync Settings
-
-`%APPDATA%\Code\User\syncLocalSettings.json`
-
-```json
-"ignoreUploadFiles": [
-    "Microsoft.NETCore.App.deps.json"
-],
-"ignoreUploadFolders": [
-    "lukas-tr.materialdesignicons-intellisense",
-    "mhutchie.git-graph"
-],
-```
-
 
 #### VS Code Snippets
 
@@ -544,6 +604,20 @@ Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
     }
 }
 ```
+
+
+
+#### VS Code - Spell Checker
+
+[Make it possible to store User Words into a dictionary file instead of settings.json](https://github.com/streetsidesoftware/vscode-spell-checker/issues/61)
+
+#### VS Code - GitLens
+
+[Gitlens - hide editor actions](https://github.com/eamodio/vscode-gitlens/issues/669)
+
+#### VS Code - Markdownlint
+
+[Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
 
 
 ### Visual Studio Config
