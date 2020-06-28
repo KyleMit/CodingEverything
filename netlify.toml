@@ -5,8 +5,9 @@
   # Default build command.
   command = "npm run build"
 
+# redirect from old blogger urls to new 11ty urls
 redirects = [
-  {from="/p/presentations.html", to="/pages/signed-macros/"},
+  {from="/p/presentations.html", to="/pages/presentations/"},
   {from="/2015/08/SigningMacros.html", to="/posts/signed-macros/"},
   {from="/2015/08/LinqToDataTables.html",  to="/posts/linq-to-datatables/"},
   {from="/2015/05/Excel-Repeat-Top-Row.html",  to="/posts/excel-repeat-header/"},

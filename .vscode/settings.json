@@ -134,5 +134,8 @@
     "walkthroughs",
     "wmic",
     "zampieri"
-  ]
+  ],
+  "search.exclude": {
+    "**/code-samples": true
+  }
 }

@@ -2,14 +2,15 @@
 title: Calculating Age From DOB
 tags: [post, .NET, VB.NET, Age, DateTime]
 date: 2013-05-13
+summary: "How to calculate age from date of birth; a seemingly easy task with a lot of wrong paths"
 postID: 3584771563127215105
 ---
 
-I couldn't believe there was no native way in .NET to do something alarmingly simple like calculate someone's age from their date of birth. Of all the amazing functions and properties on `DateTime` objects, this seems surprisingly non-existent. 
+I couldn't believe there was no native way in .NET to do something alarmingly simple like calculate someone's age from their date of birth. Of all the amazing functions and properties on `DateTime` objects, this seems surprisingly non-existent.
 
-For such an easy task, it's also surprisingly complex; so much so that Jeff Atwood, creator of StackOverflow, even asked that question himself [here](http://stackoverflow.com/q/9/1366033).
+For such an easy task, it's also surprisingly complex; so much so that Jeff Atwood, creator of StackOverflow, even [asked that question himself](http://stackoverflow.com/q/9/1366033).
 
-For all my (and the internet's) failed attempts, read on.  If you're just looking for something to copy and paste in that will work, grab the following code
+If you're just looking for something to copy and paste in that will work, grab the following code:
 
 ```vb
 Public Function GetCurrentAge(ByVal dob As Date) As Integer
@@ -20,9 +21,11 @@ Public Function GetCurrentAge(ByVal dob As Date) As Integer
 End Function
 ```
 
+For all my (and the internet's) failed attempts, read on.
+
 All of these methods, except the bottom one fail for various reasons:
 
-```
+```vb
 Dim dob As Date = #5/14/1994#
 Dim today As Date = #5/13/2013#
 Dim age As Integer

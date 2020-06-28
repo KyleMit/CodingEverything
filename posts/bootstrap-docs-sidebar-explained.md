@@ -122,7 +122,7 @@ First, let's give the navbar a little breathing room by giving it margins on the
 }
 ```
 
-Next, we'd like to be able to apply different formating to parent level links and child links.  CSS does not currently have a [Parent Selector][CSS Parent] which could be used to differentiate the top level links with those nested below them.  Instead, we can apply a style to all links inside of `bs-docs-sidebar` and then override that style for any list items that are children of two `ul.nav` elements.
+Next, we'd like to be able to apply different formatting to parent level links and child links.  CSS does not currently have a [Parent Selector][CSS Parent] which could be used to differentiate the top level links with those nested below them.  Instead, we can apply a style to all links inside of `bs-docs-sidebar` and then override that style for any list items that are children of two `ul.nav` elements.
 
 ```css
 /* all links */
@@ -182,7 +182,7 @@ Whenever an element is set to active (due to scrollspy) or is hovered or focused
 ```css
 /* all links */
 .bs-docs-sidebar .nav>li>a {
-    /*add trasnparent border */
+    /*add transparent border */
     border-left: 2px solid transparent;
 }
 /* active & hover links */
@@ -201,7 +201,7 @@ Let's also make active parent links have a very thick weight, and child links le
 
 ```css
 /* all active links */
-.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active>a,
 .bs-docs-sidebar .nav>.active:hover>a,
 .bs-docs-sidebar .nav>.active:focus>a {
     font-weight: 700;
