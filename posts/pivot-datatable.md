@@ -9,7 +9,7 @@ So I would have thought this problem would have already been solved by the Inter
 
 Here's a dead simple pivot table.
 
-#### Let's say I have a table that looks like this:
+#### Let's say I have a table that looks like this
 
 Person  | Age | Sport
 --------|-----|-------
@@ -17,7 +17,7 @@ Susan   | 22  | Tennis
 Bob     | 29  | Soccer
 Terry   | 16  | Basketball
 
-#### And I want to pivot it to to look like this:
+#### And I want to pivot it to to look like this
 
 Person  | Susan    | Bob    | Terry
 --------|----------|--------|--------
@@ -27,7 +27,7 @@ Sport   | Tennis   | Soccer | Basketball
 #### Here's How
 
 ```vb
-Private Function PivotTable(oldTable As DataTable, 
+Private Function PivotTable(oldTable As DataTable,
                             Optional pivotColumnOrdinal As Integer = 0
                            ) As DataTable
     Dim newTable As New DataTable
@@ -43,7 +43,7 @@ Private Function PivotTable(oldTable As DataTable,
 
     ' loop through columns
     For col = 0 To oldTable.Columns.Count - 1
-        'pivot column doen't get it's own row (it is already a header)
+        'pivot column doesn't get it's own row (it is already a header)
         If col = pivotColumnOrdinal Then Continue For
 
         ' each column becomes a new row

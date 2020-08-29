@@ -10,9 +10,9 @@ The ASP.NET MVC project template comes with Bootstrap scaffolding by default.  A
 
 **It can**, it just seems as if this functionality wasn't included out of the box:
 
-![styled navabar][styled navabar]
+![styled navbar][styled navbar]
 
-If you plan on utilizing the bootstrap's powerful navigational layout, you should definitely add styling for the current page.  It helps users keep track of where they are within the application and assists with navigation.  
+If you plan on utilizing the bootstrap's powerful navigational layout, you should definitely add styling for the current page.  It helps users keep track of where they are within the application and assists with navigation.
 
 To do so, we can add the `active` class dynamically on the shared layout by checking the current routing data.  **Here's how**:
 
@@ -68,16 +68,16 @@ We can use our extension method to insert the active class on the appropriate ac
 
 If you don't already have one, create a folder in your project named Utilities and add a `static class` (or `Module` in VB) named Utilities or Extensions.
 
-Then, we'll add an extension method called `IsActive` ontop of the [`HtmlHelper`][HtmlHelper] class.  We'll use this to return the `active` class if the passed in controller text and action text match the current route.
+Then, we'll add an extension method called `IsActive` on top of the [`HtmlHelper`][HtmlHelper] class.  We'll use this to return the `active` class if the passed in controller text and action text match the current route.
 
 To programmatically determine the current controller and action, we'll use the [`ViewContext`][ViewContext] property on our HtmlHelper object. The ViewContext exposes, among other things, a property containing the [`RouteData`][RouteData] which <q>contains a collection of URL parameter values and default values for the route</q> in its `Values` property.
 
-#### The whole thing should look like this:
+#### The whole thing should look like this
 
 ```cs
 public static class Utilities
 {
-    public static string IsActive(this HtmlHelper html, 
+    public static string IsActive(this HtmlHelper html,
                                   string control,
                                   string action)
     {
@@ -85,7 +85,7 @@ public static class Utilities
 
         var routeAction = (string)routeData.Values["action"];
         var routeControl = (string)routeData.Values["controller"];
-        
+
         // both must match
         var returnActive = control == routeControl &&
                            action == routeAction;
@@ -109,7 +109,7 @@ You'll notice that the login pages do not highlight when you navigate to the def
 
 Also, a lot of the basis for this code was taken from the StackOverflow question [How to add `active` class to `Html.ActionLink` in ASP.NET MVC][SO Question]
 
-### Source Code:
+### Source Code
 
 You can view the full working solution on GitHub in both VB and C#
 
@@ -123,7 +123,7 @@ https://github.com/KyleMit/CodingEverything/tree/master/MVCBootstrapNavbar
 [ViewContext]: http://msdn.microsoft.com/en-us/library/system.web.mvc.viewcontext(v=vs.118).aspx
 [RouteData]: http://msdn.microsoft.com/en-us/library/system.web.mvc.controllercontext.routedata(v=vs.118).aspx
 
-[styled navabar]: https://i.imgur.com/rP0Ma1z.png
+[styled navbar]: https://i.imgur.com/rP0Ma1z.png
 [solution explorer]: https://i.imgur.com/Sgt9cTu.png
 
 [Bootstrap Navbar]: http://getbootstrap.com/components/#navbar

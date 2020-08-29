@@ -18,13 +18,13 @@ In this article, we'll create two extension methods that utilize each of these s
 
 ### Create New Collection:
 
-By calling [`ToList`][ToList] on the original collection, you create a brand new collection. Then, you can loop over the new list to find items that need to be removed from the original.  Whenever you find an object that matches your removal criteria, you can safely remove it from the original collection because it is not currently being enumerated over. 
+By calling [`ToList`][ToList] on the original collection, you create a brand new collection. Then, you can loop over the new list to find items that need to be removed from the original.  Whenever you find an object that matches your removal criteria, you can safely remove it from the original collection because it is not currently being enumerated over.
 
 I think it looks pretty spiffy too:
 
 ```vb
 <Extension()>
-Public Sub RemoveEachObject(Of T)(ByVal col As Collection(Of T), 
+Public Sub RemoveEachObject(Of T)(ByVal col As Collection(Of T),
                                   ByVal match As Func(Of T, Boolean))
     For Each o As T In col.ToList()
         If match(o) Then col.Remove(o)
@@ -59,7 +59,7 @@ Console.WriteLine(String.Join(",", col))
 'Produces: 1,3
 ```
 
-This code has been written to extend `Collection(Of T)`.  You could just as easily extend `List(Of T)` as well, but the list class already exposes the method [`RemoveAll`][List.RemoveAll] which already does this same thing.  
+This code has been written to extend `Collection(Of T)`.  You could just as easily extend `List(Of T)` as well, but the list class already exposes the method [`RemoveAll`][List.RemoveAll] which already does this same thing.
 
 For more info, check out this great answer to [Remove from a List<T> within a 'foreach' loop][SO Answer].
 

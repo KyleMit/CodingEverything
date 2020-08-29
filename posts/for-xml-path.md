@@ -1,6 +1,7 @@
 ---
 title: Explanation of using FOR XML PATH('') to Concatenate Rows in SQL
 tags: [post, SQL]
+summary: "A deep dive going into the inner workings of using the FOR XML PATH hack in SQL Server to merge multiple records into a single returned value"
 date: 2013-12-08
 postID: 7400250978053358660
 ---
@@ -14,9 +15,9 @@ I'll do everything on [SQLFiddle][sqlFiddle].  You can follow along by starting 
 Start by [making a table](http://sqlfiddle.com/#!6/ce75c):
 
 ```sql
-CREATE TABLE Person 
+CREATE TABLE Person
 (
-  FirstName varchar(20), 
+  FirstName varchar(20),
   LastName varchar(20)
 );
 INSERT INTO Person
@@ -33,14 +34,14 @@ This is just a run of the mill SQL query returning 3 rows of data:
 
 ```sql
 SELECT FirstName, LastName
-FROM Person 
+FROM Person
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/6):  
+[Results](http://sqlfiddle.com/#!6/ce75c/6):
 
 <div class="preTable" ></div>
 
-FirstName | LastName 
+FirstName | LastName
 ----------|---------
 Kyle      | Mit
 Bob       | Builder
@@ -53,7 +54,7 @@ Here, the output of the Query is formatted into XML with each row represented as
 
 ```sql
 SELECT FirstName, LastName
-FROM Person 
+FROM Person
 FOR XML PATH('Person')
 ```
 
@@ -76,12 +77,12 @@ FOR XML PATH('Person')
 
 ### XML Query With Custom Named Child Nodes
 
-The name of each child node under person is determined by the final column name *(this is important later)*. When columns are selected, those are used by default, however you can manually give any column a specific name.  
+The name of each child node under person is determined by the final column name *(this is important later)*. When columns are selected, those are used by default, however you can manually give any column a specific name.
 **Note**: The name of the child nodes has changed based on our  `select` statement:
 
 ```sql
 SELECT FirstName AS First, LastName AS Last
-FROM Person 
+FROM Person
 FOR XML PATH('Person')
 ```
 
@@ -108,7 +109,7 @@ In SQL, when you perform any kind of aggregation or selection function to a colu
 
 ```sql
 SELECT ',' + LastName AS Last
-FROM Person 
+FROM Person
 FOR XML PATH('Person')
 ```
 
@@ -128,7 +129,7 @@ FOR XML PATH('Person')
 
 ### XML Query with comma and UNNAMED child node
 
-By removing the explicit naming, SQL isn't able to guess the column name. Consequently, the data is just stuffed into the Person Element.  
+By removing the explicit naming, SQL isn't able to guess the column name. Consequently, the data is just stuffed into the Person Element.
 From the FOR [XML PATH documentation][UnnamedColumn]:
 >Any column without a name will be inlined. For example, computed columns or nested scalar queries that do not specify column alias will generate columns without any name.
 
@@ -136,7 +137,7 @@ From the FOR [XML PATH documentation][UnnamedColumn]:
 
 ```sql
 SELECT ',' + LastName
-FROM Person 
+FROM Person
 FOR XML PATH('Person')
 ```
 
@@ -160,16 +161,16 @@ The command we've been using all along is [`FOR XML`][FOR XML] which has four di
 In this case, we're using [PATH][PATH], which will wrap the data elements in a parent element named for the table from which it came.  Optionally, you can add a string parameter to Path to override the root element name. The last trick:
 > If you specify a zero-length string, the wrapping element is not produced.
 
-By manually specifying the path as an empty string, all the data elements are shown right next to each other.  
+By manually specifying the path as an empty string, all the data elements are shown right next to each other.
 Note the file name: this is still returning XML (just poorly formatted XML)
 
 ```sql
 SELECT ',' + LastName
-FROM Person 
+FROM Person
 FOR XML PATH('')
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/12):  
+[Results](http://sqlfiddle.com/#!6/ce75c/12):
 
 <div class="preTable" ></div>
 
@@ -184,12 +185,12 @@ By selecting the result of the entire query, we transform the XML into a value:
 ```sql
 SELECT (
         SELECT ',' + LastName
-        FROM Person 
+        FROM Person
         FOR XML PATH('')
 )
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/13):  
+[Results](http://sqlfiddle.com/#!6/ce75c/13):
 
 <div class="preTable" ></div>
 
@@ -203,13 +204,13 @@ To remove the leading comma, we'll use [`STUFF(character_expression, start, leng
 
 ```sql
 SELECT STUFF((
-		      SELECT ',' + LastName
-		      FROM Person 
-		      FOR XML PATH('')
+              SELECT ',' + LastName
+              FROM Person
+              FOR XML PATH('')
 ), 1, 1, '')
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/14):  
+[Results](http://sqlfiddle.com/#!6/ce75c/14):
 
 <div class="preTable" ></div>
 
@@ -223,13 +224,13 @@ Finally, we'll take the whole query and make sure it's of type `VARCHAR`.  Also,
 
 ```sql
 SELECT CAST(STUFF((
-		      SELECT ',' + LastName
-		      FROM Person 
-		      FOR XML PATH('')
+              SELECT ',' + LastName
+              FROM Person
+              FOR XML PATH('')
 ), 1, 1, '') AS VARCHAR(MAX)) AS LastNames
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/15):  
+[Results](http://sqlfiddle.com/#!6/ce75c/15):
 
 <div class="preTable" ></div>
 

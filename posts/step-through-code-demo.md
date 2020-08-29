@@ -6,9 +6,9 @@ postID: 221126685864120473
 ---
 
 
-One challenge to delivering coding presentations is the trade-off between: 
+One challenge to delivering coding presentations is the trade-off between:
 
-* Showing actual **real code** that developers can get their head around 
+* Showing actual **real code** that developers can get their head around
 <li style=" list-style-type: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VS**</li>
 * The **time** it costs to actually write it in front of them (debugging missing commas included).
 
@@ -23,7 +23,7 @@ Here is one more that I will be trying out:
 
 * Utilize revision control software to have each state of the code base represented by a different commit.  Then step through the commits.
 
-If executed well, I really like this last one.  It avoids having too much information.  Especially if content is new, it can disrupt the noise to signal ratio if attendees are thrown into a world with too much code.  It also helps reduce copy and paste errors that might occur and the overall time it takes to update the code base.  The beautiful thing is that each state of the code base has a known success.  There is never the possibility that you have forgotten to uncomment *that one critical line*.  
+If executed well, I really like this last one.  It avoids having too much information.  Especially if content is new, it can disrupt the noise to signal ratio if attendees are thrown into a world with too much code.  It also helps reduce copy and paste errors that might occur and the overall time it takes to update the code base.  The beautiful thing is that each state of the code base has a known success.  There is never the possibility that you have forgotten to uncomment *that one critical line*.
 
 You can easily step back through the entire code base to rehearse.  **What's more** - so can participants when they get home.  When have you ever left a coding presentation having been able to re-create every single step performed  by the presenter?
 
@@ -35,7 +35,7 @@ I'll preface this by saying that I'm using [**GitHub**][github] as my <abbr titl
 
 Also, **I've never stepped through each revision in an entire codebase before!**
 
-It's not something that is covered by most of the use cases for revision control.  Of course, it's a perfectly acceptable use, just not one that you're likely to need when developing software.  
+It's not something that is covered by most of the use cases for revision control.  Of course, it's a perfectly acceptable use, just not one that you're likely to need when developing software.
 
 The easiest way to change your working copy to a specific version is to use:
 
@@ -109,7 +109,7 @@ In order to make this into a one liner, we'll need to wrap the query so we can p
 
 #### Adding an Alias
 
-If we're using this a lot, it might look prettier to [alias the query][git alias]. 
+If we're using this a lot, it might look prettier to [alias the query][git alias].
 We can add a new command called `child-sha` to our `local` config file like this:
 ```no-highlight
 git config --local alias.child-sha "!git rev-list HEAD..master | tail -n 1"
@@ -129,7 +129,7 @@ git checkout $(git child-sha)
 You'll be seeing a lot of this dialog:
 ![Reload Warning][Reload Warning]
 
-To avoid this, go to: 
+To avoid this, go to:
 Tools > Options > Environment > Documents > Detect when a file is changed
 And make sure `Auto-load changes` is checked:
 ![Auto Load Changes][Auto Load Changes]
@@ -137,7 +137,7 @@ And make sure `Auto-load changes` is checked:
 
 #### Conclusion:
 
-That's about it.  I'll add my presentation here when it's finished so you can see a little more concrete of an example.  
+That's about it.  I'll add my presentation here when it's finished so you can see a little more concrete of an example.
 Let me know if you give it a shot and have any experiences (good or bad).
 
 [github]: https://github.com/

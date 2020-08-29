@@ -752,7 +752,9 @@ header.header {
 }
 
 .coding .word {
+    /* https://cssgradient.io/blog/css-gradient-text/ */
     background: linear-gradient(to right, #f4177f, #562bbd);
+    /* https://github.com/microsoft/vscode/issues/101249 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1311,7 +1313,7 @@ td>mark {
 
 
 /* categories
-  * tags 
+  * tags
   * authors
   * teams
   * projects

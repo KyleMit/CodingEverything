@@ -9,7 +9,7 @@ draft: true
 
 ## Hardware
 
-<!-- 
+<!--
 
 Look Up Computer Stats:
 
@@ -169,41 +169,46 @@ Look Up Computer Stats:
 ## Winget
 
 ```bash file:winstall.bat
-winget install --id=Atlassian.Sourcetree -e 
-winget install --id=Postman.Postman -e 
-winget install --id=Microsoft.VisualStudioCode -e 
-winget install --id=Microsoft.VisualStudio.Community -e 
-winget install --id=Notepad++.Notepad++ -e 
-winget install --id=WinMerge.WinMerge -e 
-winget install --id=Telerik.Fiddler -e 
-winget install --id=Microsoft.AzureStorageExplorer -e 
-winget install --id=Microsoft.AzureDataStudio -e 
-winget install --id=Microsoft.AzureCLI -e 
-winget install --id=WiresharkFoundation.Wireshark -e 
-winget install --id=OpenJS.Nodejs -e 
-winget install --id=Cockos.LICEcap -e 
-winget install --id=Microsoft.dotnet -e 
-winget install --id=Microsoft.dotNetFramework -e 
-winget install --id=GIMP.GIMP -e 
-winget install --id=Inkscape.Inkscape -e 
-winget install --id=Mozilla.Firefox -e 
-winget install --id=SlackTechnologies.Slack -e 
-winget install --id=Valve.Steam -e 
-winget install --id=Microsoft.Teams -e 
-winget install --id=Discord.Discord -e 
-winget install --id=OpenVPNTechnologies.OpenVPN -e 
-winget install --id=GitHub.cli -e 
-winget install --id=Microsoft.PowerBI -e 
-winget install --id=Microsoft.PowerShell -e 
-winget install --id=Microsoft.WindowsTerminal -e 
-winget install --id=MRidgers.Clink -e 
-winget install --id=Armin2208.WindowsAutoNightMode -e 
-winget install --id=7zip.7zip -e 
-winget install --id=Malwarebytes.Malwarebytes -e 
-winget install --id=VideoLAN.VLC -e 
+winget install --id=Atlassian.Sourcetree -e
+winget install --id=Postman.Postman -e
+winget install --id=Microsoft.VisualStudioCode -e
+winget install --id=Microsoft.VisualStudio.Community -e
+winget install --id=Notepad++.Notepad++ -e
+winget install --id=WinMerge.WinMerge -e
+winget install --id=Telerik.Fiddler -e
+winget install --id=Microsoft.AzureStorageExplorer -e
+winget install --id=Microsoft.AzureDataStudio -e
+winget install --id=Microsoft.AzureCLI -e
+winget install --id=WiresharkFoundation.Wireshark -e
+winget install --id=OpenJS.Nodejs -e
+winget install --id=Cockos.LICEcap -e
+winget install --id=Microsoft.dotnet -e
+winget install --id=Microsoft.dotNetFramework -e
+winget install --id=GIMP.GIMP -e
+winget install --id=Inkscape.Inkscape -e
+winget install --id=Mozilla.Firefox -e
+winget install --id=SlackTechnologies.Slack -e
+winget install --id=Valve.Steam -e
+winget install --id=Microsoft.Teams -e
+winget install --id=Discord.Discord -e
+winget install --id=OpenVPNTechnologies.OpenVPN -e
+winget install --id=GitHub.cli -e
+winget install --id=Microsoft.PowerBI -e
+winget install --id=Microsoft.PowerShell -e
+winget install --id=Microsoft.WindowsTerminal -e
+winget install --id=MRidgers.Clink -e
+winget install --id=Armin2208.WindowsAutoNightMode -e
+winget install --id=7zip.7zip -e
+winget install --id=Malwarebytes.Malwarebytes -e
+winget install --id=VideoLAN.VLC -e
 winget install --id=OBSProject.OBSStudio -e
 winget install --id=CPUID.CPU-Z -e
 winget install --id=Adobe.AdobeAcrobatReaderDC -e
+winget install --id=rammichael.7+TaskbarTweaker -e
+winget install --id=PrivateInternetAccess.PrivateInternetAccess -e
+winget install --id=Oracle.JavaRuntimeEnvironment -e
+winget install --id=BellSoft.LibericaJDK8Full -e
+winget install --id=RubyInstallerTeam.RubyWithDevKit -e
 ```
 
 ## DotFiles
@@ -246,7 +251,8 @@ Local overrides are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
 "ignoreUploadFolders": [
     /* ... */
     "lukas-tr.materialdesignicons-intellisense",
-    "mhutchie.git-graph"
+    "mhutchie.git-graph",
+    "ms-vsliveshare.vsliveshare"
 ],
 "supportedFileExtensions": [
     /* ... */
@@ -352,6 +358,14 @@ done
 ```json
 {
     "window.title": "${rootName}${separator}${activeEditorShort}${dirty}"
+}
+```
+
+[Remove trailing spaces automatically or with a shortcut](https://stackoverflow.com/q/30884131/1366033)
+
+```json
+{
+    "files.trimTrailingWhitespace": true
 }
 ```
 
@@ -576,7 +590,7 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 
 #### VS Code Snippets
 
-User [Snippets ](https://code.visualstudio.com/docs/editor/userdefinedsnippets) are stored in `%AppData%\Code\User\snippets\` with the `.code-snippets` extension or can be added to individual projects using `.\.vscode\*.code-snippets`
+User [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) are stored in `%AppData%\Code\User\snippets\` with the `.code-snippets` extension or can be added to individual projects using `.\.vscode\*.code-snippets`
 
 ```json file=utilities.code-snippets
 {
@@ -610,6 +624,8 @@ Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
 #### VS Code - Spell Checker
 
 [Make it possible to store User Words into a dictionary file instead of settings.json](https://github.com/streetsidesoftware/vscode-spell-checker/issues/61)
+
+[Regex Ignore](https://github.com/streetsidesoftware/vscode-spell-checker/issues/27)
 
 #### VS Code - GitLens
 
@@ -722,7 +738,7 @@ Set KDiff as source diffing tool
 
 ![Source Tree Diff Tool](/assets/posts/computer-setup/source-tree-diff.png)
 
-#### SSH 
+#### SSH
 
 [Setup SSH with Sourcetree on Windows](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
@@ -854,13 +870,13 @@ choco list --local-only
 ```
 
 * Apps
-    * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
+  * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
 * CLI
-    * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
-    * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
+  * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
+  * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
 * Fonts
-    * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
-    * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+  * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+  * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
 
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
@@ -961,15 +977,19 @@ Windows Registry Editor Version 5.00
 "ImmersiveSearchFull"=dword:00000001
 ```
 
+### Alt Drag
+
+[Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
+
 ### Scripts
 
 
 [archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
 
 
-<!-- 
+<!--
 
-### Work 
+### Work
 
 #### Active Directory Users & Computers
 

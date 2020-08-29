@@ -1,20 +1,15 @@
 ---
 title: Hello Blogger!
-tags: [post, Hello World, Blogger, StackEdit, Markdown, Syntax Highlighting]
+tags: [post, meta, markdown, syntax-highlighting]
 date: 2012-05-07
 updated: 2020-01-26
 postID: 2523860845584385785
 ---
 
-<!--
-userCustom.onReady = function() {
-  $('head').append('<link href="https://kylemit.github.io/libraries/libraries/HighlightColors.css" rel="stylesheet" />');
-  $('head').append('<link href="https://kylemit.github.io/libraries/libraries/BloggerStyles.css" rel="stylesheet" />');
-};
--->
-
+<!-- markdownlint-disable MD026 -->
 ## We're back baby!
-
+<!-- markdownlint-restore -->
+<!-- markdownlint-disable MD040 MD048 -->
 
 When writing a coding blog, one of the first decisions you have to make is how to render syntax highlighting.  In this case, I'm using [StackEdit](https://stackedit.io/#) to convert markdown into html.  Among others, it uses [highlight.js](http://highlightjs.org/) to convert `<pre><code>` blocks into beautifully formatted classes.  Then I'm using the [Visual Studio](http://highlightjs.org/static/styles/vs.css) theme to apply the particular format for each class hosted off this [Github project](https://github.com/KyleMit/libraries) and available here:
 

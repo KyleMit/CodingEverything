@@ -51,3 +51,30 @@ Tags should be
 
 * all lowercase
 * hyphenated instead of using spaces
+
+## Style Guide
+
+### Use Markdown Lint
+
+```html
+<!-- markdownlint-disable MD026 -->
+## We're back baby!
+<!-- markdownlint-restore -->
+```
+
+### Use CSpell
+
+```html
+
+<!-- spellchecker: disable -->
+**S**uccess **I**nstinct **G**rowth **N**eeds
+<!-- spellchecker: enable -->
+```
+
+## Todo
+
+* [ ] fix linting errors
+* [ ] add metadata to each post tags/summary (hero image)
+* [ ] fix tags.json
+* [ ] review each post for content / custom css
+* [ ] download images from imgur
