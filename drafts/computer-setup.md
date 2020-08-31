@@ -732,6 +732,15 @@ curl -s https://api.github.com/orgs/vtcodecamp/repos?per_page=1000 |jq -r '.[]|.
 curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
 ```
 
+#### Get Status of All Git Repos
+
+[Find all uncommitted locals repos in a directory tree](https://stackoverflow.com/q/961101/1366033)
+[Is it possible to do Git status for all repos in subfolders?](https://stackoverflow.com/q/24390040/1366033)
+
+```bash
+find . -type d -name '.git' | while read dir ; do sh -c "cd $dir/../ && echo -e \"\nGIT STATUS IN ${dir//\.git/}\" && git status -s" ; done
+```
+
 ### SourceTree
 
 Set KDiff as source diffing tool
