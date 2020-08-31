@@ -7,7 +7,7 @@ draft: true
 
 Let's build up to dynamic validation incrementally so we understand which pieces are in play.  If you're not in the mood for a brief history lesson, you can skip right to [Dynamic Validation](#dynamic-validation)
 
-## HTML 5 Validation - a *trivial* example:
+## HTML 5 Validation - a *trivial* example
 
 Here's a form with a required attribute on an input element.  If we try to submit it, the browser should automatically highlight any errors and prevent the postback (if you're watching the network tab - you shouldn't see a `POST` anywhere).
 
@@ -16,7 +16,7 @@ Here's a form with a required attribute on an input element.  If we try to submi
   <div>
     <label for="FirstName">First Name</label>
     <input type="text" name="FirstName" required />
-  </div>  
+  </div>
   <input type="submit" value="Submit">
 </form>
 ```
@@ -46,14 +46,14 @@ By default, it will pick up some HTML5 attributes on fields and enforce them wit
 <script> $("#exampleForm").validate({}); </script>
 ```
 
-**ALTERNATIVELY**, we can also write our validation rules entirely in JavaScript and pass them into the the validation options like this <sup>(Notice I've removed the `required` attribute)</sup>.  
+**ALTERNATIVELY**, we can also write our validation rules entirely in JavaScript and pass them into the the validation options like this <sup>(Notice I've removed the `required` attribute)</sup>.
 
 ```html
 <input type="text" name="FirstName" />
 <script>
 $("#exampleForm").validate({
   rules: {
-    FirstName: { 
+    FirstName: {
       required: true
     }
   }
@@ -90,12 +90,12 @@ Now we'll move our required rule out of JavaScript and back into the input's att
 ```html
 <label for="FirstName">First Name</label>
 <input type="text" class="form-control"
-        id="FirstName" name="FirstName" 
-        data-val="true" 
+        id="FirstName" name="FirstName"
+        data-val="true"
         data-val-required="First Name is required.">
-<span  class="field-validation-valid" 
-        data-valmsg-for="FirstName" 
-        data-valmsg-replace="true"></span>   
+<span  class="field-validation-valid"
+        data-valmsg-for="FirstName"
+        data-valmsg-replace="true"></span>
 ```
 
 Normally ASP.NET MVC will render these HTML attributes automatically as long as you've decorated your class properties with the `<Required>`  attribute and have enabled unobtrusive generation.  So the above code would be created by including the following model and view.
@@ -116,13 +116,13 @@ public String FirstName { get; set; }
 ```
 
 
-#### Homegrown Unobtrusive Validation 
+#### Homegrown Unobtrusive Validation
 
 To think about the *types* of decisions that MVC's unobtrusive library makes, we can roll our own tiny version that just checks for required.  We'll just search through the form elements, looking for the `data-rule-required` attribute and the `data-msg-required` and invoke the validation using those parameters like this:
 
 ```js
 var options = { rules: {}, messages: {} }
-    
+
 $("form :input[data-val-required]").each(function(i, el) {
   options.rules[el.name] = {
     required: true
@@ -176,7 +176,7 @@ $.ajax({
   success: function(data, textStatus, jqXHR) {
     $("form div:first").append(data)
   }
-});  
+});
 ```
 
 Which will try to return the html contents of `last-name.html`:
@@ -185,11 +185,11 @@ Which will try to return the html contents of `last-name.html`:
 <div>
   <label for="LastName">Last Name</label>
   <input type="text" class="form-control"
-         id="LastName" name="LastName" 
-         data-val="true" 
+         id="LastName" name="LastName"
+         data-val="true"
          data-val-required="Last Name is required.">
-  <span  class="field-validation-valid" 
-         data-valmsg-for="LastName" 
+  <span  class="field-validation-valid"
+         data-valmsg-for="LastName"
          data-valmsg-replace="true"></span>
 </div>
 ```
@@ -210,9 +210,9 @@ The instinct here is to just re-validate the form and start from scratch.  The p
 
 ```js
 validate: function( options ) {
-	// Check if a validator for this form was already created
-	var validator = $.data( this[ 0 ], "validator" );
-	if ( validator ) { return validator; }
+  // Check if a validator for this form was already created
+  var validator = $.data( this[ 0 ], "validator" );
+  if ( validator ) { return validator; }
 ```
 
 
@@ -232,13 +232,13 @@ $.validator.unobtrusive.reparse = function (selector) {
 
 ```js
 $.validator.unobtrusive.parseDynamicContent = function (selector) {
- //use the normal unobstrusive.parse method
+ //use the normal unobtrusive.parse method
   $.validator.unobtrusive.parse(selector);
 
   //get the relevant form
   var form = $(selector).first().closest('form');
 
-  //get the collections of unobstrusive validators, and jquery validators
+  //get the collections of unobtrusive validators, and jquery validators
   //and compare the two
   var unobtrusiveValidation = form.data('unobtrusiveValidation');
   var validator = form.validate();
@@ -250,7 +250,7 @@ $.validator.unobtrusive.parseDynamicContent = function (selector) {
       $.extend(args, elrules);
       args.messages = unobtrusiveValidation.options.messages[elname];
       $('[name="' + elname + '"]').rules("add", args);
-      
+
     } else {
       // update existing rules
       $.each(elrules, function (rulename, data) {

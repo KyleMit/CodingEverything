@@ -873,7 +873,6 @@ choco list --local-only
   * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
 * CLI
   * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
-  * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
 * Fonts
   * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
   * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
@@ -881,7 +880,7 @@ choco list --local-only
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install sourcetree jq hub firacode-ttf cascadiacode
+choco install sourcetree jq firacode-ttf cascadiacode
 ```
 
 Which installs to here:
@@ -913,6 +912,11 @@ dotnet tool install --global dotnet-script
 ### Chrome Extensions
 
 * LastPass
+* [Search all Tabs](https://add0n.com/search-all-tabs.html)
+  * [Keyboard shortcut #5](https://github.com/lunu-bounir/search-all-tabs/issues/5)
+  * ![add shortcut](/assets/posts/computer-setup/chrome-shortcuts.png)
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
+  * [Xapian Search](https://xapian.org/)
 
 #### Stylus Settings
 
