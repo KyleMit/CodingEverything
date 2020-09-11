@@ -7,14 +7,14 @@ postID: 4746835115135118704
 
 LINQ to objects will work on any object that implements [`IEnumerable`](https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx) (the same interface that allows an object to be used in a For Each loop).  Datasets are objects, but they don’t implement IEnumerable by default, so you'll need to first add a reference to a library that adds some extension methods that wrap DataTable and allow it to be enumerated.
 
-Just go to Project > References > Add > .NET > **System.Data.DataSetExtensions** 
+Just go to Project > References > Add > .NET > **System.Data.DataSetExtensions**
 
 ![DataSetExtensions](https://i.imgur.com/QmLYZDU.png)
 
 In LINQ, you always start the query with the `From` statement
 
 ```vb
-From a In b    
+From a In b
 ```
 
 This gives you access to each item that is part of the `B` collection in the same way that a for loop does
@@ -42,7 +42,7 @@ Let's say that we have the following SQL Query that we'd like to do in .NET with
 ```sql
 SELECT p.ID, p.Name, e.SSN
 FROM People p
-JOIN ExtendedInfo e 
+JOIN ExtendedInfo e
   ON p.ID = e.PersonID
 ```
 
@@ -50,13 +50,13 @@ LINQ (especially using it's Query Syntax) is intended to function a lot like SQL
 
 ```vb
 Dim query = From person In people.AsEnumerable
-	Join extra In extendedInfo.AsEnumerable()
-	  On person("ID") Equals extra("PersonID")
-	Select New With {
-			.ID = person("ID"),
-			.Name = person("Name"),
-			.SSN = extra("SSN")
-	}
+    Join extra In extendedInfo.AsEnumerable()
+      On person("ID") Equals extra("PersonID")
+    Select New With {
+            .ID = person("ID"),
+            .Name = person("Name"),
+            .SSN = extra("SSN")
+    }
 ```
 
 
@@ -67,18 +67,18 @@ If you're unfamiliar with anonymous objects, the syntax may look unfamiliar, but
 
 ```vb
 Dim typedPerson = New Person With {
-	.Name = "Angelic"
+    .Name = "Angelic"
 }
 ```
 
-If we don't have a Person class to stuff our data in, or we just want to do it on the fly, we can do the same thing by omitting the class name and then just passing in any properties we want our new class to have.  
+If we don't have a Person class to stuff our data in, or we just want to do it on the fly, we can do the same thing by omitting the class name and then just passing in any properties we want our new class to have.
 
 > **Note**: The compiler will actually create a class for you behind the scenes that has all the properties you've specified, but we don't have a name for it - thus it's *anonymous*.
 
 ```vb
 'Anonymous Person
 Dim anonPerson = New With {
-	.Name = "Angelic"
+    .Name = "Angelic"
 }
 ```
 
@@ -103,8 +103,8 @@ You can test the result by running:
 ```vb
 For Each row In newTable.AsEnumerable()
 Console.WriteLine("ID: "   & row("ID") & " / " &
-				  "Name: " & row("Name") & " / " &
-				  "SSN: "  & row("SSN"))
+                  "Name: " & row("Name") & " / " &
+                  "SSN: "  & row("SSN"))
 Next
 ```
 

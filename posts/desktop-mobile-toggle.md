@@ -1,6 +1,7 @@
 ---
 title: Adding a Desktop Mobile Toggle Button
-tags: [post, "Responsive Design", Bootstrap]
+tags: [post, "responsive-design", Bootstrap]
+summary: "Allow users to toggle between pinch and zoom desktop website mode and a narrower mobile viewport"
 date: 2014-06-30
 postID: 6639837042969518
 ---

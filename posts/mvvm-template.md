@@ -5,33 +5,36 @@ date: 2013-11-16
 postID: 1813415949087297439
 ---
 
-A bare bones starter template for Windows Store 8.1 Projects that Utilizes the Model View View Model Pattern  
+<!-- markdownlint-disable MD024 -->
 
-You can download the template from the [Visual Studio Extension Gallery][vs gallery]  
-You can fork or contribute to the template on [github.com/KyleMit/WindowsStoreMvvmTemplate][github] 
+A bare bones starter template for Windows Store 8.1 Projects that Utilizes the Model View View Model Pattern
 
-## Directory:   
+You can download the template from the [Visual Studio Extension Gallery][vs gallery]
+You can fork or contribute to the template on [github.com/KyleMit/WindowsStoreMvvmTemplate][github]
+
+## Directory
+
 Here's a breakdown of the directory structure:
 
 ![directory][directory]
-  
-* **Assets**: contains images for the Package.appxmanifest
+
+* **Assets**: contains images for the `Package.appxmanifest`
 * **Model**: contains core business logic for the application
 * **Resources**: contains common resources for the whole application
-    * **AppResources.xaml**: contains xaml resources that is added to App.Resources
+  * **AppResources.xaml**: contains xaml resources that is added to App.Resources
 * **Utilities**: contains reusable helper classes that can be used in this, and other, projects.
-    * **BindableBase.vb**: implements [`INotifyPropertyChanged`][inpc] which can be inherited by classes in you ViewModel
-    * **NavigationHelper.vb**: adds Navigation support and Process Lifetime Management
-    * **RelayCommand.vb**: implements [`ICommand`] [icommand] to help invoke delegates through binding.
-    * **SuspensionManager.vb**: captures global session state to simplify process lifetime management
+  * **BindableBase.vb**: implements [`INotifyPropertyChanged`][inpc] which can be inherited by classes in you ViewModel
+  * **NavigationHelper.vb**: adds Navigation support and Process Lifetime Management
+  * **RelayCommand.vb**: implements [`ICommand`] [iCommand] to help invoke delegates through binding.
+  * **SuspensionManager.vb**: captures global session state to simplify process lifetime management
 * **View**: contains views for the User Interface layer of the application
-    * **MainView.xaml**: has the initial window that the application launches
+  * **MainView.xaml**: has the initial window that the application launches
 * **ViewModel**: contains classes which help communicate between the *View* and the *Model*
-    * **MainViewModel.vb**: contains the business logic for `MainView.xaml`
+  * **MainViewModel.vb**: contains the business logic for `MainView.xaml`
 * **App.xaml**: contains resources scoped to the entire application
-    * **App.xaml.vb**: contains startup code for the application
+  * **App.xaml.vb**: contains startup code for the application
 
-## Samples:
+## Samples
 
 ### Binding
 
@@ -40,7 +43,7 @@ Here's a breakdown of the directory structure:
 ```xml
 <TextBox Text="{Binding PersonName}" />
 ```
-  
+
 #### MainViewModel.vb
 
 ```vb
@@ -56,7 +59,8 @@ End Property
 ```
 
 #### MainViewModel.cs
-```
+
+```cs
 private string _propertyName;
 public string PropertyName {
     get { return _propertyName; }
@@ -72,7 +76,7 @@ public string PropertyName {
 ```xml
 <button content="Say Hello" command="{Binding SayHelloCommand}" />
 ```
-  
+
 #### MainViewModel.vb
 
 ```vb
@@ -93,5 +97,5 @@ End Function
 [vs gallery]: http://visualstudiogallery.msdn.microsoft.com/9ef94ec6-3378-45b9-908c-cff703d2b901
 [github]: https://github.com/KyleMit/WindowsStoreMvvmTemplate
 [inpc]: http://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx
-[icommand]: http://msdn.microsoft.com/en-us/library/system.windows.input.icommand(v=vs.110).aspx
+[iCommand]: http://msdn.microsoft.com/en-us/library/system.windows.input.icommand(v=vs.110).aspx
 [directory]: https://i.imgur.com/IEz8jLj.png

@@ -1,5 +1,5 @@
 {
-    "name": "CodingEverything",
+    "name": "coding-everything",
     "version": "0.3.2",
     "description": "A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it.",
     "scripts": {
@@ -39,6 +39,7 @@
         "zip-a-folder": "0.0.10"
     },
     "devDependencies": {
-        "chalk": "^2.4.2"
+        "chalk": "^2.4.2",
+        "yaml-front-matter": "^4.1.0"
     }
 }

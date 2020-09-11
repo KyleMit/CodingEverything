@@ -9,7 +9,7 @@ draft: true
 
 ## Hardware
 
-<!-- 
+<!--
 
 Look Up Computer Stats:
 
@@ -75,6 +75,7 @@ Look Up Computer Stats:
 
 * [Wireshark](https://www.wireshark.org/)
 * [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+* [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
 
 
 ### SDKs
@@ -85,6 +86,7 @@ Look Up Computer Stats:
 
 ### CLIs
 
+* [Winget CLI](https://github.com/microsoft/winget-cli)
 * [DotNet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows)
 
@@ -174,12 +176,99 @@ Look Up Computer Stats:
 
 ## Configuration
 
+## Winget
+
+```bash file:winstall.bat
+winget install --id=Atlassian.Sourcetree -e
+winget install --id=Postman.Postman -e
+winget install --id=Microsoft.VisualStudioCode -e
+winget install --id=Microsoft.VisualStudio.Community -e
+winget install --id=Notepad++.Notepad++ -e
+winget install --id=WinMerge.WinMerge -e
+winget install --id=Telerik.Fiddler -e
+winget install --id=Microsoft.AzureStorageExplorer -e
+winget install --id=Microsoft.AzureDataStudio -e
+winget install --id=Microsoft.AzureCLI -e
+winget install --id=WiresharkFoundation.Wireshark -e
+winget install --id=OpenJS.Nodejs -e
+winget install --id=Cockos.LICEcap -e
+winget install --id=Microsoft.dotnet -e
+winget install --id=Microsoft.dotNetFramework -e
+winget install --id=GIMP.GIMP -e
+winget install --id=Inkscape.Inkscape -e
+winget install --id=Mozilla.Firefox -e
+winget install --id=SlackTechnologies.Slack -e
+winget install --id=Valve.Steam -e
+winget install --id=Microsoft.Teams -e
+winget install --id=Discord.Discord -e
+winget install --id=OpenVPNTechnologies.OpenVPN -e
+winget install --id=GitHub.cli -e
+winget install --id=Microsoft.PowerBI -e
+winget install --id=Microsoft.PowerShell -e
+winget install --id=Microsoft.WindowsTerminal -e
+winget install --id=MRidgers.Clink -e
+winget install --id=Armin2208.WindowsAutoNightMode -e
+winget install --id=7zip.7zip -e
+winget install --id=Malwarebytes.Malwarebytes -e
+winget install --id=VideoLAN.VLC -e
+winget install --id=OBSProject.OBSStudio -e
+winget install --id=CPUID.CPU-Z -e
+winget install --id=Adobe.AdobeAcrobatReaderDC -e
+winget install --id=rammichael.7+TaskbarTweaker -e
+winget install --id=PrivateInternetAccess.PrivateInternetAccess -e
+winget install --id=Oracle.JavaRuntimeEnvironment -e
+winget install --id=BellSoft.LibericaJDK8Full -e
+winget install --id=RubyInstallerTeam.RubyWithDevKit -e
+```
+
 ## DotFiles
+
+[Saving DotFiles to Github](https://dotfiles.github.io/)
+
+### Setup
+
+[Storing dotfiles with a *bare* git repo](https://www.atlassian.com/git/tutorials/dotfiles)
+
+```bash
+# create folder ~/.cfg as bare repo
+git init --bare $HOME/.cfg
+# create alias config to interact with git
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# hide untracked files
+config config --local status.showUntrackedFiles no
+# add alias to bash profile
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+```
+
 
 
 ### VS Code Config
 
-Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) Extension which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
+
+#### VS Code Sync
+
+Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) Extension
+
+Which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
+
+Local overrides are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
+
+```json
+"ignoreUploadFiles": [
+    /* ... */
+    "Microsoft.NETCore.App.deps.json"
+],
+"ignoreUploadFolders": [
+    /* ... */
+    "lukas-tr.materialdesignicons-intellisense",
+    "mhutchie.git-graph",
+    "ms-vsliveshare.vsliveshare"
+],
+"supportedFileExtensions": [
+    /* ... */
+    "txt"
+]
+```
 
 
 #### VS Code Extensions
@@ -273,20 +362,40 @@ done
 
 #### VS Code Settings
 
+[Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
+[Configure Window Title](https://code.visualstudio.com/updates/v1_10#_configurable-window-title)
+
+```json
+{
+    "window.title": "${rootName}${separator}${activeEditorShort}${dirty}"
+}
+```
+
+[Remove trailing spaces automatically or with a shortcut](https://stackoverflow.com/q/30884131/1366033)
+
+```json
+{
+    "files.trimTrailingWhitespace": true
+}
+```
+
+// TODO embed gist using SSG
+https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf#file-settings-json
+
+
+
 Use the command palette and go to `Preferences: Open Settings (JSON)` which should update the following user settings file: `%AppData%\Code\User\settings.json`
 
 ```json file=settings.json
 {
-    /* editor */
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "smooth",
-    // "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
     "editor.renderWhitespace": "selection",
     "editor.suggestSelection": "first",
-
     "explorer.confirmDelete": false,
     "emmet.includeLanguages": {
         "njk": "html",
@@ -306,23 +415,15 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
     "files.insertFinalNewline": true,
     "git.autofetch": true,
     "git.enableSmartCommit": true,
-
     "window.restoreWindows": "none",
     "window.zoomLevel": 1,
-
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
-    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "vscode-icons",
-
     "zenMode.centerLayout": false,
-
-    /* languages */
     "html.suggest.html5": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "python.jediEnabled": false,
-
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -341,8 +442,6 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-
-    /* extensions */
     "peacock.affectActivityBar": false,
     "sync.gist": "9e22c8ecf6d7f5504edbfffe6dce6dcf",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -353,12 +452,64 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
             ],
             "format": "svg",
             "icon": "nunjucks"
+        },
+        {
+            "extensions": [
+                "kql"
+            ],
+            "format": "svg",
+            "icon": "sql"
         }
     ],
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "markdownlint.config": {
+        "MD012": false,
+    },
+    "markdown-preview-enhanced.frontMatterRenderingOption": "table",
+    "markdownShortcuts.icons.bold": false,
+    "markdownShortcuts.icons.bullets": false,
+    "markdownShortcuts.icons.italic": false,
+    "markdownShortcuts.icons.strikethrough": false,
+    "gitlens.menus": {
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "details": false,
+            "history": false,
+            "remote": false
+        },
+        "editorGroup": false,
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true,
+            "stashInline": true
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true,
+            "stash": true
+        }
+    },
+    "git-graph.showStatusBarItem": false,
+    "python.languageServer": "Microsoft"
 }
 ```
-
 
 #### VS Code Keybindings
 
@@ -447,8 +598,63 @@ Use the command palette and go to `Preferences: Open Settings (JSON)` which shou
 ```
 
 
+#### VS Code Snippets
 
-### Visual Studio Professional Extensions
+User [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) are stored in `%AppData%\Code\User\snippets\` with the `.code-snippets` extension or can be added to individual projects using `.\.vscode\*.code-snippets`
+
+```json file=utilities.code-snippets
+{
+    "Wrap KBD Text" : {
+        "prefix": "surround-kbd",
+        "description": "Wraps current text in kbd tag",
+        "body": [
+            "<kbd>$TM_SELECTED_TEXT</kbd>$0"
+        ],
+        "scope": "markdown",
+    }
+}
+```
+
+Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
+
+```json file=keybindings.json
+{
+    "key": "ctrl+k ctrl+b",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+        "langId": "markdown",
+        "name": "Wrap KBD Text"
+    }
+}
+```
+
+
+
+#### VS Code - Spell Checker
+
+[Make it possible to store User Words into a dictionary file instead of settings.json](https://github.com/streetsidesoftware/vscode-spell-checker/issues/61)
+
+[Regex Ignore](https://github.com/streetsidesoftware/vscode-spell-checker/issues/27)
+
+#### VS Code - GitLens
+
+[Gitlens - hide editor actions](https://github.com/eamodio/vscode-gitlens/issues/669)
+
+#### VS Code - Markdownlint
+
+[Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
+
+
+### Visual Studio Config
+
+#### Keybindings
+
+<kbd>Ctrl</kbd> + <kbd>P</kbd> - `Edit.GoToAll` (normally <kbd>Ctrl</kbd> + <kbd>,</kbd>)
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> - `Window.QuickLaunch` (normally <kbd>Ctrl</kbd> + <kbd>Q</kbd>)
+
+
+#### Extensions
 
 ### SSMS Settings
 
@@ -536,13 +742,22 @@ curl -s https://api.github.com/orgs/vtcodecamp/repos?per_page=1000 |jq -r '.[]|.
 curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
 ```
 
+#### Get Status of All Git Repos
+
+[Find all uncommitted locals repos in a directory tree](https://stackoverflow.com/q/961101/1366033)
+[Is it possible to do Git status for all repos in subfolders?](https://stackoverflow.com/q/24390040/1366033)
+
+```bash
+find . -type d -name '.git' | while read dir ; do sh -c "cd $dir/../ && echo -e \"\nGIT STATUS IN ${dir//\.git/}\" && git status -s" ; done
+```
+
 ### SourceTree
 
 Set KDiff as source diffing tool
 
 ![Source Tree Diff Tool](/assets/posts/computer-setup/source-tree-diff.png)
 
-#### SSH 
+#### SSH
 
 [Setup SSH with Sourcetree on Windows](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
@@ -580,6 +795,7 @@ xargs -L1 git clone
 ```
 
 
+
 ### Windows Terminal Config
 
 Notes.md
@@ -591,9 +807,13 @@ desktop.png
 
 Bash rc file should be located at `~/.bashrc`
 
-Download [jq](https://stedolan.github.io/jq/download/) and add to C:/libraries/
-
 You can [customize the prompt](https://gist.github.com/KyleMit/c491b1ad3985d654f07151ad2e23eed1)
+
+[Retain History in VS Code](https://stackoverflow.com/a/10901227/1366033)
+
+```bash
+PROMPT_COMMAND='history -a'
+```
 
 ### Bash Profile
 
@@ -611,7 +831,7 @@ cd c:
 ### NPM
 
 
-[Prefer Offline](https://twitter.com/KyleMitBTV/status/1175793176461938689)
+During Demos, use [Prefer Offline](https://twitter.com/KyleMitBTV/status/1175793176461938689)
 
 
 ```ini file=.npmrc
@@ -669,18 +889,17 @@ choco list --local-only
 ```
 
 * Apps
-    * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
+  * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
 * CLI
-    * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
-    * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
+  * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
 * Fonts
-    * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
-    * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+  * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+  * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
 
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install sourcetree jq hub firacode-ttf cascadiacode
+choco install sourcetree jq firacode-ttf cascadiacode
 ```
 
 Which installs to here:
@@ -703,6 +922,8 @@ dotnet tool list -g
 dotnet tool install --global dotnet-script
 ```
 
+[dotnet SDKs](https://dotnet.microsoft.com/download/visual-studio-sdks)
+
 ### Auto Hot Key Scripts
 
 ### WinMerge Settings
@@ -710,6 +931,11 @@ dotnet tool install --global dotnet-script
 ### Chrome Extensions
 
 * LastPass
+* [Search all Tabs](https://add0n.com/search-all-tabs.html)
+  * [Keyboard shortcut #5](https://github.com/lunu-bounir/search-all-tabs/issues/5)
+  * ![add shortcut](/assets/posts/computer-setup/chrome-shortcuts.png)
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
+  * [Xapian Search](https://xapian.org/)
 
 #### Stylus Settings
 
@@ -719,6 +945,10 @@ dotnet tool install --global dotnet-script
 
 
 ## Windows Settings
+
+[How to rename the User folder in Windows 10?](https://superuser.com/q/890812/180163)
+
+[Why Local Users and Groups is missing in Computer Management on Windows 10 Home?](https://stackoverflow.com/q/41093714/1366033)
 
 * [How to Remove the Windows 10 Search Box from the Taskbar](https://www.groovypost.com/howto/remove-windows-10-cortana-search-taskbar/)
 
@@ -736,6 +966,20 @@ Remove Start Menu Suggestions
 
 ![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
 
+### Disable Aero Shake
+
+[How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
+
+```ini file:DisableAeroShake.reg
+Windows Registry Editor Version 5.00
+
+; Created by: Walter Glenn
+; Tutorial: http://www.howtogeek.com/278996/how-to-disable-aero-shake-in-windows/
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisallowShaking"=dword:00000001
+```
+
 
 ### Immersive Search
 
@@ -745,7 +989,6 @@ Remove Start Menu Suggestions
 Windows Registry Editor Version 5.00
 
 ; Created by: Shawn Brink
-; Created on: May 4th 2019
 ; Tutorial: https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html
 
 
@@ -757,15 +1000,19 @@ Windows Registry Editor Version 5.00
 "ImmersiveSearchFull"=dword:00000001
 ```
 
+### Alt Drag
+
+[Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
+
 ### Scripts
 
 
 [archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
 
 
-<!-- 
+<!--
 
-### Work 
+### Work
 
 #### Active Directory Users & Computers
 

@@ -15,9 +15,9 @@ When you select an item from a combo box, the `SelectedIndex` property of the Co
 
 If you have a ComboBox populated with the following items:
 
-1.  Red
-2.  Blue
-3.  Green
+1. Red
+2. Blue
+3. Green
 
 
 Let's say the current SelectedIndex value is `-1` and the current Text value is `Select a color...`
@@ -28,52 +28,53 @@ If in our code we change the value of the Text to blue:
 ComboBox1.Text = "Blue"
 ```
 
-Then .NET will automatically recognize that this matches an item in our collection and change the SelectedIndex value to `2`, thereby also firing the SelectedIndexChanged event.  The reason .NET won't let you change the Text property *during* a SelectedIndexChanged event is because they are worried about creating an endless loop by firing another SlectedIndexChanged event.
+Then .NET will automatically recognize that this matches an item in our collection and change the SelectedIndex value to `2`, thereby also firing the SelectedIndexChanged event.  The reason .NET won't let you change the Text property *during* a SelectedIndexChanged event is because they are worried about creating an endless loop by firing another SelectedIndexChanged event.
 
 ### The Solution
 
 We can resolve this relatively easily by invoking a delegate during the selection changed event that will *eventually* change the text property.  We'll load a generic WinForms window by adding two items to a ComboBox, one of which we want to reset the form when selected.  This item represents a selection that may or may not be invalid, but is expensive to figure out, so we don't want to necessarily evaluate it early and remove it from the list before the user has a chance to select it.
 
-![](https://i.imgur.com/mO51bXt.png)
+![example combo box](https://i.imgur.com/mO51bXt.png)
 
 We'll start by declaring a [`Delegate Sub`][delegate] within our class.  The only important thing about a Delegate is the method signature that you are passing in.  Since we want to call the ResetComboBox method which contains on parameters, our Delegate will not contain any arguments as well.
 
-On the `SelectedIndexChanged` event, we'll call `BeginInvoke` and specify that when it invokes, it should look to a method at the `AddressOf` ResetComoboBox.
+On the `SelectedIndexChanged` event, we'll call `BeginInvoke` and specify that when it invokes, it should look to a method at the `AddressOf` ResetComboBox.
 
-```
-'Declares a delegate sub that takes no parameters  
-Delegate Sub ComboDelegate()  
-  
-'Loads form and controls  
-Private Sub LoadForm(sender As System.Object, e As EventArgs) _  
- Handles MyBase.Load  
- ComboBox1.Items.Add("This is okay")  
- ComboBox1.Items.Add("This is NOT okay")  
- ResetComboBox()  
-End Sub  
-  
-'Handles Selected Index Changed Event for combo Box  
-Private Sub ComboBoxSelectionChanged(sender As System.Object, e As EventArgs) _  
- Handles ComboBox1.SelectedIndexChanged  
- 'if option 2 selected, reset control back to original  
- If ComboBox1.SelectedIndex = 1 Then  
-  BeginInvoke(New ComboDelegate(AddressOf ResetComboBox))  
- End If  
-  
-End Sub  
-  
-'Exits out of ComboBox selection and displays prompt text   
-Private Sub ResetComboBox()  
- With ComboBox1  
-  .SelectedIndex = -1  
-  .Text = "Select an option"  
-  .Focus()  
- End With  
-End Sub  
-```
-You'll notice that when ResetComboBox is eventually called by the delegate, it will also fire the SelectionChanged event when we change the SlectedIndex to **-1**.  If there's a chance that you're handling anything in the change event that could cause a repetitive loop, you can include a private `cancelAction` boolean property in your class, defaulted to False.  Then when you start the ResetComboBox method, set `cancelAction` to True and reset it to False at the end of method.  In the selection changed event, exit the sub if cancel action will set and you will never accidentally execute code when you're resetting controls
+```vb
+'Declares a delegate sub that takes no parameters
+Delegate Sub ComboDelegate()
 
+'Loads form and controls
+Private Sub LoadForm(sender As System.Object, e As EventArgs) _
+ Handles MyBase.Load
+ ComboBox1.Items.Add("This is okay")
+ ComboBox1.Items.Add("This is NOT okay")
+ ResetComboBox()
+End Sub
+
+'Handles Selected Index Changed Event for combo Box
+Private Sub ComboBoxSelectionChanged(sender As System.Object, e As EventArgs) _
+ Handles ComboBox1.SelectedIndexChanged
+ 'if option 2 selected, reset control back to original
+ If ComboBox1.SelectedIndex = 1 Then
+  BeginInvoke(New ComboDelegate(AddressOf ResetComboBox))
+ End If
+
+End Sub
+
+'Exits out of ComboBox selection and displays prompt text
+Private Sub ResetComboBox()
+ With ComboBox1
+  .SelectedIndex = -1
+  .Text = "Select an option"
+  .Focus()
+ End With
+End Sub
 ```
+
+You'll notice that when ResetComboBox is eventually called by the delegate, it will also fire the SelectionChanged event when we change the SelectedIndex to **-1**.  If there's a chance that you're handling anything in the change event that could cause a repetitive loop, you can include a private `cancelAction` boolean property in your class, defaulted to False.  Then when you start the ResetComboBox method, set `cancelAction` to True and reset it to False at the end of method.  In the selection changed event, exit the sub if cancel action will set and you will never accidentally execute code when you're resetting controls
+
+```vb
 If cancelAction Then Exit Sub
 ```
 

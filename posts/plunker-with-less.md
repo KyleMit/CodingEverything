@@ -22,9 +22,9 @@ According to the [Client Side Usage from the Less Documentation][less client], y
 </html>
 ```
 
-#### styles.less:
+#### `styles.less`
 
-Here's a super simple example of a less file that will chane the background color bright red
+Here's a super simple example of a less file that will change the background color bright red
 
 ```css
 @background-color: red;

@@ -33,10 +33,10 @@ Namespace Hello
   Class HelloWorld
     Overloads Shared Sub Main(ByVal args() As String)
       Dim name as String = "VB.NET"
-      
+
       'See if an argument was passed from the command line
       If args.Length = 1 Then name = args(0)
-      
+
       Console.WriteLine("Hello, " & name & "!")
     End Sub
   End Class
@@ -49,15 +49,16 @@ namespace Hello {
   public class HelloWorld {
     public static void Main(string[] args) {
       string name = "C#";
-      
+
       // See if an argument was passed from the command line
       if (args.Length == 1) name = args[0];
-        
+
       Console.WriteLine("Hello, " + name + "!");
     }
   }
 }
 ```
+
 <div class="clear"></div>
 
 ### Comments
@@ -82,6 +83,7 @@ namespace Hello {
 
 
 #### Value Types
+
 VB          |  CS
 :-----------|:------
 Boolean     | bool
@@ -90,7 +92,7 @@ Char        | char
 Short, ushort, Integer, UInteger, Long, ULong | short, ushort, int, uint, long, ulong
 Single, Double | single, double
 Decimal        | decimal
-Date *(alias of `System.DateTime`) | DateTime *(not a built-in C# type)*
+Date *(alias of `System.DateTime`)* | DateTime *(not a built-in C# type)*
 *structures*   | *structs*
 *enumerations* | *enumerations*
 
@@ -143,4 +145,5 @@ int? x = null;
 // anonymous types
 var person = new {Name = "Sue", GPA = 3.4};
 ```
+
 <div class="clear"></div>

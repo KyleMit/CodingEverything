@@ -17,7 +17,7 @@ When creating a VBA project that uses Macros, you can easily [sign the project][
   * ![1][Sign - 1]
 2. Enter a name for your certificate and Click OK
   * ![2][Sign - 2]
-3. <span id="sign-3">Open</span> up your VBA project in Excel, Word, Outlook (etc) and hit <kbd>Alt</kbd> + <kbd>F11</kbd> to open up the VBA Project and go to Tools > Digital Signature 
+3. <span id="sign-3">Open</span> up your VBA project in Excel, Word, Outlook (etc) and hit <kbd>Alt</kbd> + <kbd>F11</kbd> to open up the VBA Project and go to Tools > Digital Signature
   * ![3][Sign - 3]
 4. On the Digital Signature Menu, Click "Choose"
   * ![4][Sign - 4]
@@ -47,7 +47,7 @@ When the file is opened on another machine, it won't recognize the original cert
 8. Click OK / Next several times
   * ![8][Import - 8]
 9. Accept the Security Warning to Install the Certificate
-  * ![9][Import - 9]  
+  * ![9][Import - 9]
 10. On the original Dialog, Select “Trust all documents from this publisher” and Click OK
   * ![10][Import - 10]
 

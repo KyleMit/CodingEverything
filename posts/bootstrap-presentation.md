@@ -5,7 +5,9 @@ date: 2014-06-20
 postID: 426646617745277276
 ---
 
-### Hello Boston Code Camp!
+<!-- markdownlint-disable MD026 -->
+## Hello Boston Code Camp!
+<!-- markdownlint-restore -->
 
 Here are some resources to supplement my talk on Bootstrap 3 talk titled:
 [Pulling Your Website Up By Your Twitter Bootstraps](https://www.bostoncodecamp.com/CC21/Sessions/Details/7177)

@@ -51,7 +51,7 @@ The next point at which you're likely to get an error is when adding the same im
 
 There are a couple things going on here that I learned from this [comment](http://stackoverflow.com/questions/13943552/windows-8-app-manifest-image-assets-error#comment19230171_13943552) by [Jim O'Neil](http://codocent.com/) on Stack Overflow.
 
-When you add scaled assets, Visual Studio takes the name of your default image (provided in the AppManifest) and decorates it with **`.scale-xx`**. If that name already exists, then you're fine. If it doesn't, then it creates a copy of the asset you've provided to fit that naming convention.  
+When you add scaled assets, Visual Studio takes the name of your default image (provided in the AppManifest) and decorates it with **`.scale-xx`**. If that name already exists, then you're fine. If it doesn't, then it creates a copy of the asset you've provided to fit that naming convention.
 
 Secondly, if *any* of your assets have a scaled modifier, then *all* your assets must have a scale modifier, even the default.  So the original logo named `logox150.png` now must be named `logox150.scale-100.png` in order to be found by Visual Studio.  This actually makes a little bit of sense.  The manifest only allows you to set a single property for the Logo name and location.  How, other than using this strict scaled notation, would it know where to look for each of the different assets you provided at each size.
 
@@ -66,7 +66,7 @@ Once you've done that, you simply have to replace the contents of your Assets fo
 ![Fully Loaded Designer](https://i.imgur.com/4ixB7Lo.png)
 ![Fully Loaded Assets](https://i.imgur.com/jWXRwY3.png)
 
-You may not want the same image at every resolution, but as a starter kit, here are two designer files (one square and one wide) for each aspect ratio used in the Windows Store (**`1:1`** and **`31:15`**) with all the slices properly configured. Just sub out the content with whatever logo you'd like to use, and hit <kbd>Ctrl</kbd> + <kbd>E</kbd> to export all the assets you'll need. 
+You may not want the same image at every resolution, but as a starter kit, here are two designer files (one square and one wide) for each aspect ratio used in the Windows Store (**`1:1`** and **`31:15`**) with all the slices properly configured. Just sub out the content with whatever logo you'd like to use, and hit <kbd>Ctrl</kbd> + <kbd>E</kbd> to export all the assets you'll need.
 
 
 ### Problems Exporting Slice Resolutions

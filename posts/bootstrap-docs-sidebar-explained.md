@@ -11,7 +11,7 @@ In addition to really liking the bootstrap library, I have to say that I really 
 
 ### Simple Content
 
-This really works best with some content to scroll through, so let' just start by making a bunch of blocks with unique ID tags, that are nested into sections, that we can visually see.  
+This really works best with some content to scroll through, so let' just start by making a bunch of blocks with unique ID tags, that are nested into sections, that we can visually see.
 
 Here's how:
 Create a few blocks that look like this. Copy and paste it, but every time you see the letter A, replace it with B, C, and so on.
@@ -90,7 +90,7 @@ Before we even add any bootstrap, we need a bare bones list of links that will n
 
 ### Converting List to Nav
 
-In order to make the links look more like navigation controls, and less like a list of groceries, we can use the set of [Nav classes][Nav] provided by Bootstrap.  In order to use any nav class, you must also attach the `.nav` base class to that element as well.  To make sure the list stays vertical, we want to also add the class `.nav-stacked` to each `ul` element. 
+In order to make the links look more like navigation controls, and less like a list of groceries, we can use the set of [Nav classes][Nav] provided by Bootstrap.  In order to use any nav class, you must also attach the `.nav` base class to that element as well.  To make sure the list stays vertical, we want to also add the class `.nav-stacked` to each `ul` element.
 
 <pre class="prettyprint"><code class="XML">&lt;ul <span class="highlight">class=&quot;nav nav-stacked fixed&quot;</span> id=&quot;sidebar&quot;&gt;
     &lt;li&gt;
@@ -104,7 +104,7 @@ In order to make the links look more like navigation controls, and less like a l
 &lt;/ul&gt;
 </code></pre>
 
-Let's pause to look at just these changes because a lot has changed visually even though we haven't added much code.  The set of nav classes help strip out some of the default formatting associated with unordered lists and instead renders the links much like menu bars.  The elements now all align all the way on the left because `.nav` sets `padding-left: 0;`. We've removed the underline with `text-decoration: none;`, removed some of the list formatting with `list-style: none;`, and softened the colors a bit with <code>color: <span style="color:#428bca;">#428bca;</span></code>. The `nav-stacked` floats all the elements to the left so they 'stack' on top of each other. 
+Let's pause to look at just these changes because a lot has changed visually even though we haven't added much code.  The set of nav classes help strip out some of the default formatting associated with unordered lists and instead renders the links much like menu bars.  The elements now all align all the way on the left because `.nav` sets `padding-left: 0;`. We've removed the underline with `text-decoration: none;`, removed some of the list formatting with `list-style: none;`, and softened the colors a bit with <code>color: <span style="color:#428bca;">#428bca;</span></code>. The `nav-stacked` floats all the elements to the left so they 'stack' on top of each other.
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/KyleMit/v6zhz/4/embedded/result,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -122,7 +122,7 @@ First, let's give the navbar a little breathing room by giving it margins on the
 }
 ```
 
-Next, we'd like to be able to apply different formating to parent level links and child links.  CSS does not currently have a [Parent Selector][CSS Parent] which could be used to differentiate the top level links with those nested below them.  Instead, we can apply a style to all links inside of `bs-docs-sidebar` and then override that style for any list items that are children of two `ul.nav` elements.
+Next, we'd like to be able to apply different formatting to parent level links and child links.  CSS does not currently have a [Parent Selector][CSS Parent] which could be used to differentiate the top level links with those nested below them.  Instead, we can apply a style to all links inside of `bs-docs-sidebar` and then override that style for any list items that are children of two `ul.nav` elements.
 
 ```css
 /* all links */
@@ -149,8 +149,8 @@ For all links we'll apply a grey color schema and a font-weight of 400.  All lin
 ### Using Scrollspy
 
 To do the rest of the styling we'll need to know whether a link is active.  In order to do this, we can use a [scroll spy][scroll spy] on the page which will apply the `.active` class to the navigation list whenever a given element is scrolled into view.
-Scroll spy is called on the element whose scrolling activity you want to monitor.  Since you will probably be scrolling through the entire page, this should go on the `body` element.  
-The <a href="http://getbootstrap.com/javascript/#scrollspy-usage" id="Update3">target of scrollspy is</a>: 
+Scroll spy is called on the element whose scrolling activity you want to monitor.  Since you will probably be scrolling through the entire page, this should go on the `body` element.
+The <a href="http://getbootstrap.com/javascript/#scrollspy-usage" id="Update3">target of scrollspy is</a>:
 
 > the ID or class of the ***parent*** element of any Bootstrap `.nav` component.
 
@@ -175,24 +175,24 @@ You are still in charge of styling any elements you would like to display.  Scro
 
 ### Styling Active Links
 
-Whenever an element is set to active (due to scrollspy) or is hovered or focused, we'll apply some styles to the anchor.  We'll color it purple.  We'll make sure that it doesn't have an underline or a grey box highlighting it. And we'll add a purple flag on the left to help identify which items are active.  To do this, we'll apply a 2 pixel border to the left of the element.  
+Whenever an element is set to active (due to scrollspy) or is hovered or focused, we'll apply some styles to the anchor.  We'll color it purple.  We'll make sure that it doesn't have an underline or a grey box highlighting it. And we'll add a purple flag on the left to help identify which items are active.  To do this, we'll apply a 2 pixel border to the left of the element.
 
 >**Note**: Because of the way the CSS box model works, when we add a 2px border to the left, the entire element shifts 2 pixels to the right, displaced by the border that previously took up zero pixels.  One way to handle this is to shorten the padding we added by 2px every time the element is active.  But I think a cooler trick is to just start off with a transparent 2px border so the object does not get resized when adding a colorful border
 
 ```css
 /* all links */
 .bs-docs-sidebar .nav>li>a {
-    /*add trasnparent border */
+    /*add transparent border */
     border-left: 2px solid transparent;
 }
 /* active & hover links */
-.bs-docs-sidebar .nav>.active>a, 
-.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>li>a:hover,
 .bs-docs-sidebar .nav>li>a:focus {
-    color: #563d7c;                 
-    text-decoration: none;          
-    background-color: transparent;  
-    border-left: 2px solid #563d7c; 
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
 }
 ```
 
@@ -201,13 +201,13 @@ Let's also make active parent links have a very thick weight, and child links le
 
 ```css
 /* all active links */
-.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active>a,
 .bs-docs-sidebar .nav>.active:hover>a,
 .bs-docs-sidebar .nav>.active:focus>a {
     font-weight: 700;
 }
 /* nested active links */
-.bs-docs-sidebar .nav .nav>.active>a, 
+.bs-docs-sidebar .nav .nav>.active>a,
 .bs-docs-sidebar .nav .nav>.active:hover>a,
 .bs-docs-sidebar .nav .nav>.active:focus>a {
     font-weight: 500;
@@ -220,15 +220,27 @@ Let's also make active parent links have a very thick weight, and child links le
 
 One of my favorite features of the Bootstrap Navbar is that it automatically collapses subgroups that are not currently in view.  This allows a lot of information to be available, but prevents a lot of noise when it's not in use.  To do this we'll use the active flag on the parent group.  To hide all subgroups, we'll set `display:none` to all `ul.nav` elements that are children of other `.nav` elements.  This will collapse all subgroups.  Then we need to expand the active group by looking for a parent level nav with an `.active` child and set `display:block` on it's child ul.  So it will look like this:
 
-<pre class="prettyprint"><code class="css">/* hide all (inactive) nested list */
+```css raw
+/* hide all (inactive) nested list */
 .bs-docs-sidebar .nav ul.nav {
-    display: none;           
+    display: none;
 }
 /* show active nested list */
-.bs-docs-sidebar .nav<span class='highlight'>>.active></span>ul.nav {
-    display: block;           
+.bs-docs-sidebar .nav<mark>.active</mark> > ul.nav {
+    display: block;
 }
-</code></pre>
+```
+
+```css raw
+/* hide all (inactive) nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;
+}
+/* show active nested list */
+.bs-docs-sidebar .nav<mark>.active</mark> > ul.nav {
+    display: block;
+}
+```
 
 And behave like this:
 
@@ -236,7 +248,7 @@ And behave like this:
 
 ### Wrap Up
 
-So that's it.  You can have fun applying other styles as well.  Bootstrap uses [Affix][Affix] to lock the navbar into place after scrolling past the header.  
+So that's it.  You can have fun applying other styles as well.  Bootstrap uses [Affix][Affix] to lock the navbar into place after scrolling past the header.
 Also, they use media queries to collapse the navbar if the screen is below a certain size like this:
 
 ```css
@@ -259,7 +271,7 @@ Here's the final fiddle.  Feel free to play around with it, fork it, or leave me
 
 <iframe width="100%" height="600" src="http://jsfiddle.net/KyleMit/v6zhz/embedded/result,css,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-### Update with Top NavBar:
+### Update with Top NavBar
 
 Here's a quick rundown of how to add a **horizontal navbar** to the example. The primary difficulty in adding any fixed position navbar to the top of the window is it will **break** all your anchor tags like so:
 
@@ -271,9 +283,9 @@ The first trick when adding a navbar is to displace everything on the page by th
 body { margin-top:50px; }
 ```
 
-But as you can see from the previous example, this doesn't solve the issue.    
+But as you can see from the previous example, this doesn't solve the issue.
 
-Why is that?  
+Why is that?
 
 For more information, you can see my Stack Overflow answer to the question [When navigating to #id, element is hidden under fixed position header][AnchorHidden], but here's the gist of it.  When the browser is told to navigate to a [fragment identifier][fragment identifier] (#ID):
 
@@ -324,7 +336,7 @@ You can use `overflow: scroll` to add a scrollbar to the div, but this will alwa
 
 You'll notice once this is in place it doesn't do anything yet.  That's because we need to tell the container how large it is so it knows when any of its contents are taking up more space that it can provide.  As a test, you can just throw in `height: 100px` and you'll notice that the entire contents fits into a box that is 100px tall and you can scroll to get to the rest of it.
 
-However, we don't necessarily know how much space we want to allow the sidebar to consume.  It's going to depend on the space available in the window and how you're site is laid out.  In the simplest form, if we alloted the entire screen height to the sidebar, we could use <code>height: 100<b>%</b></code>.  
+However, we don't necessarily know how much space we want to allow the sidebar to consume.  It's going to depend on the space available in the window and how you're site is laid out.  In the simplest form, if we alloted the entire screen height to the sidebar, we could use <code>height: 100<b>%</b></code>.
 
 > **Note**: Whenever you use `height: 100%` in CSS, you have to next ask yourself, "*100% of what?*"  Often this is the parent element, but fixed position elements break the layout so 100% will automatically refer to the window size.  If your sidebar does not start at the top of the window, 100% height will extend past the bottom of the screen and make the scrollbar difficult to manage. You can choose a height <100% or apply your own padding to the element, instead of its parent.
 

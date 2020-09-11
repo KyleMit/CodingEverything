@@ -7,7 +7,6 @@
 		"eseom.nunjucks-template",
 		"bungcip.better-toml",
 		"yzhang.markdown-all-in-one",
-		"bierner.markdown-yaml-preamble",
 		"shd101wyy.markdown-preview-enhanced"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
