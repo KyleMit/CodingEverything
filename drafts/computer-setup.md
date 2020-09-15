@@ -7,6 +7,8 @@ date: 2020-02-14
 draft: true
 ---
 
+
+
 ## Hardware
 
 <!--
@@ -199,7 +201,6 @@ winget install --id=Microsoft.WindowsTerminal -e
 winget install --id=MRidgers.Clink -e
 winget install --id=Armin2208.WindowsAutoNightMode -e
 winget install --id=7zip.7zip -e
-winget install --id=Malwarebytes.Malwarebytes -e
 winget install --id=VideoLAN.VLC -e
 winget install --id=OBSProject.OBSStudio -e
 winget install --id=CPUID.CPU-Z -e
@@ -209,6 +210,7 @@ winget install --id=PrivateInternetAccess.PrivateInternetAccess -e
 winget install --id=Oracle.JavaRuntimeEnvironment -e
 winget install --id=BellSoft.LibericaJDK8Full -e
 winget install --id=RubyInstallerTeam.RubyWithDevKit -e
+winget install --id=Corsair.iCUE -e
 ```
 
 ## DotFiles
@@ -879,9 +881,9 @@ choco list --local-only
 ```
 
 * Apps
-  * [SourceTree](https://www.sourcetreeapp.com/) | [choco](https://chocolatey.org/packages/SourceTree)
 * CLI
   * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
+  * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
 * Fonts
   * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
   * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
@@ -889,12 +891,12 @@ choco list --local-only
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install sourcetree jq firacode-ttf cascadiacode
+choco install jq firacode-ttf cascadiacode hub
 ```
 
-Which installs to here:
+Which installs CLI tools to here:
 
-`C:\ProgramData\chocolatey\lib\jq\tools\jq.exe`
+`C:\ProgramData\chocolatey\lib\`
 
 
 
@@ -989,6 +991,23 @@ Windows Registry Editor Version 5.00
 "CenterScreenRoundedCornerRadius"=dword:00000009
 "ImmersiveSearchFull"=dword:00000001
 ```
+
+### [How To Disable Monitor Speakers Windows 10](https://easysitehello752.weebly.com/blog/how-to-disable-monitor-speakers-windows-10)
+
+1. Right-click on the volume icon on the taskbar and then click Sounds to open the Sound dialog.
+2. Under the Playback tab, right-click on the speaker and then click Properties.
+3. Under the General tab, there is a section called Device usage. Select Don’t use this device (disable) option from the drop-down box to disable the speaker.
+
+### [Rename your Windows 10 PC](https://support.microsoft.com/en-us/help/4558981/microsoft-account-rename-your-device)
+
+1. Select Start  > Settings  > System > About.
+2. Select Rename this PC.
+3. Enter a new name and select Next. You may be asked to sign in.
+4. Select Restart now or Restart later.
+
+### [How to Add or Remove Start Menu Items in Windows 10](https://www.dummies.com/computers/operating-systems/windows-10/how-to-add-or-remove-start-menu-items-in-windows-10/)
+
+1. Right-click the item you want to appear on the Start menu; then choose Pin to Start.
 
 ### Alt Drag
 
