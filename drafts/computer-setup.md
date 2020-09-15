@@ -29,6 +29,16 @@ Look Up Computer Stats:
 * **Storage**: 512 SSD
 
 
+### Mac
+
+* **Machine**: MacBook Pro 15" Mid 2014
+* **OS**: macOS Catalina 10.15.5
+* **RAM**: 16 GB DDR3
+* **Processor**: 2.2Ghz Intel Core i7
+* **Storage**: 256 SSD
+
+
+
 ### Work
 
 * **Machine**: [HP ProBook 650 G2](https://support.hp.com/us-en/document/c04912074)
