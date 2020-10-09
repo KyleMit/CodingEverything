@@ -1,6 +1,88 @@
----
-title: Powershell
----
+# Powershell
+
+* [Installing PowerShell - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7)
+* [Migrating from Windows PowerShell 5.1 to PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7)
+
+## Visual Studio Code
+
+* [Get started with PowerShell development in Visual Studio Code](https://devblogs.microsoft.com/scripting/get-started-with-powershell-development-in-visual-studio-code/)
+* [Visual Studio Code editing features for PowerShell development](https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/)
+* [Debugging PowerShell script in Visual Studio Code](https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/)
+
+### Startup Error
+
+[Troubleshoot Visual Studio Code Integrated Terminal launch failures](https://code.visualstudio.com/docs/supporting/troubleshoot-terminal-launch)
+
+
+PowerShell executable: C:\Users\kyle.mitofsky\.dotnet\tools\pwsh.exe
+PowerShell args:
+
+
+The terminal process :
+"C:\Users\kyle.mitofsky\.dotnet\tools\pwsh.exe
+'-NoProfile'
+'-NonInteractive'
+'-ExecutionPolicy'
+'Bypass'
+'-Command'
+'Import-Module 'c:\Users\kyle.mitofsky\.vscode\extensions\ms-vscode.powershell-2020.6.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1';
+
+
+```none
+pwsh.exe started.
+Waiting for session file
+Timed out waiting for session file to appear.
+Language server startup failed.
+The language service could not be started
+Error: Timed out waiting for session file to appear
+```
+
+## Versions
+
+* **Windows PowerShell 5.1**: `$env:WINDIR\System32\WindowsPowerShell\v1.0`
+* **PowerShell Core 6.x**: `$env:ProgramFiles\PowerShell\6`
+* **PowerShell 7**: `$env:ProgramFiles\PowerShell\7`
+
+
+## Syntax
+
+* [add value to array](https://ss64.com/ps/syntax-arrays.html)
+* [foreach loop](https://ss64.com/ps/foreach.html)
+* [foreach-object](https://ss64.com/ps/foreach-object.html)
+* [> operator](https://ss64.com/ps/syntax-compare.html)
+* [if statement](https://ss64.com/ps/if.html)
+* [create function](https://ss64.com/ps/syntax-functions.html)
+* [create function 2](https://www.microsoftpressstore.com/articles/article.aspx?p=2449030)
+* [format table widths](https://stackoverflow.com/a/52174495/1366033)
+* [Get-Date](https://ss64.com/ps/get-date.html)
+
+
+## PowerShell
+
+* [Math Round](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/30/powertip-use-powershell-to-round-to-specific-decimal-place/)
+* [Group & Aggregate](https://social.technet.microsoft.com/Forums/office/en-US/a7d96f2b-140b-49b5-a70f-f2df19c490ac/groupobject-and-measure-object?forum=winserverpowershell)
+* [Group & Aggregate](https://stackoverflow.com/a/6000217/1366033)
+
+
+## PS Mail Funcs
+
+https://social.technet.microsoft.com/Forums/Lync/en-US/cc2187e4-7e3f-40be-831f-83c3820451b3/how-can-i-access-an-outlook-folder-with-powershell-other-than-the-default?forum=winserverpowershell
+https://msdn.microsoft.com/en-us/magazine/dn189202.aspx
+
+## Interop.Outlook
+
+Folders Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.outlook.oldefaultfolders?view=outlook-pia
+Status Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.outlook.olbusystatus?view=outlook-pia
+
+## Modules
+
+`[Join-Object`](https://github.com/RamblingCookieMonster/PowerShell/blob/master/Join-Object.ps1)
+[`ImportExcel`](https://www.powershellgallery.com/packages/ImportExcel/7.0.1)
+
+```ps1
+Install-Module -Name ImportExcel -Repository PSGallery -Force
+```
+
 
 [Variable expansion / String interpolation](http://blogs.msdn.com/b/powershell/archive/2006/07/15/variable-expansion-in-strings-and-herestrings.aspx) - Only works with double quotes
 
@@ -84,10 +166,10 @@ $metadata = New-Object system.management.automation.commandmetadata (Get-Command
 
 ```bash
 function [<scope:>]<name> [([type]$parameter1[,[type]$parameter2])]{
- 
+
     param([type]$parameter1 [,[type]$parameter2])
     dynamicparam {<statement list>}
- 
+
     begin {<statement list>}
     process {<statement list>}
     end {<statement list>}
@@ -196,7 +278,7 @@ Get-WmiObject -Class "Win32_computersystem" | Format-List *
 
 ```bash
 # View Loaded Modules
-Get-Module –ListAvailable 
+Get-Module –ListAvailable
 
 # Import Module
 Import-Module '\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Powershell\Maintain-IIS.psm1'
@@ -288,3 +370,67 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 # Call Static Method On Type
 [System.Environment]::Commandline
 ```
+
+
+
+## Questions
+
+
+* [Null coalescing in powershell](https://stackoverflow.com/q/10623907/1366033)
+* [How to add properties to a PowerShell object from an array](https://stackoverflow.com/a/27847509/1366033)
+* [Using PowerShell to split a string into an array](https://www.sqlshack.com/powershell-split-a-string-into-an-array/)
+
+* [How can I graph the # of emails I receive per day](https://superuser.com/q/366065/180163)
+* [Reading mail data from powershell](https://stackoverflow.com/q/29087374/1366033)
+* [Powershell script that reads Outlook emails and exports results as .csv](https://codereview.stackexchange.com/q/165994/23844)
+
+
+* [Inline If / Ternary Expression](https://stackoverflow.com/a/29982682/1366033)
+* [match all chars except w/ negated set](https://stackoverflow.com/a/1409170/1366033)
+* [don't match particular chars w/ negative lookahead](https://stackoverflow.com/a/2973495/1366033)
+* [regex expression for OU groups](https://regexr.com/4st2i)
+* [powershell regex capture groups](https://stackoverflow.com/a/59900840/1366033)
+* [Anonymous Object](https://stackoverflow.com/a/56813241/1366033)
+* [Calculated Property](https://stackoverflow.com/q/59901298/1366033)
+
+* [compare two objs](https://stackoverflow.com/q/47576496/1366033)
+* [compare all props](https://blogs.technet.microsoft.com/janesays/2017/04/25/compare-all-properties-of-two-objects-in-windows-powershell/)
+* [nested conditional](https://stackoverflow.com/a/34311158/1366033)
+* [Variable Expansion / Command Substitution](https://powershellexplained.com/2017-01-13-powershell-variable-substitution-in-strings/)
+
+* [Get-AD Users](http://www.powershelladmin.com/wiki/Check_if_an_AD_user_exists_with_Get-ADUser)
+* [Check AD User](https://serverfault.com/questions/612856/how-to-check-if-an-ad-username-is-already-used)
+* [Query AD Accounts](http://www.deliveron.com/blog/query-user-accounts-active-directory-powershell/)
+* [Expand Object Properties](https://www.petri.com/expanding-objects-properties-powershell)
+* [Build Custom Object](https://technet.microsoft.com/en-us/library/hh750381.aspx)
+
+* [Why does git think my .sql file is a binary file?](http://stackoverflow.com/a/40250979/1366033)
+* [Find versioned files](http://www.heikniemi.net/hardcoded/2010/02/powershell-basics-4-matching-and-capturing-with-regular-expressions/)
+* [Group by Filename](https://technet.microsoft.com/en-us/library/ee176864.aspx)
+
+* [Display Instances](https://stackoverflow.com/a/8153857/1366033)
+* [Find and Replace](https://stackoverflow.com/a/2837891/1366033)
+* [Search Depth](https://stackoverflow.com/a/13250444/1366033)
+
+* [Reddit Join](https://www.reddit.com/r/PowerShell/comments/2zqff6/join_objects_arrays_together_like_sql_join/)
+* [SO Join](http://stackoverflow.com/questions/11721835/in-powershell-how-can-i-combine-the-results-of-two-commands-that-have-a-1-to-1)
+* [SO Join](http://stackoverflow.com/questions/1851087/powershell-join)
+* [Join-Object](http://poshcode.org/1461)
+* [Join-Object](http://blogs.msdn.com/b/powershell/archive/2012/07/13/join-object.aspx)
+* [Join-Object](http://ramblingcookiemonster.github.io/Join-Object/)
+* [Join-Object](https://github.com/RamblingCookieMonster/PowerShell/blob/master/Join-Object.ps1)
+* [Calculated Properties](https://technet.microsoft.com/en-us/library/ff730948.aspx)
+
+* [PS Object Array](https://stackoverflow.com/a/17354800/1366033)
+* [Data Tables](https://powershellreflections.wordpress.com/2011/02/14/using-powershsell-to-access-sql-data/)
+
+* [Find Out Who Is Logged On to a Remote Machine With Just One Line of Code](https://www.itprotoday.com/devops-and-software-development/find-out-who-logged-remote-machine-just-one-line-code)
+* [Who's logged in to remote PC?](https://community.spiceworks.com/scripts/show/1166-who-s-logged-in-to-remote-pc)
+* [How to find a logged-in user remotely using PowerShell](https://4sysops.com/archives/how-to-find-a-logged-in-user-remotely-using-powershell/)
+* [Get remote computer system and hardware information](https://community.spiceworks.com/scripts/show/2773-get-remote-computer-system-and-hardware-information)
+* [How can I check what machines I'm logged into within a domain?](https://serverfault.com/a/477602)
+* [How to find a logged-in user remotely using PowerShell](https://4sysops.com/archives/how-to-find-a-logged-in-user-remotely-using-powershell/)
+* [T-SQL Tuesday #006 Blobs, FileStream and PowerShell](https://www.sqlservercentral.com/blogs/t-sql-tuesday-006-blobs-filestream-and-powershell)
+* [How To: Export SQL Server FileStream Data with PowerShell](http://social.technet.microsoft.com/wiki/contents/articles/899.how-to-export-sql-server-filestream-data-with-powershell.aspx)
+* [Delete files without an extension in PowerShell](https://stackoverflow.com/a/42345207/1366033)
+* [Finding All the Empty Folders in a Directory Tree](https://technet.microsoft.com/en-us/library/ff730953.aspx)
