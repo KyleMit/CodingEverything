@@ -137,12 +137,6 @@ Look Up Computer Stats:
 * [7-Zip](https://www.7-zip.org/)
 * [MalwareBytes](https://www.malwarebytes.com/)
 
-## Windows
-
-* [Auto Night/Dark Mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)
-* [7+ Taskbar Tweaker](https://rammichael.com/7-taskbar-tweaker)
-* [Alt Drag](https://stefansundin.github.io/altdrag/)
-
 ## Media
 
 * [VLC Media Player](https://www.videolan.org/vlc/index.html)
@@ -174,6 +168,24 @@ Look Up Computer Stats:
 * [AWS Console](https://aws.amazon.com/)
 * [Office 365](https://outlook.office365.com/)
 
+
+## Windows
+
+* [Auto Night/Dark Mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)
+* [7+ Taskbar Tweaker](https://rammichael.com/7-taskbar-tweaker)
+* [Alt Drag](https://stefansundin.github.io/altdrag/)
+
+
+## Windows System Apps
+
+### 7 Taskbar Tweaker
+
+* Thumbnails > Drag to Re-order
+* Pinned Items > Remove extra gap between items
+* Other > Hide the "Show Desktop" button
+
+
+[How to Customize Any Icon in Windows 10](https://www.makeuseof.com/tag/customize-icon-windows/)
 
 
 ## Configuration
@@ -214,13 +226,14 @@ winget install --id=7zip.7zip -e
 winget install --id=VideoLAN.VLC -e
 winget install --id=OBSProject.OBSStudio -e
 winget install --id=CPUID.CPU-Z -e
-winget install --id=Adobe.AdobeAcrobatReaderDC -e
-winget install --id=rammichael.7+TaskbarTweaker -e
+winget install --id=Adobe.AdobeAcrobatReaderDC -v "2020.012.20041" -e
+winget install --id=rammichael.7+TaskbarTweaker -e --force
 winget install --id=PrivateInternetAccess.PrivateInternetAccess -e
 winget install --id=Oracle.JavaRuntimeEnvironment -e
 winget install --id=BellSoft.LibericaJDK8Full -e
 winget install --id=RubyInstallerTeam.RubyWithDevKit -e
 winget install --id=Corsair.iCUE -e
+winget install --id=AltDrag.AltDrag -e
 ```
 
 ## DotFiles
@@ -744,6 +757,7 @@ curl -s https://api.github.com/orgs/vtcodecamp/repos?per_page=1000 |jq -r '.[]|.
 curl -s https://api.github.com/orgs/vermontdepartmentofhealth/repos?per_page=1000 |jq -r '.[]|.ssh_url' |xargs -L1 git clone
 ```
 
+
 #### Get Status of All Git Repos
 
 [Find all uncommitted locals repos in a directory tree](https://stackoverflow.com/q/961101/1366033)
@@ -938,6 +952,32 @@ dotnet tool install --global dotnet-script
   * ![add shortcut](/assets/posts/computer-setup/chrome-shortcuts.png)
   * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
   * [Xapian Search](https://xapian.org/)
+* [chrome-command-palette](https://github.com/omittones/chrome-command-palette)
+* [session buddy](https://sessionbuddy.com/)
+
+### Chrome Apps
+
+
+[Is it possible to have Google Chrome always open shortcuts in a separate window?](https://superuser.com/a/1588014/180163)
+
+![chrome create shortcut](/assets/posts/computer-setup/chrome-create-shortcut.png)
+
+![chrome add shortcut as window](/assets/posts/computer-setup/chrome-create-shortcut-window.png)
+
+<chrome://apps>
+
+<%AppData%\Microsoft\Windows\Start Menu\Programs\Chrome Apps>
+
+
+#### Shortcut Example
+
+<!-- spellchecker: disable -->
+
+* **Target**: `"C:\Program Files\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=kmhopmchchfpfdcdjodmpfaaphdclmlj`
+* **Start In**: `"C:\Program Files\Google\Chrome\Application"`
+* **Change Icon**: `%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Web Applications\_crx_kmhopmchchfpfdcdjodmpfaaphdclmlj\Gmail.ico`
+
+<!-- spellchecker: enable -->
 
 #### Stylus Settings
 
@@ -967,6 +1007,8 @@ Windows Explorer Settings
 Remove Start Menu Suggestions
 
 ![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
+
+[Windows 10 select default login option](https://superuser.com/a/1265040/180163)
 
 ### Disable Aero Shake
 

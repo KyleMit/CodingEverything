@@ -8,9 +8,9 @@ I got this error message when trying to compare two plain text sql files:
 
 >"Binary files a/person.sql and b/person.sql differ"
 
-**Hold Up**!  These aren't binary files.  To prove it to myself I opened them up in notepad++.  "**See!**," I said to my [rubber duck][1] - they're just plain text characters.   
+**Hold Up**!  These aren't binary files.  To prove it to myself I opened them up in notepad++.  "**See!**," I said to my [rubber duck][1] - they're just plain text characters.
 
-Where I went next took me on a 3 hour journey of *unicode encoding* and *git internals*. 
+Where I went next took me on a 3 hour journey of *unicode encoding* and *git internals*.
 
 These aren't the meat and potatoes of a developer's life, but they compose the building blocks of literally almost every ounce of output delivered, so they're worth understanding, at least nominally.
 
@@ -18,10 +18,10 @@ These aren't the meat and potatoes of a developer's life, but they compose the b
 
 First let's look at git to see where the problem begins.
 
-Every time git stores a file, it has to undergo a process of **binary detection** to determine whether the file is worth diffing.  It  *doesn't* get to make this determination merely because of the file extension because multiple vendors can use the same extension and it doesn't have a registry of every possible filetype anyway.  
+Every time git stores a file, it has to undergo a process of **binary detection** to determine whether the file is worth diffing.  It  *doesn't* get to make this determination merely because of the file extension because multiple vendors can use the same extension and it doesn't have a registry of every possible filetype anyway.
 
 > [Instead, git looks for] a NULL (0) byte somewhere within the first 8000 characters of the file. Typically, that happens because the file is being saved as something other than UTF-8. So, it's likely being saved as UCS-2, UCS-4, UTF-16, or UTF-32. All of those have embedded NULL characters when using ASCII characters
-> \- [jszakmeister](http://stackoverflow.com/a/19723302/1366033)
+> \- [John Szakmeister](http://stackoverflow.com/a/19723302/1366033)
 
 Sure enough, if we look at the "binary" sql file, we'll see it's saved as **UCS-2 w/ BOM**.  And if we look open it up with a [HEX editor](http://superuser.com/q/14465/180163), we can see multi-column null characters.
 
@@ -66,6 +66,7 @@ $files | ForEach {
 #### References
 
 Git Binary/Text Files
+
 * [Why does git think my .sql file is a binary file?](http://stackoverflow.com/q/28145687/1366033)
 * [Why does git think my cs file is binary?](http://stackoverflow.com/q/2506041/1366033)
 * [How do I diff utf-16 files with GNU diff?](http://stackoverflow.com/q/778291/1366033)
@@ -82,7 +83,7 @@ SQL Files Binary in Git
 * [How can I make Git show changes to my .sql files?](http://stackoverflow.com/q/31540210/1366033)
 * [Diffs for Sql files are shown as "binary"](https://github.com/github/linguist/issues/1873)
 * [Default encoding in SQL Server Management Studio](http://stackoverflow.com/q/21476261/1366033)
-* [Need a way to set the default encoding for query files in SMSS](https://connect.microsoft.com/SQLServer/feedback/details/336750/need-a-way-to-set-the-default-encoding-for-query-files-in-smss)
+* [Need a way to set the default encoding for query files in SSMS](https://connect.microsoft.com/SQLServer/feedback/details/336750/need-a-way-to-set-the-default-encoding-for-query-files-in-smss)
 * [Unicode Defaults on SSMS Save](https://connect.microsoft.com/SQLServer/feedback/details/288677/unicode-defaults-on-ssms-save)
 
 Git attributes

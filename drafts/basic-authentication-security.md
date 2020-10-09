@@ -12,22 +12,22 @@ In deploying web applications, you have a couple options for authenticating your
 
 Basic authentication works in the following steps:
 
-![Basic Auth](https://i.imgur.com/Xucx6eC.png) 
+![Basic Auth](https://i.imgur.com/Xucx6eC.png)
 
 1. An un-authenticated user requests resources
 2. Server requires authentication to view resources so returns a "401 Challenge" to the browser.  The HTTP Response header will contain something like this:
 
-    ```
+    ```none
     WWW-Authenticate: Basic realm="Protected"
     ```
 
-3. The browser prompts the user for their username and password and stores them internally. 
+3. The browser prompts the user for their username and password and stores them internally.
 4. The browser reissues the original request along with the stored credentials (encoded in base64)
 
-    ```
+    ```none
     Authorization: Basic dG9tY2F0OnMzY3JIdA==
     ```
-    
+
 5. The server authenticates the passed in credentials against the local computer / network.  Once authenticated, the browser returns the requested resource.This approach requires that the end user have an account within the server's user accounts or network.
 6. On subsequent requests the browser continues to pass the saved user credentials until the browser is closed and discards the login info.
 
@@ -38,7 +38,7 @@ When it comes to **timing out** a user, it's important to note which elements we
 **Client** - controls credentials
 **Server** - controls session
 
-On the server side you can set the [session timeout](https://www.iis.net/configreference/system.webserver/asp/session), 
+On the server side you can set the [session timeout](https://www.iis.net/configreference/system.webserver/asp/session),
 
 ```xml
 <system.web>
@@ -47,22 +47,22 @@ On the server side you can set the [session timeout](https://www.iis.net/configr
 
 The architectural design for most web applications is state
 
-It's nice having the client and server both have their own responsibilities, but it leads to some wonky results.  By default, if the session times out on the server, the client is none the wiser.  Unless you have a 
+It's nice having the client and server both have their own responsibilities, but it leads to some wonky results.  By default, if the session times out on the server, the client is none the wiser.  Unless you have a
 
 
 #### [RFC7235 - 6.2  Authentication Credentials and Idle Clients](https://tools.ietf.org/html/rfc7235#section-6.2) (previously [RFC2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html#sec15.6))
 
 >Existing HTTP clients and user agents typically retain authentication information indefinitely.  HTTP does not provide a mechanism for the origin server to direct clients to discard these cached credentials, since the protocol has no awareness of how credentials are obtained or managed by the user agent.  The mechanisms for expiring or revoking credentials can be specified as part of an authentication scheme definition.
-
+>
 >Circumstances under which credential caching can interfere with the application's security model include but are not limited to:
-
+>
 > * Clients that have been idle for an extended period, following which the server might wish to cause the client to re-prompt the user for credentials.
-
+>
 > * Applications that include a session termination indication (such as a "logout" or "commit" button on a page) after which the server side of the application "knows" that there is no further reason for the client to retain the credentials.
-
+>
 > User agents that cache credentials are encouraged to provide a readily accessible mechanism for discarding cached credentials under user control.
-
-
+>
+>
 > [HTTP Authentication: Basic and Digest Access Authentication](https://tools.ietf.org/html/rfc2617)
 
 **Stack Overflow Questions**:
