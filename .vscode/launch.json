@@ -9,6 +9,9 @@
             "args": [],
             "runtimeArgs": [
                 "--preserve-symlinks"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
             ]
         }
     ]

@@ -23,11 +23,14 @@
 * [Nunjucks > Filters > urlencode](https://mozilla.github.io/nunjucks/templating.html#urlencode)
 * [How to escape include · Issue #695](https://github.com/mozilla/nunjucks/issues/695)
 
+<!-- {% raw %} -->
 
 ```hbs
 {% set favicon %}{% include "assets/favicon.svg" %}{% endset %}
 <link rel="shortcut icon" href="data:image/svg+xml,{{favicon | urlencode}}" type="image/svg+xml" />
 ```
+
+<!-- {% endraw %} -->
 
 ## Plugins
 

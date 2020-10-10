@@ -12,9 +12,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/VermontDepartmentOfHealth/docs.git"
+        "url": "https://github.com/KyleMit/CodingEverything"
     },
-    "author": "VermontDepartmentOfHealth",
+    "author": "KyleMit",
     "license": "MIT",
     "dependencies": {
         "@11ty/eleventy": "^0.10.0",

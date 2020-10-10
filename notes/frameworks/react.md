@@ -157,6 +157,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 [Passing Props](https://stackoverflow.com/a/55073712/1366033)
 
+<!-- {% raw %} -->
 ```js
 // function component syntax
 function HelloWorldFunc(props) {
@@ -180,6 +181,7 @@ const helloCreate = React.createElement(HelloWorldFunc, {user:{name:'Kyle'}});
 // JSX syntax
 const helloJSX = <HelloWorldClass user={{name:'Kyle'}} />
 ```
+<!-- {% endraw %} -->
 
 ## JSX
 

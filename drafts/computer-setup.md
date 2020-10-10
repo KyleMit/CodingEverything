@@ -1010,6 +1010,10 @@ Remove Start Menu Suggestions
 
 [Windows 10 select default login option](https://superuser.com/a/1265040/180163)
 
+[How to Change Preferred Band (2.4 GHz or 5 GHz) for Wireless Network Adapters](https://www.majorgeeks.com/content/page/how_to_change_preferred_band_for_wireless_network_adapters.html)
+
+![change preferred band](/assets/posts/computer-setup/prefered-band.png)
+
 ### Disable Aero Shake
 
 [How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
