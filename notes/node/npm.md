@@ -9,6 +9,10 @@
 npm unpublish <package-name> -f
 ```
 
+## Badge Provider
+
+[Version Badge for npm, RubyGems, PyPI, Bower and other packages](https://badge.fury.io/)
+
 ## Alternatives
 
 * [yarn](https://yarnpkg.com/)

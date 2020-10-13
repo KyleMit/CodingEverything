@@ -121,6 +121,15 @@ let doc = yaml.safeLoad();
 console.log(doc);
 ```
 
+[Using filesystem in node.js with async/await](https://stackoverflow.com/a/58332163/1366033)
+[Using async/await with a forEach loop](https://stackoverflow.com/a/37576787/1366033)
+[Merge/flatten an array of arrays](https://stackoverflow.com/a/18307218/1366033)
+[Counting the occurrences / frequency of array elements](https://stackoverflow.com/a/39841401/1366033)
+[Convert object to an array of objects?](https://stackoverflow.com/a/49345363/1366033)
+[Sort array of objects by string property value](https://stackoverflow.com/a/35092754/1366033)
+[Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
+[What is the different between `stat`, `fstat`, and `lstat` functions in node](https://stackoverflow.com/a/32478801/1366033)
+
 ## Utilities
 
 ### Generate Sprites
@@ -284,3 +293,21 @@ console.log(diag(4, 3)); // 5
 
 * [Converting callbacks to promises | Zell Liew](https://zellwk.com/blog/converting-callbacks-to-promises/)
 * [Util | Node.js v8.17.0 Documentation](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original)
+
+
+## NX.JS
+
+[NX](https://nx.dev/)
+
+> Extensible Dev Tools for Monorepos
+
+![nx mono structure](/assets/notes/node/nx-mono-structure.png)
+
+```bash
+npx create-nx-workspace your-name
+```
+
+```bash
+/apps # specific apps
+/libs # common ui elements - shared across multiple components
+```

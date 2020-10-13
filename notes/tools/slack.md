@@ -1,13 +1,64 @@
 # Slack
 
+## Docs
+
+
+* [Manage app installation settings for your workspace | Slack](https://app.slack.com/help/articles/222386767-Manage-app-installation-settings-for-your-workspace)
 
 
 ## Slack Apps
 
-[Olaph](https://olaph.io/)
+* [Browse Slack Apps](https://btvdev.slack.com/apps)
+* [Manage Slack Apps](https://btvdev.slack.com/apps/manage)
 
 
-## Slack Bot
+* [Olaph](https://olaph.io/)
+* [Better Uptime](https://betteruptime.com/slack-integration)
+* [GitHub](https://slack.github.com/)
+* [Simple Poll](https://simplepoll.rocks/)
+* [Spacetime](https://spacetime.am/)
+
+
+## Slash Commands
+
+[Enabling interactivity with Slash Commands](https://api.slack.com/interactivity/slash-commands)
+
+* `/active` - mark yourself as active
+* `/away` - toggle your "away" status
+* `/dnd [desc]` - starts or ends "Do Not Disturb" session
+
+* `/apps [search]` - search for slack apps in the app directory
+
+* `/collapse` - collapse all files in the current channel
+* `/expand` - Expand all files in the current channel
+
+* `/feed [help|subscribe|list|remove` - manage RSS subscriptions
+* `/feedback` - send feedback to Slack team
+
+* `/invite @user [channel]` - invite another member to a channel
+* `/invite_people name@example.com` - invite people to your workspace
+
+* `/leave (/close /part) [channel]` - leave a channel
+* `/me your message` - displays action text
+* `/msg (/dm) @user your message` - Send a DM message to another user
+
+* `/mute [channel]` - Mutes channel or the current channel
+* `/open (/join) channel` - Open a channel
+
+* `/remind [@someone or #channel] [what] [when]` - set a reminder
+* `/search (or /s) [your text]` - Perform a search
+* `/shortcuts (or /keys)` - Open the keyboard shortcuts dialog
+
+* `/shrug your text` - appends shrug to your message
+* `
+
+
+
+
+
+
+
+## Build Slack Bot
 
 
 ### Links

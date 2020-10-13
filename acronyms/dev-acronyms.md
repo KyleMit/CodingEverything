@@ -67,13 +67,19 @@
 * **SFT** - Secure File Transfer
 * **RBAC** - Role-Based Access Control
 * **XACML** - [eXtensible Access Control Markup Language](https://en.wikipedia.org/wiki/XACML)
-* **OWASP** - [Open Web Application Security Project](https://owasp.org/)
 * **PaaS** - Platform As A Service
 * **IIFE** - Immediately Invoked Function Expression
 * **IoC** - Inversion of Control
 * **DI** - Dependency Injection
 * **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
 * **RoR** - Ruby On Rails
+* **CAD** - Computer-aided design
+
+### Security
+
+* **OWASP** - [Open Web Application Security Project](https://owasp.org/)
+* **DDoS** - Distributed Denial of Service
+* **XSS** - Cross-Site Scripting
 
 ### Numeronym
 
@@ -137,6 +143,8 @@
 * **JWT** - JSON Web Token
 * **OIDC** - OpenID Connect
 
+
+
 ### Web Dev
 
 * **FOUC** - Flash of Unstyled Content
@@ -155,6 +163,8 @@
 * **TBT** - Total Blocking Time
 * **TTI** - Time to Interactive
 * **TTFB** - Time to First Byte
+* **PRPL** - Preload, Render, Pre-cache, Lazy Load
+
 
 ### JavaScript
 
@@ -167,6 +177,7 @@
 
 * **PPAs** - Personal Package Archives
 * **SSH** - [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
+* **POSIX** - Portable Operating System Interface for Unix
 
 ### Salesforce
 
@@ -227,6 +238,7 @@
 * **TA** - Technical Assistance
 * **COB** - Close of Business
 * **EOD** - End of Day
+* **FTE** - Full Time Equivalency
 
 ### Enterprise
 
