@@ -3,6 +3,11 @@
 * [Installing PowerShell - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7)
 * [Migrating from Windows PowerShell 5.1 to PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7)
 
+Core - pwsh.exe
+Classic - powershell.exe
+
+
+
 ## Visual Studio Code
 
 * [Get started with PowerShell development in Visual Studio Code](https://devblogs.microsoft.com/scripting/get-started-with-powershell-development-in-visual-studio-code/)
@@ -187,10 +192,10 @@ function Start-App([String] $AppName){
 
 #Option 2
 function Start-App {
-	Param(
-		[String]
-		$AppName
-	)
+    Param(
+        [String]
+        $AppName
+    )
     #<statements>
 }
 ```
@@ -241,7 +246,7 @@ $a.GetType();
 
 Generally wrap in a single `<# block comment #>`, though it's valid syntax to individually comment every line
 
-**Help Syntax**
+#### Help Syntax
 
 ```bash
 <#
@@ -346,9 +351,9 @@ if ($decision -eq 0) {
 
 ```bash
 $obj = [PSCustomObject]@{
-	Property1 = 'one'
-	Property2 = 'two'
-	Property3 = 'three'
+    Property1 = 'one'
+    Property2 = 'two'
+    Property3 = 'three'
 }
 ```
 

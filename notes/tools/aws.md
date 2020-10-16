@@ -1,5 +1,7 @@
 # Amazon Web Services
 
+[IAM Dashboard](https://console.aws.amazon.com/iam/home?region=us-east-1)
+
 ## Docs
 
 [AWS Documentation](https://docs.aws.amazon.com/index.html)
@@ -28,3 +30,9 @@
 ## CLI
 
 * [Installing, updating, and uninstalling the AWS CLI version 2 on Windows](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)
+* [Named profiles - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+
+## Resource Manager
+
+* [Tag Editor](https://us-east-2.console.aws.amazon.com/resource-groups/tag-editor/find-resources?region=us-east-2)
+

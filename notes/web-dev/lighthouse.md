@@ -4,6 +4,9 @@
 ## Alternatives
 
 * [Measure](https://web.dev/measure/)
+* [Lighthouse Metrics](https://lighthouse-metrics.com/)
+* [Web Hint](https://webhint.io/)
+* [Speedlify](https://www.zachleat.com/web/speedlify/)
 * [WebPageTest - Website Performance and Optimization Test](https://www.webpagetest.org/)
 * [GTmetrix | Website Speed and Performance Optimization](https://gtmetrix.com/)
 * [Website Speed Test | Pingdom Tools](https://tools.pingdom.com/)

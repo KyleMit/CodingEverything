@@ -38,6 +38,14 @@
 * **IIS** - Internet Information Services
 * **VPN** - Virtual Private Network
 
+## File Types
+
+### Images
+
+* **PNG** - Portable Network Graphics
+* **JPG** - Graphics Interchange Format
+* **SVG** - Scalable Vector Graphics
+
 ### Database
 
 * **DB** - Database
@@ -49,6 +57,7 @@
 * **RDLC** - Report Definition Language Client Side
 * **ODBC** - Open Database Connectivity
 * **RDB** - Reporting database (Data Warehouse)
+* **RDBMS** - Relational Database Management System
 * **ODSE** - [Operational Data Store](https://en.wikipedia.org/wiki/Operational_data_store) (Transactional)
 * **SRT**- [System Reference Tables](https://en.wikipedia.org/wiki/Reference_table) (Code Values)
 * **CRUD** - Create, Read, Update, Delete
@@ -74,6 +83,8 @@
 * **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
 * **RoR** - Ruby On Rails
 * **CAD** - Computer-aided design
+* **ORMs** - Object Relational Mapping
+* **DSLs** - Domain Specific Language
 
 ### Security
 
@@ -93,6 +104,7 @@
 
 * **WCAG** - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
 * **ARIA** - [Accessible Rich Internet Applications](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+* **NVDA** - NonVisual Desktop Access
 
 ## Working Groups
 
@@ -173,6 +185,17 @@
 * **ES6** - ECMAScript 6
 * **MDN** - Mozilla Developer Network
 
+#### React
+
+* **CRA** - Create React App
+* **CRNA** - Create React Native App
+
+### OS
+
+* **OS** - Operating System
+* **WSL** - Windows Subsystem for Linux
+
+
 ### Linux
 
 * **PPAs** - Personal Package Archives
@@ -239,6 +262,16 @@
 * **COB** - Close of Business
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
+
+
+### C-Suite
+
+* **C-Suite** - executive-level managers within a company
+* **CEO** - Chief Executive Officer
+* **CFO** - Chief Financial Officer
+* **COO** - Chief Operating Officer
+* **CIO** - Chief Information Officer
+
 
 ### Enterprise
 

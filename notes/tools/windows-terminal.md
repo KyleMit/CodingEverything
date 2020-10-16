@@ -80,9 +80,6 @@
 [Install Powershell Core](https://github.com/powershell/powershell)
 
 
-## Windows Subsystem for Linux (WSL)
-
-[How to Install and Use the Linux Bash Shell on Windows 10](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
 ## Upload JSON Schema Definition
 

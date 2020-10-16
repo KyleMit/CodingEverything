@@ -127,7 +127,7 @@ GNU > Linux > Debian > GNOME > Ubuntu
 ## Command Line
 
 [The Linux command line for beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
-
+[Beginner Geek: How to Start Using the Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
 
 ## File Manager
 
