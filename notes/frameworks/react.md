@@ -218,6 +218,5 @@ Babel in the browser
 
 ## Debug
 
-[React Dev Tools For Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-
-
+* [React Dev Tools](https://fb.me/react-devtools)
+* [React Dev Tools For Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)

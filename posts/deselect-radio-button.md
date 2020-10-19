@@ -34,23 +34,19 @@ Here's a quick way to temporarily allow a page to deselect radio buttons by pres
 
 This screenshot should match your current browser (🤞), but if it doesn't - here's an [album of screenshots for different browsers](http://imgur.com/a/SB8rN).
 
+
+> **Note**: Of course, by the time you're opening up the developer tools, you can just edit the HTML directly, but this is a little more reusable.
+
+P
 <div><script>
 //http://stackoverflow.com/a/9851769/1366033
 var isFirefox = typeof InstallTrigger !== 'undefined';
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
 var img = document.getElementById('browserInstructions');
-
 if (isFirefox) {
     img.src = 'https://i.imgur.com/xDodZUR.gif';
 } else if (isIE) {
     img.src = 'https://i.imgur.com/tgWvanJ.gif';
 }
 </script></div>
-
-
-> **Note**: Of course, by the time you're opening up the developer tools, you can just edit the HTML directly, but this is a little more reusable.
-
-
-
 

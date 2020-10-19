@@ -1,5 +1,6 @@
 # Creating a CLI w/ Node
 
+
 ## Tutorials
 
 * [Making CLI app with ease using commander.js and Inquirer.js](https://medium.com/jspoint/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac)
@@ -30,3 +31,43 @@ Delete the following folders:
 [Positional arguments vs options in a command-line interface](https://softwareengineering.stackexchange.com/q/366218/87466)
 [Variadic function](https://en.wikipedia.org/wiki/Variadic_function)
 [Sending command line arguments to npm script](https://stackoverflow.com/a/26545792/1366033)
+
+
+## NPM Package
+
+### Run package locally
+
+1. In package directory run `npm link`
+
+   ```bash
+   npm link
+   ```
+
+2. In the directory you want to consume the package, run the following:
+
+   ```bash
+   npm link <package-name>
+   ```
+
+## Deployment
+
+### Project Setup
+
+```bash
+npm login
+npm config set access public
+npm publish --access public
+```
+
+
+## Commander
+
+* [Provide Array of permitted values for an option? - Issue #518](https://github.com/tj/commander.js/issues/518) - Not Yet
+* [Enhance Option class to allow specifying choices - PR #1331](https://github.com/tj/commander.js/pull/1331) - Version 7.x
+
+```js
+program
+   .addOption(new Option('-s, --secret').hideHelp())
+   .addOption(new Option('-t, --timeout <delay>', 'timeout in seconds').default(60, 'one minute'))
+   .addOption(new Option('-s, --size <value>', 'drink size').choices(['big', 'little']));
+```

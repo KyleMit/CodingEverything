@@ -95,3 +95,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 ```
 
 [Pinned tabs: add a setting to show more context #98161](https://github.com/microsoft/vscode/issues/98161#issuecomment-690104534)
+
+## Open File Side by Side
+
+* [How do you open file in split editor in VSCode?](https://stackoverflow.com/q/55816591/1366033)
+* [VSCode: What is the command to open the selection in a new windows (vertical split?)](https://stackoverflow.com/q/55767160/1366033)
+* [vscode-docs/v1_44.md at vnext · microsoft/vscode-docs](https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_44.md#quick-open-rewrite)
+* [Customize the key for "open to side" in quickopen window](https://github.com/microsoft/vscode/issues/91018)
+* [Add a command for "Open to Side" from quick open](https://github.com/microsoft/vscode/issues/43059)

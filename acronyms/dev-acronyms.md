@@ -37,6 +37,8 @@
 * **DMZ** - Demilitarized Zone
 * **IIS** - Internet Information Services
 * **VPN** - Virtual Private Network
+* **RAID** - Redundant Array of Independent Disk
+* **NAS** - Network Attached Storage
 
 ## File Types
 
@@ -105,6 +107,7 @@
 * **WCAG** - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
 * **ARIA** - [Accessible Rich Internet Applications](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * **NVDA** - NonVisual Desktop Access
+* **WAVE** - Web Accessibility Evaluation Tool
 
 ## Working Groups
 
