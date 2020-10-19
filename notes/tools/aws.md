@@ -36,3 +36,17 @@
 
 * [Tag Editor](https://us-east-2.console.aws.amazon.com/resource-groups/tag-editor/find-resources?region=us-east-2)
 
+## Resource Types
+
+* **EC2** - Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+
+## Stacks
+
+[Working with stacks - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html)
+
+> A stack is a collection of AWS resources that you can manage as a single unit
+
+## Questions
+
+[Is there a way to list all resources in AWS?](https://stackoverflow.com/q/44391817/1366033)
+

@@ -162,6 +162,8 @@
 
 ### Web Dev
 
+
+* **FE** - Front End
 * **FOUC** - Flash of Unstyled Content
 * **FOIT** - Flash of Invisible Text
 * **FOUT** - Flash of Unstyled Text
@@ -169,6 +171,11 @@
 * **CSRF** - Cross Site Request Forgery
 * **PWA** - [Progressive Web Apps](https://en.wikipedia.org/wiki/Progressive_Web_Apps)
 * **LQIP** - Low Quality Image Placeholder
+
+* **SSG** - Static Site Generator
+* **SPA** - Single Page Application
+* **CSR** - Client Side Rendered
+* **SSR** - Server Side Rendered
 
 ### Performance Metrics
 
@@ -217,6 +224,14 @@
 * **TA** - Tenant Admin
 * **DML** - Data Manipulation Language
 
+## AWS
+
+* **AWS** - Amazon Web Services
+* **EC2** - Elastic Cloud Compute
+* **S3** - Simple Storage Service
+* **ALB** - Application Load Balancer
+* **RDs** - Relational Database Service
+* **IAM** - Identity and Access Management
 
 ### Azure
 

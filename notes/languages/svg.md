@@ -30,8 +30,3 @@
   <rect fill="url(#pattern)" height="100%" width="100%"/>
 </svg>
 ```
-
-## Inkscape
-
-[How to select HEX values](https://graphicdesign.stackexchange.com/a/58675/35880)
-[Intersection vs Union](https://graphicdesign.stackexchange.com/a/127444/35880)
