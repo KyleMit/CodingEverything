@@ -1,0 +1,30 @@
+title: Coding Everything
+description: A curious endeavor to catalogue and document the wealth of programming knowledge available on the internet and a humble attempt to contribute to it
+
+
+themeColor: "#534534"
+accentColor: "#f4177f"
+
+repo: https://github.com/KyleMit/create-eleventy-blog-demo
+url: https://create-eleventy-blog-demo.netlify.app/
+baseUrl: ""
+
+
+
+taglist:
+- name: workforce
+  description: For posts about workforce development, onboarding, hiring, training, and managing professional talent
+- name: overview
+  description: An overview of products, services, technologies, or domain specific knowledge
+- name: how-to
+  description: Step by step instructions on how to install an application, configure your machine, or any other walkthroughs
+- name: process
+  description: Detailing our current process workflows for planning, prioritizing, development, and maintenance
+- name: redgate
+  description: For posts about using various Redgate tools and features
+- name: sql
+  description: Info, tips, and deep dives into SQL syntax and queries
+- name: dotnet-core
+  description: Information related to the .Net Framework
+- name: deployment
+  description: Useful information or tools for deploying applications

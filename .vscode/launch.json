@@ -4,9 +4,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch 11ty",
-            "program": "${workspaceFolder}/node_modules/@11ty/eleventy/cmd.js",
-            "args": [],
+            "name": "CLI - Sub Command",
+            "program": "${workspaceFolder}/node_modules/create-eleventy-blog/cli/_cli.js",
+            "args": [
+                "clean"
+            ],
             "runtimeArgs": [
                 "--preserve-symlinks"
             ],

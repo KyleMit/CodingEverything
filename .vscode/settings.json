@@ -1,19 +1,5 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": ["manifest.json"],
-      "url": "http://json.schemastore.org/web-manifest"
-    }
-  ],
-  "emmet.includeLanguages": {
-    "njk": "html"
-  },
-  "files.associations": {
-    "*.html": "njk"
-  },
-  "vsicons.associations.files": [
-    { "icon": "nunjucks", "extensions": ["njk"], "format": "svg" }
-  ],
+
   "markdownlint.config": {
     "default": true,
     "MD012": false,
@@ -23,7 +9,8 @@
     "MD034": false
   },
   "search.exclude": {
-    "**/code-samples": true
+    "**/samples": true,
+    "assets/**": true,
   },
   "workbench.colorCustomizations": {
     "statusBar.background": "#215732",

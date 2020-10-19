@@ -1,15 +1,5 @@
-*.ssms_suo
-*.suo
-slnx.sqlite
-VSWorkspaceState.json
-
-
 node_modules
 _site
 .env
-
-# Local Netlify folder
 .netlify
-
-# generated output
-tools/faviconData.json
+.cache
