@@ -220,3 +220,10 @@ Babel in the browser
 
 * [React Dev Tools](https://fb.me/react-devtools)
 * [React Dev Tools For Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+
+
+## React Hook Form
+
+* [React Hook Form](https://react-hook-form.com/) - Simple React forms validation
+* [react-hook-form - CodeSandbox](https://codesandbox.io/s/react-hook-form-tutorial-app-setup-forked-y7rot)
+

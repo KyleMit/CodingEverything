@@ -103,3 +103,16 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [vscode-docs/v1_44.md at vnext · microsoft/vscode-docs](https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_44.md#quick-open-rewrite)
 * [Customize the key for "open to side" in quickopen window](https://github.com/microsoft/vscode/issues/91018)
 * [Add a command for "Open to Side" from quick open](https://github.com/microsoft/vscode/issues/43059)
+
+
+* [Breaking up HTML tags in JSX upon save · Issue #452 · prettier/prettier-vscode](https://github.com/prettier/prettier-vscode/issues/452)
+
+```json
+"beautify.ignore": [
+    "**/*.js",
+    "**/*.jsx"
+]
+"files.associations": {
+    "*.js": "javascriptreact"
+}
+```

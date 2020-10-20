@@ -1,5 +1,8 @@
 # Contentful
 
+## Acronyms
+
+* **CDA** - [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)
 
 ## Links
 
@@ -14,6 +17,8 @@
 * Content Model
 * Content
 * Media
+
+![contentful intro](/assets/notes/contentful/intro.png)
 
 ## Docs
 
@@ -36,3 +41,19 @@ let client = contentful.createClient({
 
 * [`getEntries`](https://contentful.github.io/contentful.js/contentful/7.14.7/ContentfulClientAPI.html#.getEntries)
 * [Retrieve entries with search parameters](https://www.contentful.com/developers/docs/javascript/tutorials/using-js-cda-sdk/#retrieving-entries-with-search-parameters)
+
+## Managing Multiple Environments
+
+[Multiple environments](https://www.contentful.com/developers/docs/concepts/multiple-environments/)
+
+## Contentful CLI
+
+[Installing the Contentful CLI](https://www.contentful.com/developers/docs/tutorials/cli/installation/)
+
+```bash
+npm install -g contentful-cli
+```
+
+## Import / Export
+
+[Importing and exporting content with the Contentful CLI](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/)
