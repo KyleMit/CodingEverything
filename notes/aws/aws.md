@@ -2,9 +2,28 @@
 
 [IAM Dashboard](https://console.aws.amazon.com/iam/home?region=us-east-1)
 
+
+## Account ID
+
+[Your AWS account ID and its alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html)
+
+```bash
+aws configure
+aws sts get-caller-identity
+```
+
 ## Docs
 
 [AWS Documentation](https://docs.aws.amazon.com/index.html)
+
+
+
+## Resource Overview
+
+* [**EC2**](https://aws.amazon.com/ec2/) - Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+* [**Storage Gateway**](https://aws.amazon.com/storagegateway) - On-premises access to virtually unlimited cloud storage
+* [**Cloud9**](https://console.aws.amazon.com/cloud9/home/product) - A cloud IDE for writing, running, and debugging code
+* [**AppSync**](https://aws.amazon.com/appsync/) - Managed service for GraphQL APIs
 
 ## Lambdas
 
@@ -36,15 +55,30 @@
 
 * [Tag Editor](https://us-east-2.console.aws.amazon.com/resource-groups/tag-editor/find-resources?region=us-east-2)
 
-## Resource Types
-
-* **EC2** - Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
-
 ## Stacks
 
 [Working with stacks - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html)
 
 > A stack is a collection of AWS resources that you can manage as a single unit
+
+## Cloud 9
+
+### Environment Settings
+
+* Environment Type
+  * EC2 Instance
+  * No-Ingress EC2 Instance
+  * Remote Server
+* Instance Type
+  * t2.micro
+  * t3.small
+  * m5.large
+* Platform
+  * Amazon Linux
+  * Amazon Linux 2
+  * Ubuntu Server 18.04 LTS
+
+[How-to paste text into the Cloud9 editor?]
 
 ## Questions
 

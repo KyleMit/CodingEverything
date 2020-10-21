@@ -9,10 +9,18 @@
 [Vue CLI](https://cli.vuejs.org/guide/cli-service.html)
 
 ```bash
-npm i -g @vue/cli-service
+npm install -g @vue/cli
+npm install -g @vue/cli-service
 ```
 
 ```bash
 vue-cli-service serve
 vue-cli-service build
 ```
+
+## Questions
+
+[Which are the differences between vue-cli and vue-cli-service?](https://stackoverflow.com/q/54248678/1366033)
+
+
+

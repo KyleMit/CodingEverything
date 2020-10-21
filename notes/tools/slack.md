@@ -50,10 +50,12 @@
 * `/shortcuts (or /keys)` - Open the keyboard shortcuts dialog
 
 * `/shrug your text` - appends shrug to your message
-* `
 
 
 
+## Notifications
+
+[Guide to desktop notifications](https://slack.com/help/articles/201355156-Guide-to-desktop-notifications#windows-1)
 
 
 

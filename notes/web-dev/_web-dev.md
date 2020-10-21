@@ -1,5 +1,27 @@
 # Web Dev
 
+## Code Playgrounds
+
+* [KyleMit - StackBlitz](https://stackblitz.com/@KyleMit)
+* [Kyle - CodeSandbox](https://codesandbox.io/u/KyleMit)
+* [Kyle on CodePen](https://codepen.io/KyleMit)
+* [Settings - JSFiddle - Code Playground](https://jsfiddle.net/user/KyleMit/fiddles/)
+* [Plunker - @KyleMit plunks](https://plnkr.co/users/KyleMit/plunks)
+* [Gist](https://gist.github.com/KyleMit)
+* Build and run github
+  * [Codespaces](https://github.com/features/codespaces)
+  * [Gitpod - Dev environments built for the cloud](https://www.gitpod.io/)
+  * [Bl.ocks](https://bl.ocks.org/)
+
+## Community
+
+[Reddit Channels](https://www.reddit.com/user/kylemit/m/webdev/)
+
+## BrowserList
+
+* [browserslist/**browserslist**](https://github.com/browserslist/browserslist) - Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
+* [Browserslist is a Good Idea](https://css-tricks.com/browserlist-good-idea/)
+
 ## JS
 
 ### How To

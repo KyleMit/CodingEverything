@@ -23,6 +23,10 @@
 * **SME** - Subject Matter Expert
 * **CMMI** - Capability Maturity Model Integration
 * **WITs** - Work Item Types
+
+### Testing
+
+* **E2E** - End to End Test
 * **SUT** - System Under Test
 
 ### Project Management

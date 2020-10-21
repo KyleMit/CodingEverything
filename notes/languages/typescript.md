@@ -660,6 +660,96 @@ $ echo '[1, 2, 3.14]' | quicktype --lang ts
 $ quicktype person.json -o Person.ts
 ```
 
+## Types
+
+### Decorators
+
+* Requires `experimentalDecorators` in `tsconfig.json`
+
+  ```json
+  {
+    "experimentalDecorators": true,
+  }
+  ```
+
+* Can be attached to `class`, `method`, `accessor`, `property`, or `parameter` objects
+* The decorator class is a function and gets the constructor as a parameter
+
+  ```ts
+  function sealed(target) {
+    // do something with 'target' ...
+  }
+  ```
+
+* **decorator factory** - customize how the function is called by returning the function
+
+  ```ts
+  function color(value: string) {
+    // this is the decorator factory
+    return function (target) {
+      // this is the decorator
+      // do something with 'target' and 'value'...
+    };
+  }
+  ```
+
+[Using Class Decorators in Typescript with a real example](https://dev.to/danywalls/decorators-in-typescript-with-example-part-1-m0f)
+
+#### Inheritance Example
+
+```ts
+// base class
+class BaseEntity {
+  readonly id: number;
+  readonly created: string;
+  constructor() {
+    this.id = Math.random();
+    this.created = new Date().toLocaleDateString();
+  }
+}
+
+// child class
+class Course extends BaseEntity {
+  constructor(public name: string) {
+    super();
+  }
+}
+
+let englishCourse = new Course("English");
+console.log("id: " + englishCourse.id);
+console.log("created: " + englishCourse.created);
+```
+
+#### Decorator Example
+
+```ts
+function BaseEntity(ctr: Function) {
+  ctr.prototype.id = Math.random();
+  ctr.prototype.created = new Date().toLocaleString("es-ES");
+}
+
+@BaseEntity
+class User {
+  constructor(public name: string) {}
+}
+
+let user = new User("susan");
+//City and User classes has the id and created property ;)
+console.log("id: " + user.id);
+console.log("created: " + user.created);
+```
+
+#### Decorator Factory Example
+
+
+```ts
+function LuckyNumber(limit: number) {
+  return function (constructor: Function) {
+    constructor.prototype.lucky = Math.floor(
+      Math.random() * Math.floor(limit)
+  }
+}
+```
 
 ## Features by Version
 
@@ -914,3 +1004,5 @@ a ||= b
 * [Typescript: difference between String and string](https://stackoverflow.com/a/14727461/1366033)
 * [Type 'T' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value](https://stackoverflow.com/a/54813723/1366033)
 * [Function lacks ending return statement and return type does not include 'undefined'](https://stackoverflow.com/a/50079448/1366033)
+
+
