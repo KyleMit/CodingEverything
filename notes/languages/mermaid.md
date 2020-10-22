@@ -1,8 +1,10 @@
-# Markdown Charts
-
-## Options
+# Mermaid
 
 * [mermaid](https://mermaid-js.github.io/mermaid/#/)
+
+
+## Alternatives
+
 * [flowchart.js](http://flowchart.js.org/)
 * [js-sequence](https://bramp.github.io/js-sequence-diagrams/)
 * [platUML](https://plantuml.com/)
@@ -174,4 +176,18 @@ graph TD
     c -- additional work found --> b
     a -- removed from the backlog --> d
     d --> a
+```
+
+
+## Questions
+
+* [Add Title To the Graph](https://github.com/mermaid-js/mermaid/issues/556)
+
+Use Subgraph
+
+```mermaid
+graph LR
+  subgraph This is my caption
+    A --> B
+  end
 ```

@@ -90,6 +90,171 @@ export class AppComponent {
 * `Component` class takes a `selector`, `templateUrl`, and array of `StyleUrls`
 * Custom component exposes data members
 
+#### Component Prefix
+
+`angular.json`
+
+```json
+{
+  "projects": {
+    "client": {
+      "prefix": "cm",
+    }
+  }
+}
+```
+
+### Shared Modules
+
+* [Sharing modules](https://angular.io/guide/sharing-ngmodules)
+* [How do we create shared modules?](https://medium.com/better-programming/angular-4-shared-modules-18ac50f24852)
+
+```ts
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './customer.component';
+import { NewItemDirective } from './new-item.directive';
+import { OrdersPipe } from './orders.pipe';
+
+@NgModule({
+ imports:      [ CommonModule ],
+ declarations: [ CustomerComponent, NewItemDirective, OrdersPipe ],
+ exports:      [ CustomerComponent, NewItemDirective, OrdersPipe,
+                 CommonModule, FormsModule ]
+})
+export class SharedModule { }
+```
+
+
+### Dependency Injection
+
+[Dependency injection in Angular](https://angular.io/guide/dependency-injection)
+
+### Component Input / Output
+
+[@Input() and @Output() properties](https://angular.io/guide/inputs-outputs)
+
+**`@Input()` decorator** - use in a child component or directive to let Angular know that a property in that component can receive its value from its parent component
+**`@Output()` decorator** - in the child component or directive to allow data to flow from the child out to the parent.
+
+```mermaid
+  graph LR
+
+  subgraph "@Input"
+    p(Parent) -- data flow --> c(Child)
+  end
+```
+
+```mermaid
+  graph RL
+
+  subgraph "@Output"
+     c(Child) <-- data flow --- p(Parent)
+  end
+```
+
+[Make directive @Input required](https://stackoverflow.com/q/35528395/1366033)
+
+
+```ts
+function Required(target: object, propertyKey: string) {
+  Object.defineProperty(target, propertyKey, {
+    get () {
+      throw new Error(`Attribute ${propertyKey} is required`);
+    },
+    set (value) {
+      Object.defineProperty(target, propertyKey, {
+        value, writable: true, configurable: true,
+      });
+    },
+  });
+}
+
+Component({
+  selector: 'my-dir',
+  template: '<div></div>',
+});
+export class MyComponent {
+  @Input() @Required a: number;
+}
+```
+
+[How to add “class” to host element?](https://stackoverflow.com/q/34641281/1366033)
+
+* On Init
+
+  ```ts
+  export class App implements OnInit {
+    @HostBinding('class') class = 'someClass';
+    constructor() {}
+    ngOnInit() {}
+  }
+  ```
+
+* Static Host Binding
+
+
+  ```ts
+  import { Component, HostBinding} from '@angular/core';
+  @Component({
+    selector: 'my-component',
+    template: 'app-element',
+  })
+  export class App {
+    @HostBinding('class.someClass1')
+    get isItem() {
+      return true;
+    }
+  }
+  ```
+
+* Dynamic Class
+
+  ```ts
+  @HostBinding('class') get class() {
+      return aComponentVariable
+  }
+  ```
+
+* Add component property
+
+  ```ts
+  import { Component} from '@angular/core';
+  @Component({
+    selector: 'my-component',
+    template: 'app-element',
+    host: {'class': 'someClass1'}
+  })
+  export class App {
+  }
+  ```
+
+* Convert [`HostBinding`](https://angular.io/api/core/HostBinding) to [`host`](https://angular.io/api/core/Directive#host) property
+
+  ```diff
+    import {
+      Component,
+  -    HostBinding
+    } from '@angular/core';
+    @Component({
+      selector: 'my-component',
+      template: 'app-element',
+  +   host: {'class': 'someClass1'}
+    })
+    export class App {
+  -   @HostBinding('class.someClass1')
+  -   get isItem() {
+  -     return true;
+  -   }
+    }
+  ```
+
+
+  However, this is advised against in the angular style guide:
+
+  > [**Style 06-03**](https://angular.io/guide/styleguide#style-06-03)
+  > Consider preferring the `@HostListener` and `@HostBinding` to the `host` property of the `@Directive` and `@Component` decorators.
 
 ### Generate Components
 

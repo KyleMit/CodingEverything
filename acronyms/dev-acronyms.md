@@ -181,6 +181,13 @@
 * **CSR** - Client Side Rendered
 * **SSR** - Server Side Rendered
 
+
+### CSS
+
+* **CSS** - Cascade Style Sheets
+* **BEM** - Block Element Modifier
+* **SASS** - Syntactically Awesome Style Sheets
+
 ### Performance Metrics
 
 * **FCP** - First Contentful Paint

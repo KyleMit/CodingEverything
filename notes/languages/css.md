@@ -17,3 +17,16 @@ Cascade Style Sheets
 * [Less](http://lesscss.org/)
 * [Stylus](https://stylus-lang.com/)
 
+
+## BEM
+
+[BEM Introduction](http://getbem.com/introduction/)
+
+* **Block** - Standalone entity that is meaningful on it's own
+  * ex. `header`, `container`, `menu`, `checkbox`, `input`
+* **Element** - A part of a block that has no standalone meaning and is semantically tied to it's block
+  * ex. `menu item`, `list item`, `checkbox caption`, `header title`
+* **Modifier** - A flag on a block or element. Use them to change appearance or behavior
+  * ex. `disabled`, `highlighted`, `checked`, `fixed`, `size big`, `color yellow`
+
+![bem diagram](/assets/notes/css/bem-diagram.jpg)

@@ -24,6 +24,7 @@ aws sts get-caller-identity
 * [**Storage Gateway**](https://aws.amazon.com/storagegateway) - On-premises access to virtually unlimited cloud storage
 * [**Cloud9**](https://console.aws.amazon.com/cloud9/home/product) - A cloud IDE for writing, running, and debugging code
 * [**AppSync**](https://aws.amazon.com/appsync/) - Managed service for GraphQL APIs
+* [**Beanstalk**](https://aws.amazon.com/elasticbeanstalk/) - Service for deploying and scaling web applications and services
 
 ## Lambdas
 
@@ -79,6 +80,14 @@ aws sts get-caller-identity
   * Ubuntu Server 18.04 LTS
 
 [How-to paste text into the Cloud9 editor?]
+
+[Easiest Way to Deploy .NET Core MVC to AWS](https://www.youtube.com/watch?v=JlJ7PmNIOac)
+
+* IAM
+  * Create deploy agent (programmatic access)
+  * Create Group (i.e. `deploy_agents`) and add `AWSElasticBeanstalkFullAccess` policy
+
+
 
 ## Questions
 
