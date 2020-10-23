@@ -3,8 +3,9 @@
 
 ## Docs
 
-[Angular Docs](https://angular.io/docs)
-[Docs > CLI](https://angular.io/cli/)
+* [Angular Docs](https://angular.io/docs)
+* [Docs > CLI](https://angular.io/cli/)
+* [Cheat Sheet](https://angular.io/guide/cheatsheet)
 
 ## Concepts
 
@@ -16,6 +17,103 @@
   * [Pipe](https://angular.io/guide/glossary#pipe)
   * [Service](https://angular.io/guide/glossary#service)
   * [Router](https://angular.io/guide/glossary#router)
+
+
+## Template Syntax
+
+* Binds property `value` to the result of expression `firstName`.
+
+  ```html
+  <input [value]="firstName">
+  ```
+
+* Binds attribute `role` to the result of expression `myAriaRole`.
+
+  ```html
+  <div [attr.role]="myAriaRole">
+  ```
+
+* Binds the presence of the CSS class `extra-sparkle` on the element to the truthiness of the expression `isDelightful`.
+
+  ```html
+  <div [class.extra-sparkle]="isDelightful">
+  ```
+
+* Binds `style` property `width` to the result of expression `mySize` in pixels. Units are optional.
+
+  ```html
+  <div [style.width.px]="mySize">
+  ```
+
+* Calls method `readRainbow` when a `click` event is triggered on this button element (or its children) and passes in the event object.
+
+  ```html
+  <button (click)="readRainbow($event)">
+  ```
+
+* Binds a property to an interpolated string, for example, "Hello Seabiscuit".
+
+  ```html
+  <div title="Hello {{ponyName}}">
+  ```
+
+  Equivalent to:
+
+  ```html
+  <div [title]="'Hello ' + ponyName">
+  ```
+
+* Binds text content to an interpolated string, for example, "Hello Seabiscuit".
+
+  ```html
+  <p>Hello {{ponyName}}</p>
+  ```
+
+* Sets up two-way data binding.
+
+  ```html
+  <my-cmp [(title)]="name">
+  ```
+
+  Equivalent to:
+
+  ```html
+  <my-cmp [title]="name" (titleChange)="name=$event">
+  ```
+
+* Creates a local variable `movieplayer` that provides access to the `video` element instance in data-binding and event-binding expressions in the current template.
+
+```html
+<video #movieplayer ...>
+  <button (click)="movieplayer.play()">
+</video>
+```
+
+* The \* symbol turns the current element into an embedded template.
+
+  ```html
+  <p *myUnless="myExpression">...</p>
+  ```
+
+  Equivalent to:
+
+  ```html
+  <ng-template [myUnless]="myExpression"><p>...</p></ng-template>
+  ```
+
+* Transforms the current value of expression `cardNumber` via the pipe called `myCardNumberFormatter`.
+
+  ```html
+  <p>Card No.: {{cardNumber | myCardNumberFormatter}}</p>
+  ```
+
+## Built-in Directives
+
+* `*ngIf`
+* `*ngFor`
+* `[ngSwitch]`
+* `[ngClass]`
+* `[ngStyle]`
 
 ## Component Lifecycle
 
@@ -154,6 +252,59 @@ export class SharedModule { }
   end
 ```
 
+### Generate Components
+
+```bash
+ng generate component heroes
+```
+
+#### Generated Spec
+
+```ts
+// import fixture and test bed from angular test
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import component we created
+import { HeroesComponent } from './heroes.component';
+
+// describe test deck
+describe('HeroesComponent', () => {
+  // declare component as type HeroesComponent
+  let component: HeroesComponent;
+  // declare fixture as type Fixture of Heroes
+  let fixture: ComponentFixture<HeroesComponent>;
+
+  // setup before each test
+  beforeEach(async () => {
+    // setup test bed
+    await TestBed.configureTestingModule({
+      declarations: [ HeroesComponent ]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HeroesComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+```
+
+### Lifecycle Hooks
+
+```ts
+ngOnInit() { this.logIt(`OnInit`); }
+```
+
+
+
+## Questions
+
+
 [Make directive @Input required](https://stackoverflow.com/q/35528395/1366033)
 
 
@@ -256,50 +407,9 @@ export class MyComponent {
   > [**Style 06-03**](https://angular.io/guide/styleguide#style-06-03)
   > Consider preferring the `@HostListener` and `@HostBinding` to the `host` property of the `@Directive` and `@Component` decorators.
 
-### Generate Components
 
-```bash
-ng generate component heroes
-```
+* Change Detection Strategies
 
-#### Generated Spec
-
-```ts
-// import fixture and test bed from angular test
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import component we created
-import { HeroesComponent } from './heroes.component';
-
-// describe test deck
-describe('HeroesComponent', () => {
-  // declare component as type HeroesComponent
-  let component: HeroesComponent;
-  // declare fixture as type Fixture of Heroes
-  let fixture: ComponentFixture<HeroesComponent>;
-
-  // setup before each test
-  beforeEach(async () => {
-    // setup test bed
-    await TestBed.configureTestingModule({
-      declarations: [ HeroesComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HeroesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-```
-
-### Lifecycle Hooks
-
-```ts
-ngOnInit() { this.logIt(`OnInit`); }
-```
+[A Comprehensive Guide to Angular onPush Change Detection Strategy](https://netbasal.com/change-detection-strategy-5bac493074a4) by [Netanel Basal](https://twitter.com/NetanelBasal)
+[Angular OnPush Change Detection - Avoid Common Pitfalls](https://blog.angular-university.io/onpush-change-detection-how-it-works/)
+[angular change detection and ChangeDetectionStrategy.OnPush](https://stackoverflow.com/q/39795634/1366033)

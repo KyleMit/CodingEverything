@@ -27,6 +27,7 @@ git clone git@github.com:github/hub.git
 
 > Jekyll supports Markdown and Liquid, a templating language that loads dynamic content on your site. For more information, see Jekyll.
 
+
 ## Configuration
 
 ### Example

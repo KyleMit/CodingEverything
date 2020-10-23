@@ -46,3 +46,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 ```
 
+
+* [How do I cache steps in GitHub actions?](https://stackoverflow.com/q/55110729/1366033)
+  * [Caching dependencies to speed up workflows](https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows)

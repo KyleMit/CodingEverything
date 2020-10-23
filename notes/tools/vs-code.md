@@ -116,3 +116,5 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "*.js": "javascriptreact"
 }
 ```
+
+[Exclude directory from "Explore" tab?](https://stackoverflow.com/q/33258543/1366033)
