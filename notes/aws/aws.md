@@ -81,12 +81,18 @@ aws sts get-caller-identity
 
 [How-to paste text into the Cloud9 editor?]
 
+## Deploy .NET Core MVC to AWS
+
 [Easiest Way to Deploy .NET Core MVC to AWS](https://www.youtube.com/watch?v=JlJ7PmNIOac)
 
 * IAM
   * Create deploy agent (programmatic access)
   * Create Group (i.e. `deploy_agents`) and add `AWSElasticBeanstalkFullAccess` policy
 
+
+## Tooling
+
+[AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/)
 
 
 ## Questions

@@ -118,3 +118,42 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 ```
 
 [Exclude directory from "Explore" tab?](https://stackoverflow.com/q/33258543/1366033)
+
+
+* <kbd>Ctrl</kbd> + <kbd>R</kbd> is not working
+
+[Microsoft/**vscode-npm-scripts**](https://github.com/Microsoft/vscode-npm-scripts) - defines a chording keyboard shortcut for the R key
+
+[Codicons](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
+
+* [Disable annoying source code modification indication](https://stackoverflow.com/q/48401967/1366033)
+
+
+```json
+{
+    "gitlens.mode.active": "zen"
+}
+```
+
+* [Allow hiding the buttons in the tab bar line and in the panel title bar #46403](https://github.com/microsoft/vscode/issues/46403)
+
+  * Install [Customize UI](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui)
+
+    ```json
+    "customizeUI.stylesheet": {
+        ".editor-actions .codicon-compare-changes": "display: none !important;",
+        ".editor-actions .codicon-open-preview": "display: none !important;",
+        ".editor-actions .codicon-split-horizontal": "display: none !important;",
+        ".editor-actions .codicon-toolbar-more": "display: none !important;",
+        "[title='Open Settings (UI)']::before": "content: '\\eb52';",
+        "[title='Open Settings (JSON)']::before": "content: '\\eb0f';"
+    }
+    ```
+
+
+* Title bar zoom
+  * [merging menu/titlebar](https://github.com/microsoft/vscode/pull/55100)
+  * [Changing window.zoomLevel makes the opposite effect on the custom title bar menus](https://github.com/Microsoft/vscode/issues/54885)
+  * [Custom Title Bar behaves strangely when scaling up/down](https://github.com/microsoft/vscode/issues/54575)
+  * [Menus and context menu are not zooming in with the rest of the UI](https://github.com/microsoft/vscode/issues/17180)
+  * [Mac title bar has incorrect size after reload](https://github.com/microsoft/vscode/issues/103591)

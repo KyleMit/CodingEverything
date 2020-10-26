@@ -92,11 +92,16 @@
 * **ORMs** - Object Relational Mapping
 * **DSLs** - Domain Specific Language
 
+### Debug
+
+* **HMR** - Hot Module Replacement
+
 ### Security
 
 * **OWASP** - [Open Web Application Security Project](https://owasp.org/)
 * **DDoS** - Distributed Denial of Service
 * **XSS** - Cross-Site Scripting
+* **HSTS** - HTTP Strict Transport Security
 
 ### Numeronym
 
@@ -136,6 +141,7 @@
 
 * **FTP** - File Transfer Protocol
 * **HTTP** - Hypertext Transfer Protocol
+
 
 
 ### Languages

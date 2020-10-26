@@ -30,3 +30,14 @@ Cascade Style Sheets
   * ex. `disabled`, `highlighted`, `checked`, `fixed`, `size big`, `color yellow`
 
 ![bem diagram](/assets/notes/css/bem-diagram.jpg)
+
+
+## Questions
+
+* [CSS selector with period in ID](https://stackoverflow.com/q/12310090/1366033)
+
+```css
+#some\.id {
+  color: #f00;
+}
+```

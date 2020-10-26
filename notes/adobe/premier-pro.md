@@ -1,10 +1,18 @@
 # Adobe Premier Pro
 
+
+## Formus
+
+* [Video Production Stack Exchange](https://video.stackexchange.com/questions/tagged/premiere)
+* [Super User](https://superuser.com/questions/tagged/adobe-premiere)
+* [Graphic Design Stack Exchange](https://graphicdesign.stackexchange.com/questions/tagged/adobe-premiere)
+
+
 [How To Split Clips In Premiere Pro](https://www.youtube.com/watch?v=Y-MK1T99nsY)
 
 
 * Select Razor
-  * Window > Tools > Razor
+  * Window > Tools > Razor <kbd>C</kbd>
 * Split Entire Track by holding <kbd>Shift</kbd>
 * Heal by selecting cut and hitting <kbd>Delete</kbd>
 
@@ -154,12 +162,18 @@ When creating text, instead of clicking, click + drag a text area
 File > Export > Media
 <kbd>Ctrl</kbd> + <kbd>M</kbd>
 
+Export Type to .MP4
+
+Change format to HEVC (H.265)
 
 [How To Change Video Export/Output Location](https://www.youtube.com/watch?v=J567Y2bjvPs)
 
 In Export Settings, click "Output Name" link
 
 ![Output Name](https://i.imgur.com/93dVU2N.png)
+
+[How to Export Your Video To Twitter from Premiere Pro](https://www.youtube.com/watch?v=I0apqrXKYu8)
+
 
 [Sound not coming out of headphones](https://multimedia.journalism.berkeley.edu/wp-content/uploads/Adobe_AudioSettings-1.pdf)
 
@@ -183,3 +197,9 @@ Edit > Preferences > Audio hardware > Default Output
 
 
 * [How To Remove Creative Cloud Files From The File Explorer Sidebar In Windows](https://www.techjunkie.com/remove-creative-cloud-files-file-explorer-sidebar/)
+
+
+## Questions
+
+* [What's the difference between Premiere Pro & Premiere Pro CC?](https://community.adobe.com/t5/premiere-pro/premiere-pro-premiere-pro-cc/td-p/5865279?page=1)
+  * CC is the release version

@@ -413,3 +413,11 @@ export class MyComponent {
 [A Comprehensive Guide to Angular onPush Change Detection Strategy](https://netbasal.com/change-detection-strategy-5bac493074a4) by [Netanel Basal](https://twitter.com/NetanelBasal)
 [Angular OnPush Change Detection - Avoid Common Pitfalls](https://blog.angular-university.io/onpush-change-detection-how-it-works/)
 [angular change detection and ChangeDetectionStrategy.OnPush](https://stackoverflow.com/q/39795634/1366033)
+
+
+## Pipes
+
+[API > Common > Pipes](https://angular.io/api/common#pipes)
+
+* [TitleCasePipe](https://angular.io/api/common/TitleCasePipe)
+* [CurrencyPipe](https://angular.io/api/common/CurrencyPipe)
