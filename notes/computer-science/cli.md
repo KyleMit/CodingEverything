@@ -82,6 +82,13 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; fi
 <!-- spellchecker: enable -->
 
 
+## CMD
+
+[How do I install and use curl on Windows?](https://stackoverflow.com/a/16216825/1366033)
+
+```bash
+choco install curl
+```
 
 ## Run Bash As Admin
 

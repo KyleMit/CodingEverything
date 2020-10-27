@@ -909,6 +909,7 @@ choco list --local-only
 * CLI
   * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
   * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
+  * [curl](https://curl.haxx.se/dlwiz/?type=bin&os=Win64) | [choco](https://chocolatey.org/packages/curl)
 * Fonts
   * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
   * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)

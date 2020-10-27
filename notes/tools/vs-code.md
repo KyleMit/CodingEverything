@@ -105,17 +105,17 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Add a command for "Open to Side" from quick open](https://github.com/microsoft/vscode/issues/43059)
 
 
-* [Breaking up HTML tags in JSX upon save · Issue #452 · prettier/prettier-vscode](https://github.com/prettier/prettier-vscode/issues/452)
+* [Breaking up HTML tags in JSX upon save · Issue #452](https://github.com/prettier/prettier-vscode/issues/452)
 
-```json
-"beautify.ignore": [
-    "**/*.js",
-    "**/*.jsx"
-]
-"files.associations": {
-    "*.js": "javascriptreact"
-}
-```
+    ```json
+    "beautify.ignore": [
+        "**/*.js",
+        "**/*.jsx"
+    ]
+    "files.associations": {
+        "*.js": "javascriptreact"
+    }
+    ```
 
 [Exclude directory from "Explore" tab?](https://stackoverflow.com/q/33258543/1366033)
 
@@ -157,3 +157,14 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * [Custom Title Bar behaves strangely when scaling up/down](https://github.com/microsoft/vscode/issues/54575)
   * [Menus and context menu are not zooming in with the rest of the UI](https://github.com/microsoft/vscode/issues/17180)
   * [Mac title bar has incorrect size after reload](https://github.com/microsoft/vscode/issues/103591)
+
+
+* [How to make all line endings (EOLs) in all files in Visual Studio Code, UNIX like?](https://stackoverflow.com/q/48692741/1366033)
+
+```json
+{
+    "files.eol": "\n"
+}
+```
+
+

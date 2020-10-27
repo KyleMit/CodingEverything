@@ -22,6 +22,14 @@
 * [browserslist/**browserslist**](https://github.com/browserslist/browserslist) - Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
 * [Browserslist is a Good Idea](https://css-tricks.com/browserlist-good-idea/)
 
+* [Browserslist: caniuse-lite is outdated](https://stackoverflow.com/q/55271798/1366033)
+
+  ```bash
+  npm update caniuse-lite browserslist
+  npx browserslist@latest --update-db
+  ```
+
+
 ## JS
 
 ### How To

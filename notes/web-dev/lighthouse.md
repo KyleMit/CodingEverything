@@ -32,6 +32,10 @@
 * [Think With Google](https://www.thinkwithgoogle.com/feature/testmysite/)
 * [Mozilla Observatory](https://observatory.mozilla.org/)
 
+## Web Vitals
+
+[GoogleChrome/**web-vitals**](https://github.com/GoogleChrome/web-vitals) - Essential metrics for a healthy site.
+
 ## Version History
 
 * [What's New in Lighthouse 6.0](https://web.dev/lighthouse-whats-new-6.0/)
