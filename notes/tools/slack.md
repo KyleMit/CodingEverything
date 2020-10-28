@@ -101,3 +101,9 @@ https://glitch.com/edit/#!/inclusive-copy-bot?path=.env:18:0
 https://github.com/KyleMit/inclusive-copy-bot/tree/glitch
 
 [How can I download or backup my Glitch project?](https://glitch.com/help/how-can-i-download-backup-my-glitch-project/)
+
+## Questions
+
+[Is there any way to customize the "one-click" emojis?](https://www.reddit.com/r/Slack/comments/jcaa35/)
+
+

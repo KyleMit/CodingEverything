@@ -103,31 +103,98 @@ Babel in the browser
 * [React Dev Tools](https://fb.me/react-devtools)
 * [React Dev Tools For Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
+## Hooks API Reference
 
-## React Hook Form
+[Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html)
+
+* `useState` - Returns a stateful value, and a function to update it.
+
+  ```js
+  const [state, setState] = useState(initialState);
+  ```
+
+* `useEffect` - Accepts a function that contains imperative, possibly effectful code.
+
+  ```js
+  useEffect(didUpdate);
+  ```
+
+### React Hook Form
 
 * [React Hook Form](https://react-hook-form.com/) - Simple React forms validation
 * [react-hook-form - CodeSandbox](https://codesandbox.io/s/react-hook-form-tutorial-app-setup-forked-y7rot)
 
-[How to add comments to React?](https://stackoverflow.com/q/30766441/1366033)
+## Questions
 
-```js
-return (
-  <p>
-      {/* This is a comment, one line */}
-  </p>
-)
-```
+* [How to add comments to React?](https://stackoverflow.com/q/30766441/1366033)
+
+  ```js
+  return (
+    <p>
+        {/* This is a comment, one line */}
+    </p>
+  )
+  ```
 
 
-[React - uncaught TypeError: Cannot read property 'setState' of undefined](https://stackoverflow.com/q/32317154/1366033)
+* [React - uncaught TypeError: Cannot read property 'setState' of undefined](https://stackoverflow.com/q/32317154/1366033)
 
-This is due to `this.delta` not being bound to `this`. In order to bind set `this.delta = this.delta.bind(this)` in the constructor:
+  This is due to `this.delta` not being bound to `this`. In order to bind set `this.delta = this.delta.bind(this)` in the constructor:
 
-```js
-constructor(props) {
-  super(props);
-  this.state = {count : 1};
-  this.delta = this.delta.bind(this);
-}
-```
+  ```js
+  constructor(props) {
+    super(props);
+    this.state = {count : 1};
+    this.delta = this.delta.bind(this);
+  }
+  ```
+
+* [Component definition is missing display name react/display-name](https://stackoverflow.com/q/52992932/1366033)
+
+  ```js
+  export default function MyComponent() {
+    return <div></div>;
+  }
+  ```
+
+  OR
+
+  ```js
+  const MyComponent = () => <div></div>;
+  MyComponent.displayName = 'MyComponent';
+  export default MyComponent;
+  ```
+
+* [Error when Async function in useEffect](https://stackoverflow.com/q/58495238/1366033)
+
+  > commitHookEffectList > destroy is not a function
+
+  ```js
+  const getCat = async () => {
+    //...
+  }
+
+  useEffect(getCat);         // ❌
+  useEffect(() => getCat())  // ❌
+
+  useEffect(() => {          // ✔
+    getCat()
+  })
+  ```
+
+* [How to call loading function with React useEffect only once](https://stackoverflow.com/q/53120972/1366033)
+
+  Make sure you pass second initializer param
+
+  ```js
+  useEffect(() => {
+    // Run! Like go get some data from an API.
+  }, []);
+  ```
+
+  `useEffect` runs by default after every render of the component *(thus causing an effect)*.
+
+## Convert from Class to Function
+
+* [How To Convert React Class Components to Functional Components with React Hooks](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks#prerequisites)
+* [Convert a React Class-Based Component to a Functional One Using a State Hook](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
