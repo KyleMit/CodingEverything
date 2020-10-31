@@ -311,3 +311,33 @@ npx create-nx-workspace your-name
 /apps # specific apps
 /libs # common ui elements - shared across multiple components
 ```
+
+* [Nx CLI](https://nx.dev/latest/angular/cli/overview#installing-the-cli)
+
+    ```bash
+    npm install -g nx
+    ```
+
+* [Debug NX Apps](https://github.com/nrwl/nx/issues/2690)
+
+    ```json
+    "serve": {
+        "builder": "@nrwl/node:execute",
+        "options": {
+            "buildTarget": "api:build",
+            "inspect": true,
+            "port": 7777
+        }
+    },
+    ```
+
+    Command Palette - Attach to Node Process
+
+## Create Unique ID
+
+[uuid](https://www.npmjs.com/package/uuid)
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+```

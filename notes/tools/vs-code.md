@@ -168,3 +168,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 ```
 
 
+* [REST Client - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+  * Languages
+    * cURL
+    * [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html)
+  * Select Endpoint
+    * Symbol Lookup - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
+  * Send Request
+    * Click Link or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>

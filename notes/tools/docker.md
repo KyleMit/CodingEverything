@@ -24,6 +24,10 @@ docker tag docker101tutorial kylemit/docker101tutorial
 docker push kylemit/docker101tutorial
 ```
 
+## Docs
+
+* [`docker image ls`](https://docs.docker.com/engine/reference/commandline/image_ls/)
+
 ## Run
 
 ```bash

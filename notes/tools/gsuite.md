@@ -8,3 +8,8 @@
 ## Calendar
 
 https://support.google.com/calendar/answer/7638168?hl=en
+
+
+## Groups
+
+[Emails to Google Groups email address aren't working](https://webapps.stackexchange.com/q/148192/38656)

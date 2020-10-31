@@ -203,7 +203,7 @@
 * **TTI** - Time to Interactive
 * **TTFB** - Time to First Byte
 * **PRPL** - Preload, Render, Pre-cache, Lazy Load
-
+* **WPO** - Web Performance Optimization
 
 ### JavaScript
 
@@ -249,6 +249,7 @@
 * **ALB** - Application Load Balancer
 * **RDs** - Relational Database Service
 * **IAM** - Identity and Access Management
+* **VPC** - Virtual Private Cloud
 
 ### Azure
 

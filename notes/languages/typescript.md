@@ -995,7 +995,7 @@ a ||= b
 
 
 
-## Type Errors
+## Questions
 
 * [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/q/41292559/1366033)
 * [URLSearchParams constructor argument should be `string | object` #15338](https://github.com/microsoft/TypeScript/issues/15338#issuecomment-597554161)
@@ -1004,5 +1004,11 @@ a ||= b
 * [Typescript: difference between String and string](https://stackoverflow.com/a/14727461/1366033)
 * [Type 'T' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value](https://stackoverflow.com/a/54813723/1366033)
 * [Function lacks ending return statement and return type does not include 'undefined'](https://stackoverflow.com/a/50079448/1366033)
+* [import fails with 'no default export'](https://stackoverflow.com/a/50473239/1366033)
+
+  ```diff
+  - import Module from 'module';
+  + import * as Module from 'module';
+  ```
 
 
