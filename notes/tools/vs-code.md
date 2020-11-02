@@ -36,6 +36,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 [What is the pwa-node type launch configuration on VSCode?](https://stackoverflow.com/q/63442436/1366033)
 
+[Debug npm script](https://stackoverflow.com/a/64627874/1366033)
+
 ## QnA
 
 * [Cycle through tabs](https://stackoverflow.com/a/38978993/1366033)

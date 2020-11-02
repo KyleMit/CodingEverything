@@ -23,3 +23,27 @@ npm unpublish <package-name> -f
 
 * [greenkeeper](https://greenkeeper.io/)
 
+## Scripts
+
+[docs > scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts)
+
+```bash
+npm run <script-name>
+```
+
+Pass custom parameters to npm scripts by adding two dashes (`--`) after the command - e.g.
+
+```bash
+npm run build -- --colors
+```
+
+## NPX
+
+Available in Node 8.2 / npm 5.2.0
+
+[Introducing npx: an npm package runner](https://medium.com/@maybekatz/npx-55f7d4bd282b) by Kat Marchán
+
+
+`npx` runs the local package binary in `./node_modules/.bin/<command>`
+
+

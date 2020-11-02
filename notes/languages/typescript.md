@@ -2,6 +2,13 @@
 
 [TypeScriptLang.org](https://www.typescriptlang.org/)
 
+
+## Alternatives
+
+* [**Flow**](https://flow.org/en/) -  A Static Type Checker for JavaScript
+
+## Getting Started
+
 You can install TypeScript via npm
 
 ```bash
@@ -13,6 +20,7 @@ Then run the compiler via tsc
 ```bash
 npx tsc
 ```
+
 
 ## Handbook
 

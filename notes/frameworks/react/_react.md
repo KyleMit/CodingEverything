@@ -194,7 +194,86 @@ Babel in the browser
 
   `useEffect` runs by default after every render of the component *(thus causing an effect)*.
 
+* Fix file association
+
+    ```json
+    "files.associations": {
+        "*.js": "javascriptreact"
+    }
+    ```
+
 ## Convert from Class to Function
 
 * [How To Convert React Class Components to Functional Components with React Hooks](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks#prerequisites)
 * [Convert a React Class-Based Component to a Functional One Using a State Hook](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
+
+
+[How to make vs code autocomplete React component's prop types?](https://stackoverflow.com/q/44408624/1366033)
+
+1. Add JS Doc
+
+   ```js
+   /**
+    *
+    * @param {{headerText: string}} props
+    */
+   export default function Header(props) {
+     return <h1>{props.headerText}</h1>
+   }
+   ```
+
+2. Destructure params
+
+   ```js
+   export default function Header({headerText}) {
+     return <h1>{headerText}</h1>
+   }
+   ```
+
+3. Use PropTypes
+
+  ```js
+  import React from "react"
+  import PropTypes from 'prop-types';
+
+  function Header(props) {
+    return <h1>{props.headerText}</h1>
+  }
+
+  Header.propTypes = {
+      headerText: PropTypes.string.isRequired
+  }
+
+  export default Header
+  ```
+
+[Adjacent JSX elements must be wrapped in an enclosing tag](https://stackoverflow.com/a/33385872/1366033)
+[Fragments – React](https://reactjs.org/docs/fragments.html)
+
+```js
+// wrapper div
+return (
+    <div>
+       <Comp1 />
+       <Comp2 />
+    </div>
+)
+
+// fragment
+return (
+    <React.Fragment>
+       <Comp1 />
+       <Comp2 />
+    </React.Fragment>
+)
+
+// short syntax
+return (
+    <>
+       <Comp1 />
+       <Comp2 />
+    </>
+)
+```
+
+

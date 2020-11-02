@@ -1,5 +1,11 @@
 # Netlify
 
+
+## Alternatives
+
+[Surge](https://surge.sh/)
+
+
 ## Docs
 
 * [Branch Deploys](https://docs.netlify.com/site-deploys/overview/#branch-deploy-controls)

@@ -31,3 +31,12 @@ https://web.dev/
 <img src="/sites/default/files/images/2020/04/Question%20icon.png" >
 ```
 
+## Source Maps
+
+* [Map Preprocessed Code to Source Code](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps)
+
+* [Sourcemaps are detected in chrome but original source is not loaded](https://stackoverflow.com/a/64628126/1366033)
+
+![chrome source maps](/assets/notes/chrome-dev-tools/chrome-source-maps.png)
+
+

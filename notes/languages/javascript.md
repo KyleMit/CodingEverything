@@ -1,5 +1,11 @@
 # JavaScript
 
+## ES6
+
+[lukehoban/**es6features**](https://github.com/lukehoban/es6features) - Overview of ECMAScript 6 features
+
+## Questions
+
 [Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
 
 
@@ -232,3 +238,11 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 
 [ECMAScript® 2021 Language Specification > tolocalestring](https://tc39.es/ecma262/#sec-date.prototype.tolocalestring)
 [ECMAScript® 2021 Internationalization API Specification > DateTimeFormat Objects](https://tc39.es/ecma402/#datetimeformat-objects)
+
+
+## JS Doc Comments
+
+Emmet autocomplete `/**`
+
+[JS Doc](https://jsdoc.app/)
+

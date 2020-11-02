@@ -269,6 +269,7 @@ Pattern to configure several module systems
 * Allows for static analysis
 * [Works in most browsers](https://caniuse.com/es6-module)
 * [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
+* [Pika](https://www.pika.dev/about)
 
 ```js
 //------ lib.js ------

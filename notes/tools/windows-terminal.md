@@ -123,3 +123,10 @@ https://aka.ms/powershell
 ```bash
 pwsh.exe -nologo
 ```
+
+
+## Panes
+
+[Docs > Windows Terminal Panes](https://docs.microsoft.com/en-us/windows/terminal/panes)
+
+
