@@ -171,10 +171,6 @@ console.log(doc);
 * [Pug](https://pugjs.org/api/getting-started.html)
 * [Jade](https://jade-lang.com/)
 
-## Require
-
-[Require at top of file of in function?](https://stackoverflow.com/a/9139419/1366033)
-
 
 ## npm
 
@@ -342,3 +338,16 @@ npx create-nx-workspace your-name
 import { v4 as uuidv4 } from 'uuid';
 uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ```
+
+
+## Nodemailer
+
+[Nodemailer](https://nodemailer.com/about/)
+
+
+## Questions
+
+* [Require at top of file of in function?](https://stackoverflow.com/a/9139419/1366033)
+* [Cannot use import statement outside a module](https://stackoverflow.com/a/64655153/1366033)
+
+  Add `"type": "module"` to your `package.json`

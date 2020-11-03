@@ -59,7 +59,24 @@ npm install -g @aws-amplify/cli
 3. Deploy Environment
 
 
+## Redirects
 
+[Using redirects - AWS Amplify](https://docs.aws.amazon.com/amplify/latest/userguide/redirects.html)
+
+Example:
+
+```json
+[
+  {
+    "source": "/<*>",
+    "target": "/index.html",
+    "status": "404-200",
+    "condition": null
+  }
+]
+```
+
+[GatsbyJs client only paths goes to 404 page when the url is directly accessed in browser in “production”](https://stackoverflow.com/q/52051090/1366033)
 
 ## Talks
 
@@ -205,4 +222,5 @@ type Subscription {
 * Database
 * Business Logic
 * Real-time UI
+
 

@@ -542,6 +542,9 @@ console.log(arr.length);
 
 ### Live compile + run
 
+* [fgnass/**node-dev**](https://github.com/fgnass/node-dev) - Zero-conf Node.js reloading
+* [whitecolor/**ts-node-dev**](https://github.com/whitecolor/ts-node-dev#readme) - Compiles your TS app and restarts when files are modified.
+
 1. Add `ts-node` which we will use for live compile + run in node
 
    ```bash
@@ -554,15 +557,15 @@ console.log(arr.length);
    npm install nodemon --save-dev
    ```
 
+3. Scripts
 
-
-```json
-"scripts": {
-  "start": "npm run build:live",
-  "build": "tsc -p .",
-  "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
-},
-```
+  ```json
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+  },
+  ```
 
 
 ## Typescript Commands
@@ -1005,7 +1008,12 @@ a ||= b
 
 ## Questions
 
-* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/q/41292559/1366033)
+* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/a/64656913/1366033)
+
+  ```bash
+  npm install -D @types/module-name
+  ```
+
 * [URLSearchParams constructor argument should be `string | object` #15338](https://github.com/microsoft/TypeScript/issues/15338#issuecomment-597554161)
 * [Cannot find name 'console'. What could be the reason for this?](https://stackoverflow.com/a/42106036/1366033)
 * [How to use URLSearchParams in a node.js and typescript project](https://stackoverflow.com/a/64088768/1366033)
@@ -1020,3 +1028,22 @@ a ||= b
   ```
 
 
+* [unknown file extension .ts with `ts-node`](https://stackoverflow.com/q/62096269/1366033)
+
+   Remove `"type": "module"` from `package.json`
+
+
+* [automatically install types](https://stackoverflow.com/q/48857430/1366033)
+
+  ```bash
+  npx typesync
+  ```
+
+* [requested module does not provide an export named](https://stackoverflow.com/q/47277887/1366033)
+
+* [The requested module '*' is expected to be of type CommonJS](https://stackoverflow.com/q/63108391/1366033)
+
+  ```js
+  import { method } from 'commonjs-package';  // Errors
+  import packageMain from 'commonjs-package'; // Works
+  ```

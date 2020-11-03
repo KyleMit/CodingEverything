@@ -178,3 +178,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     * Symbol Lookup - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
   * Send Request
     * Click Link or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>
+
+## Articles
+
+[Learn these keyboard shortcuts to become a VS Code ninja](https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/)

@@ -72,7 +72,28 @@ gatsby new <SITE_DIRECTORY_NAME> <URL_OF_STARTER_GITHUB_REPO>
 
 
 
+## Amplify
 
+`amplify.yml`
+
+```yml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
 
 
 

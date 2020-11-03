@@ -1018,6 +1018,8 @@ Remove Start Menu Suggestions
 
 ![change preferred band](/assets/posts/computer-setup/prefered-band.png)
 
+[Create alias in windows start menu search](https://superuser.com/q/1599285/180163)
+
 ### Disable Aero Shake
 
 [How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)

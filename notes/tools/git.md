@@ -59,3 +59,11 @@
 ### Client Side
 
 
+## Questions
+
+* [Making a Git push from a detached head](https://stackoverflow.com/a/40929378/1366033)
+
+  ```bash
+  git push origin HEAD:name-of-your-branch
+  ```
+

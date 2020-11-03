@@ -141,8 +141,7 @@
 
 * **FTP** - File Transfer Protocol
 * **HTTP** - Hypertext Transfer Protocol
-
-
+* **SMTP** - Simple Mail Transfer Protocol
 
 ### Languages
 
@@ -250,6 +249,7 @@
 * **RDs** - Relational Database Service
 * **IAM** - Identity and Access Management
 * **VPC** - Virtual Private Cloud
+* **SES** - Simple Email Service
 
 ### Azure
 

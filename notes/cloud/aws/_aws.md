@@ -27,6 +27,7 @@ aws sts get-caller-identity
 * [**Beanstalk**](https://aws.amazon.com/elasticbeanstalk/) - Service for deploying and scaling web applications and services
 * [**VPC**](https://aws.amazon.com/vpc/) - Virtual Private Cloud
 * [**Fargate**](https://aws.amazon.com/fargate/) - Serverless compute for containers
+* [**SES**](https://aws.amazon.com/ses/) - Simple Email Services
 
 ## Lambdas
 
@@ -58,6 +59,13 @@ aws sts get-caller-identity
   * Windows: `%USERPROFILE%\.aws\`
   * Linux/Mac: `~/.aws/credentials`
 
+### Command Reference
+
+* [validate-template](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html)
+
+  ```bash
+  aws cloudformation validate-template --template-body file://$TEMPLATE_PATH
+  ```
 
 ## Resource Manager
 
@@ -124,3 +132,4 @@ https://<aws_account_id>.dkr.ecr.<region>.amazonaws.com
 * [AWS DynamoDB resource not found exception](https://stackoverflow.com/a/64577548/1366033)
   * Make sure you login via `aws configure`
 
+* [Missing region in config](https://stackoverflow.com/a/39563972/1366033)

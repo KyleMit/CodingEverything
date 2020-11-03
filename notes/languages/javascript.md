@@ -4,15 +4,6 @@
 
 [lukehoban/**es6features**](https://github.com/lukehoban/es6features) - Overview of ECMAScript 6 features
 
-## Questions
-
-[Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
-
-
-```js
-var response = await fetch(`/api/search?q=val`);
-var results = await response.text();
-```
 
 ## Debounce
 
@@ -212,7 +203,7 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 })
 ```
 
-### Questions
+### Format Date - Further Reading
 
 * [Get Locale Short Date Format using javascript](https://stackoverflow.com/q/2388115/1366033)
 * [Get String in YYYYMMDD format from JS date object?](https://stackoverflow.com/q/3066586/1366033)
@@ -246,3 +237,15 @@ Emmet autocomplete `/**`
 
 [JS Doc](https://jsdoc.app/)
 
+
+## Questions
+
+* [Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
+
+
+    ```js
+    var response = await fetch(`/api/search?q=val`);
+    var results = await response.text();
+    ```
+
+* [Polling until getting specific result?](https://stackoverflow.com/a/64654157/1366033)
