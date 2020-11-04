@@ -65,3 +65,8 @@
 | 1970–2099      | 19[7-9][0-9]\|20[0-9][0-9] |
 
 
+* [How to match “anything up until this sequence of characters” in a regular expression?](https://stackoverflow.com/q/7124778/1366033)
+
+    ```js
+    /.+?(?=abc)/
+    ```

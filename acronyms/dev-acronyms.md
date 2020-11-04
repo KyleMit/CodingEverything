@@ -102,6 +102,8 @@
 * **DDoS** - Distributed Denial of Service
 * **XSS** - Cross-Site Scripting
 * **HSTS** - HTTP Strict Transport Security
+* **PGP**- [Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
+* **GnuPG** - GNU Privacy Guard
 
 ### Numeronym
 
@@ -167,7 +169,10 @@
 * **JWT** - JSON Web Token
 * **OIDC** - OpenID Connect
 
+### OSS
 
+* **OSS** - Open Source Software
+* **GPL** - General Public License
 
 ### Web Dev
 
@@ -220,7 +225,7 @@
 
 * **OS** - Operating System
 * **WSL** - Windows Subsystem for Linux
-
+* **GNU** - GNU's Not Unix
 
 ### Linux
 

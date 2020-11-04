@@ -32,3 +32,9 @@ To repudiate means to deny
 * Save additional costs required for fixing security issues
 
 
+## Cryptography
+
+
+* [Web of trust](https://en.wikipedia.org/wiki/Web_of_trust)
+* [Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacyx`)
+

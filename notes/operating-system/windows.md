@@ -30,3 +30,24 @@
 ```ahk
 ^SPACE::  Winset, Alwaysontop, , A
 ```
+
+
+
+## Power Toys
+
+
+[microsoft/PowerToys: Windows system utilities to maximize productivity](https://github.com/microsoft/PowerToys/)
+
+### Utilities
+
+* Color Picker
+* Fancy Zones
+* File Explorer Add-Ons
+* Image Resizer
+* Keyboard manager
+* Power Rename
+* PowerToys Run
+* Shortcut Guide
+* Video Conference Mute
+
+

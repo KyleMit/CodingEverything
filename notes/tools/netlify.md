@@ -23,7 +23,7 @@
   * Localize Content
   * Easily Push Site-Wide Changes (without re-build)
 
-## Forums
+## Questions
 
 * [Netlify dev indicates 'no "command" specified'](https://community.netlify.com/t/22480?u=kylemit)
 
@@ -40,4 +40,6 @@
   ```
 
 
-* [Is it possible to specify a custom default document?](https://community.netlify.com/t/23974?u=kylemit)
+* [Is it possible to specify a custom default document?](https://community.netlify.com/t/23974)
+
+* [Does Netlify support websocket programming?](https://community.netlify.com/t/4213)

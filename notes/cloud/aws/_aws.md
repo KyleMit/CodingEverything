@@ -20,6 +20,7 @@ aws sts get-caller-identity
 
 ## Resource Overview
 
+* [**ARN**](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) - Amazon Resource Names
 * [**EC2**](https://aws.amazon.com/ec2/) - Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
 * [**Storage Gateway**](https://aws.amazon.com/storagegateway) - On-premises access to virtually unlimited cloud storage
 * [**Cloud9**](https://console.aws.amazon.com/cloud9/home/product) - A cloud IDE for writing, running, and debugging code
@@ -28,20 +29,30 @@ aws sts get-caller-identity
 * [**VPC**](https://aws.amazon.com/vpc/) - Virtual Private Cloud
 * [**Fargate**](https://aws.amazon.com/fargate/) - Serverless compute for containers
 * [**SES**](https://aws.amazon.com/ses/) - Simple Email Services
+* [**ECS**](https://aws.amazon.com/ecs/) - Elastic Container Service
 
-## Lambdas
+## ARN
 
-* [AWS Lambda function handler in Node.js - AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html)
-* [Amazon API Gateway - HTTP vs REST](https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-api-gateway-offers-faster-cheaper-simpler-apis-using-http-apis-preview/)
+[Amazon Resource Names (ARNs) - AWS General Reference](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 
-    > HTTP APIs are optimized for building APIs that proxy to AWS Lambda functions or HTTP backends, making them ideal for serverless workloads.
+### Format
 
-* [Going Serverless: how to run your first AWS Lambda function in the cloud](https://www.freecodecamp.org/news/going-serverless-how-to-run-your-first-aws-lambda-function-in-the-cloud-d866a9b51536/)
-* [Interacting with Remote Lambda Functions](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/remote-lambda.html)
-* [Installing the AWS Toolkit for Visual Studio Code](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/setup-toolkit.html)
-* [Obtaining AWS access keys](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/obtain-credentials.html)
+* `arn:partition:service:region:account-id:resource-id`
+* `arn:partition:service:region:account-id:resource-type:resource-id`
 
-
+* **Partition** - The partition in which the resource is located.
+  * `aws` - default
+  * `aws-cn` - china
+  * `aws-us-gov` - GovCloud
+* **Service** - The service namespace that identifies the AWS product
+  * ex. `s3` - Amazon S3 Resources
+* **Region**
+  * ex. `us-east-1`
+* **Account ID** - The ID of the AWS account that owns the resource
+  * ex. `123456789012`
+* **Resource ID** - The resource identifier
+  * ex. IAM - `user/bob`
+  * ex. EC2 - `instance/i-1234567890abcdef0`
 
 ### Toolkits
 
@@ -71,35 +82,6 @@ aws sts get-caller-identity
 
 * [Tag Editor](https://us-east-2.console.aws.amazon.com/resource-groups/tag-editor/find-resources?region=us-east-2)
 
-## Cloud Formation
-
-[CloudFormation](https://docs.aws.amazon.com/cloudformation/index.html)
-
-### Stacks
-
-[Working with stacks - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html)
-
-> A stack is a collection of AWS resources that you can manage as a single unit
-
-## Cloud 9
-
-### Environment Settings
-
-* Environment Type
-  * EC2 Instance
-  * No-Ingress EC2 Instance
-  * Remote Server
-* Instance Type
-  * t2.micro
-  * t3.small
-  * m5.large
-* Platform
-  * Amazon Linux
-  * Amazon Linux 2
-  * Ubuntu Server 18.04 LTS
-
-[How-to paste text into the Cloud9 editor?]
-
 ## Deploy .NET Core MVC to AWS
 
 [Easiest Way to Deploy .NET Core MVC to AWS](https://www.youtube.com/watch?v=JlJ7PmNIOac)
@@ -109,26 +91,14 @@ aws sts get-caller-identity
   * Create Group (i.e. `deploy_agents`) and add `AWSElasticBeanstalkFullAccess` policy
 
 
-## Tooling
-
-[AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/)
-
 ## Organizations
 
 [Consolidated billing process - AWS Billing and Cost Management](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilling-procedure.html)
 
-
-## ECR
-
-[Amazon ECR registries](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth)
-
-https://<aws_account_id>.dkr.ecr.<region>.amazonaws.com
-
-> The Docker CLI does not support native IAM authentication methods. Additional steps must be taken so that Amazon ECR can authenticate and authorize Docker push and pull requests.
-
 ## Questions
 
 * [Is there a way to list all resources in AWS?](https://stackoverflow.com/q/44391817/1366033)
+
 * [AWS DynamoDB resource not found exception](https://stackoverflow.com/a/64577548/1366033)
   * Make sure you login via `aws configure`
 

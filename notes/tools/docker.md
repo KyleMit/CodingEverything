@@ -38,6 +38,18 @@ docker run -d -p 80:80 docker-tutorial docker101tutorial
 * `p 80:80` - map port 80 of the host to port 80 in the container
 * `docker/getting-started` - the image to use
 
+
+## Docker Hub Images
+
+* [Docker Hub > node](https://hub.docker.com/_/node)
+  * [`node:14-slim`](https://github.com/nodejs/docker-node/blob/master/14/stretch-slim/Dockerfile)
+
+
+## Debug
+
+[Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
+
+
 ## Creating Containers
 
 [Containers From Scratch - Liz Rice](https://www.youtube.com/watch?v=8fi7uSYlOdc) - [@lizrice](https://twitter.com/lizrice)

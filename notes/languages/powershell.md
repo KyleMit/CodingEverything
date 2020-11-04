@@ -6,7 +6,10 @@
 Core - pwsh.exe
 Classic - powershell.exe
 
+## Philosophy
 
+* [Monad Manifesto – the Origin of Windows PowerShell](https://devblogs.microsoft.com/powershell/monad-manifesto-the-origin-of-windows-powershell/)
+* [Monad Manifesto](https://www.jsnover.com/Docs/MonadManifesto.pdf)
 
 ## Visual Studio Code
 

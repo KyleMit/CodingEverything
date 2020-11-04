@@ -235,6 +235,8 @@ winget install --id=RubyInstallerTeam.RubyWithDevKit -e
 winget install --id=Corsair.iCUE -e
 winget install --id=AltDrag.AltDrag -e
 winget install --id=Lexikos.AutoHotkey -e
+winget install --id=GnuPG.GnuPG -e
+winget install --id=Microsoft.PowerToys -e
 ```
 
 ## DotFiles

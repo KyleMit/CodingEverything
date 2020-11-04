@@ -124,6 +124,82 @@ Babel in the browser
 * [React Hook Form](https://react-hook-form.com/) - Simple React forms validation
 * [react-hook-form - CodeSandbox](https://codesandbox.io/s/react-hook-form-tutorial-app-setup-forked-y7rot)
 
+## Convert from Class to Function
+
+* [How To Convert React Class Components to Functional Components with React Hooks](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks#prerequisites)
+* [Convert a React Class-Based Component to a Functional One Using a State Hook](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
+
+
+[How to make vs code autocomplete React component's prop types?](https://stackoverflow.com/q/44408624/1366033)
+
+1. Add JS Doc
+
+   ```js
+   /**
+    *
+    * @param {{headerText: string}} props
+    */
+   export default function Header(props) {
+     return <h1>{props.headerText}</h1>
+   }
+   ```
+
+2. Destructure params
+
+   ```js
+   export default function Header({headerText}) {
+     return <h1>{headerText}</h1>
+   }
+   ```
+
+3. Use PropTypes
+
+  ```js
+  import React from "react"
+  import PropTypes from 'prop-types';
+
+  function Header(props) {
+    return <h1>{props.headerText}</h1>
+  }
+
+  Header.propTypes = {
+      headerText: PropTypes.string.isRequired
+  }
+
+  export default Header
+  ```
+
+[Adjacent JSX elements must be wrapped in an enclosing tag](https://stackoverflow.com/a/33385872/1366033)
+[Fragments – React](https://reactjs.org/docs/fragments.html)
+
+```js
+// wrapper div
+return (
+    <div>
+       <Comp1 />
+       <Comp2 />
+    </div>
+)
+
+// fragment
+return (
+    <React.Fragment>
+       <Comp1 />
+       <Comp2 />
+    </React.Fragment>
+)
+
+// short syntax
+return (
+    <>
+       <Comp1 />
+       <Comp2 />
+    </>
+)
+```
+
+
+
 ## Questions
 
 * [How to add comments to React?](https://stackoverflow.com/q/30766441/1366033)
@@ -202,78 +278,18 @@ Babel in the browser
     }
     ```
 
-## Convert from Class to Function
+* [Cannot use JSX unless the '--jsx' flag is provided](https://stackoverflow.com/q/50432556/1366033)
 
-* [How To Convert React Class Components to Functional Components with React Hooks](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks#prerequisites)
-* [Convert a React Class-Based Component to a Functional One Using a State Hook](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
-
-
-[How to make vs code autocomplete React component's prop types?](https://stackoverflow.com/q/44408624/1366033)
-
-1. Add JS Doc
-
-   ```js
-   /**
-    *
-    * @param {{headerText: string}} props
-    */
-   export default function Header(props) {
-     return <h1>{props.headerText}</h1>
-   }
-   ```
-
-2. Destructure params
-
-   ```js
-   export default function Header({headerText}) {
-     return <h1>{headerText}</h1>
-   }
-   ```
-
-3. Use PropTypes
-
-  ```js
-  import React from "react"
-  import PropTypes from 'prop-types';
-
-  function Header(props) {
-    return <h1>{props.headerText}</h1>
-  }
-
-  Header.propTypes = {
-      headerText: PropTypes.string.isRequired
-  }
-
-  export default Header
+  ```json
+  "compilerOptions": {
+    "jsx": "react",
+  },
   ```
 
-[Adjacent JSX elements must be wrapped in an enclosing tag](https://stackoverflow.com/a/33385872/1366033)
-[Fragments – React](https://reactjs.org/docs/fragments.html)
+* ["'React' refers to a UMD global, but the current file is a module](https://stackoverflow.com/q/54770627/1366033)
 
-```js
-// wrapper div
-return (
-    <div>
-       <Comp1 />
-       <Comp2 />
-    </div>
-)
+  You do need to import React, since the jsx tags compile into calls to `React.createElement()`
 
-// fragment
-return (
-    <React.Fragment>
-       <Comp1 />
-       <Comp2 />
-    </React.Fragment>
-)
-
-// short syntax
-return (
-    <>
-       <Comp1 />
-       <Comp2 />
-    </>
-)
-```
-
-
+  ```js
+  import React from 'react';
+  ```

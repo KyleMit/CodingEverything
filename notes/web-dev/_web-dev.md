@@ -13,6 +13,21 @@
   * [Gitpod - Dev environments built for the cloud](https://www.gitpod.io/)
   * [Bl.ocks](https://bl.ocks.org/)
 
+* Other
+  * [snack.expo.io](https://snack.expo.io/) - react native
+  * [RunKit](https://runkit.com/home) - node
+  * [SQL Fiddle](http://sqlfiddle.com/) - sql
+  * [.NET Fiddle](https://dotnetfiddle.net/) - dotnet
+
+### RunKit
+
+* all documents on RunKit are public, you can make them searchable by publishing.
+* all of npm's 1,000,000+ packages are already pre-installed, just `require()` them
+* use arrow functions, classes, template strings, and most of ES6. See [everything we support here](https://runkit.com/runkit/es6-and-es7-support).
+* `await` any promise instead of using callbacks ([example](https://runkit.com/docs/await))
+* store secrets in [environment variables](https://runkit.com/settings/environment#environment)
+* export an `endpoint` function to turn any notebook into an API ([endpoint docs](https://runkit.com/docs/endpoint))
+
 ## Community
 
 [Reddit Channels](https://www.reddit.com/user/kylemit/m/webdev/)

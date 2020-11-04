@@ -345,6 +345,31 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 [Nodemailer](https://nodemailer.com/about/)
 
 
+## JS Config
+
+> * **Without a JS Config** - JavaScript files opened in Visual Studio Code are treated as independent units - there is no common project context between the two files
+
+
+
+* [How to add jsconfig.json to existing vscode project](https://stackoverflow.com/q/56437517/1366033)
+* [jsconfig.json Reference](https://code.visualstudio.com/docs/languages/jsconfig)
+  * [`compilerOptions`](https://code.visualstudio.com/docs/languages/jsconfig#_jsconfig-options)
+    * `checkJs` - Enable type checking on JavaScript files
+* [JavaScript Language Service in Visual Studio](https://github.com/microsoft/TypeScript/wiki/JavaScript-Language-Service-in-Visual-Studio)
+
+`jsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "checkjs": true
+  },
+}
+```
+
+![jsconfig autocomplete](/assets/notes/node/jsconfig.png)
+
 ## Questions
 
 * [Require at top of file of in function?](https://stackoverflow.com/a/9139419/1366033)
