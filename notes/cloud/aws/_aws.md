@@ -30,6 +30,9 @@ aws sts get-caller-identity
 * [**Fargate**](https://aws.amazon.com/fargate/) - Serverless compute for containers
 * [**SES**](https://aws.amazon.com/ses/) - Simple Email Services
 * [**ECS**](https://aws.amazon.com/ecs/) - Elastic Container Service
+* [**ACM**](https://aws.amazon.com/certificate-manager/) - AWS Certificate Manager
+* [**VPC**](https://aws.amazon.com/vpc/) - Virtual Private Cloud
+
 
 ## ARN
 

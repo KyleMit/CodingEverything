@@ -144,6 +144,9 @@
 * **FTP** - File Transfer Protocol
 * **HTTP** - Hypertext Transfer Protocol
 * **SMTP** - Simple Mail Transfer Protocol
+* **TCP** - Transmission Control Protocol
+* **UDP** - User Datagram Protocol
+* **IP** - Internet Protocol
 
 ### Languages
 
@@ -255,6 +258,11 @@
 * **IAM** - Identity and Access Management
 * **VPC** - Virtual Private Cloud
 * **SES** - Simple Email Service
+* **ELB** - Elastic Load Balancer
+* **ALB** - Application Load Balancer
+* **NLB** - Network Load Balancer
+* **CLB** - Classic Load Balancer
+* **ENI** - Elastic Network Interface
 
 ### Azure
 

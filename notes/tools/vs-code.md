@@ -15,6 +15,53 @@
 
 [Tasks](https://code.visualstudio.com/docs/editor/tasks)
 
+Type `task·`
+
+`task.json`
+
+* **label**: The task's label used in the user interface.
+* **type**: The task's type.
+  * `shell` - the command is interpreted as a shell command (for example: `bash`, `cmd`, or `PowerShell`)
+  * `process` - the command is interpreted as a process to execute.
+* **command**: The actual command to execute.
+* **windows**: Any Windows specific properties - overrides default on windows
+* **group**: Defines to which group the task belongs.
+  * for example: `test` or `build`
+* **presentation**: Defines how the task output is handled in the user interface.
+  * `reveal` - Integrated Terminal showing the output is `always` revealed
+  * `panel` - A `new` terminal is created on every task run.
+* **options**: Options can be set per task but also globally or per platform. Environment variables configured here can only be referenced from within your task script or process and will not be resolved if they are part of your args, command, or other task attributes. Override the defaults for:
+  * `cwd` (current working directory)
+  * `env` (environment variables) or
+  * `shell` (default shell).
+* **runOptions**: Defines when and how a task is run.
+
+
+#### Example
+
+```json
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "./scripts/test.sh",
+      "windows": {
+        "command": ".\\scripts\\test.cmd"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
+```
+
 ### Editing
 
 * [Formatting](https://code.visualstudio.com/docs/editor/codebasics#_formatting)

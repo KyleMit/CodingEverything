@@ -28,7 +28,11 @@ docker push kylemit/docker101tutorial
 
 * [`docker image ls`](https://docs.docker.com/engine/reference/commandline/image_ls/)
 
-## Run
+## CLI Commands
+
+### Run
+
+[`docker run`](https://docs.docker.com/engine/reference/run/)
 
 ```bash
 docker run -d -p 80:80 docker-tutorial docker101tutorial
@@ -37,6 +41,26 @@ docker run -d -p 80:80 docker-tutorial docker101tutorial
 * `-d` - detached mode (in the background)
 * `p 80:80` - map port 80 of the host to port 80 in the container
 * `docker/getting-started` - the image to use
+
+```bash
+docker run -dt -P --name "webanalyzer-dev" -e "DEBUG=*" -e "NODE_ENV=development" --label "com.microsoft.created-by=visual-studio-code" -p "9229:9229" "webanalyzer:latest" nest start --debug 0.0.0.0:9229
+```
+
+### Build
+
+[`docker build`](https://docs.docker.com/engine/reference/commandline/build/)
+
+```bash
+docker build .
+```
+
+* `--tag|-t` - Name and optionally a tag in the `name:tag` format
+
+
+### Push
+
+[`docker push`](https://docs.docker.com/engine/reference/commandline/push/)
+
 
 
 ## Docker Hub Images
@@ -53,3 +77,18 @@ docker run -d -p 80:80 docker-tutorial docker101tutorial
 ## Creating Containers
 
 [Containers From Scratch - Liz Rice](https://www.youtube.com/watch?v=8fi7uSYlOdc) - [@lizrice](https://twitter.com/lizrice)
+
+
+## VS Code
+
+* [Container tools extension for Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
+* [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
+* [Reference for Visual Studio Code Docker extension properties and tasks.](https://code.visualstudio.com/docs/containers/reference)
+
+* Command Palette
+  * `Docker: Add Docker Files to Workspace...`
+  * `Docker: Initialize for Docker debugging`
+* Creates `docker-build` and `docker-run` tasks in `tasks.json`
+
+
+

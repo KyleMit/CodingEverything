@@ -9,6 +9,7 @@
 * [Lighthouse CLI](https://www.npmjs.com/package/lighthouse#using-the-node-cli)
 * [Chrome UX - CrUX](https://web.dev/chrome-ux-report-data-studio-dashboard/)
 * [Web Vitals](https://web.dev/vitals/)
+* [Discussion - Gitter](https://gitter.im/GoogleChrome/lighthouse)
 
 ### Docs
 

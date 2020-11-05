@@ -42,3 +42,14 @@ dynamoose.aws.sdk.config.update({
 ### NoSQL Workbench
 
 [NoSQL Workbench for DynamoDB - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html)
+
+## Questions
+
+
+* [`dynamodb.put().promise()` not returning the put object](https://stackoverflow.com/q/55166921/1366033)
+
+  Use `ReturnValue` per [DynamoDB SDK Docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property)
+
+* [What data type should be use for timestamp in DynamoDB?](https://stackoverflow.com/q/40561484/1366033)
+
+  Use ISO String
