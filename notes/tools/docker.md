@@ -91,4 +91,8 @@ docker build .
 * Creates `docker-build` and `docker-run` tasks in `tasks.json`
 
 
+## Questions
+
+* [I lose my data when the container exits](https://stackoverflow.com/q/19585028/1366033)
+
 

@@ -994,6 +994,10 @@ dotnet tool install --global dotnet-script
 
 ## Windows Settings
 
+* [How to Change Microsoft Edge to Search Google Instead of Bing](https://www.howtogeek.com/221709/how-to-change-your-default-search-engine-in-microsoft-edge/)
+
+  Settings > Privacy & Services > Address Bar
+
 [How to rename the User folder in Windows 10?](https://superuser.com/q/890812/180163)
 
 [Why Local Users and Groups is missing in Computer Management on Windows 10 Home?](https://stackoverflow.com/q/41093714/1366033)

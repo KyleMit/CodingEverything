@@ -21,16 +21,25 @@
 
 ## Dynamoose
 
-[dynamoose](https://github.com/dynamoose/dynamoose) - Dynamoose is a modeling tool for Amazon's DynamoDB
-[Configure](https://dynamoosejs.com/getting_started/Configure)
+> Dynamoose is a modeling tool for Amazon's DynamoDB
+Inspired by [Mongoose](https://mongoosejs.com/)
+
+### Docs
+
+* [dynamoose](https://github.com/dynamoose/dynamoose)
+* [Getting Started](https://dynamoosejs.com/getting_started/Configure)
 
 ```js
 dynamoose.aws.sdk.config.update({
-    "accessKeyId": "AKID",
+    "accessKeyId": "ID",
     "secretAccessKey": "SECRET",
     "region": "us-east-1"
 });
 ```
+
+## Local Server
+
+[Setting Up DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
 
 ## GUI
 

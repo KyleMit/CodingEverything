@@ -193,7 +193,7 @@
 * **SPA** - Single Page Application
 * **CSR** - Client Side Rendered
 * **SSR** - Server Side Rendered
-
+* **WASM** - WebAssembly
 
 ### CSS
 
