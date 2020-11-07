@@ -67,3 +67,9 @@
   git push origin HEAD:name-of-your-branch
   ```
 
+* [Why do I need to explicitly push a new branch?](https://stackoverflow.com/q/17096311/1366033)
+
+  ```bash
+  git config --global push.default current
+  git push -u
+  ```

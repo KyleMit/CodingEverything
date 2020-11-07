@@ -19,6 +19,7 @@
 * [Parcel](https://parceljs.org/)
 * [Rollup.js](https://rollupjs.org/guide/en/)
 * [Snowpack](https://www.snowpack.dev/)
+* [Bazel](https://bazel.build/)
 * Task Runners
   * [Grunt](https://gruntjs.com/)
   * [gulp.js](https://gulpjs.com/)

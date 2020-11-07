@@ -3,8 +3,8 @@
 * [Installing PowerShell - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7)
 * [Migrating from Windows PowerShell 5.1 to PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7)
 
-Core - pwsh.exe
-Classic - powershell.exe
+* **Core** - pwsh.exe
+* **Classic** - powershell.exe
 
 ## Philosophy
 
@@ -206,6 +206,8 @@ function Start-App {
 You can add any number of optional white-space separated [parameter attributes](https://technet.microsoft.com/en-us/library/ms714348(v=vs.85).aspx) to each parameter
 
 ### Resources
+
+* [Get-PowerShellBlog: Bye Bye Backtick: Natural Line Continuations in PowerShell](https://get-powershellblog.blogspot.com/2017/07/bye-bye-backtick-natural-line.html)
 
 * https://github.com/jefflomax/configure-iis-webapps-powershell/blob/master/configureIISWebApplications.ps1
 * http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx

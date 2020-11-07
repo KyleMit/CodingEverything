@@ -1,5 +1,11 @@
 # Acronyms
 
+## Terms
+
+* **RBP** - Recommended Best Practice
+* **POC** - Proof of Concept (alt: 'People of Color')
+* **MVP** - Minimum Viable Product
+
 ## Tech
 
 * **IT** - Information Technology
@@ -176,6 +182,7 @@
 
 * **OSS** - Open Source Software
 * **GPL** - General Public License
+* [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 
 ### Web Dev
 
@@ -311,6 +318,7 @@
 * **COB** - Close of Business
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
+
 
 
 ### C-Suite

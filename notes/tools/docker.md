@@ -30,6 +30,20 @@ docker push kylemit/docker101tutorial
 
 ## CLI Commands
 
+
+
+### Build
+
+[`docker build`](https://docs.docker.com/engine/reference/commandline/build/)
+
+```bash
+docker build .
+```
+
+* `--tag|-t` - Name and optionally a tag in the `name:tag` format
+* `--help` - get help with CLI options
+
+
 ### Run
 
 [`docker run`](https://docs.docker.com/engine/reference/run/)
@@ -46,21 +60,61 @@ docker run -d -p 80:80 docker-tutorial docker101tutorial
 docker run -dt -P --name "webanalyzer-dev" -e "DEBUG=*" -e "NODE_ENV=development" --label "com.microsoft.created-by=visual-studio-code" -p "9229:9229" "webanalyzer:latest" nest start --debug 0.0.0.0:9229
 ```
 
-### Build
-
-[`docker build`](https://docs.docker.com/engine/reference/commandline/build/)
-
-```bash
-docker build .
-```
-
-* `--tag|-t` - Name and optionally a tag in the `name:tag` format
-
-
 ### Push
 
 [`docker push`](https://docs.docker.com/engine/reference/commandline/push/)
 
+
+
+
+
+## Docker File
+
+[Docker File API](https://docs.docker.com/engine/reference/builder/)
+[Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+
+
+> List of commands that get sent to the docker engine
+
+
+### Syntax
+
+```docker
+# Comment
+INSTRUCTION arguments
+```
+
+* Start with base image
+  * Well tested starters
+  * Node application - use node (from docker hub)
+    * `<name>:<tag>`
+* run instructions one-by-one, committing the result of each instruction to a new image if necessary
+* comments and leading white space removed
+* instructions *not* case sensitive, but *should* be uppercased
+
+### Parser Directives / Comments
+
+* **escape** - default is `\` - useful on windows to replace with `\`` where backslash is also a directory path separator (ala Windows Powershell)
+
+```bash
+# escape=` (backtick)
+```
+
+
+### Instructions
+
+* `FROM` - grab image from registry
+* `WORKDIR` - set working directory (cwd) - all subsequent commands will use that directory
+* `ENV` - set environment variable
+* `COPY` - copy from current directory in docker container
+  * excludes files in `.dockerignore`
+* `RUN` - runs the shell commands in the docker container
+* `EXPOSE` -
+
+
+## Docker Compose
+
+[Docker Compose API](https://docs.docker.com/compose/)
 
 
 ## Docker Hub Images
@@ -91,8 +145,20 @@ docker build .
 * Creates `docker-build` and `docker-run` tasks in `tasks.json`
 
 
+### Container > Node
+
+* [Build and run a Node.js app in a container](https://code.visualstudio.com/docs/containers/quickstart-node)
+
+
+
+
 ## Questions
 
 * [I lose my data when the container exits](https://stackoverflow.com/q/19585028/1366033)
 
+
+* [Docker Compose vs. Dockerfile](https://stackoverflow.com/q/29480099/1366033)
+
+  * **Dockerfile** - a simple text file that contains the commands a user could call to assemble an image.
+  * **DockerCompose** - a tool for defining and running multi-container Docker applications.
 

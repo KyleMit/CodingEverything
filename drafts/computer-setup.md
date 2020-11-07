@@ -135,7 +135,7 @@ Look Up Computer Stats:
 
 * [AutoHotKey](https://www.autohotkey.com/)
 * [7-Zip](https://www.7-zip.org/)
-* [MalwareBytes](https://www.malwarebytes.com/)
+
 
 ## Media
 
