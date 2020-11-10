@@ -16,7 +16,83 @@
 * BinarySet [BS]
 * NumberSet [NS] - `[1, 2, 3]`
 
-## Configure
+
+
+## Local Server
+
+[Setting Up DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
+
+1. Docker Compose
+
+   ```yml file=docker-compose.yml
+   version: '3.7'
+   services:
+   dynamodb-local:
+     image: amazon/dynamodb-local:latest
+     container_name: dynamodb-local
+     ports:
+       - "8000:8000"
+   ```
+
+   ```bash
+   docker-compose up
+   ```
+
+2. Docker Run
+
+   ```bash
+   docker run -d -p 8000:8000 amazon/dynamodb-local
+   ```
+
+Will run at [http://localhost:8000/shell/](http://localhost:8000/shell/)
+
+### Create a Table
+
+* [DynamoDB create tables in local machine](https://stackoverflow.com/q/34984880/1366033)
+* [Create a Table - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html)
+
+```bash
+$ aws dynamodb create-table \
+   --table-name UnifiedTable \
+   --attribute-definitions AttributeName=pk,AttributeType=S AttributeName=sk,AttributeType=S \
+   --key-schema AttributeName=pk,KeyType=HASH AttributeName=sk,KeyType=RANGE \
+   --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 \
+   --endpoint-url http://localhost:8000
+```
+
+
+
+## GUI
+
+
+### Dynobase
+
+[Dynobase](https://dynobase.dev/#pricing) - Professional DynamoDB GUI Client
+
+### NoSQL Workbench
+
+[NoSQL Workbench for DynamoDB - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html)
+
+
+
+## Questions
+
+
+* [`dynamodb.put().promise()` not returning the put object](https://stackoverflow.com/q/55166921/1366033)
+
+  Use `ReturnValue` per [DynamoDB SDK Docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property)
+
+* [What data type should be use for timestamp in DynamoDB?](https://stackoverflow.com/q/40561484/1366033)
+
+  Use ISO String
+
+
+
+
+
+----
+
+
 
 
 ## Dynamoose
@@ -36,29 +112,3 @@ dynamoose.aws.sdk.config.update({
     "region": "us-east-1"
 });
 ```
-
-## Local Server
-
-[Setting Up DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
-
-## GUI
-
-
-### Dynobase
-
-[Dynobase](https://dynobase.dev/#pricing) - Professional DynamoDB GUI Client
-
-### NoSQL Workbench
-
-[NoSQL Workbench for DynamoDB - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html)
-
-## Questions
-
-
-* [`dynamodb.put().promise()` not returning the put object](https://stackoverflow.com/q/55166921/1366033)
-
-  Use `ReturnValue` per [DynamoDB SDK Docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property)
-
-* [What data type should be use for timestamp in DynamoDB?](https://stackoverflow.com/q/40561484/1366033)
-
-  Use ISO String

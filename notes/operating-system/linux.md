@@ -67,18 +67,7 @@
 
 
 
-## Term-inalogy
-
-[What's the difference between a console, a terminal, and a shell?](hanselman.com/blog/WhatsTheDifferenceBetweenAConsoleATerminalAndAShell.aspx)
-
-* **TTY** - teletypewriter
-* **PTY** - pseudo-terminal
-* **ConPTY** - pseudo-console
-
-
 ### Terminal Keyboard Shortcuts
-
-
 
 * Ctrl + Shift + N => New terminal window
 * Ctrl + Shift + T => New terminal tab

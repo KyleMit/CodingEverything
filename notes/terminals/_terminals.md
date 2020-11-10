@@ -1,4 +1,58 @@
-# Command Line Interface
+# Terminals
+
+## Syntax
+
+* command
+* argument
+* long flag
+* short flag
+* flag argument
+
+## Term-inalogy
+
+[What's the difference between a console, a terminal, and a shell?](hanselman.com/blog/WhatsTheDifferenceBetweenAConsoleATerminalAndAShell.aspx)
+
+* **TTY** - teletypewriter
+* **PTY** - pseudo-terminal
+* **ConPTY** - pseudo-console
+
+## Stackable Short Flags
+
+The following are equivalent:
+
+```bash
+ls -a -t
+ls -at
+```
+
+
+## Standard Streams
+
+[Standard streams](https://en.wikipedia.org/wiki/Standard_streams)
+
+> The three input/output (I/O) connections are called:
+>
+> * **`stdin`** - Standard Input
+> * **`stdout`** - Standard Output
+> * **`stderr`** - Standard Error
+
+## Option / Parameter / Flag / Switch
+
+* Stack Exchange
+  * [Is there a difference between a command line flag and a command line option? - Super User](https://superuser.com/questions/1070059/is-there-a-difference-between-a-command-line-flag-and-a-command-line-option)
+  * [linux - What's the difference between a flag, an option, and an argument? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/285575/whats-the-difference-between-a-flag-an-option-and-an-argument)
+  * [bash - Difference between terms: "option", "argument", and "parameter"? - Stack Overflow](https://stackoverflow.com/questions/36495669/difference-between-terms-option-argument-and-parameter)
+* References
+  * [CLI Flags Explained · oclif: The Open CLI Framework](https://oclif.io/blog/2019/02/20/cli-flags-explained)
+  * [Command-line interface - Wikipedia](https://en.wikipedia.org/wiki/Command-line_interface)
+  * [Argument Syntax (The GNU C Library)](https://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html)
+  * [Documenting command-line syntax](https://developers.google.com/style/code-syntax)
+  * [Shell style guide for Google-originated open-source projects](https://google.github.io/styleguide/shellguide.html)
+* Examples
+  * [ls(1) - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+  * [dir | Microsoft Docs](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
+  * [cp(1) - Linux manual page](https://man7.org/linux/man-pages/man1/cp.1.html)
+  * [copy | Microsoft Docs](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/copy)
 
 ## Options
 
@@ -89,6 +143,19 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; fi
 ```bash
 choco install curl
 ```
+
+* [Install telnet client]
+
+```bash
+dism /online /Enable-Feature /FeatureName:TelnetClient
+```
+
+* [How do I exit telnet?](https://superuser.com/questions/486496/how-do-i-exit-telnet)
+
+   1. <kbd>Ctrl</kbd> + <kbd>]</kbd>
+   2. Then type `quit`
+
+* [Install `telnet` command in Windows 10](https://stackoverflow.com/a/64744406/1366033)
 
 ## Run Bash As Admin
 

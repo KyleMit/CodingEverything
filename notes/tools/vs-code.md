@@ -2,6 +2,11 @@
 
 ## Docs
 
+* [Keybinding](https://code.visualstudio.com/docs/getstarted/keybindings)
+* [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+* [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
+* [Extension API | Visual Studio Code Extension API](https://code.visualstudio.com/api)
+
 ### User Interface
 
 [User Interface](https://code.visualstudio.com/docs/getstarted/userinterface)
@@ -110,40 +115,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Script Commands](https://marketplace.visualstudio.com/items?itemName=mkloubert.vs-script-commands)
 * [Edit with Shell Command](https://marketplace.visualstudio.com/items?itemName=ryu1kn.edit-with-shell)
 
-## Docs
 
-* [Keybinding](https://code.visualstudio.com/docs/getstarted/keybindings)
-* [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
-* [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
-* [Extension API | Visual Studio Code Extension API](https://code.visualstudio.com/api)
-
-## Forums
+## Keybindings
 
 * [Macro like keybindings #871](https://github.com/microsoft/vscode/issues/871)
 * [Macro recording - Issue #4490 - microsoft/vscode](https://github.com/Microsoft/vscode/issues/4490)
 
-
-## Settings
-
-[SF Telemetry](https://developer.salesforce.com/tools/vscode/en/faq/telemetry)
-
-```json
-{ "salesforcedx-vscode-core.telemetry.enabled": false }
-```
-
-[How to disable telemetry reporting](https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting)
-
-```json
-{ "telemetry.enableTelemetry": false }
-```
-
-[Tips > Diff](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_diffs)
-
-```json
-{ "diffEditor.renderSideBySide": false }
-```
-
-[Pinned tabs: add a setting to show more context #98161](https://github.com/microsoft/vscode/issues/98161#issuecomment-690104534)
 
 ## Open File Side by Side
 
@@ -153,6 +130,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Customize the key for "open to side" in quickopen window](https://github.com/microsoft/vscode/issues/91018)
 * [Add a command for "Open to Side" from quick open](https://github.com/microsoft/vscode/issues/43059)
 
+## Questions
 
 * [Breaking up HTML tags in JSX upon save · Issue #452](https://github.com/prettier/prettier-vscode/issues/452)
 
@@ -166,23 +144,32 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     }
     ```
 
-[Exclude directory from "Explore" tab?](https://stackoverflow.com/q/33258543/1366033)
+* [Exclude directory from "Explore" tab?](https://stackoverflow.com/q/33258543/1366033)
 
+* [Choose folders to be ignored during search in VS Code](https://stackoverflow.com/q/29971600/1366033)
+
+  ```json
+  {
+    "search.exclude": {
+      "**/node_modules": true,
+    },
+  }
+  ```
 
 * <kbd>Ctrl</kbd> + <kbd>R</kbd> is not working
 
-[Microsoft/**vscode-npm-scripts**](https://github.com/Microsoft/vscode-npm-scripts) - defines a chording keyboard shortcut for the R key
+* [Microsoft/**vscode-npm-scripts**](https://github.com/Microsoft/vscode-npm-scripts) - defines a chording keyboard shortcut for the R key
 
-[Codicons](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
+* [Codicons](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
 
 * [Disable annoying source code modification indication](https://stackoverflow.com/q/48401967/1366033)
 
 
-```json
-{
-    "gitlens.mode.active": "zen"
-}
-```
+  ```json
+  {
+      "gitlens.mode.active": "zen"
+  }
+  ```
 
 * [Allow hiding the buttons in the tab bar line and in the panel title bar #46403](https://github.com/microsoft/vscode/issues/46403)
 
@@ -225,6 +212,41 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     * Symbol Lookup - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
   * Send Request
     * Click Link or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>
+
+
+
+* [SF Telemetry](https://developer.salesforce.com/tools/vscode/en/faq/telemetry)
+
+  ```json
+  { "salesforcedx-vscode-core.telemetry.enabled": false }
+  ```
+
+* [How to disable telemetry reporting](https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting)
+
+  ```json
+  { "telemetry.enableTelemetry": false }
+  ```
+
+* [Tips > Diff](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_diffs)
+
+  ```json
+  { "diffEditor.renderSideBySide": false }
+  ```
+
+* [Pinned tabs: add a setting to show more context #98161](https://github.com/microsoft/vscode/issues/98161#issuecomment-690104534)
+
+* [Visual Studio Code Tab Key does not insert a tab](https://stackoverflow.com/q/35519538/1366033)
+
+  * **Toggle Tab Key Moves Focus**
+
+
+* [Collapse all methods in Visual Studio Code](https://stackoverflow.com/q/42660670/1366033)
+
+  Fold Level
+
+
+
+
 
 ## Articles
 

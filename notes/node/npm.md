@@ -9,6 +9,12 @@
 npm unpublish <package-name> -f
 ```
 
+## Commands
+
+## Install
+
+* `--production` - npm will not install modules listed in `devDependencies`
+
 ## Badge Provider
 
 [Version Badge for npm, RubyGems, PyPI, Bower and other packages](https://badge.fury.io/)
@@ -21,7 +27,8 @@ npm unpublish <package-name> -f
 
 ## Ecosystem
 
-* [greenkeeper](https://greenkeeper.io/)
+* [greenkeeper](https://greenkeeper.io/) (deprecated)
+* [Snyk](https://snyk.io/)
 
 ## Scripts
 

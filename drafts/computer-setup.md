@@ -237,11 +237,20 @@ winget install --id=AltDrag.AltDrag -e
 winget install --id=Lexikos.AutoHotkey -e
 winget install --id=GnuPG.GnuPG -e
 winget install --id=Microsoft.PowerToys -e
+winget install --id=Python.Python -e
 ```
 
 ## DotFiles
 
 [Saving DotFiles to Github](https://dotfiles.github.io/)
+
+### Docker Config
+
+```json
+{
+    "psFormat": "table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}",
+}
+```
 
 ### Setup
 

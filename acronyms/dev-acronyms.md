@@ -13,6 +13,7 @@
 
 ## Computer Science
 
+* **IO** - Input / Output
 * **CS** - Computer Science
 * **AST** - Abstract Syntax Tree
 
@@ -202,6 +203,8 @@
 * **SSR** - Server Side Rendered
 * **WASM** - WebAssembly
 
+* **Differential Loading** - sending separate bundles to legacy browsers
+
 ### CSS
 
 * **CSS** - Cascade Style Sheets
@@ -225,6 +228,7 @@
 * **TS** - TypeScript
 * **ES6** - ECMAScript 6
 * **MDN** - Mozilla Developer Network
+* **ATA** - Automatic Type Acquisition
 
 #### React
 
@@ -236,6 +240,10 @@
 * **OS** - Operating System
 * **WSL** - Windows Subsystem for Linux
 * **GNU** - GNU's Not Unix
+
+### Libraries
+
+* **PIP** - Python Package Installer
 
 ### Linux
 

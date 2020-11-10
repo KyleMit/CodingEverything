@@ -112,7 +112,7 @@ export class CatsController {
 
 ### File Structure
 
-```
+```bash
 /Component/
  - component.module.ts
  - component.providers.ts

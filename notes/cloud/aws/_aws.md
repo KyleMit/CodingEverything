@@ -32,7 +32,7 @@ aws sts get-caller-identity
 * [**ECS**](https://aws.amazon.com/ecs/) - Elastic Container Service
 * [**ACM**](https://aws.amazon.com/certificate-manager/) - AWS Certificate Manager
 * [**VPC**](https://aws.amazon.com/vpc/) - Virtual Private Cloud
-
+* [**STS**](https://wa.aws.amazon.com/wat.concept.sts.en.html) - Security Token Service
 
 ## ARN
 
@@ -97,6 +97,12 @@ aws sts get-caller-identity
 ## Organizations
 
 [Consolidated billing process - AWS Billing and Cost Management](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilling-procedure.html)
+
+## Roles
+
+* [Granting a user permissions to switch roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_permissions-to-switch.html?icmpid=docs_iam_console)
+* [Switching to a role (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html)
+* [How can I allow a Group to assume a Role?](https://stackoverflow.com/questions/34922920/how-can-i-allow-a-group-to-assume-a-role)
 
 ## Questions
 

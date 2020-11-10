@@ -11,7 +11,7 @@
 * [viz.js](https://github.com/mdaines/viz.js)
 * [ditaa](https://github.com/stathissideris/ditaa)
 
-## Mermaid
+## Types
 
 * [flowchart](https://mermaid-js.github.io/mermaid/#/flowchart)
 * [sequence diagram](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)

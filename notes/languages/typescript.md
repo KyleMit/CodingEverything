@@ -7,6 +7,11 @@
 
 * [**Flow**](https://flow.org/en/) -  A Static Type Checker for JavaScript
 
+
+## Acronyms
+
+* **ATA** - Automatic Type Acquisition
+
 ## Getting Started
 
 You can install TypeScript via npm
@@ -347,10 +352,6 @@ interface Point {
 }
 ```
 
-#### readonly vs const
-
-* Variables use `const`
-* properties use `readonly`
 
 #### Function Types
 
@@ -532,6 +533,16 @@ console.log(arr.length);
 
    All your TypeScript code goes in src and the generated JavaScript goes in lib.
 
+6. Add scripts to `package.json
+
+  ```json
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+  },
+  ```
+
 
 ### NPM Packages
 
@@ -566,6 +577,62 @@ console.log(arr.length);
     "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
   },
   ```
+
+## Declaration File
+
+[Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
+
+## Debugging
+
+[TypeScript debugging with Visual Studio Code](https://code.visualstudio.com/docs/typescript/typescript-debugging)
+
+1. Set `sourceMap` in `tsconfig.json`
+
+   ```json
+   {
+     "compilerOptions": {
+       "outDir": "out",
+       "sourceMap": true
+     }
+   }
+   ```
+
+2. Create task to build app in `tasks.json`
+
+   ```json
+   {
+     "version": "2.0.0",
+     "tasks": [
+       {
+         "label": "tsc Build",
+         "command": "tsc",
+         "type": "shell",
+         "problemMatcher": ["$tsc"],
+         "presentation": { "reveal": "always" },
+         "group": "build"
+       }
+     ]
+   }
+   ```
+
+3. Create launch debug in `launch.json`
+
+   ```json
+   {
+     "version": "0.2.0",
+     "configurations": [
+       {
+         "type": "node",
+         "request": "launch",
+         "name": "Launch Program",
+         "preLaunchTask": "tsc Build",
+         "program": "${workspaceFolder}/src/index.ts",
+         "outFiles": ["${workspaceFolder}/out/**/*.js"],
+         "skipFiles": ["<node_internals>/**"]
+       }
+     ]
+   }
+   ```
 
 
 ## Typescript Commands
@@ -632,6 +699,7 @@ npm install --save-dev @types/jquery
 
 ### Triple-Slash Directives
 
+[Triple-Slash Directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html#-reference-path-)
 
 ```ts
 /// <reference path="jquery/jquery.d.ts" />
@@ -1008,11 +1076,7 @@ a ||= b
 
 ## Questions
 
-* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/a/64656913/1366033)
 
-  ```bash
-  npm install -D @types/module-name
-  ```
 
 * [URLSearchParams constructor argument should be `string | object` #15338](https://github.com/microsoft/TypeScript/issues/15338#issuecomment-597554161)
 * [Cannot find name 'console'. What could be the reason for this?](https://stackoverflow.com/a/42106036/1366033)
@@ -1047,3 +1111,58 @@ a ||= b
   import { method } from 'commonjs-package';  // Errors
   import packageMain from 'commonjs-package'; // Works
   ```
+
+* [tsconfig.json: Build:No inputs were found in config file](https://stackoverflow.com/q/41211566/1366033)
+
+  Run TypeScript: Restart TS server
+
+* [Import 'global' modules with TypeScript](https://stackoverflow.com/q/34161119/1366033)
+
+  Use the side-effect-only import:
+
+  ```ts
+  import './greeting/greetingSpec';
+  ```
+
+* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/a/64656913/1366033)
+
+  ```bash
+  npm install -D @types/module-name
+  ```
+
+* [Adding Custom Type Definitions to a Third-Party Library](https://www.detroitlabs.com/blog/2018/02/28/adding-custom-type-definitions-to-a-third-party-library/)
+
+  You get this error message
+
+  > Could not find a declaration file for module 'library'.
+  > 'library.js' implicitly has an 'any' type.
+  > Try npm install @types/library if it exists
+  > Or add a new declaration (`.d.ts`) file containing declare module 'library'
+
+  ```json
+  {
+    "compilerOptions": {
+      "typeRoots": [ "./types", "./node_modules/@types"]
+    }
+  }
+  ```
+
+  Add to exclude so it doesn't get compiled
+
+  ```json
+  {
+    "exclude": ["node_modules", "types"]
+  }
+  ```
+
+
+* [Interfaces vs Types](https://stackoverflow.com/q/37233735/1366033)
+
+   ![differences](https://i.stack.imgur.com/6Tjyp.png)
+
+* [readonly vs const](https://stackoverflow.com/q/37233735/1366033)
+
+  * properties use `readonly` - compile time check
+  * Variables use `const` - run time check as well
+
+

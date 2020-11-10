@@ -10,6 +10,7 @@
 * [Chrome UX - CrUX](https://web.dev/chrome-ux-report-data-studio-dashboard/)
 * [Web Vitals](https://web.dev/vitals/)
 * [Discussion - Gitter](https://gitter.im/GoogleChrome/lighthouse)
+* [Do Better Web](https://developers.google.com/web/updates/2016/12/lighthouse-dbw)
 
 ### Docs
 
@@ -337,3 +338,10 @@ https://gist.github.com/KyleMit/1e4b949b32a4e35ddc8a9b570d8e4b2c
 
 
 * [Structured data is valid](https://web.dev/structured-data/)
+
+
+## Questions
+
+* [Expose TypeScript typings](https://github.com/GoogleChrome/lighthouse/issues/1773)
+
+
