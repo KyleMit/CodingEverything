@@ -1,6 +1,6 @@
 # Cypress
 
-[Cypress](https://www.cypress.io/
+[Cypress](https://www.cypress.io/)
 
 > Performs E2E Testing
 
