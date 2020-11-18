@@ -193,51 +193,52 @@ Look Up Computer Stats:
 ## Winget
 
 ```bash file:winstall.bat
-winget install --id=Atlassian.Sourcetree -e
-winget install --id=Postman.Postman -e
-winget install --id=Microsoft.VisualStudioCode -e
-winget install --id=Microsoft.VisualStudio.Community -e
-winget install --id=Notepad++.Notepad++ -e
-winget install --id=WinMerge.WinMerge -e
-winget install --id=Telerik.Fiddler -e
-winget install --id=Microsoft.AzureStorageExplorer -e
-winget install --id=Microsoft.AzureDataStudio -e
-winget install --id=Microsoft.AzureCLI -e
-winget install --id=WiresharkFoundation.Wireshark -e
-winget install --id=OpenJS.Nodejs -e
-winget install --id=Cockos.LICEcap -e
-winget install --id=Microsoft.dotnet -e
-winget install --id=Microsoft.dotNetFramework -e
-winget install --id=GIMP.GIMP -e
-winget install --id=Inkscape.Inkscape -e
-winget install --id=Mozilla.Firefox -e
-winget install --id=SlackTechnologies.Slack -e
-winget install --id=Valve.Steam -e
-winget install --id=Microsoft.Teams -e
-winget install --id=Discord.Discord -e
-winget install --id=OpenVPNTechnologies.OpenVPN -e
-winget install --id=GitHub.cli -e
-winget install --id=Microsoft.PowerBI -e
-winget install --id=Microsoft.PowerShell -e
-winget install --id=Microsoft.WindowsTerminal -e
-winget install --id=MRidgers.Clink -e
-winget install --id=Armin2208.WindowsAutoNightMode -e
-winget install --id=7zip.7zip -e
-winget install --id=VideoLAN.VLC -e
-winget install --id=OBSProject.OBSStudio -e
-winget install --id=CPUID.CPU-Z -e
-winget install --id=Adobe.AdobeAcrobatReaderDC -v "2020.012.20041" -e
-winget install --id=rammichael.7+TaskbarTweaker -e --force
-winget install --id=PrivateInternetAccess.PrivateInternetAccess -e
-winget install --id=Oracle.JavaRuntimeEnvironment -e
-winget install --id=BellSoft.LibericaJDK8Full -e
-winget install --id=RubyInstallerTeam.RubyWithDevKit -e
-winget install --id=Corsair.iCUE -e
-winget install --id=AltDrag.AltDrag -e
-winget install --id=Lexikos.AutoHotkey -e
-winget install --id=GnuPG.GnuPG -e
-winget install --id=Microsoft.PowerToys -e
-winget install --id=Python.Python -e
+winget install Atlassian.Sourcetree
+winget install Postman.Postman
+winget install Microsoft.VisualStudioCode
+winget install Microsoft.VisualStudio.Community
+winget install Notepad++.Notepad++
+winget install WinMerge.WinMerge
+winget install Telerik.Fiddler
+winget install Microsoft.AzureStorageExplorer
+winget install Microsoft.AzureDataStudio
+winget install Microsoft.AzureCLI
+winget install WiresharkFoundation.Wireshark
+winget install OpenJS.Nodejs
+winget install Cockos.LICEcap
+winget install Microsoft.dotnet
+winget install Microsoft.dotNetFramework
+winget install GIMP.GIMP
+winget install Inkscape.Inkscape
+winget install Mozilla.Firefox
+winget install SlackTechnologies.Slack
+winget install Valve.Steam
+winget install Microsoft.Teams
+winget install Discord.Discord
+winget install OpenVPNTechnologies.OpenVPN
+winget install GitHub.cli
+winget install Microsoft.PowerBI
+winget install Microsoft.PowerShell
+winget install Microsoft.WindowsTerminal
+winget install MRidgers.Clink
+winget install Armin2208.WindowsAutoNightMode
+winget install 7zip.7zip
+winget install VideoLAN.VLC
+winget install OBSProject.OBSStudio
+winget install CPUID.CPU-Z
+winget install Adobe.AdobeAcrobatReaderDC -v "2020.012.20041"
+winget install rammichael.7+TaskbarTweaker -e --fo
+winget install PrivateInternetAccess.PrivateInternetAccess
+winget install Oracle.JavaRuntimeEnvironment
+winget install BellSoft.LibericaJDK8Full
+winget install RubyInstallerTeam.RubyWithDevKit
+winget install Corsair.iCUE
+winget install AltDrag.AltDrag
+winget install Lexikos.AutoHotkey
+winget install GnuPG.GnuPG
+winget install Microsoft.PowerToys
+winget install Python.Python
+winget install AngusJohnson.ResourceHacker
 ```
 
 ## DotFiles
@@ -983,6 +984,9 @@ dotnet tool install --global dotnet-script
 
 <%AppData%\Microsoft\Windows\Start Menu\Programs\Chrome Apps>
 
+## Edge
+
+[How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
 
 #### Shortcut Example
 

@@ -491,3 +491,14 @@ chsh -s /bin/zsh
 > complete:13: command not found: compdef
 
 [nvm is broken after I installing oh-my-zsh? #5543](https://github.com/ohmyzsh/ohmyzsh/issues/5543)
+
+
+## Disable SIP
+
+[Disabling and Enabling System Integrity Protection | Apple Developer Documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection)
+
+```bash
+csrutil disable
+```
+
+* **SIP** - System Integrity Protection

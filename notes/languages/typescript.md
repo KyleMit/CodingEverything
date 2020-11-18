@@ -1165,4 +1165,24 @@ a ||= b
   * properties use `readonly` - compile time check
   * Variables use `const` - run time check as well
 
+* [how to convert / cast / assert types](https://stackoverflow.com/q/13204759/1366033)
+
+  ```ts
+  <MarkerSymbolInfo> symbolInfo
+  symbolInfo as MarkerSymbolInfo // tsx compatible
+  ```
+
+
+* [Add ES2019 Object.fromEntries function](https://github.com/microsoft/TypeScript/issues/30933)
+  * [javascript - Property 'entries' does not exist on type 'ObjectConstructor' - Stack Overflow](https://stackoverflow.com/q/45422573/1366033)
+  * [How can I make Object.fromEntries and Object.entries compile?](https://www.reddit.com/r/typescript/comments/e8abzr/)
+
+
+[Convert from unknown to Number](https://stackoverflow.com/q/53813188/1366033)
+
+> Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other.
+
+```ts
+let port = process.env.REDIS_PORT as unknown as number
+```
 

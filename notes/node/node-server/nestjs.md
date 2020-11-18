@@ -126,3 +126,11 @@ export class CatsController {
 ## Articles
 
 [Take your Node backend to the next level with NestJS](https://blog.logrocket.com/node-back-end-next-level-nestjs/) by Maciej Cieślar
+
+## Questions
+
+
+* [NestJS enable cors in production](https://stackoverflow.com/q/50949231/1366033)
+
+  * [NestJS > Docs > Security > Cors](https://docs.nestjs.com/techniques/security#cors)
+  * [expressjs/cors - configuration object](https://github.com/expressjs/cors#configuration-options)

@@ -41,3 +41,23 @@ Cascade Style Sheets
   color: #f00;
 }
 ```
+
+
+## Media Queries
+
+
+### prefers-reduced-motion
+
+```css
+button {
+  /* `vibrate` keyframes are defined elsewhere */
+  animation: vibrate 0.3s linear infinite both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    animation: none;
+  }
+}
+```
+

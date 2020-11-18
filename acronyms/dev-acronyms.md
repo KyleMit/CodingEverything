@@ -50,6 +50,7 @@
 * **VPN** - Virtual Private Network
 * **RAID** - Redundant Array of Independent Disk
 * **NAS** - Network Attached Storage
+* **IaC** - Infrastructure as Code
 
 ## File Types
 
@@ -80,6 +81,7 @@
 
 ### Development
 
+* **FE** - Front End
 * **VB** - Visual Basic
 * **CLI** - Command Line Interface
 * **API** - Application Programming Interface
@@ -291,7 +293,9 @@
 * **SPSS** - [Statistical Package for the Social Sciences](https://en.wikipedia.org/wiki/SPSS)
 
 
+### Gloassary
 
+* [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
 
 ## Terms
 

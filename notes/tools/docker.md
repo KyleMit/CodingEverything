@@ -168,6 +168,9 @@ INSTRUCTION arguments
 
 [Docker Compose API](https://docs.docker.com/compose/)
 
+## Docker Network
+
+* [Networking overview](https://docs.docker.com/network/)
 
 ## Docker Hub Images
 
@@ -246,6 +249,4 @@ INSTRUCTION arguments
 
   * If you want to make an image for general purpose, you can leave ENTRYPOINT unspecified and use `CMD ["/path/dedicated_command"]` as you will be able to override the setting by supplying arguments to `docker run`.
 
-
-Right Click, Remove Keybinding.Right Click, Remove Keybinding.Right Click, Remove Keybinding.
-e 1.39.2 (2019-10-15). You are using Microsoft Visual Studio, which is not to be confused with Visual Studio Code.
+* [accessing a docker container from another container](https://stackoverflow.com/q/42385977/1366033)

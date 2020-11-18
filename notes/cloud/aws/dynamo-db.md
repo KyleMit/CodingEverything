@@ -86,7 +86,17 @@ $ aws dynamodb create-table \
 
   Use ISO String
 
-
+* [GET data from DynamoDB using Node JS SDK](https://stackoverflow.com/q/50431820/1366033)
+  * Docs
+    * [Step 4: Query and Scan Data with AWS SDK for JavaScript in DynamoDB - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
+    * [Class: AWS.DynamoDB — AWS SDK for JavaScript](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#getItem-property)
+    * [Using the DynamoDB Document Client - AWS SDK for JavaScript](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
+  * Articles
+    * [Eight Examples of Fetching Data from DynamoDB with Node.js – Fernando Medina Corey](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
+  * Stack Overflow
+    * [Query data without key (AWS DynamoDB SDK Nodejs)](https://stackoverflow.com/q/39026851/1366033)
+    * [dynamodb get all items by an array of ids](https://stackoverflow.com/q/53129094/1366033)
+    * [Formatting DynamoDB data to normal JSON in AWS Lambda](https://stackoverflow.com/q/32712675/1366033)
 
 
 

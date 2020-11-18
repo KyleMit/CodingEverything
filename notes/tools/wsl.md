@@ -19,7 +19,6 @@ wsl --set-default-version 2
 
 [How to setup WSL2 with Windows Terminal, oh-my-zsh and powerlevel10k - Duman Codes](https://yduman.github.io/blog/wsl2-setup/)
 [Remote - WSL - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-[Oh My Zsh - a delightful & open source framework for Zsh](https://ohmyz.sh/)
 
 
 In windows explorer, access WSL via: `\\wsl$`

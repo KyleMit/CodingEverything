@@ -12,4 +12,15 @@ https://support.google.com/calendar/answer/7638168?hl=en
 
 ## Groups
 
-[Emails to Google Groups email address aren't working](https://webapps.stackexchange.com/q/148192/38656)
+* [Emails to Google Groups email address aren't working](https://webapps.stackexchange.com/q/148192/38656)
+
+
+## Questions
+
+* [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
+
+  Settings > Chat > Hide Hangouts
+
+* Restore Old Google Icons
+  * [Restore old Google icons](https://chrome.google.com/webstore/detail/restore-old-google-icons/iellnmonjokmoagdlggagdmfjgpiahmb)
+  * [Classic Google Icons](https://chrome.google.com/webstore/detail/classic-google-icons/gdiohdhgkjainohnfhofjoebohnfknnm)

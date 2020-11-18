@@ -1,5 +1,9 @@
 # Visual Studio Code
 
+## Alternatives
+
+[IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
 ## Docs
 
 * [Keybinding](https://code.visualstudio.com/docs/getstarted/keybindings)
@@ -245,7 +249,18 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   Fold Level
 
 
+* [Turn Off Whole Line Copy in Visual Studio Code](https://stackoverflow.com/q/39322024/1366033)
 
+  ```json
+  "editor.emptySelectionClipboard": false
+  ```
+
+* [VSCode remove warnings from problems tab](https://stackoverflow.com/a/53975985/1366033)
+
+* [Select Next Match of Current Text](https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor) - `editor.action.selectHighlights`
+
+
+  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
 
 
 ## Articles

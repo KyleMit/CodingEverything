@@ -64,6 +64,13 @@ aws sts get-caller-identity
 [AWS Toolkit for Eclipse](https://docs.aws.amazon.com/toolkit-for-eclipse/v1/user-guide/welcome.html)
 
 
+#### Toolkit for VS Code
+
+* [AWS Toolkit for Visual Studio Code](https://aws.amazon.com/visualstudiocode/)
+* [Installing the AWS Toolkit for Visual Studio Code - AWS Toolkit for VS Code](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/setup-toolkit.html)
+* [AWS Toolkit - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode)
+
+
 ## CLI
 
 * [Installing, updating, and uninstalling the AWS CLI version 2 on Windows](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)

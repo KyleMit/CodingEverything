@@ -12,6 +12,9 @@
     "**/samples": true,
     "assets/**": true,
   },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
   "workbench.colorCustomizations": {
     "statusBar.background": "#215732",
     "statusBar.foreground": "#e7e7e7",
