@@ -22,5 +22,8 @@ https://support.google.com/calendar/answer/7638168?hl=en
   Settings > Chat > Hide Hangouts
 
 * Restore Old Google Icons
-  * [Restore old Google icons](https://chrome.google.com/webstore/detail/restore-old-google-icons/iellnmonjokmoagdlggagdmfjgpiahmb)
-  * [Classic Google Icons](https://chrome.google.com/webstore/detail/classic-google-icons/gdiohdhgkjainohnfhofjoebohnfknnm)
+
+  * [Customize Favicon - GSuite](https://github.com/KyleMit/CustomizeTheWeb/blob/master/Scripts/restore-google-icons.user.js)
+  * Prior Art
+    * [Restore old Google icons](https://chrome.google.com/webstore/detail/restore-old-google-icons/iellnmonjokmoagdlggagdmfjgpiahmb)
+    * [Classic Google Icons](https://chrome.google.com/webstore/detail/classic-google-icons/gdiohdhgkjainohnfhofjoebohnfknnm)

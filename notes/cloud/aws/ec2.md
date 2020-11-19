@@ -1,6 +1,17 @@
 
 # EC2
 
+## Features
+
+* Security Groups
+* Load Balancer
+
+## Security Group
+
+[Amazon EC2 security groups for Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html?icmpid=docs_ec2_console#security-group-rules)
+
+
+
 ## Load Balancer
 
 

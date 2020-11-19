@@ -199,6 +199,9 @@ INSTRUCTION arguments
   * `Docker: Initialize for Docker debugging`
 * Creates `docker-build` and `docker-run` tasks in `tasks.json`
 
+### Docker Run Tasks
+
+[Code Docker extension properties and tasks](https://code.visualstudio.com/docs/containers/reference#_docker-run-task)
 
 ### Container > Node
 
@@ -249,4 +252,15 @@ INSTRUCTION arguments
 
   * If you want to make an image for general purpose, you can leave ENTRYPOINT unspecified and use `CMD ["/path/dedicated_command"]` as you will be able to override the setting by supplying arguments to `docker run`.
 
+* [Stopping Docker containers by image name](https://stackoverflow.com/q/32073971/1366033)
+
+  ```bash
+  docker stop $(docker ps -q --filter ancestor=<image-name> )
+  ```
+
 * [accessing a docker container from another container](https://stackoverflow.com/q/42385977/1366033)
+
+* [Docker Compose wait for container X before starting Y](https://stackoverflow.com/q/31746182/1366033)
+
+  * [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/#depends_on)
+  * [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)

@@ -25,6 +25,13 @@
 
 [New – Import Existing Resources into a CloudFormation Stack | AWS News Blog](https://aws.amazon.com/blogs/aws/new-import-existing-resources-into-a-cloudformation-stack/)
 
+## Template Validation
+
+[cloudformation.schema.json](https://github.com/awslabs/goformation/blob/v4.15.0/schema/cloudformation.schema.json)
+
+```bash
+aws cloudformation validate-template --template-body file://$TEMPLATE_PATH
+```
 
 ## Docs
 
@@ -70,3 +77,19 @@
   ```
 
 
+* [unknown tag `<!ref>`](https://stackoverflow.com/q/53470329/1366033)
+
+  ```json
+  "yaml.customTags": [
+    "!Equals sequence",
+    "!FindInMap sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Join sequence",
+    "!Ref",
+    "!Select sequence",
+    "!Split sequence",
+    "!Sub"
+  ]
+  ```

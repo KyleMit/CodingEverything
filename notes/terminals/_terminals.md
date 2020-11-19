@@ -279,7 +279,10 @@ You can:
 * [How do I clear/delete the current line in terminal?](https://stackoverflow.com/q/9679776/1366033)
 
   * <kbd>Ctrl</kbd> + <kbd>W</kbd> - Delete Word
-  * <kbd>Ctrl</kbd> + <kbd>U</kbd> - Delete Line
+  * <kbd>Ctrl</kbd> + <kbd>U</kbd> - Delete Everything Behind
+  * <kbd>Ctrl</kbd> + <kbd>K</kbd> - Delete Everything Forward
+  * <kbd>Ctrl</kbd> + <kbd>Y</kbd> - Yank Deleted Text
+  * <kbd>Ctrl</kbd> + <kbd>A</kbd> - Go to Beginning Of Line
 
 
 * [Why is $(...) preferred over `...` (backticks)?](http://mywiki.wooledge.org/BashFAQ/082)
