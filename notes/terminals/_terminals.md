@@ -1,5 +1,12 @@
 # Terminals
 
+## Comparison
+
+* [Comparison of command shells](https://en.wikipedia.org/wiki/Comparison_of_command_shells)
+  * [CMD / DOS / NT](https://ss64.com/nt/)
+  * [Powershell](https://ss64.com/ps/)
+  * [Bash](https://ss64.com/bash/)
+
 
 ## Term-inalogy
 
@@ -65,6 +72,7 @@ ls -at
   * Dash
   * Zsh
   * Fsh
+* [cmder](https://github.com/cmderdev/cmder)
 
 ## Bash
 

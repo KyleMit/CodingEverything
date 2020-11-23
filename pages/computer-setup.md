@@ -185,12 +185,12 @@ Look Up Computer Stats:
 * Other > Hide the "Show Desktop" button
 
 
-[How to Customize Any Icon in Windows 10](https://www.makeuseof.com/tag/customize-icon-windows/)
-
 
 ## Configuration
 
 ## Winget
+
+https://winstall.app/packs/e2W4gRw8S
 
 ```bash file:winstall.bat
 winget install Atlassian.Sourcetree
@@ -239,6 +239,8 @@ winget install GnuPG.GnuPG
 winget install Microsoft.PowerToys
 winget install Python.Python
 winget install AngusJohnson.ResourceHacker
+winget install Amazon.SAM-CLI
+winget install marha.VcXsrv
 ```
 
 ## DotFiles
@@ -390,24 +392,8 @@ done
 
 #### VS Code Settings
 
-[Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
-[Configure Window Title](https://code.visualstudio.com/updates/v1_10#_configurable-window-title)
 
-```json
-{
-    "window.title": "${rootName}${separator}${activeEditorShort}${dirty}"
-}
-```
-
-[Remove trailing spaces automatically or with a shortcut](https://stackoverflow.com/q/30884131/1366033)
-
-```json
-{
-    "files.trimTrailingWhitespace": true
-}
-```
-
-// TODO embed gist using SSG
+<!-- // TODO embed gist using SSG -->
 https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf#file-settings-json
 
 
@@ -674,7 +660,7 @@ Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
 [Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
 
 
-### Visual Studio Config
+#### Visual Studio Config
 
 #### Keybindings
 
@@ -857,6 +843,15 @@ cd c:
 
 ### Powershell Profile
 
+### Python
+
+Get List of PIP Installs using [`pip list`](https://pip.pypa.io/en/stable/reference/pip_list/)
+
+```bash
+pip list --not-required
+```
+
+
 ### NPM
 
 
@@ -970,6 +965,8 @@ dotnet tool install --global dotnet-script
   * [Xapian Search](https://xapian.org/)
 * [chrome-command-palette](https://github.com/omittones/chrome-command-palette)
 * [session buddy](https://sessionbuddy.com/)
+* [Infinity New Tab](https://chrome.google.com/webstore/detail/infinity-new-tab-producti/dbfmnekepjoapopniengjbcpnbljalfg)
+
 
 ### Chrome Apps
 
@@ -1004,54 +1001,74 @@ dotnet tool install --global dotnet-script
 
 
 
-
 ## Windows Settings
+
+* [How to Customize Any Icon in Windows 10](https://www.makeuseof.com/tag/customize-icon-windows/)
 
 * [How to Change Microsoft Edge to Search Google Instead of Bing](https://www.howtogeek.com/221709/how-to-change-your-default-search-engine-in-microsoft-edge/)
 
   Settings > Privacy & Services > Address Bar
 
-[How to rename the User folder in Windows 10?](https://superuser.com/q/890812/180163)
+* [How to rename the User folder in Windows 10?](https://superuser.com/q/890812/180163)
 
-[Why Local Users and Groups is missing in Computer Management on Windows 10 Home?](https://stackoverflow.com/q/41093714/1366033)
+* [Why Local Users and Groups is missing in Computer Management on Windows 10 Home?](https://stackoverflow.com/q/41093714/1366033)
 
 * [How to Remove the Windows 10 Search Box from the Taskbar](https://www.groovypost.com/howto/remove-windows-10-cortana-search-taskbar/)
 
-![Hide Search](/assets/posts/computer-setup/hide-search-on-taskbar.png)
+   ![Hide Search](/assets/posts/computer-setup/hide-search-on-taskbar.png)
 
-Show location of pointer when pressing <kbd>Ctrl</kbd> key
+* Show location of pointer when pressing <kbd>Ctrl</kbd> key
 
-![mouse properties](/assets/posts/computer-setup/mouse-properties.png)
+    ![mouse properties](/assets/posts/computer-setup/mouse-properties.png)
 
-Windows Explorer Settings
+* Show file extensions and hidden items in Windows Explorer
 
-![Windows Explorer](/assets/posts/computer-setup/windows-explorer.png)
+   ![Windows Explorer](/assets/posts/computer-setup/windows-explorer.png)
 
-Remove Start Menu Suggestions
+* Remove Start Menu Suggestions
 
-![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
+   ![Windows Explorer](/assets/posts/computer-setup/start-settings.png)
 
-[Windows 10 select default login option](https://superuser.com/a/1265040/180163)
+* [Windows 10 select default login option](https://superuser.com/a/1265040/180163)
 
-[How to Change Preferred Band (2.4 GHz or 5 GHz) for Wireless Network Adapters](https://www.majorgeeks.com/content/page/how_to_change_preferred_band_for_wireless_network_adapters.html)
+* [How to Change Preferred Band (2.4 GHz or 5 GHz) for Wireless Network Adapters](https://www.majorgeeks.com/content/page/how_to_change_preferred_band_for_wireless_network_adapters.html)
 
-![change preferred band](/assets/posts/computer-setup/prefered-band.png)
+   ![change preferred band](/assets/posts/computer-setup/prefered-band.png)
 
-[Create alias in windows start menu search](https://superuser.com/q/1599285/180163)
+* [Create alias in windows start menu search](https://superuser.com/q/1599285/180163)
 
-### Disable Aero Shake
 
-[How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
+* [How To Disable Monitor Speakers Windows 10](https://easysitehello752.weebly.com/blog/how-to-disable-monitor-speakers-windows-10)
 
-```ini file:DisableAeroShake.reg
-Windows Registry Editor Version 5.00
+    1. Right-click on the volume icon on the taskbar and then click Sounds to open the Sound dialog.
+    2. Under the Playback tab, right-click on the speaker and then click Properties.
+    3. Under the General tab, there is a section called Device usage. Select Don’t use this device (disable) option from the drop-down box to disable the speaker.
 
-; Created by: Walter Glenn
-; Tutorial: http://www.howtogeek.com/278996/how-to-disable-aero-shake-in-windows/
+* [Rename your Windows 10 PC](https://support.microsoft.com/en-us/help/4558981/microsoft-account-rename-your-device)
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"DisallowShaking"=dword:00000001
-```
+    1. Select Start  > Settings  > System > About.
+    2. Select Rename this PC.
+    3. Enter a new name and select Next. You may be asked to sign in.
+    4. Select Restart now or Restart later.
+
+* [How to Add or Remove Start Menu Items in Windows 10](https://www.dummies.com/computers/operating-systems/windows-10/how-to-add-or-remove-start-menu-items-in-windows-10/)
+
+   Right-click the item you want to appear on the Start menu; then choose Pin to Start.
+
+
+* How to Disable Aero Shake
+
+    [How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
+
+    ```ini file:DisableAeroShake.reg
+    Windows Registry Editor Version 5.00
+
+    ; Created by: Walter Glenn
+    ; Tutorial: http://www.howtogeek.com/278996/how-to-disable-aero-shake-in-windows/
+
+    [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+    "DisallowShaking"=dword:00000001
+    ```
 
 
 ### Immersive Search
@@ -1073,23 +1090,6 @@ Windows Registry Editor Version 5.00
 "ImmersiveSearchFull"=dword:00000001
 ```
 
-### [How To Disable Monitor Speakers Windows 10](https://easysitehello752.weebly.com/blog/how-to-disable-monitor-speakers-windows-10)
-
-1. Right-click on the volume icon on the taskbar and then click Sounds to open the Sound dialog.
-2. Under the Playback tab, right-click on the speaker and then click Properties.
-3. Under the General tab, there is a section called Device usage. Select Don’t use this device (disable) option from the drop-down box to disable the speaker.
-
-### [Rename your Windows 10 PC](https://support.microsoft.com/en-us/help/4558981/microsoft-account-rename-your-device)
-
-1. Select Start  > Settings  > System > About.
-2. Select Rename this PC.
-3. Enter a new name and select Next. You may be asked to sign in.
-4. Select Restart now or Restart later.
-
-### [How to Add or Remove Start Menu Items in Windows 10](https://www.dummies.com/computers/operating-systems/windows-10/how-to-add-or-remove-start-menu-items-in-windows-10/)
-
-1. Right-click the item you want to appear on the Start menu; then choose Pin to Start.
-
 ### Alt Drag
 
 [Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
@@ -1109,3 +1109,4 @@ Windows Registry Editor Version 5.00
 
 
 -->
+

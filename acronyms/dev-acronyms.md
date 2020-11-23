@@ -31,6 +31,7 @@
 * **CMMI** - Capability Maturity Model Integration
 * **WITs** - Work Item Types
 
+
 ### Testing
 
 * **E2E** - End to End Test
@@ -40,8 +41,13 @@
 
 * **PMP** - Project Management Professional
 * **ACP** - Agile Certified Practitioner
+
+
+### Requirements
+
 * **MoSCoW** - Must-haves, Should-haves, Could-haves, Will not have at this time
 * **INVEST** - Independent, Negotiable, Valuable, Estimable, Sized Appropriately, Testable
+* **GWT** - Given When Then
 
 ### Server Admin
 
@@ -100,6 +106,8 @@
 * **CAD** - Computer-aided design
 * **ORMs** - Object Relational Mapping
 * **DSLs** - Domain Specific Language
+* **CICD** - Continuous Integration / Continuous Deployment
+
 
 ### Debug
 
@@ -162,6 +170,7 @@
 * **JSON** - JavaScript Object Notation
 * **TOML** - Tom's Obvious, Minimal Language.
 * **YAML** - YAML Ain't Markup Language (originally Yet Another Markup Language)
+* **JMESPath** - JSON Matching Expression Paths
 
 ### ASP.NET
 
@@ -185,7 +194,6 @@
 
 * **OSS** - Open Source Software
 * **GPL** - General Public License
-* [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 
 ### Web Dev
 
@@ -242,6 +250,9 @@
 * **OS** - Operating System
 * **WSL** - Windows Subsystem for Linux
 * **GNU** - GNU's Not Unix
+* **NT** - "New Technology"
+* **DOS** - Disk Operating System
+
 
 ### Libraries
 
@@ -252,6 +263,11 @@
 * **PPAs** - Personal Package Archives
 * **SSH** - [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
 * **POSIX** - Portable Operating System Interface for Unix
+* **Bash** - Bourne Again SHell
+* **APT** - Advanced Packaging Tool
+* **GNOME** - GNU Network Object Model Environment
+* **YUM** - Yellowdog Updater, Modified
+
 
 ### Salesforce
 
@@ -293,9 +309,10 @@
 * **SPSS** - [Statistical Package for the Social Sciences](https://en.wikipedia.org/wiki/SPSS)
 
 
-### Gloassary
+### Glossary
 
 * [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
+* [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 
 ## Terms
 

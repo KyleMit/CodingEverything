@@ -5,6 +5,8 @@
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 * [TextMate](https://macromates.com/)
 * [Sublime Text](https://www.sublimetext.com/)
+* Cloud
+  * [Cloud9](https://aws.amazon.com/cloud9/)
 
 ## Docs
 
@@ -136,7 +138,32 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Customize the key for "open to side" in quickopen window](https://github.com/microsoft/vscode/issues/91018)
 * [Add a command for "Open to Side" from quick open](https://github.com/microsoft/vscode/issues/43059)
 
+
+## Articles
+
+[Learn these keyboard shortcuts to become a VS Code ninja](https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/)
+
+
 ## Questions
+
+
+* [Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
+
+* [Configure Window Title](https://code.visualstudio.com/updates/v1_10#_configurable-window-title)
+
+    ```json
+    {
+        "window.title": "${rootName}${separator}${activeEditorShort}${dirty}"
+    }
+    ```
+
+* [Remove trailing spaces automatically or with a shortcut](https://stackoverflow.com/q/30884131/1366033)
+
+    ```json
+    {
+        "files.trimTrailingWhitespace": true
+    }
+    ```
 
 * [Breaking up HTML tags in JSX upon save · Issue #452](https://github.com/prettier/prettier-vscode/issues/452)
 
@@ -264,7 +291,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd>
 
+* [MD Lint - Allow trailing punctuation in Header](https://github.com/DavidAnson/vscode-markdownlint/issues/54)
 
-## Articles
-
-[Learn these keyboard shortcuts to become a VS Code ninja](https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/)
+  ```json
+  "markdownlint.config": {
+      "MD026": {"punctuation": "?"}
+  },
+  ```

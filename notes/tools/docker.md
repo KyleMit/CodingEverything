@@ -199,14 +199,49 @@ INSTRUCTION arguments
   * `Docker: Initialize for Docker debugging`
 * Creates `docker-build` and `docker-run` tasks in `tasks.json`
 
+* `launch.json`
+* `tasks.json`
+* `docker-compose.debug.yml`
+* `dockerfile`
+* `package.json`
+* `index.js`
+
+### Extensions
+
+[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+[Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
 ### Docker Run Tasks
 
 [Code Docker extension properties and tasks](https://code.visualstudio.com/docs/containers/reference#_docker-run-task)
+
+
 
 ### Container > Node
 
 * [Build and run a Node.js app in a container](https://code.visualstudio.com/docs/containers/quickstart-node)
 
+#### Example
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Node Image",
+      "type": "docker-build",
+      "platform": "node"
+    }
+  ]
+}
+```
+
+#### Infers
+
+* `dockerBuild.context` - directory of `package.json`
+* `dockerBuild.dockerfile` - directory of `package.json`
+* `dockerBuild.tag` - name of `package.json` or parent folder name
 
 ## Tips
 
@@ -260,7 +295,20 @@ INSTRUCTION arguments
 
 * [accessing a docker container from another container](https://stackoverflow.com/q/42385977/1366033)
 
-* [Docker Compose wait for container X before starting Y](https://stackoverflow.com/q/31746182/1366033)
 
-  * [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/#depends_on)
-  * [Control startup and shutdown order in Compose](https://docs.docker.com/compose/startup-order/)
+
+* [Docker-Compose: how to wait for other service to be ready?](https://stackoverflow.com/a/64921431/1366033)
+
+  ```yml
+  version: "2"
+  services:
+    web:
+      build: .
+      ports:
+        - "80:8000"
+      depends_on:
+        - "db"
+      command: ["./wait-for-it.sh", "db:5432", "--", "python", "app.py"]
+    db:
+      image: postgres
+  ```

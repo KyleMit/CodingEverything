@@ -5,6 +5,10 @@
 * [Linux](https://www.linux.org/)
 * [Debian](https://www.debian.org/)
 
+## Acronyms
+
+* **GNOME** - GNU Network Object Model Environment - open-source desktop environment
+
 ## Desktop
 
 * [GNOME](https://www.gnome.org/gnome-3/)
@@ -12,7 +16,6 @@
 * [XFCE](https://www.xfce.org/)
 * [KDE](https://kde.org/)
 * [Mate](https://mate-desktop.org/)
-
 
 ## Distros
 
@@ -65,9 +68,52 @@
 * PCmanFM
 * XFE
 
+## Text Editors
+
+* [nano](https://www.nano-editor.org/dist/latest/cheatsheet.html)
+* [Vim](https://devhints.io/vim)
+* [emacs](https://www.gnu.org/software/emacs/)
+
+## POSIX
+
+* [**POSIX**](https://en.wikipedia.org/wiki/POSIX) - Portable Operating System Interface
+
+> a family of standards specified by the IEEE Computer Society for maintaining compatibility between operating systems.
+
+[POSIX-compliant operating system](https://superuser.com/q/322601/180163)
+
+### Errors
+
+[Docs > Error](https://pubs.opengroup.org/onlinepubs/9699919799/functions/V2_chap02.html#tag_15_03)
+
+* `EACCES` - Permission denied. An attempt was made to access a file in a way forbidden by its file access permissions.
+* `EPERM` - Operation not permitted. An attempt was made to perform an operation limited to processes with appropriate privileges or to the owner of a file or other resource.
+
+## Ubuntu
 
 
-### Terminal Keyboard Shortcuts
+### Ubuntu Versions
+
+GNU > Linux > Debian > GNOME > Ubuntu
+
+> using the year and month of the release as a version number
+
+
+* [Ubuntu version history](https://en.wikipedia.org/wiki/Ubuntu_version_history)
+  * **Xenial** Xerus (2016)
+  * **Bionic** Beaver (2018)
+  * **Focal** Fossa(2020)
+  * **Groovy** Gorilla (2020)
+  * **Hirsute** Hippo (2021)
+
+  ![ubuntu version history](/assets/notes/linux/ubuntu-version-history.png)
+
+### Ubuntu Display Manager
+
+
+[gdm3 vs lightdm](https://askubuntu.com/q/1004461/349745)
+
+## Terminal Keyboard Shortcuts
 
 * Ctrl + Shift + N => New terminal window
 * Ctrl + Shift + T => New terminal tab
@@ -102,16 +148,24 @@
 * Tab => To get suggestions
 
 
+## File System Permissions
 
+[File-system permissions - Wikipedia](https://en.wikipedia.org/wiki/File-system_permissions)
 
-## Ubuntu Versions
+| Symbolic notation | Numeric notation |                                      English                                      |
+|:-----------------:|:----------------:|:---------------------------------------------------------------------------------:|
+|    `----------`   |      `0000`      | no permissions                                                                    |
+|    `-rwx------`   |      `0700`      | read, write, & execute only for owner                                             |
+|    `-rwxrwx---`   |      `0770`      | read, write, & execute for owner and group                                        |
+|    `-rwxrwxrwx`   |      `0777`      | read, write, & execute for owner, group and others                                |
+|    `---x--x--x`   |      `0111`      | execute                                                                           |
+|    `--w--w--w-`   |      `0222`      | write                                                                             |
+|    `--wx-wx-wx`   |      `0333`      | write & execute                                                                   |
+|    `-r--r--r--`   |      `0444`      | read                                                                              |
+|    `-r-xr-xr-x`   |      `0555`      | read & execute                                                                    |
+|    `-rw-rw-rw-`   |      `0666`      | read & write                                                                      |
+|    `-rwxr-----`   |      `0740`      | owner can read, write, & execute; group can only read; others have no permissions |
 
-GNU > Linux > Debian > GNOME > Ubuntu
-
-[Ubuntu version history](https://en.wikipedia.org/wiki/Ubuntu_version_history)
-
-> using the year and month of the release as a version number
-> **GNOME** (GNU Network Object Model Environment) open-source desktop environment
 
 
 ## Command Line
@@ -128,46 +182,85 @@ GNU > Linux > Debian > GNOME > Ubuntu
 
 
 
-## Add / Remove Software
 
-[App Packages .deb vs .rpm](https://unix.stackexchange.com/q/103531/128893)
+## Package Managers
 
-> Files such as `.deb` and `.rpm` are more akin to a `.zip` file.
-> They're a directory tree of files and sub-directories that contain files related to a particular application and/or library of files.
-> The `.deb` files are meant for distributions of Linux that derive from Debian
-> The `.rpm` files are used primarily by distributions that derive from Redhat
+* APT - Advanced Packaging Tool
+* DPKG – Debian Package Management System
+* Aptitude Package Manager
+* Synaptic Package Manager
+* RPM (Red Hat Package Manager)
+* YUM - Yellowdog Updater, Modified
 
-[How to install a deb file, by dpkg -i or by apt?](https://unix.stackexchange.com/q/159094/128893)
+## Apt Package Manager
 
-```bash
-# using dpkg
-sudo dpkg -i /path/to/deb/file
-sudo apt-get install -f
+[`apt` overview](http://manpages.ubuntu.com/manpages/trusty/en/man8/apt.8.html#description)
 
-# using apt
-sudo apt install ./name.deb
-```
+* [App Packages .deb vs .rpm](https://unix.stackexchange.com/q/103531/128893)
 
-[How can I uninstall software?](https://askubuntu.com/q/1143/349745)
+  > Files such as `.deb` and `.rpm` are more akin to a `.zip` file.
+  > They're a directory tree of files and sub-directories that contain files related to a particular application and/or library of files.
+  > The `.deb` files are meant for distributions of Linux that derive from Debian
+  > The `.rpm` files are used primarily by distributions that derive from Redhat
 
-```bash
-sudo apt-get remove <application_name>
-```
+* [How to install a deb file, by dpkg -i or by apt?](https://unix.stackexchange.com/q/159094/128893)
 
-[How to list all installed packages](https://askubuntu.com/q/17823/349745)
-[How to List Installed Packages on Debian](https://linuxize.com/post/how-to-list-installed-packages-on-debian/)
+  ```bash
+  # using dpkg
+  sudo dpkg -i /path/to/deb/file
+  sudo apt-get install -f
 
-```bash
-sudo apt list --installed
-sudo apt list --installed | grep pkg-name
-sudo dpkg-query -l | less
-```
+  # using apt
+  sudo apt install ./name.deb
+  ```
 
-[How to find the name of an app from Ubuntu Software](https://askubuntu.com/a/1251727/349745)
+* [How can I uninstall software?](https://askubuntu.com/q/1143/349745)
 
-```bash
-apt search package-name
-```
+  ```bash
+  sudo apt-get remove <application_name>
+  ```
+
+* [How to list all installed packages](https://askubuntu.com/q/17823/349745)
+
+  [How to List Installed Packages on Debian](https://linuxize.com/post/how-to-list-installed-packages-on-debian/)
+
+  ```bash
+  sudo apt list --installed
+  sudo apt list --installed | grep pkg-name
+  sudo dpkg-query -l | less
+  ```
+
+* [How to find the name of an app from Ubuntu Software](https://askubuntu.com/a/1251727/349745)
+
+  ```bash
+  apt search package-name
+  ```
+
+* [How can I get a list of all repositories](https://askubuntu.com/q/148932/349745)
+
+  ```bash
+  grep -r --include '*.list' '^deb ' /etc/apt/sources.list /etc/apt/sources.list.d/
+  ```
+
+
+### Packages
+
+[Ubuntu – Ubuntu Packages Search](https://packages.ubuntu.com/)
+
+
+* [`tasksel`](https://packages.ubuntu.com/groovy/tasksel)
+* [`xubuntu-desktop`](https://packages.ubuntu.com/groovy/xubuntu-desktop)
+* [`gtk2-engines`](https://packages.ubuntu.com/groovy/gtk2-engines)
+* [`net-tools`](https://packages.ubuntu.com/groovy/net-tools)
+* [`xrdp`](https://packages.ubuntu.com/groovy/xrdp)
+* [`build-essential`](https://packages.ubuntu.com/groovy/build-essential)
+* [`xfce4-goodies`](https://packages.ubuntu.com/groovy/xfce4-goodies)
+
+### YUM Package Manager
+
+* [How to Use YUM Command in Linux](https://linoxide.com/linux-command/package-management-yum-redhat-linux/)
+* [yum(8) - Linux manual page](https://man7.org/linux/man-pages/man8/yum.8.html)
+* [yum (software) - Wikipedia](https://en.wikipedia.org/wiki/Yum_(software))
 
 ## Desktop Overview
 
@@ -275,3 +368,21 @@ sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
 sudo apt-get update
 sudo apt-get install pinta
 ```
+
+
+
+
+## Questions
+
+* [What is the difference between apt and apt-get?](https://askubuntu.com/q/445384/349745)
+
+   `apt` is the most common used command options from `apt-get`, `apt-cache` and `apt-config`
+
+
+* ["Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend](https://stackoverflow.com/a/64909820/1366033)
+
+  ```bash
+  sudo kill -9 5383
+  ```
+
+

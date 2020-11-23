@@ -1,20 +1,6 @@
 # Eleventy
 
-* [Override Browsersync Server Options](https://www.11ty.dev/docs/watch-serve/#override-browsersync-server-options)
-  * [Browsersync Docs > Options](https://browsersync.io/docs/options)
-  * [`EleventyServe.js`](https://github.com/11ty/eleventy/blob/master/src/EleventyServe.js)
 
-    ```js
-    {
-        server: serverConfig,
-        port: port || 8080,
-        ignore: ["node_modules"],
-        watch: false,
-        open: false,
-        notify: false,
-        index: "index.html"
-    }
-    ```
 
 
 ## Inline Favicon
@@ -47,5 +33,28 @@
 * [juanfernandes/**eleventy-plugin-cloudinary**](https://github.com/juanfernandes/eleventy-plugin-cloudinary) | [npm](https://www.npmjs.com/package/eleventy-plugin-cloudinary)
 
 
+## Questions
 
+* [Include TypeScript types for configuration files #1459](https://github.com/11ty/eleventy/issues/1459)
+
+  ```js
+  /** @type {import('@11ty/eleventy').LocalConfig} */
+  const config = (eleventyConfig) => {
+  ```
+
+* [Override Browsersync Server Options](https://www.11ty.dev/docs/watch-serve/#override-browsersync-server-options)
+  * [Browsersync Docs > Options](https://browsersync.io/docs/options)
+  * [`EleventyServe.js`](https://github.com/11ty/eleventy/blob/master/src/EleventyServe.js)
+
+    ```js
+    {
+        server: serverConfig,
+        port: port || 8080,
+        ignore: ["node_modules"],
+        watch: false,
+        open: false,
+        notify: false,
+        index: "index.html"
+    }
+    ```
 

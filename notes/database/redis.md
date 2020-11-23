@@ -64,3 +64,16 @@ https://aws.amazon.com/elasticache/pricing/
     ```bash
     redis-cli -h 10.144.62.3 -p 30000
     ```
+
+* [Redis Connection Check](https://stackoverflow.com/a/64934377/1366033)
+
+  ```js
+  var client = require('redis').createClient();
+
+  client.on('ready', () => {
+      let response = client.ping()
+      console.log(response)
+      // do other stuff
+  });
+  ```
+

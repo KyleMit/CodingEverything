@@ -93,3 +93,6 @@ aws cloudformation validate-template --template-body file://$TEMPLATE_PATH
     "!Sub"
   ]
   ```
+
+* [aws cloudformation stack is in ROLLBACK_COMPLETE state and can not be updated](https://stackoverflow.com/q/57932734/1366033)
+

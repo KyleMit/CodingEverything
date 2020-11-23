@@ -3,11 +3,16 @@
 
 ## Docs
 
-[Unpublishing packages from the registry](https://docs.npmjs.com/unpublishing-packages-from-the-registry)
+* [Unpublishing packages from the registry](https://docs.npmjs.com/unpublishing-packages-from-the-registry)
 
-```bash
-npm unpublish <package-name> -f
-```
+    ```bash
+    npm unpublish <package-name> -f
+    ```
+
+* [shrinkwrap.json](https://docs.npmjs.com/cli/v6/configuring-npm/shrinkwrap-json)
+* [package-lock.json](https://docs.npmjs.com/cli/v6/configuring-npm/package-lock-json)
+
+
 
 ## Commands
 
@@ -54,3 +59,6 @@ Available in Node 8.2 / npm 5.2.0
 `npx` runs the local package binary in `./node_modules/.bin/<command>`
 
 
+## Questions
+
+* [What is the difference between npm-shrinkwrap.json and package-lock.json?](https://stackoverflow.com/a/46132512/1366033)

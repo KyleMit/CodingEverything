@@ -64,3 +64,9 @@
   ie4uinit.exe -show
   ```
 
+* [Prevent screen dim when you take a screenshot using Win+PrintScreen](https://winaero.com/fix-the-screen-does-not-dim-when-you-take-a-screenshot-using-winprintscreen-in-windows-8-1-or-windows-8/)
+
+  1. <kbd>Win</kbd> + <kbd>R</kbd>
+  2. Type `SystemPropertiesAdvanced`
+  3. Advanced > Visual Effects
+  4. Disable `Animate windows when minimizing and maximizing`
