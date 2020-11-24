@@ -7,6 +7,9 @@
 * [Working with AWS Lambda functions in the AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/lambda-functions.html)
 * [Working with Shared Environments in AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/share-environment.html)
 * [VPC settings for AWS Cloud9 Development Environments - AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/vpc-settings.html)
+* [EC2 On-Demand Instance Pricing](https://aws.amazon.com/ec2/pricing/on-demand/)
+
+
 
 ## Environment Settings
 
@@ -23,6 +26,10 @@
   * Amazon Linux 2
   * Ubuntu Server 18.04 LTS
 
+## Code Commit
+
+[Integrate AWS Cloud9 with AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ide-c9.html)
+
 ## Questions
 
 
@@ -38,4 +45,10 @@
   * Spin down EC2 instance in AWS Console or C9 console by typing `sudo poweroff`
 
 
+* [AWS Cloud9 - Cannot open environment](https://stackoverflow.com/a/52111070/1366033)
 
+  **Error Messages**:
+  > Unable to access your environment The environment creation failed with the error: Cloud9 could not connect to the EC2 instance. Please check your VPC configuration and network settings.
+  > This is taking longer than expected. The delay may be caused by high CPU usage in your environment, or your T2 or T3 instance is running out of burstable CPU capacity credits, or there are VPC configuration issues
+
+  Use larger instance like `t5.medium`

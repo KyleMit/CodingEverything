@@ -26,7 +26,22 @@
 * [Create an HTTPS listener for your Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)
 * [Associate an ACM/SSL certificate with a load balancer](https://aws.amazon.com/premiumsupport/knowledge-center/associate-acm-certificate-alb-nlb/)
 
+### Amazon Machine Image
 
+* [Amazon Linux - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-linux-ami-basics.html)
+  * [AMI Package Repository](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-linux-ami-basics.html#package-repository)
+    * Amazon Linux uses RPMs and yum
+
+
+## Package Manager
+
+* [Adding repositories on an Amazon Linux instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/add-repositories.html)
+* [Finding software packages on an Amazon Linux instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/find-software.html)
+
+```bash
+yum repolist all
+yum search "find"
+```
 
 ### Listener
 

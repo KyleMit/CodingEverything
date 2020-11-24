@@ -150,7 +150,7 @@ GNU > Linux > Debian > GNOME > Ubuntu
 
 ## File System Permissions
 
-[File-system permissions - Wikipedia](https://en.wikipedia.org/wiki/File-system_permissions)
+[File-system permissions](https://en.wikipedia.org/wiki/File-system_permissions)
 
 | Symbolic notation | Numeric notation |                                      English                                      |
 |:-----------------:|:----------------:|:---------------------------------------------------------------------------------:|
@@ -167,19 +167,49 @@ GNU > Linux > Debian > GNOME > Ubuntu
 |    `-rwxr-----`   |      `0740`      | owner can read, write, & execute; group can only read; others have no permissions |
 
 
+* [chmod Man Page with examples and calculator](https://ss64.com/bash/chmod.html)
+* [How-To: Set permissions in bash](https://ss64.com/bash/syntax-permissions.html)
+* [Node > File system > File Modes](https://nodejs.org/api/fs.html#fs_file_modes)
 
 ## Command Line
 
-[The Linux command line for beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
-[Beginner Geek: How to Start Using the Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
+* [The Linux command line for beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
+* [Beginner Geek: How to Start Using the Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
 
 ## File Manager
 
-[How to show hidden folders in File Manager](https://askubuntu.com/q/470837/349745)
-[How to open Nautilus (File Manager) preferences?](https://askubuntu.com/q/861333/349745)
-[Ubuntu 14.04 Nautilus has no menu - File, Edit etc. don't exist](https://askubuntu.com/q/458281/349745)
-[Show Menubar in File Manager - XUbuntu](https://askubuntu.com/q/1010580/349745)
+* [How to show hidden folders in File Manager](https://askubuntu.com/q/470837/349745)
+* [How to open Nautilus (File Manager) preferences?](https://askubuntu.com/q/861333/349745)
+* [Ubuntu 14.04 Nautilus has no menu - File, Edit etc. don't exist](https://askubuntu.com/q/458281/349745)
+* [Show Menubar in File Manager - XUbuntu](https://askubuntu.com/q/1010580/349745)
 
+
+## Manpages
+
+* **Man** - Manual
+
+
+```bash
+# see overview
+man man
+# open docs
+man 1 find
+man find
+```
+
+### Directories
+
+* [What does the number in parentheses shown after Unix command names in manpages mean?](https://stackoverflow.com/q/62936/1366033)
+* [What do the numbers in a man page mean?](https://unix.stackexchange.com/q/3586/128893)
+
+1. User Commands
+2. System Calls
+3. C Library Functions
+4. Devices and Special Files
+5. File Formats and Conventions
+6. Games et. al.
+7. Miscellanea
+8. System Administration tools and Daemons
 
 
 
@@ -202,6 +232,11 @@ GNU > Linux > Debian > GNOME > Ubuntu
   > They're a directory tree of files and sub-directories that contain files related to a particular application and/or library of files.
   > The `.deb` files are meant for distributions of Linux that derive from Debian
   > The `.rpm` files are used primarily by distributions that derive from Redhat
+
+* apt-get vs. yum
+
+  * `apt-get` - Debian / Ubuntu
+  * `rpm/yum` - red hat / amazon linux
 
 * [How to install a deb file, by dpkg -i or by apt?](https://unix.stackexchange.com/q/159094/128893)
 
@@ -385,4 +420,32 @@ sudo apt-get install pinta
   sudo kill -9 5383
   ```
 
+
+* [How can I tell what version of Linux I'm using?](https://unix.stackexchange.com/q/23833/128893)
+
+  ```bash
+  cat /etc/*release*
+  lsb_release -a
+  uname -a
+  ```
+
+* [How do I install a different Python version using apt-get?](https://askubuntu.com/q/682869/349745)
+
+  ```bash
+  sudo add-apt-repository ppa:deadsnakes/ppa
+  sudo apt-get update
+  sudo apt-get install python3.8
+  ```
+
+  Add alias
+
+  ```bash
+  alias python="python3.8"
+  ```
+
+  [Add PIP](https://www.tecmint.com/install-pip-in-linux/)
+
+  ```nash
+  sudo apt install python3-pip
+  ```
 

@@ -56,6 +56,7 @@
 * **VPN** - Virtual Private Network
 * **RAID** - Redundant Array of Independent Disk
 * **NAS** - Network Attached Storage
+* **NFS** - Network File System
 * **IaC** - Infrastructure as Code
 
 ## File Types
@@ -101,7 +102,6 @@
 * **IIFE** - Immediately Invoked Function Expression
 * **IoC** - Inversion of Control
 * **DI** - Dependency Injection
-* **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
 * **RoR** - Ruby On Rails
 * **CAD** - Computer-aided design
 * **ORMs** - Object Relational Mapping
@@ -262,12 +262,16 @@
 
 * **PPAs** - Personal Package Archives
 * **SSH** - [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
-* **POSIX** - Portable Operating System Interface for Unix
 * **Bash** - Bourne Again SHell
 * **APT** - Advanced Packaging Tool
 * **GNOME** - GNU Network Object Model Environment
 * **YUM** - Yellowdog Updater, Modified
 
+### POSIX
+
+* **POSIX** - Portable Operating System Interface for Unix
+* **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
+* **EROFS** - Error - Read Only File System
 
 ### Salesforce
 
@@ -296,6 +300,10 @@
 * **NLB** - Network Load Balancer
 * **CLB** - Classic Load Balancer
 * **ENI** - Elastic Network Interface
+* **FSP** - File System Access Point
+* **SG** - Security Group
+
+
 
 ### Azure
 
