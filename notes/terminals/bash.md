@@ -2,6 +2,15 @@
 
 * Bash - Bourne Again SHell
 
+## Commands
+
+### Xargs
+
+[**`xargs`**](https://en.wikipedia.org/wiki/Xargs)
+
+Some commands such as `grep` and `awk` can take input either as command-line arguments or from the standard input.
+However, others such as `cp` and `echo` can only take input as arguments, which is why `xargs` is necessary.
+
 ## Questions
 
 * [Create .zip folder from the command line](https://superuser.com/q/201371/180163)
@@ -41,3 +50,22 @@
     rm /some/dir/*.xvg
     ```
 
+* [Execute command on all files in a directory](https://stackoverflow.com/q/10523415/1366033)
+
+    ```bash
+    # one liner
+    for i in src/*; do echo "$i"; done
+
+    # formatted
+    for file in src/*
+    do
+        echo $file
+    done
+
+    #xargs
+    find . | xargs echo
+    ```
+
+* [`ls` vs `find` vs glob](https://stackoverflow.com/q/13830036/1366033)
+
+  find is recursive by default; ls isn't.  use glob for everything else

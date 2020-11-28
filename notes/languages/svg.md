@@ -30,3 +30,19 @@
   <rect fill="url(#pattern)" height="100%" width="100%"/>
 </svg>
 ```
+
+## Questions
+
+* [Default background color of SVG root element](https://stackoverflow.com/a/11293812/1366033)
+
+  ```html
+  <rect width="100%" height="100%" fill="red"/>
+  ```
+
+[How to place and center text in an SVG rectangle](https://stackoverflow.com/q/5546346/1366033)
+
+  ```html
+  <svg width="200" height="100">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">TEXT</text>
+  </svg>
+  ```

@@ -267,6 +267,10 @@
 * **GNOME** - GNU Network Object Model Environment
 * **YUM** - Yellowdog Updater, Modified
 
+### Commands
+
+* **xargs** - eXtended ARGuments
+
 ### POSIX
 
 * **POSIX** - Portable Operating System Interface for Unix
@@ -321,6 +325,7 @@
 
 * [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
 * [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
+* [**glob**](https://en.wikipedia.org/wiki/Glob_(programming)) - patterns specify sets of filenames with wildcard characters (short for "global")
 
 ## Terms
 

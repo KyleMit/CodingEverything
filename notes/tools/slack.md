@@ -3,8 +3,9 @@
 ## Docs
 
 
-* [Manage app installation settings for your workspace | Slack](https://app.slack.com/help/articles/222386767-Manage-app-installation-settings-for-your-workspace)
-
+* [Manage app installation settings for your workspace](https://app.slack.com/help/articles/222386767-Manage-app-installation-settings-for-your-workspace)
+* [Create a snippet](https://slack.com/help/articles/204145658-Create-a-snippet)
+* [Format your messages](https://slack.com/help/articles/202288908-Format-your-messages)
 
 ## Slack Apps
 

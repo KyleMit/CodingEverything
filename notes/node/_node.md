@@ -377,6 +377,20 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ## Questions
 
 * [Require at top of file of in function?](https://stackoverflow.com/a/9139419/1366033)
+
+
 * [Cannot use import statement outside a module](https://stackoverflow.com/a/64655153/1366033)
 
   Add `"type": "module"` to your `package.json`
+
+
+
+* [How to convert a SVG to a PNG?](https://stackoverflow.com/q/9853325/1366033)
+
+   [shakiba/**svgexport**](https://github.com/shakiba/svgexport) - SVG to PNG/JPEG command-line tool and Node.js module
+
+
+    ```bash
+    npm install svgexport -g
+    svgexport input.svg output.png 1.5x
+    ```

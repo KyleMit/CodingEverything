@@ -983,7 +983,8 @@ dotnet tool install --global dotnet-script
 
 ## Edge
 
-[How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
+* [How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
+* [Share URL Format](https://techcommunity.microsoft.com/t5/articles/announcing-a-new-way-to-paste-urls-link-format/m-p/1600094)
 
 #### Shortcut Example
 
