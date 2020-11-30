@@ -171,6 +171,13 @@ GNU > Linux > Debian > GNOME > Ubuntu
 * [How-To: Set permissions in bash](https://ss64.com/bash/syntax-permissions.html)
 * [Node > File system > File Modes](https://nodejs.org/api/fs.html#fs_file_modes)
 
+* [How to recursively chmod a folder?](https://superuser.com/q/1325221/180163)
+
+  ```none
+  -R, --recursive
+  change files and directories recursively
+  ```
+
 ## Command Line
 
 * [The Linux command line for beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)

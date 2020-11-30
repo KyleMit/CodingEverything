@@ -4,6 +4,38 @@
 
 * **IaC** - Infrastructure as Code
 
+## Anatomy
+
+[Template anatomy - AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
+
+```yml
+AWSTemplateFormatVersion: "version date"
+
+Description:
+  String
+
+Metadata:
+  template metadata
+
+Parameters:
+  set of parameters
+
+Mappings:
+  set of mappings
+
+Conditions:
+  set of conditions
+
+Transform:
+  set of transforms
+
+Resources:
+  set of resources
+
+Outputs:
+  set of outputs
+```
+
 ## Stacks
 
 [Working with stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html)
@@ -36,6 +68,12 @@ aws cloudformation validate-template --template-body file://$TEMPLATE_PATH
 ## Docs
 
 ## Resource Type Reference
+
+> Resource type identifiers always take the following form:
+>
+> ```none
+> service-provider::service-name::data-type-name
+> ```
 
 * [AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)
 

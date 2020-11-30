@@ -60,7 +60,11 @@ $ aws dynamodb create-table \
    --endpoint-url http://localhost:8000
 ```
 
+## PartiQL
 
+* [You now can use a SQL-compatible query language to query, insert, update, and delete table data in Amazon DynamoDB](https://aws.amazon.com/about-aws/whats-new/2020/11/you-now-can-use-a-sql-compatible-query-language-to-query-insert-update-and-delete-table-data-in-amazon-dynamodb/)
+* [Announcing PartiQL: One query language for all your data | AWS Open Source Blog](https://aws.amazon.com/blogs/opensource/announcing-partiql-one-query-language-for-all-your-data/)
+* [PartiQL - A SQL-Compatible Query Language for Amazon DynamoDB - Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.html)
 
 ## GUI
 

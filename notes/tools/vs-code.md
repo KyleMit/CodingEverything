@@ -298,3 +298,9 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
       "MD026": {"punctuation": "?"}
   },
   ```
+
+* [Ignore whitespace in Visual Studio Code git diff view](https://stackoverflow.com/a/42038876/1366033)
+
+  ```json
+  "diffEditor.ignoreTrimWhitespace": true,
+  ```

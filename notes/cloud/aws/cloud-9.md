@@ -52,3 +52,8 @@
   > This is taking longer than expected. The delay may be caused by high CPU usage in your environment, or your T2 or T3 instance is running out of burstable CPU capacity credits, or there are VPC configuration issues
 
   Use larger instance like `t5.medium`
+
+* [Lambda Run unavailable when using sam globals](https://github.com/awsdocs/aws-cloud9-user-guide/issues/26)
+
+  Move function properties from `globals` to `resource`
+

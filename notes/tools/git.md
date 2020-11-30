@@ -73,3 +73,9 @@
   git config --global push.default current
   git push -u
   ```
+
+* [What is `git clone --depth 1`?](https://linuxhint.com/git-shallow-clone-and-clone-depth)
+
+  Shallow clone with [`--depth`](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt) argument
+
+

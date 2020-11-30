@@ -69,3 +69,18 @@ However, others such as `cp` and `echo` can only take input as arguments, which 
 * [`ls` vs `find` vs glob](https://stackoverflow.com/q/13830036/1366033)
 
   find is recursive by default; ls isn't.  use glob for everything else
+
+* [How can I assign the output of a command to a shell variable?](https://unix.stackexchange.com/q/16024/128893)
+
+    ```bash
+    result=$(echo 'hello')
+    echo $result
+    ```
+
+* [recursive mkdir](https://unix.stackexchange.com/questions/49263/recursive-mkdir)
+
+    ```bash
+    mkdir -p foo/bar/zoo/andsoforth
+    ```
+
+    Parameter `p` stands for `parents`

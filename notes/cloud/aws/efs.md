@@ -13,6 +13,9 @@
   * [Get Started with EFS File System Access for AWS Lambda](https://epsagon.com/development/get-started-with-efs-file-system-access-for-aws-lambda/)
 * Utilities
   * [app-module-path](https://www.npmjs.com/package/app-module-path)
+* Questions
+  * [[aws-lambda] [aws-elasticfilesystem]](https://stackoverflow.com/questions/tagged/aws-lambda+aws-elasticfilesystem)
+  * [Highest Voted 'aws-elasticfilesystem+or+amazon-efs+aws-lambda' Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/aws-elasticfilesystem%2bor%2bamazon-efs%2baws-lambda?tab=Votes)
 
 ## Mounting
 
@@ -35,7 +38,7 @@
 aws cloudformation create-stack --stack-name create-efs --template-body file://./create-efs-cfn.yml
 # show vpcs
 aws ec2 describe-vpcs
-aws ec2 describe-vpcs --query "Vpcs[?IsDefault==\`false\`].VpcId"
+aws ec2 describe-vpcs --query "Vpcs[?IsDefault==\`true\`].VpcId"
 # get subnets
 aws ec2 describe-subnets --filter "Name=vpc-id,Values=vpc-1f38a465"  --output text
 # get subnet query
@@ -93,6 +96,60 @@ Resources:
 ```
 
 
+### EFS + VPC Settings in Cloud Formation
+
+```yml
+Parameters:
+  EFSpath:
+    Type: String
+    Default: /mnt/efs
+  SecurityGroupIds:
+    Type: CommaDelimitedList
+    Default: sg-fa7133bc
+  SubnetIDs:
+    Type: CommaDelimitedList
+    Description: The list of SubnetIDs in your Virtual Private Cloud (VPC)
+    Default: subnet-80c98eae,subnet-04878f4e,subnet-e19ce486,subnet-bfc9fbb0,subnet-0bc28757,subnet-96c847a8
+  AccessPointARN:
+    Type: String
+    Description: Access point ARN
+
+Resources:
+  MyFunctionName:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: unzipFiles/
+      Handler: app.handler
+      Environment:
+        Variables:
+          EFS_PATH: !Ref EFSpath
+      VpcConfig:
+        SecurityGroupIds: !Ref SecurityGroupIds
+        SubnetIds: !Ref SubnetIDs
+      FileSystemConfigs:
+      - Arn: !Ref AccessPointARN
+        LocalMountPath: !Ref EFSpath
+      Policies:
+      - Statement:
+        - Sid: AWSLambdaVPCAccessExecutionRole
+          Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+            - ec2:CreateNetworkInterface
+            - ec2:DescribeNetworkInterfaces
+            - ec2:DeleteNetworkInterface
+          Resource: "*"
+        - Sid: AmazonElasticFileSystemClientFullAccess
+          Effect: Allow
+          Action:
+            - elasticfilesystem:ClientMount
+            - elasticfilesystem:ClientRootAccess
+            - elasticfilesystem:ClientWrite
+            - elasticfilesystem:DescribeMountTargets
+          Resource: "*"
+```
 
 ### Questions
 

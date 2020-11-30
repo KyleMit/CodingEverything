@@ -30,3 +30,9 @@
 
 
 
+## Templates / Generators
+
+
+* [cookiecutter](https://github.com/cookiecutter/cookiecutter)
+* [yeoman](https://github.com/yeoman/yeoman)
+* [plop](https://github.com/plopjs/plop)

@@ -967,6 +967,9 @@ dotnet tool install --global dotnet-script
 * [session buddy](https://sessionbuddy.com/)
 * [Infinity New Tab](https://chrome.google.com/webstore/detail/infinity-new-tab-producti/dbfmnekepjoapopniengjbcpnbljalfg)
 
+* [Themes](https://chrome.google.com/webstore/category/themes)
+  * [Slate](https://chrome.google.com/webstore/detail/slate/cmhmcmgkegfffbbfobhjpdbimgmoohap?hl=en)
+
 
 ### Chrome Apps
 
@@ -981,10 +984,17 @@ dotnet tool install --global dotnet-script
 
 <%AppData%\Microsoft\Windows\Start Menu\Programs\Chrome Apps>
 
+* [How to disable Chrome extensions without disabling them across multiple synced devices](https://superuser.com/q/528014/180163)
+
 ## Edge
 
 * [How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
 * [Share URL Format](https://techcommunity.microsoft.com/t5/articles/announcing-a-new-way-to-paste-urls-link-format/m-p/1600094)
+
+
+## Firefox
+
+* [Ace Code Editor](https://ace.c9.io/) only copies first two lines in FF
 
 #### Shortcut Example
 
