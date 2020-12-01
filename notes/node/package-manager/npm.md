@@ -62,3 +62,7 @@ Available in Node 8.2 / npm 5.2.0
 ## Questions
 
 * [What is the difference between npm-shrinkwrap.json and package-lock.json?](https://stackoverflow.com/a/46132512/1366033)
+
+
+* [How to install an npm package from GitHub directly?](https://stackoverflow.com/q/17509669/1366033)
+

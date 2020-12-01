@@ -89,6 +89,13 @@
 * `EACCES` - Permission denied. An attempt was made to access a file in a way forbidden by its file access permissions.
 * `EPERM` - Operation not permitted. An attempt was made to perform an operation limited to processes with appropriate privileges or to the owner of a file or other resource.
 
+## Linux Filesystem Hierarchy
+
+* [Linux Filesystem Hierarchy](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/)
+* [Filesystem Hierarchy Standard](https://www.linuxbase.org/betaspecs/fhs/fhs/index.html)
+* [Filesystem | static linux](https://sta.li/filesystem/)
+
+
 ## Ubuntu
 
 

@@ -1178,11 +1178,19 @@ a ||= b
   * [How can I make Object.fromEntries and Object.entries compile?](https://www.reddit.com/r/typescript/comments/e8abzr/)
 
 
-[Convert from unknown to Number](https://stackoverflow.com/q/53813188/1366033)
+* [Convert from unknown to Number](https://stackoverflow.com/q/53813188/1366033)
 
-> Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other.
+  > Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other.
 
-```ts
-let port = process.env.REDIS_PORT as unknown as number
-```
+  ```ts
+  let port = process.env.REDIS_PORT as unknown as number
+  ```
 
+* [Create an enum with string values](https://stackoverflow.com/q/15490560/1366033)
+
+  ```ts
+  enum E {
+      hello = "hello",
+      world = "world"
+  };
+  ```
