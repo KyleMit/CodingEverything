@@ -293,3 +293,19 @@ return (
   ```js
   import React from 'react';
   ```
+
+* [Use React hook to implement a self-increment counter](https://stackoverflow.com/q/53395147/1366033)
+
+  ```js
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter(counter => counter + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  ```

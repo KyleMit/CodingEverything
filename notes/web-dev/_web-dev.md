@@ -152,3 +152,11 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
 * [Use WebP images along with other fallback sources and placeholder](https://medium.com/@tirthbodawala/use-webp-n-4cf7bda8348c)
 
 
+## Questions
+
+
+* [What is the difference between screenX/Y, clientX/Y and pageX/Y?](https://stackoverflow.com/q/6073505/1366033)
+
+* [Difference between layerX and offsetX in JavaScript](https://stackoverflow.com/q/23217333/1366033)
+
+* [How to find Event Listeners on a DOM Node when Debugging](https://www.stanleyulili.com/javascript/how-to-find-event-listeners-on-a-dom-node-when-debugging/)

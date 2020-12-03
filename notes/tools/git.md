@@ -78,4 +78,9 @@
 
   Shallow clone with [`--depth`](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt) argument
 
+* [How to list branches that contain a given commit?](https://stackoverflow.com/q/1419623/1366033)
+
+  ```bash
+  git branch --contains <commit>
+  ```
 

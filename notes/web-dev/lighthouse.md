@@ -345,3 +345,6 @@ https://gist.github.com/KyleMit/1e4b949b32a4e35ddc8a9b570d8e4b2c
 * [Expose TypeScript typings](https://github.com/GoogleChrome/lighthouse/issues/1773)
 
 
+* [ContextResult::kTransientFailure: Failed to send GpuChannelMsg_CreateCommandBuffer](https://stackoverflow.com/q/55992970/1366033)
+
+  Run with `--disable-gpu`
