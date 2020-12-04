@@ -12,10 +12,6 @@
 
 * [PolymerLabs/uni-virtualizer](https://github.com/PolymerLabs/uni-virtualizer) - Monorepo for a "universal" (renderer-agnostic) virtual scroller and renderer-specific variants
 
-## Web Components
-
-[Web Components | MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
-
 ## Questions
 
 [What is the difference between lit-element & lit-html?](https://stackoverflow.com/q/62413101/1366033)

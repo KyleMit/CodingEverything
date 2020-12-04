@@ -18,6 +18,10 @@
 * 3D - [vasturiano/**3d-force-graph**](https://github.com/vasturiano/3d-force-graph)
 * 2D - [vasturiano/**force-graph**](https://github.com/vasturiano/force-graph)
 
+## Methods
+
+[`getScreenCoords`](https://github.com/vasturiano/three-render-objects/blob/v1.24.6/src/three-render-objects.js#L230-L237)
+
 ## Questions
 
 * [Move all graph canvas as a whole instead of rotating 3d](https://github.com/vasturiano/3d-force-graph/issues/359#issuecomment-674741402)

@@ -9,8 +9,14 @@
 
 ## Rules
 
+### JavaScript
 
-[no-var-requires.md](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
+[require-await](https://eslint.org/docs/rules/require-await)
+
+
+### TypeScript
+
+[no-var-requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
 
 
 ## Questions
