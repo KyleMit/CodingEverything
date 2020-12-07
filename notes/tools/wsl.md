@@ -1,5 +1,14 @@
 # Windows Subsystem for Linux
 
+
+## Alternatives
+
+* [Cygwin](http://www.cygwin.com/)
+  * a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
+  * a DLL (cygwin1.dll) which provides substantial POSIX API functionality.
+
+## Installing
+
 [How to Install and Use the Linux Bash Shell on Windows 10](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
 [Updating the WSL 2 Linux kernel | Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)

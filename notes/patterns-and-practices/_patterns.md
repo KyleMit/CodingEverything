@@ -36,3 +36,11 @@
 * [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 * [yeoman](https://github.com/yeoman/yeoman)
 * [plop](https://github.com/plopjs/plop)
+
+
+## Big Ball of Mud / Spaghetti Code
+
+* [Big Ball of Mud](http://www.laputan.org/mud/)
+* [Big ball of mud - Wikipedia](https://en.wikipedia.org/wiki/Big_ball_of_mud)
+* [The Big Ball of Mud and Other Architectural Disasters](https://blog.codinghorror.com/the-big-ball-of-mud-and-other-architectural-disasters/)
+

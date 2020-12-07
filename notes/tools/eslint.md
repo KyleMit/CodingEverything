@@ -6,6 +6,11 @@
 [eslint | Github](https://github.com/eslint/eslint)
 [typescript-eslint | Github](https://github.com/typescript-eslint/typescript-eslint)
 
+## Config
+
+* [SchemaStore fro eslintrc](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json)
+* [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
+
 
 ## Rules
 

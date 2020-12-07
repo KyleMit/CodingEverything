@@ -266,6 +266,7 @@
 * **APT** - Advanced Packaging Tool
 * **GNOME** - GNU Network Object Model Environment
 * **YUM** - Yellowdog Updater, Modified
+* **ANSI** - American National Standards Institute
 
 ### Commands
 
@@ -326,6 +327,7 @@
 * [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
 * [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 * [**glob**](https://en.wikipedia.org/wiki/Glob_(programming)) - patterns specify sets of filenames with wildcard characters (short for "global")
+* [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
 
 ## Terms
 
