@@ -1,7 +1,7 @@
+
+[TypeScript Lang](https://www.typescriptlang.org/)
+
 # TypeScript
-
-[TypeScriptLang.org](https://www.typescriptlang.org/)
-
 
 ## Alternatives
 
@@ -144,14 +144,14 @@ function getLength(obj: string | string[]) {
 
 ### Typeof
 
-| type | predicate |
-|---------|---------|
-| string | typeof s === "string" |
-| number | typeof n === "number" |
-| boolean | typeof b === "boolean" |
+| type      | predicate                        |
+| --------- | -------------------------------- |
+| string    | typeof s === "string"            |
+| number    | typeof n === "number"            |
+| boolean   | typeof b === "boolean"           |
 | undefined | typeof undefined === "undefined" |
-| function | typeof f === "function" |
-| array | Array.isArray(a) |
+| function  | typeof f === "function"          |
+| array     | Array.isArray(a)                 |
 
 ### Generics
 
@@ -1194,3 +1194,8 @@ a ||= b
       world = "world"
   };
   ```
+
+* [Parsing error: File 'tsconfig.json' not found - if project does not contain tsconfig.json in workspace root](https://github.com/microsoft/vscode-eslint/issues/722)
+
+   remove `parserOptions` from `eslintrc.js`
+

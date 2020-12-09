@@ -91,9 +91,11 @@ square("2"); // Error!
     }
     ```
 
-* **invariant** - read/write
-* **covariant** - read-only
-* **contravariant** - write-only
+  * **invariant** - read/write
+  * **covariant** - read-only
+  * **contravariant** - write-only
+
+* [Type Variance](https://flow.org/en/docs/lang/variance/)
 
 ## Flow CLI
 
@@ -109,3 +111,5 @@ square("2"); // Error!
     "javascript.validate.enable": false
     }
     ```
+
+* [What does flow `{| brace pipe |}` syntax do?](https://stackoverflow.com/q/48393027/1366033)

@@ -11,8 +11,39 @@
 
 ### Dotnet New
 
-[`dotnet new`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+* [`dotnet new`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+  * [Templates](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#arguments)
+    * `console`
+    * `mvc`
+    * `webapp`
 
+## Tools
+
+```bash
+dotnet tool install --global dotnet-aspnet-codegenerator
+```
+
+### dotnet-aspnet-codegenerator
+
+```bash
+# check available commands
+dotnet-aspnet-codegenerator -p . --help
+
+# check help on how to generate controller
+dotnet-aspnet-codegenerator -p . controller --help
+
+
+```
+
+
+## Nuget
+
+[Microsoft.VisualStudio.Web.CodeGeneration.Design](https://www.nuget.org/packages/Microsoft.VisualStudio.Web.CodeGeneration.Design/)
+
+```bash
+# Add Microsoft.VisualStudio.Web.CodeGeneration.Design package to the project as a NuGet package reference.
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 5.0.1
+```
 
 ## Library
 
@@ -119,12 +150,12 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 ### Sample Table
 
 
-|   Client ID  | First Name | Last Name | Date of Birth | Status |
-|:------------:|:----------:|:---------:|:-------------:|:------:|
-|       1      | Erica      | Baker     |    1/1/1980   |  Tech  |
-|       2      | Annie      | Easley    |   4/23/1933   |  NASA  |
-|       3      | Dorothy    | Vaughan   |   9/20/1910   |  NASA  |
-|       4      | Katherine  | Johnson   |   8/26/1918   |  NASA  |
+| Client ID | First Name | Last Name | Date of Birth | Status |
+| :-------: | :--------: | :-------: | :-----------: | :----: |
+|     1     |   Erica    |   Baker   |   1/1/1980    |  Tech  |
+|     2     |   Annie    |  Easley   |   4/23/1933   |  NASA  |
+|     3     |  Dorothy   |  Vaughan  |   9/20/1910   |  NASA  |
+|     4     | Katherine  |  Johnson  |   8/26/1918   |  NASA  |
 
 ### Sample Class
 

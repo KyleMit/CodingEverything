@@ -84,3 +84,32 @@ However, others such as `cp` and `echo` can only take input as arguments, which 
     ```
 
     Parameter `p` stands for `parents`
+
+
+* [What does `-ex` option used in bash | #!/bin/bash -ex mean](https://stackoverflow.com/q/38342992/1366033)
+
+    ```bash
+    #!/bin/bash -ex
+    ```
+
+    ```bash
+    #!/bin/bash
+    set -ex
+    ```
+
+  * `-e` - Exit immediately if a command exits with a non-zero status
+  * `-x` - Print commands and their arguments as they are executed
+
+
+* [Shell script to open a URL](https://stackoverflow.com/q/38147620/1366033)
+
+  * **Linux** - `xdg-open https://stackoverflow.com`
+  * **macOS** - `open https://stackoverflow.com`
+  * **Windows** - `start https://stackoverflow.com`
+  * **Python** - `python -m webbrowser https://stackoverflow.com`
+
+* [How do I run multiple background commands in bash in a single line?](https://stackoverflow.com/q/14612371/1366033)
+
+    ```bash
+    (sleep 2 &) && (sleep 3 &)
+    ```

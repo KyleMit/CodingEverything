@@ -502,3 +502,27 @@ csrutil disable
 ```
 
 * **SIP** - System Integrity Protection
+
+## Questions
+
+* [How can I add a path to the PATH environment variable?](https://apple.stackexchange.com/q/12629/74706)
+
+1. Edit bash profile
+
+    ```bash
+    code ~/.bash_profile
+    ```
+
+2. append path to exiting path variable
+
+    ```bash
+    # comment for yourself
+    export PATH="$PATH:to/your/path"
+    ```
+
+3. Refresh terminal
+
+    ```bash
+    source ~/.bash_profile
+    ```
+

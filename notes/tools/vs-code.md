@@ -304,3 +304,16 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   ```json
   "diffEditor.ignoreTrimWhitespace": true,
   ```
+
+
+* ["editor.formatOnSave": false not working](https://github.com/microsoft/vscode/issues/30839)
+
+  Due to [JS-CSS-HTML Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
+
+  `~.vscode\extensions\lonefy.vscode-js-css-html-formatter-0.2.3\out\src\formatter.json`
+
+  ```json
+  {
+    "onSave": true,
+  }
+  ```

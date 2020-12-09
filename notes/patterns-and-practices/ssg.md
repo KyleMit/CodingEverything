@@ -4,7 +4,7 @@
 * [JamStack > Generators](https://jamstack.org/generators/)
   * [StaticGen (archive)](https://web.archive.org/web/20201006114023/https://www.staticgen.com/)
 
-* [MDX](https://mdxjs.com/)
+
 * [jsdoc-rtd](https://github.com/athombv/jsdoc-rtd) - A readthedocs-style themed jsdoc template
 
 ## MkDocs

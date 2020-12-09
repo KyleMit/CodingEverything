@@ -30,7 +30,7 @@
 
 ## Community
 
-[Reddit Channels](https://www.reddit.com/user/kylemit/m/webdev/)
+* [Reddit Channels](https://www.reddit.com/user/kylemit/m/webdev/)
 
 ## BrowserList
 
@@ -48,7 +48,7 @@
 ## Cool Tech
 
 * [NextParticle](https://nextparticle.nextco.de/)
-
+* [Developer Tips by Umar Hansa](https://umaar.com/dev-tips/)
 
 ## JS
 
