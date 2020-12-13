@@ -11,6 +11,22 @@
 Some commands such as `grep` and `awk` can take input either as command-line arguments or from the standard input.
 However, others such as `cp` and `echo` can only take input as arguments, which is why `xargs` is necessary.
 
+## Bash for Windows
+
+* [Difference between GNUWin32 and cygwin](https://stackoverflow.com/q/10712550/1366033)
+* [Difference between UnxUtils and GnuWin32?](https://superuser.com/q/168202/180163)
+
+* [Cygwin](http://www.cygwin.com/)
+* [CoreUtils for Windows](http://gnuwin32.sourceforge.net/packages/coreutils.htm)
+* [Coreutils - GNU core utilities](https://www.gnu.org/software/coreutils/)
+
+* [choco Cygwin 3.1.6](https://chocolatey.org/packages/Cygwin)
+* [choco GnuWin32 CoreUtils](https://chocolatey.org/packages/gnuwin32-coreutils.portable)
+
+```bash
+choco install gnuwin32-coreutils.portable
+```
+
 ## Questions
 
 * [Create .zip folder from the command line](https://superuser.com/q/201371/180163)
@@ -72,19 +88,19 @@ However, others such as `cp` and `echo` can only take input as arguments, which 
 
 * [How can I assign the output of a command to a shell variable?](https://unix.stackexchange.com/q/16024/128893)
 
-    ```bash
-    result=$(echo 'hello')
-    echo $result
-    ```
+  ```bash
+  result=$(echo 'hello')
+  echo $result
+  ```
 
 * [recursive mkdir](https://unix.stackexchange.com/questions/49263/recursive-mkdir)
 
-    ```bash
-    mkdir -p foo/bar/zoo/andsoforth
-    ```
+  * [How to create nonexistent subdirectories recursively using Bash?](https://stackoverflow.com/q/1731767/1366033)
+  * use `-p, --parents`
 
-    Parameter `p` stands for `parents`
-
+  ```bash
+  mkdir -p foo/bar/zoo
+  ```
 
 * [What does `-ex` option used in bash | #!/bin/bash -ex mean](https://stackoverflow.com/q/38342992/1366033)
 
@@ -113,3 +129,13 @@ However, others such as `cp` and `echo` can only take input as arguments, which 
     ```bash
     (sleep 2 &) && (sleep 3 &)
     ```
+
+* [Copy files from one directory into an existing directory](https://stackoverflow.com/q/3643848/1366033)
+
+    ```bash
+    cp -R t1/. t2/
+    ```
+
+* [CP Command Prompt Windows 7 not recognized](https://stackoverflow.com/q/21734377/1366033)
+
+  * Install Cygwin or CoreUtils

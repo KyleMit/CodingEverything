@@ -14,35 +14,35 @@
 ### General Format
 
 
-| Field name    | Mandatory? | Allowed values  | Special characters |
-| ------------- | ---------- | --------------- | ------------------ |
-| Seconds       | No\*       | 0-59            | * / , -            |
-| Minutes       | Yes        | 0-59            | * / , -            |
-| Hours         | Yes        | 0-23            | * / , -            |
-| Day of month  | Yes        | 1-31            | * / , - L W        |
-| Month         | Yes        | 1-12 or JAN-DEC | * / , -            |
-| Day of week   | Yes        | 0-6 or SUN-SAT  | * / , - L #        |
-| Year          | No\*       | 1970–2099       | * / , -            |
+| Field name   | Mandatory? | Allowed values  | Special characters |
+| ------------ | ---------- | --------------- | ------------------ |
+| Seconds      | No\*       | 0-59            | * / , -            |
+| Minutes      | Yes        | 0-59            | * / , -            |
+| Hours        | Yes        | 0-23            | * / , -            |
+| Day of month | Yes        | 1-31            | * / , - L W        |
+| Month        | Yes        | 1-12 or JAN-DEC | * / , -            |
+| Day of week  | Yes        | 0-6 or SUN-SAT  | * / , - L #        |
+| Year         | No\*       | 1970–2099       | * / , -            |
 
 
 **Predefined Scheduling Macros**:
 
 
-| Entry      | Equivalent to      |
-| ---------- | ------------------ |
-| @annually  | 0 0 0 1 1 \* \*    |
-| @yearly    | 0 0 0 1 1 \* \*    |
-| @monthly   | 0 0 0 1 \* \* \*   |
-| @weekly    | 0 0 0 \* \* 0 \*   |
-| @daily     | 0 0 0 \* \* \* \*  |
-| @hourly    | 0 0 \* \* \* \* \* |
-| @reboot    |                    |
+| Entry     | Equivalent to      |
+| --------- | ------------------ |
+| @annually | 0 0 0 1 1 \* \*    |
+| @yearly   | 0 0 0 1 1 \* \*    |
+| @monthly  | 0 0 0 1 \* \* \*   |
+| @weekly   | 0 0 0 \* \* 0 \*   |
+| @daily    | 0 0 0 \* \* \* \*  |
+| @hourly   | 0 0 \* \* \* \* \* |
+| @reboot   |                    |
 
 
 **Valid time units**:
 
 | unit   | definition  |
-| -------| ----------- |
+| ------ | ----------- |
 | ns     | nanosecond  |
 | us, µs | microsecond |
 | ms     | millisecond |
@@ -70,3 +70,11 @@
     ```js
     /.+?(?=abc)/
     ```
+
+* [Find Regex String Literals](https://regexr.com/5iakt)
+
+    ```js
+    /(?<![\.\/\w\*])\/[^\/\*\n].+\//g
+    ```
+
+

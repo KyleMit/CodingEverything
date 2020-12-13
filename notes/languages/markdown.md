@@ -21,6 +21,11 @@
 
    `readme.md` vs `README.md`
 
+* [Fragmented list](https://github.com/marp-team/marpit/issues/145)
+
+  * Use \* for fragment list
+  * Use \- for regular list
+
 ## MDX
 
 [MDX](https://mdxjs.com/)

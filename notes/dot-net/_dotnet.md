@@ -199,3 +199,20 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 ## Downloads & SDKs
 
 * [Download .NET SDKs for Visual Studio](https://dotnet.microsoft.com/download/visual-studio-sdks)
+
+
+## Questions
+
+* [In MVC, how do I return a string result?](https://stackoverflow.com/q/553936/1366033)
+
+  ```cs
+  public ActionResult Temp() {
+      return Content("Hi there!");
+  }
+  ```
+
+* [Difference between ApiController and Controller in ASP.NET MVC](https://stackoverflow.com/q/9494966/1366033)
+
+
+
+

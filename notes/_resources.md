@@ -466,3 +466,14 @@ Make sure you *start* your CLI file with following [shebang](https://en.wikipedi
 * [Transparent Textures](https://www.transparenttextures.com/)
 * [MetaTags](https://metatags.io/)
 
+
+
+
+
+---
+
+## Scratchpad
+
+[c# - Bind query parameters to a model in ASP.NET Core - Stack Overflow](https://stackoverflow.com/questions/42929376/bind-query-parameters-to-a-model-in-asp-net-core)
+[Develop ASP.NET Core apps using a file watcher | Microsoft Docs](https://docs.microsoft.com/en-us/aspnet/core/tutorials/dotnet-watch?view=aspnetcore-5.0)
+[c# - No service for type 'Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionaryFactory' has been registered - Stack Overflow](https://stackoverflow.com/questions/38709538/no-service-for-type-microsoft-aspnetcore-mvc-viewfeatures-itempdatadictionaryfa)

@@ -990,6 +990,7 @@ dotnet tool install --global dotnet-script
 
 * [How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
 * [Share URL Format](https://techcommunity.microsoft.com/t5/articles/announcing-a-new-way-to-paste-urls-link-format/m-p/1600094)
+* [Edge Add-ons Themes](https://microsoftedge.microsoft.com/addons/search/theme)
 
 
 ## Firefox
@@ -1081,6 +1082,17 @@ dotnet tool install --global dotnet-script
     "DisallowShaking"=dword:00000001
     ```
 
+* [How to make Windows 10 taskbar thumbnail previews bigger?](https://superuser.com/q/958690/180163)
+
+    ```ini file:TaskbarThumbnailSize.reg
+    Windows Registry Editor Version 5.00
+
+    [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband]
+    "MinThumbSizePx"=dword:15e ; 350 (px)
+    ```
+
+
+<!-- DEPRECATED
 
 ### Immersive Search
 
@@ -1100,6 +1112,7 @@ Windows Registry Editor Version 5.00
 "CenterScreenRoundedCornerRadius"=dword:00000009
 "ImmersiveSearchFull"=dword:00000001
 ```
+-->
 
 ### Alt Drag
 

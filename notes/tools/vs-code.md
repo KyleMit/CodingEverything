@@ -317,3 +317,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "onSave": true,
   }
   ```
+
+* [Prevent same file opening twice](https://stackoverflow.com/q/39890926/1366033)
+
+  ```json
+  "workbench.editor.revealIfOpen": true
+  ```
+
