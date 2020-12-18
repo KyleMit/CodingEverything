@@ -16,6 +16,8 @@
 * **IO** - Input / Output
 * **CS** - Computer Science
 * **AST** - Abstract Syntax Tree
+* **IEEE** - Institute of Electrical and Electronics Engineers
+* **IEEE 754** - IEEE Standard for Floating-Point Arithmetic
 
 ### Software Development LifeCycle
 
@@ -121,6 +123,7 @@
 * **HSTS** - HTTP Strict Transport Security
 * **PGP**- [Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 * **GnuPG** - GNU Privacy Guard
+* **MITM** - Man in the Middle Attacks
 
 ### Numeronym
 
@@ -328,6 +331,7 @@
 * [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 * [**glob**](https://en.wikipedia.org/wiki/Glob_(programming)) - patterns specify sets of filenames with wildcard characters (short for "global")
 * [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
+* [Directive / Pragma](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
 
 ## Terms
 

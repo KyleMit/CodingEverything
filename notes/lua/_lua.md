@@ -15,6 +15,7 @@
 * [Source Code Mirror](https://github.com/lua/lua)
 * [Learn Lua in 15 Minutes](http://tylerneylon.com/a/learn-lua/)
 * [Lua - Overview - Tutorialspoint](https://www.tutorialspoint.com/lua/lua_overview.htm)
+* [Lua Unofficial FAQ (uFAQ)](https://www.luafaq.org/)
 
 * Online REPL
   * [Lua: demo](https://www.lua.org/cgi-bin/demo)
@@ -218,6 +219,7 @@ local line = io.read()
 * [Lua pattern matching vs. regular expressions](https://stackoverflow.com/q/2693334/1366033)
 
 * [Logical 'or' in Lua patterns?](https://stackoverflow.com/q/3462370/1366033)
+* [What is the alternation operator in Lua patterns?](https://stackoverflow.com/q/10438358/1366033)
 
 * Regex in LUA
 
@@ -252,4 +254,173 @@ local line = io.read()
 
 * [In Lua how do you import modules?](https://stackoverflow.com/q/7248877/1366033)
 
+
+* [How to dump a table to console?](https://stackoverflow.com/q/9168058/1366033)
+
+* [How do I call a Lua script from an HTML5 script/file/page](https://stackoverflow.com/q/6257628/1366033)
+
+* [Split String in Lua](https://stackoverflow.com/q/1426954/1366033)
+
+  ```lua
+  function mySplit (inputStr, sep)
+    if sep == nil then
+        sep = "%s"
+    end
+    local t={}
+    for str in string.gmatch(inputStr, "([^"..sep.."]+)") do
+        table.insert(t, str)
+    end
+    return t
+  end
+  ```
+
+
+* [How do I append to a table in Lua](https://stackoverflow.com/q/27434142/1366033)
+
+  ```lua
+  foo = {}
+  table.insert(foo, "bar")
+  ```
+
+  ```lua
+  foo = {}
+  foo[#foo+1]="bar"
+  ```
+
+* [if...then...else](https://www.lua.org/pil/4.3.1.html)
+
+  ```lua
+  if a<0 then a = 0 end
+
+  if a<b then return a else return b end
+
+  if line > maxLines then
+    showPage()
+  end
+  ```
+
+* [Sort a Table in Lua](https://stackoverflow.com/q/15706270/1366033)
+
+* [Check if a string isn't nil or empty in Lua](https://stackoverflow.com/q/19664666/1366033)
+
+  ```lua
+  local function isEmpty(s)
+    return s == nil or s == ''
+  end
+  ```
+
+* [Why does Lua have no "continue" statement?](https://stackoverflow.com/q/3524970/1366033)
+
+  ```lua
+  -- prints odd numbers in [|1,10|]
+  for i=1,10 do
+    if i % 2 == 0 then goto continue end
+    print(i)
+    ::continue::
+  end
+  ```
+
+* [Can't modify loop-variable in lua](https://stackoverflow.com/q/34317433/1366033)
+
+  > the loop counter in Lua is hidden from you
+  > The variable `i` is merely a copy of the counter's current value
+
+
+  ```lua
+  for v = e1, e2, e3 do block end
+  ```
+
+  equivalent to:
+
+  ```lua
+  do
+    local var, limit, step = tonumber(e1), tonumber(e2), tonumber(e3)
+    if not (var and limit and step) then error() end
+    var = var - step
+    while true do
+      var = var + step
+      if (step >= 0 and var > limit) or (step < 0 and var < limit) then
+        break
+      end
+      local v = var
+      block
+    end
+  end
+  ```
+
+* [Lua Semicolon Conventions](https://stackoverflow.com/q/16862337/1366033)
+
+  > Semi-colons in Lua are generally only required when writing multiple statements on a line.
+
+* [What is the alternative for switch statement in Lua?](https://stackoverflow.com/q/37447704/1366033)
+
+  ```lua
+  if choice == 1
+    then add()
+  elseif choice == 2
+    then save()
+  else
+    print "The program has been terminated\nThank you!"
+  end
+  ```
+
+* [Difference between require and dofile?](https://www.luafaq.org/#T1.19)
+
+  * `require` and `dofile` both load and execute Lua files
+    * `require` - you pass the module name
+    * `dofile` you pass an actual file path to a Lua file
+
+  > So what search path does require use?
+
+  ```bash
+  lua -e "print(package.path)"
+  # C:\Programs\lua-5.4.0\lua\?.lua;C:\Programs\lua-5.4.0\lua\?\init.lua;C:\Programs\lua-5.4.0\?.lua;C:\Programs\lua-5.4.0\?\init.lua;C:\Programs\lua-5.4.0\..\share\lua\5.4\?.lua;C:\Programs\lua-5.4.0\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua
+  ```
+
+  ```bash
+  $ lua -l alice
+  # lua: module 'alice' not found:
+  #   no field package.preload['alice']
+  #   no file './alice.lua'
+  #   no file '/home/kylemit/lua/lua/alice.lua'
+  #   no file '/home/kylemit/lua/lua/alice/init.lua'
+  #   no file './alice.so'
+  #   no file '/home/kylemit/lua/clibs/alice.so'
+  #   no file '/home/kylemit/lua/clibs/loadall.so'
+  ```
+
+
+  > The second difference is the `require` keeps track of what modules have been loaded
+  > so calling it again will not cause the module to be reloaded.
+
+* [check for NaN](https://stackoverflow.com/q/37753694/1366033)
+
+```lua
+function isNaN(val)
+  return tostring(n) == "nan"
+end
+
+-- second solution
+function isNaN(val)
+  return n ~= n
+end
+```
+
+* [How to "Extend" the "string" table?](https://stackoverflow.com/q/2031943/1366033)
+
+
+* [Check if array contains specific value](https://stackoverflow.com/q/33510736/1366033)
+
+
+  ```lua
+  local function has_value (tab, val)
+      for index, value in ipairs(tab) do
+          if value == val then
+              return true
+          end
+      end
+
+      return false
+  end
+  ```
 

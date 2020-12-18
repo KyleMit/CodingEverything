@@ -1,68 +1,6 @@
 # Lua Ecosystem
 
 
-## Test EZ
-
-
-> BDD-style test and assertion library for Roblox Lua
-
-[Roblox/**testez**](https://github.com/roblox/testez)
-[TestEZ Documentation](https://roblox.github.io/testez/api-reference/#expect)
-
-### Describe / It
-
-```lua
-describe("This cheese", function()
-    it("should be moldy", function()
-        expect(cheese.moldy).to.equal(true)
-    end)
-end)
-```
-
-### Expect
-
-```lua
--- Equality
-expect(1).to.equal(1)
-expect(1).never.to.equal(2)
-
--- Approximate equality
-expect(5).to.be.near(5 + 1e-8)
-expect(5).to.be.near(5 - 1e-8)
-expect(math.pi).never.to.be.near(3)
-
--- Optional limit parameter
-expect(math.pi).to.be.near(3, 0.2)
-
--- Nil checking
-expect(1).to.be.ok()
-expect(false).to.be.ok()
-expect(nil).never.to.be.ok()
-
--- Type checking
-expect(1).to.be.a("number")
-expect(newproxy(true)).to.be.a("userdata")
-
--- Function throwing
-expect(function()
-    error("nope")
-end).to.throw()
-
-expect(function()
-    -- I don't throw!
-end).never.to.throw()
-
-expect(function()
-    error("nope")
-end).to.throw("nope")
-
-expect(function()
-    error("foo")
-end).never.to.throw("bar")
-```
-
-
-
 ## Selene
 
 > A blazing-fast modern Lua linter written in Rust
@@ -260,4 +198,74 @@ local c = 1
     ```
 
     > If you intend to create a variable without using it, replace it with `_` or something that starts with `_`
+
+
+## LuaRocks
+
+
+> LuaRocks is the package manager for Lua modules.
+> It allows you to create and install Lua modules as self-contained packages called *rocks*
+
+### Links
+
+
+* [LuaRocks - The Lua package manager](https://luarocks.org/)
+* [luarocks/**luarocks**](https://github.com/luarocks/luarocks)
+* [Downloads](http://luarocks.github.io/luarocks/releases/)
+
+
+## Penlight
+
+[Penlight Documentation](http://stevedonovan.github.io/Penlight/api/manual/01-introduction.md.html#)
+
+```lua
+-- include local
+local utils = require 'pl.utils'
+utils.printf("%s\n","hello, world!")
+
+-- include global
+require 'pl'
+utils.printf("%s\n","That feels better")
+
+-- include as function
+local pl = require'pl.import_into'()
+pl.utils.printf("%s\n","That feels better")
+```
+
+## Lua Users / Wiki
+
+> [lua-users.org](http://lua-users.org/) is an internet site for and by users of the programming language Lua.
+> [lua-users wiki](http://lua-users.org/wiki/) is a large community-maintained collection of Lua programming language information and resources.
+
+### Links
+
+* [lua-users wiki - Lua Comparison](http://lua-users.org/wiki/LuaComparison)
+* [lua-users wiki - Sample Code](http://lua-users.org/wiki/SampleCode)
+
+
+## etlua
+
+> Embedded Lua templates
+
+[leafo/**etlua**](https://github.com/leafo/etlua)
+
+```bash
+luarocks install etlua
+```
+
+```lua
+local etlua = require "etlua"
+local template = etlua.compile([[
+  Hello <%= name %>,
+  Here are your items:
+  <% for i, item in pairs(items) do %>
+   * <%= item -%>
+  <% end %>
+]])
+
+print(template({
+  name = "leafo",
+  items = { "Shoe", "Reflector", "Scarf" }
+}))
+```
 

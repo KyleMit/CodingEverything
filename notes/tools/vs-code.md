@@ -123,6 +123,18 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Script Commands](https://marketplace.visualstudio.com/items?itemName=mkloubert.vs-script-commands)
 * [Edit with Shell Command](https://marketplace.visualstudio.com/items?itemName=ryu1kn.edit-with-shell)
 
+### Extension View Filters
+
+[Extension View Filters](https://code.visualstudio.com/docs/editor/extension-gallery#_extensions-view-filters)
+
+* `@builtin` - Show extensions that come with VS Code. Grouped by type (Programming Languages, Themes, etc.).
+* `@disabled` - Show disabled installed extensions.
+* `@installed` - Show installed extensions.
+* `@outdated` - Show outdated installed extensions. A newer version is available on the Marketplace.
+* `@enabled` - Show enabled installed extensions. Extensions can be individually enabled/disabled.
+* `@recommended` - Show recommended extensions. Grouped as Workspace specific or general use.
+* `@category` - Show extensions belonging to specified category. Below are a few of supported categories. For a complete list, type @category and follow the options in the suggestion list:
+
 
 ## Keybindings
 
@@ -324,3 +336,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   "workbench.editor.revealIfOpen": true
   ```
 
+* [How to adjust the position of the internal terminal](https://stackoverflow.com/q/51202632/1366033)
+
+
+* How to clear the entire terminal
+
+  * [How to clear terminal scrollback buffer](https://stackoverflow.com/q/61696345/1366033)
+  * [How to clear the entire terminal (PowerShell)](https://stackoverflow.com/q/52127653/1366033)

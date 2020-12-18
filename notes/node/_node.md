@@ -185,16 +185,23 @@ console.log(doc);
 
 ## Modules
 
-[CommonJS vs AMD vs RequireJS vs ES6 Modules](https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b)
-[What are CJS, AMD, UMD, and ESM in Javascript?](https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm)
+### Articles
 
+* [CommonJS vs AMD vs RequireJS vs ES6 Modules](https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b)
+* [What are CJS, AMD, UMD, and ESM in Javascript?](https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm)
+* [JavaScript: Classic Scripts vs. Modules vs. CommonJS](https://gist.github.com/jkrems/b14894e0b8efde10aa10a28c652d3541)
+* [Classic scripts v/s module scripts in Javascript - Stack Overflow](https://stackoverflow.com/questions/39652618/classic-scripts-v-s-module-scripts-in-javascript)
+* [javascript - How to use UMD in browser without any additional dependencies - Stack Overflow](https://stackoverflow.com/questions/38638210/how-to-use-umd-in-browser-without-any-additional-dependencies)
+
+### Types
+
+* Classic Scripts
 * Revealing Module Pattern
 * Common JS / Require (CJS)
 * Asynchronous Module Definition (AMD)
 * Universal Module Definition (UMD)
 * ECMAScript 6 modules / ES Modules (ESM)
-
-* SystemJS
+* SystemJS?
 
 
 ### Revealing Module Pattern
@@ -212,7 +219,7 @@ var revealingModule = (function () {
 revealingModule.setName( "Paul Adams" );
 ```
 
-### Common JS
+### Common JS (CJS)
 
 
 ```js
@@ -290,10 +297,14 @@ console.log(diag(4, 3)); // 5
 ```
 
 
+
+
 ## Convert Callback to Promise
 
 * [Converting callbacks to promises | Zell Liew](https://zellwk.com/blog/converting-callbacks-to-promises/)
 * [Util | Node.js v8.17.0 Documentation](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original)
+
+
 
 
 ## NX.JS

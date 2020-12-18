@@ -139,3 +139,30 @@ choco install gnuwin32-coreutils.portable
 * [CP Command Prompt Windows 7 not recognized](https://stackoverflow.com/q/21734377/1366033)
 
   * Install Cygwin or CoreUtils
+
+* [How to really clear the terminal?](https://askubuntu.com/q/25077/349745)
+
+  Removes everything from screen while preserving scrollback buffer
+
+  `clear` or <kbd>Ctrl</kbd> + <kbd>L</kbd>
+
+  re-initialize the terminal, but won't re-instantiate the shell
+
+  `reset` or `tput reset`
+
+* [Why does the `reset` command include a delay?](https://unix.stackexchange.com/q/335648/128893)
+
+
+
+* UUOC - Useless Use of Cat
+
+  * [Useless Use of Cat Award](http://porkmail.org/era/unix/award.html#echo)
+  * [shell - Useless use of cat? - Stack Overflow](https://stackoverflow.com/questions/11710552/useless-use-of-cat)
+  * [cat (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat)
+
+
+* [How can I count all the lines of code in a directory recursively?](https://stackoverflow.com/q/1358540/1366033)
+
+  ```js
+  find . -name '*.js' | xargs wc -l
+  ```

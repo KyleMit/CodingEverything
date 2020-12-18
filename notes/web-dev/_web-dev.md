@@ -2,11 +2,11 @@
 
 ## Code Playgrounds
 
-* [KyleMit - StackBlitz](https://stackblitz.com/@KyleMit)
-* [Kyle - CodeSandbox](https://codesandbox.io/u/KyleMit)
-* [Kyle on CodePen](https://codepen.io/KyleMit)
-* [Settings - JSFiddle - Code Playground](https://jsfiddle.net/user/KyleMit/fiddles/)
-* [Plunker - @KyleMit plunks](https://plnkr.co/users/KyleMit/plunks)
+* [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
+* [StackBlitz](https://stackblitz.com/@KyleMit)
+* [CodePen](https://codepen.io/KyleMit)
+* [CodeSandbox](https://codesandbox.io/u/KyleMit)
+* [Plunker](https://plnkr.co/users/KyleMit/plunks)
 * [Gist](https://gist.github.com/KyleMit)
 * Build and run github
   * [Codespaces](https://github.com/features/codespaces)
@@ -160,3 +160,21 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
 * [Difference between layerX and offsetX in JavaScript](https://stackoverflow.com/q/23217333/1366033)
 
 * [How to find Event Listeners on a DOM Node when Debugging](https://www.stanleyulili.com/javascript/how-to-find-event-listeners-on-a-dom-node-when-debugging/)
+
+* [How to get console inside jsFiddle](https://stackoverflow.com/q/39130610/1366033)
+
+* [Set MIME type for ES6 Modules](https://stackoverflow.com/q/46138375/1366033)
+
+   > Failed to load module script: The server responded with a non-JavaScript MIME type of "text/html".
+   > Strict MIME type checking is enforced for module scripts per HTML spec.
+
+  * [Properly configuring server MIME types](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+
+* Local http server
+
+  * Rust - [https](https://crates.io/crates/https)
+  * NPM - [http-server](https://www.npmjs.com/package/http-server)
+  * NPM - [live-server](https://www.npmjs.com/package/live-server)
+  * Python - [http-server](https://docs.python.org/3/library/http.server.html)
+
+

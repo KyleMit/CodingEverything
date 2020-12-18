@@ -9,4 +9,10 @@
   * **Pre-cache** remaining assets.
   * **Lazy load** other routes and non-critical assets.
 
+* One Less JPG
+
+  * [One less JPG](https://www.fourkitchens.com/blog/article/one-less-jpg/)
+  * [Mike Taylor on Twitter](https://twitter.com/miketaylr/status/227056824275333120)
+
+    > "The solution to worrying about JS lib/framework size: include one less .jpg on your site. #throneofjs
 

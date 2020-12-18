@@ -1,5 +1,15 @@
 # Programming in Lua (PIL)
 
+[Programming in Lua (first edition) | Lua](https://www.lua.org/pil/contents.html)
+
+> This book is a detailed and authoritative introduction to all aspects of Lua programming written by Lua's chief architect.
+> This is the online version of the first edition of the book Programming in Lua
+> Programming in Lua provides a solid base to any programmer who wants to use Lua
+
+[Programming in Lua, fourth edition](https://www.amazon.com/exec/obidos/ASIN/8590379868) by Roberto Ierusalimschy
+
+
+
 ## [2.5 – Tables](https://www.lua.org/pil/2.5.html)
 
 Iterate over table

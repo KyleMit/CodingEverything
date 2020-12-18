@@ -278,7 +278,7 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 ## JavaScript Format Date
 
 | Property     | Values  | Example     |
-|--------------|---------|-------------|
+| ------------ | ------- | ----------- |
 | weekday      | narrow  | M           |
 |              | short   | Mon         |
 |              | long    | Monday      |
@@ -363,3 +363,74 @@ Emmet autocomplete `/**`
     ```
 
 * [Polling until getting specific result?](https://stackoverflow.com/a/64654157/1366033)
+
+
+* [Cannot use import statement outside a module](https://stackoverflow.com/q/58357941/1366033)
+
+  ```html
+  <script src="file1.js" type="module" ></script>
+  ```
+
+
+* Console timer
+
+  ```js
+  let timer = (function() {
+    let dict = {}
+
+    let start = function(label) {
+      dict[label] = performance.now()
+    }
+
+    let stop = function(label) {
+      let myStart = dict[label]
+      if (!myStart) {
+        console.log(`Timer '${label}' does not exist`)
+        return;
+      }
+      let myStop = performance.now()
+      let myTime = myStop - myStart
+      console.log(`${label}: ${myTime} ms`)
+    }
+
+    return {start, stop}
+  })()
+
+  // usage
+  timer.start("math")
+
+  setTimeout(() => {
+    timer.stop("math")
+  })
+  ```
+
+* Trace dependency graph
+
+  [pahen/**madge**](https://github.com/pahen/madge)
+
+  > Create graphs from your CommonJS, AMD or ES6 module dependencies
+  > developer tool for generating a visual graph of your module dependencies, finding circular dependencies, and give you other useful info
+
+
+* [i++ vs ++i](https://stackoverflow.com/q/6867876/1366033)
+
+  * [++someVariable vs. someVariable++](https://stackoverflow.com/q/3469885/1366033)
+  * [Increment (++) - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+
+  * `++variable` - increments the variable, returning the *new value*.
+  * `variable++` - increments the variable, but returns the *old value*
+
+* Check for NaN
+
+  [Number.isNaN() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
+
+  > Due to both equality operators, `==` and `===,` evaluating to false when checking if `NaN` is `NaN`, the function `Number.isNaN()` has become necessary.
+  > This situation is unlike all other possible value comparisons in JavaScript.
+
+  > The following works because NaN is the only value in JavaScript which is not equal to itself.
+
+  ```js
+  Number.isNaN = Number.isNaN || function isNaN(input) {
+      return typeof input === 'number' && input !== input;
+  }
+  ```
