@@ -53,3 +53,16 @@
     ctx.fillRect(xPos, yPos, width, 2);
     ```
 
+
+* [Are there two ways to jump to a fragment identifier in HTML?](https://stackoverflow.com/q/35032130/1366033)
+
+
+  [7.10.9 Navigating to a fragment](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-fragid)
+
+  > To find a potential indicated element given a string fragment, run these steps:
+  >
+  > 1. If there is an element in the document tree that has an `ID` equal to *fragment*, then return the first such element in tree order.
+  > 2. If there is an `<a>` element in the document tree that has a `name` attribute whose value is equal to *fragment*, then return the first such element in tree order.
+  > 3. Return null.
+
+

@@ -95,3 +95,13 @@
   git branch --contains <commit>
   ```
 
+* [How do I update a GitHub forked repository?](https://stackoverflow.com/q/7244321/1366033)
+
+  ```bash
+  git remote -v                   # list current remotes
+  git remote add upstream <base>  # add upstream remote
+  ```
+
+  **See Also**: [How can I keep my fork in sync without adding a separate remote?](https://stackoverflow.com/q/20984802/1366033)
+
+

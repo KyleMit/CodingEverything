@@ -44,6 +44,16 @@
   npx browserslist@latest --update-db
   ```
 
+## Best Practices
+
+### Visual
+
+Tables should be avoided for layout in favor of using CSS.  Tables (and HTML in general) are intended to provide semantic meaning to the page.  They should be explicitly used for provided data in a tabular format.  Tables
+
+### Performance
+
+Linking to style sheets and JavaScript as external references is preferred to inline styling. Linking to external files allows the code to be cached on the client, allowing for faster delivery over the wire.  Additionally, every time a new CSS rule is added, the browser has to render the page again.  External files help reduce the number of rendering passes a page must make.  To ensure that changed files are delivered in favor of the old cached files, you have to implement cache busting.  You can add a query parameter to the end of the URL (`?v=01012014`) to create a unique URL that points to the same file.
+
 
 ## Cool Tech
 
@@ -61,6 +71,15 @@
 ```js
 document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</style>`)
 ```
+
+
+### Tools
+
+* [Image to Data URI converter](https://ezgif.com/image-to-datauri)
+* [Clippy](https://bennettfeely.com/clippy/)
+* [Transparent Textures](https://www.transparenttextures.com/)
+* [MetaTags](https://metatags.io/)
+
 
 ## Lazy Load Images
 
@@ -178,3 +197,8 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
   * Python - [http-server](https://docs.python.org/3/library/http.server.html)
 
 
+* [SVG - How to “use” local “defs” in SVG](https://stackoverflow.com/q/16123721/1366033)
+* [Img - Convert SVG to ICO](https://convertio.co/svg-ico/)
+
+* [Fonts - Google Fonts](https://fonts.google.com/specimen/Overlock)
+* [Fonts - Embed Google Fonts](https://stackoverflow.com/a/53674218/1366033)

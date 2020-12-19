@@ -157,7 +157,7 @@
 ],
 ```
 
-[URL Validaiton / Format](https://github.com/json-schema-org/json-schema-spec/issues/233#issuecomment-279180514)
+[URL Validation / Format](https://github.com/json-schema-org/json-schema-spec/issues/233#issuecomment-279180514)
 
 ```json
 {

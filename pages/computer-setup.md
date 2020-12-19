@@ -241,6 +241,7 @@ winget install Python.Python
 winget install AngusJohnson.ResourceHacker
 winget install Amazon.SAM-CLI
 winget install marha.VcXsrv
+winget install Axosoft.GitKraken
 ```
 
 ## DotFiles
@@ -955,6 +956,19 @@ dotnet tool install --global dotnet-script
 
 ### WinMerge Settings
 
+
+### Edge
+
+* [How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
+* [Share URL Format](https://techcommunity.microsoft.com/t5/articles/announcing-a-new-way-to-paste-urls-link-format/m-p/1600094)
+* [Edge Add-ons Themes](https://microsoftedge.microsoft.com/addons/search/theme)
+
+
+### Firefox
+
+* [Ace Code Editor](https://ace.c9.io/) only copies first two lines in FF
+
+
 ### Chrome Extensions
 
 * LastPass
@@ -986,18 +1000,8 @@ dotnet tool install --global dotnet-script
 
 * [How to disable Chrome extensions without disabling them across multiple synced devices](https://superuser.com/q/528014/180163)
 
-## Edge
 
-* [How to Turn On or Off Vertical Tabs in Microsoft Edge Chromium](https://www.tenforums.com/tutorials/164365-how-turn-off-vertical-tabs-microsoft-edge-chromium.html)
-* [Share URL Format](https://techcommunity.microsoft.com/t5/articles/announcing-a-new-way-to-paste-urls-link-format/m-p/1600094)
-* [Edge Add-ons Themes](https://microsoftedge.microsoft.com/addons/search/theme)
-
-
-## Firefox
-
-* [Ace Code Editor](https://ace.c9.io/) only copies first two lines in FF
-
-#### Shortcut Example
+### Shortcut Example
 
 <!-- spellchecker: disable -->
 
@@ -1045,7 +1049,7 @@ dotnet tool install --global dotnet-script
 
 * [How to Change Preferred Band (2.4 GHz or 5 GHz) for Wireless Network Adapters](https://www.majorgeeks.com/content/page/how_to_change_preferred_band_for_wireless_network_adapters.html)
 
-   ![change preferred band](/assets/posts/computer-setup/prefered-band.png)
+   ![change preferred band](/assets/posts/computer-setup/preferred-band.png)
 
 * [Create alias in windows start menu search](https://superuser.com/q/1599285/180163)
 

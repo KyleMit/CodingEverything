@@ -54,13 +54,13 @@ That's no bad *per-se*, but it's starting violate our separation of concerns.  I
 
 To get a handle on this problem, we'll look at three things:
 
-1. Default handling of ModelStateError on regular Form 
+1. Default handling of ModelStateError on regular Form
      <sub>Per Rule#2, this is our target for how errors should be presented to the end user</sub>
 2. Easy solution using `AJAX.BeginForm` & JavaScript
 3. Rolling our own AJAX using jQuery
 4. Rolling our own AJAX using HTML Helper ... <small>(if there's time)</small>
 
-### Default handling of ModelStateError on regular Form 
+### Default handling of ModelStateError on regular Form
 
 Just to ensure we're starting on the same page, here's a very simple example of a traditional MVC experience
 
@@ -109,7 +109,7 @@ public ActionResult Search(Person model)
 }
 ```
 
-In a typical `Post` action, if we are passed an invalid model, we re-render the original form and pass back any ModelState errors identified on the server.  If everything is in place, then we'll redirect to 
+In a typical `Post` action, if we are passed an invalid model, we re-render the original form and pass back any ModelState errors identified on the server.  If everything is in place, then we'll redirect to
 
 
 

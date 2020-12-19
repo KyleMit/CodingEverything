@@ -19,7 +19,7 @@
 * Specification implemented by browser vendors to control browser engine
 * Lowest common denominator between all browser vendors
 
-## Before Cypress...
+## Before Cypress
 
 * Install
   * [Selenium](https://www.selenium.dev/)

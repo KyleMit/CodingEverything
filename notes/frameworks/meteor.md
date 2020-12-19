@@ -2,6 +2,8 @@
 templateEngineOverride : md
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Meteor Notes
 
 
@@ -48,7 +50,20 @@ touch style.css
     * alphabetical order based on the file name.
 
 
-## Deployment
+### Deployment Steps
+
+[MUP - Meteor UP Deployment](https://github.com/arunoda/meteor-up)
+
+[Meteor Tips - Deployment](http://meteortips.com/book/deployment/)
+
+```bash
+meteor list-sites
+meteor deploy name.meteor.com
+meteor deploy name.meteor.com --delete
+```
+
+
+## Deployment Info
 
 * [projectname.meteor.com](http://docs.meteor.com/#/full/deploying) - Free and Easy
 * Platform As A Service - PaaS
@@ -156,15 +171,6 @@ git checkout tags/pres-1
 ## Javascript
 
 * Helpers are sort of like controllers.  They tell the page what to do
-
-## Guides
-
-* [A JavaScript Primer For Meteor](https://www.discovermeteor.com/blog/javascript-for-meteor/)
-* [Discover Meteor](https://book.discovermeteor.com/)
-  * [Discover Meteor Code](https://github.com/DiscoverMeteor/Microscope)
-* [bulletproofmeteor](https://bulletproofmeteor.com/basics/introduction)
-* [Stack Overflow Tag](http://stackoverflow.com/tags/meteor/info)
-* [Meteor Tips](http://meteortips.com/)
 
 
 ## Read the Docs
@@ -865,7 +871,17 @@ Meteor Wiki
 https://github.com/meteor/meteor/wiki/Supported-Platforms
 https://trello.com/b/hjBDflxp/meteor-roadmap
 
-## Guides
+## Links
+
+* [A JavaScript Primer For Meteor](https://www.discovermeteor.com/blog/javascript-for-meteor/)
+* [Discover Meteor](https://book.discovermeteor.com/)
+  * [Discover Meteor Code](https://github.com/DiscoverMeteor/Microscope)
+* [bulletproofmeteor](https://bulletproofmeteor.com/basics/introduction)
+* [Stack Overflow Tag](http://stackoverflow.com/tags/meteor/info)
+* [Meteor Tips](http://meteortips.com/)
+
+
+## Tutorials
 
 [Sortable Lists In Meteor using JQuery UI](http://differential.com/blog/sortable-lists-in-meteor-using-jquery-ui)
 [example](http://sortable-lists-jqueryui.meteor.com/)
@@ -944,19 +960,9 @@ meteor
 meteor --version
 ```
 
-### Deployment
-
-[MUP - Meteor UP Deployment](https://github.com/arunoda/meteor-up)
-
-[Meteor Tips - Deployment](http://meteortips.com/book/deployment/)
-
-```bash
-meteor list-sites
-meteor deploy name.meteor.com
-meteor deploy name.meteor.com --delete
-```
 
 ### Bootstrap Material Design
+
 https://github.com/FezVrasta/bootstrap-material-design
 http://fezvrasta.github.io/bootstrap-material-design/
 http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
@@ -964,7 +970,7 @@ https://atmospherejs.com/fezvrasta/bootstrap-material-design
 
 ### Accounts
 
-##### Configure Google
+#### Configure Google
 
 **Their Instructions**:
 
@@ -980,8 +986,10 @@ https://atmospherejs.com/fezvrasta/bootstrap-material-design
 
 1. Go to https://console.developers.google.com/project
 2. Enter a Project Name and ID
-  * MeteorTest
-  * meteor-test-123
+
+   * MeteorTest
+   * meteor-test-123
+
 3. [All Projects](https://console.developers.google.com/project)
 4. [meteor-test-123 project](https://console.developers.google.com/project/meteor-test-123)
 5. Go to APIs & Auth > Consent Screen
@@ -1006,33 +1014,40 @@ did not match a registered redirect URI
 ## Notes
 
 ### JavasScript - Shuffle Array
+
 [How to randomize (shuffle) a JavaScript array?](http://stackoverflow.com/q/2450954/1366033)
 [Fisher–Yates Shuffle](http://bost.ocks.org/mike/shuffle/)
 
 #### Wait Till subscriptionsReady??
+
 [Waiting for meteor collection to finish before next step](http://stackoverflow.com/q/20942025/1366033)
 [Meteor : wait until all templates are rendered](http://stackoverflow.com/q/25766341/1366033)
 
 ### Exception in template helper: TypeError: undefined is not a function
+
 * [One](http://stackoverflow.com/q/25758476/1366033)
 * [Two](http://stackoverflow.com/q/22574393/1366033)
 * [Three](http://stackoverflow.com/q/27077513/1366033)
 
 ### pass id into publish data
+
 [How do you conditionally send data to the client in Meteor?](http://stackoverflow.com/q/14074434/1366033)
 
 ### meteor get users
+
 [Listing all users on client with meteor](http://stackoverflow.com/q/13537777/1366033)
 
 ### Call Helper from other helper
+
 [Meteor, how to access to a helper from another helper?](http://stackoverflow.com/q/17229302/1366033)
 [Meteor.js: how to call helper method from event?](http://stackoverflow.com/q/27304409/1366033)
 [Calling one helper from another helper within the context of a template](http://stackoverflow.com/q/26414985/1366033)
 
 ### Format Date
+
 http://stackoverflow.com/a/17874408/1366033
 
-**JavaScript**
+#### JavaScript
 
 ```js
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
@@ -1040,13 +1055,14 @@ Handlebars.registerHelper("prettifyDate", function(timestamp) {
 });
 ```
 
-**Template**
+#### Template
 
-```html
+```hbs
 {{prettifyDate timestamp}}
 ```
 
 #### Document Ready
+
 http://stackoverflow.com/q/25340582/1366033
 
 ```js
@@ -1061,7 +1077,7 @@ Meteor.startup(function() {
 
 #### Event Handling
 
-http://stackoverflow.com/q/27116880/1366033
+[How to use jQuery in Meteor 1.0](http://stackoverflow.com/q/27116880/1366033)
 
 ```js
 // jQuery
@@ -1088,13 +1104,13 @@ Meteor.autorun(function () {
 
 ## Tooling
 
-#### Resharper
+### Resharper
 
 Unexpected Tag Warning
 
 #### Autocomplete
 
-Autcomplete and syntax highlighting for templates
+Autocomplete and syntax highlighting for templates
 http://madskristensen.net/post/visual-studio-extensions-for-web-developers
 http://vswebessentials.com/
 
@@ -1112,7 +1128,7 @@ https://www.jetbrains.com/webstorm/help/using-meteor.html
 Git.exe Not Working:
 http://stackoverflow.com/a/16127984/1366033
 
-Add: `%LocalAppData%\GitHub\PortableGit_<numbersandletters>\bin\git.exe`
+Add: `%LocalAppData%\GitHub\PortableGit_<sha>\bin\git.exe`
 
 [File Status](https://www.jetbrains.com/webstorm/help/file-status-highlights.html)
 [GitIgnore](https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore)
@@ -1132,10 +1148,11 @@ https://github.com/Slava/tern-meteor
 
 ## Errors
 
-#### Unexpected mongo exit code 100
+### Unexpected mongo exit code 100
 
-**Message**:
+### Message
 
+```none
 > => Started proxy.
 Unexpected mongo exit code 100. Restarting.
 Unexpected mongo exit code 100. Restarting.
@@ -1145,14 +1162,16 @@ MongoDB had an unspecified uncaught exception.
 This can be caused by MongoDB being unable to write to a local database.
 Check that you have permissions to write to .meteor/local. MongoDB does
 not support filesystems like NFS that do not allow file locking.
+```
 
-**Articles**:
 
- * [Meteor: unexpected mongo exit code 100](http://stackoverflow.com/a/15610560/1366033)
- * [Using the Remove-Item Cmdlet](https://technet.microsoft.com/en-us/library/ee176938.aspx)
- * [Cmd](http://ss64.com/nt/del.html)
+### Articles
 
-**Solution**:
+* [Meteor: unexpected mongo exit code 100](http://stackoverflow.com/a/15610560/1366033)
+* [Using the Remove-Item Cmdlet](https://technet.microsoft.com/en-us/library/ee176938.aspx)
+* [Cmd](http://ss64.com/nt/del.html)
+
+### Solution
 
 ```ps
 Remove-Item .meteor/local/db/mongod.lock
@@ -1171,10 +1190,11 @@ del .meteor/local/db/mongod.lock
 
 **Articles**:
 
- * [Change Port](http://stackoverflow.com/a/10186390/1366033)
- * [Kill Meteor](http://stackoverflow.com/a/28423731/1366033)
+* [Change Port](http://stackoverflow.com/a/10186390/1366033)
+* [Kill Meteor](http://stackoverflow.com/a/28423731/1366033)
 
 **Solution**:
+
 ```ps
 # Change Port
 meteor --port 3002
@@ -1209,18 +1229,15 @@ Don't worry about it.  It only has to do that the first time each node installer
 
 #### Meteor isn't running a local MongoDB server
 
-**Message**:
-
 > mongo: Meteor isn't running a local MongoDB server.
-
+>
 > This command only works while Meteor is running your application locally. Start your application first. (This error will also occur if you asked Meteor to use a different MongoDB server with $MONGO_URL when you ran your application.)
-
+>
 > If you're trying to connect to the database of an app you deployed with 'meteor deploy', specify your site's name with this command.
 
 #### Your app is crashing
 
-**Message**:
-
+```none
 >Your app is crashing. Here's the latest log.
  C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x86_32\dev_bundle\server-lib\node_modules\fibers\future.js:173
                         throw(ex);
@@ -1234,33 +1251,35 @@ ReferenceError: Monogo is not defined
     at C:\Users\Kyle\Documents\GitHub\MeteorApps\simple-todos\.meteor\local\build\programs\server\boot.js:117:5
 Exited with code: 8
 Your application is crashing. Waiting for file change.
+```
 
 #### Can't render headers after they are sent to the client
 
-**Message**:
-> At line:1 char:1
-    + meteor
-    + ~~~~~~
-        + CategoryInfo          : NotSpecified: (:String) [], RemoteException
-        + FullyQualifiedErrorId : NativeCommandError
-    http.js:731
-        throw new Error('Can\'t render headers after they are sent to the client.'
-              ^
-    Error: Can't render headers after they are sent to the client.
-        at ServerResponse.OutgoingMessage._renderHeaders (http.js:731:11)
-        at ServerResponse.writeHead (http.js:1152:20)
-        at ProxyServer.<anonymous>
-    (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x86_32\tools\run-proxy.js:96:21)
-        at ProxyServer.emit (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x86_32\de
-    v_bundle\lib\node_modules\eventemitter3\index.js:100:27)
-        at ClientRequest.proxyError (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x
-    86_32\dev_bundle\lib\node_modules\http-proxy\lib\http-proxy\passes\web-incoming.js:140:16)
-        at ClientRequest.emit (events.js:117:20)
-        at Socket.socketErrorListener (http.js:1551:9)
-        at Socket.emit (events.js:95:17)
-        at net.js:440:14
-        at process._tickCallback (node.js:419:13)
 
+```none
+At line:1 char:1
+  + meteor
+  + ~~~~~~
+      + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+      + FullyQualifiedErrorId : NativeCommandError
+  http.js:731
+      throw new Error('Can\'t render headers after they are sent to the client.'
+            ^
+  Error: Can't render headers after they are sent to the client.
+      at ServerResponse.OutgoingMessage._renderHeaders (http.js:731:11)
+      at ServerResponse.writeHead (http.js:1152:20)
+      at ProxyServer.<anonymous>
+  (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x86_32\tools\run-proxy.js:96:21)
+      at ProxyServer.emit (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x86_32\de
+  v_bundle\lib\node_modules\eventemitter3\index.js:100:27)
+      at ClientRequest.proxyError (C:\Users\Kyle\AppData\Local\.meteor\packages\meteor-tool\1.1.0-winr.7\mt-os.windows.x
+  86_32\dev_bundle\lib\node_modules\http-proxy\lib\http-proxy\passes\web-incoming.js:140:16)
+      at ClientRequest.emit (events.js:117:20)
+      at Socket.socketErrorListener (http.js:1551:9)
+      at Socket.emit (events.js:95:17)
+      at net.js:440:14
+      at process._tickCallback (node.js:419:13)
+```
 
 **Articles**:
 
@@ -1274,13 +1293,18 @@ Your application is crashing. Waiting for file change.
 
 > meteor : To instantly deploy your app on a free testing server, just enter your email
 At line:1 char:1
+
+```none
 + meteor deploy Kyle-Todos.meteor.com
++
++
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (To instantly de...nter your email:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
+
 address!
 Email:
-
+```
 
 **Articles**:
 
@@ -1321,7 +1345,7 @@ W20150221-19:03:26.633(-5)? (STDERR) Error: EBADF, read
 
 ## Tips
 
-#### [Nuget Package Manager Shortcut](http://stackoverflow.com/q/18424466/1366033)
+### [Nuget Package Manager Shortcut](http://stackoverflow.com/q/18424466/1366033)
 
 <kbd>Alt</kbd>, <kbd>T</kbd>, <kbd>N</kbd>, <kbd>O</kbd>
 

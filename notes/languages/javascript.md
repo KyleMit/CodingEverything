@@ -4,6 +4,55 @@
 
 [lukehoban/**es6features**](https://github.com/lukehoban/es6features) - Overview of ECMAScript 6 features
 
+## Reference (MDN)
+
+[JavaScript reference - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+### Statements
+
+* [**Control flow**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Control_flow "Permalink to Control flow")
+
+  * [`Block`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+  * [`break`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break)
+  * [`continue`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue)
+  * [`Empty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
+  * [`if...else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+  * [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+  * [`throw`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+  * [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+
+* [**Declarations**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Declarations "Permalink to Declarations")
+
+  * [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+  * [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+  * [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
+* [**Functions and classes**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Functions_and_classes "Permalink to Functions and classes")
+
+  * [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+  * [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+  * [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  * [`return`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+  * [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
+
+* [**Iterations**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Iterations "Permalink to Iterations")
+
+  * [`do...while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+  * [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+  * `for each...in`
+  * [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+  * [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+  * [`for await...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+  * [`while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+
+* [**Other**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Other "Permalink to Other")
+
+  * [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+  * [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+  * [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+  * [`label`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label)
+  * [`with`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with)
+
 
 ### Standard Built In Objects
 
@@ -354,6 +403,16 @@ Emmet autocomplete `/**`
 
 ## Questions
 
+* [javascript check if property is undefined](https://stackoverflow.com/a/416327/1366033)
+* [Easy Creation of HTML with JavaScript’s Template Strings](https://wesbos.com/template-strings-html/)
+* [HTML Templates via JavaScript Template Literals](https://css-tricks.com/html-templates-via-javascript-template-literals/)
+* [ES6 Object Destructuring Default Parameters](https://stackoverflow.com/a/26578323/1366033)
+* [How do I replace all line breaks in a string with `<br />` tags?](https://stackoverflow.com/a/784547/1366033)
+* [get characters between slashes](https://stackoverflow.com/q/8519734/1366033)
+* [get the second to last item of an array](https://stackoverflow.com/a/24331358/1366033)
+* [Async and Await with Array.map()](https://flaviocopes.com/javascript-async-await-array-map/)
+
+
 * [Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
 
 
@@ -426,7 +485,7 @@ Emmet autocomplete `/**`
 
   > Due to both equality operators, `==` and `===,` evaluating to false when checking if `NaN` is `NaN`, the function `Number.isNaN()` has become necessary.
   > This situation is unlike all other possible value comparisons in JavaScript.
-
+  >
   > The following works because NaN is the only value in JavaScript which is not equal to itself.
 
   ```js
@@ -434,3 +493,38 @@ Emmet autocomplete `/**`
       return typeof input === 'number' && input !== input;
   }
   ```
+
+* [JS Recursive object assign](https://stackoverflow.com/q/49726801/1366033)
+
+  ```js
+  let meta = {
+      "hi": { title: "hi", desc: "says hi" },
+      "bye": { title: "bye", desc: "says goodbye" }
+  }
+
+  let metaCustom = {
+      "hi": { title: "hello", },
+  }
+
+  // 2 levels of depth, copy custom properties to original
+  for (let key in meta) {
+      let custom = metaCustom[key]
+      if (custom) {
+          let base = meta[key]
+          let combined = Object.assign(base, custom)
+      }
+  }
+
+  // meta
+  {
+      "hi": { title: "hello", desc: "says hi" },
+      "bye": { title: "bye", desc: "says goodbye" }
+  }
+  ```
+
+* [What's the most elegant way to cap a number to a segment?](https://stackoverflow.com/a/11409944/1366033)
+
+
+* [Replace all occurrences of a string](https://stackoverflow.com/q/1144783/1366033)
+* [Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+

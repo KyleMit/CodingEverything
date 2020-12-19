@@ -526,3 +526,7 @@ csrutil disable
     source ~/.bash_profile
     ```
 
+
+* [gdate for mac bash](https://apple.stackexchange.com/a/231227/74706)
+
+

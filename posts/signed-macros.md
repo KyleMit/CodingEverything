@@ -14,15 +14,15 @@ If you rely on VBA solutions within your organization, make sure you sign and th
 When creating a VBA project that uses Macros, you can easily [sign the project][sign article] with a self signed certificate using the following steps:
 
 1. If you don't already have one, you'll need to create a self-signed certificate on your computer.  If you do have one, you can skip to [step 3](#sign-3).  If not, go to the Start Menu > All Programs > Microsoft Office > Microsoft Office Tools > and open **Digital Certificate for VBA Projects**
-  * ![1][Sign - 1]
+   * ![1][Sign - 1]
 2. Enter a name for your certificate and Click OK
-  * ![2][Sign - 2]
+   * ![2][Sign - 2]
 3. <span id="sign-3">Open</span> up your VBA project in Excel, Word, Outlook (etc) and hit <kbd>Alt</kbd> + <kbd>F11</kbd> to open up the VBA Project and go to Tools > Digital Signature
-  * ![3][Sign - 3]
+   * ![3][Sign - 3]
 4. On the Digital Signature Menu, Click "Choose"
-  * ![4][Sign - 4]
+   * ![4][Sign - 4]
 5. You should see the Certificate we just created.  Select that and hit OK
-  * ![5][Sign - 5]
+   * ![5][Sign - 5]
 
 ### Import Certificate From Someone Else
 
@@ -31,25 +31,25 @@ When the file is opened on another machine, it won't recognize the original cert
 > **Disclaimer**: You should *only* perform these steps when you are absolutely certain that the file has originated from someone you trust to execute any commands on your machine without your knowledge.
 
 1. Open the Excel File with Macros and click "Options"
-  * ![1][Import - 1]
+   * ![1][Import - 1]
 2. Click "Show Signature Details"
-  * ![2][Import - 2]
+   * ![2][Import - 2]
 3. Click "View Certificate"
-  * ![3][Import - 3]
+   * ![3][Import - 3]
 4. Click "Install Certificate"
-  * ![4][Import - 4]
+   * ![4][Import - 4]
 5. Install Wizard Will Open
-  * ![5][Import - 5]
+   * ![5][Import - 5]
 6. Select "Place all certificates in the following store" and Click "Browse"
-  * ![6][Import - 6]
+   * ![6][Import - 6]
 7. Select “Trusted Root Certification Authorities”
-  * ![7][Import - 7]
+   * ![7][Import - 7]
 8. Click OK / Next several times
-  * ![8][Import - 8]
+   * ![8][Import - 8]
 9. Accept the Security Warning to Install the Certificate
-  * ![9][Import - 9]
+   * ![9][Import - 9]
 10. On the original Dialog, Select “Trust all documents from this publisher” and Click OK
-  * ![10][Import - 10]
+    * ![10][Import - 10]
 
 
 ### Manage Certificates
@@ -58,9 +58,9 @@ If you want to go in and [make changes to your certificates directly][manage art
 
 1. Hit <kbd>Win</kbd> +  <kbd>R</kbd> to open up the Run Dialog
 2. Type "certmgr.msc" and Click OK
-  * ![1][Manage - 1]
+   * ![1][Manage - 1]
 3. You should see the certificate we added in the Personal/Certificates folder
-  * ![2][Manage - 2]
+   * ![2][Manage - 2]
 
 [**Alternatively**][mmc]: You can also load your Computer's Management Console by going to Start > Run mmc and then going to File > Add Snap In and then selecting Certificates.
 

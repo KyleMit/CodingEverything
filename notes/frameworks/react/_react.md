@@ -309,3 +309,16 @@ return (
     };
   }, []);
   ```
+
+
+* [Get version number from package.json](https://stackoverflow.com/a/50822003/1366033)
+* [Import JSON Data](https://stackoverflow.com/a/45662052/1366033)
+* [Update State](https://learn.co/lessons/react-updating-state)
+* [Increment State](https://stackoverflow.com/a/39316556/1366033)
+* [Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
+* ['this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
+* [Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
+* [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
+* [handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
+* [conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
+

@@ -22,3 +22,4 @@
 * [Nightwatch.js](https://nightwatchjs.org/) - Node.js powered End-to-End testing framework
 * [Selenium WebDriver](https://www.selenium.dev/documentation/en/webdriver/)
 * [Puppeteer](https://developers.google.com/web/tools/puppeteer)
+

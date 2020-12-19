@@ -51,54 +51,15 @@
 
 * Field level security based on role
 
-## Delegate admin role 7/6
-
-VDH Event Registration
-
-### People
-
-* @Kevin.Pecor - system admin
-* @Troy.Morton - system admin
-
 ### Training
 
 * Trailhead
 * Pluralsight
 
-### Governance
-
-* What training are you taking?
-  * Ping @Kevin & @Troy
-
 ### Data Modeling & Data Governance
 
 * Server > DB > Tables
 * Siloed
-
-### Work in Progress
-
-Enterprise Effort - Data Modeling
-Enterprise Best Practices
-
-* naming conventions
-* BAA -
-* sandboxes to existing apps
-  * HIPAA signing
-  * grok current naming conventions
-* folder for written docs
-
-
-### Roles
-
-* DDI - Design, Development, Implement
-  * FTE (Full Time Equivalency) for maintainence
-  * MTX - builds em' - roll the dice on maintaining
-    * basic - maintain in house
-    * enhancements - middle ground
-    * advanced - MTX folks
-      * retainer vendors
-* Admin
-* M&O
 
 ### Revision Control
 
@@ -111,229 +72,9 @@ Enterprise Best Practices
 * User Acct
 
 
-## Salesforce Admin Meeting 7/8
+## Intro to SalesForce by [Jerry Conrad](jconrad@salesforce.com)
 
-
-### People
-
-
-#### ADS
-
-* **Platform**
-  * @Jennifer.Pax
-  * @Michael.LaPera
-* **Integration**
-  * @Troy.Morton
-  * @Kevin.Pecor
-* @Chris.Bliven
-* @Dan.Chase
-* @Mark.Combs
-* @Becky-Jo.Cyr
-* @Cara.Herring - AOE - working with changeset - completed first change to AOE response app - 17k points - 19badges
-* @John.Hunt
-* @Matt.Lofgren -
-* @Jenny.McAdam (Jen) -
-* @Michael.Nagle
-* @Randall.Connelly (Randy) - DAIL IT Manager - Housing Inspection Application - support Allison Loebs
-  * @Tela.Torrey (Teal-ah) - PM Assigned ot DAIL
-  * @Allison.Loebs - DAIL - Housing Inspection App - Enhancements - Some in-house - Reports / Report Snapshots
-* @Daniel.A.Jarvis - Dept. Public Safety - Phase 2 Dev - Change Sets
-  * @Patricia.Martin (Trisha) - Inventory Application - Data Objects - Minimal salesforce screens - update inventory using screens - 18k points - 14 badges
-* @Bill.Froberg
-* @Donald.Hefferon
-* @Charlie.Zimmermann - .NET dev for ACCD
-
-#### SalesForce
-
-* @sconnolly@salesforce.com (Sean) - Presenter
-* @samuel.shankar@salesforce.com (Sam) - Dev Ops
-* @jconrad@salesforce.com (Jerry)
-* @wshelton@salesforce.com
-* @aghousheh@salesforce.com (Ameer) - first point of contact
-
-#### MTX
-
-* @jill.brabender@mtxb2b.com
-
-
-### Survey Report - Training Topics
-
-Important Topics
-
-1. Dev Ops
-2. MuleSoft
-3. Reporting Dashboards vs Einstein Analytics vs Tableau
-4. Data Model
-5. Org Health Check
-6. Solutions addressing COVID
-7. Governor's Office
-8. Integration w/ Legacy Applications
-9. 311 Services
-10. Licensing, Permitting, Inspections
-11. Org Strategy
-12. SalesForce Connect
-13. SalesForce Maps
-14. SalesForce Platform Governance
-15. Feature Adoption vs User Adoption vs Platform Adoption
-16. How to define success metrics for your SalesForce Platform
-17. Release Management
-18. Solutions Encompassing Children (Child Care, Foster Care, Comprehensive Child Welfare Information System (CCWIS), Early Edu)
-19. Technical Debt Reduction
-20. Digital Transformation of City vs. Department
-21. Economic Development (Business One Stop, Licensing Legal, Revenue)
-22. SalesForce Application Design Approach
-23. SalesForce Developer Overview: Declarative vs. Code
-24. [Vlocity](https://vlocity.com/partners/salesforce)
-25. Grants Management
-26. Instructor Lead Trainings vs. Trailhead based training vs Certification
-27. Legal Case Management
-28. SalesForce WORK.com
-
-### Info
-
-* [vt-ads-pilot](http://vt-ads-pilot.lightning.force.com/lightning)
-* [The Difference between Salesforce System Integrators (SIs) and Independent Software Vendors (ISVs)](https://powerofus.force.com/s/article/SFDO-CS-Salesforce-SIs-vs-ISVs)
-
-### Bottlenecks
-
-* Don't have shiny onboarders
-* Have multiple people all trying to get in SalesForce
-* Have lots of people taking advantage of different systems
-* Inconsistent implementation of technologies
-* @Allison - struggling with Visual Source Code in APEX code, getting into source control
-
-
-### Updates
-
-* [Salesforce Summer ’20 Release Notes](https://releasenotes.docs.salesforce.com/en-us/summer20/release-notes/salesforce_release_notes.htm)
-* [Summer 20' Update Summary](https://www.reddit.com/r/salesforce/comments/gqu0g3/summer_20_release_notes_abridged_edition/)
-* Capado Training
-
-
-
-
-## SalesForce Onboarding 7/9
-
-### People
-
-* @Jennifer.Pax
-* @Michael.LaPera
-
-* Dev Ops
-* Administration
-* Release Management
-
-
-### Naming Conventions
-
-* Single Table
-* Prefix Table
-* Core Table + Extended Table
-
-### Styles
-
-* Development
-* SalesForce
-* SalesForce Dev
-
-### Governance
-
-* Craig Benson (previously)
-* Amber DeVoss (previously)
-* Kevin Pecor (soon)
-
-* use [vlocity](https://vlocity.com/)
-
-* need SalesForce Architect
-* 2x EA1 (PG26)
-* Best Practice - stub my toe
-* Knowing gotchas
-
-### Action Items
-
-* ADS Pilot Site
-* Link to Trailhead
-* Dev Train Sandbox
-  * ex. see all custom fields linked to Account Object
-* Add to SalesForce Teams
-  * x would be helpful
-* Decentralized governance
-* Portfolio Management
-* Onboarding
-
-### Documentation
-
-Ex. SalesForce Tech Team > General > Files > App Documentation
-[AOE Response Team](https://vermontgov.sharepoint.com/teams/ADS-SalesForce/Shared%20Documents/General/App%20Documentation/AOE%20Response%20Team)
-
-* Data Dictionary
-* Metadata Deployment Play Book
-* Data Model
-* ERD
-* User Guide
-* VT Response Team
-* Compliance Categorization
-
-### Doc Needs
-
-* Living Docs
-* Difficult to find out which app is using it
-
-
-### Dev Train
-
-Shared
-
-* Apps
-* Objects
-
-### Permissions
-
-Sys Admin in Sandbox
-Delegate Admin - Adm
-
-Schema Builder -> All is huge
-Shared Responsibility Model
-
-### Logins
-
-* **SSO** - Single Sign On not available
-* Each sandbox requires unique username
-* `first.last@vermont.gov.sandbox_name`
-
-### Data Modeling
-
-* insulate apps from each other
-* SalesForce native
-  * Contact
-  * Account
-
-
-### Release Mgmt
-
-* Dev Ops
-* Custom Object
-* Shared Object
-  * gates for review
-* Active Maintainence
-  * Shared objects
-
-
-### Revision Control
-
-* Capado
-  * Canned regression tests
-  * Selenium - Integration Testing Engine
-    * **CST** - [Copado Selenium Testing](https://docs.copado.com/article/eg64vsc73o-copado-selenium-testing-cst)
-* Using Shared object
-  * Are they allowed?
-
-
-## SalesForce Admin Meting 7/22
-
-### Intro to SalesForce by [Jerry Conrad](jconrad@salesforce.com)
-
-#### Rate of Innovation
+### Rate of Innovation
 
 ![rate of innovation](/assets/notes/salesforce/rate-of-innovation.png)
 
@@ -447,40 +188,6 @@ They can get a cost savings by combining into a single organization, but sometim
 * Step on each other's toes
 * Share data where we shouldn't
 
-## VT Governance
-
-* Platform Admins
-  * Mike
-  * Jen
-* Delegate Admins
-  * On Dev/Test Sandbox
-
-* Charlie Zimmerman
-  * Wh
-
-### Apps on VT Tenant
-
-
-
-* DAIL Inspection
-* VT - AHS
-* AOT IDIQ
-* HCQC Console
-* DOL Claims
-* DOL Review
-* AOE Response Team
-* Inventory Management
-
-ACCD?
-
-Don't have the luxury of normalizing info
-Most apps are going to be ephemeral - so pose no long term risk
-
-### Next Up
-
-August 5th - Demo MuleSoft w/ MuleSoft team
-
-
 
 ## Trail Head
 
@@ -507,20 +214,6 @@ August 5th - Demo MuleSoft w/ MuleSoft team
 ### Courses
 
 [Build Apps Together with Package Development](https://trailhead.salesforce.com/en/content/learn/trails/sfdx_get_started)
-
-### Spring 2020
-
-* **Task Queue Assignment**
-
-
-## Error Reporting & Resolution
-
-* Logging?
-* Real Time Issues?
-* Contractual Turn around time - few weeks
-
-![communication plan](/assets/notes/salesforce/communication-plan.png)
-
 
 ## UI Overview
 
@@ -648,21 +341,6 @@ ex. Manage Data Integrations
 
 ![keyboard shortcuts](/assets/notes/salesforce/keyboard-shortcuts.png)
 
-## Documentation
-
-* [Guide for Delegate Admins for Onboarding a NEW SF App](https://vermontgov.sharepoint.com/:w:/r/teams/ADS-SalesForce/_layouts/15/Doc.aspx?sourcedoc=%7B83DE8A46-28D2-4C37-AC93-5184DB5DE246%7D)
-* [Delegate Admin Responsibilities](https://vermontgov.sharepoint.com/:w:/r/teams/ADS-SalesForce/_layouts/15/Doc.aspx?sourcedoc=%7B68F4189C-0574-4107-B916-58CBB09A3D93%7D&cid=5037f5e2-a9e8-46a6-b939-7e8f56b2e94d)
-* [Template Data Dictionary](https://vermontgov.sharepoint.com/:x:/r/teams/ADS-SalesForce/_layouts/15/Doc.aspx?sourcedoc=%7B867BAE46-2981-4F95-8FFF-735DF5F4E09D%7D&cid=3ae065fd-37cb-4c85-a4b6-a5edbd971bbc)
-  * API Name
-  * Field Type
-  * Values (if picklist)
-  * Formula
-  * SecurityClassification
-  * ComplianceGroup
-  * Description
-  * Help Text
-  * Required
-  * Notes
 
 ## Workflow
 
@@ -711,14 +389,6 @@ ex. Manage Data Integrations
 * HIPAA Playbook
 
 
-
-## Email
-
-[Email Alerts](https://help.salesforce.com/articleView?id=customize_wf.htm&type=5)
-
-* [ ] kyle connect with Alex
-* [ ] Ellie log in UAT
-* [ ] steering committee - platform issues - email
 
 MPI - Salesforce in human service
 
@@ -803,12 +473,6 @@ WHERE permissionset.name LIKE 'Covid%'
 > * When you instead use `__r`, you are saying you want to access data inside the record that is linked.
 
 
-<!--
-Kevin Pecor
-
-* shit everywhere
-* running at unsustainable pace
--->
 
 ## SF + DotNet
 
@@ -933,11 +597,3 @@ Debug > Open Execute Anonymous Window <kbd>Ctrl</kbd> + <kbd>E</kbd>
 
 [Salesforce List of Sobject with group by](https://salesforce.stackexchange.com/q/220544/69980)
 
-
-## Programmatically Access
-
-[Knowledge Hub Help - Generating a Client ID and ClientSecret Key for Salesforce Connections](https://docs.datawatch.com/swarm/desktop/Generating_a_Client_ID_and_ClientSecret_Key_for_Salesforce_Connections.htm)
-
-**Callback URL**: http://localhost:8443/connections/oauthRedirectUrl
-**Key**: 3MVG9oNqAtcJCF.EpmdMpPyonoMls3iJoHHmMT0bmnd4hz8p3kXRctm2SXfG0p8f_x04Cd.vjTI6Qku.6TFla
-**Secret**: 5314BD093DDD26A04E5012F8D4DF09E14FA43C412178B8C0BCE6D6A85D5A69DD

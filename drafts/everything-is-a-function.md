@@ -7,7 +7,7 @@ draft: true
 <div><style>
 body {
     color: green;
-} 
+}
 
 </style></div>
 
@@ -61,7 +61,7 @@ because `Public Property Name` actually unwraps into a method named `Get_Name`
 
 ### Events
 
-Whats even cooler is that events are really just a series of function calls that make callbacks easy to register with a central handler.  
+Whats even cooler is that events are really just a series of function calls that make callbacks easy to register with a central handler.
 
 Here's how a typical event works:
 
@@ -87,8 +87,8 @@ The compiler will find all the Handles keywords and add a method to add them and
 
 So how could we do this whole thing with just **functions**?
 
-Here's a simple module titled `CustomEvents`.  It contains a dictionary which will hold a mapping of event names and callbacks to execute when the event is raised.  
-The `AddHandler` method just takes an event name and callback and adds the key value pair to the dictionary.  At this point, it's the same as saying I don't know if anything will raise this event or not, but if it does, could you please execute this function when it does.  You could add any number of events and callbacks here.  
+Here's a simple module titled `CustomEvents`.  It contains a dictionary which will hold a mapping of event names and callbacks to execute when the event is raised.
+The `AddHandler` method just takes an event name and callback and adds the key value pair to the dictionary.  At this point, it's the same as saying I don't know if anything will raise this event or not, but if it does, could you please execute this function when it does.  You could add any number of events and callbacks here.
 Finally, the `RaiseEvent` method just takes in the name of the event.  In this case it will just find the first item in the dictionary that has the same eventName, which will return an action and then it will immediately execute that action.  A more sophisticated example would check to make sure the event existed before calling the action and also allow the same event to be registered to multiple callbacks.
 
 ```vb
@@ -123,7 +123,8 @@ Compare that to our own implementation. Because both of our method names are pro
 [RaiseEvent]("NameAdd")
 ```
 
-So that's a very naive implementation of Event Handlers using methods, but you should get a feel for how they work. 
+So that's a very naive implementation of Event Handlers using methods, but you should get a feel for how they work.
 
 ### Wrap Up
-It's important to note here that I'm not advocating for replacing any of these language features with methods.  These wrappers exist for a very important reason.  They make the code more beautiful, and readable, and abstract away some of the boilerplate plumbing you'd need to do to hook everything up.  But I still think it's interesting to know a little bit about whats going on behind the scenes and why these language features are important and what they're doing.  If you find yourself in a language that doesn't support properties or events, you might have a better understanding about how to roll your own if neccessary.
+
+It's important to note here that I'm not advocating for replacing any of these language features with methods.  These wrappers exist for a very important reason.  They make the code more beautiful, and readable, and abstract away some of the boilerplate plumbing you'd need to do to hook everything up.  But I still think it's interesting to know a little bit about whats going on behind the scenes and why these language features are important and what they're doing.  If you find yourself in a language that doesn't support properties or events, you might have a better understanding about how to roll your own if necessary.

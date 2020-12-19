@@ -82,7 +82,7 @@ https://msdn.microsoft.com/en-us/magazine/dn189202.aspx
 Folders Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.outlook.oldefaultfolders?view=outlook-pia
 Status Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.outlook.olbusystatus?view=outlook-pia
 
-## Modules
+## Third Party Modules
 
 `[Join-Object`](https://github.com/RamblingCookieMonster/PowerShell/blob/master/Join-Object.ps1)
 [`ImportExcel`](https://www.powershellgallery.com/packages/ImportExcel/7.0.1)
@@ -91,24 +91,6 @@ Status Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.intero
 Install-Module -Name ImportExcel -Repository PSGallery -Force
 ```
 
-
-[Variable expansion / String interpolation](http://blogs.msdn.com/b/powershell/archive/2006/07/15/variable-expansion-in-strings-and-herestrings.aspx) - Only works with double quotes
-
-```bash
-PS> $x="TEST"
-PS> "This is a $x"
-This is a TEST
-PS> 'This is a $x'
-This is a $x
-```
-
-Formally - `$ExecutionContext.InvokeCommand.ExpandString($string)`
-
-Expressions should be enclosed:
-
-```bash
-$($variableName) or ${variableName}
-```
 
 **Powershell Version**:
 
@@ -350,7 +332,7 @@ if ($decision -eq 0) {
 }
 ```
 
-##### Create New Object
+#### Create New Object
 
 [Creating Custom Objects](http://social.technet.microsoft.com/wiki/contents/articles/7804.powershell-creating-custom-objects.aspx)
 
@@ -444,3 +426,23 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 * [How To: Export SQL Server FileStream Data with PowerShell](http://social.technet.microsoft.com/wiki/contents/articles/899.how-to-export-sql-server-filestream-data-with-powershell.aspx)
 * [Delete files without an extension in PowerShell](https://stackoverflow.com/a/42345207/1366033)
 * [Finding All the Empty Folders in a Directory Tree](https://technet.microsoft.com/en-us/library/ff730953.aspx)
+
+
+* [Variable expansion / String interpolation](http://blogs.msdn.com/b/powershell/archive/2006/07/15/variable-expansion-in-strings-and-herestrings.aspx) - Only works with double quotes
+
+    ```bash
+    PS> $x="TEST"
+    PS> "This is a $x"
+    This is a TEST
+    PS> 'This is a $x'
+    This is a $x
+    ```
+
+    Formally - `$ExecutionContext.InvokeCommand.ExpandString($string)`
+
+    Expressions should be enclosed:
+
+    ```bash
+    $($variableName) or ${variableName}
+    ```
+

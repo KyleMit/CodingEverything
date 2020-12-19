@@ -387,6 +387,30 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 
 ## Questions
 
+
+* [How do you properly promisify request?](https://stackoverflow.com/q/28308131/1366033)
+* [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
+* [Why does Node.js' fs.readFile() return a buffer instead of string?](https://stackoverflow.com/q/6456864/1366033)
+* [How do I get the path to the current script with Node.js?](https://stackoverflow.com/q/3133243/1366033)
+* [I'd like to remove the filename from a path using JavaScript](https://stackoverflow.com/a/59506376/1366033)
+* [vscode debug code in node_modules directory](https://stackoverflow.com/a/53081698/1366033)
+* [Is it possible to blackbox vendor code when using VSCode's node debugger?](https://stackoverflow.com/a/48621036/1366033)
+* [writeFile no such file or directory](https://stackoverflow.com/a/50927704/1366033)
+* [Determine project root from a running node.js application](https://stackoverflow.com/a/18721515/1366033)
+* [How to set environment variables from within package.json](https://stackoverflow.com/a/27090755/1366033)
+
+* [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
+* [how to create a directory if doesn't exist?](https://stackoverflow.com/q/21194934/1366033)
+* [skip internal modules](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_skipping-uninteresting-code-node-chrome)
+
+
+
+* [Setting Environment Variables for Node to retrieve](https://stackoverflow.com/a/34154491/1366033)
+  * [Managing Environment Variables in Node.js with dotenv](https://stackabuse.com/managing-environment-variables-in-node-js-with-dotenv/)
+  * [motdotla/**dotenv**](https://github.com/motdotla/dotenv)
+    * *ALT*: [erisanolasheni/**custom-env**](https://github.com/erisanolasheni/custom-env)
+
+
 * [Require at top of file of in function?](https://stackoverflow.com/a/9139419/1366033)
 
 
@@ -405,3 +429,5 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
     npm install svgexport -g
     svgexport input.svg output.png 1.5x
     ```
+
+* [List Directory](https://stackoverflow.com/q/2727167/1366033)

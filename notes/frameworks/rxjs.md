@@ -98,7 +98,7 @@ const subscription = dataSource
 * Multicasting
 * Transformation
 
-### Operators
+### Operator Docs
 
 * [Combination](https://www.learnrxjs.io/learn-rxjs/operators/combination)
   * [concat](https://www.learnrxjs.io/learn-rxjs/operators/combination/concat) ⭐

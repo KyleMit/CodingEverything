@@ -32,16 +32,6 @@ Cascade Style Sheets
 ![bem diagram](/assets/notes/css/bem-diagram.jpg)
 
 
-## Questions
-
-* [CSS selector with period in ID](https://stackoverflow.com/q/12310090/1366033)
-
-```css
-#some\.id {
-  color: #f00;
-}
-```
-
 
 ## Media Queries
 
@@ -60,4 +50,23 @@ button {
   }
 }
 ```
+
+
+## Questions
+
+* [CSS selector with period in ID](https://stackoverflow.com/q/12310090/1366033)
+
+```css
+#some\.id {
+  color: #f00;
+}
+```
+
+
+* [CSS Image size, how to fill, not stretch?](https://stackoverflow.com/a/29103071/1366033)
+
+* [transition height: 0; to height: auto; using CSS?](https://stackoverflow.com/a/8331169/1366033)
+
+* [Using `box shadows` and `clip-path` together](https://css-tricks.com/using-box-shadows-and-clip-path-together/)
+* [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
 

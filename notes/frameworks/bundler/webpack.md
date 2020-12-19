@@ -104,3 +104,6 @@ module.exports = {
   * `style-loader` takes those styles and creates a `<style>` tag in the page's `<head>` element containing those styles.
 
 
+* [ES Lint Line breaks](https://stackoverflow.com/a/44662845/1366033)
+* [Static Asset - Relative Path Imports via File Loader](https://cli.vuejs.org/guide/html-and-static-assets.html#static-assets-handling)
+

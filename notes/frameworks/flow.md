@@ -48,17 +48,19 @@ yarn add --dev flow-bin
 "javascript.validate.enable": false
 ```
 
+### Create `.flowconfig`
+
+```bash
+flow init
+```
+
+
 ### `.flowconfig`
 
 ```json
 "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow"
 ```
 
-### `.flowconfig`
-
-```bash
-flow init
-```
 
 ## Syntax
 

@@ -24,9 +24,21 @@
 
 [Working with GitHub in VS Code](https://code.visualstudio.com/docs/editor/github)
 
+
+### Typings
+
+* [ATA - Automatic Type Acquisition](https://code.visualstudio.com/docs/languages/javascript#_automatic-type-acquisition)
+* [jQuery Intellisense in VS Code](https://stackoverflow.com/q/33902077/1366033)
+
+
 ### Tasks
 
-[Tasks](https://code.visualstudio.com/docs/editor/tasks)
+* [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+* [VS Code Tasks](https://code.visualstudio.com/docs/editor/tasks)
+* [Is it possible to assign different shortcuts to different tasks in VS Code?](https://stackoverflow.com/q/30057191/1366033)
+* [Can I automatically start a task when a folder is opened?](https://stackoverflow.com/q/34103549/1366033)
+* [Launching a website via command line](https://stackoverflow.com/a/23039509/1366033)
+
 
 Type `task·`
 
@@ -48,6 +60,7 @@ Type `task·`
   * `env` (environment variables) or
   * `shell` (default shell).
 * **runOptions**: Defines when and how a task is run.
+
 
 
 #### Example
@@ -157,6 +170,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 
 ## Questions
+
 
 
 * [Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
@@ -343,3 +357,43 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   * [How to clear terminal scrollback buffer](https://stackoverflow.com/q/61696345/1366033)
   * [How to clear the entire terminal (PowerShell)](https://stackoverflow.com/q/52127653/1366033)
+
+
+* Open Multiple Files at Once
+
+  * [Open Multiple Files](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-multiple-files)
+
+  1. Open Command Palette
+  2. Type `Open Multiple Files`
+  3. Type glob ex. `**/*.md`
+
+  > *alt*: [Open Matching Files](https://marketplace.visualstudio.com/items?itemName=bcanzanella.openmatchingfiles)
+
+* [Autofix Markdown Lint Errors](https://github.com/DavidAnson/markdownlint/issues/80)
+
+
+  ```json
+  {
+    "key": "ctrl+alt+f",
+    "command": "markdownlint.fixAll"
+  }
+  ```
+
+  Or autofix on save
+
+  ```json
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true
+  }
+  ```
+
+* [List of all available commands in VSCode](https://stackoverflow.com/q/37844144/1366033)
+
+  Browse via Keyboard Shortcuts Window
+
+  or
+
+  In extension, call `vscode.commands.getCommands()`
+
+* [Change keyboard shortcut bindings in Visual Studio Code?](https://stackoverflow.com/a/33791170/1366033)
+* [VS Code - Mouse Wheel Zoom](https://stackoverflow.com/q/30192884/1366033)

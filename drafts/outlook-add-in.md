@@ -20,9 +20,9 @@ Go to the **Application Folder** Properties by right clicking and Selecting **Pr
 
 ![Application Folder](https://i.imgur.com/RnF7jhk.png)
 
-In the Properties Window, change the **DefaultLocation** from `[ProgramFilesFolder][Manufacturer]\[ProductName]` to `[AppDataFolder][Manufacturer]\[ProductName]`.  
+In the Properties Window, change the **DefaultLocation** from `[ProgramFilesFolder][Manufacturer]\[ProductName]` to `[AppDataFolder][Manufacturer]\[ProductName]`.
 
-* We'll do this so that the application will install in the *AppData* folder (`%AppData%`) so that the files end up in a safe, sandboxed location that requires minimum install priveleges.
+* We'll do this so that the application will install in the *AppData* folder (`%AppData%`) so that the files end up in a safe, sandboxed location that requires minimum install privileges.
 
 ![DefaultLocation](https://i.imgur.com/9egzLk7.png)
 
@@ -76,12 +76,12 @@ It should look like this:
 
 In your project key add the following registry values:*
 
-Type   | Name           | Value
--------|----------------|-------
-String | `Description`  | *EnterYourProjectDescriptionHere*
-String | `FriendlyName` | *EnterYourProjectNameHere*
-DWORD  | `LoadBehavior` | 3
-String | `Manifest`     | <code>[TARGETDIR]<i>SendReminder</i>.vsto&#124;vstolocal</code>
+| Type   | Name           | Value                                                           |
+| ------ | -------------- | --------------------------------------------------------------- |
+| String | `Description`  | *EnterYourProjectDescriptionHere*                               |
+| String | `FriendlyName` | *EnterYourProjectNameHere*                                      |
+| DWORD  | `LoadBehavior` | 3                                                               |
+| String | `Manifest`     | <code>[TARGETDIR]<i>SendReminder</i>.vsto&#124;vstolocal</code> |
 
 *Replace _italicized_ text with values from your own project
 
@@ -97,7 +97,7 @@ It should now look like this:
 
 ![Registry Values](https://i.imgur.com/CFgRfJf.png)
 
-Finally, if the user decides to uninstall the add on, you should remove the modifed Registry Properties, but should **not** change Microsoft\Office\Outlook\Addins structure.  Click **only** only the registry key for your project.  Go to the *Properties Window* and set **DeleteAtUninstall** to `True`
+Finally, if the user decides to uninstall the add on, you should remove the modified Registry Properties, but should **not** change Microsoft\Office\Outlook\Addins structure.  Click **only** only the registry key for your project.  Go to the *Properties Window* and set **DeleteAtUninstall** to `True`
 
 ![DeleteAtUninstall](https://i.imgur.com/YMbNVgf.png)
 
@@ -105,7 +105,7 @@ Finally, if the user decides to uninstall the add on, you should remove the modi
 
 To make sure the client system has all the necessary prerequisites, right click on your original add-in project (***not the setup project***) and select Properties.  Go to the **Publish** tab and under **Install Settings**, click **Prerequisites**
 
-![Prerequisities](https://i.imgur.com/A302sVr.png)
+![Prerequisites](https://i.imgur.com/A302sVr.png)
 
 Make sure the following to frameworks are checked:
 
@@ -121,7 +121,7 @@ While on your Project Properties Page, go to **Compile** > **Advanced Compile Op
 
 ![Advanced Compile Options](https://i.imgur.com/shIcU5O.png)
 
-Select the **Setup Project** and hit <kbd>F4</kbd> to go to the Properties Window.  Enter values for *Author*, *Manufacturer*, *ProductName*, *Title*, and *Version*.  
+Select the **Setup Project** and hit <kbd>F4</kbd> to go to the Properties Window.  Enter values for *Author*, *Manufacturer*, *ProductName*, *Title*, and *Version*.
 **Note**: To redeploy a new build, you must update the version number with each build. Doing so will automatically update your *ProductCode* to a new GUID
 
 ![Project Properties](https://i.imgur.com/HZxOToO.png)

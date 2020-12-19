@@ -15,7 +15,7 @@ This has been asked on StackOverflow several times:
 
 but I haven't found any of the answers very compelling.  Every single one of them hard codes the control ID into the client and server side validation methods, which brings re-usability of the core logic down to *zero*.
 
-Using a custom validator is definitely the right approach, but I wanted to mimic what the ASP.NET framework had already done for validators by exposing an attribute for [`ControlToValidate`][ControlToValidate].  Except, in this case, we need to identify several controls to validate, rather than a single one.  
+Using a custom validator is definitely the right approach, but I wanted to mimic what the ASP.NET framework had already done for validators by exposing an attribute for [`ControlToValidate`][ControlToValidate].  Except, in this case, we need to identify several controls to validate, rather than a single one.
 
 ### Markup
 
@@ -30,9 +30,9 @@ Let's work with the following `TextBox` controls:
 Here's a custom validator that we'll break down in a second.
 
 ```xml
-<asp:CustomValidator runat="server" 
-    ID="AnyFieldRequiredValidator" 
-    ErrorMessage="Please enter at least one phone number." 
+<asp:CustomValidator runat="server"
+    ID="AnyFieldRequiredValidator"
+    ErrorMessage="Please enter at least one phone number."
     ValidateEmptyText="True"
     OnServerValidate="ServerAnyFieldRequired"
     ClientValidationFunction="ClientAnyFieldRequired"
@@ -45,7 +45,7 @@ Although you can [extend asp.net attributes][extend-attributes], that seemed lik
 
 By setting the [`ValidateEmptyText`][ValidateEmptyText] property to `True`, we'll ensure that the validation will always fire.  The default behavior is that empty controls will not undergo any validations.
 
-The nice thing about ASP.NET validators, is they run on the client for speed and the server for saftey.  Gone are the days where we really have to worry *if* user's will have JavaScript enabled, but it never hurts to have the sever confirm any validation.  It prevents accidental and intentional validation skips.  Default ASP.NET valiation controls already implement both of these methods, but we'll have to write our own Client and Server side validation.  Yes, you have to write **two** methods, but you really ought to anyway, and at least this keeps the logic in a single, re-usable place.  The next two sections will go over each validation method.
+The nice thing about ASP.NET validators, is they run on the client for speed and the server for safety.  Gone are the days where we really have to worry *if* user's will have JavaScript enabled, but it never hurts to have the sever confirm any validation.  It prevents accidental and intentional validation skips.  Default ASP.NET validation controls already implement both of these methods, but we'll have to write our own Client and Server side validation.  Yes, you have to write **two** methods, but you really ought to anyway, and at least this keeps the logic in a single, re-usable place.  The next two sections will go over each validation method.
 
 
 ### Client Side Validation
@@ -58,32 +58,33 @@ First, we need to get a list of all the controls we want to validate against. Th
 
 Second, we'll loop through each control to see if any of them have any data. ASP.NET has several different mechanisms for generating a client side ID based on the current [`ClientIdMode`][ClientIdMode].  You may be able to use a better suited mechanism to find each control on the client (depending on which rendering mode you've chosen), but you should always be able to use the [attribute ends with selector: `[name$="value"]`][name$="value"]. We'll build a selector for each element by checking if the id attribute ends with the ID we set.  Then we'll find the element, get it's value, trim it, and see if the length is greater than zero.
 
-# Todo - Find best one and merge:
+## // Todo - Find best one and merge
+
 http://stackoverflow.com/q/13721615/1366033
 http://stackoverflow.com/q/1274806/1366033
 http://stackoverflow.com/q/5589095/1366033
 http://stackoverflow.com/q/5370716/1366033
 
-### Here's what all of that looks like in code:
+### Client Side Code
 
 ```js
 function ClientAnyFieldRequired(sender, args) {
     var fieldIds = [];
     var hasSomeData = false;
-    
+
     //get list of fields from data attributes
     $.each($(sender).data(), function (key, value) {
         if (key.indexOf("anyfield") != -1)
             fieldIds.push(value);
     });
-    
+
     //check each field to see if it has data
     $.each(fieldIds, function (index, value) {
         var selector = "[id$='"+value+"']";
         if ($(selector).val().trim().length > 0)
             hasSomeData = true;
     });
-    
+
     //return whether or not we have data
     args.IsValid = hasSomeData;
 }
@@ -97,11 +98,11 @@ To start, we'll cast the incoming source object to the CustomValidator type so w
 
 On the client we have powerful methods for traversing the DOM, like jQuery which is built on top of the Sizzle selection engine, however the Server is a little more kludgy.  To map each ClientId with a control, we'll first have to recursively build a list of all the control's on the page (since each control only lists it's direct children)([method below](#getallcontrolas-method)).
 
-Next we'll get a list of the controls by joining our list of ids on the ID property of all the controls and casting each into a `TextBox`.  Now we can search through that collection to see any if any textboxes have any value in their Text property. 
+Next we'll get a list of the controls by joining our list of ids on the ID property of all the controls and casting each into a `TextBox`.  Now we can search through that collection to see any if any textboxes have any value in their Text property.
 
 Like in the javascript function, we'll return the validity by setting the IsValid property on the `ServerValidateEventArgs` parameter before exiting.
 
-### Here's what all of that looks like in code:
+### Server Side Code
 
 ```vb
 Protected Sub ServerAnyFieldRequired(ByVal source As Object, ByVal args As ServerValidateEventArgs)
@@ -116,13 +117,13 @@ Protected Sub ServerAnyFieldRequired(ByVal source As Object, ByVal args As Serve
     'build a list of all the controls on the page
     Dim allFields = Master.GetAllControls()
 
-    'get all the fields 
+    'get all the fields
     Dim fields = From fieldId In fieldIds
                  From ctrl In allFields
                  Where fieldId = ctrl.ID
                  Select CType(ctrl, TextBox)
 
-    'see if any of the textboxes have data             
+    'see if any of the textboxes have data
     Dim hasSomeData = (From f In fields
                        Where f.Text.Trim <> "").Any()
 

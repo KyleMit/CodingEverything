@@ -61,6 +61,16 @@ Available in Node 8.2 / npm 5.2.0
 
 ## Questions
 
+
+* [Peer Dependencies](https://nodejs.org/es/blog/npm/peer-dependencies/)
+* [Installing a local module using npm?](https://stackoverflow.com/a/8089029/1366033)
+* [npm link docs](https://docs.npmjs.com/cli/link)
+* [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
+* [Creating and publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
+* [How to publish packages to npm (the way the industry does things)](https://zellwk.com/blog/publish-to-npm/)
+* [What is the meaning of the “at” (@) prefix on npm packages?](https://stackoverflow.com/q/36667258/1366033)
+
+
 * [What is the difference between npm-shrinkwrap.json and package-lock.json?](https://stackoverflow.com/a/46132512/1366033)
 
 

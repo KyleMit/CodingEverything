@@ -1,5 +1,10 @@
 # Acronyms
 
+## Community
+
+* **VTCC** - Vermont Code Camp
+* **BOSCC** - Boston Code Camp
+
 ## Terms
 
 * **RBP** - Recommended Best Practice
@@ -16,6 +21,7 @@
 * **IO** - Input / Output
 * **CS** - Computer Science
 * **AST** - Abstract Syntax Tree
+* **DVCS** - Distributed Version Control System
 * **IEEE** - Institute of Electrical and Electronics Engineers
 * **IEEE 754** - IEEE Standard for Floating-Point Arithmetic
 
@@ -333,7 +339,7 @@
 * [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
 * [Directive / Pragma](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
 
-## Terms
+## General
 
 ### Human Resources
 
