@@ -44,3 +44,10 @@
 * [Big ball of mud - Wikipedia](https://en.wikipedia.org/wiki/Big_ball_of_mud)
 * [The Big Ball of Mud and Other Architectural Disasters](https://blog.codinghorror.com/the-big-ball-of-mud-and-other-architectural-disasters/)
 
+## API
+
+* SOAP
+* REST
+* [gRPC](https://grpc.io/)
+
+

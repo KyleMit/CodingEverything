@@ -24,6 +24,7 @@
 * **DVCS** - Distributed Version Control System
 * **IEEE** - Institute of Electrical and Electronics Engineers
 * **IEEE 754** - IEEE Standard for Floating-Point Arithmetic
+* **EOF** - End of File
 
 ### Software Development LifeCycle
 
@@ -164,6 +165,7 @@
 * **WSDL** - Web Service Description Language
 * **PAT** - Personal Access Token
 * **SOA** - Service Oriented Architecture
+* **gRPC** - grpc Remote Procedure Call
 
 ### Protocols
 

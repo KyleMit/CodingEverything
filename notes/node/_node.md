@@ -4,135 +4,9 @@
 
 * [Deno](https://deno.land/)
 
+
+
 ## File System
-
-[Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
-
-```js
-let { promises: fs } = require("fs");
-let names = await fs.readdir("path/to/dir");
-let file = fs.readFile(filePath, 'utf8');
-```
-
-[Node.js create folder or use existing](https://stackoverflow.com/a/24311711/1366033)
-
-```js
-let { promises: fs } = require("fs");
-await fs.promises.mkdir(dirpath, { recursive: true })
-```
-
-[Remove directory which is not empty](https://stackoverflow.com/q/18052762/1366033)
-
-```js
-fs.rmdirSync(dir, { recursive: true });
-```
-
-[Copy Folder](https://stackoverflow.com/a/64255382/1366033)
-
-```js
-const { promises: fs } = require("fs")
-const path = require("path")
-
-async function copyDir(src, dest) {
-    await fs.mkdir(dest, { recursive: true });
-    let entries = await fs.readdir(src, { withFileTypes: true });
-
-    for (let entry of entries) {
-        let srcPath = path.join(src, entry.name);
-        let destPath = path.join(dest, entry.name);
-
-        entry.isDirectory() ?
-            await copyDir(srcPath, destPath) :
-            await fs.copyFile(srcPath, destPath);
-    }
-}
-```
-
-[node remove file](https://stackoverflow.com/a/5315175/1366033)
-
-```js
-await fsp.unlink(source)
-```
-
-[Walk through a directory](https://stackoverflow.com/a/60214211/1366033)
-
-```js
-const fs = require('fs').promises;
-const path = require('path');
-
-async function walk(dir) {
-    let files = await fs.readdir(dir);
-    files = await Promise.all(files.map(async file => {
-        const filePath = path.join(dir, file);
-        const stats = await fs.stat(filePath);
-        if (stats.isDirectory()) return walk(filePath);
-        else if(stats.isFile()) return filePath;
-    }));
-
-    return files.reduce((all, folderContents) => all.concat(folderContents), []);
-}
-```
-
-[Change working directory in my current shell context when running Node script](https://stackoverflow.com/a/19803771/1366033)
-
-```js
-process.chdir('/tmp');
-```
-
-[Execute a command line binary with Node.js](https://stackoverflow.com/a/20643568/1366033)
-
-```js
-const { promisify } = require('util');
-const cp = require('child_process')
-const exec = promisify(cp.exec);
-
-async function cmd(text) {
-    const { stdout, stderr } = await exec(text);
-    console.log('stdout:', stdout);
-    console.log('stderr:', stderr);
-}
-
-await cmd("ls")
-```
-
-[Global npm install location on windows?](https://stackoverflow.com/q/33819757/1366033)
-
-```none
-%AppData%\npm\node_modules
-```
-
-[Determine command line working directory when running node bin script](https://stackoverflow.com/a/12239689/1366033)
-
-```js
-let currentWorkingDirectory = process.cwd()
-let currentFileDirectory = __dirname
-```
-
-[Simplest Node.js server is just](https://stackoverflow.com/a/23122981/1366033)
-
-```bash
-npm install http-server -g
-```
-
-[Parse YAML to JSON](https://github.com/nodeca/js-yaml)
-
-```js
-const yaml = require('js-yaml');
-const fs   = require('fs');
-
-let json = fs.readFileSync('./example.yml', 'utf8')
-let doc = yaml.safeLoad();
-console.log(doc);
-```
-
-[Using filesystem in node.js with async/await](https://stackoverflow.com/a/58332163/1366033)
-[Using async/await with a forEach loop](https://stackoverflow.com/a/37576787/1366033)
-[Merge/flatten an array of arrays](https://stackoverflow.com/a/18307218/1366033)
-[Counting the occurrences / frequency of array elements](https://stackoverflow.com/a/39841401/1366033)
-[Convert object to an array of objects?](https://stackoverflow.com/a/49345363/1366033)
-[Sort array of objects by string property value](https://stackoverflow.com/a/35092754/1366033)
-[Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
-[What is the different between `stat`, `fstat`, and `lstat` functions in node](https://stackoverflow.com/a/32478801/1366033)
 
 ## Utilities
 
@@ -354,6 +228,29 @@ import { v4 as uuidv4 } from 'uuid';
 uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ```
 
+## Nodemon
+
+> Nodemon is a utility that will monitor for any changes in your source and automatically restart your server
+
+[nodemon](https://nodemon.io/)
+
+```bash
+npm install -g nodemon
+```
+
+
+* [Nodemon keeps restarting server](https://stackoverflow.com/q/44855839/1366033)
+
+   don't write to watch directory
+
+
+
+
+### Alternatives
+
+
+* [M-Zuber/**npm-watch**](https://github.com/M-Zuber/npm-watch) - run npm scripts when files change
+* [mikeal/**watch**](https://github.com/mikeal/watch) - Utilities for watching file trees in node.js
 
 ## Nodemailer
 
@@ -404,6 +301,15 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 * [skip internal modules](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_skipping-uninteresting-code-node-chrome)
 
 
+* [Using filesystem in node.js with async/await](https://stackoverflow.com/a/58332163/1366033)
+* [Using async/await with a forEach loop](https://stackoverflow.com/a/37576787/1366033)
+* [Merge/flatten an array of arrays](https://stackoverflow.com/a/18307218/1366033)
+* [Counting the occurrences / frequency of array elements](https://stackoverflow.com/a/39841401/1366033)
+* [Convert object to an array of objects?](https://stackoverflow.com/a/49345363/1366033)
+* [Sort array of objects by string property value](https://stackoverflow.com/a/35092754/1366033)
+* [Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
+* [What is the different between `stat`, `fstat`, and `lstat` functions in node](https://stackoverflow.com/a/32478801/1366033)
+
 
 * [Setting Environment Variables for Node to retrieve](https://stackoverflow.com/a/34154491/1366033)
   * [Managing Environment Variables in Node.js with dotenv](https://stackabuse.com/managing-environment-variables-in-node-js-with-dotenv/)
@@ -431,3 +337,132 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
     ```
 
 * [List Directory](https://stackoverflow.com/q/2727167/1366033)
+
+
+* [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
+
+    ```js
+    let { promises: fs } = require("fs");
+    let names = await fs.readdir("path/to/dir");
+    let file = fs.readFile(filePath, 'utf8');
+    ```
+
+* [Node.js create folder or use existing](https://stackoverflow.com/a/24311711/1366033)
+
+    ```js
+    let { promises: fs } = require("fs");
+    await fs.promises.mkdir(dirpath, { recursive: true })
+    ```
+
+* [Remove directory which is not empty](https://stackoverflow.com/q/18052762/1366033)
+
+    ```js
+    fs.rmdirSync(dir, { recursive: true });
+    ```
+
+* [Copy Folder](https://stackoverflow.com/a/64255382/1366033)
+
+    ```js
+    const { promises: fs } = require("fs")
+    const path = require("path")
+
+    async function copyDir(src, dest) {
+        await fs.mkdir(dest, { recursive: true });
+        let entries = await fs.readdir(src, { withFileTypes: true });
+
+        for (let entry of entries) {
+            let srcPath = path.join(src, entry.name);
+            let destPath = path.join(dest, entry.name);
+
+            entry.isDirectory() ?
+                await copyDir(srcPath, destPath) :
+                await fs.copyFile(srcPath, destPath);
+        }
+    }
+    ```
+
+* [node remove file](https://stackoverflow.com/a/5315175/1366033)
+
+    ```js
+    await fsp.unlink(source)
+    ```
+
+* [Walk through a directory](https://stackoverflow.com/a/60214211/1366033)
+
+    ```js
+    const fs = require('fs').promises;
+    const path = require('path');
+
+    async function walk(dir) {
+        let files = await fs.readdir(dir);
+        files = await Promise.all(files.map(async file => {
+            const filePath = path.join(dir, file);
+            const stats = await fs.stat(filePath);
+            if (stats.isDirectory()) return walk(filePath);
+            else if(stats.isFile()) return filePath;
+        }));
+
+        return files.reduce((all, folderContents) => all.concat(folderContents), []);
+    }
+    ```
+
+* [Change working directory in my current shell context when running Node script](https://stackoverflow.com/a/19803771/1366033)
+
+    ```js
+    process.chdir('/tmp');
+    ```
+
+* [Execute a command line binary with Node.js](https://stackoverflow.com/a/20643568/1366033)
+
+    ```js
+    const { promisify } = require('util');
+    const cp = require('child_process')
+    const exec = promisify(cp.exec);
+
+    async function cmd(text) {
+        const { stdout, stderr } = await exec(text);
+        console.log('stdout:', stdout);
+        console.log('stderr:', stderr);
+    }
+
+    await cmd("ls")
+    ```
+
+* [Global npm install location on windows?](https://stackoverflow.com/q/33819757/1366033)
+
+    ```none
+    %AppData%\npm\node_modules
+    ```
+
+* [Determine command line working directory when running node bin script](https://stackoverflow.com/a/12239689/1366033)
+
+    ```js
+    let currentWorkingDirectory = process.cwd()
+    let currentFileDirectory = __dirname
+    ```
+
+* [Simplest Node.js server is just](https://stackoverflow.com/a/23122981/1366033)
+
+    ```bash
+    npm install http-server -g
+    ```
+
+* [Parse YAML to JSON](https://github.com/nodeca/js-yaml)
+
+    ```js
+    const yaml = require('js-yaml');
+    const fs   = require('fs');
+
+    let json = fs.readFileSync('./example.yml', 'utf8')
+    let doc = yaml.safeLoad();
+    console.log(doc);
+    ```
+
+* [How to set shell for npm run-scripts in Windows](https://stackoverflow.com/q/23243353/1366033)
+
+
+    ```bash
+    npm config get script-shell
+    npm config set script-shell "C:\\Program Files\\Git\\bin\\bash.exe"
+    code ~/.npmrc
+    ```

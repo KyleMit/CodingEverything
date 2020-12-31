@@ -198,9 +198,26 @@ return (
 )
 ```
 
+## React Server Components
 
+* [Introducing Zero-Bundle-Size React Server Components – React Blog](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)
+  * [reactjs/server-components-demo: Demo app of React Server Components.](https://github.com/reactjs/server-components-demo)
+  * [RFC: React Server Components by josephsavona · Pull Request #188 · reactjs/rfcs](https://github.com/reactjs/rfcs/pull/188)
+  * [Data Fetching with React Server Components - YouTube](https://www.youtube.com/watch?v=TQQPAU21ZUw)
 
 ## Questions
+
+
+* [Get version number from package.json](https://stackoverflow.com/a/50822003/1366033)
+* [Import JSON Data](https://stackoverflow.com/a/45662052/1366033)
+* [Update State](https://learn.co/lessons/react-updating-state)
+* [Increment State](https://stackoverflow.com/a/39316556/1366033)
+* [Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
+* ['this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
+* [Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
+* [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
+* [handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
+* [conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
 
 * [How to add comments to React?](https://stackoverflow.com/q/30766441/1366033)
 
@@ -311,14 +328,11 @@ return (
   ```
 
 
-* [Get version number from package.json](https://stackoverflow.com/a/50822003/1366033)
-* [Import JSON Data](https://stackoverflow.com/a/45662052/1366033)
-* [Update State](https://learn.co/lessons/react-updating-state)
-* [Increment State](https://stackoverflow.com/a/39316556/1366033)
-* [Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
-* ['this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
-* [Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
-* [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
-* [handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
-* [conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
+* [Using `babel-preset-react-app` requires that you specify `NODE_ENV` or `BABEL_ENV` environment variables](https://stackoverflow.com/q/44198100/1366033)
+
+  Set env variable before running script `NODE_ENV=development` using [`cross-env`](https://www.npmjs.com/package/cross-env)
+
+  ```bash
+  npx cross-env NODE_ENV=development babel src -d lib
+  ```
 

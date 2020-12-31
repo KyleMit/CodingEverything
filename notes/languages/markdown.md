@@ -28,12 +28,15 @@
 
 ## MDX
 
+> MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents
+
+
 [MDX](https://mdxjs.com/)
 
 
+[Getting Started | MDX](https://mdxjs.com/getting-started)
 
-* [MDX](https://mdxjs.com/)
-
+## Questions
 
 * Custom List Styles in Markdown
 
@@ -62,4 +65,9 @@
     1. List Item 1
     2. List Item 2
     ```
+
+
+* [How do I escape a backtick ` within in-line code in Markdown?](https://meta.stackexchange.com/q/82718/209031)
+
+   Use double backticks on your inline code block like this: ``list`1``
 

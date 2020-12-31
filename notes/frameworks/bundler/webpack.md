@@ -80,6 +80,55 @@ module.exports = {
 };
 ```
 
+## NPM
+
+[Webpack > Getting Started > NPM Scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
+
+> within `scripts` we can reference locally installed npm packages by name the same way we did with `npx`
+
+```json
+"scripts": {
+  "build": "webpack"
+},
+```
+
+## Webpack Serve
+
+```bash
+npx webpack serve
+npm install -D @webpack-cli/serve
+```
+
+## Webpack Dev Server
+
+* [webpack/**webpack-dev-server**](https://github.com/webpack/webpack-dev-server)
+* [WebPack > DevServer > Docs](https://webpack.js.org/configuration/dev-server/)
+
+
+```bash
+npm install webpack-dev-server --save-dev
+```
+
+```js
+// webpack.config.js
+var path = require('path');
+
+module.exports = {
+  //...
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
+  }
+};
+```
+
+```json
+"scripts": {
+  "start:dev": "webpack serve"
+}
+```
+
 ## Loaders
 
 > * Module loaders can be chained.
@@ -105,5 +154,33 @@ module.exports = {
 
 
 * [ES Lint Line breaks](https://stackoverflow.com/a/44662845/1366033)
+
+
 * [Static Asset - Relative Path Imports via File Loader](https://cli.vuejs.org/guide/html-and-static-assets.html#static-assets-handling)
 
+* [The 'mode' option has not been set, webpack will fallback to 'production' for this value](https://stackoverflow.com/q/49242756/1366033)
+
+  [Mode | webpack](https://webpack.js.org/configuration/mode/)
+
+  Pass arg in CLI
+
+  ```json
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  }
+  ```
+
+  Add to `config.js`
+
+  ```js
+  module.exports = {
+    mode: 'development'
+  };
+  ```
+
+ERROR in ./node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.css 7:0
+Module parse failed: Unexpected token (7:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See
+
+https://webpack.js.org/concepts#loaders

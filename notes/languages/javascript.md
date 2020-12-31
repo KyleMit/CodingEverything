@@ -6,7 +6,7 @@
 
 ## Reference (MDN)
 
-[JavaScript reference - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+[JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 ### Statements
 
@@ -474,7 +474,7 @@ Emmet autocomplete `/**`
 * [i++ vs ++i](https://stackoverflow.com/q/6867876/1366033)
 
   * [++someVariable vs. someVariable++](https://stackoverflow.com/q/3469885/1366033)
-  * [Increment (++) - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+  * [Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
 
   * `++variable` - increments the variable, returning the *new value*.
   * `variable++` - increments the variable, but returns the *old value*
@@ -527,4 +527,66 @@ Emmet autocomplete `/**`
 
 * [Replace all occurrences of a string](https://stackoverflow.com/q/1144783/1366033)
 * [Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+* [Disable F5 and browser refresh using JavaScript - Stack Overflow](https://stackoverflow.com/q/2482059/1366033)
+
+  ```js
+  document.addEventListener("keydown", (e) => {
+    if (e.key == "F5") {
+      e.preventDefault();
+    }
+  })
+  ```
+
+
+* [Pop, Push, Shift and Unshift Array Methods in JavaScript](https://alligator.io/js/push-pop-shift-unshift-array-methods/)
+
+* `pop()` - Remove an item from the end of an array
+
+  ```js
+  let cats = ['Bob', 'Willy', 'Mini'];
+  cats.pop(); // ['Bob', 'Willy']
+  pop() // returns the removed item.
+  ```
+
+* `push()`  Add items to the end of an array
+
+  ```js
+  let cats = ['Bob'];
+  cats.push('Willy'); // ['Bob', 'Willy']
+  cats.push('Puff', 'George'); // ['Bob', 'Willy', 'Puff', 'George']
+  push() // returns the new array length.
+  ```
+
+* `shift()` - Remove an item from the beginning of an array
+
+  ```js
+  let cats = ['Bob', 'Willy', 'Mini'];
+  cats.shift(); // ['Willy', 'Mini']
+  shift() // returns the removed item.
+  ```
+
+* `unshift()` - Add items to the beginning of an array
+
+  ```js
+  let cats = ['Bob'];
+  cats.unshift('Willy'); // ['Willy', 'Bob']
+  cats.unshift('Puff', 'George'); // ['Puff', 'George', 'Willy', 'Bob']
+  unshift() // returns the new array length
+  ```
+
+* Iteration and Generation
+
+  * [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+  * [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+  * [function*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+  * [Array.prototype[@@iterator]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+
+* [Clamp value between two numbers](https://stackoverflow.com/q/5842747/1366033)
+
+  ```js
+  function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+  }
+  ```
 

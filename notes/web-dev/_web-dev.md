@@ -19,6 +19,10 @@
   * [SQL Fiddle](http://sqlfiddle.com/) - sql
   * [.NET Fiddle](https://dotnetfiddle.net/) - dotnet
 
+* Code Exercises
+  * [LeetCode](https://leetcode.com/KyleMit/)
+  * [Codewars](https://www.codewars.com/users/KyleMit)
+
 ### RunKit
 
 * all documents on RunKit are public, you can make them searchable by publishing.

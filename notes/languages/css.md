@@ -70,3 +70,29 @@ button {
 * [Using `box shadows` and `clip-path` together](https://css-tricks.com/using-box-shadows-and-clip-path-together/)
 * [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
 
+* [`animation` shorthand property](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+
+  ```css
+  /* @keyframes duration | easing-function | delay |
+  iteration-count | direction | fill-mode | play-state | name */
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+  /* @keyframes name | duration | easing-function | delay */
+  animation: slidein 3s linear 1s;
+
+  /* @keyframes name | duration */
+  animation: slidein 3s;
+  ```
+
+* [Play multiple CSS animations at the same time](https://stackoverflow.com/q/26986129/1366033)
+
+  ```css
+  animation: rotate 1s, spin 3s;
+  ```
+
+* [Maintaining the final state at end of a CSS animation](https://stackoverflow.com/q/12991164/1366033)
+
+  ```css
+  animation-fill-mode: forwards;
+  ```
+

@@ -78,3 +78,27 @@
     ```
 
 
+* [Regex to match any character including new lines](https://stackoverflow.com/q/8303488/1366033)
+
+   ```js
+   /[\S\s]/
+   ```
+
+* [Regex to match End of File (EOF)](https://stackoverflow.com/questions/1171284/regex-to-match-eof)
+
+  * **Perl**: `\A` & `\Z`
+  * **GNU**: `` \` `` & `\'`
+  * **General**:
+
+    ```js
+    /$(?![\r\n])/g
+    ```
+
+* [Match anything up until this sequence of characters](https://stackoverflow.com/q/7124778/1366033)
+
+  Use negative lookahead:
+
+  ```js
+  /.+?(?=abc)/
+  ```
+

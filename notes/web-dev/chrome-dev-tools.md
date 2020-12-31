@@ -40,3 +40,19 @@ https://web.dev/
 ![chrome source maps](/assets/notes/chrome-dev-tools/chrome-source-maps.png)
 
 
+## Questions
+
+* [Add padding to bottom of console](https://twitter.com/KyleMitBTV/status/1125738088150568960)
+
+  [960412 - DevTools: Add bottom padding to Console input - chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=960412)
+
+  ```css
+  #​console-messages { padding-bottom: calc(50% - 10px); }
+  ```
+
+  or
+
+  ```css
+  .console-view-fix-select-all { height: 300px; }
+  ```
+

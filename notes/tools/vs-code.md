@@ -397,3 +397,18 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 * [Change keyboard shortcut bindings in Visual Studio Code?](https://stackoverflow.com/a/33791170/1366033)
 * [VS Code - Mouse Wheel Zoom](https://stackoverflow.com/q/30192884/1366033)
+
+* [How to prevent VScode from closing editor when pressing ctrl+w with no tabs open?](https://superuser.com/q/1432729/180163)
+
+  ```json
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  }
+  ```
+
+* How to determine which extension is causing an issue
+
+  As of Nov 2020 release, use [**Extension Bisect**](https://code.visualstudio.com/updates/v1_52#_troubleshooting-extension-bisect)
+

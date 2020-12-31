@@ -34,3 +34,12 @@
     ```
 
 * [Anchor is Valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md)
+
+* [Expected linebreaks to be 'LF' but found 'CRLF'](https://stackoverflow.com/q/37826449/1366033)
+
+    ```json
+    "rules": {
+    "linebreak-style": 0
+    }
+    ```
+

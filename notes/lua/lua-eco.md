@@ -1,4 +1,5 @@
 # Lua Ecosystem
+<!-- markdownlint-disable MD024 -->
 
 
 ## Selene
@@ -90,6 +91,7 @@
     baz()
     ```
 
+ <!-- cspell:disable-next-line -->
 * `parenthese_conditions`
 
   > Lua does not require these, and they are not idiomatic.

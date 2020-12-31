@@ -156,15 +156,15 @@ root
 ```lua
 -- Packages/_Index/MyPolyfills/Number/init.lua
 return {
-	isNaN = require(script.isNaN),
-	isInteger = require(script.isInteger),
+ isNaN = require(script.isNaN),
+ isInteger = require(script.isInteger),
 }=
 ```
 
 ```lua
 -- Packages/_Index/MyPolyfills/Number/isNaN.lua
 return function(value)
-	return type(value) == "number" and value ~= value
+ return type(value) == "number" and value ~= value
 end
 ```
 
