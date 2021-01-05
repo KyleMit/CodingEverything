@@ -491,3 +491,12 @@ chsh -s /bin/zsh
 > complete:13: command not found: compdef
 
 [nvm is broken after I installing oh-my-zsh? #5543](https://github.com/ohmyzsh/ohmyzsh/issues/5543)
+
+
+## Questions
+
+* Screensaver
+
+    [Slow down screensaver pictures changes](https://apple.stackexchange.com/q/135766/74706)
+    [Change screensaver slide duration](http://hints.macworld.com/article.php?story=20130215183522445)
+
