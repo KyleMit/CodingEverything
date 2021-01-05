@@ -7,17 +7,17 @@ ASP.NET provides a great number of custom [validation controls][validation contr
 
 Let's say you had a very simple setup that took in a date field with the following code:
 
-```
+```html
 <asp:label
-     runat="server" 
+     runat="server"
      id="lblBirthDate"
      Text="Birth Date:"/>
 <asp:textbox
-     runat="server" 
+     runat="server"
      id="txtBirthDate"/>
 ```
 
-```
+```html
 <asp:requiredfieldvalidator
      runat="server"
      id="rfvBirthDate"
@@ -28,7 +28,7 @@ Let's say you had a very simple setup that took in a date field with the followi
      SetFocusOnError="True" />
 ```
 
-```
+```html
 <asp:CompareValidator
      runat="server"
      id="dateBirthDate"
@@ -40,8 +40,8 @@ Let's say you had a very simple setup that took in a date field with the followi
      Type="Date"
      Operator="DataTypeCheck" />
 ```
- 
-```
+
+```html
 <asp:CompareValidator
      runat="server"
      id="minBirthDate"
@@ -52,8 +52,8 @@ Let's say you had a very simple setup that took in a date field with the followi
      Operator="GreaterThanEqual"
      ValueToCompare="01/01/1900" />
 ```
- 
-```
+
+```html
 <asp:RangeValidator
      runat="server"
      id="rangeBirthDate"
@@ -67,7 +67,7 @@ Let's say you had a very simple setup that took in a date field with the followi
 
 Besides writing some JavaScript for you, one of the nicest things about ASP Validators is that they run on the server AND the client so you only have to write the code once.  You can get dynamic updates for users who have javascript enabled, but still have the added security of being able to easily check if all the validation controls passed once you've posted back to the server.  Simply call the page method Validate and check if the page property `IsValid` is true.  If the page comes back as invalid, you can loop through each validator on the page and return an informative message back to the client.
 
-```vb.net
+```vb
 'validate controls on server side
 Page.Validate()
 'only evaluate if valid

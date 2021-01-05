@@ -1,5 +1,16 @@
 # Acronyms
 
+## Community
+
+* **VTCC** - Vermont Code Camp
+* **BOSCC** - Boston Code Camp
+
+## Terms
+
+* **RBP** - Recommended Best Practice
+* **POC** - Proof of Concept (alt: 'People of Color')
+* **MVP** - Minimum Viable Product
+
 ## Tech
 
 * **IT** - Information Technology
@@ -7,8 +18,13 @@
 
 ## Computer Science
 
+* **IO** - Input / Output
 * **CS** - Computer Science
 * **AST** - Abstract Syntax Tree
+* **DVCS** - Distributed Version Control System
+* **IEEE** - Institute of Electrical and Electronics Engineers
+* **IEEE 754** - IEEE Standard for Floating-Point Arithmetic
+* **EOF** - End of File
 
 ### Software Development LifeCycle
 
@@ -24,6 +40,7 @@
 * **CMMI** - Capability Maturity Model Integration
 * **WITs** - Work Item Types
 
+
 ### Testing
 
 * **E2E** - End to End Test
@@ -33,8 +50,13 @@
 
 * **PMP** - Project Management Professional
 * **ACP** - Agile Certified Practitioner
+
+
+### Requirements
+
 * **MoSCoW** - Must-haves, Should-haves, Could-haves, Will not have at this time
 * **INVEST** - Independent, Negotiable, Valuable, Estimable, Sized Appropriately, Testable
+* **GWT** - Given When Then
 
 ### Server Admin
 
@@ -43,6 +65,8 @@
 * **VPN** - Virtual Private Network
 * **RAID** - Redundant Array of Independent Disk
 * **NAS** - Network Attached Storage
+* **NFS** - Network File System
+* **IaC** - Infrastructure as Code
 
 ## File Types
 
@@ -73,6 +97,7 @@
 
 ### Development
 
+* **FE** - Front End
 * **VB** - Visual Basic
 * **CLI** - Command Line Interface
 * **API** - Application Programming Interface
@@ -86,11 +111,12 @@
 * **IIFE** - Immediately Invoked Function Expression
 * **IoC** - Inversion of Control
 * **DI** - Dependency Injection
-* **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
 * **RoR** - Ruby On Rails
 * **CAD** - Computer-aided design
 * **ORMs** - Object Relational Mapping
 * **DSLs** - Domain Specific Language
+* **CICD** - Continuous Integration / Continuous Deployment
+
 
 ### Debug
 
@@ -102,6 +128,9 @@
 * **DDoS** - Distributed Denial of Service
 * **XSS** - Cross-Site Scripting
 * **HSTS** - HTTP Strict Transport Security
+* **PGP**- [Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
+* **GnuPG** - GNU Privacy Guard
+* **MITM** - Man in the Middle Attacks
 
 ### Numeronym
 
@@ -136,19 +165,23 @@
 * **WSDL** - Web Service Description Language
 * **PAT** - Personal Access Token
 * **SOA** - Service Oriented Architecture
+* **gRPC** - grpc Remote Procedure Call
 
 ### Protocols
 
 * **FTP** - File Transfer Protocol
 * **HTTP** - Hypertext Transfer Protocol
-
-
+* **SMTP** - Simple Mail Transfer Protocol
+* **TCP** - Transmission Control Protocol
+* **UDP** - User Datagram Protocol
+* **IP** - Internet Protocol
 
 ### Languages
 
 * **JSON** - JavaScript Object Notation
 * **TOML** - Tom's Obvious, Minimal Language.
 * **YAML** - YAML Ain't Markup Language (originally Yet Another Markup Language)
+* **JMESPath** - JSON Matching Expression Paths
 
 ### ASP.NET
 
@@ -168,7 +201,10 @@
 * **JWT** - JSON Web Token
 * **OIDC** - OpenID Connect
 
+### OSS
 
+* **OSS** - Open Source Software
+* **GPL** - General Public License
 
 ### Web Dev
 
@@ -186,7 +222,9 @@
 * **SPA** - Single Page Application
 * **CSR** - Client Side Rendered
 * **SSR** - Server Side Rendered
+* **WASM** - WebAssembly
 
+* **Differential Loading** - sending separate bundles to legacy browsers
 
 ### CSS
 
@@ -203,7 +241,7 @@
 * **TTI** - Time to Interactive
 * **TTFB** - Time to First Byte
 * **PRPL** - Preload, Render, Pre-cache, Lazy Load
-
+* **WPO** - Web Performance Optimization
 
 ### JavaScript
 
@@ -211,6 +249,7 @@
 * **TS** - TypeScript
 * **ES6** - ECMAScript 6
 * **MDN** - Mozilla Developer Network
+* **ATA** - Automatic Type Acquisition
 
 #### React
 
@@ -221,13 +260,34 @@
 
 * **OS** - Operating System
 * **WSL** - Windows Subsystem for Linux
+* **GNU** - GNU's Not Unix
+* **NT** - "New Technology"
+* **DOS** - Disk Operating System
 
+
+### Libraries
+
+* **PIP** - Python Package Installer
 
 ### Linux
 
 * **PPAs** - Personal Package Archives
 * **SSH** - [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
+* **Bash** - Bourne Again SHell
+* **APT** - Advanced Packaging Tool
+* **GNOME** - GNU Network Object Model Environment
+* **YUM** - Yellowdog Updater, Modified
+* **ANSI** - American National Standards Institute
+
+### Commands
+
+* **xargs** - eXtended ARGuments
+
+### POSIX
+
 * **POSIX** - Portable Operating System Interface for Unix
+* **ENOENT** - [Error NO ENTry](https://stackoverflow.com/q/19902828/1366033)
+* **EROFS** - Error - Read Only File System
 
 ### Salesforce
 
@@ -249,6 +309,17 @@
 * **ALB** - Application Load Balancer
 * **RDs** - Relational Database Service
 * **IAM** - Identity and Access Management
+* **VPC** - Virtual Private Cloud
+* **SES** - Simple Email Service
+* **ELB** - Elastic Load Balancer
+* **ALB** - Application Load Balancer
+* **NLB** - Network Load Balancer
+* **CLB** - Classic Load Balancer
+* **ENI** - Elastic Network Interface
+* **FSP** - File System Access Point
+* **SG** - Security Group
+
+
 
 ### Azure
 
@@ -262,9 +333,15 @@
 * **SPSS** - [Statistical Package for the Social Sciences](https://en.wikipedia.org/wiki/SPSS)
 
 
+### Glossary
 
+* [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
+* [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
+* [**glob**](https://en.wikipedia.org/wiki/Glob_(programming)) - patterns specify sets of filenames with wildcard characters (short for "global")
+* [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
+* [Directive / Pragma](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
 
-## Terms
+## General
 
 ### Human Resources
 
@@ -297,6 +374,7 @@
 * **COB** - Close of Business
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
+
 
 
 ### C-Suite

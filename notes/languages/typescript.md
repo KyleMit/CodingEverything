@@ -1,6 +1,18 @@
+
+[TypeScript Lang](https://www.typescriptlang.org/)
+
 # TypeScript
 
-[TypeScriptLang.org](https://www.typescriptlang.org/)
+## Alternatives
+
+* [**Flow**](https://flow.org/en/) -  A Static Type Checker for JavaScript
+
+
+## Acronyms
+
+* **ATA** - Automatic Type Acquisition
+
+## Getting Started
 
 You can install TypeScript via npm
 
@@ -13,6 +25,7 @@ Then run the compiler via tsc
 ```bash
 npx tsc
 ```
+
 
 ## Handbook
 
@@ -131,14 +144,14 @@ function getLength(obj: string | string[]) {
 
 ### Typeof
 
-| type | predicate |
-|---------|---------|
-| string | typeof s === "string" |
-| number | typeof n === "number" |
-| boolean | typeof b === "boolean" |
+| type      | predicate                        |
+| --------- | -------------------------------- |
+| string    | typeof s === "string"            |
+| number    | typeof n === "number"            |
+| boolean   | typeof b === "boolean"           |
 | undefined | typeof undefined === "undefined" |
-| function | typeof f === "function" |
-| array | Array.isArray(a) |
+| function  | typeof f === "function"          |
+| array     | Array.isArray(a)                 |
 
 ### Generics
 
@@ -339,10 +352,6 @@ interface Point {
 }
 ```
 
-#### readonly vs const
-
-* Variables use `const`
-* properties use `readonly`
 
 #### Function Types
 
@@ -524,6 +533,16 @@ console.log(arr.length);
 
    All your TypeScript code goes in src and the generated JavaScript goes in lib.
 
+6. Add scripts to `package.json
+
+  ```json
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+  },
+  ```
+
 
 ### NPM Packages
 
@@ -533,6 +552,9 @@ console.log(arr.length);
 * [nodemon](https://www.npmjs.com/package/nodemon)
 
 ### Live compile + run
+
+* [fgnass/**node-dev**](https://github.com/fgnass/node-dev) - Zero-conf Node.js reloading
+* [whitecolor/**ts-node-dev**](https://github.com/whitecolor/ts-node-dev#readme) - Compiles your TS app and restarts when files are modified.
 
 1. Add `ts-node` which we will use for live compile + run in node
 
@@ -546,15 +568,71 @@ console.log(arr.length);
    npm install nodemon --save-dev
    ```
 
+3. Scripts
 
+  ```json
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+  },
+  ```
 
-```json
-"scripts": {
-  "start": "npm run build:live",
-  "build": "tsc -p .",
-  "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
-},
-```
+## Declaration File
+
+[Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
+
+## Debugging
+
+[TypeScript debugging with Visual Studio Code](https://code.visualstudio.com/docs/typescript/typescript-debugging)
+
+1. Set `sourceMap` in `tsconfig.json`
+
+   ```json
+   {
+     "compilerOptions": {
+       "outDir": "out",
+       "sourceMap": true
+     }
+   }
+   ```
+
+2. Create task to build app in `tasks.json`
+
+   ```json
+   {
+     "version": "2.0.0",
+     "tasks": [
+       {
+         "label": "tsc Build",
+         "command": "tsc",
+         "type": "shell",
+         "problemMatcher": ["$tsc"],
+         "presentation": { "reveal": "always" },
+         "group": "build"
+       }
+     ]
+   }
+   ```
+
+3. Create launch debug in `launch.json`
+
+   ```json
+   {
+     "version": "0.2.0",
+     "configurations": [
+       {
+         "type": "node",
+         "request": "launch",
+         "name": "Launch Program",
+         "preLaunchTask": "tsc Build",
+         "program": "${workspaceFolder}/src/index.ts",
+         "outFiles": ["${workspaceFolder}/out/**/*.js"],
+         "skipFiles": ["<node_internals>/**"]
+       }
+     ]
+   }
+   ```
 
 
 ## Typescript Commands
@@ -621,6 +699,7 @@ npm install --save-dev @types/jquery
 
 ### Triple-Slash Directives
 
+[Triple-Slash Directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html#-reference-path-)
 
 ```ts
 /// <reference path="jquery/jquery.d.ts" />
@@ -995,14 +1074,128 @@ a ||= b
 
 
 
-## Type Errors
+## Questions
 
-* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/q/41292559/1366033)
+
+
 * [URLSearchParams constructor argument should be `string | object` #15338](https://github.com/microsoft/TypeScript/issues/15338#issuecomment-597554161)
 * [Cannot find name 'console'. What could be the reason for this?](https://stackoverflow.com/a/42106036/1366033)
 * [How to use URLSearchParams in a node.js and typescript project](https://stackoverflow.com/a/64088768/1366033)
 * [Typescript: difference between String and string](https://stackoverflow.com/a/14727461/1366033)
 * [Type 'T' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value](https://stackoverflow.com/a/54813723/1366033)
 * [Function lacks ending return statement and return type does not include 'undefined'](https://stackoverflow.com/a/50079448/1366033)
+* [import fails with 'no default export'](https://stackoverflow.com/a/50473239/1366033)
 
+  ```diff
+  - import Module from 'module';
+  + import * as Module from 'module';
+  ```
+
+
+* [unknown file extension .ts with `ts-node`](https://stackoverflow.com/q/62096269/1366033)
+
+   Remove `"type": "module"` from `package.json`
+
+
+* [automatically install types](https://stackoverflow.com/q/48857430/1366033)
+
+  ```bash
+  npx typesync
+  ```
+
+* [requested module does not provide an export named](https://stackoverflow.com/q/47277887/1366033)
+
+* [The requested module '*' is expected to be of type CommonJS](https://stackoverflow.com/q/63108391/1366033)
+
+  ```js
+  import { method } from 'commonjs-package';  // Errors
+  import packageMain from 'commonjs-package'; // Works
+  ```
+
+* [tsconfig.json: Build:No inputs were found in config file](https://stackoverflow.com/q/41211566/1366033)
+
+  Run TypeScript: Restart TS server
+
+* [Import 'global' modules with TypeScript](https://stackoverflow.com/q/34161119/1366033)
+
+  Use the side-effect-only import:
+
+  ```ts
+  import './greeting/greetingSpec';
+  ```
+
+* [Could not find a declaration file for module 'module-name'](https://stackoverflow.com/a/64656913/1366033)
+
+  ```bash
+  npm install -D @types/module-name
+  ```
+
+* [Adding Custom Type Definitions to a Third-Party Library](https://www.detroitlabs.com/blog/2018/02/28/adding-custom-type-definitions-to-a-third-party-library/)
+
+  You get this error message
+
+  > Could not find a declaration file for module 'library'.
+  > 'library.js' implicitly has an 'any' type.
+  > Try npm install @types/library if it exists
+  > Or add a new declaration (`.d.ts`) file containing declare module 'library'
+
+  ```json
+  {
+    "compilerOptions": {
+      "typeRoots": [ "./types", "./node_modules/@types"]
+    }
+  }
+  ```
+
+  Add to exclude so it doesn't get compiled
+
+  ```json
+  {
+    "exclude": ["node_modules", "types"]
+  }
+  ```
+
+
+* [Interfaces vs Types](https://stackoverflow.com/q/37233735/1366033)
+
+   ![differences](https://i.stack.imgur.com/6Tjyp.png)
+
+* [readonly vs const](https://stackoverflow.com/q/37233735/1366033)
+
+  * properties use `readonly` - compile time check
+  * Variables use `const` - run time check as well
+
+* [how to convert / cast / assert types](https://stackoverflow.com/q/13204759/1366033)
+
+  ```ts
+  <MarkerSymbolInfo> symbolInfo
+  symbolInfo as MarkerSymbolInfo // tsx compatible
+  ```
+
+
+* [Add ES2019 Object.fromEntries function](https://github.com/microsoft/TypeScript/issues/30933)
+  * [javascript - Property 'entries' does not exist on type 'ObjectConstructor' - Stack Overflow](https://stackoverflow.com/q/45422573/1366033)
+  * [How can I make Object.fromEntries and Object.entries compile?](https://www.reddit.com/r/typescript/comments/e8abzr/)
+
+
+* [Convert from unknown to Number](https://stackoverflow.com/q/53813188/1366033)
+
+  > Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other.
+
+  ```ts
+  let port = process.env.REDIS_PORT as unknown as number
+  ```
+
+* [Create an enum with string values](https://stackoverflow.com/q/15490560/1366033)
+
+  ```ts
+  enum E {
+      hello = "hello",
+      world = "world"
+  };
+  ```
+
+* [Parsing error: File 'tsconfig.json' not found - if project does not contain tsconfig.json in workspace root](https://github.com/microsoft/vscode-eslint/issues/722)
+
+   remove `parserOptions` from `eslintrc.js`
 

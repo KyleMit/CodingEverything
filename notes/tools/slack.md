@@ -3,8 +3,9 @@
 ## Docs
 
 
-* [Manage app installation settings for your workspace | Slack](https://app.slack.com/help/articles/222386767-Manage-app-installation-settings-for-your-workspace)
-
+* [Manage app installation settings for your workspace](https://app.slack.com/help/articles/222386767-Manage-app-installation-settings-for-your-workspace)
+* [Create a snippet](https://slack.com/help/articles/204145658-Create-a-snippet)
+* [Format your messages](https://slack.com/help/articles/202288908-Format-your-messages)
 
 ## Slack Apps
 
@@ -52,6 +53,12 @@
 * `/shrug your text` - appends shrug to your message
 
 
+## Shortcuts
+
+[Get around faster with keyboard shortcuts | Slack](https://slack.com/help/articles/217626598-Get-around-faster-with-keyboard-shortcuts)
+[Slack keyboard shortcuts | Slack](https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts)
+
+
 
 ## Notifications
 
@@ -59,6 +66,12 @@
 
 
 
+<kbd>Ctrl</kbd> + <kbd>/</kbd> - Display available shortcuts
+<kbd>Ctrl</kbd> + <kbd>K</kbd> - Open the Quick Switcher
+<kbd>Alt</kbd> + <kbd>←/→</kbd> - Navigate to previous/next channel
+<kbd>Ctrl</kbd> + <kbd>F</kbd> - Find in channel
+<kbd>Ctrl</kbd> + <kbd>G</kbd> - Find All
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> - Toggle Channel Details Pane
 
 ## Build Slack Bot
 

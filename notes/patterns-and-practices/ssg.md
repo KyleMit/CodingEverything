@@ -5,6 +5,8 @@
   * [StaticGen (archive)](https://web.archive.org/web/20201006114023/https://www.staticgen.com/)
 
 
+* [jsdoc-rtd](https://github.com/athombv/jsdoc-rtd) - A readthedocs-style themed jsdoc template
+
 ## MkDocs
 
 * [MkDocs](https://www.mkdocs.org/)

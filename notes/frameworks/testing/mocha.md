@@ -1,0 +1,111 @@
+# Mocha
+
+> Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser
+
+[MochaJS](https://mochajs.org/)
+
+## Getting Started
+
+```bash
+# Install with npm globally:
+npm install --global mocha
+
+# install as a development dependency for your project:
+npm install --save-dev mocha
+```
+
+
+## Syntax Examples
+
+```js
+var assert = require('assert');
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function() {
+      assert.equal([1, 2, 3].indexOf(4), -1);
+    });
+  });
+});
+```
+
+```js
+it('should return del / ins on single word change', function() {
+    // arrange
+    let diffText = require("../src/index")
+    let oldText = "your question site"
+    let newText = "your answer site"
+    let expected = "your <del>question</del> <ins>answer</ins> site"
+
+    // act
+    let actual = diffText(oldText, newText, false)
+
+    // asset
+    assert.equal(actual, expected);
+});
+```
+
+
+## Example
+
+```bash
+$ ./node_modules/mocha/bin/mocha
+
+  Array
+    #indexOf()
+      ✓ should return -1 when the value is not present
+
+
+  1 passing (9ms)
+```
+
+## CLI Options
+
+[Command Line Usage](https://mochajs.org/#command-line-usage)
+
+* [`--full-trace`](https://mochajs.org/#-full-trace) - Display full stack traces
+
+```bash
+mocha --full-trace src/**/__tests__/**/*-test.js
+```
+
+## Debugging
+
+* [Debugging in Mocha in VS Code](https://codepunk.io/debugging-mocha-in-visual-studio-code/)
+* [What's the least resistance path to debugging mocha tests?](https://stackoverflow.com/q/14285201/1366033)
+* [What's the right way to enable the node debugger with mocha's `--debug-brk` switch?](https://stackoverflow.com/q/14352608/1366033)
+
+```json
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Mocha Tests",
+    "program": "${workspaceRoot}/node_modules/mocha/bin/mocha",
+    "args": [
+        "--inspect-brk",
+        "${workspaceFolder}/test/**/*.js"
+    ],
+    "port": 9229,
+    "internalConsoleOptions": "openOnSessionStart"
+}
+```
+
+### Mocha Sidebar
+
+> Mocha side bar viewer that allows you to run Mocha tests from side bar menu and view results can run each level hierarchy from all tests to a single test
+
+[maty21/**mocha-sidebar**](https://github.com/maty21/mocha-sidebar)
+[Mocha sidebar - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=maty.vscode-mocha-sidebar)
+
+* [mocha sidebar is not showing tests](https://stackoverflow.com/q/52570268/1366033)
+
+
+```json
+"mocha.files.glob": "src/**/__tests__/**/*-test.js"
+```
+
+* [ES6 module import doesn't work](https://github.com/maty21/mocha-sidebar/issues/123)
+
+```json
+"mocha.requires": ["babel-register"]
+```
+

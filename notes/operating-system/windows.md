@@ -30,3 +30,43 @@
 ```ahk
 ^SPACE::  Winset, Alwaysontop, , A
 ```
+
+
+
+## Power Toys
+
+
+[microsoft/PowerToys: Windows system utilities to maximize productivity](https://github.com/microsoft/PowerToys/)
+
+### Utilities
+
+* Color Picker
+* Fancy Zones
+* File Explorer Add-Ons
+* Image Resizer
+* Keyboard manager
+* Power Rename
+* PowerToys Run
+* Shortcut Guide
+* Video Conference Mute
+
+
+## Questions
+
+* [How to Modify the Icon of an EXE File](https://www.howtogeek.com/75983/stupid-geek-tricks-how-to-modify-the-icon-of-an-.exe-file/)
+
+  Use [Resource Hacker](http://www.angusj.com/resourcehacker/)
+
+
+* [Refresh Icon Cache Without Rebooting](https://superuser.com/questions/499078/refresh-icon-cache-without-rebooting)
+
+  ```bash
+  ie4uinit.exe -show
+  ```
+
+* [Prevent screen dim when you take a screenshot using Win+PrintScreen](https://winaero.com/fix-the-screen-does-not-dim-when-you-take-a-screenshot-using-winprintscreen-in-windows-8-1-or-windows-8/)
+
+  1. <kbd>Win</kbd> + <kbd>R</kbd>
+  2. Type `SystemPropertiesAdvanced`
+  3. Advanced > Visual Effects
+  4. Disable `Animate windows when minimizing and maximizing`

@@ -1,23 +1,25 @@
 # Git
 
-## GitHub
+## Docs
 
-* [Github Repo Settings](https://github.com/settings/repositories)
-* [Github/Renaming](https://github.com/github/renaming#from-master-to-main)
-* [Setting the default branch](https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch)
-
-> Choose the default branch for your new personal repositories. You might want to change the default name due to different workflows, or because your integrations still require “master” as the default branch name. You can always change the default branch name on individual repositories.
+### [Commit](https://git-scm.com/docs/git-commit)
 
 
-## Precise Commits
+`--no-verify` - This option bypasses the pre-commit and commit-msg [githooks](https://git-scm.com/docs/githooks)
+
+
+
+## Patterns & Practices
+
+### Precise Commits
 
 [nrwl/**precise-commits**](https://github.com/nrwl/precise-commits)
 
-## Conventional Commits
+### Conventional Commits
 
 [Conventional Commits](https://www.conventionalcommits.org/)
 
-### Message format
+#### Message format
 
 ```none
 <type>[optional scope]: <description>
@@ -51,11 +53,55 @@
 * Bitbucket
 
 
+#### GitHub
+
+* [Github Repo Settings](https://github.com/settings/repositories)
+* [Github/Renaming](https://github.com/github/renaming#from-master-to-main)
+* [Setting the default branch](https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch)
+
+> Choose the default branch for your new personal repositories. You might want to change the default name due to different workflows, or because your integrations still require “master” as the default branch name. You can always change the default branch name on individual repositories.
+
+
 #### Bitbucket
 
 * [Search public repositories in Bitbucket?](https://community.atlassian.com/t5/Bitbucket-questions/public-repositories/qaq-p/844415)
   * [bitbucket.org/repo/all](https://bitbucket.org/repo/all)
 
 ### Client Side
+
+
+## Questions
+
+* [Making a Git push from a detached head](https://stackoverflow.com/a/40929378/1366033)
+
+  ```bash
+  git push origin HEAD:name-of-your-branch
+  ```
+
+* [Why do I need to explicitly push a new branch?](https://stackoverflow.com/q/17096311/1366033)
+
+  ```bash
+  git config --global push.default current
+  git push -u
+  ```
+
+* [What is `git clone --depth 1`?](https://linuxhint.com/git-shallow-clone-and-clone-depth)
+
+  Shallow clone with [`--depth`](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt) argument
+
+* [How to list branches that contain a given commit?](https://stackoverflow.com/q/1419623/1366033)
+
+  ```bash
+  git branch --contains <commit>
+  ```
+
+* [How do I update a GitHub forked repository?](https://stackoverflow.com/q/7244321/1366033)
+
+  ```bash
+  git remote -v                   # list current remotes
+  git remote add upstream <base>  # add upstream remote
+  ```
+
+  **See Also**: [How can I keep my fork in sync without adding a separate remote?](https://stackoverflow.com/q/20984802/1366033)
 
 

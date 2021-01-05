@@ -136,10 +136,6 @@ Guides, Problems, and Solutions
 * [Get Time for specific timezone](https://stackoverflow.com/a/441145/1366033)
 * [https://stackoverflow.com/q/50083611/1366033](How to copy files to output directory depending on build configurations)
 
-## Visual Studio Code
-
-* [Change keyboard shortcut bindings in Visual Studio Code?](https://stackoverflow.com/a/33791170/1366033)
-* [VS Code - Mouse Wheel Zoom](https://stackoverflow.com/q/30192884/1366033)
 
 ## Table Storage
 
@@ -149,55 +145,6 @@ Guides, Problems, and Solutions
 * [Post Data w/ Postman](https://stackoverflow.com/a/45213695/1366033)
 * [Delete All Records](https://stackoverflow.com/q/26326413/1366033)
 
-## Vue
-
-* [Fetching Data](https://www.sitepoint.com/fetching-data-third-party-api-vue-axios/)
-* [Order Data](https://stackoverflow.com/a/40512856/1366033)
-* [Reactive Time](https://cushionapp.com/journal/reactive-time-with-vuejs)
-* [Create a countdown with vue.js an moment.js](https://stackoverflow.com/q/52048451/1366033)
-* [Event Handling `v-on` directive](https://vuejs.org/v2/api/#v-on)
-* [Class & Style Binding](https://vuejs.org/v2/guide/class-and-style.html)
-* [Conditional Class](https://stackoverflow.com/a/43210564/1366033)
-* [Add LocalStorage](https://travishorn.com/add-localstorage-to-your-vue-app-in-2-lines-of-code-56eb2c9f371b)
-* [Offline States](https://github.com/filrak/vue-offline)
-
-## LoDash
-
-* [Order Collection](https://lodash.com/docs/4.17.10#orderBy)
-* [Find Collection](https://lodash.com/docs/4.17.11#find)
-
-## moment.js
-
-* [Add duration to moment date](https://stackoverflow.com/a/44110303/1366033)
-
-## Bootstrap 4
-
-* [Does bootstrap have builtin padding and margin classes?](https://stackoverflow.com/a/46329924/1366033)
-* [What is class=“mb-0” in Bootstrap 4?](https://stackoverflow.com/q/41574776/1366033)
-* [Spacing Utilities](https://getbootstrap.com/docs/4.1/utilities/spacing/)
-* [Sticky Top](https://getbootstrap.com/docs/4.0/utilities/position/#sticky-top)
-* [Feedback Icons BS 3](https://stackoverflow.com/a/18839305/1366033)
-* [Form Validation](https://getbootstrap.com/docs/4.0/components/forms/#validation)
-
-
------
-
-
-
-
-## Eleventy
-
-* [Allow shortcodes to return promises #429](https://github.com/11ty/eleventy/issues/429)
-* [Nunjucks Asynchronous Shortcodes](https://www.11ty.dev/docs/languages/nunjucks/#asynchronous-shortcodes)
-* [Ignore Directory](https://www.11ty.dev/docs/ignores/)
-* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/604)
-* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/388)
-* [Creating an 11ty Plugin - SVG Embed Tool](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
-* [How to disable cross-device action mirroring functionality of BrowserSync?](https://stackoverflow.com/a/59514293/1366033)
-
-## Nunjucks
-
-* [nunjucks: Template not found](https://stackoverflow.com/q/39050788/1366033)
 
 ## Twitter API
 
@@ -224,48 +171,7 @@ Guides, Problems, and Solutions
 * *ALT*: [ciaranj/**node-oauth**](https://github.com/ciaranj/node-oauth)
   * [Intro to OAuth with Node.js: OAuth 1.0 (One-Legged)](https://webapplog.com/intro-to-oauth-with-node-js-oauth-1-0/)
 
-## Node.JS
 
-* [Setting Environment Variables for Node to retrieve](https://stackoverflow.com/a/34154491/1366033)
-* [Managing Environment Variables in Node.js with dotenv](https://stackabuse.com/managing-environment-variables-in-node-js-with-dotenv/)
-* [motdotla/**dotenv**](https://github.com/motdotla/dotenv)
-* *ALT*: [erisanolasheni/**custom-env**](https://github.com/erisanolasheni/custom-env)
-* [How do you properly promisify request?](https://stackoverflow.com/q/28308131/1366033)
-* [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
-* [Why does Node.js' fs.readFile() return a buffer instead of string?](https://stackoverflow.com/q/6456864/1366033)
-* [How do I get the path to the current script with Node.js?](https://stackoverflow.com/q/3133243/1366033)
-* [I'd like to remove the filename from a path using JavaScript](https://stackoverflow.com/a/59506376/1366033)
-* [vscode debug code in node_modules directory](https://stackoverflow.com/a/53081698/1366033)
-* [Is it possible to blackbox vendor code when using VSCode's node debugger?](https://stackoverflow.com/a/48621036/1366033)
-* [writeFile no such file or directory](https://stackoverflow.com/a/50927704/1366033)
-* [Determine project root from a running node.js application](https://stackoverflow.com/a/18721515/1366033)
-* [How to set environment variables from within package.json](https://stackoverflow.com/a/27090755/1366033)
-
-## JavaScript
-
-* [javascript check if property is undefined](https://stackoverflow.com/a/416327/1366033)
-* [Easy Creation of HTML with JavaScript’s Template Strings](https://wesbos.com/template-strings-html/)
-* [HTML Templates via JavaScript Template Literals](https://css-tricks.com/html-templates-via-javascript-template-literals/)
-* [ES6 Object Destructuring Default Parameters](https://stackoverflow.com/a/26578323/1366033)
-* [How do I replace all line breaks in a string with `<br />` tags?](https://stackoverflow.com/a/784547/1366033)
-
-## CSS
-
-* [CSS Image size, how to fill, not stretch?](https://stackoverflow.com/a/29103071/1366033)
-
-## NPM
-
-* [Peer Dependencies](https://nodejs.org/es/blog/npm/peer-dependencies/)
-* [Installing a local module using npm?](https://stackoverflow.com/a/8089029/1366033)
-* [npm link docs](https://docs.npmjs.com/cli/link)
-* [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
-* [Creating and publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
-* [How to publish packages to npm (the way the industry does things)](https://zellwk.com/blog/publish-to-npm/)
-* [What is the meaning of the “at” (@) prefix on npm packages?](https://stackoverflow.com/q/36667258/1366033)
-
-## Netlify
-
-* [Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
 
 -----
 
@@ -341,128 +247,8 @@ Make sure you *start* your CLI file with following [shebang](https://en.wikipedi
 -----
 
 
-## Visual Studio Code
-
-**Tasks**:
-
-* [VS Code Tasks](https://code.visualstudio.com/docs/editor/tasks)
-* [Is it possible to assign different shortcuts to different tasks in VS Code?](https://stackoverflow.com/q/30057191/1366033)
-* [Can I automatically start a task when a folder is opened?](https://stackoverflow.com/q/34103549/1366033)
-* [Launching a website via command line](https://stackoverflow.com/a/23039509/1366033)
-
-**Typings**:
-
-* [ATA - Automatic Type Acquisition](https://code.visualstudio.com/docs/languages/javascript#_automatic-type-acquisition)
-* [jQuery Intellisense in VS Code](https://stackoverflow.com/q/33902077/1366033)
-
-
------
 
 
 
-* [React - Get version number from package.json](https://stackoverflow.com/a/50822003/1366033)
-* [React - Import JSON Data](https://stackoverflow.com/a/45662052/1366033)
-* [React - Update State](https://learn.co/lessons/react-updating-state)
-* [React - Increment State](https://stackoverflow.com/a/39316556/1366033)
-* [React - Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
-* [React - 'this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
-* [React - Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
-* [React - Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
-* [React - handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
-* [React - conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
-* [ES Lint - Anchor is Valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md)
-* [JS - What's the most elegant way to cap a number to a segment?](https://stackoverflow.com/a/11409944/1366033)
-* [CSS - transition height: 0; to height: auto; using CSS?](https://stackoverflow.com/a/8331169/1366033)
 
-
------
-
-
-
-* [Vue - Hide the VueJS while loading?](https://stackoverflow.com/a/36187668/1366033)
-
------
-
-
-
-### JavaScript
-
-* [js - get characters between slashes](https://stackoverflow.com/q/8519734/1366033)
-* [js - get the second to last item of an array](https://stackoverflow.com/a/24331358/1366033)
-* [js - Async and Await with Array.map()](https://flaviocopes.com/javascript-async-await-array-map/)
-
-### Node
-
-* [node - Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
-* [node - how to create a directory if doesn't exist?](https://stackoverflow.com/q/21194934/1366033)
-* [node - skip internal modules](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_skipping-uninteresting-code-node-chrome)
-
-
------
-
-
-### Vue CLI
-
-* [Vue CLI Config - `publicPath`](https://cli.vuejs.org/config/#publicpath)
-* [Vue CLI Environment Variables](https://cli.vuejs.org/guide/mode-and-env.html#modes)
-
-### Bootstrap Vue
-
-* [Navbar](https://bootstrap-vue.js.org/docs/components/navbar)
-* [Navbar Collapse / Toggle Breakpoint](https://bootstrap-vue.js.org/docs/components/navbar#comp-ref-b-navbar-props)
-* [Router Link Support](https://bootstrap-vue.js.org/docs/reference/router-links/)
-* [Router Link Active Style](https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style)
-
-### Vue Router
-
-* [Router Transitions](https://router.vuejs.org/guide/advanced/transitions.html#per-route-transition)
-* [Router Transitions Demo](https://markus.oberlehner.net/blog/vue-router-page-transitions/)
-* [History Mode](https://router.vuejs.org/guide/essentials/history-mode.html)
-
-### WebPack
-
-* [ES Lint Line breaks](https://stackoverflow.com/a/44662845/1366033)
-* [Static Asset - Relative Path Imports via File Loader](https://cli.vuejs.org/guide/html-and-static-assets.html#static-assets-handling)
-
-### Vue-Markdown
-
-* [Syntax Demo](https://miaolz123.github.io/vue-markdown/)
-* [Register the VueMarkdown component as a global component](https://github.com/miaolz123/vue-markdown/issues/61)
-
-### Netlify
-
-* [Deploying Vue CLI to Netlify](https://cli.vuejs.org/guide/deployment.html#netlify)
-* [Index Redirects](https://www.netlify.com/docs/redirects/#rewrites-and-proxying)
-
-
------
-
-
-
-* [11ty - Data Files](https://www.11ty.io/docs/data-js/)
-* [11ty - Includes](https://mozilla.github.io/nunjucks/templating.html#include)
-* [Node - List Directory](https://stackoverflow.com/q/2727167/1366033)
-* [JS - Replace all occurrences of a string](https://stackoverflow.com/q/1144783/1366033)
-* [JS - Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
-* [SVG - How to “use” local “defs” in SVG](https://stackoverflow.com/q/16123721/1366033)
-* [Img - Convert SVG to ICO](https://convertio.co/svg-ico/)
-
-
------
-
-
-
-## Resources
-
-* [CSS - Using `box shadows` and `clip-path` together](https://css-tricks.com/using-box-shadows-and-clip-path-together/)
-* [CSS - Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-* [Fonts - Google Fonts](https://fonts.google.com/specimen/Overlock)
-* [Fonts - Embed Google Fonts](https://stackoverflow.com/a/53674218/1366033)
-
-### Tools
-
-* [Image to Data URI converter](https://ezgif.com/image-to-datauri)
-* [Clippy](https://bennettfeely.com/clippy/)
-* [Transparent Textures](https://www.transparenttextures.com/)
-* [MetaTags](https://metatags.io/)
 

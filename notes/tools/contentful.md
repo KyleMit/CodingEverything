@@ -4,6 +4,21 @@
 
 * **CDA** - [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)
 
+## Alternatives
+
+* [Cosmic](https://www.cosmicjs.com/)
+* [Dato CMS](https://www.datocms.com/)
+* [Sanity.io](https://www.sanity.io/)
+* [Agility CMS](https://agilitycms.com/)
+* [Contentstack](https://www.contentstack.com/)
+* [Flotiq](https://flotiq.com/)
+* [Kontent](https://kontent.ai/)
+* [Strapi](https://strapi.io/)
+* [Drupal](https://www.drupal.org/)
+* [WordPress](https://wordpress.com/)
+* [Forestry]
+* [ButterCMS]
+
 ## Links
 
 * [Training](https://public.learningcenter.contentful.com/catalog)

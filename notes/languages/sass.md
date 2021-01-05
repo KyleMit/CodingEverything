@@ -1,8 +1,14 @@
 # Sass
 
-<!-- markdownlint-disable MD024 -->
+> **Sass** - [Syntactically Awesome Style Sheets](https://sass-lang.com/)
 
-**Sass** - [Syntactically Awesome Style Sheets](https://sass-lang.com/)
+## Alternatives
+
+* [Less.js](http://lesscss.org/)
+* [Stylus](https://stylus-lang.com/)
+* [Compass](http://compass-style.org/)
+
+
 
 ## Getting Started
 
@@ -18,15 +24,13 @@ npm install -g sass
 sass --watch input.scss output.css
 ```
 
-## SCSS vs. SASS
-
-* SCSS - uses curly braces and semi-colons
-* Sass - doesn't
 
 ## Syntax
 
 ### Variables
 
+<!-- Allow Repeating Input / Output -->
+<!-- markdownlint-disable MD024 -->
 #### Input
 
 ```scss
@@ -160,3 +164,7 @@ nav li {
 
 * [Select only direct children from element](https://stackoverflow.com/q/30290820/1366033)
   * [The Sass Ampersand | CSS-Tricks](https://css-tricks.com/the-sass-ampersand/)
+
+* SCSS vs. SASS
+  * SCSS - uses curly braces and semi-colons
+  * Sass - doesn't

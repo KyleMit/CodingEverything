@@ -15,9 +15,9 @@ But more importantly, you have not left yourself many outs if you want to change
 
 Instead, we'll make a vector based image and use slices to automatically export every asset we need in every resolution we need. See MSDN for a [full list](http://msdn.microsoft.com/en-us/library/windows/apps/hh846296.aspx) of all the logos you'll need in the Windows Store and a description of each.
 
-1.  Your **first step** is to read Jerry Nixon's great blogpost, [Windows 8 apps need 28 logo varietals](http://blog.jerrynixon.com/2013/08/windows-8-apps-need-28-logo-varietals.html), in which he outlines how to output all the logos you'll need from a vectorized image.
-2.  Your **second step** is to download the FREE version of [Microsoft Expression Design 4](http://www.microsoft.com/en-us/download/details.aspx?id=36180)
-3.  Once you've followed the steps above and created your logos, you're ready to add them to your Visual Studio project (which, it turns out, is slightly trickier than you might imagine).
+1. Your **first step** is to read Jerry Nixon's great blogpost, [Windows 8 apps need 28 logo varietals](http://blog.jerrynixon.com/2013/08/windows-8-apps-need-28-logo-varietals.html), in which he outlines how to output all the logos you'll need from a vectorized image.
+2. Your **second step** is to download the FREE version of [Microsoft Expression Design 4](http://www.microsoft.com/en-us/download/details.aspx?id=36180)
+3. Once you've followed the steps above and created your logos, you're ready to add them to your Visual Studio project (which, it turns out, is slightly trickier than you might imagine).
 
 
 ### Adding Logos to Visual Studio
@@ -73,12 +73,12 @@ You may not want the same image at every resolution, but as a starter kit, here 
 
 The designer doesn't know that you're exporting slices to match pixel perfect resolutions, so will try to adjust images for you, occasionally resulting in a `150x150` slice exporting with a width or height of **`149`** or **`151`**. I found this [post](http://blogs.msdn.com/b/avip/archive/2010/10/29/expression-design-problems-with-exporting-slices-wrong-sizes.aspx) explaining how to fix the problem.
 
-1.  Go to the Options Pages (<kbd>Ctrl</kbd> + <kbd>K</kbd>) or **Edit** --> Options
-2.  In the 'General' tab, change 'Rectangle Antialiasing' from 'Crisp' to 'Smooth'
+1. Go to the Options Pages (<kbd>Ctrl</kbd> + <kbd>K</kbd>) or **Edit** --> Options
+2. In the 'General' tab, change 'Rectangle Antialiasing' from 'Crisp' to 'Smooth'
 
 ![Designer Options](https://i.imgur.com/rcuTntv.png)
 
 
 ## Blank Designer Files
 
-To to save youself the setup work, click to **[download stock template designer files from skydrive](http://sdrv.ms/16zCB83)**
+To to save yourself the setup work, click to **[download stock template designer files from skydrive](http://sdrv.ms/16zCB83)**

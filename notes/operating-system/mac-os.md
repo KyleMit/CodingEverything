@@ -493,10 +493,43 @@ chsh -s /bin/zsh
 [nvm is broken after I installing oh-my-zsh? #5543](https://github.com/ohmyzsh/ohmyzsh/issues/5543)
 
 
+## Disable SIP
+
+[Disabling and Enabling System Integrity Protection | Apple Developer Documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection)
+
+```bash
+csrutil disable
+```
+
+* **SIP** - System Integrity Protection
+
 ## Questions
+
+* [How can I add a path to the PATH environment variable?](https://apple.stackexchange.com/q/12629/74706)
+
+1. Edit bash profile
+
+    ```bash
+    code ~/.bash_profile
+    ```
+
+2. append path to exiting path variable
+
+    ```bash
+    # comment for yourself
+    export PATH="$PATH:to/your/path"
+    ```
+
+3. Refresh terminal
+
+    ```bash
+    source ~/.bash_profile
+    ```
+
+
+* [gdate for mac bash](https://apple.stackexchange.com/a/231227/74706)
 
 * Screensaver
 
     [Slow down screensaver pictures changes](https://apple.stackexchange.com/q/135766/74706)
     [Change screensaver slide duration](http://hints.macworld.com/article.php?story=20130215183522445)
-

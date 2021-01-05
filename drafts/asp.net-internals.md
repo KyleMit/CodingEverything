@@ -4,10 +4,12 @@ tags: ['post', asp.net]
 draft: true
 ---
 
+<!-- markdownlint-disable MD024 -->
 
-One of the many things ASP.NET does is provide a layer of abstraction to web controls that allows a developer to interact with them in a way familiar to many desktop developers.  
 
-This is especially true for the ASP.NET WebForms engine.  The Razor templating engine, popular for it's use in MVC apps, can help make ASP.NET's rendering decisions a little more transparent.  
+One of the many things ASP.NET does is provide a layer of abstraction to web controls that allows a developer to interact with them in a way familiar to many desktop developers.
+
+This is especially true for the ASP.NET WebForms engine.  The Razor templating engine, popular for it's use in MVC apps, can help make ASP.NET's rendering decisions a little more transparent.
 
 But WebForms can be helpful.  The trick is when providing your own styling through CSS or behaviors through JavaScript, it is often helpful to know what the actual output is.  After all, CSS doesn't offer an `asp:TextBox` selector.
 
@@ -28,7 +30,7 @@ Here's a small selection of ASP.NET controls and the actual HTML that gets rende
 ### HTML
 
 ```html
-<a id="MainContent_ChangePage" 
+<a id="MainContent_ChangePage"
    href="javascript:__doPostBack('ctl00$MainContent$ChangePage','')" >
     Change page
 </a>
@@ -90,14 +92,14 @@ function WebForm_DoPostBackWithOptions(options) {
             validationResult = Page_ClientValidate(options.validationGroup);
         }
     }
-    // ...non-relevant code ommitted...
+    // ...non-relevant code omitted...
     if (options.clientSubmit) {
         __doPostBack(options.eventTarget, options.eventArgument);
     }
 }
 ```
 
-So as long as you've passed in the option to validate, 
+So as long as you've passed in the option to validate,
 
 ```js
 function Page_ClientValidate(validationGroup) {

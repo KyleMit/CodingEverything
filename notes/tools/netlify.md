@@ -1,5 +1,11 @@
 # Netlify
 
+
+## Alternatives
+
+[Surge](https://surge.sh/)
+
+
 ## Docs
 
 * [Branch Deploys](https://docs.netlify.com/site-deploys/overview/#branch-deploy-controls)
@@ -17,7 +23,10 @@
   * Localize Content
   * Easily Push Site-Wide Changes (without re-build)
 
-## Forums
+## Questions
+
+
+* [Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
 
 * [Netlify dev indicates 'no "command" specified'](https://community.netlify.com/t/22480?u=kylemit)
 
@@ -34,4 +43,10 @@
   ```
 
 
-* [Is it possible to specify a custom default document?](https://community.netlify.com/t/23974?u=kylemit)
+* [Is it possible to specify a custom default document?](https://community.netlify.com/t/23974)
+
+* [Does Netlify support websocket programming?](https://community.netlify.com/t/4213)
+
+* [Deploying Vue CLI to Netlify](https://cli.vuejs.org/guide/deployment.html#netlify)
+* [Index Redirects](https://www.netlify.com/docs/redirects/#rewrites-and-proxying)
+

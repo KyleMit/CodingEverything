@@ -8,7 +8,7 @@ postID: 1547601264794152729
 As a general rule, you should not modify a collection that your are looping over, only the items inside of that collection.  The problem with removing items inside of a for loop is that it changes the collection that is being looped which will interfere with the list count in an *indexed for loop* and the iterator location in a *for each loop*.
 
 
-### Two common solutions are to:
+### Two common solutions are to
 
 1. Create a new collection so you can modify one collection and loop over another.
 2. Loop backwards through the collection so changes to the iterator won't impact the execution.
@@ -16,7 +16,7 @@ As a general rule, you should not modify a collection that your are looping over
 In this article, we'll create two extension methods that utilize each of these solutions.
 
 
-### Create New Collection:
+### Create New Collection
 
 By calling [`ToList`][ToList] on the original collection, you create a brand new collection. Then, you can loop over the new list to find items that need to be removed from the original.  Whenever you find an object that matches your removal criteria, you can safely remove it from the original collection because it is not currently being enumerated over.
 
@@ -32,7 +32,7 @@ Public Sub RemoveEachObject(Of T)(ByVal col As Collection(Of T),
 End Sub
 ```
 
-### Loop Backwards:
+### Loop Backwards
 
 The previous solution works well, but a more efficient solution would be to loop backwards.  For starters, the previous answer will have to create a copy of the entire collection.  More importantly, when removing items, the [`Remove()`][Collection.Remove] method will have to loop through entire collection and check each item for reference equality with the passed in value.  This can be quite expensive.  It would be much easier to keep track of the current index in the collection and remove whatever item happened to be occupying it.
 

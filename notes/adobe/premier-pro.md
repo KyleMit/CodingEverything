@@ -1,7 +1,7 @@
 # Adobe Premier Pro
 
 
-## Formus
+## Forums
 
 * [Video Production Stack Exchange](https://video.stackexchange.com/questions/tagged/premiere)
 * [Super User](https://superuser.com/questions/tagged/adobe-premiere)

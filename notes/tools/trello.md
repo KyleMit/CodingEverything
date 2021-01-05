@@ -45,6 +45,20 @@
 * [Connect GitHub + Trello with Unito](https://trello.com/power-ups/5891fb2158a63d40d66acf0a/connect-github-trello-with-unito) ($$$)
   * sync issues and cards
 
+### Card Size
+
+* [Card Size for Trello — Screenful](https://screenful.com/card-size-for-trello)
+
+#### Issue - Submit Save's All
+
+```js
+let estForm = document.getElementById("estimate")
+let recentLabel = estForm.querySelector("#recent")
+let frequentBtns = estForm.querySelector("#frequent")
+estForm.append(recentLabel)
+estForm.append(frequentBtns)
+```
+
 ## Columns
 
 

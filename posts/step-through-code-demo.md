@@ -9,7 +9,7 @@ postID: 221126685864120473
 One challenge to delivering coding presentations is the trade-off between:
 
 * Showing actual **real code** that developers can get their head around
-<li style=" list-style-type: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VS**</li>
+* -- vs --
 * The **time** it costs to actually write it in front of them (debugging missing commas included).
 
 Here are some of the ways I've seen to side step this issue in previous coding presentations I've attended:
@@ -65,7 +65,7 @@ You can checkout the next branch like this:
 git checkout $(git rev-list HEAD..master | tail -n 1)
 ```
 
-##### In case you're new to Git/Shell, let's break this down a little.
+##### In case you're new to Git/Shell, let's break this down a little
 
 The inner expression [`git rev-list`][git rev-list] will show a list of revisions.  By specifying any two revision id's joined by two periods, we'll get a list of all the SHAs in between them.
 
@@ -111,6 +111,7 @@ In order to make this into a one liner, we'll need to wrap the query so we can p
 
 If we're using this a lot, it might look prettier to [alias the query][git alias].
 We can add a new command called `child-sha` to our `local` config file like this:
+
 ```no-highlight
 git config --local alias.child-sha "!git rev-list HEAD..master | tail -n 1"
 ```
@@ -135,7 +136,7 @@ And make sure `Auto-load changes` is checked:
 ![Auto Load Changes][Auto Load Changes]
 
 
-#### Conclusion:
+#### Conclusion
 
 That's about it.  I'll add my presentation here when it's finished so you can see a little more concrete of an example.
 Let me know if you give it a shot and have any experiences (good or bad).

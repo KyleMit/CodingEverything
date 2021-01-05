@@ -5,12 +5,17 @@
 * [Github](https://github.com/GoogleChrome/lighthouse)
 * [Measure](https://web.dev/measure/)
 * [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-* [Lighthouse Metrics](https://lighthouse-metrics.com/)
 * [Lighthouse Viewer](https://googlechrome.github.io/lighthouse-ci/viewer/)
 * [Lighthouse CLI](https://www.npmjs.com/package/lighthouse#using-the-node-cli)
 * [Chrome UX - CrUX](https://web.dev/chrome-ux-report-data-studio-dashboard/)
-* [Github Actions](https://github.com/lighthouse-metrics/github-actions)
 * [Web Vitals](https://web.dev/vitals/)
+* [Discussion - Gitter](https://gitter.im/GoogleChrome/lighthouse)
+* [Do Better Web](https://developers.google.com/web/updates/2016/12/lighthouse-dbw)
+
+### Docs
+
+* [Node ReadMe](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#testing-on-a-mobile-device)
+* [Architecture](https://github.com/GoogleChrome/lighthouse/blob/master/docs/architecture.md)
 
 ## Alternatives
 
@@ -31,6 +36,25 @@
 * [Every Web Performance Test Tool | swyx.io](https://www.swyx.io/webperf-tests/)
 * [Think With Google](https://www.thinkwithgoogle.com/feature/testmysite/)
 * [Mozilla Observatory](https://observatory.mozilla.org/)
+* [Lighthouse Metrics](https://lighthouse-metrics.com/)
+  * [lighthouse-metrics/github-actions](https://github.com/lighthouse-metrics/github-actions)
+
+## Lighthouse Integrations
+
+[Lighthouse Integrations in Web Perf services](https://github.com/GoogleChrome/lighthouse#lighthouse-integrations-in-web-perf-services)
+
+## Customize
+
+* [configuration](https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md)
+* [plugins](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md)
+* [new-audits](https://github.com/GoogleChrome/lighthouse/blob/master/docs/new-audits.md)
+
+### Stack Packs
+
+* [Prototyping Stack Packs for Lighthouse](https://developers.google.com/web/updates/2019/01/lighthouse-platform-packs)
+* [Lighthouse Stack Packs](https://github.com/GoogleChrome/lighthouse-stack-packs)
+* [core(stack-packs) PR](https://github.com/GoogleChrome/lighthouse/pull/9797)
+* [Contributing to Stack Packs](https://github.com/GoogleChrome/lighthouse-stack-packs/blob/master/CONTRIBUTING.md)
 
 ## Web Vitals
 
@@ -314,3 +338,13 @@ https://gist.github.com/KyleMit/1e4b949b32a4e35ddc8a9b570d8e4b2c
 
 
 * [Structured data is valid](https://web.dev/structured-data/)
+
+
+## Questions
+
+* [Expose TypeScript typings](https://github.com/GoogleChrome/lighthouse/issues/1773)
+
+
+* [ContextResult::kTransientFailure: Failed to send GpuChannelMsg_CreateCommandBuffer](https://stackoverflow.com/q/55992970/1366033)
+
+  Run with `--disable-gpu`

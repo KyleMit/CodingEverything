@@ -1,12 +1,172 @@
 # JavaScript
 
-[Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
+## ES6
+
+[lukehoban/**es6features**](https://github.com/lukehoban/es6features) - Overview of ECMAScript 6 features
+
+## Reference (MDN)
+
+[JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+### Statements
+
+* [**Control flow**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Control_flow "Permalink to Control flow")
+
+  * [`Block`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+  * [`break`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break)
+  * [`continue`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue)
+  * [`Empty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
+  * [`if...else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+  * [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+  * [`throw`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+  * [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+
+* [**Declarations**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Declarations "Permalink to Declarations")
+
+  * [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+  * [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+  * [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
+* [**Functions and classes**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Functions_and_classes "Permalink to Functions and classes")
+
+  * [`function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+  * [`function*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+  * [`async function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  * [`return`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+  * [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
+
+* [**Iterations**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Iterations "Permalink to Iterations")
+
+  * [`do...while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+  * [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+  * `for each...in`
+  * [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+  * [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+  * [`for await...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+  * [`while`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+
+* [**Other**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference#Other "Permalink to Other")
+
+  * [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+  * [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+  * [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+  * [`label`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label)
+  * [`with`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with)
 
 
-```js
-var response = await fetch(`/api/search?q=val`);
-var results = await response.text();
-```
+### Standard Built In Objects
+
+[Standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
+
+* **Value properties**
+  * [`Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+  * [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+  * [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+  * [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+
+* **Function properties**
+  * [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+  * [`isFinite()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
+  * [`isNaN()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
+  * [`parseFloat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+  * [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+  * [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+  * [`encodeURIComponent()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+  * [`decodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
+  * [`decodeURIComponent()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
+
+* **Fundamental objects**
+  * [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+  * [`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+  * [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+  * [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+
+* **Error objects**
+  * [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+  * [`EvalError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError)
+  * [`InternalError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError)
+  * [`RangeError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
+  * [`ReferenceError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
+  * [`SyntaxError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+  * [`TypeError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+  * [`URIError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError)
+
+
+* **Numbers and dates**
+  * [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+  * [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+  * [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+  * [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+* **Text processing**
+  * [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+  * [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+
+* **Indexed collections**
+  * [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+  * [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+  * [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+  * [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
+  * [`Int16Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
+  * [`Uint16Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
+  * [`Int32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+  * [`Uint32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
+  * [`Float32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
+  * [`Float64Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+  * [`BigInt64Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
+  * [`BigUint64Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
+
+* **Keyed collections**
+  * [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+  * [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+  * [`WeakMap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+  * [`WeakSet`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+
+
+* **Structured data**
+  * [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+  * [`SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+  * [`Atomics`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
+  * [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+  * [`JSON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+* **Control abstraction objects**
+  * [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  * [`Generator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+  * [`GeneratorFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+  * [`AsyncFunction`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+
+
+* **Reflection**
+  * [`Reflect`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
+  * [`Proxy`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+
+* **Internationalization**
+  * [`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+  * [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator)
+  * [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)
+  * [`Intl.ListFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ListFormat)
+  * [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat)
+  * [`Intl.PluralRules`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules)
+  * [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)
+  * [`Intl.Locale`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale)
+
+
+* **WebAssembly**
+  * [`WebAssembly`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)
+  * [`WebAssembly.Module`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
+  * [`WebAssembly.Instance`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
+  * [`WebAssembly.Memory`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
+  * [`WebAssembly.Table`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
+  * [`WebAssembly.CompileError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)
+  * [`WebAssembly.LinkError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError)
+  * [`WebAssembly.RuntimeError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError)
+
+* Other
+  * [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 
 ## Debounce
 
@@ -167,7 +327,7 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 ## JavaScript Format Date
 
 | Property     | Values  | Example     |
-|--------------|---------|-------------|
+| ------------ | ------- | ----------- |
 | weekday      | narrow  | M           |
 |              | short   | Mon         |
 |              | long    | Monday      |
@@ -206,7 +366,7 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 })
 ```
 
-### Questions
+### Format Date - Further Reading
 
 * [Get Locale Short Date Format using javascript](https://stackoverflow.com/q/2388115/1366033)
 * [Get String in YYYYMMDD format from JS date object?](https://stackoverflow.com/q/3066586/1366033)
@@ -232,3 +392,201 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 
 [ECMAScript® 2021 Language Specification > tolocalestring](https://tc39.es/ecma262/#sec-date.prototype.tolocalestring)
 [ECMAScript® 2021 Internationalization API Specification > DateTimeFormat Objects](https://tc39.es/ecma402/#datetimeformat-objects)
+
+
+## JS Doc Comments
+
+Emmet autocomplete `/**`
+
+[JS Doc](https://jsdoc.app/)
+
+
+## Questions
+
+* [javascript check if property is undefined](https://stackoverflow.com/a/416327/1366033)
+* [Easy Creation of HTML with JavaScript’s Template Strings](https://wesbos.com/template-strings-html/)
+* [HTML Templates via JavaScript Template Literals](https://css-tricks.com/html-templates-via-javascript-template-literals/)
+* [ES6 Object Destructuring Default Parameters](https://stackoverflow.com/a/26578323/1366033)
+* [How do I replace all line breaks in a string with `<br />` tags?](https://stackoverflow.com/a/784547/1366033)
+* [get characters between slashes](https://stackoverflow.com/q/8519734/1366033)
+* [get the second to last item of an array](https://stackoverflow.com/a/24331358/1366033)
+* [Async and Await with Array.map()](https://flaviocopes.com/javascript-async-await-array-map/)
+
+
+* [Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
+
+
+    ```js
+    var response = await fetch(`/api/search?q=val`);
+    var results = await response.text();
+    ```
+
+* [Polling until getting specific result?](https://stackoverflow.com/a/64654157/1366033)
+
+
+* [Cannot use import statement outside a module](https://stackoverflow.com/q/58357941/1366033)
+
+  ```html
+  <script src="file1.js" type="module" ></script>
+  ```
+
+
+* Console timer
+
+  ```js
+  let timer = (function() {
+    let dict = {}
+
+    let start = function(label) {
+      dict[label] = performance.now()
+    }
+
+    let stop = function(label) {
+      let myStart = dict[label]
+      if (!myStart) {
+        console.log(`Timer '${label}' does not exist`)
+        return;
+      }
+      let myStop = performance.now()
+      let myTime = myStop - myStart
+      console.log(`${label}: ${myTime} ms`)
+    }
+
+    return {start, stop}
+  })()
+
+  // usage
+  timer.start("math")
+
+  setTimeout(() => {
+    timer.stop("math")
+  })
+  ```
+
+* Trace dependency graph
+
+  [pahen/**madge**](https://github.com/pahen/madge)
+
+  > Create graphs from your CommonJS, AMD or ES6 module dependencies
+  > developer tool for generating a visual graph of your module dependencies, finding circular dependencies, and give you other useful info
+
+
+* [i++ vs ++i](https://stackoverflow.com/q/6867876/1366033)
+
+  * [++someVariable vs. someVariable++](https://stackoverflow.com/q/3469885/1366033)
+  * [Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+
+  * `++variable` - increments the variable, returning the *new value*.
+  * `variable++` - increments the variable, but returns the *old value*
+
+* Check for NaN
+
+  [Number.isNaN() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
+
+  > Due to both equality operators, `==` and `===,` evaluating to false when checking if `NaN` is `NaN`, the function `Number.isNaN()` has become necessary.
+  > This situation is unlike all other possible value comparisons in JavaScript.
+  >
+  > The following works because NaN is the only value in JavaScript which is not equal to itself.
+
+  ```js
+  Number.isNaN = Number.isNaN || function isNaN(input) {
+      return typeof input === 'number' && input !== input;
+  }
+  ```
+
+* [JS Recursive object assign](https://stackoverflow.com/q/49726801/1366033)
+
+  ```js
+  let meta = {
+      "hi": { title: "hi", desc: "says hi" },
+      "bye": { title: "bye", desc: "says goodbye" }
+  }
+
+  let metaCustom = {
+      "hi": { title: "hello", },
+  }
+
+  // 2 levels of depth, copy custom properties to original
+  for (let key in meta) {
+      let custom = metaCustom[key]
+      if (custom) {
+          let base = meta[key]
+          let combined = Object.assign(base, custom)
+      }
+  }
+
+  // meta
+  {
+      "hi": { title: "hello", desc: "says hi" },
+      "bye": { title: "bye", desc: "says goodbye" }
+  }
+  ```
+
+* [What's the most elegant way to cap a number to a segment?](https://stackoverflow.com/a/11409944/1366033)
+
+
+* [Replace all occurrences of a string](https://stackoverflow.com/q/1144783/1366033)
+* [Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+* [Disable F5 and browser refresh using JavaScript - Stack Overflow](https://stackoverflow.com/q/2482059/1366033)
+
+  ```js
+  document.addEventListener("keydown", (e) => {
+    if (e.key == "F5") {
+      e.preventDefault();
+    }
+  })
+  ```
+
+
+* [Pop, Push, Shift and Unshift Array Methods in JavaScript](https://alligator.io/js/push-pop-shift-unshift-array-methods/)
+
+* `pop()` - Remove an item from the end of an array
+
+  ```js
+  let cats = ['Bob', 'Willy', 'Mini'];
+  cats.pop(); // ['Bob', 'Willy']
+  pop() // returns the removed item.
+  ```
+
+* `push()`  Add items to the end of an array
+
+  ```js
+  let cats = ['Bob'];
+  cats.push('Willy'); // ['Bob', 'Willy']
+  cats.push('Puff', 'George'); // ['Bob', 'Willy', 'Puff', 'George']
+  push() // returns the new array length.
+  ```
+
+* `shift()` - Remove an item from the beginning of an array
+
+  ```js
+  let cats = ['Bob', 'Willy', 'Mini'];
+  cats.shift(); // ['Willy', 'Mini']
+  shift() // returns the removed item.
+  ```
+
+* `unshift()` - Add items to the beginning of an array
+
+  ```js
+  let cats = ['Bob'];
+  cats.unshift('Willy'); // ['Willy', 'Bob']
+  cats.unshift('Puff', 'George'); // ['Puff', 'George', 'Willy', 'Bob']
+  unshift() // returns the new array length
+  ```
+
+* Iteration and Generation
+
+  * [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+  * [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+  * [function*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+  * [Array.prototype[@@iterator]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+
+* [Clamp value between two numbers](https://stackoverflow.com/q/5842747/1366033)
+
+  ```js
+  function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+  }
+  ```
+

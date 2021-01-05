@@ -31,3 +31,28 @@ https://web.dev/
 <img src="/sites/default/files/images/2020/04/Question%20icon.png" >
 ```
 
+## Source Maps
+
+* [Map Preprocessed Code to Source Code](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps)
+
+* [Sourcemaps are detected in chrome but original source is not loaded](https://stackoverflow.com/a/64628126/1366033)
+
+![chrome source maps](/assets/notes/chrome-dev-tools/chrome-source-maps.png)
+
+
+## Questions
+
+* [Add padding to bottom of console](https://twitter.com/KyleMitBTV/status/1125738088150568960)
+
+  [960412 - DevTools: Add bottom padding to Console input - chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=960412)
+
+  ```css
+  #​console-messages { padding-bottom: calc(50% - 10px); }
+  ```
+
+  or
+
+  ```css
+  .console-view-fix-select-all { height: 300px; }
+  ```
+

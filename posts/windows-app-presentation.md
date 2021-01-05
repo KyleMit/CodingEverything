@@ -5,23 +5,23 @@ date: 2013-09-20
 postID: 3652160074787522299
 ---
 
-#### Here's a list of all the resources I've put together for my talk on Windows 8 Application Development that I gave at:
+#### Here's a list of all the resources I've put together for my talk on Windows 8 Application Development that I gave at
 
-*   The [Vermont Code Camp][1] on 9/21/13
-*   The [Boston Code Camp][2] 10/19/13
-*   The [VT.NET User Group][3] on 11/18/13
+* The [Vermont Code Camp][1] on 9/21/13
+* The [Boston Code Camp][2] 10/19/13
+* The [VT.NET User Group][3] on 11/18/13
 
 You can view the [slides][slides] from my presentation or [rate][rate] the talk if you'd like to provide some feedback
 
 The **BindableBase** class helps implement the MVVM pattern by implementing INotifyPropertyChanged on a base class which should be inherited by classes in your ViewModel
 
-*   [BindableBase <span class="vbColor">(VB)</span>][4]
-*   [BindableBase <span class="csColor">(C#)</span>][5]
+* [BindableBase <span class="vbColor">(VB)</span>][4]
+* [BindableBase <span class="csColor">(C#)</span>][5]
 
 The **RelayCommand** class helps implement the MVVM pattern by exposing methods on your ViewModel as Properties to which your View can Bind
 
-*   [RelayCommand <span class="vbColor">(VB)</span>][6]
-*   [RelayCommand <span class="csColor">(C#)</span>][7]
+* [RelayCommand <span class="vbColor">(VB)</span>][6]
+* [RelayCommand <span class="csColor">(C#)</span>][7]
 
 The **UserSettingsBase** class provides base functionality that allows you to create persistent user settings with regular Property Syntax.
 

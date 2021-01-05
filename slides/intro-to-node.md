@@ -59,8 +59,8 @@ SayHello (name) => {
 }
 ```
 
-Note: func delcarations -> are hoisted to the top of the scope (immediately available).
-arrow func -> lecical this (defined by outer scope)
+Note: func declarations -> are hoisted to the top of the scope (immediately available).
+arrow func -> lexical this (defined by outer scope)
 
 
 
@@ -151,12 +151,12 @@ multiplyPromise.then(result => {
 
 ## Node vs .NET
 
-|              | .NET            | Node             |
-|--|--|--|
-| **Language** | C# / VB / F#    | JS / TS          |
-| **Runtime**  | MSIL            | V8               |
-| **Platform** | Win, Mac, Linux | Win, Mac, Linux  |
-| **Packages** | Nuget           | npm              |
+|              | .NET            | Node            |
+| ------------ | --------------- | --------------- |
+| **Language** | C# / VB / F#    | JS / TS         |
+| **Runtime**  | MSIL            | V8              |
+| **Platform** | Win, Mac, Linux | Win, Mac, Linux |
+| **Packages** | Nuget           | npm             |
 
 ---
 

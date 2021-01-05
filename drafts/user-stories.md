@@ -8,7 +8,7 @@ I just completed a great agile training that has me thinking about the way we ga
 
 > Having the wrong requirements is not an excuse for delivering the wrong product.
 
-As an industry whose end product is [working software over comprehensive documentation][agile manifesto], I think this edict deserves serious consideration.  On one hand, there is something fundamentally scary about allowing our failures to extend beyond the scope of following the documentation.  But 
+As an industry whose end product is [working software over comprehensive documentation][agile manifesto], I think this edict deserves serious consideration.  On one hand, there is something fundamentally scary about allowing our failures to extend beyond the scope of following the documentation.  But
 
 It's a paradigm shift away from documentation for documentations sake and toward functionality that produces value.
 
@@ -22,7 +22,7 @@ Here it is re-phrased as a User Story
 
 > **As an** application viewer,
 > **I want** all dates to presented in mm/dd/yyyy format
-> **So that** I can easily calculate the day of the week with a speciality piece of software that requires this date format.
+> **So that** I can easily calculate the day of the week with a specialty piece of software that requires this date format.
 
 
 

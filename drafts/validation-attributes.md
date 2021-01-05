@@ -15,7 +15,7 @@ public class Car
     public string Make { get; set; }
     public int? ModelYear { get; set; }
     public bool IsUsed { get; set; }
-    public DateTime? PurcahseDate { get; set; }
+    public DateTime? PurchaseDate { get; set; }
     public double? Price { get; set; }
     public string LotNumber { get; set; }
 }
@@ -29,11 +29,11 @@ The idea here is re-usability.  The class should get to own some aspects of how 
 
 Here are some common display attributes:
 
-Display Attribute | Description
-------------------|---------
-[`DisplayAttribute`][D2] | Specifies localizable strings for data types and members that are used in the user interface.
-[`DisplayFormatAttribute`][D3] | Specifies how data fields are displayed and formatted.
-[`DataTypeAttribute`][D1] | Specifies a particular type of data, such as e-mail address or phone number.
+| Display Attribute              | Description                                                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------------------- |
+| [`DisplayAttribute`][D2]       | Specifies localizable strings for data types and members that are used in the user interface. |
+| [`DisplayFormatAttribute`][D3] | Specifies how data fields are displayed and formatted.                                        |
+| [`DataTypeAttribute`][D1]      | Specifies a particular type of data, such as e-mail address or phone number.                  |
 
 ### [`[DisplayAttribute]`][D2]
 
@@ -74,7 +74,7 @@ var attrs = from prop in props
                               .Cast<DisplayAttribute>().Single().Name
         };
 var isUsedProp = attrs.First(p => p.PropertyName == "IsUsed");
-Console.WriteLine("Property {0} has DisplayName {1}.", 
+Console.WriteLine("Property {0} has DisplayName {1}.",
             isUsedProp.PropertyName, isUsedProp.DisplayName);
 //Output: Property IsUsed has DisplayName Used Car.
 ```
@@ -95,7 +95,7 @@ namespace System.Web.Mvc.Html
     public static class DisplayNameExtensions
     {
         public static MvcHtmlString DisplayNameFor<TModel, TValue>(
-            this HtmlHelper<IEnumerable<TModel>> html, 
+            this HtmlHelper<IEnumerable<TModel>> html,
                  Expression<Func<TModel, TValue>> expression)
 ```
 
@@ -106,7 +106,7 @@ If you're so inclined, you can write your own custom helper methods in .NET code
 The lambda expressions allow us to recover both:
 
 1. The value of the object
-2. And also its attributes 
+2. And also its attributes
 
 Suppose we were to call the following function *without* a lambda like this:
 
@@ -120,7 +120,7 @@ Suppose we were to call the following function *without* a lambda like this:
 @Html.DisplayNameFor(true)
 ```
 
-This is great at providing the value, but there's no possible way for `DisplayNameFor` to have any context as to where that value came from.  
+This is great at providing the value, but there's no possible way for `DisplayNameFor` to have any context as to where that value came from.
 
 Instead, the ASP.NET MVC engine provides each page with an `HTML` class that receives the model that is passed in when you initialize the view.  Any extension methods you call will execute against this class.  A lambda expression is just an anonymous function that takes in a value as a parameter and returns a result. Since the HTML instance for the page already knows your model, all you need to do is provide instructions on how to obtain each property from the model.  The end result of which is we can not only obtain the property's value, but also it's metadata via reflection, thereby unlocking any attributes we may need.
 
@@ -178,10 +178,12 @@ The Display Format is leveraged anytime you allow MVC to render the property's v
 @Html.DisplayFor(model => model.Price)
 ```
 
-> **NOTE:** In order to apply numeric formatting, the field **type must be numeric**.  The following example will not work because .NET does not parse the abitrary string characters into numerical representations.
->      
->     [DisplayFormat(DataFormatString = "{0:C2}")]
-    public string cost { get; set; }
+> **NOTE:** In order to apply numeric formatting, the field **type must be numeric**.  The following example will not work because .NET does not parse the arbitrary string characters into numerical representations.
+
+```cs
+[DisplayFormat(DataFormatString = "{0:C2}")]
+public string cost { get; set; }
+```
 
 > If you need additional string formatting logic, you can do that within the view template
 
@@ -210,7 +212,7 @@ The Data Type Attribute provides additional type information in addition to the 
 
 First, let's look at what View Templates exist out of the box:
 
-ASP.NET can automaticaly handle rendering what it thinks is the best option for display and editor templates for many primitive types:
+ASP.NET can automatically handle rendering what it thinks is the best option for display and editor templates for many primitive types:
 
 **Primitive Editor Templates**:
 
@@ -223,7 +225,7 @@ ASP.NET can automaticaly handle rendering what it thinks is the best option for 
 
 #### Class Templates
 
-But as soon as you get beyond the scope of basic types, you might want to provide more nuanced control.  We can always use named templates to render entire sections of code, but Display and Editor templates hold a special place in the pipeline.  
+But as soon as you get beyond the scope of basic types, you might want to provide more nuanced control.  We can always use named templates to render entire sections of code, but Display and Editor templates hold a special place in the pipeline.
 
 We can define how we want entire classes of objects to appear anytime they are rendered.  We'll do this by adding `DisplayTemplates`/`EditorTemplates` Folders to our project.  We could scope these inside of our current view, but since the purposes of class templates is reusability, we'll bubble them up to the `Shared` folder so everyone can take advantage of them.
 
@@ -266,7 +268,7 @@ public string LotNumber { get; set; }
 -----
 
 
-## Validation 
+## Validation
 
 Validation attributes help enforce rules about the state of data.  MVC will already try to take a stab at some field level validations based on the property's type, but you may have many additional rules surrounding what valid data looks like.  The benefits to decorating your class with attributes (as opposed to writing a separate method within your business logic) are that:
 
@@ -275,18 +277,18 @@ Validation attributes help enforce rules about the state of data.  MVC will alre
 
 You might not be running the same exact code on the client and server.  After all, any client side validations will need to happen using HTML5 or Javascript, whereas server side checking will use .NET (C# or VB).  But by declaring the rules for a given class using common attributes, we can write validation logic a single time per type of rule and then add the definition for those common rules on the client and the server.
 
-Out of the box, ASP.NET provides the following validiation attributes, borrowed from the MSDN article on [Using Data Annotations to Customize Data Classes][MSDN1]:
+Out of the box, ASP.NET provides the following validation attributes, borrowed from the MSDN article on [Using Data Annotations to Customize Data Classes][MSDN1]:
 
-Validation Attribute | Description
----------------------|---------------------
-[`CustomValidationAttribute`][V1] | Uses a custom method for validation.
-[`DataTypeAttribute`][V2] | Specifies a particular type of data, such as e-mail address or phone number.
-[`EnumDataTypeAttribute`][V3] | Ensures that the value exists in an enumeration.
-[`RangeAttribute`][V4] | Designates minimum and maximum constraints.
-[`RegularExpressionAttribute`][V5] | Uses a regular expression to determine valid values.
-[`RequiredAttribute`][V6] | Specifies that a value must be provided.
-[`StringLengthAttribute`][V7] | Designates maximum and minimum number of characters.
-[`ValidationAttribute`][V8] | Serves as base class for validation attributes.
+| Validation Attribute               | Description                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------- |
+| [`CustomValidationAttribute`][V1]  | Uses a custom method for validation.                                         |
+| [`DataTypeAttribute`][V2]          | Specifies a particular type of data, such as e-mail address or phone number. |
+| [`EnumDataTypeAttribute`][V3]      | Ensures that the value exists in an enumeration.                             |
+| [`RangeAttribute`][V4]             | Designates minimum and maximum constraints.                                  |
+| [`RegularExpressionAttribute`][V5] | Uses a regular expression to determine valid values.                         |
+| [`RequiredAttribute`][V6]          | Specifies that a value must be provided.                                     |
+| [`StringLengthAttribute`][V7]      | Designates maximum and minimum number of characters.                         |
+| [`ValidationAttribute`][V8]        | Serves as base class for validation attributes.                              |
 
 
 ### Client side Validation - jQuery Validate
@@ -303,7 +305,7 @@ Just like our display attributes, you *can* use reflection to manually identify 
 
 
 
-----
+-----
 
 
 [MSDN1]: https://msdn.microsoft.com/en-us/library/dd901590.aspx
@@ -333,50 +335,56 @@ You don't need to use `Html.DisplayFor` because it will return `MvcHtmlString` s
 
 Just use the `string.Format` on your model:
 
-    @String.Format("{0:c}", Model.MonthlyMortgage)
+```cs
+@String.Format("{0:c}", Model.MonthlyMortgage)
+```
 
 The other option would be to remove  `String.Format()` from the View and use DataAnnotations to attach a formatting to MonthlyMortgage.
 
 An example from MSDN:
 
-    [DisplayFormat(DataFormatString = "{0:C}")]
-    public Decimal ListPrice { get; set; }
+```cs
+[DisplayFormat(DataFormatString = "{0:C}")]
+public Decimal ListPrice { get; set; }
+```
 
 [DisplayFormat.DataFormatString for a phone number or social security number](http://stackoverflow.com/q/10981049/1366033)
 
-The following should work, however notice the type difference for the Ssn property. 
+The following should work, however notice the type difference for the Ssn property.
 
-    [DisplayFormat(DataFormatString = "{0:###-###-####}")]
-    public long Phone { get; set; }
+```cs
+[DisplayFormat(DataFormatString = "{0:###-###-####}")]
+public long Phone { get; set; }
 
-    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
-    public long Ssn { get; set; }
+[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###-##-####}")]
+public long Ssn { get; set; }
+```
 
 Note, that in order for the formatting to be applied you would need to use the following html helper in your view:
 
-    @Html.DisplayFor(m => m.Property)
+```cs
+@Html.DisplayFor(m => m.Property)
+```
 
 [ASP.NET MVC data annotation for currency format](http://stackoverflow.com/q/29975128/1366033)
 
 Have you tried using `DataType.Currency`:
 
-<!-- language: lang-cs -->
-
-    public class CostChart
-    {
-        public string itemType { get; set; }
-        [DataType(DataType.Currency)]
-        public float? Cost{ get; set; }
-    
-    }
-
-Alternatively, you could use `DataFormatString ` like this: 
-
-<!-- language: lang-cs -->
-
-    [DisplayFormat(DataFormatString = "{0:C0}")]`
+```cs
+public class CostChart
+{
+    public string itemType { get; set; }
+    [DataType(DataType.Currency)]
     public float? Cost{ get; set; }
+}
+```
 
+Alternatively, you could use `DataFormatString` like this:
+
+```cs
+[DisplayFormat(DataFormatString = "{0:C0}")]`
+public float? Cost{ get; set; }
+```
 
 [Extending Editor Templates for ASP.NET MVC](https://www.simple-talk.com/dotnet/asp.net/extending-editor-templates-for-asp.net-mvc/)
 
@@ -384,51 +392,61 @@ Alternatively, you could use `DataFormatString ` like this:
 
 [How to use asp.net mvc EditorTemplate](http://stackoverflow.com/a/4673451/1366033)
 
-###~/Views/Roles/EditorTemplates/RoleViewModel.cshtml
-    @model MvcApplication16.Controllers.RoleViewModel
-    <div>
-        @Model.RoleName
-        @Html.HiddenFor(m => m.RoleId)
-        @Html.CheckBoxFor(m => m.InRole)
-    </div>
+### ~/Views/Roles/EditorTemplates/RoleViewModel.cshtml
 
-###~/Views/Roles/Edit.cshtml
-    @model MvcApplication16.Controllers.UserViewModel
-    @using (Html.BeginForm()) {
-       @Html.EditorFor(m => m.Roles)
-       <!-- Other stuff here -->
-    }
+```html
+@model MvcApplication16.Controllers.RoleViewModel
+<div>
+    @Model.RoleName
+    @Html.HiddenFor(m => m.RoleId)
+    @Html.CheckBoxFor(m => m.InRole)
+</div>
+```
+
+### ~/Views/Roles/Edit.cshtml
+
+```html
+@model MvcApplication16.Controllers.UserViewModel
+@using (Html.BeginForm()) {
+    @Html.EditorFor(m => m.Roles)
+    <!-- Other stuff here -->
+}
+```
 
 ### Models
-    public class UserViewModel {
-        public User User { get; set; }
-        public IEnumerable<RoleViewModel> Roles { get; set; }
-    }
 
-    public class RoleViewModel {
-        public int RoleId { get; set; }
-        public bool InRole { get; set; }
-        public string RoleName { get; set; }
-    }
+```cs
+public class UserViewModel {
+    public User User { get; set; }
+    public IEnumerable<RoleViewModel> Roles { get; set; }
+}
 
-    public class User {
-        public string Name { get; set; }
-    }
+public class RoleViewModel {
+    public int RoleId { get; set; }
+    public bool InRole { get; set; }
+    public string RoleName { get; set; }
+}
+
+public class User {
+    public string Name { get; set; }
+}
+```
 
 ### Controller
 
-    public ActionResult Edit() {
-        return View(
-            new UserViewModel() {
-                User = new User() { Name = "Test" },
-                Roles = new List<RoleViewModel>() { 
-                    new RoleViewModel() { 
-                        RoleId = 1, 
-                        InRole = true, 
-                        RoleName = "Test Role" }}
-            });
-    }
-
+```cs
+public ActionResult Edit() {
+    return View(
+        new UserViewModel() {
+            User = new User() { Name = "Test" },
+            Roles = new List<RoleViewModel>() {
+                new RoleViewModel() {
+                    RoleId = 1,
+                    InRole = true,
+                    RoleName = "Test Role" }}
+        });
+}
+```
 
 
 

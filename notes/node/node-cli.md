@@ -4,9 +4,15 @@
 ## Tutorials
 
 * [Making CLI app with ease using commander.js and Inquirer.js](https://medium.com/jspoint/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac)
+* [Build a JavaScript Command Line Interface (CLI) with Node.js](https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)
 * [Build a Command Line Application with Node.js](https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs)
 * [How to build a CLI with Node.js](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js)
+
+## Ginit
+
 * [Build a JavaScript Command Line Interface (CLI) with Node.js](https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/)
+* [sitepoint-editors/ginit](https://github.com/sitepoint-editors/ginit) - `git init` on steroids
+* [fab-ginit](https://www.npmjs.com/package/fab-ginit)
 
 ## Install Locally
 

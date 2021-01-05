@@ -8,27 +8,27 @@ draft: true
 
 #### Saturday - [Optional] Kick Off Event
 
-Time    | Event
---------|----------
-6:00PM  | Intros / Rules
-7:00PM  | Demo of Using Theme
+| Time   | Event               |
+| ------ | ------------------- |
+| 6:00PM | Intros / Rules      |
+| 7:00PM | Demo of Using Theme |
 
 Example:  How to Use Data APIs with Meteor
 
 #### Sunday - Day Long Event
 
-Time     | Event
----------|----------
-8:00AM   | Kick Off
-12:00PM  | Lunch Break
-4:00PM   | Demos
-5:00PM   | Judging
-5:30PM   | Awards
-6:00PM   | Closing
+| Time    | Event       |
+| ------- | ----------- |
+| 8:00AM  | Kick Off    |
+| 12:00PM | Lunch Break |
+| 4:00PM  | Demos       |
+| 5:00PM  | Judging     |
+| 5:30PM  | Awards      |
+| 6:00PM  | Closing     |
 
 ### Ideas
 
-During the Day - Mitch and I floating to help teams
+* During the Day - Mitch and I floating to help teams
 * Mostly help newcomers - let ideas shine through - don't let syntax get in the way
 
 ### Planning Resources
@@ -42,8 +42,8 @@ During the Day - Mitch and I floating to help teams
 * Teams of 2 - hard cap at 4
 * Deployed to Modulus (sponsor - get platform and $$$)
 
-### Reccomendations
+### Recommendations
 
 * Leave `insecure` and `autopublish` on they are easy to clean up later
 
-Promotion
+### Promotion
