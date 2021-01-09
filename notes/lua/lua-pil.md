@@ -61,6 +61,16 @@ end
 > 1. require searches for the file in a path
 > 2. require controls whether a file has already been run to avoid duplicating the work
 
+
+## [8.4 – Error Handling and Exceptions](https://www.lua.org/pil/8.4.html)
+
+> If you need to handle errors in Lua, you should use the `pcall` function (*protected call*) to encapsulate your code.
+
+```lua
+local status, err = pcall(function () error({code=121}) end)
+print(err.code)  -->  121
+```
+
 ## [16.1 – Classes | Lua](https://www.lua.org/pil/16.1.html)
 
 ```lua

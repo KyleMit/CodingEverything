@@ -164,26 +164,6 @@ mock/spy -> jest framework
 
 
 
-## Roblox Style Guide
-
-### Wrong
-
-```lua
-if (true) then
-    print("hi")
-end
-```
-
-### Right
-
-```lua
-if true then
-    print("hi")
-end
-```
-
-
-
 
 
 ## Refactor JS
@@ -213,8 +193,23 @@ let matchesSorted = matches.sort((a,b) => a.index - b.index)
 let firstMatch = matchesSorted[0]
 ```
 
+## Conversion Util
 
-[Lua check if a table is an 'instance'](https://stackoverflow.com/q/45192939/1366033)
-[Implementation of instanceof in Lua](https://gist.github.com/paulcuth/1270733)
-[Instance:IsA](https://developer.roblox.com/en-us/api-reference/function/Instance/IsA)
+* [PaulBernier/castl](https://github.com/PaulBernier/castl) - JavaScript to Lua compiler with runtime library
+* [wizzard0/js2lua](https://github.com/wizzard0/js2lua) - Javascript to Lua translator
+* [pkuleon/javascript-to-lua](https://github.com/pkuleon/javascript-to-lua) - A JavaScript to Lua source compiler
+* [zekesonxx/pinecone](https://github.com/zekesonxx/pinecone) - Converts JavaScript to Lua using the SpiderMonkey AST
+
+### Castl
+
+```bash
+npm install castl -g
+```
+
+
+## Questions
+
+* [Lua check if a table is an 'instance'](https://stackoverflow.com/q/45192939/1366033)
+* [Implementation of instanceof in Lua](https://gist.github.com/paulcuth/1270733)
+* [Instance:IsA](https://developer.roblox.com/en-us/api-reference/function/Instance/IsA)
 

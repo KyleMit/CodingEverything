@@ -142,7 +142,34 @@ module.exports = {
 * [file-loader](https://webpack.js.org/loaders/file-loader/)
 
 
+### Babel Loader
 
+[babel-loader](https://webpack.js.org/loaders/babel-loader/)
+
+#### Install
+
+```bash
+npm install -D babel-loader @babel/core @babel/preset-env webpack
+```
+
+#### Config
+
+```js
+module: {
+  rules: [
+    {
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }
+  ]
+}
+```
 
 
 ## Questions
@@ -179,8 +206,37 @@ module.exports = {
   };
   ```
 
-ERROR in ./node_modules/monaco-editor/esm/vs/base/browser/ui/findinput/findInput.css 7:0
-Module parse failed: Unexpected token (7:0)
+
 You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See
 
-https://webpack.js.org/concepts#loaders
+  > ERROR in ./**/findInput.css 7:0
+  > Module parse failed: Unexpected token (7:0)
+
+  [Concepts > Loaders](https://webpack.js.org/concepts#loaders)
+
+
+* [Error when run npm start: Class constructor ServeCommand cannot be invoked without 'new' #2272](https://github.com/webpack/webpack-cli/issues/2272)
+
+  Update `webpack-cli` to the `4.3.0`
+
+* [webpack output is served from undefined](https://github.com/webpack/webpack-dev-server/issues/2745)
+
+
+  ```js
+  devServer: {
+    publicPath: '/dist'
+  }
+  ```
+
+* [Rules vs Loaders in Webpack - What's the Difference?](https://stackoverflow.com/a/43805263/1366033)
+
+  * **Loaders** are used in Webpack 1
+  * **Rules** are used in Webpack 2+
+
+
+* [Set `modules: false` on babel-preset-env](https://github.com/babel/babel-loader/issues/521)
+
+  ```js
+  presets: [["@babel/preset-env", { modules: false }]]
+  ```
+

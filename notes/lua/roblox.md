@@ -182,3 +182,24 @@ I'm in car and want to reference cat:
 -- src/pets/cat.lua
 local catModule = require(script.Parent.Parent.Pets.cat)
 ```
+
+
+
+## Roblox Style Guide
+
+### Wrong
+
+```lua
+if (true) then
+    print("hi")
+end
+```
+
+### Right
+
+```lua
+if true then
+    print("hi")
+end
+```
+

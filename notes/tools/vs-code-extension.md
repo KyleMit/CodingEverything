@@ -1,5 +1,13 @@
 # VS Code Extension
 
+## Links
+
+[Sample code illustrating the VS Code extension API.](https://github.com/Microsoft/vscode-extension-samples)
+[Bundling extensions with webpack - Update](https://code.visualstudio.com/updates/v1_32#_bundling-extensions-with-webpack)
+[Bundling Extensions with webpack - Article](https://code.visualstudio.com/api/working-with-extensions/bundling-extension)
+
+## Getting Started
+
 [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension)
 
 ```bash

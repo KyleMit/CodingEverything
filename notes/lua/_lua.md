@@ -144,6 +144,90 @@ if not unknown then print('hi') end
 local line = io.read()
 ```
 
+
+## Patterns and Practices
+
+### Special Names
+
+* `exports` for return values
+* `self` for internal state values
+* `new` for constructors
+
+### New Class
+
+```lua
+local Lexer = {}
+Lexer.__index = Lexer
+
+
+function Lexer.new(source)
+
+ local self = {}
+ self.source = source;
+
+ return setmetatable(self, Lexer)
+end
+
+local myLexer = Lexer.new("mySource")
+```
+
+### Catch / Expect Errors
+
+```lua
+-- catch / handle / expect errors
+local expectSyntaxError = function(text)
+  local lexSecondRes = function()
+    return lexSecond(text)
+  end
+  local _ok, thrownError = pcall(lexSecondRes)
+  expect(_ok).to.equal(false)
+  return expect(thrownError)
+end
+```
+
+### Unimplemented Code
+
+```lua
+local parse = function(source, options)
+ error("Parser.parse unimplemented") -- TODO
+end
+```
+
+### Named Exports
+
+```lua
+-- prefer named export to anonymous obj
+-- wrong
+return {parse = parse}
+
+-- right
+local exports = {parse = parse}
+return exports
+```
+
+### Lua Operators
+
+Use lua operators where possible
+
+```diff
+- pos = pos + 1
++ pos += 1
+```
+
+###
+
+### Instance Method -> Library Function
+
+The `String.length()` instance method from JS needs to be translated to Lua `string.length()` library function
+
+```lua
+-- wrong
+local bodyLength = body.length
+-- right
+local bodyLength = string.len(body)
+```
+
+
 ## Questions
 
 * [How to get number of entries in a Lua table?](https://stackoverflow.com/q/2705793/1366033)

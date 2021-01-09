@@ -76,3 +76,10 @@ Available in Node 8.2 / npm 5.2.0
 
 * [How to install an npm package from GitHub directly?](https://stackoverflow.com/q/17509669/1366033)
 
+* [How to set shell for npm run-scripts in Windows](https://stackoverflow.com/q/23243353/1366033)
+
+    ```bash
+    npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
+    ```
+
+  **Note**: [Yarn does not work in Git Bash on Windows](https://github.com/yarnpkg/yarn/issues/5349)

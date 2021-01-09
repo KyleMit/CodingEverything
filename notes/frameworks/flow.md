@@ -103,6 +103,40 @@ square("2"); // Error!
 
 [Flow CLI](https://flow.org/en/docs/cli/)
 
+## Remove Types
+
+* [flow-remove-types | Flow](https://flow.org/en/docs/tools/flow-remove-types/)
+* [flow/packages/flow-remove-types at master · facebook/flow](https://github.com/facebook/flow/tree/master/packages/flow-remove-types)
+
+### CLI
+
+```bash
+npm install --global flow-remove-types
+flow-remove-types input.js > output.js
+```
+
+### API
+
+```js
+var flowRemoveTypes = require('flow-remove-types');
+var fs = require('fs');
+
+var input = fs.readFileSync('input.js', 'utf8');
+var output = flowRemoveTypes(input);
+fs.writeFileSync('output.js', output.toString());
+```
+
+
+## Flow Comments
+
+* [Flow: A Static Type Checker for JavaScript](https://flow.org/blog/2015/02/20/Flow-Comments/)
+* [Comment Types | Flow](https://flow.org/en/docs/types/comments/)
+
+Document Header
+
+```js
+// @flow
+```
 
 ## Questions
 

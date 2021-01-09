@@ -401,6 +401,18 @@ Emmet autocomplete `/**`
 [JS Doc](https://jsdoc.app/)
 
 
+## Dependency Graph
+
+[pahen/madge](https://github.com/pahen/madge)
+[Graphviz](http://www.graphviz.org/)
+
+```bash
+npm -g install madge
+winget install graphviz
+```
+
+
+
 ## Questions
 
 * [javascript check if property is undefined](https://stackoverflow.com/a/416327/1366033)
