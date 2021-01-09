@@ -529,4 +529,7 @@ csrutil disable
 
 * [gdate for mac bash](https://apple.stackexchange.com/a/231227/74706)
 
+* Screensaver
 
+    [Slow down screensaver pictures changes](https://apple.stackexchange.com/q/135766/74706)
+    [Change screensaver slide duration](http://hints.macworld.com/article.php?story=20130215183522445)
