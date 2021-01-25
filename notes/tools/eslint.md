@@ -1,15 +1,42 @@
 # ES Lint
 
+> ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:
+
+* ESLint uses [Espree](https://github.com/eslint/espree) for JavaScript parsing.
+* ESLint uses an AST to evaluate patterns in code.
+* ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
+
+
 ## Docs
 
-[eslint](https://eslint.org/)
-[eslint | Github](https://github.com/eslint/eslint)
-[typescript-eslint | Github](https://github.com/typescript-eslint/typescript-eslint)
+* [eslint](https://eslint.org/)
+* [eslint | Github](https://github.com/eslint/eslint)
+* [typescript-eslint | Github](https://github.com/typescript-eslint/typescript-eslint)
 
 ## Config
 
 * [SchemaStore fro eslintrc](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json)
 * [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
+
+## Getting Started
+
+```bash
+npm i -D eslint
+npm i -g eslint
+eslint --init
+```
+
+```yml
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 12
+rules: {}
+```
+
 
 
 ## Rules

@@ -83,3 +83,19 @@ Available in Node 8.2 / npm 5.2.0
     ```
 
   **Note**: [Yarn does not work in Git Bash on Windows](https://github.com/yarnpkg/yarn/issues/5349)
+
+
+* [How to update each dependency in package.json to the latest version?](https://stackoverflow.com/q/16073603/1366033)
+
+    ```bash
+    npm outdated # list all
+    npm update   # update all (respect package )
+    ```
+
+    or individually
+
+    ```bash
+    npm install express@latest --save
+    npm install express@x.x.x --save
+    ```
+

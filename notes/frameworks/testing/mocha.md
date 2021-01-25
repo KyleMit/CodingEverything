@@ -89,7 +89,7 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 }
 ```
 
-### Mocha Sidebar
+## Mocha Sidebar
 
 > Mocha side bar viewer that allows you to run Mocha tests from side bar menu and view results can run each level hierarchy from all tests to a single test
 
@@ -98,14 +98,29 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 
 * [mocha sidebar is not showing tests](https://stackoverflow.com/q/52570268/1366033)
 
-
-```json
-"mocha.files.glob": "src/**/__tests__/**/*-test.js"
-```
+  ```json
+  "mocha.files.glob": "src/**/__tests__/**/*-test.js"
+  ```
 
 * [ES6 module import doesn't work](https://github.com/maty21/mocha-sidebar/issues/123)
 
-```json
-"mocha.requires": ["babel-register"]
-```
+  ```json
+  "mocha.requires": ["babel-register"]
+  ```
+
+## Questions
+
+
+* [Run a Single Mocha Test](https://jaketrent.com/post/run-single-mocha-test)
+
+  Use `.only` or `.skip`
+
+  ```js
+  it.only(function () {
+    // this test will run
+  });
+  it(function () {
+    // this test will be skipped
+  });
+  ```
 

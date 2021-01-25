@@ -242,6 +242,7 @@ winget install AngusJohnson.ResourceHacker
 winget install Amazon.SAM-CLI
 winget install marha.VcXsrv
 winget install Axosoft.GitKraken
+winget install RProject.R
 ```
 
 ## DotFiles

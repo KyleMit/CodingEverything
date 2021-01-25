@@ -160,18 +160,18 @@ GNU > Linux > Debian > GNOME > Ubuntu
 [File-system permissions](https://en.wikipedia.org/wiki/File-system_permissions)
 
 | Symbolic notation | Numeric notation |                                      English                                      |
-|:-----------------:|:----------------:|:---------------------------------------------------------------------------------:|
-|    `----------`   |      `0000`      | no permissions                                                                    |
-|    `-rwx------`   |      `0700`      | read, write, & execute only for owner                                             |
-|    `-rwxrwx---`   |      `0770`      | read, write, & execute for owner and group                                        |
-|    `-rwxrwxrwx`   |      `0777`      | read, write, & execute for owner, group and others                                |
-|    `---x--x--x`   |      `0111`      | execute                                                                           |
-|    `--w--w--w-`   |      `0222`      | write                                                                             |
-|    `--wx-wx-wx`   |      `0333`      | write & execute                                                                   |
-|    `-r--r--r--`   |      `0444`      | read                                                                              |
-|    `-r-xr-xr-x`   |      `0555`      | read & execute                                                                    |
-|    `-rw-rw-rw-`   |      `0666`      | read & write                                                                      |
-|    `-rwxr-----`   |      `0740`      | owner can read, write, & execute; group can only read; others have no permissions |
+| :---------------: | :--------------: | :-------------------------------------------------------------------------------: |
+|   `----------`    |      `0000`      |                                  no permissions                                   |
+|   `-rwx------`    |      `0700`      |                       read, write, & execute only for owner                       |
+|   `-rwxrwx---`    |      `0770`      |                    read, write, & execute for owner and group                     |
+|   `-rwxrwxrwx`    |      `0777`      |                read, write, & execute for owner, group and others                 |
+|   `---x--x--x`    |      `0111`      |                                      execute                                      |
+|   `--w--w--w-`    |      `0222`      |                                       write                                       |
+|   `--wx-wx-wx`    |      `0333`      |                                  write & execute                                  |
+|   `-r--r--r--`    |      `0444`      |                                       read                                        |
+|   `-r-xr-xr-x`    |      `0555`      |                                  read & execute                                   |
+|   `-rw-rw-rw-`    |      `0666`      |                                   read & write                                    |
+|   `-rwxr-----`    |      `0740`      | owner can read, write, & execute; group can only read; others have no permissions |
 
 
 * [chmod Man Page with examples and calculator](https://ss64.com/bash/chmod.html)
@@ -462,4 +462,22 @@ sudo apt-get install pinta
   ```nash
   sudo apt install python3-pip
   ```
+
+* [Extract specific files in a tar archive using a wildcard](https://superuser.com/q/504798/180163)
+
+  ```bash
+  tar -xf MyTar.tar --wildcards "*.jpg"
+  ```
+
+
+* [How to extract files using wildcards in specific sub-directory](https://stackoverflow.com/a/65712886/1366033)
+
+  ```bash
+  tar -xf cbz.tar --wildcards --no-anchored 'pic*'
+  ```
+
+* [What does `--strip-components` `-C` mean in tar?](https://unix.stackexchange.com/q/535772/128893)
+
+
+  > The `--strip-components` option is for modifying the filenames of extracted files. `--strip-components` `<N>` means "*remove the first `<N>` components of the filename*", where "*components*" is referring to parts of the path separated by `/`.
 

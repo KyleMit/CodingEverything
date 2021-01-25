@@ -203,3 +203,12 @@ if true then
 end
 ```
 
+
+## Roblox Check-in 1/14
+
+* No Meeting Wednesdays
+* Detailed review with Jerry
+* Elongated time period to address
+  * access to repos
+  * contractually - within 90 day windows
+

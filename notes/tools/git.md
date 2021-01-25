@@ -2,6 +2,10 @@
 
 ## Docs
 
+* [`git-clone` Documentation](https://git-scm.com/docs/git-clone)
+* [`git-sparse-checkout` Documentation](https://www.git-scm.com/docs/git-sparse-checkout)
+* [`git-archive` Documentation](https://git-scm.com/docs/git-archive)
+
 ### [Commit](https://git-scm.com/docs/git-commit)
 
 
@@ -67,6 +71,14 @@
 * [Search public repositories in Bitbucket?](https://community.atlassian.com/t5/Bitbucket-questions/public-repositories/qaq-p/844415)
   * [bitbucket.org/repo/all](https://bitbucket.org/repo/all)
 
+## Pre Commit Hooks
+
+* [typicode/**husky**](https://github.com/typicode/husky) - Git hooks made easy 🐶 woof!
+* [sapegin/**mrm**](https://github.com/sapegin/mrm) - Codemods for your project config files
+* [typicode/**pinst**](https://github.com/typicode/pinst) - dev only postinstall hooks (package.json)
+* [okonet/**lint-staged**](https://github.com/okonet/lint-staged) - Run linters on git staged files
+* [azz/**pretty-quick**](https://github.com/azz/pretty-quick) - Get Pretty Quick
+
 ### Client Side
 
 
@@ -105,3 +117,18 @@
   **See Also**: [How can I keep my fork in sync without adding a separate remote?](https://stackoverflow.com/q/20984802/1366033)
 
 
+* [How do I download a tarball from GitHub using cURL?](https://stackoverflow.com/q/5746325/1366033)
+
+  ```bash
+  curl -L https://api.github.com/repos/graphql/graphql-js/tarball | tar xzf
+  curl -L https://api.github.com/repos/graphql/graphql-js/tarball > gql.tar.gz
+  curl -L https://api.github.com/repos/graphql/graphql-js/tarball -O gql.tar.gz
+  ```
+
+* Clone Subdirectory
+
+  * [Cloning only a subdirectory with git](https://stackoverflow.com/q/11834386/1366033)
+  * [How do I clone a subdirectory only of a Git repository?](https://stackoverflow.com/q/600079/1366033)
+  * [Bring your monorepo down to size with sparse-checkout - The GitHub Blog](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/)
+
+* [Git Clone - Just the files, please?](https://stackoverflow.com/q/3946538/1366033)

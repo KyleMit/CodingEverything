@@ -170,8 +170,22 @@ console.log(square(11)); // 121
 console.log(diag(4, 3)); // 5
 ```
 
+## Config Files
 
+[davidtheclark/**cosmiconfig**](https://github.com/davidtheclark/cosmiconfig) - Find and load configuration from a package.json property, rc file, or CommonJS module
 
+* a `myapp` property in `package.json`
+* a `.myapprc` file in JSON or YAML format
+* a `.myapprc.json` , `.myapprc.yaml` , `.myapprc.yml` , `.myapprc.js` , or `.myapprc.cjs` file
+* a `myapp.config.js` or `myapp.config.cjs` CommonJS module exporting an object
+
+[sapegin/**mrm**](https://github.com/sapegin/mrm) - Codemods for your project config files
+
+* [Cannot configure lint-staged, only ESLint, stylelint or custom rules are supported.](https://github.com/sapegin/mrm/issues/41)
+
+  * Error running `npx mrm lint-staged`
+  * Add `eslint` to project
+  * Run `npm i -D eslint`
 
 ## Convert Callback to Promise
 
@@ -307,7 +321,6 @@ npm install -g nodemon
 * [Counting the occurrences / frequency of array elements](https://stackoverflow.com/a/39841401/1366033)
 * [Convert object to an array of objects?](https://stackoverflow.com/a/49345363/1366033)
 * [Sort array of objects by string property value](https://stackoverflow.com/a/35092754/1366033)
-* [Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
 * [What is the different between `stat`, `fstat`, and `lstat` functions in node](https://stackoverflow.com/a/32478801/1366033)
 
 
@@ -465,4 +478,14 @@ npm install -g nodemon
     npm config get script-shell
     npm config set script-shell "C:\\Program Files\\Git\\bin\\bash.exe"
     code ~/.npmrc
+    ```
+
+* [Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
+
+    ```js
+    async function checkFileExists(file) {
+    return fs.promises.access(file, fs.constants.F_OK)
+            .then(() => true)
+            .catch(() => false)
+    }
     ```

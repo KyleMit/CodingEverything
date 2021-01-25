@@ -508,3 +508,10 @@ end
   end
   ```
 
+* [How to override tostring](https://stackoverflow.com/q/35327781/1366033)
+
+  ```lua
+  function MyClass:__tostring()
+      return "<MyClass: "..self.foo..">"
+  end
+  ```

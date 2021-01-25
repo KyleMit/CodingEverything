@@ -602,3 +602,9 @@ winget install graphviz
   }
   ```
 
+* [How to convert number to date in JavaScript](https://stackoverflow.com/q/53975796/1366033)
+
+  ```js
+  let epochToDate = (epoch) => new Date(epoch * 1000)
+  console.log(epochToDate(1546108200))
+  ```

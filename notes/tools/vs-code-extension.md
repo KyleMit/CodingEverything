@@ -122,3 +122,12 @@ let disposable = vscode.commands.registerCommand('vs-utils.refreshCspell', funct
 
 [Command Enablement](https://code.visualstudio.com/api/extension-guides/command#enablement-of-commands)
 [When Clause Contexts](https://code.visualstudio.com/docs/getstarted/keybindings#_when-clause-contexts)
+
+
+## Questions
+
+* Where to set global storage for applications?
+
+  [`globalStorageUri: Uri`](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalStorageUri)
+
+

@@ -412,3 +412,20 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   As of Nov 2020 release, use [**Extension Bisect**](https://code.visualstudio.com/updates/v1_52#_troubleshooting-extension-bisect)
 
+* [Determine which formatter is being used for VS Code?](https://stackoverflow.com/q/49640469/1366033)
+
+* [How can I customize the tab-to-space formatting?](https://stackoverflow.com/q/29972396/1366033)
+
+  ```json
+  "editor.tabSize": 2
+  ```
+
+
+* [How to hide the side bar in Visual Studio Code?](https://stackoverflow.com/q/30878856/1366033)
+
+  Command Pallet > `View: Toggle Activity Bar Visibility`
+
+  ```json
+  "workbench.activityBar.visible": false
+  ```
+

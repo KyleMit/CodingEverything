@@ -166,3 +166,11 @@ choco install gnuwin32-coreutils.portable
   ```js
   find . -name '*.js' | xargs wc -l
   ```
+
+* [How to change history size](https://askubuntu.com/q/307541/349745)
+
+  ```bash
+  HISTSIZE=20000
+  HISTFILESIZE=20000
+  ```
+

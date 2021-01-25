@@ -149,3 +149,10 @@ Document Header
     ```
 
 * [What does flow `{| brace pipe |}` syntax do?](https://stackoverflow.com/q/48393027/1366033)
+
+* [Invalid lint rule "dynamic-export" encountered](https://github.com/facebook/flow/blob/master/Changelog.md)
+
+
+* [Failed to start flow. Wrong version of Flow](https://stackoverflow.com/a/65690247/1366033)
+
+  Change `[version]` in the `.flowconfig` to match the installed version, `^0.95.1`

@@ -70,3 +70,19 @@
   2. Type `SystemPropertiesAdvanced`
   3. Advanced > Visual Effects
   4. Disable `Animate windows when minimizing and maximizing`
+
+
+* [Direct shortcut for Windows Maximize/Minimize/Restore window?](https://superuser.com/q/988554/180163)
+
+  | Shortcut                                         | Action                                               |
+  | ------------------------------------------------ | ---------------------------------------------------- |
+  | <kbd>Win</kbd> + <kbd>M</kbd>                    | Minimize all windows.                                |
+  | <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> | Restore minimized windows to the desktop.            |
+  | <kbd>Win</kbd> + <kbd>↑</kbd>                    | Maximize the window.                                 |
+  | <kbd>Win</kbd> + <kbd>←</kbd>                    | Maximize the window to the left side of the screen.  |
+  | <kbd>Win</kbd> + <kbd>→</kbd>                    | Maximize the window to the right side of the screen. |
+  | <kbd>Win</kbd> + <kbd>Home</kbd>                 | Minimize all but the active window.                  |
+
+* [Add or Remove Excluded Folders For Search Indexer in Windows 10](https://winaero.com/add-remove-excluded-folders-search-indexer-windows-10/)
+
+  Settings > Windows Search Settings > Excluded Folders

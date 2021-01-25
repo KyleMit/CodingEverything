@@ -131,6 +131,7 @@
 * **PGP**- [Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 * **GnuPG** - GNU Privacy Guard
 * **MITM** - Man in the Middle Attacks
+* **OPSEC** - Operations Security
 
 ### Numeronym
 
@@ -250,6 +251,7 @@
 * **ES6** - ECMAScript 6
 * **MDN** - Mozilla Developer Network
 * **ATA** - Automatic Type Acquisition
+* **ASI** - Automatic Semi-Colon Insertion
 
 #### React
 
@@ -338,8 +340,10 @@
 * [**Idempotency**](https://en.wikipedia.org/wiki/Idempotence) - operation can be applied multiple times without changing the result (typically read operation)
 * [**Daemon**](https://en.wikipedia.org/wiki/Daemon_(computing) - a computer program that runs as a background process, rather than being under the direct control of an interactive user.
 * [**glob**](https://en.wikipedia.org/wiki/Glob_(programming)) - patterns specify sets of filenames with wildcard characters (short for "global")
-* [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
-* [Directive / Pragma](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
+* [**Cyclomatic complexity**](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
+* [**Directive / Pragma**](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
+* [**Brook's Law**](https://en.wikipedia.org/wiki/Brooks%27s_law) - adding manpower to a late software project makes it later - coined in the [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+
 
 ## General
 

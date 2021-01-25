@@ -56,6 +56,7 @@ interface User {
 }
 ```
 
+
 ### Assign Type
 
 ```ts
@@ -340,6 +341,22 @@ interface SquareConfig {
   color?: string;
   width?: number;
 }
+```
+
+#### [Extending Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html#extending-interfaces)
+
+```ts
+interface Shape {
+  color: string;
+}
+
+interface Square extends Shape {
+  sideLength: number;
+}
+
+let square = {} as Square;
+square.color = "blue";
+square.sideLength = 10;
 ```
 
 #### Readonly properties
@@ -726,7 +743,7 @@ npm install --save-dev @types/jquery
 }
 ```
 
-## JSON to TypeScript
+## JSON to TypeScript Interfaces
 
 [quicktype](https://quicktype.io/typescript/) - Instantly generate TypeScript interfaces from JSON
 
@@ -738,6 +755,7 @@ $ echo '[1, 2, 3.14]' | quicktype --lang ts
 # Generate TypeScript for a sample JSON file
 $ quicktype person.json -o Person.ts
 ```
+
 
 ## Types
 
@@ -1174,7 +1192,7 @@ a ||= b
 
 
 * [Add ES2019 Object.fromEntries function](https://github.com/microsoft/TypeScript/issues/30933)
-  * [javascript - Property 'entries' does not exist on type 'ObjectConstructor' - Stack Overflow](https://stackoverflow.com/q/45422573/1366033)
+  * [Property 'entries' does not exist on type 'ObjectConstructor'](https://stackoverflow.com/q/45422573/1366033)
   * [How can I make Object.fromEntries and Object.entries compile?](https://www.reddit.com/r/typescript/comments/e8abzr/)
 
 
@@ -1199,3 +1217,29 @@ a ||= b
 
    remove `parserOptions` from `eslintrc.js`
 
+
+* [Debug Angular/Typescript in visual code appends '_1' to variable](https://stackoverflow.com/q/65078164/1366033)
+
+  > That thing happens when ECMAScript target version in ts config is below ES6.
+
+* Typescript targets for node
+
+  * [TypeScript tsconfig settings for Node.js 10?](https://stackoverflow.com/q/51716406/1366033)
+  * [TypeScript: What's the "right" `target` for node 11?](https://stackoverflow.com/q/55098997/1366033)
+  * [TypeScript tsconfig settings for Node.js 12?](https://stackoverflow.com/q/59787574/1366033)
+  * [tsconfig/bases](https://github.com/tsconfig/bases) - Hosts TSConfigs to extend in a TypeScript app, tuned to a particular runtime environment
+
+* [Should TypeScript Interfaces Be Defined in *.d.ts Files](https://stackoverflow.com/a/60092162/1366033)
+
+  * `.d.ts` files are only seen as compiler input and not emitted to your dist/build folder
+  * `.ts` files will provide definitions as part of an npm package or public typed API
+
+
+* [How do I cast a JSON Object to a TypeScript class?](https://stackoverflow.com/q/22875636/1366033)
+
+  Cast with [Type Assertions](https://basarat.gitbook.io/typescript/type-system/type-assertion#type-assertion-vs-casting)
+
+  ```ts
+  let questionText = await fs.readFile("./data.json", "utf-8")
+  let questions: Question[] = JSON.parse(questionText)
+  ```

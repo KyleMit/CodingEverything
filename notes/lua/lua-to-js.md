@@ -107,7 +107,7 @@ local obj = {
 }
 ```
 
-## Operators
+## Equality
 
 ```js
 let isNotFrance = country != "france"
@@ -136,32 +136,119 @@ local len = #arr
 * names must be pascal case or snake case
 
 
-Packages - rotriever
+
+## toString
+
+- toString method should be converted to __tostring function on metatable
 
 
-## Exports
+## do .. while
 
 ```js
+do {
+    // some code
+} while (condition)
+```
+
+```lua
+repeat
+    -- some code
+until not condition
+```
+
+### multiple expressions
+
+[Comma Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+
+> The comma operator (,) evaluates each of its operands (from left to right) and returns the value of the last operand.
+
+```js
+const variable = (someExpression1, someExpression2, ..., someExpressionN)
+```
+
+```lua
+local variable = (function()
+    someExpression1
+    someExpression2
+    ...
+    return someExpressionN
+end)()
+```
+
+## Spread operator in Arrays
+
+```js
+[
+    val1,
+    val2,
+    ...someArr,
+    --[[ ... some more values]]--,
+    valN
+]
+```
+
+```lua
+--[[
+    values need to be wrapped with { }
+    because otherwise Array.concat will try to spread it if it's already a table
+]]--
+Array.concat(
+    { val1 },
+    { val2 },
+    someArr,
+    /* ... some more values */,
+    { valN }
+)
 ```
 
 
-* model file - uploaded into roblox studio
-* rojo
+## Variadic argument
+
+```js
+function foo(...bar) {
+}
+const padLen = Max.max(...existingLines) // or arguments
+```
+
+```lua
+function foo(...)
+    local bar = {...}
+end
+local padLen = math.max(table.unpack(existingLines))
+```
+
+## fn.apply
+
+```js
+fn.apply(thisArg, arguments)
+```
+
+```lua
+fn(self, table.unpack(arguments))
+-- but only works if function was defined like:
+-- function Class:fn(arg1, arg2, ...) or
+-- function fn(self, arg1, arg2, ...)
+```
+
+## Equality
+
+```js
+let bool1 = "0" === 0 // false
+let bool2 = "0" == 0  // true
+```
+
+```lua
+local bool1 = "0" == 0            -- false
+local bool2 = "0" == tostring(0)  -- true
+```
 
 
 
-old school js packaging - concating files
 
--> xml format that studio expects
+## Modules / Exports
 
-
-
-test-easy -> current testing framework
-
-mock/spy -> jest framework
-
-
-
+```js
+```
 
 
 
