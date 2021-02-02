@@ -219,6 +219,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ### Spaceship Theme
 
+[denysdovhan/spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+
+```bash
+npm install -g spaceship-prompt
+```
+
 ```ini
 ZSH_THEME="spaceship"
 
@@ -240,6 +246,10 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 ```
+
+
+* [no such file or directory: $HOME/.oh-my-zsh/themes/spaceship.zsh-theme](https://github.com/denysdovhan/spaceship-prompt/issues/706)
+
 
 ### Z Shell configuration function for new users
 
