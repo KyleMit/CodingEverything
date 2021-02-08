@@ -32,6 +32,14 @@ position = {x=5, y=10}
 print (position.x) --> 5
 ```
 
+## [5.2 – Variable Number of Arguments](https://www.lua.org/pil/5.2.html)
+
+```lua
+function select (n, ...)
+  return arg[n]
+end
+```
+
 ## [5.3 – Named Arguments](https://www.lua.org/pil/5.3.html)
 
 > The parameter passing mechanism in Lua is positional

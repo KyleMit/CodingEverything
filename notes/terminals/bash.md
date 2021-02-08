@@ -2,6 +2,10 @@
 
 * Bash - Bourne Again SHell
 
+## Links
+
+[Introduction to Bash, VIM & Regex with Substack (James Halliday)](https://frontendmasters.com/courses/bash-vim-regex/)
+
 ## Commands
 
 ### Xargs
@@ -174,3 +178,79 @@ choco install gnuwin32-coreutils.portable
   HISTFILESIZE=20000
   ```
 
+* [In the shell, what does “ 2>&1 ” mean?](https://stackoverflow.com/q/818255/1366033)
+
+  ```bash
+  #define STDIN_FILENO    0   /* Standard input.  */
+  #define STDOUT_FILENO   1   /* Standard output.  */
+  #define STDERR_FILENO   2   /* Standard error output.  */
+  ```
+
+  * `>&` as redirect merger operator
+
+  ```bash
+  perl test.pl 1>out.log 2>err.log
+  ```
+
+
+
+* [How to read a file into a variable in shell?](https://stackoverflow.com/q/7427262/1366033)
+
+  ```bash
+  value=`cat config.txt`
+  echo "$value"
+
+  value=$(<config.txt)
+  echo "$value"
+  ```
+
+
+* [store stderr in a variable](https://stackoverflow.com/q/3130375/1366033)
+
+
+  ```bash
+  VAR=$((your-command-including-redirect) 2>&1)
+  ```
+
+* [How can I store the return value and/or output of a command in a variable?](http://mywiki.wooledge.org/BashFAQ/002)
+
+
+  ```bash
+  output=$(command)      # stdout only; stderr remains uncaptured
+  output=$(command 2>&1) # both stdout and stderr will be captured
+  ```
+
+* [Redirect Windows cmd stdout and stderr to a single file](https://stackoverflow.com/q/1420965/1366033)
+
+  ```bash
+  dir > a.txt 2>&1
+  ```
+
+* [Proper way of printing out an error message](https://stackoverflow.com/a/12700524/1366033)
+
+  ```bash
+  echo "my error" 1>&2
+  ```
+
+
+* [Replace one substring for another string in shell script](https://stackoverflow.com/q/13210880/1366033)
+
+
+  ```bash
+  firstString="I love Suzi and Marry"
+  secondString="Sara"
+  echo "${firstString/Suzi/$secondString}"
+  # prints 'I love Sara and Marry'
+  ```
+
+
+* [Can I use sed to manipulate a variable in bash?](https://stackoverflow.com/q/6744006/1366033)
+
+
+  ```bash
+  website="https://stackoverflow.com/a/58899829/658497"
+  website=$(sed 's|/|\\/|g' <<< $website)
+  echo "${website//\//\\/}"
+  echo $website | sed 's/\//\\\//g'
+  echo $website | sed 's|/|\\/|g'
+  ```

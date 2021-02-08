@@ -2,9 +2,10 @@
 
 ## Links
 
-[Sample code illustrating the VS Code extension API.](https://github.com/Microsoft/vscode-extension-samples)
-[Bundling extensions with webpack - Update](https://code.visualstudio.com/updates/v1_32#_bundling-extensions-with-webpack)
-[Bundling Extensions with webpack - Article](https://code.visualstudio.com/api/working-with-extensions/bundling-extension)
+* [Sample code illustrating the VS Code extension API.](https://github.com/Microsoft/vscode-extension-samples)
+* [Bundling extensions with webpack - Update](https://code.visualstudio.com/updates/v1_32#_bundling-extensions-with-webpack)
+* [Bundling Extensions with webpack - Article](https://code.visualstudio.com/api/working-with-extensions/bundling-extension)
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
 ## Getting Started
 

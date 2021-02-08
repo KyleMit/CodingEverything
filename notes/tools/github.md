@@ -56,3 +56,17 @@ kramdown:
 
 [Covid-19](https://github.com/topics/covid-19)
 [jekyll-theme](https://github.com/topics/jekyll-theme?o=desc&s=stars)
+
+## Questions
+
+* [How to change tab size on GitHub?](https://stackoverflow.com/q/8833953/1366033)
+
+  * You can append `?ts=2` or `?ts=4` to the URL to change the tab-size.
+
+  * Add stylish extension
+
+  ```css
+  * { tab-size: 4 }
+  ```
+
+

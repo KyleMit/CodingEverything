@@ -96,3 +96,23 @@ button {
   animation-fill-mode: forwards;
   ```
 
+* [CSS flex box last space removed](https://stackoverflow.com/q/39325039/1366033)
+
+
+  [Demo in JS Fiddle](https://jsfiddle.net/KyleMit/e02u3v7b/)
+
+
+  Fixes
+
+  ```html
+  <div class="row">
+  <span><strong>2</strong> cats</span>
+  </div>
+  <div class="row">
+    <strong>4</strong>&nbsp;cats
+  </div>
+  <div class="row" style="white-space: pre-wrap;">
+    <strong>6</strong> cats
+  </div>
+  ```
+

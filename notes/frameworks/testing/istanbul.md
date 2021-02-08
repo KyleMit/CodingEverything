@@ -5,13 +5,15 @@
 [Istanbul, a JavaScript test coverage tool.](https://istanbuljs.github.io/)
 [istanbuljs/nyc: the Istanbul command line interface](https://github.com/istanbuljs/nyc)
 
+## Getting Started
 
-```json
-{
-  "scripts": {
-    "test": "mocha",
-    "coverage": "nyc npm run test"
-  }
-}
+```bash
+npm install -g istanbul
 ```
 
+```bash
+#test
+mocha
+#coverage
+nyc npm run tes
+```

@@ -14,6 +14,6 @@
 
 ## Questions
 
-[What is the difference between lit-element & lit-html?](https://stackoverflow.com/q/62413101/1366033)
+* [What is the difference between lit-element & lit-html?](https://stackoverflow.com/q/62413101/1366033)
 
 

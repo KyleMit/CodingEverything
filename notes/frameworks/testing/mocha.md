@@ -124,3 +124,6 @@ mocha --full-trace src/**/__tests__/**/*-test.js
   });
   ```
 
+* [Error: No provider for "framework:mocha"!](https://stackoverflow.com/q/31687669/1366033)
+
+* [karma plugin dependencies not being found](https://stackoverflow.com/q/32425580/1366033)

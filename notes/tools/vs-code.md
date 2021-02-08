@@ -429,3 +429,26 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   "workbench.activityBar.visible": false
   ```
 
+* [Select each occurrence of find](https://stackoverflow.com/q/35992145/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> - `editor.action.selectHighlights`
+  <kbd>Alt</kbd> + <kbd>Enter</kbd> - `editor.action.selectAllMatches`
+
+
+  Added via [Add selectAllMatches command in column selection mode. #5715](https://github.com/microsoft/vscode/pull/5715)
+
+* [Outdent by single space instead of 4](https://stackoverflow.com/q/47903209/1366033)
+
+  * <kbd>Shift</kbd> + <kbd>Tab</kbd> - Outdent
+  * <kbd>Ctrl</kbd> + <kbd>[</kbd> - Outdent Line
+
+* [Change VSCode Default Language for new files?](https://stackoverflow.com/q/35904221/1366033)
+
+  ```json
+  "files.defaultLanguage": "markdown"
+  ```
+
+* [How to view an HTML file in the browser with Visual Studio Code](https://stackoverflow.com/a/57740507/1366033)
+
+  Install [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
+

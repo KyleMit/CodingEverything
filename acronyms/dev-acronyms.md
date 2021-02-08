@@ -10,6 +10,8 @@
 * **RBP** - Recommended Best Practice
 * **POC** - Proof of Concept (alt: 'People of Color')
 * **MVP** - Minimum Viable Product
+* **MCVE** - Minimal, Complete, Verifiable Example
+
 
 ## Tech
 

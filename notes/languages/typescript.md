@@ -1091,6 +1091,69 @@ a ||= b
 
 
 
+## Mutually Exclusive Types
+
+* Mutual Exclusion
+* Mutually Exclusive
+* Disjointed Union
+* Discriminated Union
+* XOR
+
+
+
+```ts
+type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never };
+type XOR<T, U> = (T | U) extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U;
+
+type NameOnly = { is: "NameOnly", name: string };
+type FirstAndLastName = { is: "FirstAndLastName", firstname: string; lastname: string };
+type Person = XOR<NameOnly, FirstAndLastName>;
+let person: Person;
+```
+
+```ts
+// proposed syntax
+type A = { m: T } ^ { n:  U } ^ { o: Q }
+
+// sugar for never
+type A =
+    { m: T; n: never; o: never; } |
+    { m: never; n: U; o: never; } |
+    { m: never; n: never; o: Q; }
+```
+
+```ts
+interface A {
+    kind: 'A',
+    x: number
+}
+interface B {
+    kind: 'B',
+    y: number
+}
+
+type Z = A | B;
+
+// here it DOES NOT allow to create a variable of type Z with both members of type A and B.
+let z: Z = {
+    kind: 'A',
+    x: 5
+    // y: 6 will produce an error
+```
+
+* [Proposal: Add an "logical or" (^) operator - Issue #14094](https://github.com/microsoft/TypeScript/issues/14094)
+* [TypeScript: Documentation - TypeScript for Functional Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html#discriminated-unions)
+
+
+* [Provide one of object types in typescript](https://stackoverflow.com/questions/47315346/)
+* [TypeScript interface with XOR, {bar:string} xor {can:number}](https://stackoverflow.com/questions/44425344/)
+* [typescript interface require one of two properties to exist](https://stackoverflow.com/questions/40510611/)
+* [Typescript Interface - Possible to make "one or the other" properties required?](https://stackoverflow.com/questions/37688318/)
+* [TypeScript require one parameter or the other, but not neither](https://stackoverflow.com/questions/52132696/)
+* [Does Typescript support mutually exclusive types?](https://stackoverflow.com/questions/42123407/)
+
+
+
 
 ## Questions
 
