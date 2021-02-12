@@ -89,6 +89,13 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 }
 ```
 
+* [`basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")` #4751](https://github.com/facebook/jest/issues/4751#issuecomment-361063215)
+
+```diff
+- node --inspect-brk ./node_modules/.bin/jest     --runInBand --no-cache --no-watchman
++ node --inspect-brk ./node_modules/jest/bin/jest --runInBand --no-cache --no-watchman
+```
+
 ## Mocha Sidebar
 
 > Mocha side bar viewer that allows you to run Mocha tests from side bar menu and view results can run each level hierarchy from all tests to a single test

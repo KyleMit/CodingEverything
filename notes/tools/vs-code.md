@@ -452,3 +452,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   Install [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
 
+* [Multi-line regular expressions in Visual Studio Code](https://stackoverflow.com/q/41150941/1366033)
+
+  > `CR` is not matched with [\s\S]. Add `\r` to the character class
+
+  ```js
+  /[\s\S\r]+/
+  ```
+

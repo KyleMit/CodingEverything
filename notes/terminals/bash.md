@@ -6,6 +6,22 @@
 
 [Introduction to Bash, VIM & Regex with Substack (James Halliday)](https://frontendmasters.com/courses/bash-vim-regex/)
 
+## Bash Reference Manual
+
+* [Single Page](https://www.gnu.org/software/bash/manual/bash.html)
+* [Table of Contents](https://www.gnu.org/software/bash/manual/html_node/index.html)
+
+### 3.4.1 Shell Parameters
+
+* 3.4 [Shell Parameters](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html)
+  * 3.4.1 [Positional Parameters](https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html)
+  * 3.4.2 [Special Parameters](https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html)
+
+### 3.2.5 Compound Commands
+
+* [3.2.5 Compound Commands](https://www.gnu.org/software/bash/manual/html_node/Compound-Commands.html#Compound-Commands)
+  * [3.2.5.2 Conditional Constructs](https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html#Conditional-Constructs)
+
 ## Commands
 
 ### Xargs
@@ -30,6 +46,7 @@ However, others such as `cp` and `echo` can only take input as arguments, which 
 ```bash
 choco install gnuwin32-coreutils.portable
 ```
+
 
 ## Questions
 
@@ -237,9 +254,9 @@ choco install gnuwin32-coreutils.portable
 
 
   ```bash
-  firstString="I love Suzi and Marry"
+  firstString="I love Susan and Marry"
   secondString="Sara"
-  echo "${firstString/Suzi/$secondString}"
+  echo "${firstString/Susan/$secondString}"
   # prints 'I love Sara and Marry'
   ```
 
@@ -254,3 +271,8 @@ choco install gnuwin32-coreutils.portable
   echo $website | sed 's/\//\\\//g'
   echo $website | sed 's|/|\\/|g'
   ```
+
+
+* [What does this `${@:2}` mean in shell scripting](https://unix.stackexchange.com/q/92978/128893)
+
+

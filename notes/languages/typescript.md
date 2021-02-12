@@ -1,7 +1,7 @@
+# TypeScript
 
 [TypeScript Lang](https://www.typescriptlang.org/)
 
-# TypeScript
 
 ## Alternatives
 
