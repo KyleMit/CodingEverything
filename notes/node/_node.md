@@ -195,43 +195,6 @@ console.log(diag(4, 3)); // 5
 
 
 
-## NX.JS
-
-[NX](https://nx.dev/)
-
-> Extensible Dev Tools for Monorepos
-
-![nx mono structure](/assets/notes/node/nx-mono-structure.png)
-
-```bash
-npx create-nx-workspace your-name
-```
-
-```bash
-/apps # specific apps
-/libs # common ui elements - shared across multiple components
-```
-
-* [Nx CLI](https://nx.dev/latest/angular/cli/overview#installing-the-cli)
-
-    ```bash
-    npm install -g nx
-    ```
-
-* [Debug NX Apps](https://github.com/nrwl/nx/issues/2690)
-
-    ```json
-    "serve": {
-        "builder": "@nrwl/node:execute",
-        "options": {
-            "buildTarget": "api:build",
-            "inspect": true,
-            "port": 7777
-        }
-    },
-    ```
-
-    Command Palette - Attach to Node Process
 
 ## Create Unique ID
 
