@@ -2,11 +2,33 @@
 
 ## Getting Started
 
-
 * [JavaScript Getting Started](https://docs.amplify.aws/start)
 * [Android Getting Started](https://docs.amplify.aws/start/q/integration/android)
 * [iOS Getting Started](https://docs.amplify.aws/start/q/integration/ios)
 
+## Alternatives
+
+* Netlify
+* Vercel
+
+
+## Lambda Alternatives
+
+* AWS Amplify
+* Serverless Framework
+* Terraform
+* AWS SAM
+* AWS CloudFormation
+
+## Integrations
+
+* [React](https://docs.amplify.aws/start/q/integration/react)
+* [Next](https://docs.amplify.aws/start/q/integration/next)
+
+
+```bash
+npx create-next-app next-amplified
+```
 
 ## Setup
 
@@ -37,17 +59,23 @@ npm install -g @aws-amplify/cli
   * Messaging
   * Chat and More
 
-* Amplify CLI
+## Amplify CLI
 
-  ```bash
-  amplify configure      # will configure amplify project
-  amplify init           # will spin up an amplify project
-  amplify status         # will show what you've already added and if it's locally configured or deployed
-  amplify add <category> # will add features like user login or backend api
-  amplify console        # will open the amplify console and view your project status
-  amplify push           # will build all your local backend resources and provision in the cloud
-  amplify publish        # will build your local backend (and frontend if you have hosting) resources and provision in the cloud
-  ```
+[Get started - Installation - Amplify Docs](https://docs.amplify.aws/cli/start/install#install-the-amplify-cli)
+
+```bash
+npm install -g @aws-amplify/cli
+```
+
+```bash
+amplify configure      # will configure amplify project
+amplify init           # will spin up an amplify project
+amplify status         # will show what you've already added and if it's locally configured or deployed
+amplify add <category> # will add features like user login or backend api
+amplify console        # will open the amplify console and view your project status
+amplify push           # will build all your local backend resources and provision in the cloud
+amplify publish        # will build your local backend (and frontend if you have hosting) resources and provision in the cloud
+```
 
 
 ## AWS Amplify Console
@@ -79,6 +107,9 @@ Example:
 [GatsbyJs client only paths goes to 404 page when the url is directly accessed in browser in “production”](https://stackoverflow.com/q/52051090/1366033)
 
 ## Talks
+
+* [Installing & Configuring the AWS Amplify CLI - YouTube](https://www.youtube.com/watch?v=fWbM5DLh25U)
+* [Serverless Functions in Depth with AWS Amplify - YouTube](https://www.youtube.com/watch?v=y4Obz26GkCk)
 
 ### Create Modern Serverless Web Applications in Minutes using the AWS Amplify Framework
 

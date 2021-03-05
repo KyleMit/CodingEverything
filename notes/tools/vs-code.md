@@ -460,3 +460,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   /[\s\S\r]+/
   ```
 
+* [How to change diff color Visual Studio Code](https://stackoverflow.com/q/49036101/1366033)
+
+  ```json
+  "workbench.colorCustomizations": {
+    "diffEditor.removedTextBackground": "#68190f3a",
+    "diffEditor.insertedTextBackground": "#1d9c281a"
+  },
+  ```

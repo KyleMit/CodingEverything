@@ -23,6 +23,15 @@
 
 [Conventional Commits](https://www.conventionalcommits.org/)
 
+#### Lint
+
+[commitlint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint) - Lint commit messages
+
+```bash
+echo "test(card-sprite) fix unit tests" | npx commitlint
+```
+
+
 #### Message format
 
 ```none

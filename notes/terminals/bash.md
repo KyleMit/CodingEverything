@@ -276,3 +276,11 @@ choco install gnuwin32-coreutils.portable
 * [What does this `${@:2}` mean in shell scripting](https://unix.stackexchange.com/q/92978/128893)
 
 
+* [Accessing bash command line args $@ vs $*](https://stackoverflow.com/a/28099707/1366033)
+
+  | Syntax |     Effective result      |
+  | :----: | :-----------------------: |
+  |  `$*`  |     `$1 $2 $3 … ${N}`     |
+  |  `$@`  |     `$1 $2 $3 … ${N}`     |
+  | `"$*"` |    `"$1c$2c$3c…c${N}"`    |
+  | `"$@"` | `"$1" "$2" "$3" … "${N}"` |
