@@ -926,7 +926,7 @@ choco list --local-only
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install jq firacode-ttf cascadiacode hub
+choco install jq hub firacode-ttf cascadiacode
 ```
 
 Which installs CLI tools to here:
