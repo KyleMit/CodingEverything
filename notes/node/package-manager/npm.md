@@ -30,6 +30,13 @@ npm init @usr -> npx @usr/create
 
 * `--production` - npm will not install modules listed in `devDependencies`
 
+[Introducing `npm ci` for faster, more reliable builds](https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable.html)
+
+```bash
+npm i
+npm ci # only use package-lock
+```
+
 ## Badge Provider
 
 [Version Badge for npm, RubyGems, PyPI, Bower and other packages](https://badge.fury.io/)

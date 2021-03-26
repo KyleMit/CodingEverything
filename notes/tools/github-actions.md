@@ -1,8 +1,17 @@
 # Github Actions
 
+> GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD
+
+[GitHub Actions](https://github.com/features/actions)
+
+
+## Alternatives
+
+* Azure Pipelines
 
 ## Docs
 
+* [GitHub Actions Documentation - GitHub Docs](https://docs.github.com/en/actions)
 * [Workflow syntax for GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions)
 * [Introduction to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)
 * [About GitHub-hosted runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners)
@@ -57,6 +66,46 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 ```
+
+
+## Example
+
+[Building Custom GitHub Actions](https://app.pluralsight.com/library/courses/building-custom-github-actions/table-of-contents)
+[Using Node.js with GitHub Actions](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions)
+
+```yml
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    * uses: actions/checkout@v2
+    * name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    * run: npm ci
+    * run: npm run build --if-present
+    * run: npm test
+
+```
+
 
 ## Questions
 

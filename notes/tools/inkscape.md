@@ -33,3 +33,7 @@ Go to [**Document Properties**](http://write.flossmanuals.net/start-with-inkscap
   2. Drag the circle in the upper left corner to set the radius for the whole shape
      ![Set Border Radius](/assets/images/posts/inkscape/set-rounded-corner.png)
 
+
+* [Embedding fonts in inkscape](https://graphicdesign.stackexchange.com/q/43300/35880)
+
+   Path > Object to Path

@@ -1,5 +1,11 @@
 # Testing
 
+
+## Articles
+
+* [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) - Martin Fowler
+
+
 ## Write tests. Not too many. Mostly integration. by Kent C. Dodds - Mar 2018
 
 [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)

@@ -29,6 +29,11 @@
   * [Permissions lookup guide for Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/security/permissions-lookup-guide?view=azure-devops)
   * [Set permissions at the project- or collection-level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/set-project-collection-level-permissions?view=azure-devops&tabs=preview-page)
 
+## Repos
+
+[Browse code, download code](https://docs.microsoft.com/en-us/azure/devops/organizations/public/browse-code-public?view=azure-devops)
+[Connect to your Git repos with SSH - Azure Repos | Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops)
+
 
 ## Acronyms
 
@@ -213,3 +218,28 @@ console.table(vals)
 ### Batch Edit
 
 ![batch edit](/assets/notes/azure-devops/batch-edit.png)
+
+## Source Control
+
+* [Tools and clients that connect - Azure DevOps | Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/user-guide/tools?view=azure-devops)
+
+## Artifacts
+
+* [NuGet (Azure DevOps Artifacts Package Types) | Microsoft Docs](https://docs.microsoft.com/en-us/rest/api/azure/devops/artifactspackagetypes/nuget?view=azure-devops-rest-6.0)
+* [Npm (Azure DevOps Artifacts Package Types) | Microsoft Docs](https://docs.microsoft.com/en-us/rest/api/azure/devops/artifactspackagetypes/npm?view=azure-devops-rest-6.0)
+
+## CLI
+
+[Learn about Azure DevOps command line interface extension - Azure DevOps | Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops)
+
+## REST API
+
+* [Get started with the REST APIs for Azure DevOps - Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/integrate/how-to/call-rest-api?view=azure-devops)
+* [Get started with the REST APIs for Azure DevOps Services and Team Foundation Server](https://docs.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-6.1)
+* [Cannot access Azure DevOps API using PAT in cURL command in Bash script](https://stackoverflow.com/questions/62563443/cannot-access-azure-devops-api-using-pat-in-curl-command-in-bash-script)
+
+## Questions
+
+* Split In progress work at end of Sprint
+
+  * [Rollup estimated and actual work using Project](https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/office/rollup-estimated-and-actual-work-using-project?view=tfs-2018)

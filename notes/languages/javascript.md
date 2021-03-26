@@ -4,6 +4,10 @@
 
 [lukehoban/**es6features**](https://github.com/lukehoban/es6features) - Overview of ECMAScript 6 features
 
+## Community
+
+[JS.ORG - the JavaScript organization](https://js.org/) - Are you a JavaScript developer looking for free webspace to host your project?
+
 ## Reference (MDN)
 
 [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)

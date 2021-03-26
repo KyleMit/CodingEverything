@@ -87,3 +87,17 @@
 * [Add or Remove Excluded Folders For Search Indexer in Windows 10](https://winaero.com/add-remove-excluded-folders-search-indexer-windows-10/)
 
   Settings > Windows Search Settings > Excluded Folders
+
+* Disable suggestions on Aero Snap
+
+  Multitasking > Disable "When I snap a window, show what I can snap next to it"
+
+  ![Aero Snap Suggestions](/assets/notes/windows/aero-snap-suggestions.png)
+
+* Make Cortana use Google Searches
+
+  [chrometana](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
+
+* [Hide icons in taskbar](https://superuser.com/q/1352561/180163)
+
+  Settings > Taskbar > Select which icons appear on the taskbar

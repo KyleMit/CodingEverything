@@ -57,16 +57,22 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
    * and others.
 5. *footers* other than `BREAKING CHANGE: <description>` may be provided and follow a convention similar to [git trailer format](https://git-scm.com/docs/git-interpret-trailers).
 
-## Tools
 
-### Serer Side
+## Client Side Tools
+
+* Gitbash
+* Atlassian
+* GitKraken
+* Tower
+
+## Server Side Tools
 
 * Github
 * Gitlab
 * Bitbucket
 
 
-#### GitHub
+### GitHub
 
 * [Github Repo Settings](https://github.com/settings/repositories)
 * [Github/Renaming](https://github.com/github/renaming#from-master-to-main)
@@ -75,7 +81,7 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
 > Choose the default branch for your new personal repositories. You might want to change the default name due to different workflows, or because your integrations still require “master” as the default branch name. You can always change the default branch name on individual repositories.
 
 
-#### Bitbucket
+### Bitbucket
 
 * [Search public repositories in Bitbucket?](https://community.atlassian.com/t5/Bitbucket-questions/public-repositories/qaq-p/844415)
   * [bitbucket.org/repo/all](https://bitbucket.org/repo/all)
@@ -88,7 +94,6 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
 * [okonet/**lint-staged**](https://github.com/okonet/lint-staged) - Run linters on git staged files
 * [azz/**pretty-quick**](https://github.com/azz/pretty-quick) - Get Pretty Quick
 
-### Client Side
 
 
 ## Questions

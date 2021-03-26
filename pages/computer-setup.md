@@ -283,7 +283,9 @@ Settings can be synced with [Settings Sync](https://marketplace.visualstudio.com
 
 Which will persist [custom settings in a gist](https://gist.github.com/KyleMit/9e22c8ecf6d7f5504edbfffe6dce6dcf)
 
-Local overrides are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
+Open `Sync: Advanced Options` > `Sync: Edit Extension Local Settings`
+
+[Global settings](https://github.com/shanalikhan/code-settings-sync#global-settings) are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
 
 ```json
 "ignoreUploadFiles": [
@@ -295,6 +297,9 @@ Local overrides are stored in `%APPDATA%\Code\User\syncLocalSettings.json`
     "lukas-tr.materialdesignicons-intellisense",
     "mhutchie.git-graph",
     "ms-vsliveshare.vsliveshare"
+],
+"ignoreExtensions": [
+    "amazonwebservices.aws-toolkit-vscode",
 ],
 "supportedFileExtensions": [
     /* ... */
@@ -800,9 +805,9 @@ Set KDiff as source diffing tool
 
 #### Clone All Stash Repos
 
-[Stash Rest API](https://docs.atlassian.com/DAC/rest/stash/3.11.6/stash-rest.html#idp2971616)
-[Generate Personal Access Token](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
-[demo in jq play](https://jqplay.org/s/7GXr0QU5OY)
+* [Stash Rest API](https://docs.atlassian.com/DAC/rest/stash/3.11.6/stash-rest.html#idp2971616)
+* [Generate Personal Access Token](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
+* [demo in jq play](https://jqplay.org/s/7GXr0QU5OY)
 
 ```bash
 curl -H "Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
@@ -810,6 +815,18 @@ curl -H "Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
 jq -r '.values[].links.clone[] | select(.name=="ssh").href' | \
 xargs -L1 git clone
 ```
+
+#### Clone All Azure DevOps Repos
+
+```bash
+curl -u :{pat} \
+     https://dev.azure.com/{organization}/{project}/_apis/git/repositories?api-version=6.0 | \
+jq -r '.value[].sshUrl' | \
+xargs -L1 git clone
+```
+
+* [Repositories - List (Azure DevOps Git) | Microsoft Docs](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/repositories/list?view=azure-devops-rest-6.0)
+* [Cloning all repositories from Azure DevOps using Azure CLI](https://blog.simonw.se/cloning-all-repositories-from-azure-devops-using-azure-cli/)
 
 
 
