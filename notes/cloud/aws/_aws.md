@@ -33,9 +33,13 @@ aws sts get-caller-identity
 * [**ACM**](https://aws.amazon.com/certificate-manager/) - AWS Certificate Manager
 * [**VPC**](https://aws.amazon.com/vpc/) - Virtual Private Cloud
 * [**STS**](https://wa.aws.amazon.com/wat.concept.sts.en.html) - Security Token Service
-* [**CodePipeline**](https://aws.amazon.com/codepipeline/)
 * [**AMI**](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) - Amazon Machine Images
 * [**SSM**](https://aws.amazon.com/systems-manager/) - AWS (Simple) Systems Manager
+* [**AppSync**](https://aws.amazon.com/appsync/) - Accelerate application development with scalable GraphQL APIs
+* [**CodeCommit**](https://aws.amazon.com/codecommit/) - Managed Source Control Service
+* [**CodeBuild**](https://aws.amazon.com/codebuild/) - Fully Managed Build Service
+* [**CodeDeploy**](https://aws.amazon.com/codedeploy/) - Automated Software Deployment
+* [**CodePipeline**](https://aws.amazon.com/codepipeline/) - Continuous Integration & Continuous Delivery
 
 ## ARN
 
@@ -205,7 +209,10 @@ pip install aws-shell
 * [How can I allow a Group to assume a Role?](https://stackoverflow.com/questions/34922920/how-can-i-allow-a-group-to-assume-a-role)
 
 
+## Articles
 
+* [How to set up a Continuous Integration and Delivery (CI/CD) Pipeline](https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/)
+* [Complete CI/CD with AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline](https://aws.amazon.com/blogs/devops/complete-ci-cd-with-aws-codecommit-aws-codebuild-aws-codedeploy-and-aws-codepipeline/)
 
 ## Questions
 

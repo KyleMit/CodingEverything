@@ -159,3 +159,34 @@ dynamoose.aws.sdk.config.update({
   Update to 2.4.0+
 
 * [The level of configured provisioned throughput for the table was exceeded. Consider increasing your provisioning level with the UpdateTable API](https://stackoverflow.com/q/31468379/1366033)
+
+
+* [item size has exceeded the maximum allowed size](https://stackoverflow.com/a/57922131/1366033)
+
+  Expression Parameters limits
+
+* [AWS Lambda: Allows a Lambda function to access an Amazon DynamoDB table](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_lambda-access-dynamodb.html)
+
+  > "amplify" User: arn:aws:sts::is not authorized to perform: dynamodb:Query
+
+  ```json
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "ReadWriteTable",
+              "Effect": "Allow",
+              "Action": [
+                  "dynamodb:BatchGetItem",
+                  "dynamodb:GetItem",
+                  "dynamodb:Query",
+                  "dynamodb:Scan",
+                  "dynamodb:BatchWriteItem",
+                  "dynamodb:PutItem",
+                  "dynamodb:UpdateItem"
+              ],
+              "Resource": "arn:aws:dynamodb:*:*:table/SampleTable"
+          }
+      ]
+  }
+  ```

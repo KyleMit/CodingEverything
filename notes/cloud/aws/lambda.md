@@ -128,3 +128,22 @@ exports.handler = function(event, context, callback) {
   mkdir /media/USB
   mount /dev/sdb1 /media/USB
   ```
+
+* [Is it possible to rename an AWS Lambda function?](https://stackoverflow.com/q/36684520/1366033)
+
+  > No
+
+
+* [AWS Lambda function logging in Node.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-logging.html)
+
+  1. Open the [Log groups page](https://console.aws.amazon.com/cloudwatch/home?#logs:) on the CloudWatch console
+  2. Choose the log group for your function (`/aws/lambda/your-function-name`).
+  3. Choose a log stream
+
+
+* [Best way to share code between lambda functions](https://github.com/aws-amplify/amplify-cli/issues/2295)
+
+  * Copy the shared file as part of your build process
+  * Use a monorepo with Lerna and consume the shared pieces as a package
+  * Use lambda layers
+

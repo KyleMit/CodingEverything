@@ -21,6 +21,20 @@ npx create-nx-workspace your-name
     npm install -g nx
     ```
 
+## Plugins
+
+* [angular](https://nx.dev/latest/react/angular/overview)
+* [react](https://nx.dev/latest/react/react/overview)
+* [jest](https://nx.dev/latest/react/jest/overview)
+* [cypress](https://nx.dev/latest/react/cypress/overview)
+* [storybook](https://nx.dev/latest/react/storybook/overview)
+* [linter](https://nx.dev/latest/react/linter/eslint)
+* [node](https://nx.dev/latest/react/node/overview)
+* [express](https://nx.dev/latest/react/express/overview)
+* [nest](https://nx.dev/latest/react/nest/overview)
+* [next](https://nx.dev/latest/react/next/overview)
+* [gatsby](https://nx.dev/latest/react/gatsby/overview)
+* [nx-plugin](https://nx.dev/latest/react/nx-plugin/overview)
 
 ## Gatsby
 
@@ -52,4 +66,10 @@ nx generate @nrwl/gatsby:application <name>
     ```
 
     Command Palette - Attach to Node Process
+
+* Community SAM Plugin
+
+* [Serverless (via AWS SAM) support?](https://github.com/nrwl/nx/issues/1523)
+* [studds/nx-aws: AWS plugins for nx](https://github.com/studds/nx-aws)
+* [@nx-aws/sam - npm](https://www.npmjs.com/package/@nx-aws/sam)
 
