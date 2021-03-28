@@ -71,6 +71,7 @@
   3. Advanced > Visual Effects
   4. Disable `Animate windows when minimizing and maximizing`
 
+   ![screenshot flicker](/assets/notes/windows/screenshot-flicker.png)
 
 * [Direct shortcut for Windows Maximize/Minimize/Restore window?](https://superuser.com/q/988554/180163)
 
