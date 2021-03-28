@@ -20,44 +20,47 @@
 * AWS SAM
 * AWS CloudFormation
 
-## Integrations
+## People
 
-* [React](https://docs.amplify.aws/start/q/integration/react)
-* [Next](https://docs.amplify.aws/start/q/integration/next)
-
-
-```bash
-npx create-next-app next-amplified
-```
-
-## Setup
-
-```bash
-npm install -g @aws-amplify/cli
-```
+* [Kurt Kemple (@theworstdev)](https://twitter.com/theworstdev)
+* [Nader Dabit (@dabit3)](https://twitter.com/dabit3)
 
 
 ## Amplify Framework
 
-* Rich Libraries
+* Integrations
   * JavaScript
-    * React
+    * [React](https://docs.amplify.aws/start/q/integration/react)
     * Vue
     * Angular
     * Ionic
+    * [Next](https://docs.amplify.aws/start/q/integration/next)
+    * Vanilla
   * Mobile
     * iOS
     * Android
     * React Native
+    * Flutter
 
 * Interaction
-  * API
+  * API (Rest)
+  * API (GQL)
+  * Analytics
   * Authentication
   * Data
+  * Serverless Functions
   * Analytics
   * Storage
   * Messaging
-  * Chat and More
+  * Interactions (chatbots)
+
+* Features
+  * CLI
+  * Client Libraries
+  * Console - Continuous Deployment & Hosting
+  * Prebuilt UI Components
+  * Toolchain
+  * JS Framework Support
 
 ## Amplify CLI
 
@@ -66,6 +69,16 @@ npm install -g @aws-amplify/cli
 ```bash
 npm install -g @aws-amplify/cli
 ```
+
+### Features
+
+* Create, update & delete cloud services
+* Manage multiple environments
+* GraphQL Transform
+* GraphQL & Lambda Codegen
+* Mocking
+
+### Commands
 
 ```bash
 amplify configure      # will configure amplify project
@@ -87,6 +100,42 @@ amplify publish        # will build your local backend (and frontend if you have
 3. Deploy Environment
 
 
+## Client
+
+* Connect to & interact with cloud services from web & mobile applications
+* Preconfigured components for popular front-end libraries
+
+```bash
+npm install aws-amplify
+```
+
+```js
+import {
+  Auth, API, Storage, Analytics, XR
+} from "aws-amplify"
+
+API.get('api-name', 'path') // PUT,POST,DELETE
+
+Storage.get('key', file)
+Storage.get('key')
+```
+
+## Admin UI
+
+
+* [Admin UI Basics - Introduction](https://docs.amplify.aws/console/adminui/intro)
+* [Admin UI Basics - Getting started](https://docs.amplify.aws/console/adminui/start)
+
+
+### Next Integration
+
+* [Next](https://docs.amplify.aws/start/q/integration/next)
+* [API with Incremental Static Site Generation (SSG)](https://docs.amplify.aws/start/getting-started/data-model/q/integration/next#api-with-incremental-static-site-generation-ssg)
+
+```bash
+npx create-next-app next-amplified
+```
+
 ## Redirects
 
 [Using redirects - AWS Amplify](https://docs.aws.amazon.com/amplify/latest/userguide/redirects.html)
@@ -106,10 +155,29 @@ Example:
 
 [GatsbyJs client only paths goes to 404 page when the url is directly accessed in browser in “production”](https://stackoverflow.com/q/52051090/1366033)
 
+## Mocking & Testing
+
+[Advanced workflows - Mocking and testing - Amplify Docs](https://docs.amplify.aws/cli/usage/mock)
+
+* Creates local http server
+* Creates local SQL Lite tables (API, DynamoDB)
+* Creates local folder for S3 storage (images, files, etc)
+* Updates `aws-exports.js` file with local references to endpoints
+
+```bash
+amplify mock     # all
+amplify mock api # specific category
+```
+
 ## Talks
 
-* [Installing & Configuring the AWS Amplify CLI - YouTube](https://www.youtube.com/watch?v=fWbM5DLh25U)
-* [Serverless Functions in Depth with AWS Amplify - YouTube](https://www.youtube.com/watch?v=y4Obz26GkCk)
+* [Installing & Configuring the AWS Amplify CLI](https://www.youtube.com/watch?v=fWbM5DLh25U)
+* [Serverless Functions in Depth with AWS Amplify](https://www.youtube.com/watch?v=y4Obz26GkCk)
+* [Mocking and Testing Serverless APIs with AWS Amplify](https://www.youtube.com/watch?v=OxrHplxZ8BA)
+
+## Articles
+
+* [AWS Amplify-CLI Headless & CI/CD](https://medium.com/@rygo.107/aws-amplify-cli-headless-ci-cd-81385e91d334)
 
 ### Create Modern Serverless Web Applications in Minutes using the AWS Amplify Framework
 
@@ -255,3 +323,15 @@ type Subscription {
 * Real-time UI
 
 
+## Questions
+
+* Use YAML with CloudFormation Templates
+
+  * [#1904 - CFN template in yaml or json format](https://github.com/aws-amplify/amplify-cli/issues/1904)
+  * [#2915 - Feature request: Use YAML for all CloudFormation files](https://github.com/aws-amplify/amplify-cli/issues/2915)
+
+* [#1158 - How to debug amplify function using visual studio code during invocation?](https://github.com/aws-amplify/amplify-cli/issues/1158)
+
+* [Missing Authentication Token while accessing API Gateway?](https://stackoverflow.com/q/39655048/1366033)
+
+  Don't use stage root url - make sure you have the resource in the url
