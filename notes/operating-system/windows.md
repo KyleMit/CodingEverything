@@ -101,3 +101,10 @@
 * [Hide icons in taskbar](https://superuser.com/q/1352561/180163)
 
   Settings > Taskbar > Select which icons appear on the taskbar
+
+* [How to disable all live tiles on Windows 10](https://mspoweruser.com/disable-live-tiles-windows-10/)
+
+  Start Menu > Right Click on Tile > More > Turn Live Tile Off
+
+  ![disable live tile](/assets/notes/windows/live-tile.png)
+

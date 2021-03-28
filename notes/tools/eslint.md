@@ -43,13 +43,19 @@ rules: {}
 
 ### JavaScript
 
-[require-await](https://eslint.org/docs/rules/require-await)
+* [require-await](https://eslint.org/docs/rules/require-await)
 
 
 ### TypeScript
 
-[no-var-requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
+* [no-var-requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
 
+* [explicit-function-return-type](https://github.com/typescript-eslint/typescript-eslint/blob/v2.31.0/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
+
+  ```js
+  // No return value should be expected (void)
+  function test(): void { return; }
+  ```
 
 ## Questions
 

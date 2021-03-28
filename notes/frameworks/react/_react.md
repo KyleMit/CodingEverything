@@ -1,6 +1,5 @@
 # React
 
-
 * [React Getting Started](https://reactjs.org/docs/getting-started.html)
 * [Creating a New App](https://reactjs.org/docs/create-a-new-react-app.html)
 
@@ -117,6 +116,33 @@ Babel in the browser
 
   ```js
   useEffect(didUpdate);
+  ```
+
+  > Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body of a function component (referred to as React’s render phase). Doing so will lead to confusing bugs and inconsistencies in the UI.
+
+* `useContext` - Accepts a context object (the value returned from `React.createContext`) and returns the current context value for that context
+
+* `useReducer` - An alternative to `useState`. `useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one
+
+  ```js
+  const [state, dispatch] = useReducer(reducer, initialArg, init);
+  ```
+
+* `useCallback` - Returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback.
+
+  ```js
+  const memoizedCallback = useCallback(
+    () => {
+      doSomething(a, b);
+    },
+    [a, b],
+  );
+  ```
+
+* `useMemo` - Returns a memoized value
+
+  ```js
+  const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
   ```
 
 ### React Hook Form

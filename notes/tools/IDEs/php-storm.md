@@ -47,3 +47,12 @@
 
    Project > Right Click > Open In > Explorer
 
+* [Highlight unsaved files](https://stackoverflow.com/q/26769154/1366033)
+
+  Settings > Editor > General > Editor Tabs > Mark modified (\*)
+
+* [How to auto format code in WebStorm](https://stackoverflow.com/q/21217791/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>
+
+

@@ -1,62 +1,64 @@
 # Pluralsight
 
-
+[Redux Fundamentals](https://app.pluralsight.com/library/courses/redux-fundamentals/table-of-contents)
+[Using React Hooks](https://app.pluralsight.com/library/courses/using-react-hooks/table-of-contents)
+[React Fundamentals](https://app.pluralsight.com/library/courses/react-fundamentals-update/table-of-contents)
 
 ## Bookmarks
 
 <!-- [...document.querySelectorAll("[class*='courseTitleCell']")].map(el => `* [${el.innerText}](${el.href})`).join("\n") -->
 
-* [WCF Jumpstart](undefined)
-* [Migrating SSIS Packages to Azure Data Factory](undefined)
-* [Building Custom GitHub Actions](undefined)
-* [Microsoft Azure DevOps Engineer: Creating an Automated Build Workflow](undefined)
-* [Continuous Delivery and DevOps with Azure DevOps: Release Pipelines](undefined)
-* [What’s New in C# 8.0 and .NET Core 3.0](undefined)
-* [Understanding ASP.NET Core 3.x](undefined)
-* [VB.NET Fundamentals](undefined)
-* [Building Your First Salesforce Application](undefined)
-* [Hacking VS Code: Write Your First Extension for Visual Studio Code](undefined)
-* [Continuous Integration with Atlassian Bamboo](undefined)
-* [Introduction to Windows Forms](undefined)
-* [Building Your First API with ASP.NET Core](undefined)
-* [Practical Design Patterns in JavaScript](undefined)
-* [Webpack Fundamentals](undefined)
-* [TypeScript Fundamentals](undefined)
-* [Using the Serverless Framework with Node.js on AWS](undefined)
-* [Understanding the Difference Between Microsoft Azure and Amazon AWS](undefined)
-* [AWS Developer: Getting Started](undefined)
-* [AWS Developer - An Introduction to AWS Lambda](undefined)
-* [Building Web Applications with Node.js and Express 4.0 (UPDATE)](undefined)
-* [Developing with Node.js on Microsoft Azure - Getting Started](undefined)
-* [Node.js for .NET Developers](undefined)
-* [Developing Faster with the Vue CLI](undefined)
-* [Practical Cryptography in .NET](undefined)
-* [Automating the Web Using PhantomJS and CasperJS](undefined)
-* [Building Offline Web Apps with Service Worker](undefined)
-* [Getting Started with ASP.NET Core SignalR](undefined)
-* [Progressive Web App Fundamentals](undefined)
-* [Creating User Experiences: Fundamental Design Principles](undefined)
-* [UX-driven Software Design](undefined)
-* [Visual Design for the Web](undefined)
-* [Visual Design: Best Practices for Refining Designs](undefined)
-* [Marvelous Designer Fundamentals](undefined)
-* [Getting Started with Android Material Design](undefined)
-* [An Introduction to Design](undefined)
-* [UX Design for Graphic Designers](undefined)
-* [Getting Started in UX Design](undefined)
-* [Building a Web App with ASP.NET Core, MVC, Entity Framework Core, Bootstrap, and Angular](undefined)
-* [AngularJS Forms Using Bootstrap and MVC 5](undefined)
-* [Add Angular to MVC Applications](undefined)
-* [ASP.NET in Multi-tenant App, Examples in MVC, ExtJS, and Angular](undefined)
-* [UX Fundamentals](undefined)
-* [User Experience Tips and Tricks for Developers](undefined)
-* [Practical PhoneGap](undefined)
-* [Creating Mobile Apps: Native, Hybrid, or Cross Platform Framework?](undefined)
-* [Git for Visual Studio Developers](undefined)
-* [Learn by Building Redis with Ruby](undefined)
-* [Ruby Fundamentals](undefined)
-* [Ruby on Rails - A Jumpstart for .NET Developers](undefined)
-* [Test-First Development for Rails](undefined)
+* WCF Jumpstart
+* Migrating SSIS Packages to Azure Data Factory
+* Building Custom GitHub Actions
+* Microsoft Azure DevOps Engineer: Creating an Automated Build Workflow
+* Continuous Delivery and DevOps with Azure DevOps: Release Pipelines
+* What’s New in C# 8.0 and .NET Core 3.0
+* Understanding ASP.NET Core 3.x
+* VB.NET Fundamentals
+* Building Your First Salesforce Application
+* Hacking VS Code: Write Your First Extension for Visual Studio Code
+* Continuous Integration with Atlassian Bamboo
+* Introduction to Windows Forms
+* Building Your First API with ASP.NET Core
+* Practical Design Patterns in JavaScript
+* Webpack Fundamentals
+* TypeScript Fundamentals
+* Using the Serverless Framework with Node.js on AWS
+* Understanding the Difference Between Microsoft Azure and Amazon AWS
+* AWS Developer: Getting Started
+* AWS Developer - An Introduction to AWS Lambda
+* Building Web Applications with Node.js and Express 4.0 (UPDATE)
+* Developing with Node.js on Microsoft Azure - Getting Started
+* Node.js for .NET Developers
+* Developing Faster with the Vue CLI
+* Practical Cryptography in .NET
+* Automating the Web Using PhantomJS and CasperJS
+* Building Offline Web Apps with Service Worker
+* Getting Started with ASP.NET Core SignalR
+* Progressive Web App Fundamentals
+* Creating User Experiences: Fundamental Design Principles
+* UX-driven Software Design
+* Visual Design for the Web
+* Visual Design: Best Practices for Refining Designs
+* Marvelous Designer Fundamentals
+* Getting Started with Android Material Design
+* An Introduction to Design
+* UX Design for Graphic Designers
+* Getting Started in UX Design
+* Building a Web App with ASP.NET Core, MVC, Entity Framework Core, Bootstrap, and Angular
+* AngularJS Forms Using Bootstrap and MVC 5
+* Add Angular to MVC Applications
+* ASP.NET in Multi-tenant App, Examples in MVC, ExtJS, and Angular
+* UX Fundamentals
+* User Experience Tips and Tricks for Developers
+* Practical PhoneGap
+* Creating Mobile Apps: Native, Hybrid, or Cross Platform Framework?
+* Git for Visual Studio Developers
+* Learn by Building Redis with Ruby
+* Ruby Fundamentals
+* Ruby on Rails - A Jumpstart for .NET Developers
+* Test-First Development for Rails
 
 ## [History](https://app.pluralsight.com/library/history)
 
