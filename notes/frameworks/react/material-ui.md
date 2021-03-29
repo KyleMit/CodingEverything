@@ -7,7 +7,11 @@
 ## Getting Started
 
 ```bash
+# with npm
 npm install @material-ui/core
+
+# with yarn
+yarn add @material-ui/core
 ```
 
 ### Example
@@ -24,3 +28,24 @@ function App() {
 ## Docs
 
 [styles](https://material-ui.com/styles/basics/)
+
+## Components
+
+### Select
+
+* [Select component](https://material-ui.com/components/selects/)
+* [Select API](https://material-ui.com/api/select/)
+
+```ts
+import Select from '@material-ui/core/Select';
+import { Select } from '@material-ui/core';
+```
+
+
+## Questions
+
+* [Set Material UI Select width?](https://stackoverflow.com/q/56120213/1366033)
+
+  ```jsx
+  <FormControl style={{minWidth: 120}}>
+  ```

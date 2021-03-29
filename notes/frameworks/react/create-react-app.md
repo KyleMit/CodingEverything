@@ -132,3 +132,18 @@ export default App;
   https://stackoverflow.com/q/55082584/1366033
   ```
 
+* [TypeScript 4.1: Could not find a declaration file for module 'react/jsx-runtime](https://github.com/facebook/create-react-app/issues/10109)
+
+  * Refresh Node Modules
+
+  ```bash
+  rm -rf node_modules && rm -rf yarn.lock && yarn install
+  ```
+
+  * Restart Typescript Server
+
+  ```none
+  TypeScript: Restart TS Server
+  ```
+
+
