@@ -108,3 +108,6 @@
 
   ![disable live tile](/assets/notes/windows/live-tile.png)
 
+* [Windows Task Manager Paused](https://superuser.com/q/514403/180163)
+
+  View > Update Speed > Low-High
