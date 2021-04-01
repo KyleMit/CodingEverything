@@ -231,6 +231,26 @@ return (
   * [RFC: React Server Components by josephsavona · Pull Request #188 · reactjs/rfcs](https://github.com/reactjs/rfcs/pull/188)
   * [Data Fetching with React Server Components - YouTube](https://www.youtube.com/watch?v=TQQPAU21ZUw)
 
+## TypeScript
+
+### Events
+
+```ts
+const [state, setState] = React.useState<{ age: string | number; name: string }>({
+  age: '',
+  name: 'hai',
+});
+
+const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => {
+  const name = event.target.name as keyof typeof state;
+  setState({
+    ...state,
+    [name]: event.target.value,
+  });
+};
+```
+
+
 ## Questions
 
 
@@ -241,7 +261,7 @@ return (
 * [Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
 * ['this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
 * [Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
-* [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
+
 * [handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
 * [conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
 
@@ -362,3 +382,39 @@ return (
   npx cross-env NODE_ENV=development babel src -d lib
   ```
 
+* [React event types](https://stackoverflow.com/q/42081549/1366033)
+
+  * [SyntheticEvent – React](https://reactjs.org/docs/events.html)
+
+* [Is it possible to use if...else... statement in React render function?](https://stackoverflow.com/q/40477245/1366033)
+
+
+  * [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
+
+  Inside JSX Render function with `&&` or Ternary
+
+  ```jsx
+  render() {
+    return (
+      <div>
+        {isLoggedIn ? "hello" : "anon"}
+      </div>
+    );
+  }
+  ```
+
+  As variable set in function
+
+  ```jsx
+  if (isLoggedIn) {
+    text = "hello";
+  } else {
+    text = "anon";
+  }
+
+  return (
+    <div>
+      {text}
+    </div>
+  );
+  ```
