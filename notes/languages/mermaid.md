@@ -1,7 +1,9 @@
 # Mermaid
 
-* [mermaid](https://mermaid-js.github.io/mermaid/#/)
+> Mermaid lets you create diagrams using text and code
 
+* [mermaid](https://mermaid-js.github.io/mermaid/#/)
+* [Mermaid live editor](https://mermaid-js.github.io/mermaid-live-editor/)
 
 ## Alternatives
 

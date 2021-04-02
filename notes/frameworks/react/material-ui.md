@@ -56,3 +56,11 @@ import { Select } from '@material-ui/core';
   ```jsx
   <FormControl style={{minWidth: 120}}>
   ```
+
+
+* TypeError: Cannot read property 'up' of undefined
+
+> Material-UI: The `styles` argument provided is invalid.
+> You are providing a function without a theme in the context.
+> One of the parent elements needs to use a ThemeProvider.
+
