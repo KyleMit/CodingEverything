@@ -118,7 +118,7 @@
 * **ORMs** - Object Relational Mapping
 * **DSLs** - Domain Specific Language
 * **CICD** - Continuous Integration / Continuous Deployment
-
+* **IFTTT** - If This Then That
 
 ### Debug
 

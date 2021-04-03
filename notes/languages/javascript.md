@@ -416,6 +416,22 @@ winget install graphviz
 ```
 
 
+## JS Utility Libraries
+
+* [lodash](https://lodash.com/)
+* [underscore](https://underscorejs.org/)
+* [ramda](https://ramdajs.com/)
+* [core-js](https://github.com/zloirock/core-js)
+
+### Ramda
+
+> a library designed specifically for a functional programming style, one that makes it easy to create functional pipelines, one that never mutates user data.
+
+* [Ramda Documentation](https://ramdajs.com/)
+* [ramda - npm](https://www.npmjs.com/package/ramda)
+* [Introducing Ramda](http://buzzdecafe.github.io/code/2014/05/16/introducing-ramda)
+* [Why Ramda?](https://fr.umio.us/why-ramda/)
+
 
 ## Questions
 

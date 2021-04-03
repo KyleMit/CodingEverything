@@ -5,28 +5,30 @@ date: 2018-09-15
 
 https://2018.vtcodecamp.org/
 
-### For the DotNoobs! Leveling Up Your C#
+## For the DotNoobs! Leveling Up Your C\#
+
 by **Bob Crowley**
 
-##### Ref Keyword
+### Ref Keyword
+
 > Do Not Pass By Reference
 
-#### HttpClient
+### HttpClient
 
 `System.Net.Http.HttpClient`
 
 * Stores Cache Hits, longer lifespan preserves cache longer
 * Pre-load requests that might be needed later
 
-#### Async & Await
+### Async & Await
 
 * Avoid blocking
-	* avoid ```...async().Result` or `...async().Wait()`
+  * avoid ```...async().Result` or `...async().Wait()`
 * Try to get `async` all the way down
 * Compiler goes to a lot of trouble to setup async continuations
 * If you block
 
-#### Throwing Exceptions
+### Throwing Exceptions
 
 **Exception filter in C#6**
 
@@ -35,7 +37,7 @@ public void DoSomething()
 {
     try
     {
-	    var x = 9/0;
+     var x = 9/0;
     }
     catch (Exception ex) when(Log("oops")) {
         // won't step into here if log returns false
@@ -48,18 +50,20 @@ private bool log() {
 ```
 
 
-#### SqlParameters
+### SqlParameters
 
 Don't use `.AddWithValue` - moderated for SP users
 
 
 
 ## Exploring User Mental Models of Data Sharing
+
 by **Amy Chess**
 
 
 
-###"Recalculating!" - Navigating Container Technologies and Azure
+### "Recalculating!" - Navigating Container Technologies and Azure
+
 by **Chris Bowen**
 
 Docker.com
@@ -67,6 +71,7 @@ Docker.com
 #### Docker
 
 #### Azure Container Registry
+
 **Thundering hurd problem** - everything going down (and up) at once
 
 ### Kubernetes (from Google)
@@ -89,13 +94,14 @@ Docker.com
 
 
 ### ASP.NET Core 2.1 Web APIs for your Web and Mobile Apps
+
 by **Chris Woodruff** - Jet Brains Dev
 
 #### Pitfalls & Tips
 
 * Controller → **Model** → EF → DB
 * Don't do Data Access inside controller
-	* Break up project into smaller pieces
+  * Break up project into smaller pieces
 * Decouple Data Access (EF Core) with your project domain
 * Do Integration Testing & Unit Testing
 * Pass the correct codes
@@ -103,7 +109,7 @@ by **Chris Woodruff** - Jet Brains Dev
 
 #### API Layer
 
-* Interact with Consumers using **ViewMdoels**
+* Interact with Consumers using **ViewModels**
 
 #### chinook sample db
 
@@ -126,24 +132,25 @@ View Model ⇄ Domain Layer / Supervisors ⇄ Entity Model
 
 * Pass an Interface and a default implementation
 
-#### [AutoMapper](https://automapper.org/) is a simple little library built to solve a deceptively complex problem - getting rid of code that mapped one object to another.
+#### [AutoMapper](https://automapper.org/) is a simple little library built to solve a deceptively complex problem - getting rid of code that mapped one object to another
 
 ADO.NET Support - Map from IDataReader
 
 
 
 ## Accessibility Awareness: Empowering Everyone
-by **Mandy Swithenbank**
+
+by **Mandy Swithenbank** / Vernier
 
 ### Curb Cuts
 
-#### Acessibility
+#### Accessibility
 
 #### Inclusive Design & Universal Design
 
 #### User Experience
 
-- for, well, **People**!
+* for, well, **People**!
 
 Disability is a spectrum - not a boolean
 
@@ -168,7 +175,7 @@ Everyone, at some point, will have temporary/situational Impairments
 ### Diversity of Abilities
 
 * Visual
-	* Screen Reader Captions
+  * Screen Reader Captions
 * Mental
 * Physical
 * Auditory
@@ -194,7 +201,7 @@ Level AAA - highly capable
 
 WCAG **POUR** Principles
 
-* **Perceiveable** to the senses
+* **Perceivable** to the senses
 * **Operable** interface controls
 * **Understandable** content and interface
 * **Robust** structure that can be interpreted by various user agents (lots of different types of user agents - SEO, users, screen readers)
@@ -207,6 +214,7 @@ Screen readers user keyboard for all interaction
 #### Evaluation Tools
 
 Check for WCAG Compliance
+
 * Semantic Structure
 * ARIA
 * Contrast
@@ -235,7 +243,7 @@ Accessibility issues with custom JS dropdowns
 
 #### Keyboard navigation for mobile devices
 
-Skip links - helpful for sighted users and especially for 
+Skip links - helpful for sighted users and especially for
 
 * Screen magnification software
 
@@ -248,7 +256,7 @@ Software: screen readers - browse the DOM
 
 Speed / slow down speech (power users)
 
-Try turning off your monitor - putting a 
+Try turning off your monitor - putting a
 
 
 Stairs = Barriers
@@ -260,12 +268,13 @@ Barriers on the web
 * Contrast
 * Closed Captions
 * Layout
-* Keboard
+* Keyboard
 
 > For every barrier, there's a curb cut!!
 
 
 ### Building Serverless Data APIs
+
 by **Julie Lerman**
 
 
@@ -292,7 +301,7 @@ by **Julie Lerman**
 
 Triggers, inputs, and output bindings all done with config
 
-Trigger - almost like an If This Then That (`ITTT`) - can be anything (i.e. `HTTP` Request)
+Trigger - almost like an If This Then That (`IFTTT`) - can be anything (i.e. `HTTP` Request)
 
 > "Everybody here should understand this.  It's not that I don't know how to read error messages; I don't have the patience to read error messages!"
 

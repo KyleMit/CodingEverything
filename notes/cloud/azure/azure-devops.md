@@ -128,9 +128,10 @@ console.table(vals)
 
 ### Wiki
 
-[Provisioned wikis vs. published code as a wiki](https://docs.microsoft.com/en-us/azure/devops/project/wiki/provisioned-vs-published-wiki?view=azure-devops)
-[About Wikis, READMEs, and Markdown](https://docs.microsoft.com/en-us/azure/devops/project/wiki/about-readme-wiki?view=azure-devops)
-
+* [Provisioned wikis vs. published code as a wiki](https://docs.microsoft.com/en-us/azure/devops/project/wiki/provisioned-vs-published-wiki?view=azure-devops)
+* [About Wikis, READMEs, and Markdown](https://docs.microsoft.com/en-us/azure/devops/project/wiki/about-readme-wiki?view=azure-devops)
+* [MD - Code highlighting](https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops#code-highlighting)
+  * [highlight.js/src/languages](https://github.com/highlightjs/highlight.js/tree/9.10.0/src/languages)
 
 ## Instant Search
 
