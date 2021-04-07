@@ -11,6 +11,11 @@
 
 * 64 Bit Raspbian
 
-* [Raspberry Pi OS (64 bit) beta test version](https://www.raspberrypi.org/forums/viewtopic.php?t=275370)
-* [Latest Raspberry Pi OS update - May 2020](https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/)
-* [64-bit Raspbian OS on Raspberry Pi 4 with USB BOOT](https://webtechie.be/post/2020-09-29-64bit-raspbianos-on-raspberrypi4-with-usbboot/)
+  * [Raspberry Pi OS (64 bit) beta test version](https://www.raspberrypi.org/forums/viewtopic.php?t=275370)
+  * [Latest Raspberry Pi OS update - May 2020](https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/)
+  * [64-bit Raspbian OS on Raspberry Pi 4 with USB BOOT](https://webtechie.be/post/2020-09-29-64bit-raspbianos-on-raspberrypi4-with-usbboot/)
+
+* Installation Steps
+
+  * [CanaKit Raspberry Pi B+ Case Installation - YouTube](https://www.youtube.com/watch?v=1VyE5-gv6jA)
+  * [CanaKit Starter Kit for the Raspberry Pi 4 4GB Setup with Heat Sink+Fan install & Test! - YouTube](https://www.youtube.com/watch?v=7rcNjgVgc-I)
