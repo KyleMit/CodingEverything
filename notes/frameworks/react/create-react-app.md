@@ -105,6 +105,8 @@ The react-scripts package provided by Create React App requires a dependency:
 * [**customize-cra**](https://github.com/arackaf/customize-cra)
 
 
+* [Add devDependencies for custom templates](https://github.com/facebook/create-react-app/issues/8082)
+
 ## Forums
 
 * [How do I change `src` folder to something else in create-react-app](https://stackoverflow.com/q/44448851/1366033)

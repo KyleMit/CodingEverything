@@ -468,3 +468,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "diffEditor.insertedTextBackground": "#1d9c281a"
   },
   ```
+
+* [Disable auto closing tags in TypeScript](https://stackoverflow.com/q/46463820/1366033)
+
+  ```json
+  "typescript.autoClosingTags": false,
+  "auto-close-tag.disableOnLanguage": ["typescript"]
+  ```
+
+   [TypeScript Generics: Adds closing "Tag" to type specifier](https://github.com/formulahendry/vscode-auto-close-tag/issues/17)

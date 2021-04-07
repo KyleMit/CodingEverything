@@ -22,6 +22,14 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 }
 ```
 
+## Release History
+
+* [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
+
+## Resources
+
+[Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+
 ## Questions
 
 * [Change default path for repositories for GIT plugin](https://stackoverflow.com/q/27134077/1366033)
@@ -36,3 +44,8 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
   Tools > Options > Projects and Solutions > Track Active Item in Solution Explorer
 
   Also: [Shortcut to scroll solution explorer to current file](https://stackoverflow.com/q/14937284/1366033)
+
+* [Is there a way to navigate to real implementation of method behind an interface?](https://stackoverflow.com/a/53273845/1366033)
+
+  `Edit.GoToImplementation` <kbd>Ctrl</kbd> + <kbd>F12</kbd>
+

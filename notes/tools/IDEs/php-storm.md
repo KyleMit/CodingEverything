@@ -55,4 +55,6 @@
 
   <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>
 
+* [Add jsdoc comments](https://www.jetbrains.com/help/phpstorm/creating-jsdoc-comments.html)
 
+  Type the opening block comment `/**` , and press <kbd>Enter</kbd>

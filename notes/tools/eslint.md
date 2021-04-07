@@ -44,6 +44,7 @@ rules: {}
 ### JavaScript
 
 * [require-await](https://eslint.org/docs/rules/require-await)
+* [valid-jsdoc](https://eslint.org/docs/rules/valid-jsdoc)
 
 
 ### TypeScript
