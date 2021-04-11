@@ -113,6 +113,8 @@ The react-scripts package provided by Create React App requires a dependency:
   * [create-react-app template](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/README.md)
   * [create-react-app typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript/template)
 
+* [Add devDependencies for custom templates](https://github.com/facebook/create-react-app/issues/8082)
+
 ## Forums
 
 * [How do I change `src` folder to something else in create-react-app](https://stackoverflow.com/q/44448851/1366033)

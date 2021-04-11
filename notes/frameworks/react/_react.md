@@ -418,3 +418,38 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
     </div>
   );
   ```
+
+* [Type `(props: Props) => Element[]` is not assignable to type `FunctionComponent<Props>`](https://stackoverflow.com/q/57651621/1366033)
+
+  * React components cannot render as arrays
+  * You can update your code to return multiple elements within a `<React.Fragment>`
+
+* [`React.FC` is discouraged](https://github.com/facebook/create-react-app/pull/8177)
+
+  1. Provides an implicit definition of `children` (even if your component doesn't need it)
+  2. Doesn't support generics.
+  3. Doesn't work correctly with `defaultProps`.
+
+  But
+
+  * provides typechecking and autocomplete for static properties like `displayName`, `propTypes`, and `defaultProps`
+
+* [What's the difference between `React.FC` and `JSX.Element`](https://stackoverflow.com/q/58656026/1366033)
+
+  ```tsx
+  const Component: React.FC = () => {}
+  const Component = (): JSX.Element => {}
+  ```
+
+* [Typescript input onchange event.target.value](https://stackoverflow.com/q/40676343/1366033)
+
+  ```ts
+  interface ChangeEvent<T = Element> extends SyntheticEvent<T> {
+      target: EventTarget & T;
+  }
+  ```
+
+  ```ts
+  const onChangeType = (event: React.ChangeEvent<HTMLInputElement>) => void
+  ```
+

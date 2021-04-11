@@ -675,5 +675,51 @@ let z: Z = {
   // => {id: number, name: string, position: string, createdAt: Date}
   ```
 
+* [How do I convert a string to enum in TypeScript?](https://stackoverflow.com/q/17380845/1366033)
 
+  ```ts
+  enum Color {
+    Green = "Green",
+    Red = "Red"
+  }
 
+  const color = "Green";
+  const colorEnum = color as Color;
+  ```
+
+* [Use Enum as restricted key type in Typescript](https://stackoverflow.com/q/44243060/1366033)
+
+  [Code Sandbox](https://codesandbox.io/s/typescript-enums-w52d1)
+
+  ```ts
+  enum Colors {
+    Red = "Red",
+    Yellow = "Yellow",
+    Blue = "Blue"
+  }
+
+  type ColorDict1 = { [key in keyof typeof Colors]: any };
+  let myColorDict1: ColorDict1 = {
+    [Colors.Red]: 1,
+    [Colors.Yellow]: 2,
+    [Colors.Blue]: 3
+  };
+
+  type ColorDict2 = { [key in Colors]: any };
+  let myColorDict2: ColorDict2 = {
+    [Colors.Red]: 1,
+    [Colors.Yellow]: 2,
+    [Colors.Blue]: 3
+  };
+
+  type EnumDictionary<T extends string | symbol | number, U> = {
+    [K in T]: U;
+  };
+
+  type ColorDict3 = EnumDictionary<Colors, any>;
+  const myColorDict3: ColorDict3 = {
+    [Colors.Red]: 1,
+    [Colors.Yellow]: 2,
+    [Colors.Blue]: 3
+  };
+  ```
