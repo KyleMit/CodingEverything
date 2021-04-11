@@ -85,7 +85,7 @@ Available in Node 8.2 / npm 5.2.0
 * [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
 * [Creating and publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
 * [How to publish packages to npm (the way the industry does things)](https://zellwk.com/blog/publish-to-npm/)
-* [What is the meaning of the “at” (@) prefix on npm packages?](https://stackoverflow.com/q/36667258/1366033)
+* [What is the meaning of the "at" (@) prefix on npm packages?](https://stackoverflow.com/q/36667258/1366033)
 
 
 * [What is the difference between npm-shrinkwrap.json and package-lock.json?](https://stackoverflow.com/a/46132512/1366033)
@@ -106,7 +106,7 @@ Available in Node 8.2 / npm 5.2.0
 
     ```bash
     npm outdated # list all
-    npm update   # update all (respect package )
+    npm update   # update all (respect package)
     ```
 
     or individually
@@ -115,4 +115,36 @@ Available in Node 8.2 / npm 5.2.0
     npm install express@latest --save
     npm install express@x.x.x --save
     ```
+
+* [What's the difference between tilde(~) and caret(^) in package.json?](https://stackoverflow.com/q/22343224/1366033)
+
+
+  | value       | desc                                                                           |
+  | ----------- | ------------------------------------------------------------------------------ |
+  | `~version`  | "Approximately equivalent to version" <br/> See [npm semver - Tilde Ranges][2] |
+  | `^version`  | "Compatible with version" <br/> See [npm semver - Caret Ranges][3]             |
+  | `version`   | Must match version exactly                                                     |
+  | `>version`  | Must be greater than version                                                   |
+  | `>=version` | etc                                                                            |
+  | `<version`  |                                                                                |
+  | `<=version` |                                                                                |
+  | `1.2.x`     | 1.2.0, 1.2.1, etc., but not 1.3.0                                              |
+  | `*`         | Matches any version                                                            |
+  | `latest`    | Obtains latest release                                                         |
+
+* [npm check and update package if needed](https://stackoverflow.com/q/16525430/1366033)
+
+  Use [`npm-check`](https://www.npmjs.com/package/npm-check)
+
+  ```bash
+  npx npm-check
+  npx npm-check -u # interactive
+  ```
+
+* [What does 'x packages are looking for funding' mean when running `npm install`?](https://stackoverflow.com/q/58972251/1366033)
+
+
+  ```bash
+  npm config set fund false --global
+  ```
 
