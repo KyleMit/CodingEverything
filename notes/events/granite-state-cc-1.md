@@ -10,6 +10,7 @@ date: 2018-11-03
 
 
 ## Xamarin Forms Challenge
+
 Carl Barton - Microsoft MVP, Xamarin MVP
 
 [Xamarin Docs](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/)
@@ -23,10 +24,10 @@ Carl Barton - Microsoft MVP, Xamarin MVP
 
 
 * Traditional Xamarin - Shared Backed
-* Xamarin *Forms* - Shared UI Alos
+* Xamarin *Forms* - Shared UI Apps
   * Xamarin.Button
-	  * iOS -> iOS.Button
-	  * Android -> Android.Button
+    * iOS -> iOS.Button
+    * Android -> Android.Button
 
 ### Write Once, Run Native
 
@@ -59,10 +60,9 @@ Carl Barton - Microsoft MVP, Xamarin MVP
 * Android
 * Windows Phone
 * Universal Windows (UW)
-* Tizen (Samsung 
+* Tizen (Samsung)
 * Web
 * WPF
-* 
 
 ### Demo
 
@@ -70,6 +70,7 @@ File > New Project > Cross Platform
 
 
 ## Getting started with Azure IoT
+
 Jim O'Neil, Microsoft Azure MVP
 
 [iot Hub](https://azure.microsoft.com/en-us/services/iot-hub/) - stores messages up to 7 days, but it's just a publisher of info; you need to hook up a subscriber
@@ -78,6 +79,7 @@ Jim O'Neil, Microsoft Azure MVP
 Raspberry Pi
 
 Install:
+
 * Node
 * Node IMU
 * Node MQTT
@@ -89,10 +91,12 @@ SSH into Raspberry PI
 * Edge Computing: Let IoT devices make some smart decisions and run logic there
 
 **Pull** Data
- - Time series insights
+
+* Time series insights
 
 **Push** Data
-- Routes
+
+* Routes
 
 
 Service Bus > Event Hub > IoT Hub
@@ -108,6 +112,7 @@ $$$ on the way out
 
 
 ## Single Container Workload (in Azure)
+
 By Jason Haley
 http://jasonhaley.com/
 
@@ -126,55 +131,56 @@ Azure Container Registry (ACR) - (Same as private Docker Hub)
 
 
 ## Debug like it's your job
-Bob Crowley @Contrivedex
+
+Bob Crowley [@Contrivedex](https://twitter.com/Contrivedex)
 
 * Know your Tech Stack
-	* Know your abstractions
-		* Learn SQL even if you use an ORM
-		* Learn HTML even if you use WebForms
-		* Learn CSS even if you use Bootstrap
+  * Know your abstractions
+    * Learn SQL even if you use an ORM
+    * Learn HTML even if you use WebForms
+    * Learn CSS even if you use Bootstrap
 
 * Rubber Duck Debugging
-	* Verbally walk through your code with your duck (or, a co-worker)
+  * Verbally walk through your code with your duck (or, a co-worker)
 
 * Take a walk
-	* Context Switching is hard
+  * Context Switching is hard
 
 * Profiling & Tracing
-	* SQL Profiler
-		* Use App name in connection string
-	* Network
-		* Fiddler
-	* Dev Tools
-	* Code
-		* [Prefix](https://stackify.com/prefix/)
+  * SQL Profiler
+    * Use App name in connection string
+  * Network
+    * Fiddler
+  * Dev Tools
+  * Code
+    * [Prefix](https://stackify.com/prefix/)
 
-![Prefix](https://i.imgur.com/wSILLvm.png) 
+![Prefix](https://i.imgur.com/wSILLvm.png)
 
 
 * Playground Utilities
-	* F12 Browser TOols
-	* Linqpad
-	* .NET Fiddle
-	* SQL
-	* Postman/Fiddler
+  * F12 Browser TOols
+  * [LINQPad](https://www.linqpad.net/)
+  * .NET Fiddle
+  * SQL
+  * Postman/Fiddler
 
-> Reduce time in Feedback Loop 
+> Reduce time in Feedback Loop
 > Isolate an operation
 
 
 * IDE Features
-	* Console / Immediate Window
-	* Call Stack
-		* Pause on Exceptions
-	* Watches
-	* Run To...
-	* Breakpoints
+  * Console / Immediate Window
+  * Call Stack
+    * Pause on Exceptions
+  * Watches
+  * Run To...
+  * Breakpoints
 
 * Known Good Values (KGVs)
-	* Is your code logic wrong or are it's inputs wrong
-	* Garbage In; Garbage Out (GIGO)
+  * Is your code logic wrong or are it's inputs wrong
+  * Garbage In; Garbage Out (GIGO)
 
 * Network Traffic
-	* Save as HAR
-	* HAR Viewer
+  * Save as HAR
+  * HAR Viewer

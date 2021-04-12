@@ -21,7 +21,7 @@ Design has two components:
 | [James A Rosen](http://uxburlington.com/speaker/james-rosen.html)             | [Making Design by Committee Work](https://vimeo.com/album/3447854/video/131786901)                                            |
 | [Eva Kaniasty](http://uxburlington.com/speaker/eva-kaniasty.html)             | [To resist is human, to test divine! Overcoming objections to user research](https://vimeo.com/album/3447854/video/131223485) |
 | [Katie McCurdy](http://uxburlington.com/speaker/katie-mccurdy.html)           | [Designing with Empathy](https://vimeo.com/album/3447854/video/131223485)                                                     |
-| [Rian van der Merwe](http://uxburlington.com/speaker/rian-van-der-merwe.html) | [Why enterprise software sucks (and how to unsuck it)](https://vimeo.com/album/3447854/video/131223483)                       |
+| [Rian van der Merwe](http://uxburlington.com/speaker/rian-van-der-merwe.html) | [Why enterprise software sucks (and how to un-suck it)](https://vimeo.com/album/3447854/video/131223483)                       |
 | [Maria Matveeva](http://uxburlington.com/speaker/maria-matveeva.html)         | [Art history, culture, and color](https://vimeo.com/album/3447854/video/131787820)                                            |
 | [Michael Tedeschi](http://uxburlington.com/speaker/mike-tedeschi.html)        | [Incorporating Drawing into the UX Process](https://vimeo.com/album/3447854/video/131786899)                                  |
 | [Sha Hwang](http://uxburlington.com/speaker/sha-hwang.html)                   | [Closing Keynote](https://vimeo.com/album/3447854/video/131786900)                                                            |

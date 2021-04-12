@@ -22,13 +22,13 @@ by [James Sturtevant](http://www.jamessturtevant.com/)
 #### Docker
 
 * Didn't invent containers
-* Built ecoysytem around container technology
+* Built ecosystem around container technology
 * File format system
-	* shareable, and open source
+  * shareable, and open source
 * Like github for containers
 
 
-**Containers vs. VMs**
+##### Containers vs. VMs
 
 ![Container vs VM](https://imgur.com/MJHfm1c.jpg)
 http://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-normal-virtual-machine
@@ -100,13 +100,13 @@ From Most Flexibility to Least:
 * 1 in 3 VMs are Linux VMs
 * #1 Ask on User Voice (run web apps on linux)
 * New Programming Scenarios
-	* Ruby on Rails, Python
+  * Ruby on Rails, Python
 * Circumvents Support for Windows for up and coming frameworks
-	* Future proof node.js workarounds
+  * Future proof node.js workarounds
 * Tooling and support in your environment
 * Docker enables simple application portability
-	* Deploy to Azure, AWS, Google Compute
-		* Redundancy across geography / data-centers + redundancy across clouds
+  * Deploy to Azure, AWS, Google Compute
+    * Redundancy across geography / data-centers + redundancy across clouds
 * Docker is also very popular for micro-service developers
 * Serverless computation
 
@@ -116,13 +116,15 @@ Multi Server Scaling - "Become cattle instead of pets"
 [Are your servers PETS or CATTLE](http://www.theregister.co.uk/2013/03/18/servers_pets_or_cattle_cern/)
 
 > * **Pets**
-	* pets are given names like pussinboots.cern.ch
-	* They are unique, lovingly hand raised and cared for
-	* When they get ill, you nurse them back to health
+ *pets are given names like pussinboots.cern.ch
+
+* They are unique, lovingly hand raised and cared for
+* When they get ill, you nurse them back to health
+
 * **Cattle**
-	* Cattle are given numbers like vm0042.cern.vh
-	* They are almost identical to other cattle
-	* When they get ill, you get another one
+  * Cattle are given numbers like vm0042.cern.vh
+  * They are almost identical to other cattle
+  * When they get ill, you get another one
 
 > Future applications architectures should use cattle, but pets with strong configuration management are viable and still needed
 

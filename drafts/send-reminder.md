@@ -11,18 +11,21 @@ After you run the installation package, the next time you open outlook it will c
 ![Outlook Install](https://i.imgur.com/6IqlNAb.png)
 
 ### Functionality
+
 The Outlook Add-In begins working when you hit the Send Button on an Email.  It currently offers two different features:
 
 #### Disable Reply All Warning When Large Number of Recipients
-If you are sending an email to a large number of users (past a configurable threshold, defaulted to 10), it will allow you to optionally disable the **Reply All** functionality for all recipients.  
 
-![Confrim Multiple Recipients](https://i.imgur.com/mRCZ0QK.png)
+If you are sending an email to a large number of users (past a configurable threshold, defaulted to 10), it will allow you to optionally disable the **Reply All** functionality for all recipients.
+
+![Confirm Multiple Recipients](https://i.imgur.com/mRCZ0QK.png)
 
 * **Yes** - Sends Message And Disables Reply All
 * **No** - Sends Message and leaves option for Reply All
 * **Cancel** - Cancels sending the message, allowing you to make any necessary changes.
 
 #### Attachment Warning
+
 If you have used any number of a configurable set of words (defaulted to "Attach" and "I've included") within the body of your message, but have not included an attachment, the application will confirm you want to proceed and allow you to cancel sending the email.
 
 ![Confirm Attachment](https://i.imgur.com/ZeCGQO8.png)
@@ -30,7 +33,7 @@ If you have used any number of a configurable set of words (defaulted to "Attach
 * **Yes** - Continues with Sending Message
 * **No** - Cancels Sending Message
 
-### Change User Settings:
+### Change User Settings
 
 In the top left of Outlook, click **File**, and then select **Options**
 

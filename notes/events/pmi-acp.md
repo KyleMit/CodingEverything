@@ -2,27 +2,27 @@
 title: PMI - ACP
 ---
 
-**Instructor**:
+## Instructor
 
 * David Kearns, MBA, PMP, ACP
 * Working on VT Health Connect
 
-**Logistics**
+## Logistics
 
 * Start/Stop
 * Homework
-	* 16 Page Scrum white paper
+  * 16 Page Scrum white paper
 * Breaks (approx every 30 min/hour)
 * Facilities
 * Email/Cell Phone Etiquette
 * **WiFi**
- * Net: BWConference
- * Pass: jammer03
+* Net: BWConference
+* Pass: jammer03
 * Definition of Done <sub>(with each module)</sub>
-	* Comfortable with Concepts/Principles Presented
-	* Understand Key Terms within Module
+  * Comfortable with Concepts/Principles Presented
+  * Understand Key Terms within Module
 
-**Exam Overview**:
+## Exam Overview
 
 * Exam more conceptual than factual
 * Highly centered on Manifesto and Principles
@@ -30,27 +30,26 @@ title: PMI - ACP
 
 ## Modules
 
-1. Intstructor Introduction
+1. Instructor Introduction
 2. Course Introduction
 3. Exam Strategies
 4. Agile Principles and Mindset
 5. Agile Methodologies
 6. Value-Driven Delivery
-7. Stakeholder Engagment
+7. Stakeholder Engagement
 8. Team Performance
-9. Adapttive Planning
+9. Adaptive Planning
 10. Problem Detection and Resolution
 11. Continuous Improvement
 12. Course Summary and Final Exam
 
-a) Daily Stand Up Review
-b) 
+* Daily Stand Up Review
 
-**People**:
+## People
 
-* **David**
+* David
 * Stacy
-* 
+
 
 ### Book
 
@@ -58,26 +57,27 @@ b)
 ![Cover](https://i.imgur.com/dLqx0HR.png)
 
 * **Chapter 1** - Understanding Agile
-	* Methodologies
-	* Traditional Waterfall Projects
-	* The Agile Way
+  * Methodologies
+  * Traditional Waterfall Projects
+  * The Agile Way
 * **Chapter 2** - The PMI-ACP Exam
-	* Background
-	* What The Exam Tests
-	* A Passing Grade
-	* The Exam Material
-	* Getting to the Test (the Application)
-	* Requirements to Apply
-	* Ongoing Education
-	* Testing Environment
-	* Time Limit
-	* Question Format
+  * Background
+  * What The Exam Tests
+  * A Passing Grade
+  * The Exam Material
+  * Getting to the Test (the Application)
+  * Requirements to Apply
+  * Ongoing Education
+  * Testing Environment
+  * Time Limit
+  * Question Format
 * **Chapter 3** - The Agile Manifesto
-	* History
-	* The Agile Manifesto
-	* How the Manifesto is Used
-	* Agile Manifesto Values
-	* 
+  * History
+  * The Agile Manifesto
+  * How the Manifesto is Used
+  * Agile Manifesto Values
+
+  *
 
 
 
@@ -123,7 +123,7 @@ the right, we value the items on the left more.
 ### Triple Constraint
 
 * Scope
-* Time 
+* Time
 * Cost
 
 SOV could use Master Service Agreement with multiple vendors
@@ -132,64 +132,64 @@ SOV could use Master Service Agreement with multiple vendors
 ### Exam Specifics
 
 * Book Focus
-	* Focused on Passing the Exam
-	* Memory Keys -> Triggers
-	* Sample Questions
+  * Focused on Passing the Exam
+  * Memory Keys -> Triggers
+  * Sample Questions
 * Your Obligations
-	* Attend sessions
-	* Focus
-	* Do reading + HW
+  * Attend sessions
+  * Focus
+  * Do reading + HW
 * Qualifications
-	* Secondary Degree
-	* 2000 hrs on project team
-	* 1500 agile experience
-	* 21 contact hours of Agile Education
-	* 8 + 8 + 5 at home
-	* Bio on why you deserve PMI-ACP cert (through in buzz words)
+  * Secondary Degree
+  * 2000 hrs on project team
+  * 1500 agile experience
+  * 21 contact hours of Agile Education
+  * 8 + 8 + 5 at home
+  * Bio on why you deserve PMI-ACP cert (through in buzz words)
 * Exam Specifics
-	* 120 Multiple Choice
-	* 20 Pre-test questions
-	* 100 Scored questions
-	* 3 hours time
-	* [Prometric](https://www.prometric.com/en-us/Pages/home.aspx) Testing Facilities - 
-		* Frisk
-		* 2 forms of ID
-		* No Electronics -> Locker
-		* Get whiteboard and a marker
-			* Brain Dump onto Whiteboard?
+  * 120 Multiple Choice
+  * 20 Pre-test questions
+  * 100 Scored questions
+  * 3 hours time
+  * [Prometric](https://www.prometric.com/en-us/Pages/home.aspx) Testing Facilities -
+    * Frisk
+    * 2 forms of ID
+    * No Electronics -> Locker
+    * Get whiteboard and a marker
+      * Brain Dump onto Whiteboard?
 * What should you study
   * Test Booklet
   * Online Test
-	  * [VelociTeach](https://www.velociteach.com/)
-	  * 1 week of access
+    * [VelociTeach](https://www.velociteach.com/)
+    * 1 week of access
   * Material
-	  * Agile Principles
-	  * Value-Driven Delivery
+    * Agile Principles
+    * Value-Driven Delivery
 
 **Baseline Exam**
 
 ### Agile Principles & Mindset
 
 * As an Agile Certified Practitioner / **Agile Coach** / Scrum master
-	* explore, embrace, and apply agile principles
-	* adovcte for agile principles by modeling those principles
-	* defend agile
-	* ensure that everyone has a common understanding
-	* support change at the system or organization level
-	* enhance trust & **transparency**
-		* information radiators
-	* learn & improve
-		* contribute to a safe and trustful team
-	* experiment & discover
-		* enhance creativity by experimenting
-		* not necessarily have the answer right away
-		* unknown -> spike
-	* Work Together
-	* Enable Self-Organizing
-		* Encourage emergent leadership
-	* Servant Leadership
-		* How can i make you more successful
-		* Lightning Rod
+  * explore, embrace, and apply agile principles
+  * adovcte for agile principles by modeling those principles
+  * defend agile
+  * ensure that everyone has a common understanding
+  * support change at the system or organization level
+  * enhance trust & **transparency**
+    * information radiators
+  * learn & improve
+    * contribute to a safe and trustful team
+  * experiment & discover
+    * enhance creativity by experimenting
+    * not necessarily have the answer right away
+    * unknown -> spike
+  * Work Together
+  * Enable Self-Organizing
+    * Encourage emergent leadership
+  * Servant Leadership
+    * How can i make you more successful
+    * Lightning Rod
 
 4 meetings/ceremonies within agile
 
@@ -206,9 +206,9 @@ Cross-functional Team vs. Cross-functional Team Members
 by Dr W. Edwards Deming
 
 AKA Deming circle/cycle/wheel, Shewhart cycle, control circle/cycle, or plan–do–study–act (PDSA)
- 
+
 * Plan
-* Do 
+* Do
 * Check
 * Act
 
@@ -244,14 +244,14 @@ http://wiki.c2.com/?InformationRadiator
 https://en.wikipedia.org/wiki/Agile_software_development
 
 * examples
-	* Kanban
-	* Burndown
+  * Kanban
+  * Burndown
 
 ### Terms
 
 * **Iteration** - timeboxed cycle with deliverables
 * **Empirical**
-* **Incremental Release** - 
+* **Incremental Release** -
 * **PDCA Cycle**
 * **Adaption**
 
@@ -305,10 +305,10 @@ Values => Direction
 
 ### Exam Tips
 
- * focus on empowering "**The Team**"
- * run away from waterfall / traditional approach
- * focus on theory, not practice (not how we do it at work)
-	 * follow manifesto / scrum / xp / lean
+* focus on empowering "**The Team**"
+* run away from waterfall / traditional approach
+* focus on theory, not practice (not how we do it at work)
+  * follow manifesto / scrum / xp / lean
 
 Narrow choices by following value pairs (manifesto) & principles
 
@@ -317,14 +317,14 @@ Narrow choices by following value pairs (manifesto) & principles
 
 * Agile = Values + Principles
 * Methodologies
-	* Scrum / Kanban
-	* eXtreme (XP)
-	* Lean
-	* Smaller
-		* DSDM
-		* RUP
-		* Crystal Clear
-		* AUP
+  * Scrum / Kanban
+  * eXtreme (XP)
+  * Lean
+  * Smaller
+    * DSDM
+    * RUP
+    * Crystal Clear
+    * AUP
 
 ![Methodologies](https://i.imgur.com/Wd2Tfkg.png)
 
@@ -332,8 +332,8 @@ Narrow choices by following value pairs (manifesto) & principles
 ### Team Members
 
 * Team
-	* Coach / Scrum Master
-	* Customer / Product Owner
+  * Coach / Scrum Master
+  * Customer / Product Owner
 * Senior Management
 
 
@@ -342,18 +342,18 @@ Narrow choices by following value pairs (manifesto) & principles
 * **Values**
 * **Methodology**
 * Principles
-	* **Highest Priority**
-	* **Working Software**
-	* **Deliver Frequently**
-	* **Simplicity**
-	* **Welcome Change**
-	* **Self Organizing**
-	* **Responding to change**
-	* **Sustainable Development**
-	* **Work Together Daily**
-	* **Customer Collaboration**
+  * **Highest Priority**
+  * **Working Software**
+  * **Deliver Frequently**
+  * **Simplicity**
+  * **Welcome Change**
+  * **Self Organizing**
+  * **Responding to change**
+  * **Sustainable Development**
+  * **Work Together Daily**
+  * **Customer Collaboration**
 
-### Manifesto vs. Methodology
+### Practices
 
 * Scrum
 * XP
@@ -388,7 +388,7 @@ Narrow choices by following value pairs (manifesto) & principles
 
 * `I`ndependent
 * `N`egotiable
-* `V`Verifiable 
+* `V`Verifiable
 * `E`stimable
 * `S`ized appropriately
 * `T`estable
@@ -409,50 +409,50 @@ Extreme - 1 week
 
 #### Sprint Planning
 
-* Functionality & Priorty
+* Functionality & Priority
 * Discussion between PO and Team
 * Threats / Opportunities
-	* [SWOT Analysis (Strengths, Weaknesses Opportunities, Threats)](https://en.wikipedia.org/wiki/SWOT_analysis)
-		* Waterfall term
-	* Risk analysis
-		* probability
-		* impact (+/-)
+  * [SWOT Analysis (Strengths, Weaknesses Opportunities, Threats)](https://en.wikipedia.org/wiki/SWOT_analysis)
+    * Waterfall term
+  * Risk analysis
+    * probability
+    * impact (+/-)
 
-**Risk Adjusted Backlog**
+### Risk Adjusted Backlog
 
 * Normally prioritized by value
 * **threats**/riskiness may be prioritized down ↡
 * **opportunities** may be prioritized up ↑
 
-Two Halfs
+Two Halves
 
 * First - work with PO to decide what's in sprint
 * Second - just team - how are we going to get it done
 
-**Sprint Team**
+### Sprint Team
 
 * **Scrum Master**
-	* Servant Leadership
-	* Not PM
+  * Servant Leadership
+  * Not PM
 * **Sprint Team**
-	* Self-organizing, self managing
-	* Cross-functional
-	* No sub-teams, no titles, no titles
-	* Accountable
+  * Self-organizing, self managing
+  * Cross-functional
+  * No sub-teams, no titles, no titles
+  * Accountable
 
-**Team Size**
+### Team Size
 
- * Minum 5
- * Maximum 9
- * Average 7 +/- 2
- * N * (N-1)/2 - number of relations in the group
+* Minimum 5
+* Maximum 9
+* Average 7 +/- 2
+* N * (N-1)/2 - number of relations in the group
 
-**Tools**
+### Tools
 
 * Task Board
 * Burn-down chart
 
-**Work**
+### Work
 
 * Developing
 * Integrating
@@ -460,7 +460,8 @@ Two Halfs
 * Refactoring
 
 > Amazon's Jeff Bezos has a solution for this problem. He calls it the "two pizza rule": Never have a meeting where two pizzas couldn't feed the entire group.
-> - [The 'Two Pizza Rule' Is Jeff Bezos' Secret To Productive Meetings](http://www.businessinsider.com/jeff-bezos-two-pizza-rule-for-productive-meetings-2013-10)
+>
+> * [The 'Two Pizza Rule' Is Jeff Bezos' Secret To Productive Meetings](http://www.businessinsider.com/jeff-bezos-two-pizza-rule-for-productive-meetings-2013-10)
 
 User Story always delivered within iteration
 
@@ -469,9 +470,9 @@ User Story always delivered within iteration
 * Timeboxed (usually 15 minutes)
 * Inspect & Adapt
 * Everyone should answer three questions
-	* What did you do yesterday
-	* What are planning on doing today
-	* What obstacles are you encountering
+  * What did you do yesterday
+  * What are planning on doing today
+  * What obstacles are you encountering
 * Product owner not required
 
 #### Sprint Review
@@ -479,13 +480,13 @@ User Story always delivered within iteration
 * Half-day Meeting
 * Showtime
 * Key Stakeholders
-	* Senior Mgmt
-	* Product Owners
+  * Senior Mgmt
+  * Product Owners
 * Team
 * User Sign off as part of Meeting (that's the clearance of UAT)
 * Delivers a **Scrum Increment**
-	* Potentially shippable product increment
-	* the sum of all the work involved in the sprint
+  * Potentially shippable product increment
+  * the sum of all the work involved in the sprint
 
 #### Sprint Retrospective
 
@@ -493,10 +494,10 @@ User Story always delivered within iteration
 * does not include product owner
 * "Inspect and Adapt"
 * Answer 3 Questions:
-	* How did it go? (people, relationships, process, tools)
-	* What worked?
-	* What needs improvement?
-		* Create improvement plan
+  * How did it go? (people, relationships, process, tools)
+  * What worked?
+  * What needs improvement?
+    * Create improvement plan
 
 
 
@@ -524,7 +525,7 @@ User Story always delivered within iteration
 
 Extreme programming was created by Kent Beck
 
-#### 12 Practices
+### 12 Practices
 
 1. `JAN` - Planning Game <small>(first)</small>
 2. `FEB` - Small Releases <small>(shortest month of the year)</small>
@@ -541,71 +542,71 @@ Extreme programming was created by Kent Beck
 
 Less Experienced Team just gets half:
 
-1. Planning Game
-2. Small Releases
-5. Testing
-6. Pair Programming
-11. Continuous Integration
-12. Refactoring
+* 1. Planning Game
+* 2. Small Releases
+* 5. Testing
+* 6. Pair Programming
+* 11. Continuous Integration
+* 12. Refactoring
 
 12 Practices
 
 * **Planning Game**
-	* maximize value
-		* writing user stories
-		* estimating effort
-		* risk analysis
-		* commit to an iteration
-	* Velocity
-		* uses story points to estimate work load
+  * maximize value
+    * writing user stories
+    * estimating effort
+    * risk analysis
+    * commit to an iteration
+  * Velocity
+    * uses story points to estimate work load
 * **Small Releases**
-	* Rapid delivery of value
+  * Rapid delivery of value
 * **System Metaphor**
-	* Substitute examples for system components
-	* fosters creativity
-	* avoids focused, closed minds
+  * Substitute examples for system components
+  * fosters creativity
+  * avoids focused, closed minds
 * **Simple Design**
-	* Efficient
-	* Focus on today's needs
-	* Easily Understood by entire team
-	* incremental, continuous
+  * Efficient
+  * Focus on today's needs
+  * Easily Understood by entire team
+  * incremental, continuous
 * **Testing**
-	* Unit test each code component
-	* code the unit test first
-	* [Test First & Test Often](https://en.wikipedia.org/wiki/Vote_early_and_vote_often)
-	* Prevents Gold Plating
-	* Bug? -> create test before fixing
+  * Unit test each code component
+  * code the unit test first
+  * [Test First & Test Often](https://en.wikipedia.org/wiki/Vote_early_and_vote_often)
+  * Prevents Gold Plating
+  * Bug? -> create test before fixing
 * **Pair Programming**
-	* Provides fine-scale feedback
-	* one drives, one observes
-	* pilot / navigator analogy
-	* more productive and efficient
-	* **Promiscuous Pairing** - partners can change often
+  * Provides fine-scale feedback
+  * one drives, one observes
+  * pilot / navigator analogy
+  * more productive and efficient
+  * **Promiscuous Pairing** - partners can change often
 * **Collective Code Ownership**
-	* Entire team responsible for code
-	* provides for shared understanding
-	* peer pressure
-	* fosters new ideas from all
-	* needs a thorough test suite
+  * Entire team responsible for code
+  * provides for shared understanding
+  * peer pressure
+  * fosters new ideas from all
+  * needs a thorough test suite
 * **Coding Standards**
-	* Provides shared understanding
-	* Consistency and ease of refactoring
-	* Foundation for collective ownership
+  * Provides shared understanding
+  * Consistency and ease of refactoring
+  * Foundation for collective ownership
 * **Sustainable Pace**
-	* Provides for programmer welfare
-	* No heroics needed
-	* Steady intensity
-	* Reduces defects due to stress and fatigue
+  * Provides for programmer welfare
+  * No heroics needed
+  * Steady intensity
+  * Reduces defects due to stress and fatigue
 * **On-Site Customer**
-	* Answer user story questions
-	* faster feedback
-	* available for decisios
+  * Answer user story questions
+  * faster feedback
+  * available for decisios
 * **Continuous Integration**
-	* New Code Integrated Immediately
+  * New Code Integrated Immediately
 * **Refactoring**
-	* Re-organize code for maintainabiliy, extensibility, alignment to test
-	* Simplify where possible
-	* Does not change functional behavior
+  * Re-organize code for maintainabiliy, extensibility, alignment to test
+  * Simplify where possible
+  * Does not change functional behavior
 
 #### 5 Roles
 
@@ -615,7 +616,8 @@ Less Experienced Team just gets half:
 * Tester
 * Coach
 
-**X-Marks the Spot Mnuemonic**
+### X-Marks the Spot Mnemonic
+
 * Programmer
 * Treasure Chest -> Tracker / Customer
 * Treasure Chest -> Tester / Coach
@@ -638,34 +640,36 @@ Started by Japanese Toyota car manufacturing
 
 Values -> Principles -> Methodologies (SCRUM, Lean, XP)
 
+<!-- markdownlint-disable MD024 -->
+
 ### Terms
 
 * **Empiricism**
-	* Transparency
-	* Inspection
-	* Adaptation
+  * Transparency
+  * Inspection
+  * Adaptation
 * **Lean**
 * **DEEP**
-	* Detailed
-	* Estimable
-	* Emergent
-	* Prioritized
+  * Detailed
+  * Estimable
+  * Emergent
+  * Prioritized
 
 ## Value Driven Delivery
 
-**Project Selection / Chartering**
+### Project Selection / Chartering
 
 * Inputs
-	* Business Priorities
-	* Financial Measures
-	* Compliance
+  * Business Priorities
+  * Financial Measures
+  * Compliance
 * Outputs
-	* Project Proposals
-* 
+  * Project Proposals
 
-**Value Based Prioritization**
 
-*Bigger is better*
+### Value Based Prioritization
+
+> *Bigger is better*
 
 * **ROI** - Return on Investment
 * **PV** - Present Value
@@ -692,7 +696,7 @@ White Paper in Pages 81-87
 * Includes summary-level preliminary project budget
 
 
-**Two Special Iterations**
+##### Two Special Iterations
 
 * Iteration Zero - Planning
 * Final Iteration - Hardening
@@ -704,7 +708,7 @@ White Paper in Pages 81-87
 * Certainty of Technology
 
 
-**Stacy Diagram**
+### Stacy Diagram
 
 ![Stacy Diagram](https://i.imgur.com/zVfx0y9.png)
 
@@ -718,9 +722,9 @@ White Paper in Pages 81-87
 * Rapid-fire and inclusive
 * non-judgmental flow
 
-*evaluate, discuss, and group ideas afterward*
+> *evaluate, discuss, and group ideas afterward*
 
-**Innovation games**
+### Innovation games
 
 * **20/20 vision** - relative estimating of difficulty of features using cards
 * **The apprentice** - observe other people doing process
@@ -730,24 +734,24 @@ White Paper in Pages 81-87
 
 #### Ranking Priorities by Value
 
-**MoSCoW Ranking Analysis**
+##### MoSCoW Ranking Analysis
 
 * Must Have - Critical in this iteration
-* Should Have - important mabe later
+* Should Have - important maybe later
 * Could Have - Desireable if time and money
 * Would Like - Not Necessary
 
-**Kano Analysis**
+##### Kano Analysis
 
 ![Kano Analysis](https://i.imgur.com/vu1oUEu.png)
 
 
-**Force Field Analysis**
+##### Force Field Analysis
 
 * Ranked strength of forces, pro and con, related to a change
 * Supports an objective decision whether or not to proceed
 
-**Product Vision Statement**
+##### Product Vision Statement
 
 *short, 30-second description* - elevator pitch
 
@@ -757,29 +761,28 @@ It delivers *[expected benefits]*.
 
 #### Minimally Marketable Features (MMF)
 
-*the smallest set of functionality that adds customer or user value*
+> *the smallest set of functionality that adds customer or user value*
 
-**Positive Value**
+* **Positive Value**
 
-**Incremental Delivery**
+* **Incremental Delivery**
+  * Deliver value more quickly
+  * Responsiveness to change
+  * Plan-Do-Check-Act
+  * Priority - highest value first
 
-* Deliver value more quickly
-* Responsiveness to change
-* Plan-Do-Check-Act
-* Priority - highest value first
-
-Users Stories
+#### Users Stories
 
 * often found on index card
 * back of card has acceptance criteria
 
-# "To me, this makes a lot of sense" *clicks next slide*
+> "To me, this makes a lot of sense" *clicks next slide*
 
-**Process Tailoring**
+#### Process Tailoring
 
 >Fail fast; fail cheap
 
-**Non-functional requirements**
+#### Non-functional requirements
 
 * Users Stories
 * Part of Definition of Done
@@ -801,10 +804,10 @@ http://scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf
 
 ## Stakeholder Engagement
 
-#### Stakeholder Analysis
+### Stakeholder Analysis
 
 * Chicken and the Pig - Ham and Eggs
-	* Pig is committed, Chicken is merely involved
+  * Pig is committed, Chicken is merely involved
 
 Stakeholders - anyone with an interest in the project
 
@@ -819,18 +822,20 @@ Stakeholders - anyone with an interest in the project
 
 * Requirement (business function)
 * Format
-	* As A
-	* I Want
-	* So That
-	* Acceptance Criteria
+  * As A
+  * I Want
+  * So That
+  * Acceptance Criteria
 * Write on Notecards
-	* Passed around
-	* Ranked
-	* Stuck on wall
+  * Passed around
+  * Ranked
+  * Stuck on wall
 
 ### INVEST
 
 [INVEST (mnemonic)](https://en.wikipedia.org/wiki/INVEST_(mnemonic))
+
+<!-- spellchecker: disable -->
 
 * `I`ndependent
 * `N`egotiable
@@ -838,6 +843,8 @@ Stakeholders - anyone with an interest in the project
 * `E`stimable
 * `S`mall (Sized Appropriately)
 * `T`estable
+
+<!-- spellchecker: enable -->
 
 ### Epic
 
@@ -866,9 +873,9 @@ Decompose            | Disaggregation
 A fabricated, fictional user to bring a user story to life in a less general way (sometimes taken to the extreme)
 
 * Format
-	* Name
-	* Description
-	* Photo?
+  * Name
+  * Description
+  * Photo?
 
 ### Product Planning - Wireframes
 
@@ -911,9 +918,9 @@ Kanban boards - limit **WIP** - Work in progress
 * **Counselor**
 * **Servant Leadership**
 * **Adaptive Leadership**
-	* Adapting to change! (often found in exam)
+  * Adapting to change! (often found in exam)
 * **Build Team Unity**
-	* What's going to motivate the team?
+  * What's going to motivate the team?
 
 #### Ground Rules
 
@@ -978,11 +985,12 @@ Kanban boards - limit **WIP** - Work in progress
 #### Colocation
 
 **Why?**
+
 * Communication
 * Collaboration
 * Focus
 * Minimize Distractions
-	* **Heads Down Mode!**
+  * **Heads Down Mode!**
 
 **How?**
 
@@ -1006,10 +1014,10 @@ Two Primary Vehicles:
 
 * Listening in
 * No headphones (*Exam Tip*)
-	* *Alternatively* - **Cone of Silence**
-		* Scheduled Talking Hours
-		* Headphones allowed
-		* No interruptions
+  * *Alternatively* - **Cone of Silence**
+    * Scheduled Talking Hours
+    * Headphones allowed
+    * No interruptions
 
 [Alistair Cockburn - Osmotic Communication](http://alistair.cockburn.us/Osmotic+communication)
 
@@ -1021,22 +1029,23 @@ Two Primary Vehicles:
 
 * Even more important
 * Invest in technology for closeness
-	* webcam links
-	* instant messenger
-	* skype
-	* audio/video conferencing
-	* face-to-face
-	* Groupware (e.g. google sheets)
+  * webcam links
+  * instant messenger
+  * skype
+  * audio/video conferencing
+  * face-to-face
+  * Groupware (e.g. google sheets)
 
 #### Pros and Cons Team Space
 
 * Pros
-	* Open
-	* Small feedback loop
+  * Open
+  * Small feedback loop
 * Cons
-	* Noisy
+  * Noisy
 
 #### Earned Value Management
+
 * Measure of how work and spending is progressing against the plan
 * Mechanics of Agile not exam-relevant
 * Based on Velocity (linear)
@@ -1047,21 +1056,22 @@ Two Primary Vehicles:
 
 **Ace the PMI-ACP® exam**
 
-> In order to promote collective ownership and accountability Agile team members are expected to be cross-functional.  By cross-functional, we mean team members that are specialists in their areas, but still have adequate competencies at one or more other skills required for the project.  In other words, they could be comfortable wearing multiple hats as required during different times of the project. 
->  
+> In order to promote collective ownership and accountability Agile team members are expected to be cross-functional.  By cross-functional, we mean team members that are specialists in their areas, but still have adequate competencies at one or more other skills required for the project.  In other words, they could be comfortable wearing multiple hats as required during different times of the project.
+>
 > **For Example**:
-> 
+>
 > * a developer, in addition to doing design, coding and integration, could write the scripts for an automated regression test suite that runs in an auto-pilot mode
 > * a business analyst, apart from his core duties of doing in-depth functional analysis and helping to write user stories, could also lend a helping hand in doing some exploratory testing
-> 
+>
 > Cross-functional skills are invaluable for Agile project teams, because of the following benefits:
+>
 > * With cross-functional teams, it is easier to take shared ownership and group accountability for results.
 
 > -[Ace the PMI-ACP® exam: A Quick Reference Guide for the Busy Professional 1st ed. Edition by Sumanta Boral (Author)](https://books.google.com/books?id=A0bODQAAQBAJ&pg=PA168&lpg=PA168&dq=pmi+acp+cross+functional+team+vs.+cross+functional+team+members&source=bl&ots=rY_VUoCPbQ&sig=pmoesyCQ5M4TlCtvSgoc90vxg5E&hl=en&sa=X&ved=0ahUKEwjkhLG7_tDRAhXFYiYKHedhBkkQ6AEILTAD#v=onepage&q=pmi%20acp%20cross%20functional%20team%20vs.%20cross%20functional%20team%20members&f=false)
 > [![Ace the PMI-ACP](https://i.imgur.com/jfYb2S6m.png)](https://www.amazon.com/dp/1484225252)
 
 
-**Ken Schwaber **
+**Ken Schwaber**
 
 > [Ken Schwaber - Cross functional teams](https://kenschwaber.wordpress.com/2013/11/03/cross-functional-teams/)
 
@@ -1074,10 +1084,10 @@ Discovery -> Product Backlog -> Delivery
 * finding out what is wanted
 * sometimes called the first step
 * Value Driven tactics like:
-	* product vision statement
-	* user stories
-	* product backlog
-	* value based prioritiziong
+  * product vision statement
+  * user stories
+  * product backlog
+  * value based prioritiziong
 
 **Dual Tracks Agile** (*on-going projects*)
 
@@ -1122,9 +1132,9 @@ Plan Levels with Evolving Detail
 * Group iterations into a product release
 * NOT a contract
 * Two special sprints in every release
-	* Iteration - 0 - intial sprint to outlay work
-	* Iteration - 1 to N
-	* Iteration - H - hardening sprint
+  * Iteration - 0 - intial sprint to outlay work
+  * Iteration - 1 to N
+  * Iteration - H - hardening sprint
 
 
 #### Agile Theme
@@ -1132,9 +1142,9 @@ Plan Levels with Evolving Detail
 * Describes a high-level goal of an iteration
 * Added funtionality that builds toward the release
 * For example:
-	* Reporting
-	* Invoicing
-	* Order Entry
+  * Reporting
+  * Invoicing
+  * Order Entry
 
 #### Daily Stand ups
 
@@ -1146,9 +1156,9 @@ Plan Levels with Evolving Detail
 * Not a status report
 * Not a place to SOLVE issues (RAISE Issues)
 * 3 questions:
-	* What did you do yesterday?
-	* What are you going to do today?
-	* What are your obstacles?
+  * What did you do yesterday?
+  * What are you going to do today?
+  * What are your obstacles?
 
 #### Radiate Planning
 
@@ -1180,9 +1190,9 @@ Iteration | Team | Effort/how | Goal/Tasks
 **Adapt Estimates Iteratively**
 
 * **Ideal Time** - if you could work, uninterrupted, with no breaks, what you would accomplish
-	* Easier to estimate without uncertainty of overhead
-	* reflects actual effor trather than duration
-	* often used in agile estimating
+  * Easier to estimate without uncertainty of overhead
+  * reflects actual effor trather than duration
+  * often used in agile estimating
 * **Factor in Non-Ideal** - Adjust capacity by incorporating maintenance and operations demands and other factors in order to create or update the range estimate (SM / PO)
 
 **Stories** - Estimate with Point
@@ -1195,24 +1205,24 @@ Iteration | Team | Effort/how | Goal/Tasks
 
 * Use to estimate costs
 * Amount of cost estimated over a period of time
-	* Cost per iteration
-	* Cost per week
-	* Cost per month
-	* Usually cost of team
+  * Cost per iteration
+  * Cost per week
+  * Cost per month
+  * Usually cost of team
 
 #### Sizing Techniques
 
 * **Relative Sizing** - * Rank stories by relative effort
 * **Affinity Estimating** - Decide on a grouping technique (i.e. T-Shirt Sizes)
 * **Planning Poker** - Simultaneously reveal estimated points - explain high's and low's
-* **Wideband Delphi** 
-	* Buit ontop of Delphi Technique
-		* "Blind"fold the judges to elimminate bias
-		* All discuss together
-		* estimatey separately
-		* all plot range - discuss for consensus
-		* repeat
-		* individual estimates -> group wisdom
+* **Wideband Delphi**
+  * Buit ontop of Delphi Technique
+    * "Blind"fold the judges to elimminate bias
+    * All discuss together
+    * estimatey separately
+    * all plot range - discuss for consensus
+    * repeat
+    * individual estimates -> group wisdom
 
 **Parkinson's Law** - Work expands so as to fill the time available for its completion
 
@@ -1233,9 +1243,10 @@ Show WIP at any point in time - you'd like consistent heights for each section
 **Cycle Time** - The amount of time to complete a feature or story
 
 **Velocity** - The number of story points the team can deliver per iteration
- * Different for each team
- * Poitn are not equal across projects
- * XP - A pair cannto take more points thatn "done" in the previous iteration
+
+* Different for each team
+* Poitn are not equal across projects
+* XP - A pair cannto take more points thatn "done" in the previous iteration
 
 **Burn-Up Chart** (shows done against the release plan)
 
@@ -1273,16 +1284,16 @@ Show WIP at any point in time - you'd like consistent heights for each section
 ### Value Stream Mapping
 
 * **Present State**
-	* Value Stream
-		* Process Stream
-		* Process Stream
-		* Process Stream
+  * Value Stream
+    * Process Stream
+    * Process Stream
+    * Process Stream
 * **Gap Analysis** ↓
-* **Future State** 
-   * Value Stream
-		* Process Stream
-		* Process Stream
-		* Process Stream
+* **Future State**
+  * Value Stream
+    * Process Stream
+    * Process Stream
+    * Process Stream
 
 UML Diagrams (like Business Process Mapping)
 
@@ -1303,7 +1314,7 @@ Ex.
 * Memorize Brain Dump
 * Perform Practice Test 2 (Textbook)
 * Perform PMI-ACP Practice Test on [InSite](https://www.velociteach.com/)
-	* Passing Grade ~70%
+  * Passing Grade ~70%
 
 
 

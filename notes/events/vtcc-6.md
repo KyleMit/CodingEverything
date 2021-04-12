@@ -6,16 +6,18 @@ date: 2014-09-20
 
 https://2014.vtcodecamp.org/
 
-## Modern Web Diagnostics with a Glimpse into ASP.NET 
+## Modern Web Diagnostics with a Glimpse into ASP.NET
+
 ### Anthony van der Hoorn
 
 
-----
+---
 
 ## Better Code, Better Debugging
+
 ### Kathleen Dollard
 
-**Debugging**:  the process of investigating bad 
+**Debugging**:  the process of investigating bad
 
 Badness of a Bug
 Dev Time - Let's address this
@@ -35,9 +37,9 @@ Cost to Org
 #### Production Debugging
 
 * Learn OS gives for free
-* Some aibility with PerfView or other tools
+* Some ability with PerfView or other tools
 * Logging / ETW / SLAB
-	* Difficult to run in production (performance issues on single thread)
+  * Difficult to run in production (performance issues on single thread)
 * Fearless dumps
 * Practice
 * *Performance problems are bugs*
@@ -55,38 +57,38 @@ Testing - needs to be automated - only way we can sneak in more
 ### Scientific Method
 
 * Question
-	* Question submitted by user
-	* Reproduce it / Understand it
-	* Create a broken test
-		* Weed B Gone
+  * Question submitted by user
+  * Reproduce it / Understand it
+  * Create a broken test
+    * Weed B Gone
 * Hypothesis
-	* Quickly think of 6-15 things that might be wrong
-		* Collaboration - same piece of paper
-		* Multi-Threaded - different rooms
-	* Confirmation Bias - hear what you already believe
+  * Quickly think of 6-15 things that might be wrong
+    * Collaboration - same piece of paper
+    * Multi-Threaded - different rooms
+  * Confirmation Bias - hear what you already believe
 * Predictions
-	* Pick some hypothesis and develop them
-		* If this then that
-			* Focus on excluding projections
+  * Pick some hypothesis and develop them
+    * If this then that
+      * Focus on excluding projections
 * Evaluate
-	* Pick one prediction to evaluate
-	* Easy / High value predictions
-	* Try to prove hypotheses wrong
-		* Very easy to disprove - hard to prove
-		* Reduces blinders
-	* Tools
-		* Unit Tests
-		* Visual Studio
-		* Remote Debugging
-		* Logs
+  * Pick one prediction to evaluate
+  * Easy / High value predictions
+  * Try to prove hypotheses wrong
+    * Very easy to disprove - hard to prove
+    * Reduces blinders
+  * Tools
+    * Unit Tests
+    * Visual Studio
+    * Remote Debugging
+    * Logs
 * Analysis
-	* Do you have a fix?
+  * Do you have a fix?
 * PLUS Publication
-	* Fix
-	* New Tests
-	* Regression Tests
-	* Learn and Record
-		* Team Wiki
+  * Fix
+  * New Tests
+  * Regression Tests
+  * Learn and Record
+    * Team Wiki
 
 
 
@@ -102,10 +104,11 @@ WintellectNOW trial
 PromoCode: Dollard14
 
 
-------
+---
 
 ### Clean Code: Write Clean Think Clean
-##### Hetal Dave
+
+#### Hetal Dave
 
 Agenda:
 
@@ -122,29 +125,30 @@ Descriptive Variable Names
 
 
 ## Angular JS in Practice
+
 ### Jon Hoguet
 
-What to Excpect
+#### What to Expect
 
 * Our Architecture
 * Angular
-	* Controller
-	* Directive
-	* $compile
-	* Directives and isolate scope
+  * Controller
+  * Directive
+  * $compile
+  * Directives and isolate scope
 * Build
-	* Grunt
-	* Testing with Karma / Protractor
+  * Grunt
+  * Testing with Karma / Protractor
 * Debugging
-	* $log
-	* in the browser
+  * $log
+  * in the browser
 
 #### Our Architecture
 
 * Angular
-	* Module
-		* Template
-			* HTML
+  * Module
+    * Template
+      * HTML
 
 Minimal Grails Dependency
 
@@ -152,32 +156,33 @@ Minimal Grails Dependency
 
 * **Do** organize around functionality
 * **Build** First
-	* Figure out how your deploying
-* **Don't** mix templating languges
+  * Figure out how your deploying
+* **Don't** mix templating languages
 
 #### Controllers vs. Directives
 
 * A controller is an abstraction of a directive
 
-```
+```html
 <div ng-controller="MyController"></div>
 ```
 
 Loop through vehicles - search for images
-```
+
+```html
 <div ng-repeat="vehicle in vehicles">
-	<!-- I want to add image management - use controller? -->
-	<div ng-controller="vehicleImageController"></div>
-	<!-- problem - nothing declaratively tells controller about vehicle -->
+ <!-- I want to add image management - use controller? -->
+ <div ng-controller="vehicleImageController"></div>
+ <!-- problem - nothing declaratively tells controller about vehicle -->
 </div>
 ```
 
-If controller abstraction of directive isn't working, usse a directive
+If controller abstraction of directive isn't working, use a directive
 
-```
+```html
 <div ng-repeat="vehicle in vehicles">
-	<!-- Use directive that takes vehicle -->
-	<div image-manager-for="vehicle"></div>
+ <!-- Use directive that takes vehicle -->
+ <div image-manager-for="vehicle"></div>
 </div>
 ```
 
@@ -185,31 +190,37 @@ If controller abstraction of directive isn't working, usse a directive
 
 BBF for production apps
 
-```
+```js
 $compile (markup / directives) (scope) = live dom fragment
 ```
 
 
 
-1. Complie is the most important thing anuglar does
-	* Angular binds model state binding and translates to DOM
-    * Everything else is bells and whistles
+1. Compile is the most important thing angular does
+
+   * Angular binds model state binding and translates to DOM
+     * Everything else is bells and whistles
+
 2. composable
-	* will deliver live DOM element, even one that is not yet inserted into DOM
+
+   * will deliver live DOM element, even one that is not yet inserted into DOM
+
 3. makes testing easy
-	* Ask testing to compile element
+
+   * Ask testing to compile element
+
 4. makes experimentation easy
 
-Access to Version control container
+   * Access to Version control container
 
-```
+```js
 var ioc = angular.element('[ng-app]').injector(),
     $rootScope = ioc.get('$rootScope'),
     $compile = ioc.get('$compile');
 
 var scope = $rootScope....
 
-var makup = "<div>{{property}}</div>"
+var markup = "<div>{{property}}</div>"
 
 var el = compile ( scope + markup)
 
@@ -223,7 +234,7 @@ var el = compile ( scope + markup)
 * **=** - <del>for two way</del> uses `$parse` and `$watch`
 * **@** - <del>for one way</del> uses  `$interpolate` and `$watch`
 * **&** - for functions - uses `$parse` wrapped in function
- 
+
 
 Templates
 $template cache will check if item is in cache, in scope, or do a $http request if it can't find it there.

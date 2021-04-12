@@ -4,6 +4,8 @@
 
 * **VTCC** - Vermont Code Camp
 * **BOSCC** - Boston Code Camp
+* **BTVWAG** - BTV Web Application Group
+* **BTVJS** - BTV JavaScript
 
 ## Terms
 
@@ -123,6 +125,7 @@
 ### Debug
 
 * **HMR** - Hot Module Replacement
+* **KGV** - Known Good Values
 
 ### Security
 

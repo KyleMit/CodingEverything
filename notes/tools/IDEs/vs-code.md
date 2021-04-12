@@ -359,7 +359,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * [How to clear the entire terminal (PowerShell)](https://stackoverflow.com/q/52127653/1366033)
 
 
-* Open Multiple Files at Once
+* Open All Files at Once
 
   * [Open Multiple Files](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-multiple-files)
 

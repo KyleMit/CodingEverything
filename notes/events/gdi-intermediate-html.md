@@ -31,7 +31,7 @@ python -m SimpleHTTPServer 8080
 
 ## Class 2
 
-#### CSS - Border Radius
+### CSS - Border Radius
 
 Clockwise from the top left
 
@@ -50,7 +50,7 @@ selector {
 ```
 
 
-#### Custom Web Fonts
+### Custom Web Fonts
 
 https://www.cssfontstack.com/
 https://fonts.google.com/
@@ -64,18 +64,18 @@ font-family: 'Lato', sans-serif;
 font-family: 'Bree Serif', serif;
 ```
 
-#### Spacing
+### Spacing
 
 `display:inline` can't have margin/padding - can use `line-height` as a hack, but breaks when you want to wrap text - each line is huge
 
 ![display](https://i.imgur.com/antSa8L.png)
 
-#### Content
+### Content
 
 * Raster Graphics vs Vector Graphics
 * PNG/GIF/JPEG vs <b>S</b>calable *<b>V</b>ector <b>G</b>graphics (SVG)
 
-#### Can I use it?
+### Can I use it?
 
 [![can i use svg](https://i.imgur.com/CZGIYKP.png)](https://caniuse.com/#feat=svg)
 
@@ -145,7 +145,7 @@ selector {
 * https://css3gen.com/wp-content/cache/all/box-shadow//index.html
 
 #### Opacity
- 
+
  Opacity is on the **whole** element
 
 ![opacity demo](https://i.imgur.com/SZLC0Vi.png)
@@ -214,10 +214,12 @@ img {
 #### [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
 ##### `box-sizing: content-box`
+
 ![content](https://i.imgur.com/zi4sXId.png)
 
 
 ##### `box-sizing: border-box`
+
 ![content](https://i.imgur.com/g3QdCQu.png)
 
 http://lorempixel.com/400/200/cats/
@@ -229,10 +231,10 @@ selector {
     background-image: linear-gradient(red, white);
 }
 .linear-example1 {
-	background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+ background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
 }
 .linear-example2 {
-	background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+ background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 ```
 
@@ -272,12 +274,12 @@ https://codepen.io/raearnold/pen/JojGWB
   /* This may not be reliable… many blogs link to your domain internally, but it may work to target external links. the ^ stands for 'starts with' */
   a[href^='http']:after {
     content: " (" attr(href) ")";
-  }  
+  }
 
   /* This hides any links that don't have http at the beginning of the href. */
   a:not([href^='http']) {
     display: none;
-  }   
+  }
 }
 ```
 
@@ -291,8 +293,8 @@ https://gdibtv.github.io/gdi-intermediate-html-css/class4.html#/
 * Each **Column** has **span_x_of_12**
 * The **Problem**... Floating takes columns out of normal flow, preventing columns from contributing to the height of their container
 * The **Solution**... **Clearfix**
-	* Since `:after` acts as the last item in our row (after the columns), it clears the float at that point and sets the row height properly
-	* We use `:after` to inject an empty cleared, block-level pseudoelement at the end of each row
+  * Since `:after` acts as the last item in our row (after the columns), it clears the float at that point and sets the row height properly
+  * We use `:after` to inject an empty cleared, block-level pseudoelement at the end of each row
 
 ```css
 .row:after {

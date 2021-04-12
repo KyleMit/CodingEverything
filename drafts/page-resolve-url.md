@@ -9,9 +9,9 @@ Relative References With ~ in JavaScript
 
 The problem is that as far as ASP.NET is concerned, the content delivered in your .js file is a string.  It does not apply any sort of rendering before IIS delivers it.  It gets the same treatment any other *content* file would, like a `.jpg` or `.png`.
 
-In order to call server side methods (like `ResolveUrl`), you need to use the `<% ... %>` syntax within any page that is *parsed* by ASP.NET (like an `.aspx` or `.master` file). 
+In order to call server side methods (like `ResolveUrl`), you need to use the `<% ... %>` syntax within any page that is *parsed* by ASP.NET (like an `.aspx` or `.master` file).
 
-----
+---
 
 By the way, these little code blocks go by a lot of different names:
 
@@ -54,7 +54,7 @@ function ResolveUrl(url) {
 
 Now you can call `ResolveUrl("~/DynamicMenu.ashx")` directly from your javascript file and it will create the appropriate URL by stripping out "~/" and replacing it with the baseUrl created earlier by the server side script.
 
-----
+---
 
 Further Reading:
 
