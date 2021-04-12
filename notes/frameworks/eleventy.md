@@ -69,3 +69,24 @@
 
 * [Data Files](https://www.11ty.io/docs/data-js/)
 * [Includes](https://mozilla.github.io/nunjucks/templating.html#include)
+
+* [Async Filter for `Terser`](https://github.com/11ty/eleventy/issues/1344)
+
+  Updated in [Quick Tips #2](https://www.11ty.dev/docs/quicktips/inline-js/)
+
+  ```js
+  const { minify } = require("terser");
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      // Fail gracefully.
+      callback(null, code);
+    }
+  });
+  ```

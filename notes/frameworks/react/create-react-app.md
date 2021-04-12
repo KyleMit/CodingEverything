@@ -104,6 +104,14 @@ The react-scripts package provided by Create React App requires a dependency:
 * [**react-app-rewired**](https://github.com/timarney/react-app-rewired)
 * [**customize-cra**](https://github.com/arackaf/customize-cra)
 
+## Custom Template
+
+
+* [How to create custom Create React App (CRA) templates](https://alexgrischuk.medium.com/cra-templates-73a5196edeb)
+* [Custom Templates](https://create-react-app.dev/docs/custom-templates/)
+* Official Templates
+  * [create-react-app template](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/README.md)
+  * [create-react-app typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript/template)
 
 * [Add devDependencies for custom templates](https://github.com/facebook/create-react-app/issues/8082)
 
@@ -148,4 +156,8 @@ export default App;
   TypeScript: Restart TS Server
   ```
 
+
+* [Create React App requires a dependency: "babel-loader": "8.1.0"](https://stackoverflow.com/q/60964631/1366033)
+
+  Remove `node_modules` from user root
 

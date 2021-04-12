@@ -628,3 +628,13 @@ winget install graphviz
   let epochToDate = (epoch) => new Date(epoch * 1000)
   console.log(epochToDate(1546108200))
   ```
+
+* [Add CSS to `<head>` with JavaScript?](https://stackoverflow.com/a/53152550/1366033)
+
+  ```js
+  function addCssToDocument(css){
+    var style = document.createElement('style')
+    style.innerText = css
+    document.head.appendChild(style)
+  }
+  ```
