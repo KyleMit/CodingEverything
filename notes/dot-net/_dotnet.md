@@ -31,10 +31,12 @@ dotnet-aspnet-codegenerator -p . --help
 
 # check help on how to generate controller
 dotnet-aspnet-codegenerator -p . controller --help
-
-
 ```
 
+## Playgrounds
+
+* [DotNetFiddle](https://dotnetfiddle.net/)
+* [LINQPad](https://www.linqpad.net/)
 
 ## Nuget
 
