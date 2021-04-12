@@ -250,6 +250,10 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
 };
 ```
 
+## Articles
+
+* [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b)
+
 
 ## Questions
 
@@ -270,7 +274,7 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   ```js
   return (
     <p>
-        {/* This is a comment, one line */}
+        {/* This is a comment */}
     </p>
   )
   ```
@@ -452,4 +456,14 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   ```ts
   const onChangeType = (event: React.ChangeEvent<HTMLInputElement>) => void
   ```
+
+* [How to use `setState` callback on react hooks](https://stackoverflow.com/questions/56247433/how-to-use-setstate-callback-on-react-hooks)
+
+  ```ts
+  const [count, setCount] = useState(0);
+  setCount(prev => prev + 1);
+  ```
+
+  [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+
 

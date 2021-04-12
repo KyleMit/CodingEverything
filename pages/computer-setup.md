@@ -244,6 +244,7 @@ winget install marha.VcXsrv
 winget install Axosoft.GitKraken
 winget install RProject.R
 winget install WinDirStat.WinDirStat
+winget install LINQPad.LINQPad6
 ```
 
 ## DotFiles

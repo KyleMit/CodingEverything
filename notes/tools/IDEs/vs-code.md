@@ -477,3 +477,13 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   ```
 
    [TypeScript Generics: Adds closing "Tag" to type specifier](https://github.com/formulahendry/vscode-auto-close-tag/issues/17)
+
+
+* [Highlight Active Tab](https://stackoverflow.com/q/59121072/1366033)
+
+  ```json
+  "workbench.colorCustomizations": {
+    "tab.activeBorderTop": "#3e6ef1",
+  },
+  ```
+

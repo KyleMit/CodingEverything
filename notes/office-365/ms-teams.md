@@ -9,3 +9,14 @@
 [Stack Overflow for Teams](https://appsource.microsoft.com/en-us/product/office/WA200000739)
 
 ![stack overflow for microsoft teams](/assets/notes/ms-teams/so-for-ms-teams.png)
+
+## Questions
+
+* Can't open teams
+
+  1. Go to Status Bar > Teams Quit
+
+     ![exit teams](/assets/notes/O365/exit-teams.png)
+
+  2. Then Open
+

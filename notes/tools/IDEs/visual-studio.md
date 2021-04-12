@@ -49,3 +49,14 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 
   `Edit.GoToImplementation` <kbd>Ctrl</kbd> + <kbd>F12</kbd>
 
+* [Disable Preview Tab](https://stackoverflow.com/a/18492029/1366033)
+
+  Options > Environment > Tabs and Windows > Preview Tab
+
+  or
+
+  Solution Explorer > Preview Selected Items Icon ("Hat Icon")
+
+* [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
+
+  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabs
