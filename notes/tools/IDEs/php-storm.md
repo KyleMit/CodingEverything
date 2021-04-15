@@ -58,3 +58,16 @@
 * [Add jsdoc comments](https://www.jetbrains.com/help/phpstorm/creating-jsdoc-comments.html)
 
   Type the opening block comment `/**` , and press <kbd>Enter</kbd>
+
+* [Are VS code keybindings available for IntelliJ Idea?](https://stackoverflow.com/q/47748433/1366033)
+
+  Plugins > [VSCode Keymap](https://plugins.jetbrains.com/plugin/12062-vscode-keymap/)
+
+* [Locate current file in IntelliJ](https://stackoverflow.com/q/1086041/1366033)
+
+  1. <kbd>Alt</kbd> + <kbd>F1</kbd>
+
+  2. Project Explorer > CrossHairs
+
+  3. Project Explorer > Settings > Always Select Opened File
+

@@ -68,8 +68,9 @@ const helloJSX = <HelloWorldClass user={{name:'Kyle'}} />
 
 * **JSX** - JavaScript XML
 
-
-* `className` is used instead of `class` for adding CSS classes, as `class` is a reserved keyword in JavaScript
+* Reserved Keywords
+  * use `className` of `class` for adding CSS classes
+  * use `htmlFor` instead of `for` for label attributes
 * Properties and methods in JSX are camelCase - `onclick` will become `onClick`
 * Self-closing tags must end in a slash - e.g. `<img />`
 
@@ -80,6 +81,8 @@ const heading = <h1 className="site-heading">Hello, React</h1>
 ```js
 const heading = React.createElement('h1', {className: 'site-heading'}, 'Hello, React!')
 ```
+
+* [JSX Gotchas](https://shripadk.github.io/react/docs/jsx-gotchas.html)
 
 ## Babel
 

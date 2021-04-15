@@ -24,3 +24,7 @@
 
   File > Options > Advanced > Reading Pane > Mark items as read when viewed in the Reading Pane
 
+* [Share an Outlook calendar with other people](https://support.microsoft.com/en-us/office/share-an-outlook-calendar-with-other-people-353ed2c1-3ec5-449d-8c73-6931a0adab88)
+
+  Calendar > More Options > Sharing > Share with Org > Titles and Locations
+

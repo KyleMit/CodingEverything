@@ -43,6 +43,12 @@ ReactDOM.render(
 
 ## Docs
 
+## Connect
+
+[Connect](https://react-redux.js.org/api/connect)
+
+> The `connect()` function connects a React component to a Redux store.
+
 ## Hooks
 
 [Hooks](https://react-redux.js.org/api/hooks)

@@ -345,6 +345,7 @@
 * [**Cyclomatic complexity**](https://en.wikipedia.org/wiki/Cyclomatic_complexity) - a quantitative measure of the number of linearly independent paths through a program's source code
 * [**Directive / Pragma**](https://en.wikipedia.org/wiki/Directive_(programming)) - a language construct that specifies how a compiler should process its input. Directives are not part of the grammar of a programming language, and may vary from compiler to compiler
 * [**Brook's Law**](https://en.wikipedia.org/wiki/Brooks%27s_law) - adding manpower to a late software project makes it later - coined in the [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+* [**Dired**](https://en.wikipedia.org/wiki/Dired) - Directory Editor
 
 
 ## General

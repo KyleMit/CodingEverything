@@ -117,16 +117,16 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 
 
-## Custom Commands
+## Run Custom Commands / Macros
 
-## Stack Overflow
+### Stack Overflow
 
 * [How to automate a simple regex-find and replace in VS Code?](https://stackoverflow.com/q/49632016/1366033)
 * [Running simple terminal commands in command palette VS Code](https://stackoverflow.com/q/49960452/1366033)
 * [How to create custom commands in VS Code?](https://stackoverflow.com/q/49178842/1366033)
 * [Add a custom command in VS Code Command Palette](https://stackoverflow.com/q/50472691/1366033)
 
-## Extensions
+### Extensions
 
 * [macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
 * [Command Runner](https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner)
@@ -136,7 +136,13 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Script Commands](https://marketplace.visualstudio.com/items?itemName=mkloubert.vs-script-commands)
 * [Edit with Shell Command](https://marketplace.visualstudio.com/items?itemName=ryu1kn.edit-with-shell)
 
-### Extension View Filters
+
+### Github Issues
+
+[Macro recording · Issue #4490](https://github.com/Microsoft/vscode/issues/4490)
+
+
+## Extension View Filters
 
 [Extension View Filters](https://code.visualstudio.com/docs/editor/extension-gallery#_extensions-view-filters)
 
@@ -166,11 +172,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 ## Articles
 
-[Learn these keyboard shortcuts to become a VS Code ninja](https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/)
-
+* [VS Code Can Do That?](https://www.vscodecandothat.com/)
+* [Learn these keyboard shortcuts to become a VS Code ninja](https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/)
+* [VS Code hacks to boost your productivity](https://www.freecodecamp.org/news/here-are-some-super-secret-vs-code-hacks-to-boost-your-productivity-20d30197ac76/)
 
 ## Questions
-
 
 
 * [Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
@@ -486,4 +492,9 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "tab.activeBorderTop": "#3e6ef1",
   },
   ```
+
+* Go to Next Problem
+
+  * <kbd>F8</kbd> - Go To Next Problem in Files (`editor.action.marker.nextInFiles`)
+  * <kbd>Alt</kbd> + <kbd>F8</kbd> - Go To Next Problem (`editor.action.marker.next`)
 

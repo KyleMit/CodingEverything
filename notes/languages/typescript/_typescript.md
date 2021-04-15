@@ -723,3 +723,35 @@ let z: Z = {
     [Colors.Blue]: 3
   };
   ```
+
+
+* [Importing JSON file in TypeScript](https://stackoverflow.com/q/49996456/1366033)
+
+  * `index.ts`
+
+    ```ts
+    import colorsJson from '../colors.json'; // This import style requires "esModuleInterop", see "side notes"
+    console.log(colorsJson.primaryBright);
+    ```
+
+  * `tsconfig.json`
+
+    ```json
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    ```
+
+
+* [nameof keyword in Typescript](https://stackoverflow.com/q/50470025/1366033)
+
+  ```ts
+  const nameof = <T>(name: keyof T) => name;
+
+  interface Person {
+      firstName: string;
+      lastName: string;
+  }
+
+  const personName1 = nameof<Person>("firstName"); // => "firstName"
+  ```
+

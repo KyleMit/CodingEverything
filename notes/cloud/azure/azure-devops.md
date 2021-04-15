@@ -244,3 +244,9 @@ console.table(vals)
 * Split In progress work at end of Sprint
 
   * [Rollup estimated and actual work using Project](https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/office/rollup-estimated-and-actual-work-using-project?view=tfs-2018)
+
+* Clickable checklist items
+
+  * [Wiki function 'Check List' should allow check wiki checkbox on the page](https://developercommunity.visualstudio.com/t/wiki-function-check-list-should-allow-check-wiki-c/789279)
+  * [About task lists - GitHub Docs](https://docs.github.com/en/github/managing-your-work-on-github/about-task-lists)
+

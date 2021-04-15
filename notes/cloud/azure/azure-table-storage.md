@@ -77,3 +77,30 @@ Configuration.GetConnectionString("DefaultConnection")
 * evenly distribute requests
 * evenly distribute storage
 * partition key is included in filter of most frequent query
+
+## Questions
+
+* [How can I encode Azure storage table row keys and partition keys?](https://stackoverflow.com/q/21144694/1366033)
+
+  [Understanding the Table service data model](https://docs.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model)
+
+  The following characters are not allowed in values for the PartitionKey and RowKey properties:
+
+  * The forward slash (`/`) character
+  * The backslash (`\`) character
+  * The number sign (`#`) character
+  * The question mark (`?`) character
+  * Control characters from `U+0000` to `U+001F`, including:
+    * The horizontal tab (`\t`) character
+    * The linefeed (`\n`) character
+    * The carriage return (`\r`) character
+  * Control characters from `U+007F` to `U+009F`
+
+  Easy way to address
+
+  ```cs
+  string old = "#1?";
+  string key = HttpUtility.UrlEncode(url);
+  string new = HttpUtility.UrlDecode(key);
+  ```
+
