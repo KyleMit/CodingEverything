@@ -16,21 +16,23 @@ https://2017.vtcodecamp.org/
 https://10up.github.io/Engineering-Best-Practices/
 
 ## Forget Fonts: Why (and How) UX Practitioners Should Partner with Back-End Developers
+
 [by Amy Chess](https://twitter.com/amychess)
 
 ## Threat Modeling for Secure Software Design
+
 [by Robert Hurlbut](https://roberthurlbut.com/)
 
 Breakdown in secure design
 
 * GitHub Mass Assignment
-	* Written on Ruby on Rails (MVC)
-	* Overrode `IsAdmin` property
-	* Fixes
-		* DataValidation
-		* Access Control
-		* User Validation
-		* View Model (only transmit needed variables)
+  * Written on Ruby on Rails (MVC)
+  * Overrode `IsAdmin` property
+  * Fixes
+    * DataValidation
+    * Access Control
+    * User Validation
+    * View Model (only transmit needed variables)
 * Jeep Cherokee Hack
 * Target Breach
 
@@ -49,7 +51,7 @@ Agile
 
 * **Don't** passively I hope they don't
 * **Do** edd in *active* stories early-on ....
-	* ie. un-authenticated users should not be able to access data
+  * ie. un-authenticated users should not be able to access data
 
 
 #### Threat Modeling Session
@@ -57,7 +59,7 @@ Agile
 * Gather documentation
 * Gather your team
 * Understanding business goals and technical goals
-	* Threat modeling to support goals, not other way around
+  * Threat modeling to support goals, not other way around
 * Plan on 1-2 hour sessions
 * Be honest, leave egos at the door
 
@@ -73,7 +75,8 @@ Avoiding the top 10 software security design flaw
 https://www.computer.org/cms/CYBSI/docs/Top-10-Flaws.pdf
 ![Paper](https://i.imgur.com/9LMbwUg.png)
 
-Draw your picture 
+Draw your picture
+
 * similar to architecture diagram - but specific to threats
 
 Browser --> Web Server --> Data Server
@@ -98,14 +101,14 @@ Firewall minimizes possible attack surfaces
 ### Identify Threats
 
 * Attack Trees
-	* Bruce Schneier
+  * Bruce Schneier
 * Threat Libraries
-	* CAPEC
-	* OWASP TOp 1
-	* SANS TOp 25
+  * CAPEC
+  * OWASP TOp 1
+  * SANS TOp 25
 * Checklists
-	* OWASP ASVS
-	* Proactive Controls
+  * OWASP ASVS
+  * Proactive Controls
 * Use Cases / Misuse Case
 
 ### STRIDE
@@ -136,6 +139,7 @@ Threat                | Property We Want
 * warn user (check the box to connect to open wifi)
 
 ### Risk Management
+
 * FAIR (Factor Analysis)
 * High, Medium, Low
 
@@ -150,6 +154,7 @@ Living Threat Model
 
 
 ## A Developer's Guide to WordPress
+
 [by Josh Lee](https://github.com/joshleecreates)
 @[joshleecreates](https://twitter.com/joshleecreates)
 
@@ -163,7 +168,7 @@ WordPress.com
 Posts - your only data type in wordpress
 wp table
 
-#### Some built in post types:
+#### Some built in post types
 
 * Post - has chronological component
 * Page
@@ -205,19 +210,22 @@ Query Monitor
 like action hooks
 but the callback takes and returns an argument
 
-###  Themes vs. Plugins
+### Themes vs. Plugins
 
 #### Themes
+
 Themes must contain an index.php and style.css
 Get site up quickly with very little knowledge
 Stuck with theme over time - hard to change
 
 #### Plugins
+
 Build from the ground up
 
 
 
 ## Modular ASP.NET MVC
+
 [by Bob Crowley](https://twitter.com/contrivedex)
 
 
@@ -230,37 +238,38 @@ Build from the ground up
 Build MVC Modules separate from the web app that's running them
 
 ### Solution Explorer
+
 * ModulePayroll (just class library)
-	* References
-		* Microsoft.AspNetCore.MVC (v1.1.3)
-		* Orchard.Core.AsModule
-	* Content/ <-- static files
-		* image.png 
-			* reference with fully qualified path (including Module)
-			* ~ refers to project home
-	* Models/
-		* Food.cs
-	* Controller/
-		* HomeController.cs
-	* Views/
-		* Home/
-			* Index.cshtml (
-	* Package.Build.props
+  * References
+    * Microsoft.AspNetCore.MVC (v1.1.3)
+    * Orchard.Core.AsModule
+  * Content/ <-- static files
+    * image.png
+      * reference with fully qualified path (including Module)
+      * ~ refers to project home
+  * Models/
+    * Food.cs
+  * Controller/
+    * HomeController.cs
+  * Views/
+    * Home/
+      * Index.cshtml (
+  * Package.Build.props
 * Main MVC App <-- startup this application
-	* References
-		* OrchardCore.Modules.MVC
-	* Views/
-		* Shared/
-			* _Layout.cshtml
-	* Startup.cs
-		* `services.AddModules()`
-		* `app.UseModules()`
-	* tenants.json
-		* Payroll
-			* State
-			* RequestUrlPrefix
-			* Features
-			* MyConnectionString
+  * References
+    * OrchardCore.Modules.MVC
+  * Views/
+    * Shared/
+      * _Layout.cshtml
+  * Startup.cs
+    * `services.AddModules()`
+    * `app.UseModules()`
+  * tenants.json
+    * Payroll
+      * State
+      * RequestUrlPrefix
+      * Features
+      * MyConnectionString
 
 #### Convention
 
@@ -276,6 +285,7 @@ Deliver as Nuget Package
 
 
 ## Why I Hate Your Responsive Website
+
 [by Everett McKay](http://www.uxdesignedge.com/about/)
 
 #### [Jakob's Law of the Internet User Experience](https://www.nngroup.com/articles/end-of-web-design/)
@@ -300,7 +310,7 @@ Same experience across devices - optimizing for **Nothing**
 
 Who says mobile users and desktop users want different things - **Your Data Does**
 
-[![University Website ](https://imgs.xkcd.com/comics/university_website.png)](https://xkcd.com/773/)
+[University Website](https://imgs.xkcd.com/comics/university_website.png)](https://xkcd.com/773/)
 
 
 **Desktop** - research, planning, comparison shopping, paper output
@@ -309,6 +319,7 @@ Who says mobile users and desktop users want different things - **Your Data Does
 Resulting User Experience should fit (not just content)
 
 ## How File Upload Features a Security Risk and What You Can Do About It
+
 [by Brian Waters](https://twitter.com/int10h)
 
 CTF
@@ -323,11 +334,11 @@ Profile Images (image) / File Hosting (arbitrary files)
 ### Challenges
 
 * Browsers are complicated
-	* Languages / file formats
-	* Built in script interpreter
-	* nuanced security model
+  * Languages / file formats
+  * Built in script interpreter
+  * nuanced security model
 * Servers vary greatly
-	* C, C++, JAVA, .NET, Python, Ruby, Node, Linux, Windows
+  * C, C++, JAVA, .NET, Python, Ruby, Node, Linux, Windows
 * Desktop / Phone Targets
 
 ### Risks
@@ -341,7 +352,7 @@ Profile Images (image) / File Hosting (arbitrary files)
 XSS - Xross Site Scripting
 RCE - Remote Code Execution
 
-### Phishing - 
+### Phishing -
 
 * exploits abuse of trust - files uploaded on website can abuse users trust in you
 * ex. FCC file upload feature on fcc.gov domain
@@ -351,9 +362,9 @@ RCE - Remote Code Execution
 
 * Combining low-severity vulnerabilities
 * Cookies allow some cross-subdomain communication
-	* Cookie `domain` attribute
+  * Cookie `domain` attribute
 * Same origin policy can be weakened
-	* `document.domain` JavaScript object
+  * `document.domain` JavaScript object
 
 
 ### Example Site
@@ -361,10 +372,10 @@ RCE - Remote Code Execution
 www.example.com
 
 * public login
-	* https://www.example.com/user/int10h
+  * https://www.example.com/user/int10h
 * media.example.com
-	* hosts user uploaded content
-		* http://media.example.com/photo/asefsaefas/image.svg
+  * hosts user uploaded content
+    * http://media.example.com/photo/asefsaefas/image.svg
 
 ```svg
 <svg>
@@ -373,6 +384,7 @@ www.example.com
   </script>
 </svg>
 ```
+
 ```html
 <meta http-equiv="set-cookie" content="sid=4af400; domain=example.com" />
 ```
@@ -393,7 +405,7 @@ www.example.com
 * Use Content Security Policy
 * Use the `HttpOnly` attribute
 * Sanitize uploads or whitelist content types
-	* Blacklisting is insufficient
+  * Blacklisting is insufficient
 * Use `Content-Disposition:attachment` if applicable
 
 ### Other Attacks
@@ -407,10 +419,10 @@ www.example.com
 * Can be used against servers or clients
 * Various code may parse uploads or downloads
 * Image Processing Libraries
-	* [ImageMagic](https://www.imagemagick.org/script/index.php)
-		* Re-encode file - newly generated jpeg
+  * [ImageMagic](https://www.imagemagick.org/script/index.php)
+    * Re-encode file - newly generated jpeg
 * Antivirus
-	* Windows Defender
+  * Windows Defender
 
 ### Mitigation
 
@@ -432,10 +444,10 @@ www.example.com
 ### Drive By Downloads
 
 * Attacker hosts malicious content on your site
-	* Malware
-		* User must be tricked into opening content
-	* Exploit
-		* User need not engage
+  * Malware
+    * User must be tricked into opening content
+  * Exploit
+    * User need not engage
 
 ### WebShells
 
@@ -450,7 +462,7 @@ Self-contained backdoor in a single PHP/ASP/ASP.NET
 * Requires attacker to find a suitable file to include
 * If file allows you to upload to webroot (any executable directory)
 
-Auto Fail for running unsupported 
+Auto Fail for running unsupported
 
 
 ### Directory Traversal
@@ -463,9 +475,9 @@ Content-Type: image/jpeg
 ### Mitigation
 
 * Configure server not to execute uploaded content
-	* Don't store uploads in webroot
+  * Don't store uploads in webroot
 * Don't trust user-provided filename
-	* Rename, escape or sanitize
+  * Rename, escape or sanitize
 * Don't trust file extension or content type
 
 ### Extension Spoofing
@@ -480,8 +492,8 @@ Content-Type: image/jpeg
 
 
 * CSP
-	* Don't execute inline javascript
-	* Don't execute `<script>` tags from another domain
+  * Don't execute inline javascript
+  * Don't execute `<script>` tags from another domain
 
 ### Mitigation
 

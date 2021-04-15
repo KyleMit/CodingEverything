@@ -96,7 +96,7 @@ On the server, we need to do the same thing: get all the control ids to validate
 
 To start, we'll cast the incoming source object to the CustomValidator type so we can expose it's properties at design time.  Since it inherits from type `WebControl`, it exposes an [`Attributes`][Attributes] property that contains a dictionary of all the attributes declared in the opening tag of the element.  We'll grab the value of any of them where the key starts with `Data-AnyField`.
 
-On the client we have powerful methods for traversing the DOM, like jQuery which is built on top of the Sizzle selection engine, however the Server is a little more kludgy.  To map each ClientId with a control, we'll first have to recursively build a list of all the control's on the page (since each control only lists it's direct children)([method below](#getallcontrolas-method)).
+On the client we have powerful methods for traversing the DOM, like jQuery which is built on top of the Sizzle selection engine, however the Server is a little more kludgy.  To map each ClientId with a control, we'll first have to recursively build a list of all the control's on the page (since each control only lists it's direct children)([method below](#getallcontrollers-method)).
 
 Next we'll get a list of the controls by joining our list of ids on the ID property of all the controls and casting each into a `TextBox`.  Now we can search through that collection to see any if any textboxes have any value in their Text property.
 

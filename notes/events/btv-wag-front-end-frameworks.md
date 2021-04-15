@@ -5,9 +5,9 @@ date: 2014-02-12
 
 [BTVWAG x BurlingtonJS: Front-end Framework Face-off](http://www.meetup.com/VTCode/events/162314252/)
 
-* [Ember](http://emberjs.com/) - Peter Brown of Agilion 
+* [Ember](http://emberjs.com/) - Peter Brown of Agilion
 * [Angular](http://angularjs.org/) - Rob Friesel of Dealer.com
-* [Backbone](http://backbonejs.org/) (+ Marionette) - Alan Peabody of Agilion 
+* [Backbone](http://backbonejs.org/) (+ Marionette) - Alan Peabody of Agilion
 * No framework - Ian Metcalf of Draker
 
 
@@ -15,7 +15,7 @@ date: 2014-02-12
 
 Built on Backbone.js
 
-* Models (and collectiosn)
+* Models (and collections)
 * View (and Template)
 * Router
 * 6.4kb minified
@@ -28,25 +28,26 @@ Backbone is event based
 Built on Underscore library
 
 Backbone doesn't do a lot for you
+
 * Un-opinionated
 * Render a lot of your own code
 * Handle switching between views
 * Handle view clean up
-* Handdle event binding AND unbinding
+* Handle event binding AND unbinding
 
 
-Marionette
+[Marionette](https://marionettejs.com/)
 
 * Views & View Managers
 
 Marionette.View
 
-* Base View inehrits from backbone view
+* Base View inherits from backbone view
 * Adds best practices for:
-    * Templating
-    * Rendering
-    * Event binding & unbinding
-    
+  * Templating
+  * Rendering
+  * Event binding & unbinding
+
 ItemView
 
 * Specific Views
@@ -54,12 +55,12 @@ ItemView
 
 Item Views remind me a lot of ASP.NET controls
 
-CompossiteView
+CompositeView
 
 * Renders a collection with:
-    * A wrapper template
-    * An ItemView for each model
-    
+  * A wrapper template
+  * An ItemView for each model
+
 Layout
 
 * View inside a View
@@ -73,7 +74,7 @@ Application
 * Includes Region Manager
 * Responsible for starting App
 
-Marionete Advantages
+Marionette Advantages
 
 * Explicit, Simple
 * Focused on OO concepts
@@ -83,61 +84,61 @@ Marionete Advantages
 ### Angular.js
 
 * Toolset for building web *applications*
-* Lethally alergic to gloabal variables
-    * Global namespace is like a public toilet - go in there if you have to, but don't touch anything
+* Lethally allergic to global variables
+  * Global namespace is like a public toilet - go in there if you have to, but don't touch anything
 
 Features
 
 * Declarative data-binding
 * Client side controller
 * Separation of concerns
-    * Built in module system (similar to Require)
+  * Built in module system (similar to Require)
 * Directives
-    * Extensions for HTML
+  * Extensions for HTML
 
 Opinionated in the Middle
 
 * Model - write what you want (JSON)
 * View - write standard HTML
 * Controller - Opinionated
-    * Directives
-    * Controllers
+  * Directives
+  * Controllers
 
 Allergic to Global State
 
 * View can only talk to things that are in the scope
-* Makes for hygenic applications
+* Makes for hygienic applications
 * Eliminates common pitfalls
 
 Hands off the DOM
 
 * Controller code shouldn't touch the DOM
 * Just use JavaScript to edit model
-* JQuery is available, but doen't yet worry about animations
+* JQuery is available, but doesn't yet worry about animations
 
 Directives
 
 * Extend HTML Vocabulary
 * Now you can use the DOM
 * Create new elements and widgets
-   
+
 ```js
-angulage.module('books').directive('grRating', [
+angular.module('books').directive('grRating', [
     function() {
         return {
             replace: true,
             restrict: 'AC',
-            templateURL: 
+            templateURL:
         }
     }
 ]);
-``` 
+```
 
 Controller and modules
 
 * Just write HTML
-    * Good toolsets exist
-        * Linters/IDES
+  * Good toolsets exist
+    * Linters/IDES
 * Model <--> Controller <--> Scope <--> View
 
 Services
@@ -148,16 +149,16 @@ Services
 Filters
 
 * Format string that is being presented
-* book.finsihed | date: 'MM d, y'
+* book.finished | date: 'MM d, y'
 
 ```js
-angulage.module('books').filter('dropSubTitle', [
+angular.module('books').filter('dropSubTitle', [
     function() {
         return
     }
 ]);
 ```
-        
+
 Apply & Digest Cycle
 
 * Slippery Scope
@@ -168,12 +169,12 @@ Apply & Digest Cycle
 Organize your code
 
 * web-app/
-    * js/
-        * ng-app-base.j
-        * controllers/
-        * directives/
-        * filters/
-        * services/
+  * js/
+    * ng-app-base.j
+    * controllers/
+    * directives/
+    * filters/
+    * services/
 
 Careful passing minified scope
 
@@ -192,17 +193,17 @@ http://browserify.org/
 
 Don't try to solve problems before they arise
  --> But aren't there some common themes of web development
-        
+
 ### Ember.js
 
 Problems with Web Dev
 
 * Client side development is challenging
 * Expectations about how websites should work
-    * Links should be portable
-    * Back button should work
+  * Links should be portable
+  * Back button should work
 * Single Page applications are always that
-    * Has multiple pages - just load on client side
+  * Has multiple pages - just load on client side
 * Lack of conventions
 
 * Complexity --> Capability --> Complexity
@@ -244,26 +245,26 @@ Component
 * Similar to Angular Directives
 * Custom HTML Element
 * Like views without controller
-    * Pass in any data you need
+  * Pass in any data you need
 * Reusable
 
 Data and Event Relationships
 
 * Model
-    * Controller
-    * View
-    * Template
+  * Controller
+  * View
+  * Template
 
 #### Advantages
 
 Architecture
 
 * Supports application growth via:
-    * Organization
-    * Eliminating boilerplate
-    * Sensible conventions
-* Encapuslation
-    * Loose coupling between components
+  * Organization
+  * Eliminating boilerplate
+  * Sensible conventions
+* Encapsulation
+  * Loose coupling between components
 
 Application Speed
 
@@ -274,10 +275,10 @@ Application Speed
 Object Model
 
 * Computed properties
-    * With and without aggregate data
+  * With and without aggregate data
 * Observers
 * Binding
-    * Two way default, one-way for performance
+  * Two way default, one-way for performance
 
 Master Detail Interface
 
@@ -289,9 +290,9 @@ Friendly Documentation
 Rails Influence
 
 * Convention over configuration
-    * Naming conventions (code + files)
-    * If it feels painful, you're doing it wrong
-    * It's not like nobody has ever built an ember application before
+  * Naming conventions (code + files)
+  * If it feels painful, you're doing it wrong
+  * It's not like nobody has ever built an ember application before
 * REST architecture
 
 #### Disadvantages
@@ -299,7 +300,7 @@ Rails Influence
 Learning Curve
 
 Sprinkles of Javascript
-    
+
 * Build whole app or nothing at all
 
 Handlebars can be slow
@@ -307,7 +308,7 @@ Handlebars can be slow
 * Source gets junked up when you insert strings
 
 Ember Data still in Beta
-               
+
 Ember Inspector
 
 * NBS news is an Ember Site
@@ -322,14 +323,14 @@ Ember Sandbox
 * Ember Conf Next Month
 * Ember Data 1.0
 * Build Tools
-    * Modules as first class citizens (ES6 Modules)
-    * Built in Bower Support
-    * CLI Commands
+  * Modules as first class citizens (ES6 Modules)
+  * Built in Bower Support
+  * CLI Commands
 * HTMLBars
-    * Replaement for handlebars
-    * Performance Gains
-    * Faster Rendering (comparable to React)
-    * Will build DOM instead of Strings
+  * Replacement for handlebars
+  * Performance Gains
+  * Faster Rendering (comparable to React)
+  * Will build DOM instead of Strings
 
 
 
@@ -342,5 +343,5 @@ http://bower.io/
 http://oboejs.com/
 
 
-    
-        
+
+

@@ -9,22 +9,22 @@ Winter 2017 Fundraising for [Burlington Code](https://burlingtoncode.org/)
 
 https://github.com/ianmetcalf/from-generators-to-sagas/commits/master
 
-by [Ian Metcalf](https://github.com/ianmetcalf) 
+by [Ian Metcalf](https://github.com/ianmetcalf)
 
 Presentation in Reveal.js
 Containers with syntax highlighted code and running console
 
-[klipse](https://github.com/viebel/klipse)
-[codemirror](https://codemirror.net/)
+* [klipse](https://github.com/viebel/klipse)
+* [codemirror](https://codemirror.net/)
 
 
 ## es6 refresher (generators)
 
-#### declaration
+### declaration
 
 `var` -> `const` + `let`
 
-#### arrow functions
+### arrow functions
 
 ```js
 // optional
@@ -34,7 +34,7 @@ const fn = (param) => {
 [1,2,3].map(n => n + 2).filter(n => n % 2);
 ```
 
-#### object shorthand
+### object shorthand
 
 ```js
 const value = "something";
@@ -45,7 +45,7 @@ const obj = {
 };
 ```
 
-#### destructuring
+### destructuring
 
 get to nested properties inside of an object without need for initialization
 
@@ -53,11 +53,11 @@ creates variables inside of declaration
 
 instead of *structuring* which serves to build up an object - you're *destructuring* which tears down properties from within an object and converts them into variables.
 
-#### [REST](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+### [REST](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 Why's it called rest? - take the *REST* of the properties and put them in this param
 
-take all the params and turn them into an array 
+take all the params and turn them into an array
 
 like `ParamArray` in vb.net
 
@@ -69,7 +69,7 @@ function fn(...args) {
 }
 ```
 
-#### Spread
+### Spread
 
 Opposite of Rest
 
@@ -78,12 +78,13 @@ const values = [4,8,2,5];
 Math.min(...values);
 ```
 
-#### Generator Functions
+### Generator Functions
 
 Like `IEnumerable` in .NET
 
 
 Syntax:
+
 * Marked with an asterisk
 * `yield` inside of function - lazily evaluates
 * `.next`
@@ -146,11 +147,11 @@ function runner(fn, ...args) {
 
   function step(value) {
     const result = it.next(value);
-	if (!result.done) {
-		setImmediate(() => step(result.value));
-	}
-	
-	setImmediate(step);
+ if (!result.done) {
+  setImmediate(() => step(result.value));
+ }
+
+ setImmediate(step);
   }
 }
 ```
@@ -164,20 +165,20 @@ function runner(fn, ...args) {
 
   function step(value) {
     const result = it.next(value);
-    
-	if (!result.done) {
-	    Promise.resolve(result.value).then(step)
+
+ if (!result.done) {
+     Promise.resolve(result.value).then(step)
     } else {
-	    resolve(result.value)
-	}
-	
-	setImmediate(step);
+     resolve(result.value)
+ }
+
+ setImmediate(step);
   }
 }
 
 // promise based generator
 function* main(steps) {
-	
+
 }
 ```
 
@@ -198,16 +199,16 @@ function effect(type, ...args) {
 }
 // runner
 function runEffect(value) {
-	if (!value || !value.effect) return Promise
+ if (!value || !value.effect) return Promise
 
     if (value.effect === 'CALL') {
-	    const [fn, ...fnArgs] = value.args;
-	    return runEffect
+     const [fn, ...fnArgs] = value.args;
+     return runEffect
     }
-    
+
     if (value.effect === 'FORK') {
-	    const [fn, ...fnArgs] = value.args;
-	    return runEffect
+     const [fn, ...fnArgs] = value.args;
+     return runEffect
     }
 
 }
@@ -219,5 +220,6 @@ manages events
 
 ## redux-saga
 
-middleware ontop of redux
+middleware on top of redux
+
 * gives you dsl with library of effects you can call and then runs them

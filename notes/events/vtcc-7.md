@@ -5,17 +5,17 @@ date: 2015-09-19
 
 https://2015.vtcodecamp.org/
 
-# [Getting SQL Schema and Code into Version Control Using SQL Server Database Projects](http://vtcodecamp.org/2015/sessions#sql-schema-and-code-version-control)
+## [Getting SQL Schema and Code into Version Control Using SQL Server Database Projects](http://vtcodecamp.org/2015/sessions#sql-schema-and-code-version-control)
 
 Floyd Hilton
 
 * Why?
-	* Keeps history
-	* Documentation (tie to issue tracker)
-	* Makes process repeatable
-	* Group changes (by feature)
-	* Continuous Integration and Deployment
-	* Portability
+  * Keeps history
+  * Documentation (tie to issue tracker)
+  * Makes process repeatable
+  * Group changes (by feature)
+  * Continuous Integration and Deployment
+  * Portability
 
 ### Transformation
 
@@ -23,29 +23,29 @@ Incremental changes are saved
 
 Not what the database looks like, but how to get there.
 
-* Tranformation Tools
-	* DB UP
-	* FLyway
-	* Nmigrations
-	* roundHouse
-	* FlunetMigrator
-	* readyRoll
-	* Entity Framework Migrations
+* Transformation Tools
+  * DB UP
+  * FLyway
+  * NMigrations
+  * roundHouse
+  * FluentMigrator
+  * readyRoll
+  * Entity Framework Migrations
 
 ### State
 
-* State is saved, and tools are used to tranform a database from one state to another
+* State is saved, and tools are used to transform a database from one state to another
 * The full **state** of the database is stored for every version
 
 
 **Hot Deploy** - checkout old schema - make change - deploy that so only the change is pushed to prod
 
 * Tools
-	* Manual
-	* Entity Ramework
-	* Redgate SQL Source Control
-	* SQL Server Database Project
-	* readyrool
+  * Manual
+  * Entity Framework
+  * Redgate SQL Source Control
+  * SQL Server Database Project
+  * ReadyRoll
 
 ### SQL Server Database Project
 
@@ -53,7 +53,7 @@ Not what the database looks like, but how to get there.
 
 SQL Server Object Explorer
 
-# [Introduction to Aurelia](http://vtcodecamp.org/2015/sessions#aurelia)
+## [Introduction to Aurelia](http://vtcodecamp.org/2015/sessions#aurelia)
 
 by Jeremy Danyow (Member)
 
@@ -63,9 +63,9 @@ Framework contains libraries (es6 modules)
 Build JavaScript Clients (SPA)
 
 * Philosophy
-	* Open Source (MIT)
-	* Clean Code
-	* Simple Conventions
+  * Open Source (MIT)
+  * Clean Code
+  * Simple Conventions
 
 https://gitter.im/Aurelia/Discuss?source=explore
 
@@ -76,14 +76,14 @@ Why another JS Framework?
 * Web Components
 * No External Dependencies (except polyfills)
 * 2 way databinding
-* Evolution of Durandal / Angular
+* Evolution of [Durandal](http://durandaljs.com/) / Angular
 
 async / await in es 7
 
 
 
 ```js
-import {bindable} from 'aurelia-framwork'
+import {bindable} from 'aurelia-framework'
 export class Welcome {
 
 }
@@ -93,9 +93,9 @@ html (case insensitive)
 mixed casing -> converts pascal to lower case with hyphens
 
 
-# [Writing Automated Tests Using Python, Selenium, and Behave]
+## [Writing Automated Tests Using Python, Selenium, and Behave]
 
-by Jessica Ingrassellino
+by [Jessica Ingrassellino](https://www.linkedin.com/in/jessingrassellino/)
 
 * Acceptance testing does not *test* code.  It definitely identifies problems in code.
 * Acceptance testing can be done manually
@@ -105,23 +105,22 @@ by Jessica Ingrassellino
 
 For Python
 
-**Structure**
+#### Structure
 
 * Behave layer
-	* Features - what you want
+  * Features - what you want
 * Step definitions
-	* Code of how to do what you want
+  * Code of how to do what you want
 * Page Objects
-	* Python selenium API
+  * Python selenium API
 
-Syntax
+#### Syntax
 
 * Feature
-	* Scenario
-		* Given
-		* When
-		* Then
-
+  * Scenario
+    * Given
+    * When
+    * Then
 
 Given, when, then are step decorators
 
