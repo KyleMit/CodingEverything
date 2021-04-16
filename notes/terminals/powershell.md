@@ -446,3 +446,18 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
     $($variableName) or ${variableName}
     ```
 
+* [What does "%" (percent) do in PowerShell?](https://stackoverflow.com/questions/22846596/what-does-percent-do-in-powershell)
+
+* [How to I remove the Powershell start text?](https://stackoverflow.com/a/48263119/1366033)
+
+    ```bash
+    pwsh.exe -nologo
+    ```
+
+* [PowerShell to remove text from a string](https://stackoverflow.com/q/19168475/1366033)
+
+    ```bash
+    "refs/heads/master" -replace "refs/heads/", ""
+    # "master"
+    ```
+

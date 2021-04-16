@@ -114,15 +114,6 @@ https://microsoft.com/devicelogin
 > Type `help` to learn about Cloud Shell
 
 
-## Powershell
-
-https://aka.ms/powershell
-
-[How to I remove the Powershell start text?](https://stackoverflow.com/a/48263119/1366033)
-
-```bash
-pwsh.exe -nologo
-```
 
 
 ## Panes

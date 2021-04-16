@@ -148,3 +148,10 @@ Available in Node 8.2 / npm 5.2.0
   npm config set fund false --global
   ```
 
+* [How to specify registry while doing npm install](https://stackoverflow.com/q/22385092/1366033)
+
+  ```bash
+  npm install --registry=https://registry.npmjs.org/
+  npm install --registry=https://custom.npm.registry.com/
+  ```
+

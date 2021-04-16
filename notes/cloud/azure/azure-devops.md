@@ -132,6 +132,10 @@ console.table(vals)
 * [About Wikis, READMEs, and Markdown](https://docs.microsoft.com/en-us/azure/devops/project/wiki/about-readme-wiki?view=azure-devops)
 * [MD - Code highlighting](https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops#code-highlighting)
   * [highlight.js/src/languages](https://github.com/highlightjs/highlight.js/tree/9.10.0/src/languages)
+* [Markdown syntax for files, widgets, and wikis](https://docs.microsoft.com/en-us/azure/devops/project/wiki/markdown-guidance?view=azure-devops)
+* [Markdown syntax for wikis in Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/project/wiki/wiki-markdown-guidance?view=azure-devops)
+  * [New Advanced Text Editor on the Work Item Form in Azure DevOps](https://devblogs.microsoft.com/devops/new-advanced-text-editor-on-the-work-item-form-in-azure-devops/)
+    * [microsoft/roosterjs](https://github.com/Microsoft/roosterjs) - framework-independent javascript rich text editor
 
 ## Instant Search
 
