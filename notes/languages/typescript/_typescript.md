@@ -514,7 +514,8 @@ let z: Z = {
 
 * [tsconfig.json: Build:No inputs were found in config file](https://stackoverflow.com/q/41211566/1366033)
 
-  Run TypeScript: Restart TS server
+  Run `TypeScript: Restart TS server`
+
 
 * [Import 'global' modules with TypeScript](https://stackoverflow.com/q/34161119/1366033)
 

@@ -284,3 +284,11 @@ choco install gnuwin32-coreutils.portable
   |  `$@`  |     `$1 $2 $3 … ${N}`     |
   | `"$*"` |    `"$1c$2c$3c…c${N}"`    |
   | `"$@"` | `"$1" "$2" "$3" … "${N}"` |
+
+
+* [How to sort first directories then files etc… when using “ls” in Unix](https://superuser.com/q/109537/180163)
+
+```bash
+ls --color -h --group-directories-first
+```
+

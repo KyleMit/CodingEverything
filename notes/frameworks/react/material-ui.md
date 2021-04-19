@@ -4,6 +4,11 @@
 
 > A popular React UI framework
 
+## Alternatives
+
+* [React-Bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework, Rebuilt for React.
+* [Fannypack](https://fannypack.style/) - A friendly, themeable, accessible React UI Kit built with Reakit.
+
 ## Getting Started
 
 ```bash
