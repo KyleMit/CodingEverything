@@ -28,3 +28,7 @@
 
   Calendar > More Options > Sharing > Share with Org > Titles and Locations
 
+* [Remove columns / headers / grid from email view in Outlook](https://superuser.com/q/1639603/180163)
+
+  View > Settings > Other > Always use compact layout
+
