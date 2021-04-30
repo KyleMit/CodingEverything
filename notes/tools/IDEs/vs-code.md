@@ -251,6 +251,27 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     }
     ```
 
+* Customize Squiggly Error
+
+  ```css
+  .monaco-editor .squiggly-error {
+      background: #820f0f38;
+  }
+  .monaco-editor .squiggly-warning {
+      background: #ffff0024;
+  }
+  .monaco-editor .squiggly-info {
+    background: #7373f840;
+  }
+  ```
+
+  ```json
+  "customizeUI.stylesheet": {
+      ".monaco-editor .squiggly-error": "background: #820f0f38;",
+      ".monaco-editor .squiggly-warning": "background: #ffff0024;",
+      ".monaco-editor .squiggly-info": "background: #7373f840;"
+  }
+  ```
 
 * Title bar zoom
   * [merging menu/titlebar](https://github.com/microsoft/vscode/pull/55100)

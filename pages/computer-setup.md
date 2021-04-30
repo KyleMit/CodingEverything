@@ -942,11 +942,12 @@ choco list --local-only
 * Fonts
   * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
   * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+  * [Meslo LG](https://github.com/andreberg/Meslo-Font) | [choco](https://community.chocolatey.org/packages/MesloLG.DZ)
 
 [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
 
 ```bash
-choco install jq hub firacode-ttf cascadiacode
+choco install jq hub firacode-ttf cascadiacode meslolg.dz
 ```
 
 Which installs CLI tools to here:

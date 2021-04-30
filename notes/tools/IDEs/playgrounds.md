@@ -32,9 +32,11 @@
 * export an `endpoint` function to turn any notebook into an API ([endpoint docs](https://runkit.com/docs/endpoint))
 
 
-## CodeSandBox
+## Code Sandbox
 
 * [How to align console panel to right in codesandbox?](https://stackoverflow.com/q/59099355/1366033)
 
   View > Editor Layout > Flip Full Layout
+
+* [Changelog / Release Notes](https://codesandbox.io/changelog)
 

@@ -109,50 +109,51 @@ $PSVersionTable.PSVersion
 
 ![Example](https://i.imgur.com/rQ9s3Sa.png)
 
-[Adding Argument Completion Support](http://www.powertheshell.com/argument-completion-in-powershell-3-0/)
+* [Adding Argument Completion Support](http://www.powertheshell.com/argument-completion-in-powershell-3-0/)
 
-```bash
+    ```bash
 
-# Complex Type
-function Select-Color
-{
-    param
-    (
-        [System.ConsoleColor]
-        $Color
-    )
+    # Complex Type
+    function Select-Color
+    {
+        param
+        (
+            [System.ConsoleColor]
+            $Color
+        )
 
-    "You selected: $Color"
-}
-# Custom List
-function Select-City
-{
-    param
-    (
-        [ValidateSet('New York','Redmond','Hanover','Tokio')]
-        $City
-    )
+        "You selected: $Color"
+    }
 
-    "You selected: $City"
-}
-```
+    # Custom List
+    function Select-City
+    {
+        param
+        (
+            [ValidateSet('New York','Redmond','Hanover','Tokio')]
+            $City
+        )
+
+        "You selected: $City"
+    }
+    ```
 
 
-[Get definition of function](http://superuser.com/q/414036/180163)
+* [Get definition of function](http://superuser.com/q/414036/180163)
 
-```bash
-$function:test
-(Get-Command test).Definition
+    ```bash
+    $function:test
+    (Get-Command test).Definition
 
-$metadata = New-Object system.management.automation.commandmetadata (Get-Command Get-EventLog)
-[System.management.automation.proxycommand]::Create($MetaData) | out-file C:\get-process.ps1
-```
+    $metadata = New-Object system.management.automation.commandmetadata (Get-Command Get-EventLog)
+    [System.management.automation.proxycommand]::Create($MetaData) | out-file C:\get-process.ps1
+    ```
 
 ### Function Parameters
 
 [The PowerShell function – Parameters, data types, return values](https://4sysops.com/archives/the-powershell-function-parameters-data-types-return-values/)
 
-**Function Syntax**:
+#### Function Syntax
 
 ```bash
 function [<scope:>]<name> [([type]$parameter1[,[type]$parameter2])]{
@@ -167,7 +168,7 @@ function [<scope:>]<name> [([type]$parameter1[,[type]$parameter2])]{
 }
 ```
 
-Two Parameter Syntaxes:
+#### Parameter Syntaxes
 
 ```bash
 #Option 1
@@ -205,6 +206,8 @@ You can add any number of optional white-space separated [parameter attributes](
 * http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx
 * http://technet.microsoft.com/en-us/library/hh867899.aspx
 
+### Docs
+
 * [Parameter Attribute Declaration](https://technet.microsoft.com/en-us/library/ms714348%28v=vs.85%29.aspx)
 * [Parameters - Default Values](http://blogs.technet.com/b/heyscriptingguy/archive/2011/05/21/create-and-use-default-values-in-powershell-scripts.aspx)
 * [Dynamic Parameters Explanation](http://www.powershellmagazine.com/2014/05/29/dynamic-parameters-in-powershell/)
@@ -232,6 +235,14 @@ $a.GetType();
 [Windows PowerShell: Comment your way to help](https://technet.microsoft.com/en-us/magazine/hh500719.aspx)
 
 Generally wrap in a single `<# block comment #>`, though it's valid syntax to individually comment every line
+
+* [`Get-Help`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-7.1)
+
+```bash
+Get-Help <command>
+help <command>
+man <command>
+```
 
 #### Help Syntax
 
@@ -363,7 +374,54 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 [System.Environment]::Commandline
 ```
 
+## Customize Prompt
 
+### Utilities
+
+* [PSReadLine](https://github.com/PowerShell/PSReadLine?WT.mc_id=-blog-scottha)
+* [PSColors](https://github.com/ecsousa/PSColors)
+* [Oh my Posh](https://ohmyposh.dev/)
+* [powerline](https://github.com/powerline/powerline)
+  * Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.
+
+## Articles
+
+* [Ultimate PowerShell Prompt Customization and Git Setup Guide](https://hodgkins.io/ultimate-powershell-prompt-and-git-setup)
+* [How to customize your PowerShell command prompt](https://www.networkadm.in/customize-pscmdprompt/)
+* [PowerShell - Customize the Prompt - Norlunn's Blog](https://www.norlunn.net/2019/10/07/powershell-customize-the-prompt/)
+* [You should be customizing your PowerShell Prompt with PSReadLine - Scott Hanselman's Blog](https://www.hanselman.com/blog/you-should-be-customizing-your-powershell-prompt-with-psreadline)
+* [How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh - Scott Hanselman's Blog](https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh)
+* [Customizing Your PowerShell Prompt · dahlbyk/posh-git Wiki](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt)
+* [about_Prompts - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.1)
+
+```bash
+# either
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module PSReadLine -AllowPrerelease -Force
+
+code $PROFILE
+
+# in profile.ps1
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+}
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+Get-PoshThemes
+Set-PoshPrompt -Theme Pure
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme Paradox
+```
+
+
+### PS ReadLine
+
+### Oh My Posh
+
+[Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/)
 
 ## Questions
 

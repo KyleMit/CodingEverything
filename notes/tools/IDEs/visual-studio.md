@@ -2,6 +2,10 @@
 
 Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references)
 
+## Alternatives
+
+* JetBrains - Rider
+
 ## Editor
 
 ### Paste JSON as Class
@@ -22,6 +26,45 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 }
 ```
 
+
+## VS Terminal
+
+* [The PowerShell you know and love now with a side of Visual Studio](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
+* [Say hello to the new Visual Studio terminal!](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
+
+* View > Terminal Window
+
+* Create Terminal Profiles
+
+```none
+C:\Program Files\PowerShell\7\pwsh.exe \
+C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe \
+C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe \
+
+-NoExit -Command "& { Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll}; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\
+-noe -c "&{Import-Module """C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell ac9611f0}"
+
+C:\Windows\system32\cmd.exe \
+/k ""%VSAPPIDDIR%\..\Tools\VsDevCmd.bat"
+
+$env:VSAPPIDDIR
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll
+
+```
+
+
+
+
+* [Using Enter-VsDevShell in PowerShell consoles](https://intellitect.com/enter-vsdevshell-powershell/)
+* [Using the Developer PowerShell Visual Studio with PowerShell 7](https://david.gardiner.net.au/2020/04/powershell-visualstudio-integration.html)
+  * [Microsoft.VisualStudio.DevShell doesn't work with PowerShell Core](https://developercommunity.visualstudio.com/t/microsoftvisualstudiodevshell-doesnt-work-with-pow/663594)
+* [Command-line shells & prompt for developers](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2019)
+
+
+
+
+
 ## Release History
 
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
@@ -29,6 +72,20 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 ## Resources
 
 [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+
+## ReSharper
+
+[What’s New in ReSharper 2021.1](https://www.jetbrains.com/resharper/whatsnew/)
+
+* Default Navigation Action for Compiled Code
+  * Decompiled Sources
+  * .NET Framework Sources
+  * Object Browser
+  * Assembly Explorer
+  * Metadata View
+
+* [Naming Style](https://www.jetbrains.com/help/resharper/Coding_Assistance__Naming_Style.html)
+
 
 ## Questions
 
@@ -59,4 +116,4 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
-  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabs
+  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabsj

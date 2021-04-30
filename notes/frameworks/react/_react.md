@@ -7,6 +7,11 @@
 
 * [Redwood](https://redwoodjs.com/)
   * [React Single File Components Are Here](https://dev.to/swyx/react-single-file-components-are-coming-3g74)
+* [Relay](https://relay.dev/)
+
+## Docs
+
+* [Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
 ## Syntax
 

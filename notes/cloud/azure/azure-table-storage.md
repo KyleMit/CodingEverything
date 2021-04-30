@@ -50,10 +50,6 @@ Configuration.GetConnectionString("DefaultConnection")
 ```
 
 
-
-
-
-
 ## Alternatives
 
 ### Azure SQL
@@ -82,7 +78,8 @@ Configuration.GetConnectionString("DefaultConnection")
 
 * [How can I encode Azure storage table row keys and partition keys?](https://stackoverflow.com/q/21144694/1366033)
 
-  [Understanding the Table service data model](https://docs.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model)
+  * [Understanding the Table service data model](https://docs.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model)
+    * [Characters Disallowed in Key Fields](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-the-table-service-data-model#characters-disallowed-in-key-fields)
 
   The following characters are not allowed in values for the PartitionKey and RowKey properties:
 

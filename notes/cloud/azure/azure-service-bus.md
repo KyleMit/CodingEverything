@@ -27,3 +27,7 @@
 
 * [Designing a Microsoft Azure Messaging Architecture](https://app.pluralsight.com/library/courses/microsoft-azure-messaging-architecture-designing/table-of-contents)
 * [Configuring Serverless Computing in Microsoft Azure](https://app.pluralsight.com/library/courses/microsoft-azure-serverless-computing-configuring/table-of-contents)
+
+## Azure Functions - `ServiceBusTrigger`
+
+* [Azure Service Bus trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus-trigger?tabs=csharp)
