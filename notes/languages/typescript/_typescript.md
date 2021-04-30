@@ -77,7 +77,7 @@ console.log(arr.length);
 1. Setup a Node.js project `package.json`
 
    ```bash
-   `npm init -y`
+   npm init -y
    ```
 
 2. Add TypeScript
@@ -95,7 +95,7 @@ console.log(arr.length);
 4. Init a `tsconfig.json` for TypeScript options with a few key options in your tsconfig.json
 
    ```bash
-   npx tsc --init --rootDir src --outDir lib --esModuleInterop --resolveJsonModule --lib es6,dom  --module commonjs
+   npx tsc --init --rootDir src --outDir out --esModuleInterop --resolveJsonModule --lib es6,dom  --module commonjs
    ```
 
 5. Now you can use all the built in node modules like this:
@@ -472,7 +472,9 @@ let z: Z = {
 * [TypeScript require one parameter or the other, but not neither](https://stackoverflow.com/questions/52132696/)
 * [Does Typescript support mutually exclusive types?](https://stackoverflow.com/questions/42123407/)
 
+## Articles
 
+* [Building and publishing an NPM Typescript package](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
 
 
 ## Questions
@@ -754,5 +756,40 @@ let z: Z = {
   }
 
   const personName1 = nameof<Person>("firstName"); // => "firstName"
+  ```
+
+* [Where is VSCode's “Restart TS server”?](https://stackoverflow.com/q/64454845/1366033)
+
+  Make sure a `.js`, `.ts`, or `.tsx` file is open/focused
+
+* [How to remove index signature using mapped types](https://stackoverflow.com/q/51465182/1366033)
+
+  ```ts
+  interface Foo {
+    [key: string]: any;
+    [key: number]: any;
+    bar(): void;
+  }
+
+  type RemoveIndex<T> = {
+    [ P in keyof T as string extends P ? never : number extends P ? never : P ] : T[P]
+  };
+
+  type FooWithOnlyBar = RemoveIndex<Foo>; //{ bar: () => void; }
+  ```
+
+* [Flat Map on Array](https://stackoverflow.com/a/53559473/1366033)
+
+  Add `es2019` to `lib`
+
+  ```ts
+  {
+    "compilerOptions": {
+      "target": "es5",
+      "lib": [
+        "es2019"
+      ]
+    }
+  }
   ```
 
