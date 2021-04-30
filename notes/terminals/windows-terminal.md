@@ -1,5 +1,9 @@
 # Windows Terminal
 
+## Alternatives
+
+* [ConEmu - Handy Windows Terminal](https://conemu.github.io/)
+
 ## System Fonts
 
 [Programming Fonts](https://app.programmingfonts.org/#firacode)

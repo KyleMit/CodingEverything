@@ -1,36 +1,66 @@
 # C Sharp
 
-## C#6
+## Version History
 
-### Exception Filters
+### C#6
 
-```cs
-try { … }
-catch (Exception e) when (e is ArgumentNullException || e is FormatException)
-{
-    …
-}
-```
+* **Exception Filters**
 
-## C#7
+  ```cs
+  try { … }
+  catch (Exception e) when (e is ArgumentNullException || e is FormatException)
+  {
+      …
+  }
+  ```
 
-### Discards
+### C#7
 
-[C#7 Discards](https://csharp.today/c-7-0-discards/)
+[What's New in C# 7.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7)
 
-```cs
-_ = await table.CreateIfNotExistsAsync();
-```
 
-### nameof
+* **Discards**
 
-[nameof Expression](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof)
+  * [Discards - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/discards)
 
-[nameof in DebuggerDisplay attribute](https://stackoverflow.com/a/43850831/1366033)
+  ```cs
+  _ = await table.CreateIfNotExistsAsync();
+  ```
 
-```cs
-[DebuggerDisplay("={" + nameof(GetString) + "()}")]
-class C {
-    string GetString() { }
-}
-```
+* **nameof**
+
+  * [nameof Expression](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof)
+  * [nameof in DebuggerDisplay attribute](https://stackoverflow.com/a/43850831/1366033)
+
+  ```cs
+  [DebuggerDisplay("={" + nameof(GetString) + "()}")]
+  class C {
+      string GetString() { }
+  }
+  ```
+
+### C# 9
+
+[What's new in C# 9.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)
+
+* **Record Types**
+
+  * [Use record types - C# tutorial](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records)
+  * [Records - C# reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record)
+
+
+### C# 10
+
+* [**Constant interpolated strings**](https://github.com/dotnet/csharplang/issues/2951)
+
+## Questions
+
+* [How to escape braces (curly brackets) in a format string](https://stackoverflow.com/q/91362/1366033)
+
+  Use double curly braces
+
+  ```cs
+  var inVal = "1, 2, 3";
+  var outVal = $" foo {{{inVal}}}";
+  ```
+

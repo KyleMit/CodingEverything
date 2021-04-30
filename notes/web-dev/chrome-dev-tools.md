@@ -57,3 +57,5 @@ https://web.dev/
   .console-view-fix-select-all { height: 300px; }
   ```
 
+* [Filter only the requests with errors - Google chrome network](https://stackoverflow.com/q/55185225/1366033)
+

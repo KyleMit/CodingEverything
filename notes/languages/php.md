@@ -32,10 +32,16 @@ php -S localhost:2222
 ## VS Code
 
 * [PHP Programming with Visual Studio Code](https://code.visualstudio.com/docs/languages/php)
+
+
 * Extensions
   * [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+    * [bmewburn/vscode-intelephense](https://github.com/bmewburn/vscode-intelephense)
   * [PHP IntelliSense](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense)
+    * [felixfbecker/vscode-php-intellisense](https://github.com/felixfbecker/vscode-php-intellisense)
   * [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
+
+
 * Articles
   * [Setup VS Code for Efficient PHP development](https://blog.theodo.com/2019/07/vscode-php-development/)
   * [Setting up a PHP development environment using Visual Studio Code](https://medium.com/@MisterKevin_js/setting-up-a-php-development-environment-using-visual-studio-code-and-xampp-on-windows-66b6bcf1e566)

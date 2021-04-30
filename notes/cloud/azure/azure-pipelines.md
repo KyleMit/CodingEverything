@@ -15,6 +15,8 @@
 * [Releases in Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/releases?view=azure-devops)
 * [Customize your pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/customize-pipeline?view=azure-devops)
 * [Troubleshoot pipeline runs](https://docs.microsoft.com/en-us/azure/devops/pipelines/troubleshooting/troubleshooting?view=azure-devops)
+* [Use runtime and type-safe parameters](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/runtime-parameters?view=azure-devops&tabs=script)
+* [YAML schema](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema)
 
 ## Articles
 
@@ -22,13 +24,16 @@
 
 ## Example
 
-[Microsoft Azure DevOps Engineer: Creating an Automated Build Workflow](https://app.pluralsight.com/library/courses/microsoft-azure-creating-automated-build-workflow/table-of-contents)
-[Build, test, and deploy JavaScript and Node.js apps](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/javascript?view=azure-devops&tabs=code)
+* [Microsoft Azure DevOps Engineer: Creating an Automated Build Workflow](https://app.pluralsight.com/library/courses/microsoft-azure-creating-automated-build-workflow/table-of-contents)
+* [Build, test, and deploy JavaScript and Node.js apps](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/javascript?view=azure-devops&tabs=code)
 
 ```yml
 # Node.js
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
+
+
+
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
@@ -49,6 +54,10 @@ steps:
   displayName: 'npm install and build'
 ```
 
+## Extension
+
+* [Azure Pipelines - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines)
+  * [#187 - Template expressions cause syntax errors in YAML files](https://github.com/microsoft/azure-pipelines-vscode/issues/187)
 
 
 ### Build Agents
