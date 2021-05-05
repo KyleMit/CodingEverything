@@ -64,8 +64,9 @@
 * [CommonJS vs AMD vs RequireJS vs ES6 Modules](https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b)
 * [What are CJS, AMD, UMD, and ESM in Javascript?](https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm)
 * [JavaScript: Classic Scripts vs. Modules vs. CommonJS](https://gist.github.com/jkrems/b14894e0b8efde10aa10a28c652d3541)
-* [Classic scripts v/s module scripts in Javascript - Stack Overflow](https://stackoverflow.com/questions/39652618/classic-scripts-v-s-module-scripts-in-javascript)
-* [javascript - How to use UMD in browser without any additional dependencies - Stack Overflow](https://stackoverflow.com/questions/38638210/how-to-use-umd-in-browser-without-any-additional-dependencies)
+* [Classic scripts v/s module scripts in Javascript - Stack Overflow](https://stackoverflow.com/q/39652618/1366033)
+* [How to use UMD in browser without any additional dependencies](https://stackoverflow.com/q/38638210/1366033)
+* [sindresorhus/node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) - Boilerplate to kickstart creating a Node.js module
 
 ### Types
 
