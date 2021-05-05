@@ -47,52 +47,9 @@ dotnet-aspnet-codegenerator -p . controller --help
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 5.0.1
 ```
 
-## Library
+## API
 
-### [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json?view=netcore-3.1)
-
-[Nested using statements in C#](https://stackoverflow.com/q/1329739/1366033)
-
-```cs
-using (StreamReader outFile = new StreamReader(outputFile.OpenRead()))
-using (StreamReader expFile = new StreamReader(expectedFile.OpenRead()))
-{
-    ///...
-}
-```
-
-[How can I call an async method in Main?](https://stackoverflow.com/a/13003483/1366033)
-
-```cs
-static async Task Main(string[] args)
-{
-    test t = new test();
-    await t.Go();
-    Console.WriteLine("finished");
-    Console.ReadKey();
-}
-```
-
-[Using declarations - C#8](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#using-declarations)
-
-```cs
-static int WriteLinesToFile(IEnumerable<string> lines)
-{
-    using var file = new System.IO.StreamWriter("WriteLines2.txt");
-    file.WriteLine(line);
-}
-```
-
-[How do I download zip file in C#?](https://stackoverflow.com/a/62865681/1366033)
-
-```cs
-using var httpClient = new HttpClient();
-httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("C# App");
-```
-
-### HttpClient
-
-[How do I set a default User Agent on an HttpClient?](https://stackoverflow.com/q/44076962/1366033)
+* [`System.Text.Json`](https://docs.microsoft.com/en-us/dotnet/api/system.text.json?view=netcore-3.1)
 
 
 
@@ -181,10 +138,42 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 }
 ```
 
+## Static Analysis
+
+### Microsoft
+
+* [Code analysis for managed code](https://docs.microsoft.com/en-us/visualstudio/code-quality/code-analysis-for-managed-code-overview?view=vs-2019)
+* [Analyzer configuration](https://docs.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2019)
+  * [Convert an existing Ruleset file to EditorConfig file](https://docs.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2019#convert-an-existing-ruleset-file-to-editorconfig-file)
+* [Code analysis rule sets](https://docs.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2019)
+* [Create a custom code analysis rule set](https://docs.microsoft.com/en-us/visualstudio/code-quality/how-to-create-a-custom-rule-set?view=vs-2019)
+
+* Microsoft.NetCore.Analyzers
+* Microsoft.NetFramework.Analyzers
+* Microsoft.CodeQuality.Analyzers
+* Microsoft.CodeAnalysis.VersionCheckAnalyzer
+* Microsoft.CodeAnalysis.FXCopAnalyzer
+
+### StyleCop / FX Cop
+
+* Nuget
+  * [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)
+  * [StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers/1.2.0-beta.333)
+* Github
+  * [dotnet/roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers)
+  * [DotNetAnalyzers/StyleCopAnalyzers](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)
+* Docs
+  * [Enable or install first-party .NET analyzers](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers?view=vs-2019)
 
 
+### Resharper
 
-
+* Features
+  * [Code Analysis with Error Checking & Code Annotations](https://www.jetbrains.com/resharper/features/code_analysis.html)
+  * [ReSharper by Language - C#](https://www.jetbrains.com/help/resharper/Languages_CSharp.html)
+* Docs
+  * [Code Analysis](https://www.jetbrains.com/help/resharper/Code_Analysis__Index.html)
+  * [Find Code Issues with Code Inspection](https://www.jetbrains.com/help/resharper/Finding_Code_Issues.html)
 
 ## Github
 
@@ -216,5 +205,44 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 * [Difference between ApiController and Controller in ASP.NET MVC](https://stackoverflow.com/q/9494966/1366033)
 
 
+* [How do I set a default User Agent on an HttpClient?](https://stackoverflow.com/q/44076962/1366033)
 
 
+* [Nested using statements in C#](https://stackoverflow.com/q/1329739/1366033)
+
+  ```cs
+  using (StreamReader outFile = new StreamReader(outputFile.OpenRead()))
+  using (StreamReader expFile = new StreamReader(expectedFile.OpenRead()))
+  {
+      ///...
+  }
+  ```
+
+* [How can I call an async method in Main?](https://stackoverflow.com/a/13003483/1366033)
+
+  ```cs
+  static async Task Main(string[] args)
+  {
+      test t = new test();
+      await t.Go();
+      Console.WriteLine("finished");
+      Console.ReadKey();
+  }
+  ```
+
+* [Using declarations - C#8](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#using-declarations)
+
+  ```cs
+  static int WriteLinesToFile(IEnumerable<string> lines)
+  {
+      using var file = new System.IO.StreamWriter("WriteLines2.txt");
+      file.WriteLine(line);
+  }
+  ```
+
+* [How do I download zip file in C#?](https://stackoverflow.com/a/62865681/1366033)
+
+  ```cs
+  using var httpClient = new HttpClient();
+  httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("C# App");
+  ```

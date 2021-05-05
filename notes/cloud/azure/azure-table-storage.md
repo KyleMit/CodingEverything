@@ -101,3 +101,11 @@ Configuration.GetConnectionString("DefaultConnection")
   string new = HttpUtility.UrlDecode(key);
   ```
 
+* [How to get all rows in Azure table Storage in C#?](https://stackoverflow.com/q/23940246/1366033)
+
+  ```cs
+  var acc = new CloudStorageAccount(new StorageCredentials("account name", "account key"), true);
+  var tableClient = acc.CreateCloudTableClient();
+  var table = tableClient.GetTableReference("table name");
+  var entities = table.ExecuteQuery(new TableQuery<MyEntity>()).ToList();
+  ```

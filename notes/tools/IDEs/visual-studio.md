@@ -50,10 +50,9 @@ C:\Windows\system32\cmd.exe \
 $env:VSAPPIDDIR
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll
-
 ```
 
-
+### Enter-VSDevShell
 
 
 * [Using Enter-VsDevShell in PowerShell consoles](https://intellitect.com/enter-vsdevshell-powershell/)
@@ -61,7 +60,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   * [Microsoft.VisualStudio.DevShell doesn't work with PowerShell Core](https://developercommunity.visualstudio.com/t/microsoftvisualstudiodevshell-doesnt-work-with-pow/663594)
 * [Command-line shells & prompt for developers](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2019)
 
+### Nuget Command Line
 
+* [Install and manage NuGet packages using the console in Visual Studio](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell)
+* [Installing NuGet client tools](https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools)
+* [Package Manager Console](https://nuget-tutorial.net/en/tutorial/100009/package-manager-console)
 
 
 

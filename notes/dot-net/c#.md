@@ -39,6 +39,13 @@
   }
   ```
 
+### C#8
+
+* **Pattern Matching**
+
+  * [Pattern Matching in C# 8.0](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/may/csharp-8-0-pattern-matching-in-csharp-8-0)
+  * [Pattern matching overview - C# guide](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching)
+
 ### C# 9
 
 [What's new in C# 9.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)
@@ -63,4 +70,6 @@
   var inVal = "1, 2, 3";
   var outVal = $" foo {{{inVal}}}";
   ```
+
+
 

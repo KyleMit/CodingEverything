@@ -99,13 +99,38 @@ The react-scripts package provided by Create React App requires a dependency:
 * [webpack-manifest-plugin](https://www.npmjs.com/package/webpack-manifest-plugin)
 * [workbox-webpack-plugin](https://www.npmjs.com/package/workbox-webpack-plugin)
 
-## Customize  CRA
+## Typescript Starter
+
+[Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/)
+
+```bash
+npx create-react-app my-app --template typescript
+npx create-react-app my-app --template simple-types
+```
+
+## Debug
+
+[Live edit and debug your React apps directly from VS Code](https://medium.com/@auchenberg/live-edit-3da489ed905f)
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}/src"
+        }
+    ]
+}
+```
+
+## Customize CRA / Template
 
 * [**react-app-rewired**](https://github.com/timarney/react-app-rewired)
 * [**customize-cra**](https://github.com/arackaf/customize-cra)
-
-## Custom Template
-
 
 * [How to create custom Create React App (CRA) templates](https://alexgrischuk.medium.com/cra-templates-73a5196edeb)
 * [Custom Templates](https://create-react-app.dev/docs/custom-templates/)
