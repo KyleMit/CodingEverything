@@ -25,7 +25,7 @@ Here's a quick way to temporarily allow a page to deselect radio buttons by pres
     });
     ```
 
-5. Click Run Script (or hit <kbd>Enter</kbd>)
+5. Click Run Script (or hit <kbd>Enter ↵</kbd>)
 6. Now, to deselect a radio button just go back to the page and hold down <kbd>Ctrl</kbd> and click with your mouse.
 
 ### Screenshot

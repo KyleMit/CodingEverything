@@ -138,43 +138,6 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 }
 ```
 
-## Static Analysis
-
-### Microsoft
-
-* [Code analysis for managed code](https://docs.microsoft.com/en-us/visualstudio/code-quality/code-analysis-for-managed-code-overview?view=vs-2019)
-* [Analyzer configuration](https://docs.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2019)
-  * [Convert an existing Ruleset file to EditorConfig file](https://docs.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2019#convert-an-existing-ruleset-file-to-editorconfig-file)
-* [Code analysis rule sets](https://docs.microsoft.com/en-us/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules?view=vs-2019)
-* [Create a custom code analysis rule set](https://docs.microsoft.com/en-us/visualstudio/code-quality/how-to-create-a-custom-rule-set?view=vs-2019)
-
-* Microsoft.NetCore.Analyzers
-* Microsoft.NetFramework.Analyzers
-* Microsoft.CodeQuality.Analyzers
-* Microsoft.CodeAnalysis.VersionCheckAnalyzer
-* Microsoft.CodeAnalysis.FXCopAnalyzer
-
-### StyleCop / FX Cop
-
-* Nuget
-  * [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)
-  * [StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers/1.2.0-beta.333)
-* Github
-  * [dotnet/roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers)
-  * [DotNetAnalyzers/StyleCopAnalyzers](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)
-* Docs
-  * [Enable or install first-party .NET analyzers](https://docs.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers?view=vs-2019)
-
-
-### Resharper
-
-* Features
-  * [Code Analysis with Error Checking & Code Annotations](https://www.jetbrains.com/resharper/features/code_analysis.html)
-  * [ReSharper by Language - C#](https://www.jetbrains.com/help/resharper/Languages_CSharp.html)
-* Docs
-  * [Code Analysis](https://www.jetbrains.com/help/resharper/Code_Analysis__Index.html)
-  * [Find Code Issues with Code Inspection](https://www.jetbrains.com/help/resharper/Finding_Code_Issues.html)
-
 ## Github
 
 [Github API v3 - User agent required](https://developer.github.com/v3/#user-agent-required)

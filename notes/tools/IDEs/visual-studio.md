@@ -1,6 +1,5 @@
 # Visual Studio
 
-Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references)
 
 ## Alternatives
 
@@ -8,23 +7,16 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 
 ## Editor
 
-### Paste JSON as Class
+* Paste JSON as Class
 
-## Debugger
+## Keyboard Shortcuts
 
-[Is there any way to set environment variables in Visual Studio Code?](https://stackoverflow.com/a/55325890/1366033)
+[Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
 
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch",
-      "envFile": "${workspaceFolder}/.env"
-    }
-  ]
-}
-```
+* <kbd>Ctrl</kbd> + <kbd>.</kbd> - [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions?view=vs-2019)
+* <kbd>Shift</kbd> + <kbd>F12</kbd> - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references)
+* <kbd>F1</kbd> - Help Docs
+* <kbd>Alt</kbd> + <kbd>Z</kbd> - Toggle Word Wrap
 
 
 ## VS Terminal
@@ -72,22 +64,33 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
 
+
 ## Resources
 
-[Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+* [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+* [Increase your .NET Productivity with Visual Studio 2019](https://www.youtube.com/watch?v=mg2aocZA9Pc)
 
-## ReSharper
 
-[What’s New in ReSharper 2021.1](https://www.jetbrains.com/resharper/whatsnew/)
+## Exetensions
 
-* Default Navigation Action for Compiled Code
-  * Decompiled Sources
-  * .NET Framework Sources
-  * Object Browser
-  * Assembly Explorer
-  * Metadata View
+* [aka.ms/extendvs](https://visualstudio.microsoft.com/vs/features/extend/)
+  * [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) - Extensions for Visual Studio family of products
 
-* [Naming Style](https://www.jetbrains.com/help/resharper/Coding_Assistance__Naming_Style.html)
+* [VSColorOutput](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput)
+* [Code alignment](https://marketplace.visualstudio.com/items?itemName=cpmcgrath.Codealignment)
+* [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)
+
+### Productivity Power Tools (PPT)
+
+> A set of Visual Studio extensions improving developer productivity
+
+* [Productivity Power Tools 2017/2019](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017)
+  * [microsoft/VS-PPT](https://github.com/Microsoft/VS-PPT)
+
+* [Power Commands for Visual Studio - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)
+* [Quick Launch Tasks - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.QuickLaunchTasks)
+* [Double-Click Maximize - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.Double-ClickMaximize)
+
 
 
 ## Questions
@@ -120,3 +123,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
   Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabsj
+
+* [Customize Menu Bar location](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio?view=vs-2019)
+
+  Tools > Customize > Commands > Menu Bar > Reorder Items
+

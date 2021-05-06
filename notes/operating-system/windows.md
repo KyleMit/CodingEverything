@@ -22,8 +22,8 @@
 
 [Keyboard shortcut to open a link in a new tab?](https://superuser.com/a/1550627/180163)
 
-<kbd>Ctrl</kbd> + <kbd>Enter</kbd> - open link in new tab (stay on current tab)
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> - open link in new tab (switch to new tab)
+<kbd>Ctrl</kbd> + <kbd>Enter ↵</kbd> - open link in new tab (stay on current tab)
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter ↵</kbd> - open link in new tab (switch to new tab)
 
 [The 3 Best Ways to Make a Window Always-on-Top on Windows](https://www.howtogeek.com/196958/the-3-best-ways-to-make-a-window-always-on-top-on-windows/)
 

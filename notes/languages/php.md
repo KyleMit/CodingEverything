@@ -90,3 +90,11 @@ php composer.phar install
     echo $this->val;     // outputs "howdy"
     echo $this->{"val"}; // outputs "howdy"
     ```
+
+
+* `isset` vs `array_key_exists`
+
+  * [What's the difference between isset() and array_key_exists()?](https://stackoverflow.com/q/3210935/1366033)
+  * [What's quicker and better to determine if an array key exists in PHP?](https://stackoverflow.com/q/700227/1366033)
+
+
