@@ -19,3 +19,9 @@
   ```
 
 * [Connect MySQL Workbench to Azure Database for MySQL](https://docs.microsoft.com/en-us/azure/mysql/connect-workbench)
+
+* [Error 1046 No database Selected](https://stackoverflow.com/q/4005409/1366033)
+
+  ```sql
+  USE database_name;
+  ```

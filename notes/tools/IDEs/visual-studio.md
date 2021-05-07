@@ -68,8 +68,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 ## Resources
 
 * [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
-* [Increase your .NET Productivity with Visual Studio 2019](https://www.youtube.com/watch?v=mg2aocZA9Pc)
-
+  * [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)
+* [Microsoft Visual Studio](https://www.youtube.com/channel/UChqrDOwARrxdJF-ykAptc7w)
+  * [Increase your .NET Productivity with Visual Studio 2019](https://www.youtube.com/watch?v=mg2aocZA9Pc)
+* [Visual Studio Magazine](https://visualstudiomagazine.com/Home.aspx)
+  * [After Last 2020 VS Code Update, What's In Store for 2021?](https://visualstudiomagazine.com/articles/2020/12/16/vs-code-nov20.aspx)
 
 ## Exetensions
 
