@@ -29,6 +29,11 @@
   * [Permissions lookup guide for Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/security/permissions-lookup-guide?view=azure-devops)
   * [Set permissions at the project- or collection-level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/set-project-collection-level-permissions?view=azure-devops&tabs=preview-page)
 
+
+## Release Notes
+
+* [Sprint 186 - May 4th](https://docs.microsoft.com/en-us/azure/devops/release-notes/2021/sprint-186-update)
+
 ## Repos
 
 [Browse code, download code](https://docs.microsoft.com/en-us/azure/devops/organizations/public/browse-code-public?view=azure-devops)

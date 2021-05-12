@@ -71,5 +71,8 @@
   var outVal = $" foo {{{inVal}}}";
   ```
 
+* [Check if element at position [x] exists in the list](https://stackoverflow.com/q/3949113/1366033)
 
-
+  ```cs
+  list.ElementAtOrDefault(2)
+  ```
