@@ -1,5 +1,11 @@
 # App Insights
 
+
+## Docs
+
+* [Snapshot Debugger for .NET apps](https://docs.microsoft.com/en-us/azure/azure-monitor/app/snapshot-debugger)
+  * [Configure BYOS (Bring Your Own Storage) for Profiler & Snapshot Debugger - Azure Monitor | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-monitor/app/profiler-bring-your-own-storage)
+
 ## Query App Insights
 
 * [Use the Application Insights REST API to build custom solutions](https://dev.applicationinsights.io/)

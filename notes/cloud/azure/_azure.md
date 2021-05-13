@@ -8,6 +8,8 @@
 
 ![azure portal view](/assets/notes/azure/azure-portal-view.png)
 
+* [Add, remove, and arrange favorites in Azure portal](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-add-remove-sort-favorites)
+
 
 ## Azure DevOps or Github Actions
 
