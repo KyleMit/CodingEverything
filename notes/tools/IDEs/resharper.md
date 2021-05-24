@@ -58,6 +58,10 @@ resharper_csharp_keep_blank_lines_in_code = 1
 resharper_csharp_keep_blank_lines_in_declarations = 1
 ```
 
+## Code Inspections
+
+* [Compiler Warning (level 4) CS1591](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1591) - Missing XML comment for publicly visible type or member 'Type_or_Member'
+
 ## Show Resharper Warnings
 
 * [Code Inspections](https://www.jetbrains.com/help/resharper/Code_Analysis__Code_Inspections.html)

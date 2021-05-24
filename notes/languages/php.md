@@ -10,6 +10,18 @@
 * [Getting Started](https://www.php.net/manual/en/tutorial.firstpage.php)
 * [Language Reference](https://www.php.net/manual/en/langref.php)
 
+* Types
+  * [Type declarations](https://www.php.net/manual/en/language.types.declarations.php)
+
+* Functions
+  * [Returning values](https://www.php.net/manual/en/functions.returning-values.php)
+
+* Variable Handling Functions
+  * [`var_dump`](https://www.php.net/manual/en/function.var-dump.php) - Dumps information about a variable
+
+* Error Handling Functions
+  * [`error_log`](https://www.php.net/manual/en/function.error-log.php) - Send an error message to the defined error handling routines
+
 ## Syntax
 
 > A PHP script starts with `<?php` and ends with `?>`
@@ -97,4 +109,26 @@ php composer.phar install
   * [What's the difference between isset() and array_key_exists()?](https://stackoverflow.com/q/3210935/1366033)
   * [What's quicker and better to determine if an array key exists in PHP?](https://stackoverflow.com/q/700227/1366033)
 
+
+* [Are "elseif" and "else if" synonymous](https://stackoverflow.com/q/3662412/1366033)
+
+  They're pretty much the same
+
+* [Nullable return types in PHP7](https://stackoverflow.com/q/33608821/1366033)
+
+  ```php
+  function nullOrString(int $foo) : ?string
+  {
+      return $foo%2 ? "odd" : null;
+  }
+  ``
+
+
+* [How to select the whole variable name including `$` in Visual Studio Code in PHP?](https://stackoverflow.com/q/55931937/1366033)
+
+  ```json
+  "[php]": {
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+  },
+  ```
 

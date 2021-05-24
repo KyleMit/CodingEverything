@@ -13,10 +13,16 @@
 
 [Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
 
-* <kbd>Ctrl</kbd> + <kbd>.</kbd> - [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions?view=vs-2019)
-* <kbd>Shift</kbd> + <kbd>F12</kbd> - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references)
+* <kbd>Ctrl</kbd> + <kbd>.</kbd> - [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions?view=vs-2019) (`View.QuickActions`)
+* <kbd>Shift</kbd> + <kbd>F12</kbd> - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references) (`ReSharper.Resharper_FindUsages`)
 * <kbd>F1</kbd> - Help Docs
-* <kbd>Alt</kbd> + <kbd>Z</kbd> - Toggle Word Wrap
+* <kbd>Alt</kbd> + <kbd>Z</kbd> - Toggle Word Wrap (`Edit.ToggleWordWrap`)
+
+* <kbd>Ctrl</kbd> + <kbd>,</kbd> - Open Settings (`Tools.Options`)
+* <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>S</kbd> - Open Keyboard Settings (`Tools.CustomizeKeyboard`)
+
+* <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Move Lines Up (`Edit.MoveSelectedLinesUp`)
+* <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
 
 ## VS Terminal
@@ -74,7 +80,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Visual Studio Magazine](https://visualstudiomagazine.com/Home.aspx)
   * [After Last 2020 VS Code Update, What's In Store for 2021?](https://visualstudiomagazine.com/articles/2020/12/16/vs-code-nov20.aspx)
 
-## Exetensions
+## Extensions
 
 * [aka.ms/extendvs](https://visualstudio.microsoft.com/vs/features/extend/)
   * [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) - Extensions for Visual Studio family of products
@@ -125,9 +131,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
-  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabsj
+  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabs
 
 * [Customize Menu Bar location](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio?view=vs-2019)
 
   Tools > Customize > Commands > Menu Bar > Reorder Items
+
+* [Keyboard shortcut to move line up/down in Visual Studio 2012?](https://superuser.com/a/1650238/180163)
 

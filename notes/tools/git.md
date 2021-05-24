@@ -146,3 +146,17 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
   * [Bring your monorepo down to size with sparse-checkout - The GitHub Blog](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/)
 
 * [Git Clone - Just the files, please?](https://stackoverflow.com/q/3946538/1366033)
+
+* [How to make Git "forget" about a file that was tracked but is now in .gitignore?](https://stackoverflow.com/q/1274057/1366033)
+
+  ```bash
+  git rm -r --cached .
+  git add .
+  git commit -am "Remove ignored files"
+  ```
+
+* [How to remove local (untracked) files from the current Git working tree](https://stackoverflow.com/q/61212/1366033)
+
+  ```bash
+  git clean -dfx
+  ```

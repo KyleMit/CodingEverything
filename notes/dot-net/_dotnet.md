@@ -209,3 +209,10 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   using var httpClient = new HttpClient();
   httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("C# App");
   ```
+
+
+* [Why is `StringValues` used for `Request.Query` values?](https://stackoverflow.com/q/48188934/1366033)
+
+
+* [How to load appsettings.json section into Dictionary in .NET Core?](https://stackoverflow.com/q/42846296/1366033)
+

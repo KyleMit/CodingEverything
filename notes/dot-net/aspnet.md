@@ -22,3 +22,18 @@
 
   Use `AddMvc()` instead of `AddMvcCore()` in `Startup.cs` and it will work.
 
+* [Best way to convert query string to dictionary in C#](https://stackoverflow.com/a/67639394/1366033)
+
+  ```cs
+  public static class HttpRequestExtensions
+  {
+    public static Dictionary<string, string> ToDictionary(this IQueryCollection query)
+    {
+      return query.Keys.ToDictionary(k => k, v => (string)query[v]);
+    }
+  }
+
+  // use it like this
+  var params = httpRequest.Query.ToDictionary()
+  ```
+
