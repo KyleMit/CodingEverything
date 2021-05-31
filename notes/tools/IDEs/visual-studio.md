@@ -7,7 +7,23 @@
 
 ## Editor
 
-* Paste JSON as Class
+* [Paste JSON and XML as a Class](https://visualstudiomagazine.com/Blogs/Tool-Tracker/2018/02/paste-json-and-xml-as-class.aspx)
+* [Go to commands](https://docs.microsoft.com/en-us/visualstudio/ide/go-to?view=vs-2019)
+
+  | Key          | Action       |
+  | ------------ | ------------ |
+  | <kbd>?</kbd> | Help         |
+  | <kbd>#</kbd> | Symbols      |
+  | <kbd>:</kbd> | Line         |
+  | <kbd>f</kbd> | Files        |
+  | <kbd>m</kbd> | Members      |
+  | <kbd>r</kbd> | Recent Files |
+  | <kbd>t</kbd> | Types        |
+
+
+  * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to All
+  * <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File
+  * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> - Toggle Current Document
 
 ## Keyboard Shortcuts
 
@@ -138,4 +154,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   Tools > Customize > Commands > Menu Bar > Reorder Items
 
 * [Keyboard shortcut to move line up/down in Visual Studio 2012?](https://superuser.com/a/1650238/180163)
+
+
+* Move "Go To All" Window to Center
+
+  ![go to all settings](/assets/notes/visual-studio/go-to-all-settings.png)
 

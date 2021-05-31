@@ -532,3 +532,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * <kbd>F8</kbd> - Go To Next Problem in Files (`editor.action.marker.nextInFiles`)
   * <kbd>Alt</kbd> + <kbd>F8</kbd> - Go To Next Problem (`editor.action.marker.next`)
 
+* Navigation
+
+  * <kbd>Ctrl</kbd> + <kbd>O</kbd> - Go to Symbols in [File](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-file)
+  * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to Symbols in [Workspace](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-workspace)

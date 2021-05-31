@@ -474,4 +474,20 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
 
   [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
 
+* [Using async/await inside a React functional component](https://stackoverflow.com/q/57847626/1366033)
+
+  From [ExhaustiveDeps](https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js#L104) linting rule:
+
+  Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
+
+  ```ts
+  useEffect(() => {
+    async function fetchData() {
+      // You can await here
+      const response = await MyAPI.getData(someId);
+      // ...
+    }
+    fetchData();
+  }, [someId]); // Or [] if effect doesn't need props or state
+  ```
 
