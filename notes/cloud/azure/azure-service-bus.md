@@ -31,3 +31,9 @@
 ## Azure Functions - `ServiceBusTrigger`
 
 * [Azure Service Bus trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus-trigger?tabs=csharp)
+
+## Tools
+
+* [Azure Service Bus explorer](https://www.cogin.com/QueueExplorer/azure-service-bus/lp.php)
+* [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer)
+

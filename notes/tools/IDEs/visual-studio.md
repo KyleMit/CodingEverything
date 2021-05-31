@@ -1,6 +1,5 @@
 # Visual Studio
 
-Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references)
 
 ## Alternatives
 
@@ -8,23 +7,38 @@ Shift + F12 - [Find All References](https://docs.microsoft.com/en-us/visualstudi
 
 ## Editor
 
-### Paste JSON as Class
+* [Paste JSON and XML as a Class](https://visualstudiomagazine.com/Blogs/Tool-Tracker/2018/02/paste-json-and-xml-as-class.aspx)
+* [Go to commands](https://docs.microsoft.com/en-us/visualstudio/ide/go-to?view=vs-2019)
 
-## Debugger
+  | Key          | Action       |
+  | ------------ | ------------ |
+  | <kbd>?</kbd> | Help         |
+  | <kbd>#</kbd> | Symbols      |
+  | <kbd>:</kbd> | Line         |
+  | <kbd>f</kbd> | Files        |
+  | <kbd>m</kbd> | Members      |
+  | <kbd>r</kbd> | Recent Files |
+  | <kbd>t</kbd> | Types        |
 
-[Is there any way to set environment variables in Visual Studio Code?](https://stackoverflow.com/a/55325890/1366033)
 
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch",
-      "envFile": "${workspaceFolder}/.env"
-    }
-  ]
-}
-```
+  * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to All
+  * <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File
+  * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> - Toggle Current Document
+
+## Keyboard Shortcuts
+
+[Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
+
+* <kbd>Ctrl</kbd> + <kbd>.</kbd> - [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions?view=vs-2019) (`View.QuickActions`)
+* <kbd>Shift</kbd> + <kbd>F12</kbd> - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references) (`ReSharper.Resharper_FindUsages`)
+* <kbd>F1</kbd> - Help Docs
+* <kbd>Alt</kbd> + <kbd>Z</kbd> - Toggle Word Wrap (`Edit.ToggleWordWrap`)
+
+* <kbd>Ctrl</kbd> + <kbd>,</kbd> - Open Settings (`Tools.Options`)
+* <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>S</kbd> - Open Keyboard Settings (`Tools.CustomizeKeyboard`)
+
+* <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Move Lines Up (`Edit.MoveSelectedLinesUp`)
+* <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
 
 ## VS Terminal
@@ -50,10 +64,9 @@ C:\Windows\system32\cmd.exe \
 $env:VSAPPIDDIR
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll
-
 ```
 
-
+### Enter-VSDevShell
 
 
 * [Using Enter-VsDevShell in PowerShell consoles](https://intellitect.com/enter-vsdevshell-powershell/)
@@ -61,7 +74,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   * [Microsoft.VisualStudio.DevShell doesn't work with PowerShell Core](https://developercommunity.visualstudio.com/t/microsoftvisualstudiodevshell-doesnt-work-with-pow/663594)
 * [Command-line shells & prompt for developers](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2019)
 
+### Nuget Command Line
 
+* [Install and manage NuGet packages using the console in Visual Studio](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell)
+* [Installing NuGet client tools](https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools)
+* [Package Manager Console](https://nuget-tutorial.net/en/tutorial/100009/package-manager-console)
 
 
 
@@ -69,22 +86,36 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
 
+
 ## Resources
 
-[Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+* [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+  * [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)
+* [Microsoft Visual Studio](https://www.youtube.com/channel/UChqrDOwARrxdJF-ykAptc7w)
+  * [Increase your .NET Productivity with Visual Studio 2019](https://www.youtube.com/watch?v=mg2aocZA9Pc)
+* [Visual Studio Magazine](https://visualstudiomagazine.com/Home.aspx)
+  * [After Last 2020 VS Code Update, What's In Store for 2021?](https://visualstudiomagazine.com/articles/2020/12/16/vs-code-nov20.aspx)
 
-## ReSharper
+## Extensions
 
-[What’s New in ReSharper 2021.1](https://www.jetbrains.com/resharper/whatsnew/)
+* [aka.ms/extendvs](https://visualstudio.microsoft.com/vs/features/extend/)
+  * [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) - Extensions for Visual Studio family of products
 
-* Default Navigation Action for Compiled Code
-  * Decompiled Sources
-  * .NET Framework Sources
-  * Object Browser
-  * Assembly Explorer
-  * Metadata View
+* [VSColorOutput](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput)
+* [Code alignment](https://marketplace.visualstudio.com/items?itemName=cpmcgrath.Codealignment)
+* [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)
 
-* [Naming Style](https://www.jetbrains.com/help/resharper/Coding_Assistance__Naming_Style.html)
+### Productivity Power Tools (PPT)
+
+> A set of Visual Studio extensions improving developer productivity
+
+* [Productivity Power Tools 2017/2019](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017)
+  * [microsoft/VS-PPT](https://github.com/Microsoft/VS-PPT)
+
+* [Power Commands for Visual Studio - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)
+* [Quick Launch Tasks - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.QuickLaunchTasks)
+* [Double-Click Maximize - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.Double-ClickMaximize)
+
 
 
 ## Questions
@@ -116,4 +147,16 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
-  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabsj
+  Options > Environment > Tabs and Windows > Insert New Tabs to the Right of Existing Tabs
+
+* [Customize Menu Bar location](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio?view=vs-2019)
+
+  Tools > Customize > Commands > Menu Bar > Reorder Items
+
+* [Keyboard shortcut to move line up/down in Visual Studio 2012?](https://superuser.com/a/1650238/180163)
+
+
+* Move "Go To All" Window to Center
+
+  ![go to all settings](/assets/notes/visual-studio/go-to-all-settings.png)
+

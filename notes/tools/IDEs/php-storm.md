@@ -12,7 +12,7 @@
 * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> - Find Action (command palette)
 * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> - Find Files
 
-* <kbd>Alt</kbd> +  <kbd>Enter</kbd> - Show intention actions / quick fixes
+* <kbd>Alt</kbd> +  <kbd>Enter ↵</kbd> - Show intention actions / quick fixes
 * <kbd>F2</kbd> - Navigate between code issues
 
 * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd> - Reformat Code
@@ -57,7 +57,7 @@
 
 * [Add jsdoc comments](https://www.jetbrains.com/help/phpstorm/creating-jsdoc-comments.html)
 
-  Type the opening block comment `/**` , and press <kbd>Enter</kbd>
+  Type the opening block comment `/**` , and press <kbd>Enter ↵</kbd>
 
 * [Are VS code keybindings available for IntelliJ Idea?](https://stackoverflow.com/q/47748433/1366033)
 

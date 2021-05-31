@@ -178,6 +178,19 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 ## Questions
 
+* [Is there any way to set environment variables in Visual Studio Code?](https://stackoverflow.com/a/55325890/1366033)
+
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch",
+        "envFile": "${workspaceFolder}/.env"
+      }
+    ]
+  }
+  ```
 
 * [Show project folder in title bar for Visual Studio Code](https://stackoverflow.com/q/38483687/1366033)
 
@@ -459,7 +472,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [Select each occurrence of find](https://stackoverflow.com/q/35992145/1366033)
 
   <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> - `editor.action.selectHighlights`
-  <kbd>Alt</kbd> + <kbd>Enter</kbd> - `editor.action.selectAllMatches`
+  <kbd>Alt</kbd> + <kbd>Enter ↵</kbd> - `editor.action.selectAllMatches`
 
 
   Added via [Add selectAllMatches command in column selection mode. #5715](https://github.com/microsoft/vscode/pull/5715)
@@ -519,3 +532,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * <kbd>F8</kbd> - Go To Next Problem in Files (`editor.action.marker.nextInFiles`)
   * <kbd>Alt</kbd> + <kbd>F8</kbd> - Go To Next Problem (`editor.action.marker.next`)
 
+* Navigation
+
+  * <kbd>Ctrl</kbd> + <kbd>O</kbd> - Go to Symbols in [File](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-file)
+  * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to Symbols in [Workspace](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-workspace)

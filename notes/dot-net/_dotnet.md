@@ -47,52 +47,9 @@ dotnet-aspnet-codegenerator -p . controller --help
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 5.0.1
 ```
 
-## Library
+## API
 
-### [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json?view=netcore-3.1)
-
-[Nested using statements in C#](https://stackoverflow.com/q/1329739/1366033)
-
-```cs
-using (StreamReader outFile = new StreamReader(outputFile.OpenRead()))
-using (StreamReader expFile = new StreamReader(expectedFile.OpenRead()))
-{
-    ///...
-}
-```
-
-[How can I call an async method in Main?](https://stackoverflow.com/a/13003483/1366033)
-
-```cs
-static async Task Main(string[] args)
-{
-    test t = new test();
-    await t.Go();
-    Console.WriteLine("finished");
-    Console.ReadKey();
-}
-```
-
-[Using declarations - C#8](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#using-declarations)
-
-```cs
-static int WriteLinesToFile(IEnumerable<string> lines)
-{
-    using var file = new System.IO.StreamWriter("WriteLines2.txt");
-    file.WriteLine(line);
-}
-```
-
-[How do I download zip file in C#?](https://stackoverflow.com/a/62865681/1366033)
-
-```cs
-using var httpClient = new HttpClient();
-httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("C# App");
-```
-
-### HttpClient
-
-[How do I set a default User Agent on an HttpClient?](https://stackoverflow.com/q/44076962/1366033)
+* [`System.Text.Json`](https://docs.microsoft.com/en-us/dotnet/api/system.text.json?view=netcore-3.1)
 
 
 
@@ -181,11 +138,6 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 }
 ```
 
-
-
-
-
-
 ## Github
 
 [Github API v3 - User agent required](https://developer.github.com/v3/#user-agent-required)
@@ -216,5 +168,51 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 * [Difference between ApiController and Controller in ASP.NET MVC](https://stackoverflow.com/q/9494966/1366033)
 
 
+* [How do I set a default User Agent on an HttpClient?](https://stackoverflow.com/q/44076962/1366033)
 
+
+* [Nested using statements in C#](https://stackoverflow.com/q/1329739/1366033)
+
+  ```cs
+  using (StreamReader outFile = new StreamReader(outputFile.OpenRead()))
+  using (StreamReader expFile = new StreamReader(expectedFile.OpenRead()))
+  {
+      ///...
+  }
+  ```
+
+* [How can I call an async method in Main?](https://stackoverflow.com/a/13003483/1366033)
+
+  ```cs
+  static async Task Main(string[] args)
+  {
+      test t = new test();
+      await t.Go();
+      Console.WriteLine("finished");
+      Console.ReadKey();
+  }
+  ```
+
+* [Using declarations - C#8](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#using-declarations)
+
+  ```cs
+  static int WriteLinesToFile(IEnumerable<string> lines)
+  {
+      using var file = new System.IO.StreamWriter("WriteLines2.txt");
+      file.WriteLine(line);
+  }
+  ```
+
+* [How do I download zip file in C#?](https://stackoverflow.com/a/62865681/1366033)
+
+  ```cs
+  using var httpClient = new HttpClient();
+  httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("C# App");
+  ```
+
+
+* [Why is `StringValues` used for `Request.Query` values?](https://stackoverflow.com/q/48188934/1366033)
+
+
+* [How to load appsettings.json section into Dictionary in .NET Core?](https://stackoverflow.com/q/42846296/1366033)
 

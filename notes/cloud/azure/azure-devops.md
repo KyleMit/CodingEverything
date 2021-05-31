@@ -10,24 +10,39 @@
 * [Get started as a Stakeholder](https://docs.microsoft.com/en-us/azure/devops/organizations/security/get-started-stakeholder?view=azure-devops&tabs=agile-process)
 * [DevOps Starter](https://docs.microsoft.com/en-us/azure/devops-project/)
 * [Capability Maturity Model Integration (CMMI) process](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/cmmi-process?view=azure-devops)
-* [Plan and Track Work](https://docs.microsoft.com/en-us/azure/devops/boards/get-started/plan-track-work?view=azure-devops&tabs=agile-process)
+* [Keyboard shortcuts for web portal](https://docs.microsoft.com/en-us/azure/devops/project/navigation/keyboard-shortcuts?view=azure-devops)
+
+### Plan & Track Work
+
+[Plan and Track Work](https://docs.microsoft.com/en-us/azure/devops/boards/get-started/plan-track-work?view=azure-devops&tabs=agile-process)
+
 * Configure & Customize
   * [About area and iteration (sprint) paths](https://docs.microsoft.com/en-us/azure/devops/organizations/settings/work/add-custom-wit?view=azure-devops)
   * [Customize your work tracking experience](https://docs.microsoft.com/en-us/azure/devops/reference/customize-work?view=azure-devops)
   * [Customize a Workflow](https://docs.microsoft.com/en-us/azure/devops/organizations/settings/work/customize-process-workflow?view=azure-devops)
   * [Show bugs on backlogs and boards](https://docs.microsoft.com/en-us/azure/devops/organizations/settings/show-bugs-on-backlog?view=azure-devops)
+
 * Kanban Board Basics
   * [Kanban basics](https://docs.microsoft.com/en-us/azure/devops/boards/boards/kanban-basics?view=azure-devops)
+
 * Collaborate with Others
   * [Add work item tags to categorize and filter lists and boards](https://docs.microsoft.com/en-us/azure/devops/boards/queries/add-tags-to-work-items?view=azure-devops)
+
 * Sprints & Scrum
   * [Schedule Sprints](https://docs.microsoft.com/en-us/azure/devops/boards/sprints/define-sprints?view=azure-devops)
+
 * Queries & Search
   * [Create and save managed queries](https://docs.microsoft.com/en-us/azure/devops/boards/queries/using-queries?view=azure-devops)
+
 * Security, Access, & Identity
   * [About Permissions & Groups](https://docs.microsoft.com/en-us/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page)
   * [Permissions lookup guide for Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/security/permissions-lookup-guide?view=azure-devops)
   * [Set permissions at the project- or collection-level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/set-project-collection-level-permissions?view=azure-devops&tabs=preview-page)
+
+
+## Release Notes
+
+* [Sprint 186 - May 4th](https://docs.microsoft.com/en-us/azure/devops/release-notes/2021/sprint-186-update)
 
 ## Repos
 

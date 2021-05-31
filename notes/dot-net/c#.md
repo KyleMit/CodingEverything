@@ -2,6 +2,23 @@
 
 ## Version History
 
+### C#3
+
+* **Object and Collection Initializers**
+
+  [26.4 Object and Collection Initializers](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/bb308966(v=msdn.10)#264-object-and-collection-initializers)
+
+  ```cs
+  // syntactic sugar
+  var a = new Point { X = 0, Y = 1 };
+
+  // same as
+  var __a = new Point();
+  __a.X = 0;
+  __a.Y = 1;
+  var a = __a;
+  ```
+
 ### C#6
 
 * **Exception Filters**
@@ -13,6 +30,19 @@
       …
   }
   ```
+
+* **Dictionary Initializers** / **Index Initializers**
+
+  [Index Initializers](https://docs.microsoft.com/en-us/xamarin/cross-platform/platform/csharp-six#index-initializers)
+
+  ```cs
+  var userInfo = new NSMutableDictionary {
+      ["Created"] = NSDate.Now,
+      ["Due"] = NSDate.Now.AddSeconds(60 * 60 * 24),
+      ["Task"] = Description
+  };
+  ```
+
 
 ### C#7
 
@@ -39,6 +69,24 @@
   }
   ```
 
+* **out variables**
+
+  * [inline `out` variables](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#out-variables)
+
+  ```cs
+  if (int.TryParse(input, out int result))
+      Console.WriteLine(result);
+  else
+      Console.WriteLine("Could not parse input");
+  ```
+
+### C#8
+
+* **Pattern Matching**
+
+  * [Pattern Matching in C# 8.0](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/may/csharp-8-0-pattern-matching-in-csharp-8-0)
+  * [Pattern matching overview - C# guide](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching)
+
 ### C# 9
 
 [What's new in C# 9.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9)
@@ -53,6 +101,8 @@
 
 * [**Constant interpolated strings**](https://github.com/dotnet/csharplang/issues/2951)
 
+
+
 ## Questions
 
 * [How to escape braces (curly brackets) in a format string](https://stackoverflow.com/q/91362/1366033)
@@ -64,3 +114,40 @@
   var outVal = $" foo {{{inVal}}}";
   ```
 
+* [Check if element at position [x] exists in the list](https://stackoverflow.com/q/3949113/1366033)
+
+  ```cs
+  list.ElementAtOrDefault(2)
+  ```
+
+
+* [Initialize Array](https://stackoverflow.com/q/5678216/1366033)
+
+
+  ```cs
+  new int[] { 10, 20, 30 }
+  new[] { 10, 20, 30 }
+  ```
+
+
+* [Initialize Dictionary](https://stackoverflow.com/q/17047602/1366033)
+
+
+```cs
+var dict1 = new Dictionary<istringnt, string>();
+dict.Add("key1", "value1");
+dict.Add("key2", "value2");
+
+var dict2 = new Dictionary<string, string>
+{
+    { "key1", "value1" },
+    { "key2", "value2" }
+};
+
+// C#6
+var dict3 = new Dictionary<string, string>
+{
+    ["key1"] = "value1",
+    ["key2"] = "value2"
+};
+```

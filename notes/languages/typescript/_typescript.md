@@ -34,6 +34,11 @@ npx tsc
 * [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
 * [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 
+## Utility Libraries
+
+* [sindresorhus/type-fest](https://github.com/sindresorhus/type-fest) - A collection of essential TypeScript types
+* [joonhocho/tsdef](https://github.com/joonhocho/tsdef) - TypeScript common pattern shortcut definitions / utility gist library
+
 ## Export a Variable
 
 [Typescript: How to export a variable](https://stackoverflow.com/q/42540745/1366033)
@@ -793,5 +798,40 @@ let z: Z = {
       ]
     }
   }
+  ```
+
+* [Get key and corresponding property type from interface in typescript](https://stackoverflow.com/a/67393876/1366033)
+
+  * `keyof T` - the **index type query operator**
+
+    > For any type `T`, `keyof T` is the union of known, public property names of `T`
+    > `keyof Car` is completely interchangeable with `"manufacturer" | "model" | "year"`
+
+  * `T[K]` - the **indexed access operator**
+
+    > `taxi["manufacturer"]` has the type `Car["manufacturer"]` — which in our example is just `string`
+
+
+  ```ts
+  const updatePerson = <K extends keyof IPerson>(key: K, value: IPerson[K]): IPerson => {
+      return {...per, [key]: value}
+  }
+
+  const updateObject = <T extends Object, U extends keyof T>(obj: T, key: U, value: T[U]) => {
+      obj[key] = value;
+  }
+  ```
+
+  [TS Playground](https://bit.ly/3hlutYD)
+
+* [What do `extends keyof` and `in keyof` mean?](https://stackoverflow.com/q/57337598/1366033)
+
+
+* [TypeScript - Deep partial](https://stackoverflow.com/q/61132262/1366033)
+
+  ```ts
+  type DeepPartial<T> = {
+      [P in keyof T]?: DeepPartial<T[P]>;
+  };
   ```
 
