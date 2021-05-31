@@ -764,6 +764,8 @@ let z: Z = {
 
 * [How to remove index signature using mapped types](https://stackoverflow.com/q/51465182/1366033)
 
+  * [TS Playground](http://bit.ly/RemoveIndex)
+
   ```ts
   interface Foo {
     [key: string]: any;

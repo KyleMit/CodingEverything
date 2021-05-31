@@ -638,3 +638,10 @@ winget install graphviz
     document.head.appendChild(style)
   }
   ```
+
+
+* [How to sort an array of integers correctly](https://stackoverflow.com/q/1063007/1366033)
+
+  ```js
+  [3,1,2].sort((a, b) => a - b)
+  ```
