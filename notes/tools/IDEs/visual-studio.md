@@ -20,14 +20,16 @@
   | <kbd>r</kbd> | Recent Files |
   | <kbd>t</kbd> | Types        |
 
-
-  * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to All
-  * <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File
-  * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> - Toggle Current Document
-
 ## Keyboard Shortcuts
 
 [Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
+
+
+
+* <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to All
+* <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> - Toggle Current Document
+
 
 * <kbd>Ctrl</kbd> + <kbd>.</kbd> - [Quick Actions](https://docs.microsoft.com/en-us/visualstudio/ide/quick-actions?view=vs-2019) (`View.QuickActions`)
 * <kbd>Shift</kbd> + <kbd>F12</kbd> - [Find All References](https://docs.microsoft.com/en-us/visualstudio/ide/finding-references) (`ReSharper.Resharper_FindUsages`)
@@ -40,6 +42,8 @@
 * <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Move Lines Up (`Edit.MoveSelectedLinesUp`)
 * <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
+<kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
 
 ## VS Terminal
 
@@ -160,3 +164,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   ![go to all settings](/assets/notes/visual-studio/go-to-all-settings.png)
 
+* [Changing Ctrl + Tab behavior for moving between documents in Visual Studio](https://stackoverflow.com/q/21027/1366033)
+
+  Use `Window.NextTab`, instead of~~NextDocumentWindow~~ or ~~NextDocumentWindowNav~~
+
+* [Multiple Rows of Tabs](https://stackoverflow.com/q/299437/1366033)
+
+  Use [Tabs Studio](https://tabsstudio.com/index.htm)

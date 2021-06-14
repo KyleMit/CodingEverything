@@ -216,3 +216,21 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
 * [How to load appsettings.json section into Dictionary in .NET Core?](https://stackoverflow.com/q/42846296/1366033)
 
+* [How can I unit test my custom validation attribute](https://stackoverflow.com/q/4666678/1366033)
+
+  ```cs
+  [Test]
+  public void AttributeTest()
+  {
+    // arrange
+    var value = //.. value to test - new Eligibility() ;
+    var attrib = new EligibilityStudentDebtsAttribute();
+
+    // act
+    var result = attrib.IsValid(value);
+
+    // assert
+    Assert.That(result, Is.True)
+  }
+  ```
+

@@ -19,6 +19,9 @@
 * [Simple Poll](https://simplepoll.rocks/)
 * [Spacetime](https://spacetime.am/)
 
+## Release History
+
+* [What’s new in Slack: simplified search, channel bookmarks and more](https://slack.com/blog/productivity/whats-new-in-slack-simplified-search-channel-bookmarks)
 
 ## Slash Commands
 
