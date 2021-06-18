@@ -47,8 +47,9 @@
 
 ## VS Terminal
 
-* [The PowerShell you know and love now with a side of Visual Studio](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
-* [Say hello to the new Visual Studio terminal!](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
+* [The PowerShell you know and love now with a side of Visual Studio - Aug, 2019](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
+* [Say hello to the new Visual Studio terminal! - Sep, 2019](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
+* [A more integrated terminal experience - Jan, 2021](https://devblogs.microsoft.com/visualstudio/a-more-integrated-terminal-experience/)
 
 * View > Terminal Window
 
@@ -89,7 +90,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 ## Release History
 
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
-
+* [VS 2019 Release Notes](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
+  * [History](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes-history)
 
 ## Resources
 
