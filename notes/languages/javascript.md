@@ -639,9 +639,24 @@ winget install graphviz
   }
   ```
 
+* [Dynamically add script tag with src](https://stackoverflow.com/q/13121948/1366033)
+
+  ```js
+  function addScript( src ) {
+    var s = document.createElement( 'script' );
+    s.setAttribute( 'src', src );
+    document.body.appendChild( s );
+  }
+  ```
 
 * [How to sort an array of integers correctly](https://stackoverflow.com/q/1063007/1366033)
 
   ```js
   [3,1,2].sort((a, b) => a - b)
+  ```
+
+* [How to compute the sum and average of elements in an array?](https://stackoverflow.com/q/10359907/1366033)
+
+  ```js
+  const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
   ```
