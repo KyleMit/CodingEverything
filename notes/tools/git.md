@@ -160,3 +160,5 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
   ```bash
   git clean -dfx
   ```
+
+* Git list status of all repos in a directory??

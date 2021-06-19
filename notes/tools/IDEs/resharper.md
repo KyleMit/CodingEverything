@@ -4,6 +4,10 @@
 
 * [Introduction](https://www.jetbrains.com/help/resharper/Introduction__Index.html)
 
+* **Navigate and Search**
+  * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - [Navigate editor tabs and tool windows](https://www.jetbrains.com/help/rider/Navigation_and_Search__Context_Dependent_Navigation.html#navigating-editor-tabs-and-tool-windows)
+
+
 ## Version History
 
 [ReSharper 2020.2: Improved Code Analysis for C# 8, Code Cleanup on Save, and Revamped Unit Test Runner | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2020/08/13/resharper-2020-2-released/)

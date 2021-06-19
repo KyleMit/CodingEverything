@@ -117,10 +117,12 @@
 * **DI** - Dependency Injection
 * **RoR** - Ruby On Rails
 * **CAD** - Computer-aided design
-* **ORMs** - Object Relational Mapping
 * **DSLs** - Domain Specific Language
 * **CICD** - Continuous Integration / Continuous Deployment
 * **IFTTT** - If This Then That
+* **ORMs** - Object Relational Mapping
+* **POCO** - Plain Old Class Object
+* **DTO** - Data Transfer Object
 
 ### Debug
 
