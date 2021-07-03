@@ -96,6 +96,10 @@
   * [Use record types - C# tutorial](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records)
   * [Records - C# reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record)
 
+* **Target-typed new expressions**
+
+  * [new operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/new-operator)
+  * [Target-typed new expressions](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/target-typed-new)
 
 ### C# 10
 
@@ -133,21 +137,59 @@
 * [Initialize Dictionary](https://stackoverflow.com/q/17047602/1366033)
 
 
-```cs
-var dict1 = new Dictionary<istringnt, string>();
-dict.Add("key1", "value1");
-dict.Add("key2", "value2");
+  ```cs
+  var dict1 = new Dictionary<string, string>();
+  dict.Add("key1", "value1");
+  dict.Add("key2", "value2");
 
-var dict2 = new Dictionary<string, string>
-{
-    { "key1", "value1" },
-    { "key2", "value2" }
-};
+  var dict2 = new Dictionary<string, string>
+  {
+      { "key1", "value1" },
+      { "key2", "value2" }
+  };
 
-// C#6
-var dict3 = new Dictionary<string, string>
-{
-    ["key1"] = "value1",
-    ["key2"] = "value2"
-};
-```
+  // C#6
+  var dict3 = new Dictionary<string, string>
+  {
+      ["key1"] = "value1",
+      ["key2"] = "value2"
+  };
+  ```
+
+* [How do I generate a random int number?](https://stackoverflow.com/q/2706500/1366033)
+
+  ```cs
+  Random rnd = new Random();
+  int month  = rnd.Next(1, 13);  // creates a number between 1 and 12
+  int dice   = rnd.Next(1, 7);   // creates a number between 1 and 6
+  int card   = rnd.Next(52);     // creates a number between 0 and 51
+  ```
+
+* [Since this is an async method, the return expression must be of type `Data` rather than `Task<Data>`](https://stackoverflow.com/q/32499698/1366033)
+
+  [`Task.FromResult`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.fromresult?view=net-5.0)
+
+  ```cs
+  public Task<Data> GetData()
+  {
+      return Task.Run(() =>
+      {
+          return obj;
+      });
+  }
+
+  public Task<Data> GetData()
+  {
+      return Task.FromResult(obj);
+  }
+  ```
+
+* [Convert array to dictionary](https://stackoverflow.com/q/1385421/1366033)
+
+  ```cs
+  using System.Linq;
+
+  string[] myArray = new[] { "A", "B", "C" };
+  myArray.ToDictionary(key => key, value => value);
+  ```
+

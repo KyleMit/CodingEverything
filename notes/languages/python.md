@@ -1,5 +1,6 @@
 # Python
 
+
 ## PIP
 
 * **PIP** - Python Package Installer
@@ -7,10 +8,14 @@
 * Upgrade PIP
 
   ```bash
-  python.exe -m pip install --upgrade pip
+  python3 -m pip install --upgrade pip
   ```
 
+* [Where does pip install its packages?](https://stackoverflow.com/q/29980798/1366033)
 
+```bash
+pip show <package name>
+```
 
 ## Questions
 
@@ -20,5 +25,22 @@
 
   ```bash
   pip install brotli --user
+  ```
+
+* [How to exit Python](https://stackoverflow.com/q/19747371/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Z</kbd>, <kbd>Enter</kbd>
+
+  or
+
+  ```py
+  exit()
+  ```
+
+* [Alias `python` to `python3`](https://askubuntu.com/q/320996/349745)
+
+
+  ```bash
+  alias python=python3
   ```
 

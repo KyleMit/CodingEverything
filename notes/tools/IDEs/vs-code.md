@@ -536,3 +536,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   * <kbd>Ctrl</kbd> + <kbd>O</kbd> - Go to Symbols in [File](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-file)
   * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to Symbols in [Workspace](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-workspace)
+
+* [How do I collapse sections of code in Visual Studio Code for Windows?](https://stackoverflow.com/q/30067767/1366033)
+
+  ```ts
+  //#region
+  //#endregion
+  ```

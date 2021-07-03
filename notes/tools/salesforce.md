@@ -478,11 +478,6 @@ WHERE permissionset.name LIKE 'Covid%'
 
 [Integrating Force.com with Microsoft .NET](https://developer.salesforce.com/wiki/integrating_force-com_with_microsoft_-net)
 
-### Connected App
-
-[Create a Connected App](https://trailhead.salesforce.com/en/content/learn/projects/build-a-connected-app-for-api-integration/create-a-connected-app)
-[Integrating C# .NET and Salesforce's REST API](https://dev.to/rachelsoderberg/integrating-c-net-and-salesforce-s-rest-api-d00)
-
 
 ### Soap
 
@@ -596,4 +591,15 @@ Debug > Open Execute Anonymous Window <kbd>Ctrl</kbd> + <kbd>E</kbd>
 
 
 [Salesforce List of Sobject with group by](https://salesforce.stackexchange.com/q/220544/69980)
+
+## Connected App
+
+* [Create a Connected App](https://trailhead.salesforce.com/en/content/learn/projects/build-a-connected-app-for-api-integration/create-a-connected-app)
+* [Integrating C# .NET and Salesforce's REST API](https://dev.to/rachelsoderberg/integrating-c-net-and-salesforce-s-rest-api-d00)
+
+* [Manage OAuth Access Policies for a Connected App](https://help.salesforce.com/articleView?id=connected_app_manage_oauth.htm&type=0)
+
+  > **Refresh token is valid until revoked—Default**.
+  > The refresh token is used indefinitely, unless revoked by the user or Salesforce admin.
+  Revoke tokens on a user’s detail page under OAuth Connected Apps or on the OAuth Connected Apps Usage Setup page.
 

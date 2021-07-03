@@ -161,4 +161,26 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
   git clean -dfx
   ```
 
+* [How do I get the Git commit count?](https://stackoverflow.com/q/677436/1366033)
+
+```bash
+git rev-list --count <revision>
+```
+
+* [How do I check out a remote Git branch?](https://stackoverflow.com/q/1783405/1366033)
+
+  ```bash
+  git fetch
+  git checkout test
+  # or
+  git checkout -t <name of remote>/test
+  ```
+
+
+* [Remove all branches except master](https://stackoverflow.com/q/10610327/1366033)
+
+  ```bash
+  git branch | grep -v "master" | xargs git branch -D
+  ```
+
 * Git list status of all repos in a directory??

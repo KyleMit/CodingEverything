@@ -237,7 +237,7 @@ winget install AltDrag.AltDrag
 winget install Lexikos.AutoHotkey
 winget install GnuPG.GnuPG
 winget install Microsoft.PowerToys
-winget install Python.Python
+winget install Python.Python.3
 winget install AngusJohnson.ResourceHacker
 winget install Amazon.SAM-CLI
 winget install marha.VcXsrv

@@ -56,7 +56,9 @@ choco install gnuwin32-coreutils.portable
     alias zip="tar.exe"
     ```
 
-* [“Permission Denied” trying to run Python on Windows 10](https://stackoverflow.com/a/64960283/1366033)
+* ["Permission Denied" trying to run Python on Windows 10](https://stackoverflow.com/a/64960283/1366033)
+
+   Happens because of App Execution Aliases
 
     ```bash
     function python { cmd.exe /c "python $1 $2 $3";}
@@ -292,3 +294,8 @@ choco install gnuwin32-coreutils.portable
 ls --color -h --group-directories-first
 ```
 
+* [How to reload .bashrc settings without logging out and back in again?](https://stackoverflow.com/q/2518127/1366033)
+
+  ```bash
+  source ~/.bashrc
+  ```

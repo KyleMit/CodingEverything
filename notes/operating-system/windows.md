@@ -111,3 +111,11 @@
 * [Windows Task Manager Paused](https://superuser.com/q/514403/180163)
 
   View > Update Speed > Low-High
+
+
+* [Windows 10 Start Menu not showing all shortcuts?](https://superuser.com/q/1106996/180163)
+
+  Check `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`
+
+  Hide & Unhide if necessary
+
