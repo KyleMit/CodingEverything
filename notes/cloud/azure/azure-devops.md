@@ -269,3 +269,6 @@ console.table(vals)
   * [Wiki function 'Check List' should allow check wiki checkbox on the page](https://developercommunity.visualstudio.com/t/wiki-function-check-list-should-allow-check-wiki-c/789279)
   * [About task lists - GitHub Docs](https://docs.github.com/en/github/managing-your-work-on-github/about-task-lists)
 
+* [Pull Request Numbers start with !](https://developercommunity.visualstudio.com/t/pull-request-numbers-start-with/977152)
+
+  Way to hot link / mention a PR - Similar to `@` for users or `#` for tickets

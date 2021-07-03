@@ -660,3 +660,10 @@ winget install graphviz
   ```js
   const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
   ```
+
+* [How do I make the first letter of a string uppercase in JavaScript?](https://stackoverflow.com/q/1026069/1366033)
+
+  ```ts
+  const toProperCase = (str: string): string => str[0].toUpperCase() + str.slice(1);
+  ```
+

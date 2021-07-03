@@ -835,3 +835,12 @@ let z: Z = {
   };
   ```
 
+* [Optional properties in typescript](https://stackoverflow.com/q/47942141/1366033)
+
+  ```ts
+  interface IEmployee {
+    firstName: string;
+    lastName: string;
+    middleName?: string;
+  }
+  ```

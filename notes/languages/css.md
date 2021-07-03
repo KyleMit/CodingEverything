@@ -116,3 +116,12 @@ button {
   </div>
   ```
 
+* [Better way to set distance between flexbox items](https://stackoverflow.com/q/20626685/1366033)
+
+  ```css
+  .flex-gap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  ```

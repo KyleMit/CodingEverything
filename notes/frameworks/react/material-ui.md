@@ -9,6 +9,10 @@
 * [React-Bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework, Rebuilt for React.
 * [Fannypack](https://fannypack.style/) - A friendly, themeable, accessible React UI Kit built with Reakit.
 
+## Versions
+
+[V Next (5)](https://next.material-ui.com/components/chips/)
+
 ## Getting Started
 
 ```bash
@@ -68,4 +72,150 @@ import { Select } from '@material-ui/core';
 > Material-UI: The `styles` argument provided is invalid.
 > You are providing a function without a theme in the context.
 > One of the parent elements needs to use a ThemeProvider.
+
+* [How to style body element in materialUI](https://stackoverflow.com/q/64705335/1366033)
+
+  ```tsx
+  const useGlobalStyles = makeStyles({
+    "@global": {
+      body: {
+        backgroundColor: "tomato"
+      }
+    }
+  });
+  const theme = createMuiTheme({});
+
+  function MyThemeProvider({ children }) {
+    useGlobalStyles();
+    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  }
+
+  function App() {
+    return (
+      <MyThemeProvider>
+        <Button variant="contained" color="primary">
+          Button
+        </Button>
+      </MyThemeProvider>
+    );
+  }
+  ```
+
+* [Set Typography Text Color in Material UI](https://stackoverflow.com/q/60607586/1366033)
+
+  ```ts
+  const theme = createMuiTheme({
+    typography: {
+      allVariants: {
+        color: "pink"
+      },
+    },
+  });
+  ```
+
+* [Accessing previous theme variables in createMuiTheme](https://stackoverflow.com/q/47977618/1366033)
+
+  ```ts
+  import { createMuiTheme } from 'material-ui/styles';
+
+  const defaultTheme = createMuiTheme();
+
+  const theme = createMuiTheme({
+    typography: {
+      fontSize: defaultTheme.typography.fontSize + 2
+    }
+  });
+
+  export default theme;
+  ```
+
+
+* [How do I change the shape of a button in material-ui using theme?](https://stackoverflow.com/q/57487071/1366033)
+
+  ```ts
+  const theme = createMuiTheme({
+    overrides: {
+      MuiButton: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
+  })
+  ```
+
+* [Material UI Overriding styles with increased specificity](https://stackoverflow.com/q/63880835/1366033)
+
+  ```tsx
+  const useStyles = makeStyles(() => ({
+    accordionHeader: {
+      '&.Mui-expanded': {
+        marginTop: 12,
+        marginBottom: 12
+      },
+    },
+  }));
+
+  const MyAccordion = ({ summary, details }) => {
+    const classes = useStyles();
+
+    return (
+      <Accordion>
+        <AccordionSummary classes={{ content: classes.accordionHeader }}>
+          {summary}
+        </AccordionSummary>
+        <AccordionDetails>
+          {details}
+        </AccordionDetails>
+      </Accordion>
+    )
+  };
+  ```
+
+  [Customizing components - Pseudo Classes](https://material-ui.com/customization/components/#pseudo-classes)
+
+* [Using `theme` in makeStyles](https://stackoverflow.com/q/59250673/1366033)
+
+  ```ts
+  const useStyles = makeStyles(theme => ({
+    paragraph: {
+      color: theme.palette.primary.main
+    }
+  }));
+  ```
+
+* [What is the difference between Box and Grid](https://stackoverflow.com/q/62744735/1366033)
+
+* [Material-ui makeStyles overwritten by default](https://stackoverflow.com/q/64283026/1366033)
+
+
+  ```ts
+  const useStyles = makeStyles({
+      error: {
+          backgroundColor: red[100],
+          "&.MuiDataGrid-row:hover": {
+              backgroundColor: red[50]
+          },
+      },
+  })
+  ```
+
+* [makeStyle for child elements](https://stackoverflow.com/q/59178802/1366033)
+
+  Use [nesting selectors](https://material-ui.com/styles/basics/#nesting-selectors)
+
+  ```ts
+  const useStyles = makeStyles(theme => ({
+      grid: {
+          fontSize: 16,
+          "& .MuiDataGrid-columnHeaderWrapper": {
+              background: "white"
+          }
+      },
+  }))
+
+  <DataGrid className={classes.grid}
+  ```
+
+* [Material UI Datagrid Sticky Header](https://stackoverflow.com/q/66435092/1366033)
 

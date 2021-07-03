@@ -491,3 +491,9 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   }, [someId]); // Or [] if effect doesn't need props or state
   ```
 
+* [dynamic and static className](https://stackoverflow.com/q/36209432/1366033)
+
+  ```jsx
+  className={`wrapper searchDiv ${this.state.something}`}
+  ```
+
