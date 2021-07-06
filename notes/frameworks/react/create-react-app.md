@@ -108,6 +108,15 @@ npx create-react-app my-app --template typescript
 npx create-react-app my-app --template simple-types
 ```
 
+## Progressive Web App (PWA)
+
+[Making a Progressive Web App | Create React App](https://create-react-app.dev/docs/making-a-progressive-web-app/)
+
+```bash
+npx create-react-app my-app --template cra-template-pwa
+npx create-react-app my-app --template cra-template-pwa-typescript
+```
+
 ## Debug
 
 [Live edit and debug your React apps directly from VS Code](https://medium.com/@auchenberg/live-edit-3da489ed905f)
@@ -185,4 +194,16 @@ export default App;
 * [Create React App requires a dependency: "babel-loader": "8.1.0"](https://stackoverflow.com/q/60964631/1366033)
 
   Remove `node_modules` from user root
+
+* [create react app not picking up .env files?](https://stackoverflow.com/q/48378337/1366033)
+
+  Must be prefixed with `REACT_APP_`
+
+  ```json
+  "start:mock": "npx cross-env REACT_APP_USE_MOCK_DATA=true react-scripts start",
+  ```
+
+  ```ts
+  console.log(process.env.REACT_APP_USE_MOCK_DATA)
+  ```
 

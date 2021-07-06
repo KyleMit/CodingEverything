@@ -23,4 +23,8 @@ codingeverything.dev ALIAS codingeverything.netlify.app.
 
 * [HTTP vs TCP/IP](https://stackoverflow.com/a/41999996/1366033)
 
+* Alias Record
+
+  * [Does Google Domains support CNAME-like functionality at the zone apex?](https://serverfault.com/q/617248/176522)
+  * [Why can't a CNAME record be used at the apex (aka root) of a domain?](https://serverfault.com/q/613829/176522)
 

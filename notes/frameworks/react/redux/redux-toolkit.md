@@ -27,7 +27,7 @@ return <Provider store={store}>
 
 ### Store.ts
 
-```tsx
+```ts
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
 

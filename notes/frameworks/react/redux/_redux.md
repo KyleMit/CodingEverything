@@ -69,7 +69,12 @@ ReactDOM.render(
 
 * `store` - returns a reference to the same Redux store that was passed in to the `<Provider>` component
 
+## Ecosystem
 
+* [Ecosystem | Redux](https://redux.js.org/introduction/ecosystem)
+* [markerikson/redux-ecosystem-links: A categorized list of Redux-related addons, libraries, and utilities](https://github.com/markerikson/redux-ecosystem-links)
+* [markerikson/react-redux-links: Curated tutorial and resource links I've collected on React, Redux, ES6, and more](https://github.com/markerikson/react-redux-links)
+* [awesome-redux: Awesome list of Redux examples and middlewares](https://github.com/xgrommx/awesome-redux)
 
 ## Tools
 
@@ -87,4 +92,36 @@ ReactDOM.render(
   $r.store.getState()
   ```
 
+
+* [How to access the Redux store outside of a component in React](https://stackoverflow.com/a/68249283/1366033)
+
+  * **Store**
+
+    ```ts
+    import { configureStore } from "@reduxjs/toolkit";
+    import { slice } from "../features/counterSlice";
+
+    export const store = configureStore({
+      reducer: {
+        counter: slice.reducer
+      }
+    });
+    ```
+
+
+  * **Usage**
+
+    ```ts
+    import { store } from "../App/store";
+    import { slice as counterSlice } from "../features/counterSlice";
+
+    export function getCount(): number {
+      const state = store.getState();
+      return state.counter.value;
+    }
+
+    export function incrementCount() {
+      store.dispatch(counterSlice.actions.increment());
+    }
+    ```
 

@@ -844,3 +844,9 @@ let z: Z = {
     middleName?: string;
   }
   ```
+
+* [Property 'share' does not exist on type 'Navigator'](https://stackoverflow.com/q/47831741/1366033)
+
+  ```ts
+  declare const navigator: any;
+  ```

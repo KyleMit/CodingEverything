@@ -219,3 +219,31 @@ import { Select } from '@material-ui/core';
 
 * [Material UI Datagrid Sticky Header](https://stackoverflow.com/q/66435092/1366033)
 
+* [How do you change a style of a child when hovering over a parent](https://stackoverflow.com/q/59178802/1366033)
+
+  ```tsx
+  const useStyles = makeStyles(theme => ({
+      externalLink: {
+          "&:hover": {
+              "& $externalIcon": {
+                  opacity: .7
+              }
+          }
+      },
+      externalIcon: {
+          opacity: 0,
+          transition: "opacity .4s ease"
+      }
+  }))
+
+  return <Link
+            href={`${rootURL}/${data.topicName}/`}
+            target="_blank"
+            rel="noreferrer"
+            className={classes.externalLink}
+          >
+      {data.topicDisplayName}
+      <OpenInNew className={classes.externalIcon} />
+  </Link>
+  ```
+

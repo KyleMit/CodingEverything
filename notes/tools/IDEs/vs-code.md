@@ -543,3 +543,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   //#region
   //#endregion
   ```
+
+* [Jump to Closing tag in VS Code?](https://stackoverflow.com/q/42996522/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd> - [**Breadcrumb Keyboard Navigation**](https://code.visualstudio.com/docs/editor/editingevolved#_breadcrumb-keyboard-navigation)
+

@@ -497,3 +497,66 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   className={`wrapper searchDiv ${this.state.something}`}
   ```
 
+* [Detect click outside React component](https://stackoverflow.com/q/32553158/1366033)
+
+
+  ```tsx
+  function DetectOutsideClicks() {
+    const node = useRef(null);
+
+    const handleClick = e => {
+      if (node.current.contains(e.target)) {
+        // inside click
+        return;
+      }
+      // outside click
+      // handle code
+    };
+
+    useEffect(() => {
+      // add when mounted
+      document.addEventListener("mousedown", handleClick);
+      // return function to be called when unmounted
+      return () => {
+        document.removeEventListener("mousedown", handleClick);
+      };
+    }, []);
+
+    return (
+      <div ref={node}>
+        ...
+      </div>
+    );
+  }
+  ```
+
+* [polling api every x seconds with react](https://stackoverflow.com/q/46140764/1366033)
+
+  ```tsx
+  import { useEffect, useRef } from "react"
+
+  export function useInterval(callback: () => void, delay: number | null) {
+    const savedCallback = useRef(callback)
+
+    // Remember the latest callback if it changes.
+    useEffect(() => {
+      savedCallback.current = callback
+    }, [callback])
+
+    // Set up the interval.
+    useEffect(() => {
+      function tick() {
+        savedCallback.current()
+      }
+      if (delay !== null) {
+        const id = setInterval(tick, delay)
+        return () => clearInterval(id)
+      }
+    }, [delay])
+  }
+
+  // usage
+  useInterval(() => {
+    // Your custom logic here
+  }, delay);
+  ```

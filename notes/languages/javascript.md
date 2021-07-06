@@ -667,3 +667,9 @@ winget install graphviz
   const toProperCase = (str: string): string => str[0].toUpperCase() + str.slice(1);
   ```
 
+* [Pad a number with leading zeros in JavaScript](https://stackoverflow.com/q/10073699/1366033)
+
+  ```js
+  String(1).padStart(2, '0'); // '01'
+  ```
+
