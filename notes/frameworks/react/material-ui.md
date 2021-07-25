@@ -247,3 +247,11 @@ import { Select } from '@material-ui/core';
   </Link>
   ```
 
+* [Adding Badge to a Tab](https://stackoverflow.com/q/38697630/1366033)
+
+  ```jsx
+  <Tab label={<Badge badgeContent="2" color="primary">
+      Messages
+  </Badge>} value="messages" />
+  ```
+

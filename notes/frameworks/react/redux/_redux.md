@@ -69,6 +69,8 @@ ReactDOM.render(
 
 * `store` - returns a reference to the same Redux store that was passed in to the `<Provider>` component
 
+* [combineReducers](https://redux.js.org/api/combinereducers) - The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.
+
 ## Ecosystem
 
 * [Ecosystem | Redux](https://redux.js.org/introduction/ecosystem)

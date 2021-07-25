@@ -177,7 +177,7 @@ git rev-list --count <revision>
   ```
 
 
-* [Remove all branches except master](https://stackoverflow.com/q/10610327/1366033)
+* [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
 
   ```bash
   git branch | grep -v "master" | xargs git branch -D

@@ -173,3 +173,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Multiple Rows of Tabs](https://stackoverflow.com/q/299437/1366033)
 
   Use [Tabs Studio](https://tabsstudio.com/index.htm)
+
+* [Show space, tab, CRLF characters in editor of Visual Studio](https://stackoverflow.com/q/6255839/1366033)
+
+  `Edit.ViewWhiteSpace`
+

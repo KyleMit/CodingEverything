@@ -153,6 +153,30 @@ Babel in the browser
   const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
   ```
 
+## Patterns
+
+* Boundary
+  * [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
+  * Auth Boundary
+* Provider
+  * [Context](https://reactjs.org/docs/context.html)
+* Fetch On Render
+  * Async Render
+  * [Suspense](https://reactjs.org/docs/react-api.html#reactsuspense)
+  * Concurrent
+  * [Lazy](https://reactjs.org/docs/react-api.html#reactlazy)
+
+
+## Performance Profiling / Testing
+
+* Docs
+  * [Performance Tools – React](https://reactjs.org/docs/perf.html)
+  * [Optimizing Performance – React](https://reactjs.org/docs/optimizing-performance.html)
+  * [Profiler API – React](https://reactjs.org/docs/profiler.html)
+* Articles
+  * [Introducing the React Profiler – React Blog](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html)
+
+
 ### React Hook Form
 
 * [React Hook Form](https://react-hook-form.com/) - Simple React forms validation

@@ -548,3 +548,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd> - [**Breadcrumb Keyboard Navigation**](https://code.visualstudio.com/docs/editor/editingevolved#_breadcrumb-keyboard-navigation)
 
+* [How to display variable values inline during debugging?](https://stackoverflow.com/q/62337163/1366033)
+
+  ```json
+  {
+    // Show variable values inline in editor while debugging.
+    "debug.inlineValues": true,
+  }
+  ```
+
