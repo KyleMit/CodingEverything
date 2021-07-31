@@ -234,3 +234,8 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   }
   ```
 
+* Struct vs Class
+
+  * [When should I use a struct rather than a class in C#?](https://stackoverflow.com/q/521298/1366033)
+  * [What's the difference between struct and class in .NET?](https://stackoverflow.com/q/13049/1366033)
+
