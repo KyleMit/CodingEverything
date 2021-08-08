@@ -424,7 +424,9 @@ function LuckyNumber(limit: number) {
 * Discriminated Union
 * XOR
 
-
+* Demos
+  * [Discriminated Union](https://bit.ly/ts-discriminated-unions)
+  * [Disjointed Union](https://bit.ly/ts-disjointed-unions)
 
 ```ts
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never };
@@ -464,6 +466,10 @@ let z: Z = {
     kind: 'A',
     x: 5
     // y: 6 will produce an error
+```
+
+```ts
+type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
 ```
 
 * [Proposal: Add an "logical or" (^) operator - Issue #14094](https://github.com/microsoft/TypeScript/issues/14094)

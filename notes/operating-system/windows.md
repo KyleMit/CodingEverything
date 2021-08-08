@@ -119,3 +119,8 @@
 
   Hide & Unhide if necessary
 
+* [Adjust volume of each source](https://www.howtogeek.com/244963/how-to-adjust-the-volume-for-individual-apps-in-windows/)
+
+  * Right Click Volume Bar > Sound Mixer
+  * [Ear Trumpet](https://github.com/File-New-Project/EarTrumpet)
+

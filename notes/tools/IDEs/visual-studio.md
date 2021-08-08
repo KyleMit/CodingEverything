@@ -178,3 +178,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   `Edit.ViewWhiteSpace`
 
+* [How to remove vertical Minimap in visual studio?](https://stackoverflow.com/q/63437873/1366033)
+
+  Right click scrollbar > Use bar mode for vertical scrollbar
+

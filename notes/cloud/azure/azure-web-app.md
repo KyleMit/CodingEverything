@@ -101,3 +101,42 @@ dotnet dev-certs https --trust
   "outputs": {  }
 }
 ```
+
+## WebJob
+
+* Docs
+  * [Run background tasks with WebJobs](https://docs.microsoft.com/en-us/azure/app-service/webjobs-create)
+  * [Develop and deploy WebJobs using Visual Studio](https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs)
+  * [Tutorial for event-driven background processing with the WebJobs SDK](https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-get-started)
+  * [How to use the WebJobs SDK](https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-how-to)
+
+* Supported File Types
+  * `.cmd`, `.bat`, `.exe` (using Windows cmd)
+  * `.ps1` (using PowerShell)
+  * `.sh` (using Bash)
+  * `.php` (using PHP)
+  * `.py` (using Python)
+  * `.js` (using Node.js)
+  * `.jar` (using Java)
+
+* Types
+  * Continuous
+  * Trigger
+    * Manual
+    * Schedule
+
+* Scheduled
+  * [NCRONTAB expressions](https://docs.microsoft.com/en-us/azure/app-service/webjobs-create#ncrontab-expressions)
+  * [Timer trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=csharp#ncrontab-expressions)
+  * [Scheduling a triggered WebJob](https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs#scheduling-a-triggered-webjob)
+  * [atifaziz/NCrontab](https://github.com/atifaziz/NCrontab) - Crontab for .NET
+
+  ```json
+  {
+      "schedule": "0 */15 * * * *"
+  }
+  ```
+
+  > The default time zone used to run CRON expressions is Coordinated Universal Time (UTC).
+  > To have your CRON expression run based on another time zone, create an app setting for your function app named `WEBSITE_TIME_ZONE`
+

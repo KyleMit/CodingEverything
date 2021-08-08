@@ -55,3 +55,15 @@
 * [eslint-plugin-cypress](https://www.npmjs.com/package/eslint-plugin-cypress) is a plugin for eslint that can provide feedback within your IDE for bad practice patterns with Cypress specific context.
 * [eslint-plugin-chai-friendly](https://www.npmjs.com/package/eslint-plugin-chai-friendly) is a plugin for eslint similar to the above. However, providing feedback for Chai assertion logic.
 * [@testing-library/cypress](https://testing-library.com/docs/cypress-testing-library/intro/) is a miracle library that makes working with DOM elements a lot easier.
+
+
+## Commands
+
+[Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands)
+
+
+```js
+// This is a parent command
+Cypress.Commands.add("login", (email, password) => { ... })
+```
+
