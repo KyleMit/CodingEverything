@@ -69,7 +69,11 @@ npm audit
 * [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/)
 * [Visual Studio Code extension](https://docs.microsoft.com/en-us/azure/javascript/tutorial-vscode-static-website-node-01?tabs=bash)
 
+## Geographies
 
+[Azure geographies](https://azure.microsoft.com/en-us/global-infrastructure/geographies/#overview)
+
+> Each Azure geography contains one or more regions and meets specific data residency and compliance requirements. This lets you keep your business-critical data and apps nearby on fault-tolerant, high-capacity networking infrastructure.
 
 ## Azure VNet
 
