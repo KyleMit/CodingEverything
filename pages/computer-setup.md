@@ -246,6 +246,7 @@ winget install RProject.R
 winget install WinDirStat.WinDirStat
 winget install LINQPad.LINQPad6
 winget install FontForge.FontForge
+winget install da2x.EdgeDeflector
 ```
 
 ## DotFiles

@@ -31,8 +31,6 @@
 ^SPACE::  Winset, Alwaysontop, , A
 ```
 
-
-
 ## Power Toys
 
 
@@ -50,6 +48,18 @@
 * Shortcut Guide
 * Video Conference Mute
 
+## Winget
+
+* [winget-cli](https://github.com/microsoft/winget-cli) - Windows Package Manager CLI (aka winget)
+* [winget-pkgs](https://github.com/microsoft/winget-pkgs) - The Microsoft community Windows Package Manager manifest repository
+* [winstall](https://winstall.app/) - GUI for Windows Package Manager
+
+
+* [List installed Apps](https://github.com/microsoft/winget-cli/issues/119)
+
+  ```bash
+  winget list
+  ```
 
 ## Questions
 
@@ -94,9 +104,11 @@
 
   ![Aero Snap Suggestions](/assets/notes/windows/aero-snap-suggestions.png)
 
-* Make Cortana use Google Searches
+* [Make Cortana use Google Searches](https://techwiser.com/set-windows-11-search-google-search-chrome/)
 
-  [chrometana](https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc)
+  * [chrometana](https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi) extension
+
+  * [Edge Deflector](https://github.com/da2x/EdgeDeflector)
 
 * [Hide icons in taskbar](https://superuser.com/q/1352561/180163)
 
@@ -123,4 +135,12 @@
 
   * Right Click Volume Bar > Sound Mixer
   * [Ear Trumpet](https://github.com/File-New-Project/EarTrumpet)
+
+* Auto Toggle Night Mode - On Schedule
+
+  * [Armin2208/Windows-Auto-Night-Mode](https://github.com/Armin2208/Windows-Auto-Night-Mode) - Automatically switches between the dark and light theme of Windows 10
+  * Articles
+    * [How to switch between Windows 10 light and dark modes](https://www.windowscentral.com/how-switch-between-light-and-dark-colors-schedule-automatically-windows-10)
+    * [How to Auto-Toggle Windows 10 Dark Mode at Night](https://www.makeuseof.com/tag/auto-toggle-dark-mode-windows-10/)
+
 
