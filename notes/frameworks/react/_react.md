@@ -584,3 +584,6 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
     // Your custom logic here
   }, delay);
   ```
+
+* [Trace why a React component is re-rendering](https://stackoverflow.com/q/41004631/1366033)
+* 

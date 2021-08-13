@@ -9,4 +9,29 @@
 [Quickstart · moq/moq4 Wiki](https://github.com/Moq/moq4/wiki/Quickstart)
 
 
-Microsoft.VisualStudio.TestTools.UnitTesting
+## Questions
+
+* [Non-overridable members may not be used in setup / verification expressions](https://stackoverflow.com/q/56905578/1366033)
+
+    > Moq creates an implementation of the mocked type. If the type is an interface, it creates a class that implements the interface. If the type is a class, it creates an inherited class, and the members of that inherited class call the base class. But in order to do that it has to override the members. If a class has members that can't be overridden (they aren't virtual, abstract) then Moq can't override them to add its own behaviors.
+
+    Instead of this:
+
+    ```cs
+    var mockPagingOptions = new Mock<PagingOptions>();
+    mockPagingOptions.Setup(po => po.Limit).Returns(25);
+    mockPagingOptions.Setup(po => po.Offset).Returns(0);
+    ```
+
+    Do this:
+
+    ```cs
+    var pagingOptions = new PagingOptions { Limit = 25, Offset = 0 };
+    ```
+
+* [Mocking a property](https://stackoverflow.com/q/12141799/1366033)
+
+    ```cs
+    input.SetupGet(x => x.ColumnNames).Returns(temp);
+    ```
+

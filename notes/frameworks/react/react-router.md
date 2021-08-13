@@ -92,3 +92,19 @@ function Users() {
     </Router>
     ```
 
+* [Programmatically navigate using React router](https://stackoverflow.com/q/31079081/1366033)
+
+  ```tsx
+  const history = useHistory();
+  const navigateTo = (path: string) => {
+    history.push(path);
+  };
+
+  return <HomeView onSubmit={() => navigateTo("/about")} />
+  ```
+
+* [Cannot read property 'history' of undefined on useHistory](https://stackoverflow.com/q/58220995/1366033)
+
+  > It's because the react-router context isn't set in that component.
+  > Since its the `<Router>` component that sets the context you could use `useHistory` in a sub-component, but not in that one.
+
