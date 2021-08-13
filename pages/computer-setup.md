@@ -832,7 +832,6 @@ xargs -L1 git clone
 * [Cloning all repositories from Azure DevOps using Azure CLI](https://blog.simonw.se/cloning-all-repositories-from-azure-devops-using-azure-cli/)
 
 
-
 ### Windows Terminal Config
 
 Notes.md
