@@ -124,3 +124,7 @@
   * Right Click Volume Bar > Sound Mixer
   * [Ear Trumpet](https://github.com/File-New-Project/EarTrumpet)
 
+* [How to change Alt + Tab settings for Microsoft Edge](https://www.windowscentral.com/how-customize-alt-tab-microsoft-edge-open-tabs-windows-10-october-2020-update)
+
+  Settings > Multitasking > Alt Tab
+
