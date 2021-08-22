@@ -143,4 +143,7 @@
     * [How to switch between Windows 10 light and dark modes](https://www.windowscentral.com/how-switch-between-light-and-dark-colors-schedule-automatically-windows-10)
     * [How to Auto-Toggle Windows 10 Dark Mode at Night](https://www.makeuseof.com/tag/auto-toggle-dark-mode-windows-10/)
 
+* [How to change Alt + Tab settings for Microsoft Edge](https://www.windowscentral.com/how-customize-alt-tab-microsoft-edge-open-tabs-windows-10-october-2020-update)
+
+  Settings > Multitasking > Alt Tab
 
