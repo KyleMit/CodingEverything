@@ -3,8 +3,8 @@
 
 ## Alternatives
 
-* Github Codespaces
-* Github 1s
+* [Github Codespaces](https://github.com/features/codespaces)
+* [Github 1s](https://github.com/conwnet/github1s)
 
 ## Getting Started
 

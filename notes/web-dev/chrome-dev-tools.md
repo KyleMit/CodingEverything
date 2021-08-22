@@ -59,3 +59,7 @@ https://web.dev/
 
 * [Filter only the requests with errors - Google chrome network](https://stackoverflow.com/q/55185225/1366033)
 
+* [What a gear icon means in Google Chrome's DevTools' Network Tab?](https://stackoverflow.com/q/61906590/1366033)
+
+  The Gear icon in the requests in means the request came from [service worker](https://developers.google.com/web/fundamentals/primers/service-workers)
+
