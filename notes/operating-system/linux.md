@@ -361,23 +361,44 @@ sudo apt install gnome-tweaks
 
 ## App Repositories
 
-[What are Repositories?](https://help.ubuntu.com/community/Repositories/Ubuntu)
+* [What are Repositories?](https://help.ubuntu.com/community/Repositories/Ubuntu)
 
-> The four main repositories are:
->
-> * **Main** - Canonical-supported free and open-source software.
-> * **Universe** - Community-maintained free and open-source software.
-> * **Restricted** - Proprietary drivers for devices.
-> * **Multiverse** - Software restricted by copyright or legal issues.
+  > The four main repositories are:
+  >
+  > * **Main** - Canonical-supported free and open-source software.
+  > * **Universe** - Community-maintained free and open-source software.
+  > * **Restricted** - Proprietary drivers for devices.
+  > * **Multiverse** - Software restricted by copyright or legal issues.
 
+* [How can I get a list of all repositories](https://askubuntu.com/q/148932/349745)
 
-[How do I enable the “Universe” repository?](https://askubuntu.com/q/148638/349745)
+  ```bash
+  grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/*
+  ```
+
+* [Enable add-apt-repository](https://askubuntu.com/q/593433/349745)
+
+  ```bash
+  sudo apt install software-properties-common
+  ```
+
+* [How do I enable the “Universe” repository?](https://askubuntu.com/q/148638/349745)
+
+  ```bash
+  sudo add-apt-repository universe
+  ```
+
+  or
+
+  ```bash
+  sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+  ```
 
 ```bash
-sudo add-apt-repository universe
+sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 ```
 
-[What are PPAs and how do I use them?](https://askubuntu.com/q/4983/349745)
+x[What are PPAs and how do I use them?](https://askubuntu.com/q/4983/349745)
 [How can PPAs be removed?](https://askubuntu.com/q/307/349745)
 
 ```bash
