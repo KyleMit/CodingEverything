@@ -299,3 +299,13 @@ ls --color -h --group-directories-first
   ```bash
   source ~/.bashrc
   ```
+
+* [How To Count All The Files Extension Recursively In Linux?](https://www.2daygeek.com/how-to-count-files-by-extension-in-linux/)
+
+  ```bash
+  find . -type f | sed -n 's/..*\.//p' | sort | uniq -c
+  #  71 png
+  #  37 svg
+  #   1 txt
+  ```
+

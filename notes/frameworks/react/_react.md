@@ -586,4 +586,11 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   ```
 
 * [Trace why a React component is re-rendering](https://stackoverflow.com/q/41004631/1366033)
-* 
+
+* [How to use generics in props in React in a functional component?](https://stackoverflow.com/q/53958028/1366033)
+
+  ```tsx
+  const MyComponent = <T extends object>({...props}) => { /* ... */}
+  const MyComponent = <T, >({...props}) => { /* ... */}
+  ```
+

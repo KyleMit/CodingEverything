@@ -258,3 +258,12 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   [`IDisposable`](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-5.0) vs [`IAsyncDisposable`](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable?view=net-5.0)
 
+* [DateTime vs DateTimeOffset](https://stackoverflow.com/q/4331189/1366033)
+
+  * `DateTimeOffset` -  *instantaneous time* / *absolute time*
+    * DateTimeKind.Utc
+  * `DateTime` - *calendar time* / *civil time*
+    * DateTimeKind.Unspecified
+    * DateTimeKind.Local
+
+
