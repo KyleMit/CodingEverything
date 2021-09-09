@@ -557,3 +557,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   }
   ```
 
+* [VS Code has a star (★) in the intellisense name](https://stackoverflow.com/q/56618135/1366033)
+
+  * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)
+  * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+

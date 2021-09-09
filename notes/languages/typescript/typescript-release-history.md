@@ -19,6 +19,12 @@
 tsc --incremental
 ```
 
+### `as const` assertions
+
+[const assertions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions)
+
+* object literals get `readonly` properties
+* array literals become `readonly` tuples
 
 ## 3.6
 

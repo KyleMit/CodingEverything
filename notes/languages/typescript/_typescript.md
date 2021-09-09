@@ -856,3 +856,10 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   ```ts
   declare const navigator: any;
   ```
+
+* [setTimeout return type](https://stackoverflow.com/a/51040768/1366033)
+
+  ```ts
+  const timer: ReturnType<typeof setTimeout> = setTimeout(() => '', 1000);
+  ```
+
