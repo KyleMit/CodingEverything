@@ -560,3 +560,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * To enable the Visual Studio Code GitHub Support, please set a Personal Access Token
 
 * [Format is not using indent settings](https://stackoverflow.com/q/36251820/1366033)
+
+
+* [VS Code has a star (★) in the intellisense name](https://stackoverflow.com/q/56618135/1366033)
+
+  * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)
+  * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+

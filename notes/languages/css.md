@@ -125,3 +125,13 @@ button {
     gap: 12px;
   }
   ```
+
+* [Table striping rows in CSS Grid](https://stackoverflow.com/q/44936917/1366033)
+
+  ```css
+  #grid > :nth-child(4n + 3),
+  #grid > :nth-child(4n + 4) {
+      background: #f0f0f0;
+  }
+  ```
+

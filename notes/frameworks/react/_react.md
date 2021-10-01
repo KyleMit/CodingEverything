@@ -590,3 +590,11 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
 
 * [JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.](https://stackoverflow.com/q/37674017/1366033)
 
+
+* [How to use generics in props in React in a functional component?](https://stackoverflow.com/q/53958028/1366033)
+
+  ```tsx
+  const MyComponent = <T extends object>({...props}) => { /* ... */}
+  const MyComponent = <T, >({...props}) => { /* ... */}
+  ```
+
