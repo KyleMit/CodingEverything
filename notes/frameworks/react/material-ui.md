@@ -255,3 +255,38 @@ import { Select } from '@material-ui/core';
   </Badge>} value="messages" />
   ```
 
+* [How to style body element in materialUI](https://stackoverflow.com/a/68893077/1366033)
+
+  Add theme override to CSSVaseline
+
+  ```js
+  MuiCssBaseline: {
+    "@global": {
+      body: {
+        backgroundColor: "tomato"
+      }
+    }
+  }
+  ```
+
+* [3 ways to add custom fonts to your Material UI project](https://blog.logrocket.com/3-ways-to-add-custom-fonts-to-your-material-ui-project/)
+
+```bash
+npm install typeface-cormorant
+```
+
+```ts
+// index.ts
+import "typeface-cormorant";
+
+// theme.ts
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Cormorant',
+      'serif',
+    ].join(','),
+},});
+```
+
+
