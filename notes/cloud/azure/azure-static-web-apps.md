@@ -14,6 +14,13 @@
 * [Azure/static-web-apps-deploy](https://github.com/Azure/static-web-apps-deploy) - Enable GitHub developers to deploy to Azure Static Web Apps using GitHub Actions
 * [microsoft/vscode-azurestaticwebapps](https://github.com/microsoft/vscode-azurestaticwebapps) -  Azure Static Web Apps extension for VS Code
 
+
+## Components
+
+* Auth
+* Functions
+* Storage
+
 ## Tutorials
 
 * [How to set up a custom domain name in Azure Static Web Apps](https://www.youtube.com/watch?v=SpQgKfJ87fE)

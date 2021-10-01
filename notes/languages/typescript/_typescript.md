@@ -856,3 +856,14 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   ```ts
   declare const navigator: any;
   ```
+
+* [Restrict number to a certain range](https://stackoverflow.com/q/39494689/1366033)
+
+  ```tsx
+  type RangeType = 1 | 2 | 3
+  ```
+
+  * [Proposal: Interval Types / Inequality Types](https://github.com/microsoft/TypeScript/issues/43505)
+  * [Stronger JavaScript with Opaque Types](https://codemix.com/opaque-types-in-javascript)
+
+

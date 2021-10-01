@@ -557,3 +557,6 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   }
   ```
 
+* To enable the Visual Studio Code GitHub Support, please set a Personal Access Token
+
+* [Format is not using indent settings](https://stackoverflow.com/q/36251820/1366033)

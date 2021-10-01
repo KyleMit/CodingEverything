@@ -586,4 +586,7 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   ```
 
 * [Trace why a React component is re-rendering](https://stackoverflow.com/q/41004631/1366033)
-* 
+
+
+* [JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.](https://stackoverflow.com/q/37674017/1366033)
+

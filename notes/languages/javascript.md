@@ -673,3 +673,28 @@ winget install graphviz
   String(1).padStart(2, '0'); // '01'
   ```
 
+* [Get number days in a specified month using JavaScript?](https://stackoverflow.com/q/1184334/1366033)
+
+  ```js
+  function daysInMonth (month, year) {
+      return new Date(year, month, 0).getDate();
+  }
+  ```
+
+* [Find all the days in a month with Date object?](https://stackoverflow.com/a/69078797/1366033)
+
+  ```js
+  const getAllDaysInMonth = (month, year) =>
+    Array.from(
+      {length: new Date(year, month, 0).getDate() - 1},
+      (_, i) => new Date(year, month, i + 1)
+    );
+
+  const example = getAllDaysInMonth(8, 2021).map(x => x.toLocaleDateString())
+  console.log(example)
+  ```
+
+
+* [Faster to access numeric property by string or integer?](https://stackoverflow.com/q/10639488/1366033)
+
+  integers faster lookup than strings
