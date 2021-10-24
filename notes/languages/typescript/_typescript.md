@@ -873,3 +873,9 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   const timer: ReturnType<typeof setTimeout> = setTimeout(() => '', 1000);
   ```
 
+* [Cannot find module 'fs' or its corresponding type declarations.ts](https://stackoverflow.com/q/37260901/1366033)
+
+  ```bash
+  npm install --save-dev @types/node
+  ```
+

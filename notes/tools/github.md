@@ -63,6 +63,12 @@ kramdown:
 [gist.github.com](https://gist.github.com/)
 [KyleMit Gists](https://gist.github.com/KyleMit)
 
+## Copilot
+
+* [GitHub Copilot · Your AI pair programmer](https://copilot.github.com/)
+* [github/copilot-docs: Documentation for GitHub Copilot](https://github.com/github/copilot-docs)
+* [GitHub Copilot - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+
 ## Questions
 
 * [How to change tab size on GitHub?](https://stackoverflow.com/q/8833953/1366033)
