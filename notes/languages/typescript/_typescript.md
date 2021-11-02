@@ -879,3 +879,17 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   npm install --save-dev @types/node
   ```
 
+* [What is the exclamation mark (`!) operator in typescript](https://stackoverflow.com/q/42273853/1366033)
+
+  [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
+
+  > Specifically, the operation `x!` produces a value of the type of x with `null` and `undefined` excluded
+
+
+* [Why does TypeScript infer the 'never' type when reducing an Array with concat?](https://stackoverflow.com/q/54117100/1366033)
+
+
+  ```ts
+  ['a', 'b', 'c'].reduce((acc: string[], value) => acc.concat(value), []);
+  ```
+

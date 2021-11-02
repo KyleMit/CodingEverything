@@ -698,3 +698,46 @@ winget install graphviz
 * [Faster to access numeric property by string or integer?](https://stackoverflow.com/q/10639488/1366033)
 
   integers faster lookup than strings
+
+* [Difference between `codePointAt` and `charCodeAt`](https://stackoverflow.com/q/36527642/1366033)
+
+  * `charCodeAt()` is **UTF-16**
+  * `codePointAt()` is **Unicode**
+
+* [How to store a byte array in Javascript](https://stackoverflow.com/q/12332002/1366033)
+
+  * [JavaScript typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
+  * [ArrayBufferView](https://developer.mozilla.org/en-US/docs/Web/API/ArrayBufferView#Typed_array_subclasses)
+
+* [How to convert a String to ByteArray](https://stackoverflow.com/q/6226189/1366033)
+
+  ```js
+  let utf8Encode = new TextEncoder();
+  utf8Encode.encode("abc")
+  // Uint8Array [ 97, 98, 99 ]
+  ```
+
+
+* [Converting between strings and ArrayBuffers](https://stackoverflow.com/q/6965107/1366033)
+
+  * [`TextEncoder`](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder)
+  * [`TextDecoder`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder)
+
+
+* [Push multiple elements to array](https://stackoverflow.com/a/14723896/1366033)
+
+  ```js
+  var arr = [];
+  arr.push(1, 2, 3);
+  console.log(arr);
+  ```
+
+* [Java byteArray equivalent in JavaScript](https://stackoverflow.com/q/30797862/1366033)
+
+  ```js
+  const values = [-1, 94, 43, 34]
+  const byteArr = Int8Array.from(values)
+  const original = Array.from(byteArr)
+  console.log({ byteArr, original })
+  ```
+

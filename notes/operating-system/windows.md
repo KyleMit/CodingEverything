@@ -147,3 +147,7 @@
 
   Settings > Multitasking > Alt Tab
 
+* [How can I get to the recycle bin without the desktop icon in windows 7?](https://superuser.com/q/48529/180163)
+
+  Windows Explorer > Address Bar > First Dropdown > Recycle Bin
+

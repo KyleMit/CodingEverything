@@ -267,3 +267,7 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
     * DateTimeKind.Local
 
 
+* [Dictionary vs HashTable](https://stackoverflow.com/q/301371/1366033)
+
+  Prefer dictionary for typesafety
+
