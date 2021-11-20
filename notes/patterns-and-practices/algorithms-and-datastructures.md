@@ -22,6 +22,38 @@
 
 * [Run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
 * [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation)
+* [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
+* [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case)
+* [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort)
+
+## Sort
+
+* Methods
+  * Exchanging
+  * Insertion
+  * Merging
+  * Partitioning
+  * Selection
+  * Non-Comparison
+
+* Types
+  * Simple Sorts
+    * Insertion Sort
+    * Selection Sort
+  * Efficient Sorts
+    * Merge Sort
+    * Heapsort
+    * Quicksort
+    * Shellsort
+  * Bubble Sort
+    * Bubble sort
+    * Comb sort
+    * Exchange sort
+  * Distribution sort
+    * Counting sort
+    * Bucket sort
+    * Radix sort
 
 ## Resources
 

@@ -23,3 +23,9 @@
 * [Selenium WebDriver](https://www.selenium.dev/documentation/en/webdriver/)
 * [Puppeteer](https://developers.google.com/web/tools/puppeteer)
 
+## Questions
+
+* [Why Do JavaScript Test Frameworks Use describe() and beforeEach()?](https://bignerdranch.com/blog/why-do-javascript-test-frameworks-use-describe-and-beforeeach/)
+
+   The `describe()` / `beforeEach()` / `it()` convention originated with the Ruby testing library [**RSpec**](http://rspec.info/), and is often referred to as **spec-style**.
+

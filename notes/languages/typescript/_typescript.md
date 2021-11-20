@@ -486,6 +486,7 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
 ## Articles
 
 * [Building and publishing an NPM Typescript package](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
+* [Improving Object.keys](https://fettblog.eu/typescript-better-object-keys/)
 
 
 ## Questions
@@ -893,3 +894,44 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   ['a', 'b', 'c'].reduce((acc: string[], value) => acc.concat(value), []);
   ```
 
+
+
+* [Types vs Interfaces differ in the ability to extend union types](https://stackoverflow.com/q/56085306/1366033)
+
+  > An interface can only extend an object type or intersection of object types with statically known members
+  >
+  > This is because you cannot extend a union type using an interface.
+  > You must use type alias:
+
+  ```ts
+  export type Partial2DPoint = { x: number } | { y: number }
+  export type Partial3DPoint = Partial2DPoint & { z: number }
+  ```
+
+* [Typescript derive union type from tuple/array values](https://stackoverflow.com/q/45251664/1366033)
+
+  ```ts
+  const list = ['a', 'b', 'c'] as const; // TS3.4 syntax
+  type NeededUnionType = typeof list[number]; // 'a'|'b'|'c';
+  ```
+
+* [Define a list of optional keys for Typescript Record](https://stackoverflow.com/q/53276792/1366033)
+
+  ```ts
+  type PartialList = Partial<Record<'a' | 'b' | 'c', string>>;
+  ```
+
+* [Use Enum as restricted key type in Typescript](https://stackoverflow.com/q/44243060/1366033)
+
+  ```ts
+  enum environment {
+      qa = "qa",
+      stage = "stage",
+      prod = "prod",
+  }
+
+  type envs1 = { [key in environment]: string}
+  type envs2 = Record<environment, string>
+  ```
+
+  [TS Enum Keys](https://bit.ly/ts-enum-keys)

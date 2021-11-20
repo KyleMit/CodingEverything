@@ -6,7 +6,10 @@
 
 ## Alternatives
 
+[Jasmine vs Jest vs Mocha | What are the differences?](https://stackshare.io/stackups/jasmine-vs-jest-vs-mocha)
+
 * Jest
+* Jasmine
 
 ## Getting Started
 
@@ -18,6 +21,17 @@ npm install --global mocha
 npm install --save-dev mocha
 ```
 
+## BYO Assertions
+
+https://mochajs.org/#assertions
+
+* [Node > Assert](https://nodejs.org/api/assert.html)
+* [chai](https://github.com/chaijs/chai)
+* [unexpected](https://github.com/unexpectedjs/unexpected)
+* Older
+  * [better-assert](https://github.com/tj/better-assert)
+  * [expect.js](https://github.com/Automattic/expect.js)
+  * [should.js](https://github.com/shouldjs/should.js)
 
 ## Syntax Examples
 
@@ -71,6 +85,9 @@ $ ./node_modules/mocha/bin/mocha
 ```bash
 mocha --full-trace src/**/__tests__/**/*-test.js
 ```
+
+## Typescript
+
 
 ## Debugging
 
@@ -138,3 +155,5 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 * [Error: No provider for "framework:mocha"!](https://stackoverflow.com/q/31687669/1366033)
 
 * [karma plugin dependencies not being found](https://stackoverflow.com/q/32425580/1366033)
+
+* [ReferenceError: describe is not defined NodeJs](https://stackoverflow.com/q/28400459/1366033)

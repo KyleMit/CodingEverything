@@ -19,6 +19,8 @@
 * [`test.skip(name, fn)`](https://jestjs.io/docs/api#testskipname-fn)
   * `xit`
 
+## Typescript
+
 ## Debugging
 
 [jest-community/**vscode-jest**](https://github.com/jest-community/vscode-jest) - The optimal flow for Jest based testing in VS Code
