@@ -1,7 +1,7 @@
 # State Machines
 
 
-[@keyframers 1.0.0 | Flipping Fluent | Live streamed collaborative animation coding](https://youtu.be/-zLiw1GeEGo?t=2659)
+[@keyframers 1.0.0 | Flipping Fluent](https://youtu.be/-zLiw1GeEGo?t=2659)
 
 
 ```html

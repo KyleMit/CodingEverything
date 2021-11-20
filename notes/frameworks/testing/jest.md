@@ -4,6 +4,9 @@
 
 > Delightful JavaScript Testing
 
+## Alternatives
+
+* Mocha
 
 ## Focusing and Excluding Tests
 

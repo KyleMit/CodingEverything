@@ -4,3 +4,8 @@
 
 [Stimulus](https://stimulus.hotwired.dev/)
 
+## Alternatives
+
+* [Alpine.js](https://alpinejs.dev/)
+
+

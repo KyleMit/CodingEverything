@@ -4,6 +4,10 @@
 
 [MochaJS](https://mochajs.org/)
 
+## Alternatives
+
+* Jest
+
 ## Getting Started
 
 ```bash
