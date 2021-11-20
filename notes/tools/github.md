@@ -27,6 +27,12 @@ git clone git@github.com:github/hub.git
 
 > Jekyll supports Markdown and Liquid, a templating language that loads dynamic content on your site. For more information, see Jekyll.
 
+## Custom ReadMes
+
+* [GitHub auto README with ruby, github-actions and dev.to API](https://dev.to/pashagray/github-auto-readme-with-ruby-github-actions-and-dev-to-api-1leo)
+* [How to Automate Your GitHub Profile README](https://www.freecodecamp.org/news/go-automate-your-github-profile-readme/)
+* [Example - sujeet-agrahari](https://github.com/sujeet-agrahari/sujeet-agrahari/blob/master/README.md)
+
 
 ## Configuration
 

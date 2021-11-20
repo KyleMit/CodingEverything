@@ -151,3 +151,7 @@
 
   Windows Explorer > Address Bar > First Dropdown > Recycle Bin
 
+* Toggle Focus Assist Programmatically
+
+  * [Toggling Focus Assist mode in Win 10 Programmatically](https://stackoverflow.com/q/55477041/1366033)
+  * [Keyboard shortcut to quickly toggle Do Not Disturb or Focus Assist?](https://superuser.com/q/1527760/180163)

@@ -90,3 +90,9 @@
     }
   });
   ```
+
+* Set Data Programmatically
+
+  * [Eleventy config API method to Set Data #184](https://github.com/11ty/eleventy/issues/184)
+  * [config-setdata](https://github.com/11ty/eleventy/tree/config-setdata)
+
