@@ -309,3 +309,7 @@ ls --color -h --group-directories-first
   #   1 txt
   ```
 
+* [Is there a directory history for bash?](https://superuser.com/q/299694/180163)
+
+  * [Is it possible to have directory aware bash history](https://superuser.com/q/1156823/180163)
+

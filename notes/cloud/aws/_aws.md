@@ -126,6 +126,17 @@ aws sts get-caller-identity
   aws configure list
   ```
 
+* [How to temporarily switch profiles for AWS CLI?](https://stackoverflow.com/questions/49716583/how-to-temporarily-switch-profiles-for-aws-cli)
+
+  * [aws-interactive-switch-profile - npm](https://www.npmjs.com/package/aws-interactive-switch-profile)
+    * [notacoat/aws-interactive-switch-profile](https://github.com/notacoat/aws-interactive-switch-profile#readme)
+  * [aws-credential-switch - npm](https://www.npmjs.com/package/aws-credential-switch)
+    * [phenixcoder/aws-profile-switcher](https://github.com/phenixcoder/aws-profile-switcher#readme)
+  * [aws-profile-switcher - npm](https://www.npmjs.com/package/aws-profile-switcher/v/2.0.1)
+    * [devtanc/aws-profile-switcher: A basic cli for switching your default aws profile in ~/.aws/credentials](https://github.com/devtanc/aws-profile-switcher)
+
+
+
 ### Command Reference
 
 * [validate-template](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html)

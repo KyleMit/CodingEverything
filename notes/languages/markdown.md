@@ -71,3 +71,15 @@
 
    Use double backticks on your inline code block like this: ``list`1``
 
+* MD to PDF
+
+  * Stack Overflow
+    * [How to convert markdown to pdf in command line](https://stackoverflow.com/q/48821981/1366033)
+    * [How Can I Convert Github-Flavored Markdown To A PDF](https://superuser.com/q/689056/180163)
+  * Libraries
+    * [markdown-pdf - npm](https://www.npmjs.com/package/markdown-pdf)
+    * [alanshaw/markdown-pdf: Markdown to PDF converter](https://github.com/alanshaw/markdown-pdf)
+    * [md-to-pdf - npm](https://www.npmjs.com/package/md-to-pdf)
+    * [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf#readme) - Hackable CLI tool for converting Markdown files to PDF using Node.js and headless Chrome
+    * [Pandoc - About pandoc](https://pandoc.org/)
+

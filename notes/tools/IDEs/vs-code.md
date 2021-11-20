@@ -567,3 +567,42 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense)
   * [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 
+
+* [Moving Panel in Visual Studio Code to right side](https://stackoverflow.com/a/53352975/1366033)
+
+  View: Toggle Panel Position
+
+* [Are there bookmarks in Visual Studio Code?](https://stackoverflow.com/q/30179571/1366033)
+
+  [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+
+* [VS code indentation when copying and pasting is messed up](https://stackoverflow.com/q/42747498/1366033)
+
+  ```js
+  "editor.formatOnPaste": true
+  ```
+
+* [read clipboard text content](https://stackoverflow.com/q/54632431/1366033)
+
+  * [`env`](https://code.visualstudio.com/api/references/vscode-api#env)
+  * [`ClipBoard`](https://code.visualstudio.com/api/references/vscode-api#Clipboard)
+
+
+* [How to trigger parameter hints in Visual Studio Code?](https://stackoverflow.com/q/53731271/1366033)
+
+  ```json
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  ```
+
+  * Release Notes
+    * [Inlay hints for JavaScript and TypeScript](https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_60.md#inlay-hints-for-javascript-and-typescript)
+
+  * Prior Art
+    * [Inlay Hints—JetBrains Rider](https://www.jetbrains.com/help/rider/Inline_Parameter_Name_Hints.html#code-analysis-hints)
+    * [Viewing method parameter information—WebStorm](https://www.jetbrains.com/help/webstorm/viewing-method-parameter-information.html)
+
+  * Threads
+    * [Parameter Hints shown inline all the time (like IntelliJ) · Issue #16221 · microsoft/vscode](https://github.com/microsoft/vscode/issues/16221)
+    * [JS Parameter Annotations - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations)
+
+

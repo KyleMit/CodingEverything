@@ -387,6 +387,10 @@
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
 
+### Finance
+
+* [**Net 30**](https://www.freshbooks.com/hub/invoicing/what-does-net-30-mean-on-an-invoice) - Pay every 30 days
+
 
 
 ### C-Suite
