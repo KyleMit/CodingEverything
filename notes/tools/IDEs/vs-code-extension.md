@@ -1,5 +1,11 @@
 # VS Code Extension
 
+## Docs
+
+* [vsce - npm](https://www.npmjs.com/package/vsce)
+* [microsoft/vscode-vsce: VS Code Extension Manager](https://github.com/microsoft/vscode-vsce)
+* [Releases · microsoft/vscode-vsce](https://github.com/microsoft/vscode-vsce/releases)
+
 ## Links
 
 * [Sample code illustrating the VS Code extension API.](https://github.com/Microsoft/vscode-extension-samples)
@@ -21,12 +27,17 @@ Then Run
 yo code
 ```
 
+## Testing Extensions
+
+* [Testing Extensions](https://code.visualstudio.com/api/working-with-extensions/testing-extension)
 
 ## Publishing
 
+* [Bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension)
 * [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
   * [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce)
 * [Extensions Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration)
+
 
 ### Marketplace
 

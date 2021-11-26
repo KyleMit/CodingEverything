@@ -741,3 +741,17 @@ winget install graphviz
   console.log({ byteArr, original })
   ```
 
+* [How to split a long array into smaller arrays, with JavaScript](https://stackoverflow.com/q/7273668/1366033)
+
+  ```js
+  const chunkArray = (arr, size) =>
+    arr.length > size
+      ? [arr.slice(0, size), ...chunkArray(arr.slice(size), size)]
+      : [arr];
+  ```
+
+* [Why Is `Export Default Const` invalid?](https://stackoverflow.com/q/36261225/1366033)
+
+  * The `const` keyword is like `let`, it is a [LexicalDeclaration](https://262.ecma-international.org/6.0/#sec-let-and-const-declarations) (VariableStatement, Declaration) used to define an identifier in your block.
+  * The `default` keyword expects a [`HoistableDeclaration`, `ClassDeclaration` or `AssignmentExpression`](https://262.ecma-international.org/6.0/#sec-exports-static-semantics-boundnames) to follow it.
+

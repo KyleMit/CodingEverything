@@ -102,20 +102,6 @@ Available in Node 8.2 / npm 5.2.0
   **Note**: [Yarn does not work in Git Bash on Windows](https://github.com/yarnpkg/yarn/issues/5349)
 
 
-* [How to update each dependency in package.json to the latest version?](https://stackoverflow.com/q/16073603/1366033)
-
-    ```bash
-    npm outdated # list all
-    npm update   # update all (respect package)
-    ```
-
-    or individually
-
-    ```bash
-    npm install express@latest --save
-    npm install express@x.x.x --save
-    ```
-
 * [What's the difference between tilde(~) and caret(^) in package.json?](https://stackoverflow.com/q/22343224/1366033)
 
 
@@ -131,6 +117,21 @@ Available in Node 8.2 / npm 5.2.0
   | `1.2.x`     | 1.2.0, 1.2.1, etc., but not 1.3.0                                              |
   | `*`         | Matches any version                                                            |
   | `latest`    | Obtains latest release                                                         |
+
+
+* [How to update each dependency in package.json to the latest version?](https://stackoverflow.com/q/16073603/1366033)
+
+    ```bash
+    npm outdated # list all
+    npm update   # update all (respect package)
+    ```
+
+    or individually
+
+    ```bash
+    npm install express@latest --save
+    npm install express@x.x.x --save
+    ```
 
 * [npm check and update package if needed](https://stackoverflow.com/q/16525430/1366033)
 

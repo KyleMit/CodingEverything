@@ -5,6 +5,157 @@
 > The React Framework for Production
 > Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
 
+## Getting Started
+
+* [Getting Started](https://nextjs.org/docs/getting-started)
+
+```bash
+# starter
+npx create-next-app@latest
+# manual
+npm install next react react-dom
+```
+
+## Docs
+
+* [Basic Features: Pages](https://nextjs.org/docs/basic-features/pages)
+* [API Routes: Introduction | Next.js](https://nextjs.org/docs/api-routes/introduction)
+
+## Tutorial
+
+* [Learn Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
+* [vercel/next-learn template](https://github.com/vercel/next-learn/tree/master/basics/learn-starter)
+
+```bash
+npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+```
+
+* Next.js can serve static assets, like images, under the top-level `public` directory.
+
+## Pre Rendering
+
+* [Pre Rendering](https://nextjs.org/docs/basic-features/pages#pre-rendering)
+  * [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
+  * [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
+
+### SSG
+
+#### [Without Data](https://nextjs.org/docs/basic-features/pages#static-generation-without-data)
+
+#### [With Data](https://nextjs.org/docs/basic-features/pages#static-generation-with-data)
+
+* `getStaticProps` - Your page **content** depends on external data
+* `getStaticPaths` - Your page **paths** depend on external data
+
+### SSR
+
+* `getServerSideProps` - This function will be called by the server on every request.
+
+```js
+function Page({ data }) {
+  // Render data...
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://.../data`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+export default Page
+```
+
+### Dynamic Routes
+
+* [Routing: Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes)
+
+* Add brackets to a page to create a dynamic route (a.k.a. url slugs, pretty urls, etc)
+
+  e.g. `pages/post/[pid].js`
+
+  ```js
+  import { useRouter } from 'next/router'
+
+  const Post = () => {
+    const router = useRouter()
+    const { pid } = router.query
+
+    return <p>Post: {pid}</p>
+  }
+
+  export default Post
+  ```
+
+* Dynamic routes can be extended to catch all paths by adding three dots (`...`) inside the brackets
+
+  e.g. `pages/post/[...slug].js` matches `/post/a`, `/post/a/b`, & `/post/a/b/c`
+
+* Each object must have the `params` key and contain an object with the `id` key (because we're using `[id]` in the file name)
+
+  ```json
+  [
+    {
+      params: {
+        id: 'ssg-ssr'
+      }
+    },
+  ]
+  ```
+
+## Frontmatter
+
+[jonschlinkert/**gray-matter**](https://github.com/jonschlinkert/gray-matter) - Smarter YAML front matter parser
+
+## Markdown
+
+[**remark**](https://github.com/remarkjs/remark) - remark is a popular tool that transforms markdown with plugins. These plugins can inspect and change your markup.
+
+## Date Format
+
+[date-fns](https://date-fns.org/) - modern JavaScript date utility library
+
+```js
+import { parseISO, format } from 'date-fns'
+
+export default function Date({ dateString }) {
+  const date = parseISO(dateString)
+  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+}
+```
+
+## Typescript
+
+[Next.js with TypeScript](https://nextjs.org/docs/basic-features/typescript#pages)
+
+```bash
+npx create-next-app@latest --ts
+```
+
+* Dot files
+  * `next-env.d.ts`
+  * `tsconfig.json`
+  * `next.config.js`
+
+```ts
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // ...
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // ...
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // ...
+}
+```
+
 ## Directories
 
 ### Build Directory
@@ -19,7 +170,7 @@ module.exports = {
 }
 ```
 
-### Src Directory
+### src Directory
 
 [Advanced Features: `src` Directory](https://nextjs.org/docs/advanced-features/src-directory)
 
@@ -29,6 +180,9 @@ module.exports = {
 
 [Deployment](https://nextjs.org/docs/deployment)
 
+
+## Scripts
+
 ```json
 {
   "scripts": {
@@ -37,6 +191,27 @@ module.exports = {
     "start": "next start"
   }
 }
+```
+
+## Metadata / Head
+
+* [next/head](https://nextjs.org/docs/api-reference/next/head)
+* [Advanced Features: Custom `Document`](https://nextjs.org/docs/advanced-features/custom-document)
+
+## Images
+
+* [Image Optimization](https://nextjs.org/docs/basic-features/image-optimization)
+* [next/image - api](https://nextjs.org/docs/api-reference/next/image)
+
+```js
+import Image from 'next/image'
+
+<Image
+  src="/images/profile.jpg" // Route of the image file
+  height={144} // Desired size with correct aspect ratio
+  width={144} // Desired size with correct aspect ratio
+  alt="Your Name"
+/>
 ```
 
 ## Static HTML Export
@@ -58,3 +233,53 @@ export default function handler(req, res) {
   res.status(200).json({ name: 'John Doe' })
 }
 ```
+
+## CSS
+
+* [PostCSS](https://postcss.org/) - a tool for transforming CSS with JavaScript
+* [classnames](https://github.com/JedWatson/classnames) - A simple javascript utility for conditionally joining classNames together
+
+### Styled JSX
+
+* [vercel/styled-jsx](https://github.com/vercel/styled-jsx) - Full CSS support for JSX without compromises
+* [styled-jsx](https://www.npmjs.com/package/styled-jsx)
+* Alternatives
+  * [**styled-components**](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+  * [**emotion**](https://github.com/vercel/next.js/tree/canary/examples/with-emotion)
+
+```html
+<style jsx>{`
+  …
+`}</style>
+```
+
+### CSS Modules
+
+* [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css)
+* [css-modules](https://github.com/css-modules/css-modules)
+
+Use the `[name].module.css` file naming convention.
+
+## Layout
+
+`components/layout.js`
+
+```jsx
+export default function Layout({ children }) {
+  return <div>{children}</div>
+}
+```
+
+## Questions
+
+* Error: Element type is invalid
+
+
+  > Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined.
+  > You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+  ```diff
+  - import { Head } from 'next'
+  + import Head from 'next/head'
+  ```
+

@@ -2,12 +2,20 @@
 
 <!-- Well this is meta -->
 
+
 ## Docs
 
+* [Darin Fireball | John Gruber](https://daringfireball.net/projects/markdown/)
 
-## Markdown Presentation Tools
+## Flavors
 
-[List of markdown presentation tools](https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8)
+* [Setext - Structure Enhanced Text](https://en.wikipedia.org/wiki/Setext)
+
+
+## Tools
+
+* [List of markdown presentation tools](https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8)
+* [Compare Markdown Implementations](https://babelmark.github.io/)
 
 ### Marp
 
@@ -83,3 +91,4 @@
     * [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf#readme) - Hackable CLI tool for converting Markdown files to PDF using Node.js and headless Chrome
     * [Pandoc - About pandoc](https://pandoc.org/)
 
+* [Why would you select ATX or SETEXT markdown headers style?](https://stackoverflow.com/q/56350341/1366033)

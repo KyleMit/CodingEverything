@@ -1,5 +1,13 @@
 # Vulnerabilities
 
+## Updates
+
+### NPM
+
+```bash
+npx npm-check -u
+```
+
 ## Audits
 
 [GitHub Advisory Database](https://github.com/advisories)

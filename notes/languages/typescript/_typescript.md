@@ -935,3 +935,48 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   ```
 
   [TS Enum Keys](https://bit.ly/ts-enum-keys)
+
+* [Way to tell TypeScript compiler Array.prototype.filter removes certain types from an array?](https://stackoverflow.com/q/43010737/1366033)
+
+  > The major issue is that TypeScript does not propagate the results of control flow analysis inside a function implementation to the scope where the function is called.
+
+  ```js
+  const arr = [1, 2, 3, 4, "5", 6];
+  const numArr: number[] = arr
+      .filter((i): i is number => {
+          return typeof i === "number";
+      });
+  ```
+
+* [Object Map Values](https://bit.ly/ts-objmapvals)
+
+  ```ts
+  interface ObjectConstructor {
+      fromEntries<TKey extends PropertyKey, TVal>(e: [TKey, TVal][]): Record<TKey,TVal>;
+      entries<TKey extends PropertyKey, TVal>(o: Record<TKey,TVal>): [TKey, TVal][];
+      map<TOut>(arr: any[]): TOut[];
+  }
+
+  const objMapValues = <TKey extends PropertyKey, TOld, TNew>(obj: Record<TKey,TOld>, fn: (v: TOld) => TNew) : Record<TKey, TNew> => Object.fromEntries<TKey, TNew>(
+    Object.entries<TKey, TOld>(obj).map<[TKey, TNew]>(([key, val]) => [key, fn(val)] ))
+  ```
+
+* [TypeScript: Same as Pick<...>, but with multiple fields](https://stackoverflow.com/q/59161763/1366033)
+
+  ```ts
+  interface MyInterface {
+    a: number,
+    b: number,
+    c: number
+  }
+
+  type AB = Pick<MyInterface, 'a' | 'b'>;
+  ```
+
+* [`Unknown file extension ".ts"` vs `Cannot use import statement outside a module`](https://stackoverflow.com/questions/62237147/nodejs-typescript-and-module-issues#comment121297967_62239475)
+
+  ```json
+  compilerOptions: {
+    module: 'CommonJS'
+  }
+  ```

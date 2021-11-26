@@ -26,6 +26,11 @@
 
 [nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
+* [Node Version Manager (NVM) on Windows](https://stackoverflow.com/q/25654234/1366033)
+  * [coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows) - A node.js version management utility for Windows. Ironically written in Go.
+
+This is a partial list. For a complete list, visit https://nodejs.org/download/releases
+
 ### Setup in Bash Profile
 
 ```bash
@@ -409,6 +414,12 @@ npm install -g nodemon
 
     ```none
     %AppData%\npm\node_modules
+    ```
+
+* [Node.js global variables](https://stackoverflow.com/q/5447771/1366033)
+
+    ```js
+    global._ = require('underscore')
     ```
 
 * [Determine command line working directory when running node bin script](https://stackoverflow.com/a/12239689/1366033)

@@ -1,11 +1,13 @@
 # ES Lint
 
+
+> Pluggable JavaScript linter
+>
 > ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:
 
 * ESLint uses [Espree](https://github.com/eslint/espree) for JavaScript parsing.
 * ESLint uses an AST to evaluate patterns in code.
 * ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
-
 
 ## Docs
 
@@ -13,10 +15,6 @@
 * [eslint | Github](https://github.com/eslint/eslint)
 * [typescript-eslint | Github](https://github.com/typescript-eslint/typescript-eslint)
 
-## Config
-
-* [SchemaStore fro eslintrc](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json)
-* [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
 
 ## Getting Started
 
@@ -37,6 +35,10 @@ parserOptions:
 rules: {}
 ```
 
+## Config
+
+* [SchemaStore fro eslintrc](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json)
+* [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
 
 
 ## Rules
@@ -57,6 +59,11 @@ rules: {}
   // No return value should be expected (void)
   function test(): void { return; }
   ```
+
+## Releases
+
+* [ESLint v8.0.0 released](https://eslint.org/blog/2021/10/eslint-v8.0.0-released)
+  * [Migrating to v8.0.0](https://eslint.org/docs/user-guide/migrating-to-8.0.0)
 
 ## Questions
 
