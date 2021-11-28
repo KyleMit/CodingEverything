@@ -519,11 +519,18 @@ Set-PoshPrompt -Theme Paradox
     # "master"
     ```
 
+* Use AZ Table
 
-```bash
-Install-Module AzTable
-Add-AzAccount
-```
+    ```bash
+    Install-Module AzTable
+    Add-AzAccount
+    ```
 
 
-PowerShell requires NuGet provider version 2.8.5.201 or newer to interact with NuGet-based repositories
+* PowerShell requires NuGet provider version 2.8.5.201 or newer to interact with NuGet-based repositories
+
+* [Update powershell to the latest revision](https://stackoverflow.com/q/60524714/1366033)
+
+    ```bash
+    winget upgrade PowerShell
+    ```

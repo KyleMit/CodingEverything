@@ -1,5 +1,13 @@
 # React Markdown
 
+[react-markdown](https://www.npmjs.com/package/react-markdown/)
+
+> Markdown component for React using remark.
+
+## Prior Art
+
+* [How do I render Markdown from a React component?](https://stackoverflow.com/q/31875748/1366033)
+* [How do I load a markdown file into a react component?](https://stackoverflow.com/q/42928530/1366033)
 
 ## Questions
 

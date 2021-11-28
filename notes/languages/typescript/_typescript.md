@@ -414,7 +414,25 @@ function LuckyNumber(limit: number) {
 * [Fetch with async & await and TypeScript](https://www.carlrippon.com/fetch-with-async-await-and-typescript/)
 * [How to design a Typescript Model for Response Returned](https://medium.com/@erVikas1/typescript-a5e7f6c6b110)
 
+## TypeScript with ESM
 
+* ESM only Libraries
+  * [node-fetch don't work inside ts file](https://github.com/node-fetch/node-fetch/issues/1397)
+  * [Typescript support for remark](https://github.com/remarkjs/remark/issues/819)
+
+* [Pure ESM package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#how-can-i-make-my-typescript-project-output-esm)
+
+* [ESM support for ts-node](https://github.com/TypeStrong/ts-node/issues/1007)
+
+* [ESM Support for Next.js](https://nextjs.org/blog/next-11-1#es-modules-support)
+
+  ```js
+  // next.config.js
+  module.exports = {
+    // Prefer loading of ES Modules over CommonJS
+    experimental: { esmExternals: true }
+  }
+  ```
 
 ## Mutually Exclusive Types
 
@@ -980,3 +998,44 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
     module: 'CommonJS'
   }
   ```
+
+* [Type `Set<T>` is not an array type or a string type.](https://stackoverflow.com/q/49218765/1366033)
+
+  > Use compiler option `--downlevelIteration` to allow iterating of iterators.
+
+  ```json
+  {
+    "compilerOptions": {
+      "target": "es2015"
+    }
+  }
+  ```
+
+  or
+
+  ```json
+  {
+    "compilerOptions": {
+      "target": "es5",
+      "downlevelIteration": true
+    }
+  }
+  ```
+
+* [Compiler fails to import type from global.d.ts](https://stackoverflow.com/q/44533334/1366033)
+
+  ```bash
+  tsc ./index.ts ./global.d.ts
+  ```
+
+* [ts-node ignores d.ts files while tsc successfully compiles the project](https://stackoverflow.com/q/51610583/1366033)
+
+  ```json
+  // tsconfig.json
+  {
+    "ts-node": {
+      "files": true
+    }
+  }
+  ```
+

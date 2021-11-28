@@ -156,3 +156,17 @@ Available in Node 8.2 / npm 5.2.0
   npm install --registry=https://custom.npm.registry.com/
   ```
 
+* [No repository field - add git repository data to package.json](https://stackoverflow.com/q/16827858/1366033)
+
+  ```json
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  }
+  ```
+
+* [npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents](https://stackoverflow.com/q/40226745/1366033)
+
+  ```bash
+  npm install -f
+  ```

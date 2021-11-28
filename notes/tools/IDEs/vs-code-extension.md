@@ -100,14 +100,21 @@ let disposable = vscode.commands.registerCommand('vs-utils.refreshCspell', funct
 [gabrielbb/xvfb-action](https://github.com/marketplace/actions/gabrielbb-xvfb-action)
 
 
-## Extension
+## Publish Extension
 
-[setup personal access token](https://github.com/KnisterPeter/vscode-github#setup-personal-access-token)
+* [Get a Personal Access Token (PAT)](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token)
 
+  * Set Organization to All accessible organizations
+  * Set Scopes to Custom defined and choose the Marketplace > Manage scope
+
+    ```bash
+    vsce login <publisher name>
+    vsce publish
+    ```
 
 ## Further Resources
 
-* You can open the full set of our API when you open the file `node_modules/@types/vscode/index.d.ts`.
+* You can see our full API when you open the file `node_modules/@types/vscode/index.d.ts`.
 * Reduce the extension size and improve the startup time by [bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension).
 * [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VSCode extension marketplace.
 * Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).
@@ -142,4 +149,14 @@ let disposable = vscode.commands.registerCommand('vs-utils.refreshCspell', funct
 
   [`globalStorageUri: Uri`](https://code.visualstudio.com/api/references/vscode-api#ExtensionContext.globalStorageUri)
 
+
+* [@types/vscode ^x.xx greater than engines.vscode ^x.xx](https://stackoverflow.com/q/70137470/1366033)
+
+    ```json
+    {
+        "engines": {
+            "vscode": "^1.62.0"
+        }
+    }
+    ```
 

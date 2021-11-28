@@ -464,3 +464,23 @@ npm install -g nodemon
             .catch(() => false)
     }
     ```
+
+* Must use import to load ES Module
+
+  Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: \node_modules\node-fetch\src\index.js
+
+  require() of ES modules is not supported.
+  require() of \node_modules\node-fetch\src\index.js from utils\http.ts
+  is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.\
+
+  * Instead:
+    * rename index.js to end in .cjs
+    * change the requiring code to use import(), or
+    * remove "type": "module" from \node_modules\node-fetch\package.json.
+
+* [`url.parse` deprecated - what to use instead?](https://stackoverflow.com/q/59375013/1366033)
+
+   Use [`URL`](https://nodejs.org/api/url.html)
+
+* [Force plain text encoding with node https get request](https://stackoverflow.com/q/70139545/1366033)
+
