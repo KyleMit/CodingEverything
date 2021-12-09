@@ -193,3 +193,32 @@
   myArray.ToDictionary(key => key, value => value);
   ```
 
+* [Declare a const array](https://stackoverflow.com/q/5142349/1366033)
+
+  > You need to declare it readonly instead of const:
+  > The reason is that const can only be applied to a field whose value is known at compile-time.
+  > The array initializer you've shown is not a constant expression
+
+  ```cs
+  public static readonly string[] Titles = { "German", "Spanish", "Corrects", "Wrongs" };
+  ```
+
+* [Safe element of array access](https://stackoverflow.com/q/693353/1366033)
+
+  ```cs
+  int[] array = { 4, 5, 6 };
+  int a = array.ElementAtOrDefault(4);
+  ```
+
+* [How can I detect if this dictionary key exists in C#?](https://stackoverflow.com/q/2829873/1366033)
+
+  ```cs
+  dict.TryGetValue(key, out value);
+  ```
+
+* [Create and initialize dictionary from list](https://stackoverflow.com/a/39593789/1366033)
+
+  ```cs
+  var myDictionary = myList.ToDictionary(key => key.property1, value => value.property2);
+  ```
+

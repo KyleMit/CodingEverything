@@ -39,7 +39,13 @@ rules: {}
 
 * [SchemaStore fro eslintrc](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/eslintrc.json)
 * [Configuring ESLint](https://eslint.org/docs/user-guide/configuring)
+* [Configuration Files](https://eslint.org/docs/user-guide/configuring/configuration-files)
 
+
+* States
+  * `off` or 0 - turn the rule off
+  * `warn` or 1 - turn the rule on as a warning (doesn't affect exit code)
+  * `error` or 2 - turn the rule on as an error (exit code is 1 when triggered)
 
 ## Rules
 
@@ -59,6 +65,8 @@ rules: {}
   // No return value should be expected (void)
   function test(): void { return; }
   ```
+
+* [typescript-eslint/explicit-module-boundary-types](https://github.com/typescript-eslint/typescript-eslint/blob/v4.22.1/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md)
 
 ## Releases
 
@@ -80,7 +88,13 @@ rules: {}
 
     ```json
     "rules": {
-    "linebreak-style": 0
+      "linebreak-style": 0
     }
     ```
 
+* Configure Rule Options
+
+  ```js
+  "max-lines": "error"
+  "max-lines": ["error", { "max": 200, "skipBlankLines": true, "skipComments": true }]
+  ```

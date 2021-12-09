@@ -328,75 +328,6 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 });
 ```
 
-## JavaScript Format Date
-
-| Property     | Values  | Example     |
-| ------------ | ------- | ----------- |
-| weekday      | narrow  | M           |
-|              | short   | Mon         |
-|              | long    | Monday      |
-|              |         |             |
-| year         | 2-digit | 19          |
-|              | numeric | 2019        |
-|              |         |             |
-| month        | numeric |             |
-|              | 2-digit |             |
-|              | narrow  |             |
-|              | short   |             |
-|              | long    |             |
-|              |         |             |
-| day          | 2-digit |             |
-|              | numeric |             |
-|              |         |             |
-| hour         | 2-digit |             |
-|              | numeric |             |
-|              |         |             |
-| minute       | 2-digit |             |
-|              | numeric |             |
-|              |         |             |
-| second       | 2-digit |             |
-|              | numeric |             |
-|              |         |             |
-| timeZoneName | short   |             |
-|              | long    |             |
-|              |         |             |
-| era          | narrow  | A           |
-|              | short   | AD          |
-|              | long    | Anno Domini |
-
-```js
-(new Date()).toLocaleDateString("en-US", {
-    era: "narrow"
-})
-```
-
-### Format Date - Further Reading
-
-* [Get Locale Short Date Format using javascript](https://stackoverflow.com/q/2388115/1366033)
-* [Get String in YYYYMMDD format from JS date object?](https://stackoverflow.com/q/3066586/1366033)
-* [Where can I find documentation on formatting a date in JavaScript?](https://stackoverflow.com/q/1056728/1366033)
-* [Converting a string to a date in JavaScript](https://stackoverflow.com/q/5619202/1366033)
-* [Format JavaScript date as yyyy-mm-dd](https://stackoverflow.com/q/23593052/1366033)
-* [How to format a JavaScript date](https://stackoverflow.com/q/3552461/1366033)
-* [Display date/time in user's locale format and time offset](https://stackoverflow.com/q/85116/1366033)
-
-### Specification
-
-#### MDN
-
-[`Date.prototype.toLocaleString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString)
-[`Intl.DateTimeFormat.prototype.format()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
-
-#### Github
-
-* [tc39/ecma262](https://github.com/tc39/ecma262)
-* [tc39/ecma402](https://github.com/tc39/ecma402)
-
-#### Docs
-
-[ECMAScript® 2021 Language Specification > tolocalestring](https://tc39.es/ecma262/#sec-date.prototype.tolocalestring)
-[ECMAScript® 2021 Internationalization API Specification > DateTimeFormat Objects](https://tc39.es/ecma402/#datetimeformat-objects)
-
 
 ## JS Doc Comments
 
@@ -422,16 +353,6 @@ winget install graphviz
 * [underscore](https://underscorejs.org/)
 * [ramda](https://ramdajs.com/)
 * [core-js](https://github.com/zloirock/core-js)
-
-### Ramda
-
-> a library designed specifically for a functional programming style, one that makes it easy to create functional pipelines, one that never mutates user data.
-
-* [Ramda Documentation](https://ramdajs.com/)
-* [ramda - npm](https://www.npmjs.com/package/ramda)
-* [Introducing Ramda](http://buzzdecafe.github.io/code/2014/05/16/introducing-ramda)
-* [Why Ramda?](https://fr.umio.us/why-ramda/)
-
 
 ## Questions
 
@@ -754,4 +675,38 @@ winget install graphviz
 
   * The `const` keyword is like `let`, it is a [LexicalDeclaration](https://262.ecma-international.org/6.0/#sec-let-and-const-declarations) (VariableStatement, Declaration) used to define an identifier in your block.
   * The `default` keyword expects a [`HoistableDeclaration`, `ClassDeclaration` or `AssignmentExpression`](https://262.ecma-international.org/6.0/#sec-exports-static-semantics-boundnames) to follow it.
+
+* [How to properly scroll IFrame to bottom in javascript](https://stackoverflow.com/q/23216271/1366033)
+
+  ```vs
+  iframe.contentWindow.scrollTo( 0, 999999 );
+  ```
+
+* [Check if date is less than 1 hour ago?](https://stackoverflow.com/q/9224773/1366033)
+
+  ```js
+  const lessThanOneHourAgo = (date) => {
+      const oneHourMs = 1000 * 60 * 60;
+      const oneHourAgo = Date.now() - oneHourMs;
+      return date.getTime() > oneHourAgo;
+  }
+  ```
+
+* [In Javascript why do Date objects have both valueOf and getTime methods if they do the same?](https://stackoverflow.com/q/9710136/1366033)
+
+  * [`Date.prototype.valueOf()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf)
+  * [`Date.prototype.getTime()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
+  * [`Date.now()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now)
+
+
+* [Keep only first n characters in a string?](https://stackoverflow.com/q/7708819/1366033)
+
+  ```js
+  'Hi, how are you'.substring(0,8);
+  'Hi, how are you'.slice(0,8);
+  ```
+
+* [What is the difference between `String.slice` vs `String.substring`?](https://stackoverflow.com/a/31910656/1366033)
+
+  Basically the same, some minor nuance, but use either
 

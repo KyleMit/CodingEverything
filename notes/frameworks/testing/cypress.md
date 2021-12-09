@@ -192,3 +192,11 @@ Cypress.Commands.add("login", (email, password) => { ... })
 
 * [Document `cy.state` and why you'd use it](https://github.com/cypress-io/cypress-documentation/issues/108)
 
+* [Get native HTML element in Cypress](https://stackoverflow.com/q/58879901/1366033)
+
+  ```js
+  cy.get('.foo').then(($el) => {
+    const el = $el.get(0) //native DOM element
+  })
+  ```
+

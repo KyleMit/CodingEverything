@@ -174,3 +174,13 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
 
 * [Fonts - Google Fonts](https://fonts.google.com/specimen/Overlock)
 * [Fonts - Embed Google Fonts](https://stackoverflow.com/a/53674218/1366033)
+
+
+* [How do you remove HttpOnly cookies?](https://stackoverflow.com/q/3886274/1366033)
+
+  ```cs
+  HttpCookie expiredCookie = new HttpCookie(cookieName);
+  expiredCookie.Expires = DateTime.UtcNow.AddDays(-1);
+  Response.Cookies.Add(expiredCookie);
+  ```
+
