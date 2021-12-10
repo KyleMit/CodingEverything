@@ -29,11 +29,16 @@
   * [`include`](https://www.php.net/manual/en/function.include.php)
   * [`require`](https://www.php.net/manual/en/function.require.php)
 
+* **Operators**
+  * [Logical Operators](https://www.php.net/manual/en/language.operators.logical.php)
+
 * **Function Reference**
 
   * Array Functions
-
     * [`array_filter`](https://www.php.net/manual/en/function.array-filter.php)
+
+  * Variable and Type Functions
+    * [`isset`](https://www.php.net/manual/en/function.isset.php)
 
 ## Syntax
 
@@ -244,5 +249,15 @@ php composer.phar install
           return $e->id == $searchedValue;
       }
   );
+  ```
+
+* Convert Value to Boolean
+
+  [`boolval`](https://www.php.net/manual/en/function.boolval.php)
+
+* [Check for Value in Array before accessing](https://stackoverflow.com/q/12126420/1366033)
+
+  ```php
+  $test = isset($_GET['something']) ? $_GET['something'] : '';
   ```
 
