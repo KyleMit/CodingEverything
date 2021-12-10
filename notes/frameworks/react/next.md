@@ -283,3 +283,16 @@ export default function Layout({ children }) {
   + import Head from 'next/head'
   ```
 
+
+* [Error: Invalid src prop on `next/image`, hostname "res.cloudinary.com" is not configured under images in your `next.config.js`](https://stackoverflow.com/q/68205860/1366033)
+
+  [Next/Image > Domains](https://nextjs.org/docs/api-reference/next/image#domains)
+
+  ```js
+  module.exports = {
+    reactStrictMode: true,
+    images: {
+      domains: ['res.cloudinary.com'],
+    },
+  }
+  ```
