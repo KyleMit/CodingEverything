@@ -287,6 +287,77 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
 * [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b)
 
 
+### Comma Separated Array of React Components
+
+* Stack
+  * [How to render react components by using map and join?](https://stackoverflow.com/q/34034038/1366033)
+  * [Rendering comma separated list of links](https://stackoverflow.com/q/23618744/1366033)
+  * [Is there a way to do array.join in react](https://stackoverflow.com/q/33577448/1366033)
+  * [How to add a comma in array.map after every element except last element in React JSX](https://stackoverflow.com/q/47881767/1366033)
+  * [Display comma separated elements of array in React](https://stackoverflow.com/q/43309773/1366033)
+  * [Display comma separated elements of array in React](https://stackoverflow.com/q/43309773/1366033)
+* Alt
+  * [ReactJS Display array with separators in component](https://stackoverflow.com/q/67941404/1366033)
+  * [How to using array.prototype.join in reactjs](https://stackoverflow.com/q/50287251/1366033)
+  * [Can I do an Array.join() with an HTML tag in React, using JSX?](https://stackoverflow.com/q/56136295/1366033)
+  * [React Join Children](https://gist.github.com/granmoe/274c299b792b039deecfb619753ea32c)
+
+
+```tsx
+const list = ({ data }) => data.reduce((acc, el) => [ acc, ', ', el ]);
+```
+
+```tsx
+.map<React.ReactNode>(t => <span>{t}</span>)
+.reduce((acc, el) => [acc, ', ', el])}
+```
+
+```tsx
+.map(t => <span>t</span>)
+.reduce((acc, el) => {
+    return acc === null ? [el] : [...acc, ',', el]
+}, null)
+```
+
+```tsx
+const joinComponents = (accumulator, current) => [
+  ...accumulator,
+  accumulator.length ? ', ' : '',
+  current
+]
+
+listComponents
+  .map(item => <span key={item.id}> {item.t} </span>)
+  .reduce(joinComponents, [])
+```
+
+```tsx
+{this.props.data
+    .map(item => <span>{item}</span>)
+    .map((item, index) => [index > 0 && ', ', item ])}
+```
+
+* **Names**
+  * `JoinComponents`
+  * `JoinJsx`
+  * `joinJsxArray`
+  * `List`
+  * `Intersperse`
+
+
+https://codesandbox.io/s/react-join-components-lzjdx?file=/src/App.tsx
+
+
+```tsx
+const JoinComponent = <T, >(arr: Array<T>, sep = ', '): Array<T | string> => {
+    if (arr.length === 0) {
+        return [];
+    }
+
+    return arr.slice(1).reduce((acc, el) => acc.concat([sep, el]), [arr[0]] as Array<T | string>);
+};
+```
+
 ## Questions
 
 
@@ -598,3 +669,19 @@ const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }
   const MyComponent = <T, >({...props}) => { /* ... */}
   ```
 
+* [Prevent form submission when enter is pressed inside input](https://stackoverflow.com/q/43750335/1366033)
+
+  ```tsx
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+      e.preventDefault();
+      void dispatch(UserDuck.Actions.login(userName, password));
+  };
+
+  return <form onSubmit={handleSubmit}>
+  ```
+
+* [React + TypeScript: Handling form onSubmit event](https://www.kindacode.com/article/react-typescript-handling-form-onsubmit-event/)
+
+  ```ts
+  const submitForm = (event: React.FormEvent<HTMLFormElement>)
+  ```

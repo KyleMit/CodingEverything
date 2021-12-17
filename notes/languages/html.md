@@ -65,4 +65,9 @@
   > 2. If there is an `<a>` element in the document tree that has a `name` attribute whose value is equal to *fragment*, then return the first such element in tree order.
   > 3. Return null.
 
+* [Limit file format when using `<input type="file">`?](https://stackoverflow.com/q/4328947/1366033)
+
+  ```html
+  <input type="file" accept=".xls,.xlsx" />
+  ```
 

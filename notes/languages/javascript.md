@@ -710,3 +710,11 @@ winget install graphviz
 
   Basically the same, some minor nuance, but use either
 
+* [Object spread vs. Object.assign](https://stackoverflow.com/q/32925460/1366033)
+
+  ```js
+  {...a, ...b}
+  Object.assign({}, a, b)
+  ```
+
+

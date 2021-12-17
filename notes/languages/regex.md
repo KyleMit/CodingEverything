@@ -102,3 +102,7 @@
   /.+?(?=abc)/
   ```
 
+* [Regex for matching a previous group in the pattern?](https://stackoverflow.com/q/11180691/1366033)
+
+  > Backreference to the first capturing group is always `\1`, not `$1`
+

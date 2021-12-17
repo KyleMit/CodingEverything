@@ -222,3 +222,30 @@
   var myDictionary = myList.ToDictionary(key => key.property1, value => value.property2);
   ```
 
+* [Is Guid considered a value type or reference type?](https://stackoverflow.com/q/2344213/1366033)
+
+  ```cs
+  typeof(Guid).IsValueType; // true
+  ```
+
+* [Filtering out values from a C# Generic Dictionary](https://stackoverflow.com/q/2131648/1366033)
+
+
+  > Since Dictionary implements `IEnumerable<KeyValuePair<Key, Value>>`, you can just use `Where`:
+
+  ```cs
+  var matches = dictionary.Where(kvp => !kvp.Value.BooleanProperty);
+  ```
+
+* [How to convert linq results to HashSet or HashedSet](https://stackoverflow.com/q/3471899/1366033)
+
+  ```cs
+  var hashSet = BlockedList.ToHashSet();
+  ```
+
+* [Remove duplicates from a `List<T>` in C#](https://stackoverflow.com/q/47752/1366033)
+
+  ```cs
+  var noDupes = withDupes.Distinct().ToList();
+  ```
+

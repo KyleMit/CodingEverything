@@ -484,3 +484,15 @@ npm install -g nodemon
 
 * [Force plain text encoding with node https get request](https://stackoverflow.com/q/70139545/1366033)
 
+
+* [How can I get the full object in Node.js's console.log(), rather than `[Object]`?](https://stackoverflow.com/q/10729276/1366033)
+
+
+```js
+const util = require('util')
+console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}))
+
+console.log(JSON.stringify(myObject, null, 4));
+
+console.dir(myObject, { depth: null }); // `depth: null` ensures unlimited recursion
+```
