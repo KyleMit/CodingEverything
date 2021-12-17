@@ -603,6 +603,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   * Threads
     * [Parameter Hints shown inline all the time (like IntelliJ) · Issue #16221 · microsoft/vscode](https://github.com/microsoft/vscode/issues/16221)
-    * [JS Parameter Annotations - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations)
+    * [JS Parameter Annotations](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations)
 
+* [AutoComplete for CSS](https://stackoverflow.com/q/45865053/1366033)
+
+  * [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
+  * [HTML Class Suggestions](https://marketplace.visualstudio.com/items?itemName=AndersEAndersen.html-class-suggestions)
+  * [Class autocomplete for HTML](https://marketplace.visualstudio.com/items?itemName=AESSoft.aessoft-class-autocomplete)
 
