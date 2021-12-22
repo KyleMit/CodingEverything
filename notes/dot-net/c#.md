@@ -1,5 +1,25 @@
 # C Sharp
 
+## Features
+
+### Extension Methods
+
+[Extension Methods - C# Programming Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
+
+```cs
+namespace ExtensionMethods
+{
+    public static class MyExtensions
+    {
+        public static int WordCount(this String str)
+        {
+            return str.Split(new char[] { ' ', '.', '?' },
+                             StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+    }
+}
+```
+
 ## Version History
 
 ### C#3
@@ -247,5 +267,27 @@
 
   ```cs
   var noDupes = withDupes.Distinct().ToList();
+  ```
+
+* [Array.Join in .Net?](https://stackoverflow.com/q/484464/1366033)
+
+  Use [`String.Join`](https://docs.microsoft.com/en-us/dotnet/api/system.string.join)
+
+  ```cs
+  String.Join(",", new string[] {"a", "b", "c"});
+  ```
+
+* [Convert any given function into an awaitable task](https://stackoverflow.com/q/32045815/1366033)
+
+  ```cs
+  var result1 = await Task.FromResult("Hello World");
+  var result2 = await Task.Run(() => "Hello World");
+  ```
+
+* [How do I get the list of keys in a Dictionary?](https://stackoverflow.com/q/1276763/1366033)
+
+  ```cs
+  using System.Linq;
+  List<String> myKeys = myDict.Keys.ToList();
   ```
 

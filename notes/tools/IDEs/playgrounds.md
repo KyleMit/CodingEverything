@@ -21,6 +21,8 @@
 * Code Exercises
   * [LeetCode](https://leetcode.com/KyleMit/)
   * [Codewars](https://www.codewars.com/users/KyleMit)
+  * [Exercism](https://exercism.org/dashboard)
+  * [HackerRank](https://www.hackerrank.com/dashboard)
 
 ## RunKit
 

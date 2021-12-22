@@ -290,3 +290,8 @@ const theme = createMuiTheme({
 ```
 
 
+* [Spacing math with theme.spacing() in MUI v5](https://stackoverflow.com/q/69319992/1366033)
+
+  ```ts
+  const getSpacing = (theme, value) => Number(theme.spacing(value).slice(0, -2))
+  ```
