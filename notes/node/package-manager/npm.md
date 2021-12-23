@@ -3,6 +3,9 @@
 
 ## Docs
 
+
+* [Configuring two-factor authentication](https://docs.npmjs.com/configuring-two-factor-authentication)
+
 * [Unpublishing packages from the registry](https://docs.npmjs.com/unpublishing-packages-from-the-registry)
 
     ```bash
@@ -170,3 +173,9 @@ Available in Node 8.2 / npm 5.2.0
   ```bash
   npm install -f
   ```
+
+* [Find NPM packages by keywords and authors](https://stackoverflow.com/a/70463436/1366033)
+
+  ex. `author:sindresorhus keywords:polyfill`
+
+
