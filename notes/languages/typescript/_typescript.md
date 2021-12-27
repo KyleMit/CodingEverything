@@ -506,6 +506,21 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
 * [Building and publishing an NPM Typescript package](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
 * [Improving Object.keys](https://fettblog.eu/typescript-better-object-keys/)
 
+## Remove Unused Exports
+
+* **Libs**
+  * [ts-unused-exports - npm](https://www.npmjs.com/package/ts-unused-exports)
+  * [ts-prune - npm](https://www.npmjs.com/package/ts-prune)
+* **Stack**
+  * [How to detect dead typescript code](https://stackoverflow.com/q/50184496/1366033)
+  * [Detect unused exported symbols](https://stackoverflow.com/q/68546480/1366033)
+* **Extensions**
+  * [Find unused exports](https://marketplace.visualstudio.com/items?itemName=iulian-radu-at.find-unused-exports)
+* **Articles**
+  * [Finding dead code (and dead types) in TypeScript](https://effectivetypescript.com/2020/10/20/tsprune/)
+  * [Finding and cleaning unused code in your Typescript project](https://medium.com/@nadeesha/finding-and-cleaning-unused-code-in-your-typescript-project-5099ab9363d)
+
+
 
 ## Questions
 
@@ -1039,16 +1054,23 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   }
   ```
 
-* Remove Unused Exports
+* [Difference between extending and intersecting interfaces in TypeScript?](https://stackoverflow.com/q/52681316/1366033)
 
-  * Libs
-    * [ts-unused-exports - npm](https://www.npmjs.com/package/ts-unused-exports)
-    * [ts-prune - npm](https://www.npmjs.com/package/ts-prune)
-  * SO
-    * [How to detect dead typescript code](https://stackoverflow.com/q/50184496/1366033)
-    * [Detect unused exported symbols](https://stackoverflow.com/q/68546480/1366033)
-  * Extensions
-    * [Find unused exports](https://marketplace.visualstudio.com/items?itemName=iulian-radu-at.find-unused-exports)
-  * Articles
-    * [Finding dead code (and dead types) in TypeScript](https://effectivetypescript.com/2020/10/20/tsprune/)
-    * [Finding and cleaning unused code in your Typescript project](https://medium.com/@nadeesha/finding-and-cleaning-unused-code-in-your-typescript-project-5099ab9363d)
+
+  **Extension**
+
+  ```ts
+  interface Square extends Shape {
+    sideLength: number;
+  }
+  ```
+
+  **Intersection**
+
+  ```ts
+  type Square = Shape & {
+    sideLength: number;
+  }
+  ```
+
+

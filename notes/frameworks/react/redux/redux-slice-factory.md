@@ -1,21 +1,28 @@
-# Ducks
+# Redux Slice Factory
+
+
+> A light-weight package with generic factory functions for common slice data structures.
+> Anything related to updating, fetching, modeling a User lives in one central location.
+> This pattern also fits well with our microservice architecture.
+
+* [@gjv/redux-slice-factory - npm](https://www.npmjs.com/package/@gjv/redux-slice-factory)
+* [Reddit Discussion](https://www.reddit.com/r/reduxjs/comments/llyw4u/i_created_reduxslicefactory_a_lightweight_package/)
+
+## Alternatives
+
+* [RTK Query Overview](https://redux-toolkit.js.org/rtk-query/overview)
+
+
+## Ducks
 
 * [erikras/ducks-modular-redux: A proposal for bundling reducers, action types and actions when using Redux](https://github.com/erikras/ducks-modular-redux)
 
 > Java has jars and beans. Ruby has gems. I suggest we call these reducer bundles "ducks", as in the last syllable of "redux".
 
-
 * ex. Share functionality between User Admin screen and Profile edit screen
   * will just ask the Ducks they need for the data they need.
     * Just call `UserDuck.SelectState`
 
-## Redux Slice Factory
-
-> A light-weight package with generic factory functions for common slice data structures
-> Anything related to updating, fetching, modeling a User lives in one central location.
-> This pattern also fits well with our microservice architecture.
-
-* [@gjv/redux-slice-factory - npm](https://www.npmjs.com/package/@gjv/redux-slice-factory)
 
 ### Slice
 

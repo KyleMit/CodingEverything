@@ -182,3 +182,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   Right click scrollbar > Use bar mode for vertical scrollbar
 
+* [What is the equivalent shortcut for CTRL + D from VSCode in Visual Studio?](https://stackoverflow.com/a/70379900/1366033)
+
+  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd> - **`Edit.InsertNextMatchingCaret`**

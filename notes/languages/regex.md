@@ -102,3 +102,15 @@
   /.+?(?=abc)/
   ```
 
+* [Regex for matching a previous group in the pattern?](https://stackoverflow.com/q/11180691/1366033)
+
+  > Backreference to the first capturing group is always `\1`, not `$1`
+
+* [A regex to match a substring that isn't followed by a certain other substring](https://stackoverflow.com/q/2631010/1366033)
+
+  Use a [Negative Lookahead](https://www.regular-expressions.info/lookaround.html) like this:
+
+  ```js
+  /word(?!@)/
+  ```
+

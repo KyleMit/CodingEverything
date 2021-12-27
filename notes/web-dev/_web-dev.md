@@ -184,3 +184,8 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
   Response.Cookies.Add(expiredCookie);
   ```
 
+* [NS_BINDING_ABORTED for POST-Requests](https://stackoverflow.com/q/66137592/1366033)
+
+  > The asynchronous request failed because it was aborted by some user action.
+
+
