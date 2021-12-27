@@ -71,6 +71,17 @@ Tags should be
 <!-- spellchecker: enable -->
 ```
 
+### Notes Sections
+
+* Title
+* Docs
+* Links
+* Getting Started
+* --- domain ---
+* Articles
+* Questions
+
+
 ## Todo
 
 * [ ] fix linting errors

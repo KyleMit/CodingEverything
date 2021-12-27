@@ -329,13 +329,6 @@ Object.defineProperty(String.prototype, 'startsWithAny', {
 ```
 
 
-## JS Doc Comments
-
-Emmet autocomplete `/**`
-
-[JS Doc](https://jsdoc.app/)
-
-
 ## Dependency Graph
 
 [pahen/madge](https://github.com/pahen/madge)

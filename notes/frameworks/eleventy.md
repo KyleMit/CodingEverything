@@ -1,7 +1,8 @@
 # Eleventy
 
+[Eleventy, a simpler static site generator.](https://www.11ty.dev/)
 
-
+> Eleventy, a simpler static site generator.
 
 ## Inline Favicon
 
@@ -32,6 +33,12 @@
 * [eeeps/**eleventy-respimg**](https://github.com/eeeps/eleventy-respimg) | [npm](https://www.npmjs.com/package/eleventy-plugin-respimg)
 * [juanfernandes/**eleventy-plugin-cloudinary**](https://github.com/juanfernandes/eleventy-plugin-cloudinary) | [npm](https://www.npmjs.com/package/eleventy-plugin-cloudinary)
 
+
+## TypeScript Support
+
+* [How to use TypeScript with Eleventy?](https://github.com/11ty/eleventy/issues/577)
+* [Include TypeScript types for configuration files](https://github.com/11ty/eleventy/issues/1459)
+* [Declare "types" in package.json to make consuming types easier](https://github.com/11ty/eleventy/pull/2091/files)
 
 ## Questions
 
