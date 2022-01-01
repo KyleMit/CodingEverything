@@ -179,3 +179,9 @@ Available in Node 8.2 / npm 5.2.0
   ex. `author:sindresorhus keywords:polyfill`
 
 
+* [npm publish got package name too similar to existing packages](https://stackoverflow.com/a/70551536/1366033)
+
+  According to [**New Package Moniker rules**](https://blog.npmjs.org/post/168978377570/new-package-moniker-rules):
+
+  > If the names are identical without punctuation, we do not allow the package to be created
+

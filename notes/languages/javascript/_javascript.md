@@ -710,4 +710,34 @@ winget install graphviz
   Object.assign({}, a, b)
   ```
 
+* [Remove line breaks from start and end of string](https://stackoverflow.com/q/14572413/1366033)
 
+  ```js
+  const trimWhitespace = (str) => str.replace(/^\s+|\s+$/g, '');
+  ```
+
+* [Filtering an array with a function that returns a promise](https://stackoverflow.com/a/53508547/1366033)
+
+  ```ts
+  export const mapAsync = <T, U>(array: T[], callbackfn: (value: T, index: number, array: T[]) => Promise<U>): Promise<U[]> => {
+      return Promise.all(array.map(callbackfn));
+  }
+
+  export const filterAsync = async <T>(array: T[], callbackfn: (value: T, index: number, array: T[]) => Promise<boolean>): Promise<T[]> => {
+      const filterMap = await mapAsync(array, callbackfn);
+      return array.filter((_, index) => filterMap[index]);
+  }
+  ```
+
+* [Javascript sort array of objects by a boolean property](https://stackoverflow.com/q/17387435/1366033)
+
+  ```js
+  [true, false, true].sort((a, b) => Number(a) - Number(b))
+  ```
+
+* [Javascript sort function. Sort by First then by Second](https://stackoverflow.com/q/9175268/1366033)
+
+  ```js
+  const cmp = (a, b) => (a > b) - (a < b)
+  array.sort((a, b) => cmp(a.strength,b.strength) || cmp(a.name,b.name))
+  ```

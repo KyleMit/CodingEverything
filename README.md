@@ -76,6 +76,7 @@ Tags should be
 * Title
 * Docs
 * Links
+* Alternatives
 * Getting Started
 * --- domain ---
 * Articles

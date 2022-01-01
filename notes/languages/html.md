@@ -71,3 +71,9 @@
   <input type="file" accept=".xls,.xlsx" />
   ```
 
+* [What exactly is the `#:~:text=` location hash in an URL?](https://stackoverflow.com/q/62161819/1366033)
+
+  [W3C - Text Fragments](https://wicg.github.io/scroll-to-text-fragment/)
+
+  `#:~:text=`
+

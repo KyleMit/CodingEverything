@@ -1,15 +1,26 @@
 # Powershell
 
-* [Installing PowerShell - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7)
-* [Migrating from Windows PowerShell 5.1 to PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7)
-
-* **Core** - pwsh.exe
-* **Classic** - powershell.exe
 
 ## Philosophy
 
 * [Monad Manifesto – the Origin of Windows PowerShell](https://devblogs.microsoft.com/powershell/monad-manifesto-the-origin-of-windows-powershell/)
 * [Monad Manifesto](https://www.jsnover.com/Docs/MonadManifesto.pdf)
+
+
+## Getting Started
+
+* [Installing PowerShell - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7)
+* [Migrating from Windows PowerShell 5.1 to PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7)
+
+
+## Versions
+
+* **Windows PowerShell 5.1**: `$env:WINDIR\System32\WindowsPowerShell\v1.0`
+* **PowerShell Core 6.x**: `$env:ProgramFiles\PowerShell\6`
+* **PowerShell 7**: `$env:ProgramFiles\PowerShell\7`
+
+* **Core** - pwsh.exe
+* **Classic** - powershell.exe
 
 ## Visual Studio Code
 
@@ -17,7 +28,7 @@
 * [Visual Studio Code editing features for PowerShell development](https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/)
 * [Debugging PowerShell script in Visual Studio Code](https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/)
 
-### Startup Error
+## Startup Error
 
 [Troubleshoot Visual Studio Code Integrated Terminal launch failures](https://code.visualstudio.com/docs/supporting/troubleshoot-terminal-launch)
 
@@ -45,14 +56,10 @@ The language service could not be started
 Error: Timed out waiting for session file to appear
 ```
 
-## Versions
 
-* **Windows PowerShell 5.1**: `$env:WINDIR\System32\WindowsPowerShell\v1.0`
-* **PowerShell Core 6.x**: `$env:ProgramFiles\PowerShell\6`
-* **PowerShell 7**: `$env:ProgramFiles\PowerShell\7`
+## Docs
 
-
-## Syntax
+### Syntax
 
 * [add value to array](https://ss64.com/ps/syntax-arrays.html)
 * [foreach loop](https://ss64.com/ps/foreach.html)
@@ -64,13 +71,10 @@ Error: Timed out waiting for session file to appear
 * [format table widths](https://stackoverflow.com/a/52174495/1366033)
 * [Get-Date](https://ss64.com/ps/get-date.html)
 
+### Linting
 
-## PowerShell
-
-* [Math Round](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/30/powertip-use-powershell-to-round-to-specific-decimal-place/)
-* [Group & Aggregate](https://social.technet.microsoft.com/Forums/office/en-US/a7d96f2b-140b-49b5-a70f-f2df19c490ac/groupobject-and-measure-object?forum=winserverpowershell)
-* [Group & Aggregate](https://stackoverflow.com/a/6000217/1366033)
-
+* [List of PSScriptAnalyzer rules](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules)
+  * [AvoidUsingCmdletAliases](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/AvoidUsingCmdletAliases?view=ps-modules)
 
 ## PS Mail Funcs
 
@@ -188,23 +192,6 @@ function Start-App {
 
 You can add any number of optional white-space separated [parameter attributes](https://technet.microsoft.com/en-us/library/ms714348(v=vs.85).aspx) to each parameter
 
-### Resources
-
-* [Get-PowerShellBlog: Bye Bye Backtick: Natural Line Continuations in PowerShell](https://get-powershellblog.blogspot.com/2017/07/bye-bye-backtick-natural-line.html)
-
-* https://github.com/jefflomax/configure-iis-webapps-powershell/blob/master/configureIISWebApplications.ps1
-* http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx
-* http://surroundingthecode.wordpress.com/2011/02/24/scripting-iis7-application-pool-configuration-in-powershell/
-* http://habaneroconsulting.com/insights/Set-the-Specific-Times-to-Recycle-an-Application-Pool-with-PowerShell#.VCR7lPldV8E
-* http://serverfault.com/questions/347199/how-can-i-set-iis-application-pool-recycle-times-without-resorting-to-the-ugly-s
-* http://stackoverflow.com/questions/18319961/how-can-i-set-iis-windows-auth-providers-with-powershell
-* http://stackoverflow.com/questions/6847647/enabling-impersonation-in-iis-7-5-via-powershell
-* http://technet.microsoft.com/en-us/library/hh867899.aspx
-* http://blog.itsnotfound.com/2014/01/truefalse-boolean-values-in-powershell/
-* [PowerShell 101 From a Linux Guy](https://developer.rackspace.com/blog/powershell-101-from-a-linux-guy/)
-* [Creating table using Powershell](http://blogs.msdn.com/b/rkramesh/archive/2012/02/02/creating-table-using-powershell.aspx)
-* http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx
-* http://technet.microsoft.com/en-us/library/hh867899.aspx
 
 ### Docs
 
@@ -384,7 +371,7 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 * [powerline](https://github.com/powerline/powerline)
   * Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.
 
-## Articles
+### Articles
 
 * [Ultimate PowerShell Prompt Customization and Git Setup Guide](https://hodgkins.io/ultimate-powershell-prompt-and-git-setup)
 * [How to customize your PowerShell command prompt](https://www.networkadm.in/customize-pscmdprompt/)
@@ -422,6 +409,29 @@ Set-PoshPrompt -Theme Paradox
 ### Oh My Posh
 
 [Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/)
+
+## Resources
+
+* [Get-PowerShellBlog: Bye Bye Backtick: Natural Line Continuations in PowerShell](https://get-powershellblog.blogspot.com/2017/07/bye-bye-backtick-natural-line.html)
+
+* [Math Round](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/30/powertip-use-powershell-to-round-to-specific-decimal-place/)
+* [Group & Aggregate](https://social.technet.microsoft.com/Forums/office/en-US/a7d96f2b-140b-49b5-a70f-f2df19c490ac/groupobject-and-measure-object?forum=winserverpowershell)
+* [Group & Aggregate](https://stackoverflow.com/a/6000217/1366033)
+* [PowerShell 101 From a Linux Guy](https://developer.rackspace.com/blog/powershell-101-from-a-linux-guy/)
+* [Creating table using Powershell](http://blogs.msdn.com/b/rkramesh/archive/2012/02/02/creating-table-using-powershell.aspx)
+* https://github.com/jefflomax/configure-iis-webapps-powershell/blob/master/configureIISWebApplications.ps1
+* http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx
+* http://surroundingthecode.wordpress.com/2011/02/24/scripting-iis7-application-pool-configuration-in-powershell/
+* http://habaneroconsulting.com/insights/Set-the-Specific-Times-to-Recycle-an-Application-Pool-with-PowerShell#.VCR7lPldV8E
+* http://serverfault.com/questions/347199/how-can-i-set-iis-application-pool-recycle-times-without-resorting-to-the-ugly-s
+* http://stackoverflow.com/questions/18319961/how-can-i-set-iis-windows-auth-providers-with-powershell
+* http://stackoverflow.com/questions/6847647/enabling-impersonation-in-iis-7-5-via-powershell
+* http://technet.microsoft.com/en-us/library/hh867899.aspx
+* http://blog.itsnotfound.com/2014/01/truefalse-boolean-values-in-powershell/
+* http://geekswithblogs.net/QuandaryPhase/archive/2013/02/24/create-iis-app-pool-and-site-with-windows-powershell.aspx
+* http://technet.microsoft.com/en-us/library/hh867899.aspx
+
+
 
 ## Questions
 
@@ -533,4 +543,77 @@ Set-PoshPrompt -Theme Paradox
 
     ```bash
     winget upgrade PowerShell
+    ```
+
+* [Create directory if it does not exist](https://stackoverflow.com/q/16906170/1366033)
+
+    ```ps1
+    New-Item -ItemType Directory -Force -Path C:\Path\That\May\Or\May\Not\Exist
+    ```
+
+* [What does `$($variableName)` mean in expandable strings in PowerShell?](https://stackoverflow.com/q/13615676/1366033)
+
+    [Powershell Operators | SS64](https://ss64.com/ps/syntax-operators.html)
+
+    ```ps1
+    "Hello $name"
+    # sub-expression operator
+    "You have $(arr.Count) items remaining"
+    ```
+
+* [Difference between `ForEach` and `ForEach-Object`](https://stackoverflow.com/q/29148462/1366033)
+
+  * [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.2)
+  * [Foreach](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-7.2)
+
+  ```ps1
+  1..5 | ForEach-Object {$_}
+  ForEach ($number in 1..5){$number}
+  ```
+
+* [Timing a command's execution in PowerShell](https://stackoverflow.com/q/3513650/1366033)
+
+    ```ps1
+    Get-History -Count 1 | Select-Object -First 1 -ExpandProperty Duration
+    ```
+
+* [How to pass a custom function inside a  `ForEach-Object` `-Parallel`](https://stackoverflow.com/q/61273189/1366033)
+
+    ```ps1
+    function hi { 'hi' }
+    $a = get-command hi
+    1..3 | foreach -parallel { & $using:a }
+    ```
+
+* [Powershell 'Move-Item' doesn't make directory if it doesn't exists](https://stackoverflow.com/q/13912038/1366033)
+
+    ```ps1
+    Function Move-Item-Parent([string]$path, [string]$destination) {
+        New-Item $destination -ItemType Directory -Force
+        Move-Item $path $destination
+    }
+
+    Move-Item-Parent $from $to
+    ```
+
+* [How to enter a multi-line command](https://stackoverflow.com/q/3235850/1366033)
+
+    Use Pipe (`|`) or BackTicks (```)
+
+    ```ps1
+    Get-ChildItem |
+    Select Name,Length
+    ```
+
+    ```ps1
+    Get-ChildItem . `
+        -Filter ".git" `
+        -Recurse
+    ```
+
+* [Powershell get current script directory name only](https://stackoverflow.com/q/61520315/1366033)
+
+    ```ps1
+    (Get-Item -Path (Get-Location)).Name
+    Split-Path -Path (Get-Location) -Leaf
     ```

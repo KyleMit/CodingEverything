@@ -155,3 +155,10 @@
 
   * [Toggling Focus Assist mode in Win 10 Programmatically](https://stackoverflow.com/q/55477041/1366033)
   * [Keyboard shortcut to quickly toggle Do Not Disturb or Focus Assist?](https://superuser.com/q/1527760/180163)
+
+* Add Clock to Taskbar on All Monitors in Windows 11
+
+  * [Add Clock to the second Display in Windows 11 - Microsoft Community](https://answers.microsoft.com/en-us/windows/forum/all/add-clock-to-the-second-display-in-windows-11/14ed24f5-b203-4bd7-a4e7-c4eb3539b042)
+  * [Windows 11 Will Get Taskbar Clocks on Multiple Monitors Soon](https://www.howtogeek.com/772072/windows-11-will-get-taskbar-clocks-on-multiple-monitors-soon/)
+
+

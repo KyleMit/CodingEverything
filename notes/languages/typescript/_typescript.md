@@ -212,6 +212,29 @@ console.log(arr.length);
    }
    ```
 
+### Debug w/ ts-node
+
+[`-r|--require`](https://nodejs.org/api/cli.html#-r---require-module)
+
+```json
+{
+    "name": "TS Debug",
+    "type": "node",
+    "request": "launch",
+    "args": [
+        "src/index.ts"
+    ],
+    "runtimeArgs": [
+        "--nolazy",
+        "--require",
+        "ts-node/register"
+    ],
+    "sourceMaps": true,
+    "cwd": "${workspaceRoot}",
+    "protocol": "inspector",
+    "internalConsoleOptions": "openOnSessionStart"
+}
+```
 
 ## Typescript Commands
 
@@ -1073,4 +1096,51 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   }
   ```
 
+
+* ['package.json' is not under 'rootDir'](https://stackoverflow.com/q/55753163/1366033)
+
+
+  **`./src/tsconfig.json`**:
+
+  ```json
+  {
+    "compilerOptions": {
+      "rootDir": ".",
+      "outDir": "../dist/",
+      "resolveJsonModule": true
+    },
+    "references": [      // this is how we declare a dependency from
+      { "path": "../" }  // this project to the one at the root dir`
+    ]
+  }
+  ```
+
+  **`./tsconfig.json`**:
+
+  ```json
+  {
+    "compilerOptions": {
+      "rootDir": ".",
+      "outDir": ".",  // if out path for a file is same as its src path, nothing will be emitted
+      "resolveJsonModule": true,
+      "composite": true  // required on the dependency project for references to work
+    },
+    "files": [         // by whitelisting the files to include, TS won't automatically
+      "package.json"   // include all source below root, which is the default.
+    ]
+  }
+  ```
+
+  **Run**
+
+  ```bash
+  tsc --build src
+  ```
+
+* [TSError Unable to compile TypeScript Module '' has no default export](https://stackoverflow.com/a/50473239/1366033)
+
+  ```diff
+  - import Module from 'module';
+  + import * as Module from 'module';
+  ```
 

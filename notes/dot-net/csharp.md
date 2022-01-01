@@ -1,10 +1,25 @@
 # C Sharp
 
-## Features
+## Docs
 
-### Extension Methods
+### Functional Techniques
 
-[Extension Methods - C# Programming Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
+#### [Deconstructing tuples and other types](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct)
+
+```cs
+public void Deconstruct(out string firstName, out string lastName)
+{
+    firstName = FirstName;
+    lastName = LastName;
+}
+var (firstName, lastName) = p;
+```
+
+### C# Programming Guide
+
+#### Extension Methods
+
+[Extension Methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
 
 ```cs
 namespace ExtensionMethods

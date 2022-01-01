@@ -4,23 +4,12 @@
 
 * [Deno](https://deno.land/)
 
+## Docs
+
+* [`package.json`](https://docs.npmjs.com/cli/v8/configuring-npm/package-jsonrepository)
 
 
-## File System
-
-## Utilities
-
-### Generate Sprites
-
-* [node-sprite-generator](https://www.npmjs.com/package/node-sprite-generator) | [selaux/node-sprite-generator](https://github.com/selaux/node-sprite-generator)
-* [sprity](https://www.npmjs.com/package/sprity) | [sprity/sprity](https://github.com/sprity/sprity)
-
-### Resize Images
-
-* [sharp](https://www.npmjs.com/package/sharp) | [lovell/sharp](https://github.com/lovell/sharp)
-* [jimp](https://www.npmjs.com/package/jimp) | [oliver-moran/jimp](https://github.com/oliver-moran/jimp)
-
-## nvm
+## Versions
 
 * **nvm** - Node Version Manager
 
@@ -38,29 +27,6 @@ This is a partial list. For a complete list, visit https://nodejs.org/download/r
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-
-## HTML Templating
-
-* [Mustache](https://mustache.github.io/)
-* [Handlebars](https://handlebarsjs.com/)
-* [doT.js](https://olado.github.io/doT/)
-* [EJS](https://ejs.co/)
-* [Nunjucks](https://mozilla.github.io/nunjucks/)
-* [Hogan.js](https://twitter.github.io/hogan.js/)
-* [Swig](https://node-swig.github.io/swig-templates/)
-* [JsRender](https://www.jsviews.com/#jsrender)
-* [ECT](http://ectjs.com/)
-* [SquirrellyJS](https://squirrelly.js.org/)
-* [Pug](https://pugjs.org/api/getting-started.html)
-* [Jade](https://jade-lang.com/)
-
-
-## npm
-
-
-### npm scripts
-
-[What does the colon `:` mean in npm script names?](https://stackoverflow.com/q/47606101/1366033)
 
 ## Modules
 
@@ -193,16 +159,7 @@ console.log(diag(4, 3)); // 5
   * Add `eslint` to project
   * Run `npm i -D eslint`
 
-## Convert Callback to Promise
-
-* [Converting callbacks to promises | Zell Liew](https://zellwk.com/blog/converting-callbacks-to-promises/)
-* [Util | Node.js v8.17.0 Documentation](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original)
-
-
-
-
-
-## Create Unique ID
+### Create Unique ID
 
 [uuid](https://www.npmjs.com/package/uuid)
 
@@ -210,6 +167,13 @@ console.log(diag(4, 3)); // 5
 import { v4 as uuidv4 } from 'uuid';
 uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ```
+
+
+### Nodemailer
+
+[Nodemailer](https://nodemailer.com/about/)
+
+
 
 ## Nodemon
 
@@ -221,24 +185,14 @@ uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 npm install -g nodemon
 ```
 
-
 * [Nodemon keeps restarting server](https://stackoverflow.com/q/44855839/1366033)
 
    don't write to watch directory
 
+* Alternatives
 
-
-
-### Alternatives
-
-
-* [M-Zuber/**npm-watch**](https://github.com/M-Zuber/npm-watch) - run npm scripts when files change
-* [mikeal/**watch**](https://github.com/mikeal/watch) - Utilities for watching file trees in node.js
-
-## Nodemailer
-
-[Nodemailer](https://nodemailer.com/about/)
-
+  * [M-Zuber/**npm-watch**](https://github.com/M-Zuber/npm-watch) - run npm scripts when files change
+  * [mikeal/**watch**](https://github.com/mikeal/watch) - Utilities for watching file trees in node.js
 
 ## JS Config
 
@@ -267,8 +221,15 @@ npm install -g nodemon
 
 ## Questions
 
+* [What does the colon `:` mean in npm script names?](https://stackoverflow.com/q/47606101/1366033)
+
 
 * [How do you properly promisify request?](https://stackoverflow.com/q/28308131/1366033)
+
+  * [Converting callbacks to promises | Zell Liew](https://zellwk.com/blog/converting-callbacks-to-promises/)
+  * [Util | Node.js v8.17.0 Documentation](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original)
+
+
 * [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
 * [Why does Node.js' fs.readFile() return a buffer instead of string?](https://stackoverflow.com/q/6456864/1366033)
 * [How do I get the path to the current script with Node.js?](https://stackoverflow.com/q/3133243/1366033)
@@ -318,8 +279,29 @@ npm install -g nodemon
     svgexport input.svg output.png 1.5x
     ```
 
-* [List Directory](https://stackoverflow.com/q/2727167/1366033)
+* [How do you get a list of the names of all files present in a directory in Node.js](https://stackoverflow.com/q/2727167/1366033)
 
+    ```js
+    fs.readdirSync('./dirpath', {withFileTypes: true})
+        .filter(item => !item.isDirectory())
+        .map(item => item.name)
+    ```
+
+* [Get all directories within directory nodejs](https://stackoverflow.com/q/18112204/1366033)
+
+    ```js
+    const { promises: { readdir } } = require('fs')
+
+    (await readdir(source, { withFileTypes: true }))
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name)
+    ```
+
+* [Get parent directory name in Node.js](https://stackoverflow.com/q/42956127/1366033)
+
+    ```js
+    path.basename(path.dirname(filename))
+    ```
 
 * [Using filesystem in node.js with async / await](https://stackoverflow.com/a/58332163/1366033)
 
@@ -397,14 +379,14 @@ npm install -g nodemon
 * [Execute a command line binary with Node.js](https://stackoverflow.com/a/20643568/1366033)
 
     ```js
-    const { promisify } = require('util');
-    const cp = require('child_process')
+    import { promisify } from 'util';
+    import cp from 'child_process';
     const exec = promisify(cp.exec);
 
-    async function cmd(text) {
+    export const cmd = async (text: string): Promise<string> => {
         const { stdout, stderr } = await exec(text);
-        console.log('stdout:', stdout);
-        console.log('stderr:', stderr);
+        if (stderr) throw new Error(stderr)
+        return stdout
     }
 
     await cmd("ls")
@@ -488,11 +470,29 @@ npm install -g nodemon
 * [How can I get the full object in Node.js's console.log(), rather than `[Object]`?](https://stackoverflow.com/q/10729276/1366033)
 
 
-```js
-const util = require('util')
-console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}))
+    ```js
+    const util = require('util')
+    console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}))
 
-console.log(JSON.stringify(myObject, null, 4));
+    console.log(JSON.stringify(myObject, null, 4));
 
-console.dir(myObject, { depth: null }); // `depth: null` ensures unlimited recursion
-```
+    console.dir(myObject, { depth: null }); // `depth: null` ensures unlimited recursion
+    ```
+
+* [What does the Node.js `--nolazy` flag mean?](https://stackoverflow.com/q/21534565/1366033)
+
+    > Will force V8 engine to do full compile of code and thus work properly with IntelliJ and WebStorm so you can properly place breakpoints in the code
+
+    ```bash
+    node --v8-options
+    ```
+
+* [Is there a good reference for V8 command line arguments when using node.js](https://stackoverflow.com/q/12863887/1366033)
+
+  * [v8/flag-definitions.h](https://github.com/v8/v8/blob/master/src/flags/flag-definitions.h)
+  * [v8-flags/flags-0.11.md](https://github.com/thlorenz/v8-flags/blob/master/flags-0.11.md#lazy-true-boolean)
+
+* [Stdout buffer issue using node child_process](https://stackoverflow.com/q/23429499/1366033)
+
+   Increase buffer or spawn new process
+

@@ -95,7 +95,6 @@ echo "test(card-sprite) fix unit tests" | npx commitlint
 * [azz/**pretty-quick**](https://github.com/azz/pretty-quick) - Get Pretty Quick
 
 
-
 ## Questions
 
 * [Making a Git push from a detached head](https://stackoverflow.com/a/40929378/1366033)
@@ -183,4 +182,42 @@ git rev-list --count <revision>
   git branch | grep -v "master" | xargs git branch -D
   ```
 
-* Git list status of all repos in a directory??
+* [Git command to show which specific files are ignored by .gitignore](https://stackoverflow.com/q/466764/1366033)
+
+  ```bash
+  git status --ignored
+
+  git check-ignore *    # top level match
+  git check-ignore -v * # include rule
+  git check-ignore **/* # include children
+
+  git check-ignore $(find . -type f -print) # include descendants
+  find -type f | git check-ignore --stdin   # include descendants
+  ```
+
+  ```bash
+  git clean -ndX
+
+  # $ git help clean
+  #
+  # git-clean - Remove untracked files from the working tree
+  # -n, --dry-run - Don't actually remove anything, just show what would be done.
+  # -d - Remove untracked directories in addition to untracked files.
+  # -X - Remove only files ignored by Git.
+  ```
+
+* [How can I view all the git repositories on my machine?](https://stackoverflow.com/q/2020812/1366033)
+
+  ```ps1
+  Get-ChildItem . -Attributes Directory+Hidden -ErrorAction SilentlyContinue -Filter ".git" -Recurse
+  ```
+
+* [Check if directory is git repository (without having to cd into it)](https://stackoverflow.com/q/39518124/1366033)
+
+
+  ```bash
+  git rev-parse --is-inside-work-tree
+  git -C <path> rev-parse
+  ```
+
+

@@ -313,3 +313,31 @@ ls --color -h --group-directories-first
 
   * [Is it possible to have directory aware bash history](https://superuser.com/q/1156823/180163)
 
+* [Delete node_modules folder recursively from a specified path using command line](https://stackoverflow.com/q/42950501/1366033)
+
+  Bash
+
+  ```bash
+  find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+  ```
+
+  Or [NP Kill](https://www.npmjs.com/package/npkill)
+
+  ```bash
+  npx npkill
+  ```
+
+* [Posix Manpage - Find Command](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/find.html#:%7E:text=If%20no%20expression%20is%20present)
+
+  > If the given expression does not contain any of the primaries `-exec`, `-ls`, `-ok`, or `-print`, the given expression is effectively replaced by:
+  > ( given_expression ) `-print`
+
+
+
+* [How to use `-prune` option of `find` in sh?](https://stackoverflow.com/q/1489277/1366033)
+
+  ```bash
+  find / -name "*.php" -print -o -path '/media' -prune
+  |<--       Include      --> or <--    Exclude    -->|
+  ```
+
