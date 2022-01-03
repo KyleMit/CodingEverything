@@ -5,11 +5,11 @@
 * [Trello](https://trello.com/)
 * [Getting Started with Trello](https://trello.com/guide)
 * [Template Gallery](https://trello.com/templates)
+* [Views](https://trello.com/views)
 * [Power-Ups](https://trello.com/power-ups)
 * [Trello Team Playbooks](https://trello.com/teams)
 * [Webinars](https://trello.com/webinars)
 * [Help / Docs](https://help.trello.com/category/694-category)
-
 
 ## Alternatives
 
@@ -28,10 +28,10 @@
 
 ## Apps
 
-[Android](https://play.google.com/store/apps/details?id=com.trello&hl=en_US&gl=US)
-[iOS](https://apps.apple.com/us/app/trello-organize-anything/id461504587)
-[‎MacOS](https://apps.apple.com/app/trello/id1278508951?ls=1&mt=12)
-[Windows](https://www.microsoft.com/en-US/p/trello/9nblggh4xxvw?rtc=1&activetab=pivot:overviewtab)
+* [Android](https://play.google.com/store/apps/details?id=com.trello&hl=en_US&gl=US)
+* [iOS](https://apps.apple.com/us/app/trello-organize-anything/id461504587)
+* [MacOS](https://apps.apple.com/app/trello/id1278508951?ls=1&mt=12)
+* [Windows](https://www.microsoft.com/en-US/p/trello/9nblggh4xxvw?rtc=1&activetab=pivot:overviewtab)
 
 
 

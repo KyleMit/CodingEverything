@@ -750,7 +750,8 @@ Also, I have a [custom alias for pair](https://gist.github.com/KyleMit/69ec21465
 * [Adding a new SSH key to your GitHub account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 ```bash
-ls -al ~/.ssh
+cd ~/.ssh
+ls -al
 ssh-keygen -t rsa -b 4096 -C "your_email"
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
@@ -1094,19 +1095,11 @@ dotnet tool install --global dotnet-script
    Right-click the item you want to appear on the Start menu; then choose Pin to Start.
 
 
-* How to Disable Aero Shake
+* [How do I disable Aero Shake in Windows 7?](https://superuser.com/q/12156/180163)
 
-    [How to Stop Aero Shake from Minimizing Your Windows](https://www.howtogeek.com/howto/windows-7/disable-aero-shake-in-windows-7/)
-
-    ```ini file:DisableAeroShake.reg
-    Windows Registry Editor Version 5.00
-
-    ; Created by: Walter Glenn
-    ; Tutorial: http://www.howtogeek.com/278996/how-to-disable-aero-shake-in-windows/
-
-    [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-    "DisallowShaking"=dword:00000001
-    ```
+    1. Run `gpedit.msc`
+    2. User Congiruation > Administrative Templates > Desktop
+    3. Enable "Turn off Aero Shake window minimizing mouse gesture"
 
 * [How to make Windows 10 taskbar thumbnail previews bigger?](https://superuser.com/q/958690/180163)
 
