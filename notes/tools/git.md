@@ -221,3 +221,68 @@ git rev-list --count <revision>
   ```
 
 
+* [How to get the current branch name in Git?](https://stackoverflow.com/q/6245570/1366033)
+
+  ```bash
+  git rev-parse --abbrev-ref HEAD # v1.7
+  git symbolic-ref --short HEAD   # v1.8
+  git branch --show-current       # v2.22
+  ```
+
+* [git ahead/behind info between master and branch?](https://stackoverflow.com/q/20433867/1366033)
+
+  [`rev-list`](https://git-scm.com/docs/git-rev-list) reverse chronological list
+
+  ```bash
+  git fetch
+  git rev-list --count --left-right HEAD...@{u}
+  ```
+
+* reference upstream branch
+
+  [Git Branching - Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
+
+  > **Upstream shorthand** - You can reference its upstream branch with the `@{upstream}` or `@{u}` shorthand.
+
+* [Number of modified files in git index](https://stackoverflow.com/q/47146064/1366033)
+
+  ```bash
+  # count changes
+  git diff --stat
+  git diff --numstat
+  git diff --shortstat
+
+  # list changes
+  git status -s -uno
+  git diff --name-status
+
+  # by commit
+  git whatchanged -1
+  git show --stat
+  ```
+
+* [How do I turn off the "LF will be replaced by CRLF" warning](https://stackoverflow.com/q/6500880/1366033)
+
+  ```bash
+  git config --global core.safecrlf false
+  ```
+
+  * [Make Git "LF will be replaced by CRLF" warnings go away](https://stackoverflow.com/q/1598260/1366033)
+  * [line endings - With Git, how do I turn off the "LF will be replaced by CRLF" warning](https://stackoverflow.com/q/6500880/1366033)
+  * [LF will be replaced by CRLF in git - What is that and is it important?](https://stackoverflow.com/q/5834014/1366033)
+  * [linux - git replacing LF with CRLF](https://stackoverflow.com/q/1967370/1366033)
+
+* [how to get default branch name?](https://stackoverflow.com/q/28666357/1366033)
+
+  ```bash
+  git rev-parse --abbrev-ref origin/HEAD
+  git remote show origin
+  git symbolic-ref refs/remotes/origin/HEAD
+  git remote set-head origin -a
+  ```
+
+* [Get Preferred Default Branch](https://stackoverflow.com/q/65703168/1366033)
+
+  ```bash
+  git config --get init.defaultBranch
+  ```
