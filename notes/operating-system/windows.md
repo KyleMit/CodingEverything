@@ -78,7 +78,7 @@
 
   1. <kbd>Win</kbd> + <kbd>R</kbd>
   2. Type `SystemPropertiesAdvanced`
-  3. Advanced > Visual Effects
+  3. Advanced > Performance > Visual Effects
   4. Disable `Animate windows when minimizing and maximizing`
 
    ![screenshot flicker](/assets/notes/windows/screenshot-flicker.png)

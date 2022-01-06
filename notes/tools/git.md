@@ -286,3 +286,21 @@ git rev-list --count <revision>
   ```bash
   git config --get init.defaultBranch
   ```
+
+* [Make git undo any whitespace-only changes?](https://stackoverflow.com/q/13793241/1366033)
+
+  ```bash
+  git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -
+  ```
+
+* [Change email address in Git](https://stackoverflow.com/q/37805621/1366033)
+
+  ```bash
+  # set
+  git config --global user.email "kmitofsky@stackoverflow.com"
+  git config --global user.name "KyleMit"
+  # get
+  git config --global --get user.email
+  git config --global --get user.name
+  ```
+
