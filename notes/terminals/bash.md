@@ -341,3 +341,15 @@ ls --color -h --group-directories-first
   |<--       Include      --> or <--    Exclude    -->|
   ```
 
+* [Redirect stderr to stdout but keep errors being written to stderr](https://stackoverflow.com/q/34820975/1366033)
+
+  > Console (terminal) applications - whether on Windows or on Unix-like platforms - only have two output streams at their disposal:
+  >
+  > * `stdout` (**standard output**) - this is where data ("return values") goes.
+  > * `stderr` (**standard error**) - this is where error messages and anythings else that isn't data goes, such as progress and status information.
+  >
+  > Therefore, you cannot and shouldn't infer success vs. failure from the presence of stderr output.
+  > Instead, you must rely solely on an application's process exit code:
+  >
+  > * `0` - indicates success
+  > * `any nonzero value` - indicates failure
