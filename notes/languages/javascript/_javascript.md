@@ -741,3 +741,11 @@ winget install graphviz
   const cmp = (a, b) => (a > b) - (a < b)
   array.sort((a, b) => cmp(a.strength,b.strength) || cmp(a.name,b.name))
   ```
+
+
+* [Generate random number between two numbers in JavaScript](https://stackoverflow.com/q/4959975/1366033)
+
+  ```js
+  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+  ```
+

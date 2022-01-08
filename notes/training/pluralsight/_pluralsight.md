@@ -1,8 +1,18 @@
 # Pluralsight
 
-[Redux Fundamentals](https://app.pluralsight.com/library/courses/redux-fundamentals/table-of-contents)
-[Using React Hooks](https://app.pluralsight.com/library/courses/using-react-hooks/table-of-contents)
-[React Fundamentals](https://app.pluralsight.com/library/courses/react-fundamentals-update/table-of-contents)
+
+## Skills
+
+* [ASP.NET Core Path | Pluralsight](https://app.pluralsight.com/paths/skill/aspnet-core)
+* [ASP.NET MVC 5 Path | Pluralsight](https://app.pluralsight.com/paths/skill/mvc5)
+* [Implementing DevOps with GitHub and Microsoft Azure Path | Pluralsight](https://app.pluralsight.com/paths/skill/implementing-devops-with-github-and-microsoft-azure)
+
+## Todo
+
+* [Redux Fundamentals](https://app.pluralsight.com/library/courses/redux-fundamentals/table-of-contents)
+* [Using React Hooks](https://app.pluralsight.com/library/courses/using-react-hooks/table-of-contents)
+* [React Fundamentals](https://app.pluralsight.com/library/courses/react-fundamentals-update/table-of-contents)
+
 
 ## Bookmarks
 

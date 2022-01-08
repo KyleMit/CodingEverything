@@ -223,6 +223,8 @@ git rev-list --count <revision>
 
 * [Make git undo any whitespace-only changes?](https://stackoverflow.com/q/13793241/1366033)
 
+  Also: [Add only non-whitespace changes](https://stackoverflow.com/q/3515597/1366033)
+
   ```bash
   git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -
   ```
@@ -238,3 +240,10 @@ git rev-list --count <revision>
   git config --global --get user.name
   ```
 
+* [How to revert files that are stubbornly stuck at "Changed but not committed"?](https://stackoverflow.com/q/6335521/1366033)
+
+  Also: [How do I discard unstaged changes in Git? - Stack Overflow](https://stackoverflow.com/q/52704/1366033)
+
+  ```bash
+  git ls-files -m | xargs -i git update-index --assume-unchanged "{}"
+  ```

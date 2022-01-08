@@ -73,6 +73,28 @@ resharper_csharp_keep_blank_lines_in_declarations = 1
 * [Solution-Wide Code Inspections](https://www.jetbrains.com/help/resharper/Code_Analysis__Solution-Wide_Analysis__Solution-Wide_Code_Inspections.html)
 * [Errors/Warnings in Solution window](https://www.jetbrains.com/help/resharper/Reference__Windows__Errors_in_Solution.html#bba8b161)
 
+
+## Hunspell Dictionaries
+
+* Forum
+  * [How to make custom dictionary for Hunspell](https://stackoverflow.com/q/7561648/1366033)
+  * [Creating a hunspell dictionary for use as spellcheck in Open Office](http://web.archive.org/web/20130810100226/http://www.suares.com/index.php?page_id=25&news_id=233)
+* VSCode
+  * [hunspell - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.hunspell)
+  * [Jason3S/vscode-hunspell-ext: Support for Hunspell syntax highlighting in VS Code](https://github.com/Jason3S/vscode-hunspell-ext)
+* Docs
+  * [Hunspell: About](http://hunspell.github.io/)
+  * [hunspell/hunspell: The most popular spellchecking library.](https://github.com/hunspell/hunspell)
+  * [hunspell/hunspell.github.io: Hunspell's website](https://github.com/hunspell/hunspell.github.io)
+  * [Hunspell - Wikipedia](https://en.wikipedia.org/wiki/Hunspell)
+* JetBrains
+  * [Hunspell dictionaries support](https://blog.jetbrains.com/phpstorm/2018/01/hunspell-dictionaries-support/)
+  * [Spell Checking with ReSpeller | ReSharper](https://www.jetbrains.com/help/resharper/Spell_Checking.html)
+  * [ReSpeller | ReSharper](https://www.jetbrains.com/help/resharper/Settings_ReSpeller.html)
+  * [Integrated spell checking with ReSpeller in ReSharper and Rider | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2018/07/10/integrated-spell-checking-respeller-resharper-rider/)
+  * [ReSpeller: A Spell-Checking Plugin for ReSharper | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2013/01/14/respeller-a-spell-checking-plugin-for-resharper/)
+
+
 ## Questions
 
 * [How to move Resharper menu back top main menu bar in VS 2019](https://resharper-support.jetbrains.com/hc/en-us/community/posts/360003373399-How-to-move-Resharper-menu-back-top-main-menu-bar-in-VS-2019)
