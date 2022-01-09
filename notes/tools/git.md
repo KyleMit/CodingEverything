@@ -186,10 +186,14 @@ git rev-list --count <revision>
 
   ```bash
   git status --ignored
+  git status --ignored --porcelain
+
+  git ls-files --others -i --exclude-standard
 
   git check-ignore *    # top level match
   git check-ignore -v * # include rule
   git check-ignore **/* # include children
+
 
   git check-ignore $(find . -type f -print) # include descendants
   find -type f | git check-ignore --stdin   # include descendants

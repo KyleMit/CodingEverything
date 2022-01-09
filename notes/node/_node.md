@@ -496,3 +496,10 @@ npm install -g nodemon
 
    Increase buffer or spawn new process
 
+* [How to check if a path is absolute or relative](https://stackoverflow.com/q/21698906/1366033)
+
+    ```js
+    import {isAbsolute} from 'path';
+    isAbsolute(myPath)
+    ```
+

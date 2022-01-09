@@ -353,3 +353,13 @@ ls --color -h --group-directories-first
   >
   > * `0` - indicates success
   > * `any nonzero value` - indicates failure
+
+
+* [What is the difference between `grep`, `egrep`, and `fgrep`?](https://unix.stackexchange.com/q/17949/128893)
+
+  * `egrep` is 100% equivalent to [`grep -E`](https://www.gnu.org/software/grep/manual/grep.html#index-matching-extended-regular-expressions)
+  * `fgrep` is 100% equivalent to [`grep -F`](https://www.gnu.org/software/grep/manual/grep.html#index-matching-fixed-strings)
+
+
+
+
