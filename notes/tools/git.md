@@ -317,3 +317,10 @@ git rev-list --count <revision>
   ```bash
   git ls-files -m | xargs -i git update-index --assume-unchanged "{}"
   ```
+
+* [How do I undo the most recent local commits in Git?](https://stackoverflow.com/q/927358/1366033)
+
+  ```bash
+  git reset --hard HEAD~1
+  ```
+
