@@ -324,3 +324,5 @@ git rev-list --count <revision>
   git reset --hard HEAD~1
   ```
 
+* [Remove large .pack file created by git](https://stackoverflow.com/q/11050265/1366033)
+

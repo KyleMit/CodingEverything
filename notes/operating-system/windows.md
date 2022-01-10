@@ -162,3 +162,7 @@
   * [Windows 11 Will Get Taskbar Clocks on Multiple Monitors Soon](https://www.howtogeek.com/772072/windows-11-will-get-taskbar-clocks-on-multiple-monitors-soon/)
 
 
+* [How can I visualize the file system usage on Windows?](https://superuser.com/q/8248/18016)
+
+  Use [**WinDirStat**](https://windirstat.net/)
+

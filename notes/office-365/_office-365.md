@@ -32,3 +32,7 @@
 
   View > Settings > Other > Always use compact layout
 
+* [Introduction to Outlook Data Files (.pst and .ost)](https://support.microsoft.com/en-us/office/introduction-to-outlook-data-files-pst-and-ost-222eaf92-a995-45d9-bde2-f331f60e2790)
+  * Outlook Data File (.pst)
+  * Offline Outlook Data File (.ost)
+  * Outlook Group Storage File (.nst)

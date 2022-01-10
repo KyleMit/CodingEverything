@@ -617,3 +617,58 @@ Set-PoshPrompt -Theme Paradox
     (Get-Item -Path (Get-Location)).Name
     Split-Path -Path (Get-Location) -Leaf
     ```
+
+* [Returning a value from within a ForEach in Powershell](https://stackoverflow.com/q/37557974/1366033)
+
+    ```ps1
+    $a.ForEach{ return $_.Name }
+    ```
+
+* [PowerShell difference between Write-Host vs Write-Output?](https://stackoverflow.com/q/19754069/1366033)
+
+    ```ps1
+    Write-Host "Hello World"   # writes to console
+    Write-Output "Hello World" # writes to pipeline
+    ```
+
+    Also, `Write-Output` is implicitly called
+
+* [How do I concatenate strings and variables in PowerShell?](https://stackoverflow.com/q/15113413/1366033)
+
+    ```ps1
+    Write-Host "$($assoc.Id) - $($assoc.Name) - $($assoc.Owner)"
+    ```
+
+* [PowerShell Round & Format Float to max 2 decimals?](https://stackoverflow.com/q/24037021/1366033)
+
+    ```ps1
+    [math]::round(1.111,2)
+    ```
+
+* [Powershell folder size of folders without listing Subdirectories](https://stackoverflow.com/q/26494744/1366033)
+
+```ps1
+foreach ($d in gci -Directory -Force) {
+  '{0,15:N0}' -f ((gci $d -File -Recurse -Force | measure length -sum).sum) + "`t`t$d"
+}
+```
+
+
+```ps1
+$dirs = Get-ChildItem -Directory
+$dirs | ForEach-Object {
+    $size = (Get-ChildItem $_.Name -Force -Recurse | Measure-Object Length -Sum).Sum / 1Mb
+    Return $_.Name + ' ' + [Math]::Round($size, 2)
+}
+```
+
+* [How do I get only directories using Get-ChildItem?](https://stackoverflow.com/q/3085295/1366033)
+
+    ```ps1
+    Get-ChildItem -Directory
+    ```
+
+* [Change directory in PowerShell](https://stackoverflow.com/q/41130310/1366033)
+
+  > Unlike the `CMD.EXE CHDIR` or `CD` command, the PowerShell [`Set-Location`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2) cmdlet will change *both* drive and directory
+
