@@ -8,6 +8,10 @@
   * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - [Navigate editor tabs and tool windows](https://www.jetbrains.com/help/rider/Navigation_and_Search__Context_Dependent_Navigation.html#navigating-editor-tabs-and-tool-windows)
 
 
+## Features
+
+* [HTML - Code Style Assistance - Normalize Quotes](https://www.jetbrains.com/help/resharper/Code_Style_Assistance_in_HTML.html#normalize)
+
 ## Version History
 
 [ReSharper 2020.2: Improved Code Analysis for C# 8, Code Cleanup on Save, and Revamped Unit Test Runner | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2020/08/13/resharper-2020-2-released/)
@@ -47,6 +51,10 @@
 * HotKey Explorer
 
   <kbd>Ctrl</kbd> (3x)
+
+* [Inspect This](https://www.jetbrains.com/help/resharper/Code_Analysis__Inspect_This.html)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>A</kbd> - `ReSharper_InspectThis` - Inspect This
 
 ## Code Analysis
 

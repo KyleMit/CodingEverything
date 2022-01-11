@@ -14,6 +14,19 @@
 * [Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 * [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
 * [Extension API | Visual Studio Code Extension API](https://code.visualstudio.com/api)
+* [Integrated Terminal / Profiles](https://code.visualstudio.com/docs/editor/integrated-terminal#_terminal-profiles)
+
+  ```bash
+  {
+    "terminal.integrated.profiles.windows": {
+      "My PowerShell": {
+        "path": "pwsh.exe",
+        "args": ["-noexit", "-file", "${env:APPDATA}PowerShellMy-init-script.ps1"]
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "My PowerShell"
+  }
+  ```
 
 ### User Interface
 

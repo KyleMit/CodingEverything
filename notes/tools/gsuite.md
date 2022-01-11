@@ -14,8 +14,8 @@
 
 ## Calendar
 
-https://support.google.com/calendar/answer/7638168?hl=en
-
+* [Set your working hours & location](https://support.google.com/calendar/answer/7638168)
+* [Use Google Calendar appointment slots](https://support.google.com/calendar/answer/190998)
 
 ## Groups
 

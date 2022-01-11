@@ -25,9 +25,9 @@
 [Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
 
 
-
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> - Quick Launch (`Window.QuickLaunch`)
+* <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File (`Edit.GoToFile`)
 * <kbd>Ctrl</kbd> + <kbd>T</kbd> - Go to All
-* <kbd>Ctrl</kbd> + <kbd>P</kbd> - Go to File
 * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> - Toggle Current Document
 
 

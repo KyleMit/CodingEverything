@@ -57,3 +57,21 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 ## Sql Data Reader
 
 [Reading a date using DataReader](https://stackoverflow.com/q/5619216/1366033)
+
+## Questions
+
+* [SQL SELECT WHERE field contains words](https://stackoverflow.com/q/14290857/1366033)
+
+    ```sql
+    SELECT * FROM mytable WHERE column1 LIKE '%word1%'
+    ```
+
+* [Is it possible to specify condition in Count()?](https://stackoverflow.com/q/1400078/1366033)
+
+    ```sql
+    SELECT COUNT(CASE WHEN Position = 'Manager' THEN 1 ELSE NULL END) AS ManagerCount,
+           COUNT(CASE WHEN Position = 'Supervisor' THEN 1 ELSE NULL END) AS SupervisorCount,
+           COUNT(CASE WHEN Position = 'Team Lead' THEN 1 ELSE NULL END) AS TeamLeadCount,
+    FROM mytable
+    ```
+
