@@ -749,3 +749,6 @@ winget install graphviz
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
   ```
 
+* [`location.reload(true)` is deprecated](https://stackoverflow.com/q/55127650/1366033)
+
+
