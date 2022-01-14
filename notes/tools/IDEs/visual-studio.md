@@ -168,7 +168,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Changing Ctrl + Tab behavior for moving between documents in Visual Studio](https://stackoverflow.com/q/21027/1366033)
 
-  Use `Window.NextTab`, instead of~~NextDocumentWindow~~ or ~~NextDocumentWindowNav~~
+  * Use `Window.NextTab`, instead of~~NextDocumentWindow~~ or ~~NextDocumentWindowNav~~
+  * Use `Window.PreviousTab`, instead of~~PreviousDocumentWindow~~ or ~~PreviousDocumentWindowNav~~
 
 * [Multiple Rows of Tabs](https://stackoverflow.com/q/299437/1366033)
 

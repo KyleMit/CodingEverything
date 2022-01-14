@@ -10,7 +10,9 @@
 * [How To Make Chrome Your Default Email Client](https://www.cloudwards.net/how-to-make-gmail-your-default-email-client/)
 * [How to open email links with Gmail](https://thegeekpage.com/open-email-links-with-gmail-on-chrome-by-default-in-windows-10/)
 * [Send & open confidential emails](https://support.google.com/mail/answer/7674059?co=GENIE.Platform%3DDesktop&hl=en)
+
 * [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
+* [Immediately mark messages as read when opened in preview pane](https://superuser.com/q/1699307/180163)
 
 ## Calendar
 
