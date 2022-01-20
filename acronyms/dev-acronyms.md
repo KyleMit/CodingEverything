@@ -84,6 +84,7 @@
 
 * **DB** - Database
 * **SQL** - Structured Query Language
+* **TSQL** - Transact Structured Query Language
 * **SSMS** - SQL Server Management Studio
 * **SSIS** - SQL Server Integration Services
 * **SSRS** - SQL Server Reporting Services

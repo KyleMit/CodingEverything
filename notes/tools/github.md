@@ -16,7 +16,7 @@ git clone git@github.com:github/hub.git
 ## Github Developer Program
 
 [GitHub Developer Program](https://docs.github.com/en/developers/overview/github-developer-program)
-[Guides - GitHub Docs](https://docs.github.com/en/rest/guides)
+[Guides](https://docs.github.com/en/rest/guides)
 
 37d356baa1326f03e7c629bbd63c413ac39bc29f
 
@@ -32,6 +32,11 @@ git clone git@github.com:github/hub.git
 * [GitHub auto README with ruby, github-actions and dev.to API](https://dev.to/pashagray/github-auto-readme-with-ruby-github-actions-and-dev-to-api-1leo)
 * [How to Automate Your GitHub Profile README](https://www.freecodecamp.org/news/go-automate-your-github-profile-readme/)
 * [Example - sujeet-agrahari](https://github.com/sujeet-agrahari/sujeet-agrahari/blob/master/README.md)
+
+## Searching Issues & Pull Requests
+
+* [Understanding the search syntax](https://docs.github.com/en/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax)
+* [Searching issues and pull requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
 
 
 ## Configuration
@@ -87,4 +92,8 @@ kramdown:
   * { tab-size: 4 }
   ```
 
+
+* [How to I get Github to notify me of review requests?](https://stackoverflow.com/q/62421084/1366033)
+
+  Settings > Notifications > Pull Request Reviews
 

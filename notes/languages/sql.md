@@ -75,3 +75,10 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     FROM mytable
     ```
 
+* [How do I get list of all tables in a database using TSQL?](https://stackoverflow.com/q/175415/1366033)
+
+    ```sql
+    SELECT * FROM INFORMATION_SCHEMA.TABLES
+    SELECT * FROM Sys.Tables
+    ```
+

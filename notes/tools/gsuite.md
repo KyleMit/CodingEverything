@@ -14,6 +14,9 @@
 * [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
 * [Immediately mark messages as read when opened in preview pane](https://superuser.com/q/1699307/180163)
 
+* [Keyboard shortcuts for Gmail](https://support.google.com/mail/answer/6594?hl=en)
+  * <kbd>e</kbd> - Archive
+
 ## Calendar
 
 * [Set your working hours & location](https://support.google.com/calendar/answer/7638168)
