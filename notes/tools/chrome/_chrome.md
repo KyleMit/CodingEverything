@@ -8,3 +8,8 @@
   * [Duplicate Tab Shortcut | Chrome Web Store](https://chrome.google.com/webstore/detail/duplicate-tab-shortcut/klehggjefofgiajjfpoebdidnpjmljhb/related)
 
   by [Stefan Sundin](https://stefansundin.github.io/)
+
+* [How to hide bookmarks from the new tab page in Chrome?](https://superuser.com/q/446424/180163)
+
+  * Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome
+    * BookmarkBarEnabled = 0

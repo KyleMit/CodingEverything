@@ -97,3 +97,6 @@ kramdown:
 
   Settings > Notifications > Pull Request Reviews
 
+* [Publicizing or hiding organization membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership)
+
+  My Orgs > Org > People > Me > Public

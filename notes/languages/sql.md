@@ -82,3 +82,32 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT * FROM Sys.Tables
     ```
 
+* [Is there a Max function in SQL Server that takes two values like Math.Max in .NET?](https://stackoverflow.com/q/124417/1366033)
+
+    ```sql
+    SELECT IIF(a>b, a, b)
+    ```
+
+    ```sql
+    create function dbo.InlineMax(@val1 int, @val2 int)
+    returns int
+    as
+    begin
+    if @val1 > @val2
+        return @val1
+    return isnull(@val2,@val1)
+    end
+    ```
+
+* [How to find the number of days between two dates](https://stackoverflow.com/q/11418496/1366033)
+
+    ```sql
+    SELECT DATEDIFF(d, @start, @end)
+    ```
+
+* [Arithmetic overflow error converting expression to data type int](https://stackoverflow.com/q/29521942/1366033)
+
+    ```sql
+    SELECT SUM(CAST(column AS BIGINT)) AS Sum,
+    ```
+
