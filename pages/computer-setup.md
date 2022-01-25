@@ -957,22 +957,6 @@ Which installs CLI tools to here:
 
 
 
-### Dotnet CLI
-
-List Tool versions:
-
-```bash
-dotnet tool list -g
-```
-
-* [dotnet-script](https://github.com/filipw/dotnet-script)
-
-```bash
-dotnet tool install --global dotnet-script
-```
-
-[dotnet SDKs](https://dotnet.microsoft.com/download/visual-studio-sdks)
-
 ### Auto Hot Key Scripts
 
 

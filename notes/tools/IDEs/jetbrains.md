@@ -1,8 +1,14 @@
-# PHPStorm
+# JetBrains IDE
 
-[PhpStorm](https://www.jetbrains.com/phpstorm/)
+## Products
 
-> The Lightning-Smart IDE for PHP Programming by JetBrains
+
+* [PhpStorm](https://www.jetbrains.com/phpstorm/) - PHP
+* IntelliJ IDEA - Java
+* PyCharm - Python
+* WebStorm - JavaScript
+* Rider - DotNet / C#
+
 
 ## Shortcuts
 
@@ -71,3 +77,6 @@
 
   3. Project Explorer > Settings > Always Select Opened File
 
+* [Add launchers dir to the PATH](https://stackoverflow.com/q/57810887/1366033)
+
+  Allows you to launch editor from terminal

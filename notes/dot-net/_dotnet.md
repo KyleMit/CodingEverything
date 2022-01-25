@@ -1,22 +1,6 @@
 # dotnet core
 
 
-## CLI
-
-### Dotnet Run
-
-[`dotnet run`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-run)
-
-> `--`Delimits arguments to dotnet run from arguments for the application being run. All arguments after this delimiter are passed to the application run.
-
-### Dotnet New
-
-* [`dotnet new`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
-  * [Templates](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#arguments)
-    * `console`
-    * `mvc`
-    * `webapp`
-
 ## Tools
 
 ```bash
