@@ -24,6 +24,8 @@
 
 ## Commands
 
+* [`wc`](https://docs.oracle.com/cd/E88353_01/html/E37839/wc-1.html)
+
 ### Xargs
 
 [**`xargs`**](https://en.wikipedia.org/wiki/Xargs)
@@ -298,6 +300,18 @@ ls --color -h --group-directories-first
 
   ```bash
   source ~/.bashrc
+  ```
+
+* [How to find all files with the same extension within a directory](https://askubuntu.com/q/333710/349745)
+
+  ```bash
+  find . -type f -name "*.txt"
+  ```
+
+* [How to use find command to search for multiple extensions](https://unix.stackexchange.com/q/15308/128893)
+
+  ```bash
+  find . -name '*.jpg' -o -name '*.png'
   ```
 
 * [How To Count All The Files Extension Recursively In Linux?](https://www.2daygeek.com/how-to-count-files-by-extension-in-linux/)

@@ -122,3 +122,8 @@ resharper_csharp_keep_blank_lines_in_declarations = 1
   `ReSharper_ToggleSuspended`
 
   Also: [How can I temporary disable/turn off ReSharper?](https://resharper-support.jetbrains.com/hc/en-us/articles/206546999-How-can-I-temporary-disable-turn-off-ReSharper-)
+
+
+* [ReSharper "Cannot resolve symbol" even when project builds](https://stackoverflow.com/q/15713167/1366033)
+
+  a) Resharper > Options > Environment > General Click 'Clear Cache' and then restart VS

@@ -53,3 +53,8 @@ dotnet tool install --global dotnet-script
   }
   ```
 
+* [Global `omnisharp.json`](https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options#global-omnisharpjson)
+
+  ```none
+  %USERPROFILE%/.omnisharp/omnisharp.json
+  ```

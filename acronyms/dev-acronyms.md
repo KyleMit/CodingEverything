@@ -387,6 +387,7 @@
 * **COB** - Close of Business
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
+* **FUD** - Fear, Uncertainty And Doubt
 
 ### Finance
 

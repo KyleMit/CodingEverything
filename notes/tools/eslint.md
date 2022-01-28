@@ -9,6 +9,10 @@
 * ESLint uses an AST to evaluate patterns in code.
 * ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
 
+## Alternatives
+
+* JSHint
+
 ## Docs
 
 * [eslint](https://eslint.org/)

@@ -6,8 +6,10 @@
 * [CodePen](https://codepen.io/KyleMit)
 * [CodeSandbox](https://codesandbox.io/u/KyleMit)
 * [Plunker](https://plnkr.co/users/KyleMit/plunks)
-* [Gist](https://gist.github.com/KyleMit)
+
+
 * Build and run github
+  * [Gist](https://gist.github.com/KyleMit)
   * [Codespaces](https://github.com/features/codespaces)
   * [Gitpod - Dev environments built for the cloud](https://www.gitpod.io/)
   * [Bl.ocks](https://bl.ocks.org/)
@@ -17,6 +19,7 @@
   * [RunKit](https://runkit.com/home) - node
   * [SQL Fiddle](http://sqlfiddle.com/) - sql
   * [.NET Fiddle](https://dotnetfiddle.net/) - dotnet
+  * [TS Playground](https://www.typescriptlang.org/play)
 
 * Code Exercises
   * [LeetCode](https://leetcode.com/KyleMit/)

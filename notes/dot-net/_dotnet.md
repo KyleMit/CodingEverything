@@ -255,3 +255,82 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   Prefer dictionary for typesafety
 
+* [JSON.NET Error Self referencing loop detected for type](https://stackoverflow.com/q/7397207/1366033)
+
+  ```cs
+  JsonConvert.SerializeObject(YourObject, Formatting.Indented,
+      new JsonSerializerSettings() {
+          ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+      }
+  );
+  ```
+
+* [How do I turn a C# object into a JSON string in .NET?](https://stackoverflow.com/q/6201529/1366033)
+
+  ```cs
+  Newtonsoft.Json.JsonConvert.SerializeObject(new {foo = "bar"})
+  ```
+
+  ```cs
+  System.Text.JsonJsonSerializer.Serialize(new {foo = "bar"});
+  ```
+
+
+* Await All
+
+  * [Using async/await for multiple tasks](https://stackoverflow.com/q/12337671/1366033)
+  * [Running multiple async tasks and waiting for them all to complete](https://stackoverflow.com/q/25009437/1366033)
+  * [Awaiting multiple Tasks with different results](https://stackoverflow.com/q/17197699/1366033)
+
+  ```cs
+  int[] ids = new[] { 1, 2, 3, 4, 5 };
+  await Task.WhenAll(ids.Select(i => DoSomething(1, i, blogClient)));
+  ```
+
+* [C# elapsed time on a timer?](https://stackoverflow.com/q/9706803/1366033)
+
+  ```cs
+  var stopWatch = new Stopwatch();
+  stopWatch.Start();
+  stopWatch.Stop();
+  var duration = stopWatch.ElapsedMilliseconds;
+  ```
+
+* [How to get awaitable Thread.Sleep?](https://stackoverflow.com/q/13429707/1366033)
+
+  Use [`Task.Delay`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay)
+
+  ```cs
+  await Task.Delay(1000);
+  ```
+
+* [Convert any given function into an awaitable task](https://stackoverflow.com/q/32045815/1366033)
+
+
+  ```cs
+  int task = await Task.FromResult(TestFunc(2));
+  ```
+
+  ```cs
+  await Task.Run(() => TestFunc(2));
+  ```
+
+* [How to cancel a CancellationToken](https://stackoverflow.com/questions/30875279/how-to-cancel-a-cancellationtoken)
+
+  ```cs
+  CancellationTokenSource source = new CancellationTokenSource();
+  previouslyProvidedToken = source.Token;
+  ...
+  source.Cancel();
+  ```
+
+* [Calling a method every x minutes](https://stackoverflow.com/q/13019433/1366033)
+
+  ```cs
+  var timer = new PeriodicTimer(TimeSpan.FromSeconds(10));
+
+  while (await timer.WaitForNextTickAsync())
+  {
+      //Business logic
+  }
+  ```
