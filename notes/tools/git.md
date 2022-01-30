@@ -276,7 +276,7 @@ git rev-list --count <revision>
   * [LF will be replaced by CRLF in git - What is that and is it important?](https://stackoverflow.com/q/5834014/1366033)
   * [linux - git replacing LF with CRLF](https://stackoverflow.com/q/1967370/1366033)
 
-* [how to get default branch name?](https://stackoverflow.com/q/28666357/1366033)
+* [How to get default branch name?](https://stackoverflow.com/q/28666357/1366033)
 
   ```bash
   git rev-parse --abbrev-ref origin/HEAD
