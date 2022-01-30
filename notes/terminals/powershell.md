@@ -495,6 +495,24 @@ Set-PoshPrompt -Theme Paradox
 * [Delete files without an extension in PowerShell](https://stackoverflow.com/a/42345207/1366033)
 * [Finding All the Empty Folders in a Directory Tree](https://technet.microsoft.com/en-us/library/ff730953.aspx)
 
+* [Powershell test if folder empty](https://stackoverflow.com/a/10550670/1366033)
+
+    ```ps1
+    Test-Path .\temp\*
+    ```
+
+* [Getting home directory?](https://stackoverflow.com/q/44575585/1366033)
+
+    ```ps1
+    $HOME
+    ```
+
+* [Automatic Variable `$HOME` vs Environment Variable `$Env:HOME`](https://superuser.com/q/1454263/180163)
+
+  `$HOME` is preferred for cross-platform compatability
+
+  * [Automatic Variables](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Automatic_Variables)
+  * [Environment Variables](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables)
 
 * [Variable expansion / String interpolation](http://blogs.msdn.com/b/powershell/archive/2006/07/15/variable-expansion-in-strings-and-herestrings.aspx) - Only works with double quotes
 
@@ -672,3 +690,18 @@ $dirs | ForEach-Object {
 
   > Unlike the `CMD.EXE CHDIR` or `CD` command, the PowerShell [`Set-Location`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2) cmdlet will change *both* drive and directory
 
+* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
+
+    ```ps1
+    $resp = gh auth status 2>&1
+    $resp = cmd /c gh auth status '2>&1'
+    ```
+
+* [Why use "Cmd /c Powershell" instead of just "Powershell"?](https://superuser.com/q/1246339/180163)
+
+
+* [How to quietly remove a directory with content in PowerShell](https://stackoverflow.com/q/7909167/1366033)
+
+    ```ps1
+    Remove-Item myPath -Force -Recurse
+    ```

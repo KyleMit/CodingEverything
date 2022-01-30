@@ -1,5 +1,19 @@
 # Chrome
 
+## Docs
+
+* [Force users to sign in to Chrome Browser (user policies only)](https://support.google.com/chrome/a/answer/7572556?hl=en)
+
+## Release Channels
+
+* Links
+  * [Test Chrome browser channels](https://support.google.com/chrome/a/answer/9300510)
+  * [Chrome Release Channels](https://www.chromium.org/getting-involved/dev-channel/)
+* Channels
+  * Beta
+  * Dev
+  * Canary
+
 ## Questions
 
 * [Is there a shortcut key to duplicate a tab in Google Chrome?](https://superuser.com/q/284115/180163)

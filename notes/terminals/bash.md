@@ -24,6 +24,7 @@
 
 ## Commands
 
+* [`ls`](https://man7.org/linux/man-pages/man1/ls.1.html)
 * [`wc`](https://docs.oracle.com/cd/E88353_01/html/E37839/wc-1.html)
 
 ### Xargs
