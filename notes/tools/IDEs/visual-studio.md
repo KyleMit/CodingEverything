@@ -137,7 +137,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   Tools > Options > Projects and Solutions > Track Active Item in Solution Explorer
 
-  Also: [Shortcut to scroll solution explorer to current file](https://stackoverflow.com/q/14937284/1366033)
+* [Shortcut to scroll solution explorer to current file](https://stackoverflow.com/q/14937284/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>[</kbd>, <kbd>S</kbd> - `SolutionExplorer.SyncWithActiveDocument` - Show current file in Solution Explorer
 
 * [Is there a way to navigate to real implementation of method behind an interface?](https://stackoverflow.com/a/53273845/1366033)
 

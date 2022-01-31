@@ -12,7 +12,7 @@
 * [Redux Fundamentals](https://app.pluralsight.com/library/courses/redux-fundamentals/table-of-contents)
 * [Using React Hooks](https://app.pluralsight.com/library/courses/using-react-hooks/table-of-contents)
 * [React Fundamentals](https://app.pluralsight.com/library/courses/react-fundamentals-update/table-of-contents)
-
+* [Getting Started with CircleCI](https://app.pluralsight.com/library/courses/circleci-github-getting-started/description) - Premium
 
 ## Bookmarks
 

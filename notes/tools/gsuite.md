@@ -26,6 +26,10 @@
 
 * [Emails to Google Groups email address aren't working](https://webapps.stackexchange.com/q/148192/38656)
 
+## Meet
+
+* [Improve collaboration equity in hybrid meetings with Companion mode](https://support.google.com/a/users/answer/11305028?p=companion_mode)
+
 ## Questions
 
 * [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
