@@ -24,6 +24,7 @@
 
 ## Commands
 
+* [`ls`](https://man7.org/linux/man-pages/man1/ls.1.html)
 * [`wc`](https://docs.oracle.com/cd/E88353_01/html/E37839/wc-1.html)
 
 ### Xargs
@@ -375,5 +376,13 @@ ls --color -h --group-directories-first
   * `fgrep` is 100% equivalent to [`grep -F`](https://www.gnu.org/software/grep/manual/grep.html#index-matching-fixed-strings)
 
 
+* [How to tell bash that the line continues on the next line](https://stackoverflow.com/q/3871332/1366033)
+
+  The character is a backslash `\`
+
+  From the bash manual [Escape Character](https://www.gnu.org/software/bash/manual/html_node/Escape-Character.html)
+
+  > If a `\newline` pair appears, and the backslash itself is not quoted, the `\newline` is treated as a line continuation
+  > that is, it is removed from the input stream and effectively ignored
 
 
