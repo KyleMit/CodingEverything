@@ -11,6 +11,10 @@
 * [Webinars](https://trello.com/webinars)
 * [Help / Docs](https://help.trello.com/category/694-category)
 
+## Docs
+
+* [Adding lists to a board](https://help.trello.com/article/744-adding-lists-to-a-board)
+
 ## Alternatives
 
 * [Asana](https://asana.com/)

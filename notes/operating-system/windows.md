@@ -166,3 +166,7 @@
 
   Use [**WinDirStat**](https://windirstat.net/)
 
+* [How can I center Windows 10 start menu position?](https://superuser.com/q/1661622/180163)
+
+  * Add Links, align links left, center right icons, remove link text
+

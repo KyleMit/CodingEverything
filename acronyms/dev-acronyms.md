@@ -388,6 +388,7 @@
 * **EOD** - End of Day
 * **FTE** - Full Time Equivalency
 * **FUD** - Fear, Uncertainty And Doubt
+* **BLUF** - [Bottom Line Up Front](https://en.wikipedia.org/wiki/BLUF_(communication))
 
 ### Finance
 

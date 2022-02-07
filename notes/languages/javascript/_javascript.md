@@ -752,3 +752,12 @@ winget install graphviz
 * [`location.reload(true)` is deprecated](https://stackoverflow.com/q/55127650/1366033)
 
 
+* [Using querySelectorAll to retrieve direct children](https://stackoverflow.com/q/3680876/1366033)
+
+
+  [`:scope` pseudo-class](https://drafts.csswg.org/selectors-4/#the-scope-pseudo)
+
+  ```js
+  myDiv.querySelectorAll(":scope > .foo");
+  ```
+

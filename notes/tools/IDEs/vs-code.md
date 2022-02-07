@@ -8,6 +8,19 @@
 * Cloud
   * [Cloud9](https://aws.amazon.com/cloud9/)
 
+## Keyboard Shortcuts / Hotkeys / Keybindings
+
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> - Command Pallette
+* <kbd>Ctrl</kbd> + <kbd>P</kbd> - Find File
+* <kbd>Alt</kbd> - Show Menu
+* <kbd>Ctrl</kbd> + <kbd>E</kbd> - View: Toggle Sidebar Visibility
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - View: Toggle Side Panel
+
+## Versions / Releases
+
+* [Visual Studio Code January 2022](https://code.visualstudio.com/updates/v1_64)
+  * [VS Code 1.64 Release Party](https://www.youtube.com/watch?v=g2UC0FmbYSY)
+
 ## Docs
 
 * [Keybinding](https://code.visualstudio.com/docs/getstarted/keybindings)
@@ -28,23 +41,23 @@
   }
   ```
 
-### User Interface
+## User Interface
 
 [User Interface](https://code.visualstudio.com/docs/getstarted/userinterface)
 [microsoft/monaco-editor](https://github.com/microsoft/monaco-editor)
 
-### Github
+## Github
 
 [Working with GitHub in VS Code](https://code.visualstudio.com/docs/editor/github)
 
 
-### Typings
+## Typings
 
 * [ATA - Automatic Type Acquisition](https://code.visualstudio.com/docs/languages/javascript#_automatic-type-acquisition)
 * [jQuery Intellisense in VS Code](https://stackoverflow.com/q/33902077/1366033)
 
 
-### Tasks
+## Tasks
 
 * [Tasks](https://code.visualstudio.com/docs/editor/tasks)
 * [VS Code Tasks](https://code.visualstudio.com/docs/editor/tasks)
@@ -76,7 +89,7 @@ Type `task·`
 
 
 
-#### Example
+### Example
 
 ```json
 {
@@ -101,18 +114,18 @@ Type `task·`
 }
 ```
 
-### Editing
+## Editing
 
 * [Formatting](https://code.visualstudio.com/docs/editor/codebasics#_formatting)
 
 Format Document - <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd>
 Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
-### Intellisense
+## Intellisense
 
 [Customizing IntelliSense](https://code.visualstudio.com/docs/editor/intellisense#_customizing-intellisense)
 
-### Debugging
+## Debugging
 
 [Launch Configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
 
@@ -123,11 +136,6 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 [What is the pwa-node type launch configuration on VSCode?](https://stackoverflow.com/q/63442436/1366033)
 
 [Debug npm script](https://stackoverflow.com/a/64627874/1366033)
-
-## QnA
-
-* [Cycle through tabs](https://stackoverflow.com/a/38978993/1366033)
-
 
 
 ## Run Custom Commands / Macros
@@ -166,12 +174,6 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * `@enabled` - Show enabled installed extensions. Extensions can be individually enabled/disabled.
 * `@recommended` - Show recommended extensions. Grouped as Workspace specific or general use.
 * `@category` - Show extensions belonging to specified category. Below are a few of supported categories. For a complete list, type @category and follow the options in the suggestion list:
-
-
-## Keybindings
-
-* [Macro like keybindings #871](https://github.com/microsoft/vscode/issues/871)
-* [Macro recording - Issue #4490 - microsoft/vscode](https://github.com/Microsoft/vscode/issues/4490)
 
 
 ## Open File Side by Side
@@ -589,6 +591,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
 
+  <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> - Toggle Bookmark
+
 * [VS code indentation when copying and pasting is messed up](https://stackoverflow.com/q/42747498/1366033)
 
   ```js
@@ -623,4 +627,13 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
   * [HTML Class Suggestions](https://marketplace.visualstudio.com/items?itemName=AndersEAndersen.html-class-suggestions)
   * [Class autocomplete for HTML](https://marketplace.visualstudio.com/items?itemName=AESSoft.aessoft-class-autocomplete)
+
+
+* [Cycle through tabs](https://stackoverflow.com/a/38978993/1366033)
+
+
+* Macro like Keybindings
+
+  * [Macro like keybindings #871](https://github.com/microsoft/vscode/issues/871)
+  * [Macro recording - Issue #4490 - microsoft/vscode](https://github.com/Microsoft/vscode/issues/4490)
 

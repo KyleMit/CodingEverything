@@ -1,9 +1,14 @@
 # G Suite
 
-## Drive
+## Products
 
-* [Use Drive File Stream with work or school](https://support.google.com/drive/answer/7329379)
-* [Folders from "shared with me" don't show up in google file stream when copied to "my drive" online](https://support.google.com/a/thread/7885542)
+* Gmail
+* Calendar
+* Groups
+* Meet
+* Drive
+  * Docs
+  * Sheets
 
 ## Gmail
 
@@ -17,10 +22,23 @@
 * [Keyboard shortcuts for Gmail](https://support.google.com/mail/answer/6594?hl=en)
   * <kbd>e</kbd> - Archive
 
+* [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
+
+  Settings > Chat > Hide Hangouts
+
+* [Search operators you can use with Gmail](https://support.google.com/mail/answer/7190?hl=en)
+
+* [How do I switch between Gmail tabs using keyboard shortcuts?](https://webapps.stackexchange.com/q/46563/38656)
+
+  * <kbd>\`</kbd> - move to next ➞
+  * <kbd>~</kbd> - move to previous 🠬
+
 ## Calendar
 
 * [Set your working hours & location](https://support.google.com/calendar/answer/7638168)
 * [Use Google Calendar appointment slots](https://support.google.com/calendar/answer/190998)
+
+* [Search on Google Calendar](https://support.google.com/calendar/answer/37176)
 
 ## Groups
 
@@ -30,11 +48,18 @@
 
 * [Improve collaboration equity in hybrid meetings with Companion mode](https://support.google.com/a/users/answer/11305028?p=companion_mode)
 
+## Drive
+
+* [Use Drive File Stream with work or school](https://support.google.com/drive/answer/7329379)
+* [Folders from "shared with me" don't show up in google file stream when copied to "my drive" online](https://support.google.com/a/thread/7885542)
+
+
+## Docs
+
+* [Can I format the Google Docs Table of Contents to only include certain headers?](https://webapps.stackexchange.com/q/102639/38656)
+
 ## Questions
 
-* [How to Disable Hangouts Chat and Meet in Gmail Sidebar](https://www.howtogeek.com/675524/how-to-disable-hangouts-chat-and-meet-in-gmail-sidebar/)
-
-  Settings > Chat > Hide Hangouts
 
 * Restore Old Google Icons
 

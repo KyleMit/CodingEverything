@@ -363,23 +363,24 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 
 ## Customize Prompt
 
-### Utilities
+* Utilities
 
-* [PSReadLine](https://github.com/PowerShell/PSReadLine?WT.mc_id=-blog-scottha)
-* [PSColors](https://github.com/ecsousa/PSColors)
-* [Oh my Posh](https://ohmyposh.dev/)
-* [powerline](https://github.com/powerline/powerline)
+  * [PSReadLine](https://github.com/PowerShell/PSReadLine?WT.mc_id=-blog-scottha)
+  * [PSColors](https://github.com/ecsousa/PSColors)
+  * [Oh my Posh](https://ohmyposh.dev/)
+  * [powerline](https://github.com/powerline/powerline)
   * Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.
 
-### Articles
+* Links
 
-* [Ultimate PowerShell Prompt Customization and Git Setup Guide](https://hodgkins.io/ultimate-powershell-prompt-and-git-setup)
-* [How to customize your PowerShell command prompt](https://www.networkadm.in/customize-pscmdprompt/)
-* [PowerShell - Customize the Prompt - Norlunn's Blog](https://www.norlunn.net/2019/10/07/powershell-customize-the-prompt/)
-* [You should be customizing your PowerShell Prompt with PSReadLine - Scott Hanselman's Blog](https://www.hanselman.com/blog/you-should-be-customizing-your-powershell-prompt-with-psreadline)
-* [How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh - Scott Hanselman's Blog](https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh)
-* [Customizing Your PowerShell Prompt · dahlbyk/posh-git Wiki](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt)
-* [about_Prompts - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.1)
+  * [Ultimate PowerShell Prompt Customization and Git Setup Guide](https://hodgkins.io/ultimate-powershell-prompt-and-git-setup)
+  * [How to customize your PowerShell command prompt](https://www.networkadm.in/customize-pscmdprompt/)
+  * [PowerShell - Customize the Prompt - Norlunn's Blog](https://www.norlunn.net/2019/10/07/powershell-customize-the-prompt/)
+  * [You should be customizing your PowerShell Prompt with PSReadLine - Scott Hanselman's Blog](https://www.hanselman.com/blog/you-should-be-customizing-your-powershell-prompt-with-psreadline)
+  * [How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh - Scott Hanselman's Blog](https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh)
+  * [Customizing Your PowerShell Prompt · dahlbyk/posh-git Wiki](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt)
+  * [about_Prompts - PowerShell | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.1)
+
 
 ```bash
 # either
@@ -409,6 +410,13 @@ Set-PoshPrompt -Theme Paradox
 ### Oh My Posh
 
 [Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/)
+
+
+## Articles
+
+* [Code Layout and Formatting - PowerShell Practice and Style](https://poshcode.gitbook.io/powershell-practice-and-style/style-guide/code-layout-and-formatting)
+* [Building PowerShell Modules by Brandon Olin](https://leanpub.com/building-powershell-modules)
+
 
 ## Resources
 
@@ -705,3 +713,11 @@ $dirs | ForEach-Object {
     ```ps1
     Remove-Item myPath -Force -Recurse
     ```
+
+* [Getting the path of %AppData% in PowerShell](https://stackoverflow.com/q/10132883/1366033)
+
+```ps1
+$env:APPDATA
+$env:LOCALAPPDATA
+```
+

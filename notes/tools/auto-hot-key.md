@@ -1,34 +1,24 @@
 # Auto Hot Key
 
 http://www.autohotkey.com/
-http://www.autohotkey.com./docs/Tutorial.htm
 
 
 ## Docs
 
-http://www.autohotkey.com./docs/Tutorial.htm
-http://www.autohotkey.com/docs/Hotstrings.htm
-http://www.autohotkey.com/docs/commands/InputBox.htm
-
-## Links
-
-
-
-http://www.autohotkey.com/board/topic/86937-autohotkey-syntaxhighlight-for-notepad/
-
-* [How do I reassign hot keys for my keyboard?](https://support.microsoft.com/en-us/help/4052277/accessories-how-do-i-reassign-hot-keys-for-my-keyboard)\
-* [Microsoft Mouse and Keyboard Center](https://www.microsoft.com/accessories/en-us/downloads/mouse-keyboard-center)\
-* [How to Remap Your Keyboard](https://www.pcmag.com/feature/362116/how-to-remap-your-keyboard/3)
-
-
-* [List of Keys (Keyboard, Mouse and Joystick)](https://www.autohotkey.com/docs/KeyList.htm)\
-* [How to change the keyboard shortcut in an AutoHotKey script](https://www.addictivetips.com/windows-tips/change-keyboard-shortcut-in-an-autohotkey-script/)\
+* [Tutorial](http://www.autohotkey.com/docs/Tutorial.htm)
+* [Hotstrings](http://www.autohotkey.com/docs/Hotstrings.htm)
+* [InputBox](http://www.autohotkey.com/docs/commands/InputBox.htm)
 * [Remapping Keys (Keyboard, Mouse and Joystick)](https://www.autohotkey.com/docs/misc/Remap.htm)
-
 * [Hotkeys - Definition & Usage](https://www.autohotkey.com/docs/Hotkeys.htm)
+* [List of Keys (Keyboard, Mouse and Joystick)](https://www.autohotkey.com/docs/KeyList.htm)
 
-* [Run if window active](https://superuser.com/q/1357813/180163)
-* [Win Active](https://autohotkey.com/docs/commands/_IfWinActive.htm)
+## Articles
+
+* [How do I reassign hot keys for my keyboard?](https://support.microsoft.com/en-us/help/4052277/accessories-how-do-i-reassign-hot-keys-for-my-keyboard)
+* [Microsoft Mouse and Keyboard Center](https://www.microsoft.com/accessories/en-us/downloads/mouse-keyboard-center)
+* [How to Remap Your Keyboard](https://www.pcmag.com/feature/362116/how-to-remap-your-keyboard/3)
+* [How to change the keyboard shortcut in an AutoHotKey script](https://www.addictivetips.com/windows-tips/change-keyboard-shortcut-in-an-autohotkey-script/)
+
 * [Hot reload scripts on save](https://autohotkey.com/board/topic/43779-reload-this-script-shortcut-solved/)
 * [Windows Pen](https://windows.gadgethacks.com/how-to/reprogram-your-surface-pen-buttons-do-anything-you-want-0166903/)
 
@@ -70,3 +60,25 @@ AppsKey::RWin
 ; Win + Space will launch search (Win + S)
 #Space::#s
 ```
+
+## Questions
+
+
+* [Run if window active](https://superuser.com/q/1357813/180163)
+
+  * [Win Active](https://autohotkey.com/docs/commands/_IfWinActive.htm)
+
+* Keyboard Event Viewer
+
+  [w3c/uievents: UI Events](https://github.com/w3c/uievents)
+  [Keyboard Event Viewer](https://w3c.github.io/uievents/tools/key-event-viewer.html)
+
+
+* [How to build AHK scripts automatically on startup?](https://stackoverflow.com/q/41723490/1366033)
+
+* [Powershell script with response and no window?](https://stackoverflow.com/q/53359613/1366033)
+
+  ```ahk
+  Run pwsh -WindowStyle Hidden -Command "Stop-ElgatoKeyLight -Host 192.168.1.64"
+  ```
+

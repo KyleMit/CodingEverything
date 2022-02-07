@@ -193,6 +193,8 @@ Look Up Computer Stats:
 https://winstall.app/packs/e2W4gRw8S
 
 ```bash file:winstall.bat
+winget install Microsoft.VisualStudioCode
+winget install Microsoft.VisualStudioCode.Insiders
 winget install Atlassian.Sourcetree
 winget install Postman.Postman
 winget install Microsoft.VisualStudioCode
@@ -1120,6 +1122,18 @@ Windows Registry Editor Version 5.00
 ### Alt Drag
 
 [Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
+[Alt Drag - Hotkeys](https://stefansundin.github.io/altdrag/doc/hotkeys.html)
+[Virtual-Key Codes](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
+
+```ps1
+Get-ChildItem -Path $env:APPDATA -Filter "AltDrag.ini" -Recurse
+```
+
+```ini
+[General]
+Hotkeys=72 ;F3
+```
+
 
 ### Scripts
 
