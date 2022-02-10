@@ -111,6 +111,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Code alignment](https://marketplace.visualstudio.com/items?itemName=cpmcgrath.Codealignment)
 * [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)
 
+* [Attach Toolbar](https://marketplace.visualstudio.com/items?itemName=fareloz.AttachToolbar)
+  * [fareloz/AttachToolbar: Visual studio extension. Provide custom toolbar to easy attach debugger to most frequent targets.](https://github.com/fareloz/AttachToolbar)
+
 ### Productivity Power Tools (PPT)
 
 > A set of Visual Studio extensions improving developer productivity
@@ -188,3 +191,25 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [What is the equivalent shortcut for CTRL + D from VSCode in Visual Studio?](https://stackoverflow.com/a/70379900/1366033)
 
   <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd> - **`Edit.InsertNextMatchingCaret`**
+  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>;</kbd> - **`Edit.InsertCaretsAtAllMatching`**
+
+* [How can I close Visual Studio's windows with my keyboard?](https://stackoverflow.com/a/10549070/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>W</kbd> - `Window.CloseDocumentWindow` to close the current tab
+
+* Rename variable
+
+  * `Refactor.rename` - <kbd>Ctrl</kbd> + <kbd>R</kbd>, <kbd>Ctrl</kbd> + <kbd>R</kbd>
+  * `ReSharper.ReSharper_Rename`
+
+* [Attach Debugger to IIS instance](https://stackoverflow.com/q/848987/1366033)
+
+  * Show processes for all users
+  * Filter by `w3wp`
+  * Shortcuts
+    * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd> - Attach to Process
+    * <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd> - Reattach to Process
+
+* [Turn off Visual Studio Attach security warning when debugging IIS](https://stackoverflow.com/q/1414769/1366033)
+
+

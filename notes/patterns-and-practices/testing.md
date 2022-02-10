@@ -61,3 +61,15 @@ Simple Problems -> Big Problems (Confidence Coefficient)
 ### Testing Trophy
 
 ![testing trophy](/assets/notes/testing/testing-trophy.png)
+
+## Questions
+
+* [What is an ObjectMother?](https://stackoverflow.com/q/923319/1366033)
+
+  [`ObjectMother`](https://martinfowler.com/bliki/ObjectMother.html)
+
+  * Reduce code duplication in tests, increasing test maintainability
+  * Make test objects super-easily accessible, encouraging developers to write more tests.
+  * Every test runs with fresh data.
+  * Tests always clean up after themselves.
+

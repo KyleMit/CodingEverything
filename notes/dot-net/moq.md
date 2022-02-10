@@ -2,11 +2,12 @@
 
 > Moq is intended to be simple to use, strongly typed (no magic strings!, and therefore full compiler-verified and refactoring-friendly) and minimalistic (while still fully functional!).
 
-[moq/moq4: Repo for managing Moq 4.x](https://github.com/moq/moq4)
+<https://www.moqthis.com/moq4/>
 
 ## Docs
 
-[Quickstart · moq/moq4 Wiki](https://github.com/Moq/moq4/wiki/Quickstart)
+* [Quickstart · moq/moq4 Wiki](https://github.com/Moq/moq4/wiki/Quickstart)
+* [moq/moq4: Repo for managing Moq 4.x](https://github.com/moq/moq4)
 
 
 ## Questions
@@ -34,4 +35,18 @@
     ```cs
     input.SetupGet(x => x.ColumnNames).Returns(temp);
     ```
+
+* [How to verify that method was NOT called in Moq?](https://stackoverflow.com/q/537308/1366033)
+
+    ```cs
+    _mock.Object.DoSomething()
+    _mock.Verify(service => service.ShouldNotBeCalled(), Times.Never());
+    ```
+
+  * [Verify Method (Expression(Action(T)), Times)](https://documentation.help/Moq/B5B9BE8D.htm)
+  * [Times Members](https://documentation.help/Moq/121DDFF0.htm)
+
+* [How to mock non virtual methods?](https://stackoverflow.com/q/11738102/1366033)
+
+  > Moq cannot mock non virtual methods on classes
 

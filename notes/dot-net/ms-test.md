@@ -5,3 +5,4 @@
 [Use MSTest in unit tests](https://docs.microsoft.com/en-us/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
 
 
+Microsoft.AspNetCore.Mvc.Testing

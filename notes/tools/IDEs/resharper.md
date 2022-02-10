@@ -11,10 +11,12 @@
 ## Features
 
 * [HTML - Code Style Assistance - Normalize Quotes](https://www.jetbrains.com/help/resharper/Code_Style_Assistance_in_HTML.html#normalize)
+* [Build & Run window](https://www.jetbrains.com/help/resharper/Reference_Windows_ReSharper_Build.html)
+  * [Introducing ReSharper Build](https://blog.jetbrains.com/dotnet/2015/10/15/introducing-resharper-build/)
 
 ## Version History
 
-[ReSharper 2020.2: Improved Code Analysis for C# 8, Code Cleanup on Save, and Revamped Unit Test Runner | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2020/08/13/resharper-2020-2-released/)
+* [ReSharper 2020.2: Improved Code Analysis for C# 8, Code Cleanup on Save, and Revamped Unit Test Runner](https://blog.jetbrains.com/dotnet/2020/08/13/resharper-2020-2-released/)
 
 * [What’s New in ReSharper 2020.3](https://www.jetbrains.com/resharper/whatsnew/2020-3/)
 
