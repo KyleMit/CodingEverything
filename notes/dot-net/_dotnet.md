@@ -334,3 +334,24 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
       //Business logic
   }
   ```
+
+* [Is there an easy way to return a string repeated X number of times?](https://stackoverflow.com/q/3754582/1366033)
+
+  ```cs
+  string result = new String('-', 5); // "-----"
+  ```
+
+* [Can I split an IEnumerable into two by a boolean criteria without two queries?](https://stackoverflow.com/q/4549339/1366033)
+
+  ```cs
+  var groups = allValues.GroupBy(val => val.SomeProp)
+                        .ToDictionary(g => g.Key, g => g.ToList());
+  List<MyObj> trues = groups[true];
+  List<MyObj> falses = groups[false];
+  ```
+
+  * [split list into two lists using bool function](https://stackoverflow.com/q/56575899/1366033)
+  * [How to split a List in two using LINQ](https://stackoverflow.com/q/54129757/1366033)
+  * [Split list into two lists with single LINQ statement](https://stackoverflow.com/q/22264394/1366033)
+
+

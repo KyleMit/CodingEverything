@@ -76,9 +76,13 @@ AppsKey::RWin
 
 * [How to build AHK scripts automatically on startup?](https://stackoverflow.com/q/41723490/1366033)
 
+  Add script to `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`
+
 * [Powershell script with response and no window?](https://stackoverflow.com/q/53359613/1366033)
 
   ```ahk
   Run pwsh -WindowStyle Hidden -Command "Stop-ElgatoKeyLight -Host 192.168.1.64"
   ```
+
+* [AutoHotKey - Run powershell with parameters and hide flag](https://stackoverflow.com/q/71065902/1366033)
 

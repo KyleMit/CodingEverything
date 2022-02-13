@@ -104,3 +104,26 @@
 * [How to filter unit tests by xUnit.net trait attribute when using VS test explorer?](https://stackoverflow.com/q/57828264/1366033)
 
 
+* [How to test greater than](https://stackoverflow.com/q/4138132/1366033)
+
+  ```cs
+  Assert.IsTrue(actualCount > 5, "greater than five");
+  ```
+
+* [Assert two List<T> are equal?](https://stackoverflow.com/q/419659/1366033)
+
+  With [FluentAssertions Collections](https://fluentassertions.com/collections/)
+
+  ```cs
+  collection.Should().Equal(1, 2, 5, 8);
+  ```
+
+  ```cs
+  CollectionAssert.AreEqual(IEnumerable, IEnumerable) // For sequences, order matters
+  CollectionAssert.AreEquivalent(IEnumerable, IEnumerable) // For sets, order doesn't matter
+  ```
+
+  * [Is there an easy way in xunit.net to compare two collections without regarding the items' order?](https://stackoverflow.com/q/28217974/1366033)
+  * [How can I compare two lists with xunit test](https://stackoverflow.com/q/59458136/1366033)
+  * [comparing two lists with Xunit](https://stackoverflow.com/q/45284937/1366033)
+

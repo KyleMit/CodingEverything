@@ -116,3 +116,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
   * [Is there is any Performance issue while using ISNULL() in SQL Server?](https://stackoverflow.com/q/8924913/1366033)
   * [Can using isnull in a where statement cause problems with using indexes?](https://stackoverflow.com/q/1949592/1366033)
 
+* [Add a column to specific position in MSSQL Server](https://stackoverflow.com/q/7899983/1366033)
+
+  Need to Drop and Re-Add Table
+

@@ -721,3 +721,6 @@ $env:APPDATA
 $env:LOCALAPPDATA
 ```
 
+* [Powershell -WindowStyle Hidden still shows a window briefly](https://github.com/PowerShell/PowerShell/issues/3028)
+
+* [Flatten Nested JSON](https://stackoverflow.com/q/45829754/136603)

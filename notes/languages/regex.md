@@ -114,3 +114,23 @@
   /word(?!@)/
   ```
 
+* [Regular expression to match A, AB, ABC, but not AC. ("starts with")](https://stackoverflow.com/q/2007277/1366033)
+
+  As many as possible of `KyleMit`
+
+  ```js
+  /Kyl(?:e(?:M(?:i(?:t)?)?)?)?/
+  /Kyl(e(M(i(t)?)?)?)?/
+  ```
+
+  ```js
+  [..."Kyle"].reverse().reduce((acc, cur) => `(${cur + acc})?`,"")
+  // '(K(y(l(e)?)?)?)?'
+  ```
+
+* [How to replace part of string by position?](https://stackoverflow.com/q/5015593/1366033)
+
+  ```cs
+  string s = "ABCDEFGH";
+  s= s.Remove(3, 2).Insert(3, "ZX");
+  ```
