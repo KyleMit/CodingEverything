@@ -637,3 +637,25 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   * [Macro like keybindings #871](https://github.com/microsoft/vscode/issues/871)
   * [Macro recording - Issue #4490 - microsoft/vscode](https://github.com/Microsoft/vscode/issues/4490)
 
+* [File Nesting](https://github.com/microsoft/vscode/issues/6328)
+
+  ```json
+  "explorer.experimental.fileNesting.enabled": true,
+  "explorer.experimental.fileNesting.patterns": {
+    "*.ts": "$(capture).js, $(capture).d.ts",
+    "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
+    "*.jsx": "$(capture).js",
+    "*.tsx": "$(capture).ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc",
+    "*.cs": "$(capture).*.cs"
+  }
+  ```
+
+* [VS Code not showing subfolders when there is only one](https://stackoverflow.com/q/59400901/1366033)
+
+  ```json
+  "explorer.compactFolders": false,
+  ```
+
+

@@ -120,3 +120,9 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
   Need to Drop and Re-Add Table
 
+* [How to select date without time in SQL](https://stackoverflow.com/q/5125609/1366033)
+
+    ```sql
+    SELECT CAST(GETDATE() AS Date);
+    ```
+

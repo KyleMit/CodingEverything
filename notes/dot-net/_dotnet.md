@@ -355,3 +355,8 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   * [Split list into two lists with single LINQ statement](https://stackoverflow.com/q/22264394/1366033)
 
 
+* [How would you count occurrences of a string within a string?](https://stackoverflow.com/q/541954/1366033)
+
+  ```cs
+  "AABC".Count(c => c == 'A'); // 2
+  ```

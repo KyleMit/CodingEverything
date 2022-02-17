@@ -212,4 +212,39 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Turn off Visual Studio Attach security warning when debugging IIS](https://stackoverflow.com/q/1414769/1366033)
 
+  * [Where does Visual Studio 2017 store its config?](https://stackoverflow.com/q/41119996/1366033)
+  * [Disable Visual Studio 2022 IIS security attach warning](https://www.davici.nl/blog/disable-visual-studio-2022-iis-security-attach-warning)
+
+* [Pin / Unpin Window](https://stackoverflow.com/q/3827645/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - `Window.PinTab`
+
+* [Hotkey for showing/hiding sidebar](https://stackoverflow.com/q/20404092/1366033)
+
+* [How do I get a console project to group my appsettings.json files?](https://stackoverflow.com/q/51253779/1366033)
+
+  ```xml
+  <None Include="appsettings.*.json">
+    <DependentUpon>appsettings.json</DependentUpon>
+  </None>
+  ```
+
+* [Slow during building and debugging](https://stackoverflow.com/q/42877071/1366033)
+
+* [Show full file path](https://stackoverflow.com/q/37120678/1366033)
+
+  * [File Path On Footer](https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter)
+  * [Tabs Studio](https://tabsstudio.com/)
+
+
+
+
+* [How to switch view modes in built-in Diff viewer of Visual Studio 2012 and 2013?](https://stackoverflow.com/q/20067385/1366033)
+
+  'Compare Files' toolbox
+
+
+* [Step Over auto-implemented properties?](https://stackoverflow.com/q/39041188/1366033)
+
+  Options > Debugging > General > Check `Step over properties and operators`
 

@@ -59,7 +59,9 @@ Error: Timed out waiting for session file to appear
 
 ## Docs
 
-### Syntax
+* [Requires](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7.2)
+
+### Syntax - SS64
 
 * [add value to array](https://ss64.com/ps/syntax-arrays.html)
 * [foreach loop](https://ss64.com/ps/foreach.html)
@@ -70,6 +72,7 @@ Error: Timed out waiting for session file to appear
 * [create function 2](https://www.microsoftpressstore.com/articles/article.aspx?p=2449030)
 * [format table widths](https://stackoverflow.com/a/52174495/1366033)
 * [Get-Date](https://ss64.com/ps/get-date.html)
+
 
 ### Linting
 
@@ -724,3 +727,11 @@ $env:LOCALAPPDATA
 * [Powershell -WindowStyle Hidden still shows a window briefly](https://github.com/PowerShell/PowerShell/issues/3028)
 
 * [Flatten Nested JSON](https://stackoverflow.com/q/45829754/136603)
+
+* [Running a command as Administrator using PowerShell?](https://stackoverflow.com/q/7690994/1366033)
+
+
+    ```ps1
+    #Requires -RunAsAdministrator
+    ```
+

@@ -39,6 +39,7 @@
 * [Use Google Calendar appointment slots](https://support.google.com/calendar/answer/190998)
 
 * [Search on Google Calendar](https://support.google.com/calendar/answer/37176)
+* [Events > Event Settings > Guest Permissions > Modify Event](https://support.google.com/a/users/answer/9282963)
 
 ## Groups
 

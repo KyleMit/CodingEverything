@@ -1144,3 +1144,9 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   + import * as Module from 'module';
   ```
 
+* [Cannot find module 'ts-node/register'](https://stackoverflow.com/q/40910864/1366033)
+
+  ```bash
+  npm install ts-node --save-dev
+  ```
+
