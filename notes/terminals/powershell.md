@@ -735,3 +735,8 @@ $env:LOCALAPPDATA
     #Requires -RunAsAdministrator
     ```
 
+* [Convert json to object](https://stackoverflow.com/q/35863103/1366033)
+
+    ```ps1
+    Get-Content <jsonFile> | ConvertFrom-Json
+    ```
