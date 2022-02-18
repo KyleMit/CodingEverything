@@ -658,4 +658,21 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   "explorer.compactFolders": false,
   ```
 
+* [How to pin tab](https://stackoverflow.com/a/66279790/1366033)
 
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> - View: Pin/Unpin Editor
+
+  ```json
+  {
+      "key": "ctrl+shift+alt+k",
+      "command": "workbench.action.pinEditor",
+      "when": "!activeEditorIsPinned"
+    },
+    {
+      "key": "ctrl+shift+alt+k",
+      "command": "workbench.action.unpinEditor",
+      "when": "activeEditorIsPinned"
+    }
+  }
+  ```

@@ -761,3 +761,9 @@ winget install graphviz
   myDiv.querySelectorAll(":scope > .foo");
   ```
 
+* [What is the JavaScript version of sleep()?](https://stackoverflow.com/q/951021/1366033)
+
+  ```js
+  await new Promise(r => setTimeout(r, 2000));
+  ```
+
