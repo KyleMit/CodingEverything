@@ -22,11 +22,196 @@
 * **Core** - pwsh.exe
 * **Classic** - powershell.exe
 
+
+## Docs
+
+* [Requires](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7.2)
+* [about PSModulePath](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2)
+* [Type Accelerators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators?view=powershell-5.1)
+* [about Wildcards](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2)
+* [about Enum](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_enum?view=powershell-7.2)
+* [Everything you wanted to know about the if statement](https://docs.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-if?view=powershell-7.2#-match-regular-expression)
+
+
+## Operators
+
+[about_Operators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.2)
+
+
+* [**Arithmetic Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators?view=powershell-7.2)
+  * calculate values in a command or expression
+    * `+` , `-` , `*` , `/` , `%`
+
+* **Bitwise operators**
+  * manipulate the bit patterns in values
+    * `-band` , `-bor` , `-bxor` , `-bnot` , `-shl` , `-shr`
+
+* [**Assignment Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7.2)
+  * assign, change, or append values to variables
+    * `=` , `+=` , `-=` , `*=` , `/=` , `%=`
+
+* [**Comparison Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2)
+  * compare values and test conditions
+    * `-eq` , `-ne` , `-gt` , `-lt` , `-le` , `-ge`
+  * string match
+    * regex
+      * `-match` , `-notmatch` , `-replace`
+    * wildcard (`*`)
+      * `-like` , `-notlike`
+  * Containment - value appears in a reference set
+    * `-in` , `-notin` , `-contains` , `-notcontains`
+  * Type - object is of a given type
+    * `-is` , `-isnot`
+
+
+* [**Logical Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logical_operators?view=powershell-7.2)
+  * connect conditional statements into a single complex conditional
+    * `-and` , `-or` , `-xor` , `-not` , `!`
+
+
+* [**Redirection Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.2)
+  * send the output of a command or expression to a text file
+    * `>` , `>>` , `2>` , `2>>` , and `2>&1`
+
+* **[Split](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-7.2) and [Join](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_join?view=powershell-7.2) Operators**
+  * divide and combine substrings
+    * `-split` , `-join`
+
+
+* [**Type Operators**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_operators?view=powershell-7.2)
+  * find or change the .NET Framework type of an object
+    * `-is` , `-isnot` , `-as`
+
+* **Unary Operators**
+  * increment or decrement values
+    * `++` , `--`
+
+* **Grouping operator** `( )`
+  * let output from a command participate in an expression
+    * ex. `(Get-Item *.txt).Count -gt 10`
+
+* **Subexpression operator** `$( )`
+  * Returns the result of one or more statements. For a single result, returns a scalar. For multiple results, returns an array
+    * ex. `"Today is $(Get-Date)"`
+
+* **Array subexpression operator** `@( )`
+  * Returns the result of one or more statements as an array
+    * ex. `$list = @(Get-Process | Select-Object -First 10; Get-Service | Select-Object -First 10 )`
+
+
+* [**Hash table literal syntax**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-7.2) `@{}`
+  * declare a hash table
+    * ex. `${ Name = "Kyle" }`
+
+* **Call operator** `&`
+  * Runs a command, script, or script block
+
+    ```ps1
+    PS> $cmd = "get-executionpolicy"
+    PS> & $cmd
+    ```
+
+* **Background operator** `&`
+  * Runs the pipeline before it in the [background](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-7.2)
+    * ex. `Get-Process -Name pwsh &`
+      * ≈ `Start-Job -ScriptBlock {Get-Process -Name pwsh}`
+
+* **Cast operator** `[ ]`
+  * Converts or limits objects to the specified type
+    * ex. `[DateTime] '2/20/88'`
+
+* **Cast Notation**
+  * ensure that a variable can contain only specific object types
+    * ex. `[int]$number = 8`
+
+
+* **Comma operator** `,`
+  * creates an array or appends to the array being created
+    * ex. `$myArray = 1,2,3`
+
+* **Dot sourcing operator** `.`
+  * Runs a script in the current scope
+    * ex. `. c:\scripts\sample.ps1 1 2 -Also:3`
+
+* [**Format operator**](https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting) `-f`
+  * Formats strings by using the format method of string objects
+    * ex. `"{0} {1,-10} {2:N}" -f 1,"hello",[math]::pi`
+
+* **Index operator** `[ ]`
+  * Selects objects from indexed collections
+    * ex: `$a = 1, 2, 3; $a[0]`
+
+* **Pipeline operator** `|`
+  * Sends ("pipes") the output of the command that precedes it to the command that follows it
+    * ex. `Get-Process | Get-Member`
+
+* **Pipeline chain operators** `&&` and `||`
+  * Conditionally execute the right-hand side pipeline based on the success of the left-hand side pipeline.
+    * ex. `Get-Process notepad && Stop-Process -Name notepad`
+
+
+* **Range operator** `..`
+  * Represents the sequential integers in an integer array
+    * ex. `1..10 | ForEach-Object {Write-Output $_}`
+
+* **Member access operator** `.`
+  * Accesses the properties and methods of an object.
+    * ex. `(Get-Process PowerShell).kill()`
+
+* **Static member operator** `::`
+  * Calls the static properties and methods of a .NET Framework class
+    * ex. `[datetime]::Now`
+
+* [**Ternary operator**](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-7.2#using-the-ternary-operator-syntax) `? <if-true> : <if-false>`
+  * simplified if-else statement
+    * ex. `$message = (Test-Path $path) ? "Path exists" : "Path not found"`
+
+* **Null-coalescing operator** `??`
+  * returns the value of its left-hand operand if it isn't null. Otherwise, it evaluates the right-hand operand and returns its result
+    * ex. `$x = $null; $x ?? 100`
+
+* **Null-coalescing assignment operator** `??=`
+  * assigns the value of its right-hand operand to its left-hand operand only if the left-hand operand evaluates to null
+    * ex. ``$todaysDate ??= (Get-Date).ToShortDateString()`
+
+* **Null-conditional operators** `?.` and `?[]`
+  * applies a member access (`?.`) or element access (`?[]) operation to its operand only if that operand evaluates to non-null; otherwise, it returns null
+    * ex: `$a = @{ PropName = 100 }; ${a}?.PropName`
+
+
+### Syntax - SS64
+
+* [add value to array](https://ss64.com/ps/syntax-arrays.html)
+* [foreach loop](https://ss64.com/ps/foreach.html)
+* [foreach-object](https://ss64.com/ps/foreach-object.html)
+* [> operator](https://ss64.com/ps/syntax-compare.html)
+* [if statement](https://ss64.com/ps/if.html)
+* [create function](https://ss64.com/ps/syntax-functions.html)
+* [create function 2](https://www.microsoftpressstore.com/articles/article.aspx?p=2449030)
+* [format table widths](https://stackoverflow.com/a/52174495/1366033)
+* [Get-Date](https://ss64.com/ps/get-date.html)
+
+
 ## Visual Studio Code
 
 * [Get started with PowerShell development in Visual Studio Code](https://devblogs.microsoft.com/scripting/get-started-with-powershell-development-in-visual-studio-code/)
 * [Visual Studio Code editing features for PowerShell development](https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/)
 * [Debugging PowerShell script in Visual Studio Code](https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/)
+* [Visual Studio Code for PowerShell 7 - PowerShell Team](https://devblogs.microsoft.com/powershell/visual-studio-code-for-powershell-7/)
+* [PowerShell - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+
+
+## Linting / Static Analysis
+
+* [List of PSScriptAnalyzer rules](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules)
+  * [Approved Verbs for PowerShell Commands](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands?view=powershell-7.2#common-verbs)
+  * [AvoidUsingCmdletAliases](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/AvoidUsingCmdletAliases?view=ps-modules)
+* [PowerShell editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/powershell#_plaster)
+* [Invoke-ScriptAnalyzer (PSScriptAnalyzer)](https://docs.microsoft.com/en-us/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules)
+
+
+> The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be used instead.
+
 
 ## Startup Error
 
@@ -56,28 +241,6 @@ The language service could not be started
 Error: Timed out waiting for session file to appear
 ```
 
-
-## Docs
-
-* [Requires](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7.2)
-
-### Syntax - SS64
-
-* [add value to array](https://ss64.com/ps/syntax-arrays.html)
-* [foreach loop](https://ss64.com/ps/foreach.html)
-* [foreach-object](https://ss64.com/ps/foreach-object.html)
-* [> operator](https://ss64.com/ps/syntax-compare.html)
-* [if statement](https://ss64.com/ps/if.html)
-* [create function](https://ss64.com/ps/syntax-functions.html)
-* [create function 2](https://www.microsoftpressstore.com/articles/article.aspx?p=2449030)
-* [format table widths](https://stackoverflow.com/a/52174495/1366033)
-* [Get-Date](https://ss64.com/ps/get-date.html)
-
-
-### Linting
-
-* [List of PSScriptAnalyzer rules](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules)
-  * [AvoidUsingCmdletAliases](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/AvoidUsingCmdletAliases?view=ps-modules)
 
 ## PS Mail Funcs
 
@@ -419,7 +582,7 @@ Set-PoshPrompt -Theme Paradox
 
 * [Code Layout and Formatting - PowerShell Practice and Style](https://poshcode.gitbook.io/powershell-practice-and-style/style-guide/code-layout-and-formatting)
 * [Building PowerShell Modules by Brandon Olin](https://leanpub.com/building-powershell-modules)
-
+* [WMI and CIM accelerators | Richard Siddaway's Blog](https://richardspowershellblog.wordpress.com/2018/05/26/wmi-and-cim-accelerators/)
 
 ## Resources
 
@@ -445,6 +608,12 @@ Set-PoshPrompt -Theme Paradox
 
 
 ## Questions
+
+* [Full Listing of Installed Programs using Powershell](https://stackoverflow.com/q/53161112/1366033)
+* [How can I uninstall an application using PowerShell?](https://stackoverflow.com/q/113542/1366033)
+* [rename user directory](https://superuser.com/q/890812/180163)
+  * [Rename Windows user account and profile folder](https://tinyapps.org/docs/rename-user-profile-folder.html)
+  * [How to create new account with PowerShell on Windows 10](https://pureinfotech.com/create-new-user-account-powershell-windows-10/)
 
 
 * [Null coalescing in powershell](https://stackoverflow.com/q/10623907/1366033)
@@ -740,3 +909,201 @@ $env:LOCALAPPDATA
     ```ps1
     Get-Content <jsonFile> | ConvertFrom-Json
     ```
+
+
+* [What is the Linq.First equivalent in PowerShell?](https://stackoverflow.com/q/5360145)
+
+  ```ps1
+  (1,2,3) | Select-Object -First 1
+  (1,2,3) | Select-Object -Index 0
+  (1,2,3)[0]
+  ```
+
+
+
+* [Get registry key value](https://stackoverflow.com/q/15511809)
+
+    ```ps1
+    $profileKeys = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
+    $profileKeys = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
+    ```
+
+* [Get registry subkeys](https://stackoverflow.com/a/37746096)
+
+  ```ps1
+  Get-ItemProperty hklm:\SOFTWARE\Wow6432Node\*
+  ```
+
+* [working with registry entries](https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-entries?view=powershell-7.2)
+
+
+* [How to check if a cmdlet exists in PowerShell at runtime via script](https://stackoverflow.com/q/3919798/1366033)
+
+  ```ps1
+  function Check-Command($cmdname)
+  {
+      return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
+  }
+  ```
+
+* [Load all functions into PowerShell from a certain directory](https://stackoverflow.com/q/763799/1366033)
+
+  ```ps1
+  'G:\sync\Office\*.psm1' | gci | Import-Module
+  ```
+
+* [PowerShell module design - Export-ModuleMember](https://stackoverflow.com/q/22205103/1366033)
+
+  ```ps1
+  Export-ModuleMember -Function *
+  ```
+
+* [Relative path in Import-Module](https://stackoverflow.com/q/14382579/1366033)
+
+  ```ps1
+  Import-Module $PSScriptRoot\Script1.ps1
+  ```
+
+* [Powershell split() vs -split - what's the difference?](https://stackoverflow.com/q/23796959/1366033)
+
+  ```ps1
+  "1,2" -split ","
+  "1,2".split(",")
+  ```
+
+* [Split a string with spaces](https://stackoverflow.com/q/41836526/1366033)
+
+  [about Split](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-7.2)
+
+  ```ps1
+  "Hello World" -split " "
+  ```
+
+
+* [How do I force powershell to reload a custom module?](https://stackoverflow.com/q/39426477/1366033)
+
+  ```ps1
+  Import-Module -Force
+  ```
+
+* [Param list vs Param block](https://stackoverflow.com/q/61944141/1366033)
+
+  * Interchangeable, but `param(...)` offers more options
+
+* [Executing powershell with or without parenthesis](https://stackoverflow.com/q/26941644/1366033)
+
+  * When you call a($svr, $usr) you're passing an array with the two values as the single value of the first parameter
+  * *without* the enclosing `(...)` the arguments are parsed in argument mode, where, notably, strings needn't be quoted
+  * *with* the enclosing `(...)`, are parsed in expression mode, where strings do need to be quoted.
+
+* [How to define the return type / OutputType of a function](https://stackoverflow.com/q/57478715/1366033)
+
+  ```ps1
+  function SomeFunction
+  {
+      [OutputType([string])]
+      param(
+          [string]$SomeParameter
+      )
+
+      return $SomeParameter
+  }
+  ```
+
+  * **Note**: `[OutputType()]` makes *no guarantees* as to the type of objects emitted during execution
+    * It's simply a way for the author of a function to indicate the *intended output type*.
+
+
+* [How to change a Windows username using the command prompt?](https://superuser.com/q/1159929/180163)
+
+  ```bash
+  Rename-LocalUser -Name "Kylem" -NewName "kylemit"
+  ```
+
+  * [`Rename-LocalUser`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/rename-localuser?view=powershell-5.1)
+
+
+* [Ternary operator in PowerShell](https://stackoverflow.com/q/31341998/1366033)
+
+  * Powershell 7 allows [ternary operators](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-70?view=powershell-7#ternary-operator):
+
+    ```ps1
+    $message = (Test-Path $path) ? "Path exists" : "Path not found"
+    ```
+
+  * Earlier versions: PowerShell gives back values that haven't been assigned.
+
+    ```ps1
+    $a = if ($condition) { $true } else { $false }
+    ```
+
+  * Further Reading
+    * [PowerShell inline If (IIf)](https://stackoverflow.com/q/25682507/1366033)
+    * [PowerShell syntax for something like :? operator?](https://stackoverflow.com/q/52899849/1366033)
+    * [PSAvoidUsingCmdletAliases fires on ternary operator](https://github.com/PowerShell/PSScriptAnalyzer/issues/1612)
+
+
+* Check if Running As Admin
+
+  * [Check if I'm running with administrator privileges?](https://serverfault.com/q/95431/176522)
+  * [Detect if PowerShell is running as administrator](https://superuser.com/q/749243/180163)
+
+
+  ```ps1
+  ([Security.Principal.WindowsPrincipal] `
+    [Security.Principal.WindowsIdentity]::GetCurrent() `
+  ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+  ```
+
+* [Using Namespace in powershell](https://stackoverflow.com/q/1048954/1366033)
+
+  [about Using](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7)
+
+  ```ps1
+  using namespace System.Security.Principal
+  [WindowsIdentity]::GetCurrent();
+  ```
+
+  or
+
+  ```ps1
+  #Requires -RunAsAdministrator
+  ```
+
+
+  * [`WindowsIdentity.GetCurrent`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsidentity.getcurrent?view=net-6.0)
+  * [`WindowsPrincipal.IsInRole`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsprincipal.isinrole?view=net-6.0)
+  * [`WindowsBuiltInRole.Administrator`](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.windowsbuiltinrole?view=net-6.0)
+
+
+* [How do I get the current username in Windows PowerShell?](https://stackoverflow.com/q/2085744)
+
+  ```ps1
+  $env:UserName
+  ```
+
+* [How do I negate a condition in PowerShell?](https://stackoverflow.com/q/8095638/1366033)
+
+  ```ps1
+  -not $true
+  !$true
+  ```
+
+* [Check if string contains substring](https://stackoverflow.com/q/18877580/1366033)
+
+  ```ps1
+  "abc" -match "b"
+  "abc" -like "*b*"
+  ```
+
+* Extract Regex Match
+
+
+  $input = "Prefix: {123}"
+  $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
+  ($input | Select-String "{.*}").Matches.Value
+  [Regex]::Matches($input, "{.*}" ).Value
+
+
+* [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
+

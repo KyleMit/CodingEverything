@@ -14,6 +14,11 @@
 * [React Fundamentals](https://app.pluralsight.com/library/courses/react-fundamentals-update/table-of-contents)
 * [Getting Started with CircleCI](https://app.pluralsight.com/library/courses/circleci-github-getting-started/description) - Premium
 
+* Powershell
+  * [Getting Started with PowerShell Scripting](https://app.pluralsight.com/library/courses/powershell-scripting-getting-started/table-of-contents)
+  * [Performing Windows 10 Post-installation Tasks](https://app.pluralsight.com/library/courses/windows-10-performing-post-installation-tasks-cert/table-of-contents)
+
+
 ## Bookmarks
 
 <!-- [...document.querySelectorAll("[class*='courseTitleCell']")].map(el => `* [${el.innerText}](${el.href})`).join("\n") -->

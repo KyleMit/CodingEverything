@@ -14,3 +14,8 @@
   ```
 
 
+## WinGet Installation
+
+* [Support for installation of portable/standalone apps · Issue #182](https://github.com/microsoft/winget-cli/issues/182)
+* [stedolan.jq version 1.6 by mnpenner - PR #43960](https://github.com/microsoft/winget-pkgs/pull/43960)
+* [StephenDolan.jq version 1.6 by nickmccurdy - PR #29559](https://github.com/microsoft/winget-pkgs/pull/29559)
