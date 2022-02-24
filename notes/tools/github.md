@@ -106,3 +106,10 @@ kramdown:
   ```bash
   gh repo list <Your_Name> --json nameWithOwner,defaultBranchRef
   ```
+
+* [Renaming a branch in GitHub](https://stackoverflow.com/a/71180144/1366033)
+
+  ```bash
+  gh api "repos/{owner}/{repo}/branches/{branch}/rename" -f new_name={newBranch}
+  ```
+

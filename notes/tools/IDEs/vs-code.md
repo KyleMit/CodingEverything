@@ -599,6 +599,14 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   "editor.formatOnPaste": true
   ```
 
+* [How to change indentation in Visual Studio Code?](https://stackoverflow.com/q/34174207/1366033)
+
+  ```json
+  "[typescript]": {
+      "editor.tabSize": 2
+  }
+  ```
+
 * [read clipboard text content](https://stackoverflow.com/q/54632431/1366033)
 
   * [`env`](https://code.visualstudio.com/api/references/vscode-api#env)

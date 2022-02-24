@@ -134,3 +134,13 @@
   string s = "ABCDEFGH";
   s= s.Remove(3, 2).Insert(3, "ZX");
   ```
+
+* [Regular Expression for alphanumeric and underscores](https://stackoverflow.com/q/336210/1366033)
+
+  `\w` is equivalent to `[A-Za-z0-9_]`
+
+* [Regex for Guid](https://stackoverflow.com/questions/11040707/c-sharp-regex-for-guid)
+
+  ```js
+  /[0-9A-F]{8}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{12}/i
+  ```
