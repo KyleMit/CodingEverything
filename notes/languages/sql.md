@@ -126,3 +126,8 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT CAST(GETDATE() AS Date);
     ```
 
+* [How to count instances of character in SQL Column](https://stackoverflow.com/q/1860457/1366033)
+
+    ```sql
+    SELECT LEN(col) - LEN(REPLACE(col, 'Y', ''))
+    ```
