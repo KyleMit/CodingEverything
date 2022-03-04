@@ -360,3 +360,28 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ```cs
   "AABC".Count(c => c == 'A'); // 2
   ```
+
+* [What is the difference between String.Empty and ""](https://stackoverflow.com/q/151472/1366033)
+
+  Historically, perf.  Currently, pref
+
+  [In C#, should I use string.Empty or String.Empty or "" to initialize a string?](https://stackoverflow.com/q/263191/1366033)
+
+* [`string.Join` on a `List<int>` or other type](https://stackoverflow.com/q/3610431/1366033)
+
+  ```cs
+  var ids = new [] {1,2,3};
+  var str = string.Join(",", ids);
+  ```
+
+* [Split List into Sublists with LINQ](https://stackoverflow.com/q/419019/1366033)
+
+  ```cs
+  var items = new [] {1,2,3,4,5};
+
+  foreach (var batch in items.Chunk(2)) {
+    Console.WriteLine(string.Join(",", batch));
+  }
+  ```
+
+  [Fiddle Demo](https://dotnetfiddle.net/UQN3IM)

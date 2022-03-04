@@ -248,3 +248,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   Options > Debugging > General > Check `Step over properties and operators`
 
+* [Visual Studio enable "Ctrl + Click"](https://stackoverflow.com/q/27458822/1366033)
+
+  Options > Text Editor > General > Enable mouse click to perform Go to Definition
+
