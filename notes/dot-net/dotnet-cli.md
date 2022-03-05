@@ -58,3 +58,18 @@ dotnet tool install --global dotnet-script
   ```none
   %USERPROFILE%/.omnisharp/omnisharp.json
   ```
+
+* [Unable to resolve .NETCoreApp v3.1 Packages](https://stackoverflow.com/a/71211964/1366033)
+
+  ```bash
+  dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json
+  ```
+
+* [Failure to Install Microsoft.AspNetCore.AppRef](https://stackoverflow.com/q/63872619/1366033)
+
+  Not intended for installation try a separate package instead:
+
+  ```bash
+  dotnet add package Microsoft.AspNetCore.WebUtilities --version 2.2.0
+  ```
+
