@@ -767,3 +767,17 @@ winget install graphviz
   await new Promise(r => setTimeout(r, 2000));
   ```
 
+* [How to round an integer up or down to the nearest 10](https://stackoverflow.com/q/1684202/1366033)
+
+  ```js
+  function roundToNearest(numToRound, numToRoundTo) {
+      return Math.round(numToRound / numToRoundTo) * numToRoundTo;
+  }
+  ```
+
+* [Strip all non-numeric characters from string in JavaScript](https://stackoverflow.com/a/9409894/1366033)
+
+  ```js
+  "-12345.50 €".replace(/[^\d.-]/g, ''); // "-12,345.50"
+  ```
+

@@ -335,3 +335,17 @@ git rev-list --count <revision>
 
 * [Remove large .pack file created by git](https://stackoverflow.com/q/11050265/1366033)
 
+* [How do I alias commands in git?](https://stackoverflow.com/q/2553786/1366033)
+
+  ```ini
+  [alias]
+      st = status
+      ci = commit -v
+  ```
+
+* [Git Alias w/ Multiple Commands](https://stackoverflow.com/q/7534184/1366033)
+
+  ```ini
+  [alias] chs = !git checkout $1 && git status
+  ```
+

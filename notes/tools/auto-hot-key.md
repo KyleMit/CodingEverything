@@ -86,3 +86,13 @@ AppsKey::RWin
 
 * [AutoHotKey - Run powershell with parameters and hide flag](https://stackoverflow.com/q/71065902/1366033)
 
+  ```ahk
+  Run, pwsh -Command "Stop-ElgatoKeyLight -Host 192.168.1", , Hide
+  ```
+
+* [AutoHotKey Run Windows Commands](https://superuser.com/q/1192892/180163)
+
+
+  ```ahk
+  Run, cmd.exe /c "elg on", , Hide
+  ```
