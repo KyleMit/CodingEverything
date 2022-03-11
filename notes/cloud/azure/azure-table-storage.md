@@ -6,7 +6,7 @@
 [Introduction to Table storage in Azure](https://docs.microsoft.com/en-us/azure/storage/tables/table-storage-overview)
 [CosmosDB vs Table Storage](https://docs.microsoft.com/en-us/azure/cosmos-db/table-api-faq#table-api-vs-table-storage)
 
-### Concepts
+## Concepts
 
 * **URL format**: `http://<storage account>.table.core.windows.net/<table>`
 * **Accounts**: All access to Azure Storage is done through a storage account.
@@ -73,6 +73,29 @@ Configuration.GetConnectionString("DefaultConnection")
 * evenly distribute requests
 * evenly distribute storage
 * partition key is included in filter of most frequent query
+
+
+## Rest API
+
+* [Azure REST API reference documentation](https://docs.microsoft.com/en-us/rest/api/azure/)
+* [Table service REST API](https://docs.microsoft.com/en-us/rest/api/storageservices/table-service-rest-api)
+* [Understanding the Table service data model](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-the-table-service-data-model)
+* [Authorize requests to Azure Storage](https://docs.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage)
+  * [Authorize with Shared Key](https://docs.microsoft.com/en-us/rest/api/storageservices/authorize-with-shared-key)
+  * [Setting the OData data service version headers](https://docs.microsoft.com/en-us/rest/api/storageservices/setting-the-odata-data-service-version-headers)
+* [Querying tables and entities](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
+  * [Query Entities](https://docs.microsoft.com/en-us/rest/api/storageservices/query-entities)
+  * [Inserting and updating entities](https://docs.microsoft.com/en-us/rest/api/storageservices/inserting-and-updating-entities)
+
+## Node SDK
+
+* [Use Azure Table storage or Azure Cosmos DB Table API from Node.js](https://docs.microsoft.com/en-us/azure/cosmos-db/table/how-to-use-nodejs)
+* [Azure Tables client library for JavaScript](https://docs.microsoft.com/en-us/javascript/api/overview/azure/data-tables-readme?view=azure-node-latest)
+* [Azure/azure-storage-node: Microsoft Azure Storage SDK for Node.js](https://github.com/Azure/azure-storage-node)
+* [azure-sdk-for-js/sdk/tables/data-tables at main · Azure/azure-sdk-for-js](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/tables/data-tables)
+* [azure-sdk-for-js/TableServiceClient.ts at main · Azure/azure-sdk-for-js](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/tables/data-tables/src/TableServiceClient.ts)
+* [azure-sdk-docs-demo-2/readme.md at main · MicrosoftDocs/azure-sdk-docs-demo-2](https://github.com/MicrosoftDocs/azure-sdk-docs-demo-2/blob/main/reference-docs/tables/azure-data-tables/readme.md)
+* [azure-docs-sdk-node/data-tables-readme.md at main · MicrosoftDocs/azure-docs-sdk-node](https://github.com/MicrosoftDocs/azure-docs-sdk-node/blob/main/docs-ref-services/preview/data-tables-readme.md)
 
 ## Questions
 

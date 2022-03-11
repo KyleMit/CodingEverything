@@ -1107,3 +1107,27 @@ $env:LOCALAPPDATA
 
 * [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
 
+
+* [Update XML file content](https://stackoverflow.com/q/16428559/1366033)
+
+  ```ps1
+  [xml]$xmlDoc = Get-Content "c:\file.xml"
+  $xmlDoc.config.button.text = "Hello"
+  $xmlDoc.Save("c:\file.xml")
+  ```
+
+* Delete File
+
+  [Remove-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item)
+
+  ```ps1
+  Remove-Item "c:\file.xml"
+  ```
+
+* [How to select an XmlElement based on an attribute value?](https://stackoverflow.com/q/27841491/1366033)
+
+  ```ps1
+  [xml]$xmlDoc = Get-Content "c:\file.xml"
+  $node = $xmlDoc.catalog.book | Where-Object { $_.id -eq 2 }
+  ```
+

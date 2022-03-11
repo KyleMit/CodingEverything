@@ -503,3 +503,8 @@ npm install -g nodemon
     isAbsolute(myPath)
     ```
 
+* [Error message "error:0308010C:digital envelope routines::unsupported"](https://stackoverflow.com/q/69692842/1366033)
+
+    ```bash
+    export NODE_OPTIONS=--openssl-legacy-provider
+    ```

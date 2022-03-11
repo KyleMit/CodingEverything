@@ -23,6 +23,33 @@
   * Localize Content
   * Easily Push Site-Wide Changes (without re-build)
 
+## Functions
+
+* [functions/README.md at main · netlify/functions](https://github.com/netlify/functions/blob/main/README.md)
+
+* Examples
+  * [ada-microservices/createDogos.ts at main · pa-suarezm/ada-microservices](https://github.com/pa-suarezm/ada-microservices/blob/main/functions/dogos/createDogos.ts)
+  * [egghead-serverless-typescript/hello-world.ts at main · jlengstorf/egghead-serverless-typescript](https://github.com/jlengstorf/egghead-serverless-typescript/blob/main/netlify/functions/hello-world.ts)
+
+* [Announcing native TypeScript support for Netlify Functions](https://www.netlify.com/blog/2021/04/19/announcing-native-typescript-support-for-netlify-functions/)
+
+```bash
+npm install @netlify/functions
+```
+
+```ts
+import { Handler } from '@netlify/functions'
+
+const handler: Handler = async (event, context) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Hello World" })
+  }
+}
+
+export { handler }
+```
+
 ## Questions
 
 
