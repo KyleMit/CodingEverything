@@ -120,6 +120,10 @@ https://github.com/KyleMit/inclusive-copy-bot/tree/glitch
 
 ## Questions
 
-[Is there any way to customize the "one-click" emojis?](https://www.reddit.com/r/Slack/comments/jcaa35/)
+* [Is there any way to customize the "one-click" emojis?](https://www.reddit.com/r/Slack/comments/jcaa35/)
 
+* [In Slack, is there a way to filter out search results from a specific channel?](https://webapps.stackexchange.com/q/122789/38656)
 
+  ```none
+  term -in:general
+  ```

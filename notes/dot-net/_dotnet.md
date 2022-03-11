@@ -385,3 +385,17 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ```
 
   [Fiddle Demo](https://dotnetfiddle.net/UQN3IM)
+
+* [How do you initialize a FormCollection with properties in .NET?](https://stackoverflow.com/q/22487627/1366033)
+
+  [`Microsoft.AspNetCore.Http.FormCollection`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.formcollection?view=aspnetcore-6.0)
+
+  ```cs
+  var formCol = new FormCollection(new Dictionary<string, Microsoft.Extensions.Primitives.StringValues>
+  {
+    { "Field1", "String Value 1" },
+    { "Field2", "String Value 2" },
+    { "Field3", "String Value 3" }
+  });
+  ```
+

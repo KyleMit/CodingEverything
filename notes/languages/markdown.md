@@ -45,6 +45,12 @@
 
 [Getting Started | MDX](https://mdxjs.com/getting-started)
 
+## Markdown Lint
+
+* [DavidAnson/markdownlint](https://github.com/DavidAnson/markdownlint#configuration)
+* [DavidAnson/vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint#configure)
+
+
 ## Questions
 
 * Custom List Styles in Markdown

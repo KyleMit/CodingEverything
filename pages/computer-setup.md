@@ -668,11 +668,6 @@ Invoke via <kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>B</kbd> with
 
 [Gitlens - hide editor actions](https://github.com/eamodio/vscode-gitlens/issues/669)
 
-#### VS Code - Markdownlint
-
-[Markdown lint - Configure](https://github.com/DavidAnson/vscode-markdownlint#configure)
-
-
 #### Visual Studio Config
 
 #### Keybindings

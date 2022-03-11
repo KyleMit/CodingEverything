@@ -77,3 +77,7 @@
 
   `#:~:text=`
 
+* [HTML5 `main` element vs ARIA landmark `role="main"`](https://stackoverflow.com/q/19595719/1366033)
+
+  Today, just use `<main>`
+

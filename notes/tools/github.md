@@ -113,3 +113,8 @@ kramdown:
   gh api "repos/{owner}/{repo}/branches/{branch}/rename" -f new_name={newBranch}
   ```
 
+
+* [How to ignore whitespace in github when comparing?](https://stackoverflow.com/q/37007300/1366033)
+
+  * [Allow users to set "Hide whitespace changes" by default](https://github.com/github/feedback/discussions/5486)
+

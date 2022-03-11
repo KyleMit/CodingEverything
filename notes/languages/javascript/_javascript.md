@@ -775,6 +775,10 @@ winget install graphviz
   }
   ```
 
+  ```js
+  Math.ceil(N / 10) * 10;
+  ```
+
 * [Strip all non-numeric characters from string in JavaScript](https://stackoverflow.com/a/9409894/1366033)
 
   ```js

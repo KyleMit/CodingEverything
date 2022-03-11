@@ -27,3 +27,7 @@
 
   * Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome
     * BookmarkBarEnabled = 0
+
+* [Use a text cursor to navigate & select text](https://support.google.com/chrome/answer/10129654?hl=en)
+
+  Toggle with <kbd>F7</kbd>
