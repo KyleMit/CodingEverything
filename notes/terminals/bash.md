@@ -386,3 +386,47 @@ ls --color -h --group-directories-first
   > that is, it is removed from the input stream and effectively ignored
 
 
+* [Sort and count number of occurrence of lines](https://unix.stackexchange.com/a/263849/128893)
+
+
+  ```bash
+  cat ~/.bash_history | sort | uniq -c | sort -nr | head 10
+  ```
+
+* [How do I time a specific command?](https://unix.stackexchange.com/q/52313/128893)
+
+
+  [`time` (Man Page)](https://ss64.com/bash/time.html)
+
+  ```bash
+  time wget -q -O /dev/null https://unix.stackexchange.com/
+  ```
+
+* [View history of commands run in terminal - Ask Ubuntu](https://askubuntu.com/q/624848/349745)
+
+
+  [`history` (Man Page)](https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html)
+
+  ```bash
+  cat ~/.bash_history
+  history 10
+  ```
+
+
+* [Last command and execution time](https://askubuntu.com/q/548154/349745)
+
+* [Get program execution time in the shell](https://stackoverflow.com/a/39924936/1366033)
+
+  * [paypal/gnomon](https://github.com/paypal/gnomon) - Utility to annotate console logging statements with timestamps and find slow processes
+
+  ```bash
+  npm install -g gnomon
+  dotnet build | gnomon --medium=1.0 --high=4.0 --ignore-blank --real-time=100
+  ```
+
+* Top 10 Commands
+
+  ```bash
+  cat ~/.bash_history | sort | uniq -c | sort -nr | head -n 10
+  ```
+

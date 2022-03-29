@@ -80,3 +80,8 @@
 * [Add launchers dir to the PATH](https://stackoverflow.com/q/57810887/1366033)
 
   Allows you to launch editor from terminal
+
+* [File type associations](https://www.jetbrains.com/help/rider/Creating_and_Registering_File_Types.html)
+
+  Settings > Editor > File Types
+

@@ -73,3 +73,14 @@ dotnet tool install --global dotnet-script
   dotnet add package Microsoft.AspNetCore.WebUtilities --version 2.2.0
   ```
 
+* [Run selected unit tests](https://docs.microsoft.com/en-us/dotnet/core/testing/selective-unit-tests?pivots=xunit)
+
+  ```bash
+  dotnet test --filter FullyQualifiedName.IntegrationTests
+  ```
+
+* [Specify build configuration](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build)
+
+  ```bash
+  dotnet build --configuration Release
+  ```

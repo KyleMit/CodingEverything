@@ -399,3 +399,5 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   });
   ```
 
+* What is `.esproj`?
+

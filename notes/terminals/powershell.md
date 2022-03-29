@@ -1131,3 +1131,18 @@ $env:LOCALAPPDATA
   $node = $xmlDoc.catalog.book | Where-Object { $_.id -eq 2 }
   ```
 
+* [How to view command history](https://superuser.com/q/1000489/180163)
+
+  ```ps1
+  function Get-PSReadLineHistory
+  {
+      Get-Content (Get-PSReadlineOption).HistorySavePath
+  }
+  ```
+
+* Top 10 Commands
+
+  ```ps1
+  Get-Content (Get-PSReadlineOption).HistorySavePath | Group-Object -NoElement | Sort-Object -Property Count -Descending | Select-Object -First 10
+  ```
+

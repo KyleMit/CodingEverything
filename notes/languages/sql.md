@@ -131,3 +131,21 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT LEN(col) - LEN(REPLACE(col, 'Y', ''))
     ```
+
+* [DELETE vs TRUNCATE and in SQL](https://stackoverflow.com/q/139630/1366033)
+
+  * **Statement Type** - Delete is DML, Truncate is DDL
+  * **Commit and Rollback** - Truncate can be rolled back.
+  * **Space reclamation** - Delete does not recover space, Truncate recovers space
+  * **Row scope** - Delete can be used to remove all rows or only a subset of rows. Truncate removes all rows.
+  * **Foreign Keys** - A truncate cannot be applied when an enabled foreign key references the table. Treatment with delete depends on the configuration of the foreign keys.
+  * **Identity Columns** - Truncate resets the sequence for IDENTITY column types, delete does not.
+
+* [DDL vs DML](https://stackoverflow.com/q/2578194/1366033)
+
+  * **DDL** - Data Definition Language
+  * **DML** - Data Manipulation Language
+  * **DQL** - Data Query Language
+  * **DCL** - Data Control Language
+  * **TCL** - Transaction Control Language
+
