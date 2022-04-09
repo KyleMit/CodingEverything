@@ -84,3 +84,23 @@ dotnet tool install --global dotnet-script
   ```bash
   dotnet build --configuration Release
   ```
+
+* [How to determine if .NET Core is installed](https://stackoverflow.com/q/38567353/1366033)
+
+  [`dotnet` command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet)
+
+  ```bash
+  dotnet --info
+  dotnet --list-sdks
+  dotnet --list-runtimes
+  ```
+
+* [Switch between dotnet core SDK versions](https://stackoverflow.com/q/42077229/1366033)
+
+  [`dotnet new` command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+
+  ```bash
+  dotnet new globaljson --sdk-version 3.1.101
+  ```
+
+
