@@ -434,3 +434,17 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
 
 * [Composite formatting](https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting)
+
+* [C# 9 switch expression with multiple cases with same result](https://stackoverflow.com/q/56676260/1366033)
+
+  ```cs
+  var switchValue = 3;
+  var resultText = switchValue switch
+  {
+      1 or 2 or 3 => "one, two, or three",
+      4 => "four",
+      5 => "five",
+      _ => "unknown",
+  };
+  ```
+
