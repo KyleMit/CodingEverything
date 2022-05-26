@@ -430,3 +430,16 @@ ls --color -h --group-directories-first
   cat ~/.bash_history | sort | uniq -c | sort -nr | head -n 10
   ```
 
+* [How to make `ls` color its output by default](https://superuser.com/q/665274/180163)
+
+  ```bash
+  alias ls='ls --color=auto'
+  ```
+
+* [How to run 'sudo' command in windows](https://stackoverflow.com/q/9652720/1366033)
+
+
+  ```bash
+  winget install --id=gerardog.gsudo -e
+  ```
+

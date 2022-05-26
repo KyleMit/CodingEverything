@@ -4,6 +4,7 @@ AKA Batch Script
 
 ## Links
 
+* [Windows commands](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 * [cmd.exe - Wikipedia](https://en.wikipedia.org/wiki/Cmd.exe)
 * [DOS - Wikipedia](https://en.wikipedia.org/wiki/DOS)
 * [MS-DOS - Wikipedia](https://en.wikipedia.org/wiki/MS-DOS)
@@ -24,6 +25,10 @@ AKA Batch Script
 * CE
 * ReactOS
 
+## Commands
+
+* [dir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
+* [mklink](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink)
 
 ## Questions
 
@@ -39,4 +44,26 @@ AKA Batch Script
 * [`pbcopy` for Windows](https://superuser.com/q/472598/180163)
 
    Use `clip`
+
+
+* [Assign output of a program to a variable using a MS batch file](https://stackoverflow.com/q/2323292/1366033)
+
+
+  Bash
+
+  ```bash
+  VAR=$(application arg0 arg1)
+  ```
+
+  Bat
+
+  ```bat
+  for /f %%i in ('application arg0 arg1') do set VAR=%%i
+  ```
+
+* [How to return to last directory with cmd.exe?](https://superuser.com/q/84932/180163)
+
+  * [`pushd`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pushd)
+  * [`popd`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/popd)
+
 

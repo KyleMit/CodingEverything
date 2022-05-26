@@ -785,3 +785,11 @@ winget install graphviz
   "-12345.50 €".replace(/[^\d.-]/g, ''); // "-12,345.50"
   ```
 
+* [Can I escape HTML special chars in JavaScript?](https://stackoverflow.com/q/6234773/1366033)
+
+  Use [`.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
+
+  ```js
+  document.body.textContent = 'a <b> c </b>';
+  ```
+

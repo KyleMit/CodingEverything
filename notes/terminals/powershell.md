@@ -107,7 +107,7 @@
   * Runs a command, script, or script block
 
     ```ps1
-    PS> $cmd = "get-executionpolicy"
+    PS> $cmd = "Get-ExecutionPolicy"
     PS> & $cmd
     ```
 
@@ -269,8 +269,6 @@ $PSVersionTable.PSVersion
 ```
 
 ### Powershell Intellisense
-
-![Intellisense](https://i.imgur.com/inWrUSB.png)
 
 * <kbd>Ctrl</kbd> + <kbd>Space</kbd> will trigger
 * <kbd>Tab</kbd> will cycle through all applicable items if dropdown isn't open
@@ -531,7 +529,7 @@ $AppLog = New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Applica
 
 * Utilities
 
-  * [PSReadLine](https://github.com/PowerShell/PSReadLine?WT.mc_id=-blog-scottha)
+  * [PSReadLine](https://github.com/PowerShell/PSReadLine)
   * [PSColors](https://github.com/ecsousa/PSColors)
   * [Oh my Posh](https://ohmyposh.dev/)
   * [powerline](https://github.com/powerline/powerline)
@@ -577,6 +575,9 @@ Set-PoshPrompt -Theme Paradox
 
 [Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/)
 
+```ps
+winget install oh-my-posh
+```
 
 ## Articles
 
@@ -1151,4 +1152,10 @@ $env:LOCALAPPDATA
 
   * [`IISAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/iisadministration/?view=windowsserver2022-ps)
   * [`WebAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/webadministration/?view=windowsserver2022-ps)
+
+* [Move to the directory root](https://stackoverflow.com/q/58640721/1366033)
+
+  ```cs
+  > cd\
+  ```
 

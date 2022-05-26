@@ -249,6 +249,28 @@ winget install WinDirStat.WinDirStat
 winget install LINQPad.LINQPad6
 winget install FontForge.FontForge
 winget install da2x.EdgeDeflector
+winget install gerardog.gsudo
+```
+
+## Scoop
+
+[Scoop](https://scoop.sh/#/)
+
+
+```ps
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-WebRequest get.scoop.sh | Invoke-Expression
+```
+
+* [Nerd Fonts](https://www.nerdfonts.com/#home) - Iconic font aggregator, glyphs/icons collection, & fonts patcher
+  * [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+* [matthewjberger/scoop-nerd-fonts](https://github.com/matthewjberger/scoop-nerd-fonts) - A scoop bucket for installing nerd fonts
+  * [scoop-nerd-fonts/FiraCode-NF.json](https://github.com/matthewjberger/scoop-nerd-fonts/blob/master/bucket/FiraCode-NF.json)
+
+```ps
+scoop bucket add nerd-fonts
+scoop install FiraCode-NF
+scoop install FiraCode-NF-Mono
 ```
 
 ## DotFiles

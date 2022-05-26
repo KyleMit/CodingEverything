@@ -21,3 +21,5 @@
   * Double quotes parse escape codes.  `"\n"` would be returned as a line feed character.
 
 
+* [How do I break a string in YAML over multiple lines?](https://stackoverflow.com/q/3790454/1366033)
+

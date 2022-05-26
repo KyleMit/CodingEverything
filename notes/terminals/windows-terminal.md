@@ -124,4 +124,10 @@ https://microsoft.com/devicelogin
 
 [Docs > Windows Terminal Panes](https://docs.microsoft.com/en-us/windows/terminal/panes)
 
+* [Please add option to disable dialog "Do you want to close all tabs?"](https://github.com/microsoft/terminal/issues/5125)
 
+  ```json
+  {
+    "confirmCloseAllTabs": false
+  }
+  ```
