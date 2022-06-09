@@ -306,3 +306,15 @@ namespace ExtensionMethods
   List<String> myKeys = myDict.Keys.ToList();
   ```
 
+* [Convert char to int in C#](https://stackoverflow.com/q/239103/1366033)
+
+  * [`Char.GetNumericValue`](https://docs.microsoft.com/en-us/dotnet/api/system.char.getnumericvalue)
+  * [`Int32.Parse`](https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse?view=net-6.0)
+  * [`Convert.ToInt32`](https://docs.microsoft.com/en-us/dotnet/api/system.convert.toint32?view=net-6.0#system-convert-toint32(system-string))
+
+  ```cs
+  (int)char.GetNumericValue('1'); // 1
+  int.Parse('1'.ToString());      // 1
+  Convert.ToInt32('1'.ToString()) // 1
+  ```
+

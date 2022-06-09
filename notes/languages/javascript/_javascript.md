@@ -793,3 +793,12 @@ winget install graphviz
   document.body.textContent = 'a <b> c </b>';
   ```
 
+* [How to insert an item into an array at a specific index](https://stackoverflow.com/q/586182/1366033)
+
+  *`arr.splice(index, 0, item)`*
+
+  ```js
+  let arr = ['a','b','d']
+  arr.splice(2, 0, 'c')
+  console.log(arr) // ['a','b','c','d']
+  ```
