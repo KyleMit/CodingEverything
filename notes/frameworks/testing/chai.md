@@ -26,3 +26,31 @@
   expect([{ id: 1 }]).to.deep.include.members([{ id: 1 }]);
   ```
 
+* [How can I import the Chai 'expect()' function globally in TypeScript?](https://stackoverflow.com/q/61623260/1366033)
+
+  ```bash
+  mocha --require chai/register-expect --require ts-node/register src/**/*.spec.ts
+  ```
+
+  `typings/global/index.d.ts
+
+  ```ts
+  declare const expect: Chai.ExpectStatic
+  ```
+
+  `tsconfig.json`
+
+  ```json
+  "typeRoots": [
+    "node_modules/@types", "./typings"
+  ],
+  "types": [
+    "mocha",
+    "chai",
+    "node",
+    "global"
+  ]
+  ```
+
+* [How can I solve "ReferenceError: expect is not defined" error message?](https://stackoverflow.com/questions/19191384/)
+* [How to make ChaiJS 'expect' function available in all files inside NodeJS 'test' folder?](https://stackoverflow.com/questions/48986067/)

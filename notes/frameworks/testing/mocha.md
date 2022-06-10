@@ -86,6 +86,11 @@ $ ./node_modules/mocha/bin/mocha
 mocha --full-trace src/**/__tests__/**/*-test.js
 ```
 
+## Config
+
+* [Configuring Mocha](https://mochajs.org/#configuring-mocha-nodejs)
+* [mocha/.mocharc.json at master · mochajs/mocha](https://github.com/mochajs/mocha/blob/master/example/config/.mocharc.json)
+
 ## Typescript
 
 
