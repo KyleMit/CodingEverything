@@ -802,3 +802,15 @@ winget install graphviz
   arr.splice(2, 0, 'c')
   console.log(arr) // ['a','b','c','d']
   ```
+
+* [Why is pop faster than shift?](https://stackoverflow.com/q/6501160/1366033)
+
+  > `shift()` has to re-index the whole array while `pop()` doesn't
+
+
+* [Can a for loop increment/decrement by more than one?](https://stackoverflow.com/q/12809776/1366033)
+
+  ```js
+  for (var i = 0; i < myVar.length; i += 3) {
+  ```
+

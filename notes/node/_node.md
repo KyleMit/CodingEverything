@@ -508,3 +508,10 @@ npm install -g nodemon
     ```bash
     export NODE_OPTIONS=--openssl-legacy-provider
     ```
+
+* [Disable deprecation in javascript console](https://stackoverflow.com/q/58672947/1366033)
+
+    ```bash
+    node --no-deprecation script
+    ```
+

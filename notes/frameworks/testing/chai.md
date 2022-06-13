@@ -26,6 +26,14 @@
   expect([{ id: 1 }]).to.deep.include.members([{ id: 1 }]);
   ```
 
+* [Chai.js compare arrays without considering order](https://stackoverflow.com/q/37688095/1366033)
+
+  [`members`](https://www.chaijs.com/api/bdd/#method_members)
+
+  ```js
+  expect([4, 2]).to.have.members([2, 4])
+  ```
+
 * [How can I import the Chai 'expect()' function globally in TypeScript?](https://stackoverflow.com/q/61623260/1366033)
 
   ```bash
