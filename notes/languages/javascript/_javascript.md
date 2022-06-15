@@ -814,3 +814,14 @@ winget install graphviz
   for (var i = 0; i < myVar.length; i += 3) {
   ```
 
+* [How do I convert a float number to a whole number in JavaScript?](https://stackoverflow.com/q/596467/1366033)
+
+  Use [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+  ```js
+  var intValue = Math.floor(floatValue);
+  var intValue = Math.ceil(floatValue);
+  var intValue = Math.round(floatValue);
+  var intValue = Math.trunc(floatValue);
+  ```
+
