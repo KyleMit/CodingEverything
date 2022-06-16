@@ -825,3 +825,30 @@ winget install graphviz
   var intValue = Math.trunc(floatValue);
   ```
 
+
+
+* [jQuery serializeArray doesn't include the submit button that was clicked](https://stackoverflow.com/questions/4007942/jquery-serializearray-doesnt-include-the-submit-button-that-was-clicked)
+
+  * [Multi-Button Form Submit](https://codepen.io/KyleMit/pen/KKQEKqV)
+
+  ```js
+  $("[type='submit']").click(function(e) {
+    $(this).closest("form").find("input[type='hidden'][name='action'").val(this.value)
+  })
+  ```
+
+* [How do you implement a Stack and a Queue in JavaScript?](https://stackoverflow.com/questions/1590247)
+
+* Private Class Fields
+
+  * [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+  * [Working with private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+
+* [How to use arrow functions as class methods](https://stackoverflow.com/q/31362292/1366033)
+
+  ```js
+  class Person {
+      hello = () => console.log("hello")
+  }
+  ```
+
