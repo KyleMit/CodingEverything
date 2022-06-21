@@ -318,3 +318,21 @@ namespace ExtensionMethods
   Convert.ToInt32('1'.ToString()) // 1
   ```
 
+* [Check if an entity is the first element of a foreach loop](https://stackoverflow.com/q/3553352/1366033)
+
+  [Add break between elements | .NET Fiddle](https://dotnetfiddle.net/9tb3cy)
+
+  ```cs
+  bool first = true;
+
+  foreach(var item in items)
+  {
+      if (first)
+      {
+          // first stuff
+          first = false;
+      }
+      // other stuff
+  }
+  ```
+

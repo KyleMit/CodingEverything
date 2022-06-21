@@ -172,6 +172,13 @@
 * Other
   * [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 
+## TC 39
+
+[Ecma TC39](https://github.com/tc39)
+
+* [tc39/proposal-pipeline-operator](https://github.com/tc39/proposal-pipeline-operator)
+  * [Proposal: Hack-style Pipelining](https://github.com/tc39/proposal-pipeline-operator/issues/84)
+
 ## Debounce
 
 [Javascript debounce function](https://stackoverflow.com/a/61241621/1366033)
@@ -850,5 +857,21 @@ winget install graphviz
   class Person {
       hello = () => console.log("hello")
   }
+  ```
+
+* [How to swap two variables in JavaScript](https://stackoverflow.com/q/16201656/1366033)
+
+  [Swap (computer programming)](https://en.wikipedia.org/wiki/Swap_(computer_programming)#Using_a_temporary_variable)
+
+  ```js
+  // es5
+  b = [a, a = b][0];
+  ```
+
+  ```js
+  // es6
+  let a = 5, b = 6;
+  [a, b] = [b, a];
+  console.log({a,b});
   ```
 
