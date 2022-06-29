@@ -684,3 +684,13 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     }
   }
   ```
+
+
+* [XML Auto Commenting C# in Visual Studio Code](https://stackoverflow.com/q/34275209/1366033)
+
+  ```cs
+  {
+      "editor.formatOnType": true,
+  }
+  ```
+

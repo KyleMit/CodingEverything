@@ -875,3 +875,32 @@ winget install graphviz
   console.log({a,b});
   ```
 
+* [How can I remove a specific item from an array?](https://stackoverflow.com/q/5767325/1366033)
+
+  ```js
+  const array = [2, 5, 9];
+  const elIndex = array.indexOf(5);
+  if (elIndex > -1) { array.splice(elIndex, 1); }
+  console.log(array);  // [2, 9]
+  ```
+
+* [Passing array as arguments in TypeScript](https://stackoverflow.com/q/20443101/1366033)
+
+  [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+  ```js
+  function sum(...nums: numbers[]) {
+      //using args as array ...
+  }
+  ```
+
+* [Adding click event listener to elements with the same class](https://stackoverflow.com/q/21700364/1366033)
+
+  ```js
+  document.body.addEventListener("click", function(e) {
+    if (e.target.classList.contains("box")) {
+      doit();
+    }
+  })
+  ```
+

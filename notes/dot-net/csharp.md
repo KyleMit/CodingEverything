@@ -336,3 +336,24 @@ namespace ExtensionMethods
   }
   ```
 
+* [Return all enumerables with yield return at once; without looping through](https://stackoverflow.com/q/1270024/1366033)
+
+  In F#
+
+  ```fs
+  yield! return errors
+  ```
+
+  In C#
+
+  ```cs
+  foreach (var e in errors)
+    yield return e
+  ```
+
+* [String.Join method that ignores empty strings?](https://stackoverflow.com/q/16325995/1366033)
+
+  ```cs
+  String.Join(",", myArray.Where(s => !string.IsNullOrEmpty(s)))
+  ```
+

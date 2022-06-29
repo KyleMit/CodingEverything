@@ -149,3 +149,17 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
   * **DCL** - Data Control Language
   * **TCL** - Transaction Control Language
 
+* [How can I select the first day of a month in SQL?](https://stackoverflow.com/q/1520789/1366033)
+
+
+    ```sql
+    SELECT DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0)
+    ```
+
+    ```sql
+    SELECT DATEFROMPARTS(YEAR(GETDATE()),MONTH(GETDATE()),1)
+    ```
+
+    ```sql
+    SELECT DATEADD(DAY, 1, EOMONTH(DATEADD(MONTH, -1, GETDATE())))
+    ```
