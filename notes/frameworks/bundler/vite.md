@@ -30,6 +30,10 @@ npm init vite@latest my-vue-app -- --template vue
 * svelte
 * svelte-ts
 
+## Files
+
+* `vite-env.d.ts`
+* `vite.config.js`
 
 ## Questions
 

@@ -694,3 +694,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   }
   ```
 
+* [Visual Studio Code "Open With Code" does not appear after right-clicking a folder](https://stackoverflow.com/q/37306672/1366033)
+
+  Reinstall & checkboxes
+

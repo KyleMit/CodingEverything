@@ -32,3 +32,13 @@
   var isNew = $('#test').data('is-new') // true
   ```
 
+* [jQuery serializeArray doesn't include the submit button that was clicked](https://stackoverflow.com/questions/4007942/jquery-serializearray-doesnt-include-the-submit-button-that-was-clicked)
+
+  * [Multi-Button Form Submit](https://codepen.io/KyleMit/pen/KKQEKqV)
+
+  ```js
+  $("[type='submit']").click(function(e) {
+    $(this).closest("form").find("input[type='hidden'][name='action'").val(this.value)
+  })
+  ```
+

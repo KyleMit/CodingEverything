@@ -477,19 +477,10 @@ winget install graphviz
 
 * [What's the most elegant way to cap a number to a segment?](https://stackoverflow.com/a/11409944/1366033)
 
-
 * [Replace all occurrences of a string](https://stackoverflow.com/q/1144783/1366033)
+
 * [Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 
-* [Disable F5 and browser refresh using JavaScript - Stack Overflow](https://stackoverflow.com/q/2482059/1366033)
-
-  ```js
-  document.addEventListener("keydown", (e) => {
-    if (e.key == "F5") {
-      e.preventDefault();
-    }
-  })
-  ```
 
 
 * [Pop, Push, Shift and Unshift Array Methods in JavaScript](https://alligator.io/js/push-pop-shift-unshift-array-methods/)
@@ -550,25 +541,6 @@ winget install graphviz
   console.log(epochToDate(1546108200))
   ```
 
-* [Add CSS to `<head>` with JavaScript?](https://stackoverflow.com/a/53152550/1366033)
-
-  ```js
-  function addCssToDocument(css){
-    var style = document.createElement('style')
-    style.innerText = css
-    document.head.appendChild(style)
-  }
-  ```
-
-* [Dynamically add script tag with src](https://stackoverflow.com/q/13121948/1366033)
-
-  ```js
-  function addScript( src ) {
-    var s = document.createElement( 'script' );
-    s.setAttribute( 'src', src );
-    document.body.appendChild( s );
-  }
-  ```
 
 * [How to sort an array of integers correctly](https://stackoverflow.com/q/1063007/1366033)
 
@@ -614,7 +586,6 @@ winget install graphviz
   const example = getAllDaysInMonth(8, 2021).map(x => x.toLocaleDateString())
   console.log(example)
   ```
-
 
 * [Faster to access numeric property by string or integer?](https://stackoverflow.com/q/10639488/1366033)
 
@@ -756,17 +727,7 @@ winget install graphviz
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
   ```
 
-* [`location.reload(true)` is deprecated](https://stackoverflow.com/q/55127650/1366033)
 
-
-* [Using querySelectorAll to retrieve direct children](https://stackoverflow.com/q/3680876/1366033)
-
-
-  [`:scope` pseudo-class](https://drafts.csswg.org/selectors-4/#the-scope-pseudo)
-
-  ```js
-  myDiv.querySelectorAll(":scope > .foo");
-  ```
 
 * [What is the JavaScript version of sleep()?](https://stackoverflow.com/q/951021/1366033)
 
@@ -792,13 +753,6 @@ winget install graphviz
   "-12345.50 €".replace(/[^\d.-]/g, ''); // "-12,345.50"
   ```
 
-* [Can I escape HTML special chars in JavaScript?](https://stackoverflow.com/q/6234773/1366033)
-
-  Use [`.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
-
-  ```js
-  document.body.textContent = 'a <b> c </b>';
-  ```
 
 * [How to insert an item into an array at a specific index](https://stackoverflow.com/q/586182/1366033)
 
@@ -833,16 +787,6 @@ winget install graphviz
   ```
 
 
-
-* [jQuery serializeArray doesn't include the submit button that was clicked](https://stackoverflow.com/questions/4007942/jquery-serializearray-doesnt-include-the-submit-button-that-was-clicked)
-
-  * [Multi-Button Form Submit](https://codepen.io/KyleMit/pen/KKQEKqV)
-
-  ```js
-  $("[type='submit']").click(function(e) {
-    $(this).closest("form").find("input[type='hidden'][name='action'").val(this.value)
-  })
-  ```
 
 * [How do you implement a Stack and a Queue in JavaScript?](https://stackoverflow.com/questions/1590247)
 
@@ -894,13 +838,14 @@ winget install graphviz
   }
   ```
 
-* [Adding click event listener to elements with the same class](https://stackoverflow.com/q/21700364/1366033)
+
+
+* [Javascript: remove trailing spaces only](https://stackoverflow.com/q/37864460/1366033)
+
+  [`String.prototype.trimEnd()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
 
   ```js
-  document.body.addEventListener("click", function(e) {
-    if (e.target.classList.contains("box")) {
-      doit();
-    }
-  })
+  " test ".trimEnd() // " test"
   ```
+
 

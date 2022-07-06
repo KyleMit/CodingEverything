@@ -1159,3 +1159,43 @@ $env:LOCALAPPDATA
   > cd\
   ```
 
+* [PowerShell equivalent of LINQ Any()?](https://stackoverflow.com/q/1499466/1366033)
+
+  Use [`WhereOperatorSelectionMode`](https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.whereoperatorselectionmode?view=powershellsdk-7.0.0)
+
+  ```ps1
+  (1, 2, 3).Where({
+      Write-Host $_
+      return $_ -gt 1
+  }, [System.Management.Automation.WhereOperatorSelectionMode]::First).Count -gt 0
+  # 1
+  # 2
+  # true
+  ```
+
+* [Best way to return values from a function that writes to STDOUT](https://stackoverflow.com/q/21232024/1366033)
+
+  all non-captured output inside a function is returned, not just the argument of return
+
+  write to the host or one of the other output streams
+
+  ```ps1
+  function Foo {
+    Write-Host 'abc'
+    return "def"
+  }
+  Foo
+  # abc
+  # def
+  ```
+
+  See Also: [Write-Output not working inside a callback](https://stackoverflow.com/q/25677197/1366033)
+
+
+* [Selecting first n characters in PowerShell](https://stackoverflow.com/q/53020983/1366033)
+
+  ```ps1
+  $a.Substring(0, [Math]::Min($a.Length, 20))
+  ```
+
+
