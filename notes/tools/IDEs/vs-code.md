@@ -698,3 +698,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   Reinstall & checkboxes
 
+* [Running preLaunchTask with watch mode in VS Code](https://stackoverflow.com/q/42672037/1366033)
+
+  ```json
+  {
+    "isBackground": true
+  }
+  ```

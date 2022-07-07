@@ -1199,3 +1199,9 @@ $env:LOCALAPPDATA
   ```
 
 
+* [How to use powershell to determine the frequency of objects in a collection based on a specific member](https://stackoverflow.com/q/55975372/1366033)
+
+  ```ps1
+  ('a','a','b') | Group-Object -NoElement | Sort-Object Count -Descending
+  ```
+

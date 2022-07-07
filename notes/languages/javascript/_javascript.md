@@ -849,3 +849,9 @@ winget install graphviz
   ```
 
 
+
+* [How can I convert a string to boolean in JavaScript?](https://stackoverflow.com/q/263965/1366033)
+
+  ```js
+  var isTrueSet = (myValue === 'true');
+  ```

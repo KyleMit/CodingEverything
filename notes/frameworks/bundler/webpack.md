@@ -240,3 +240,22 @@ You may need an appropriate loader to handle this file type, currently no loader
   presets: [["@babel/preset-env", { modules: false }]]
   ```
 
+* [Passing environment-dependent variables in webpack](https://stackoverflow.com/a/40170658/1366033)
+
+  [Webpack - Environment Variables](https://webpack.js.org/guides/environment-variables/)
+
+  ```bash
+  npx webpack --env goal=local --env production --progress
+  ```
+
+* Debugging Webpack in VSCode
+
+  * [Debugging webpack dev server in vs code?](https://stackoverflow.com/questions/34028169)
+  * [Debugging with VSCODE not working in a Webpack + Typescript + no-framework](https://stackoverflow.com/questions/61875212)
+  * [How to setup VSCode to debug a webpack bundled nodejs server](https://stackoverflow.com/questions/53051004)
+  * [vscode node debugger with custom webpack build](https://stackoverflow.com/questions/57103682)
+  * [How to use VS Code debugger with webpack-dev-server (breakpoints ignored)](https://stackoverflow.com/questions/46438471)
+  * [VSCode debugging on running webpack-dev-server, skips breakpoints](https://stackoverflow.com/questions/60693079)
+  * [How do I debug webpack-dev-server's built-in express server in VS code?](https://stackoverflow.com/questions/48982555)
+  * [Breakpoints not working when debugging with VS Code and webpack-dev-server](https://stackoverflow.com/questions/58211646)
+  * [Debugging Webpack with VS Code.](https://medium.com/@jsilvax/debugging-webpack-with-vs-code-b14694db4f8e)
