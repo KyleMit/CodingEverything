@@ -167,3 +167,26 @@ function myAction(ed) {
   editor.scrollbar.alwaysConsumeMouseWheel: false
   ```
 
+* [Disable minimap #542](https://github.com/Microsoft/monaco-editor/issues/542)
+
+  ```js
+  monaco.editor.create(document.getElementById("container"), {
+    value: "console.log('Hello world!')",
+    language: "javascript",
+    minimap: {
+      enabled: false
+    }
+  });
+  ```
+
+* [Monaco editor dynamically resizable](https://stackoverflow.com/q/47017753/1366033)
+
+  ```js
+  window.onresize = () => editor.layout();
+  ```
+
+* [Monaco editor setTheme is not a function](https://stackoverflow.com/q/47393659/1366033)
+
+  ```js
+  monaco.editor.setTheme('vs')
+  ```

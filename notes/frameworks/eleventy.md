@@ -42,6 +42,19 @@
 
 ## Questions
 
+
+* [Allow shortcodes to return promises #429](https://github.com/11ty/eleventy/issues/429)
+* [Nunjucks Asynchronous Shortcodes](https://www.11ty.dev/docs/languages/nunjucks/#asynchronous-shortcodes)
+* [Ignore Directory](https://www.11ty.dev/docs/ignores/)
+* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/604)
+* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/388)
+* [Creating an 11ty Plugin - SVG Embed Tool](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
+* [How to disable cross-device action mirroring functionality of BrowserSync?](https://stackoverflow.com/a/59514293/1366033)
+
+* [Data Files](https://www.11ty.io/docs/data-js/)
+* [Includes](https://mozilla.github.io/nunjucks/templating.html#include)
+
+
 * [Include TypeScript types for configuration files #1459](https://github.com/11ty/eleventy/issues/1459)
 
   ```js
@@ -64,18 +77,6 @@
         index: "index.html"
     }
     ```
-
-* [Allow shortcodes to return promises #429](https://github.com/11ty/eleventy/issues/429)
-* [Nunjucks Asynchronous Shortcodes](https://www.11ty.dev/docs/languages/nunjucks/#asynchronous-shortcodes)
-* [Ignore Directory](https://www.11ty.dev/docs/ignores/)
-* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/604)
-* [Escape curly brackets in nunjucks](https://github.com/mozilla/nunjucks/issues/388)
-* [Creating an 11ty Plugin - SVG Embed Tool](https://bryanlrobinson.com/blog/creating-11ty-plugin-embed-svg-contents/)
-* [How to disable cross-device action mirroring functionality of BrowserSync?](https://stackoverflow.com/a/59514293/1366033)
-
-
-* [Data Files](https://www.11ty.io/docs/data-js/)
-* [Includes](https://mozilla.github.io/nunjucks/templating.html#include)
 
 * [Async Filter for `Terser`](https://github.com/11ty/eleventy/issues/1344)
 
@@ -103,3 +104,32 @@
   * [Eleventy config API method to Set Data #184](https://github.com/11ty/eleventy/issues/184)
   * [config-setdata](https://github.com/11ty/eleventy/tree/config-setdata)
 
+* [Template Language—Custom — Eleventy](https://www.11ty.dev/docs/languages/custom/)
+
+  ```js
+  // override md engine to return plain content
+  eleventyConfig.addExtension("md", {
+    compile: function (inputContent, _inputPath) {
+      return (_data) => inputContent;
+    }
+  });
+  ```
+
+
+* [Expose Markdown renderer as a built-in filter · Issue #658 · 11ty/eleventy](https://github.com/11ty/eleventy/issues/658)
+
+
+  ```js
+  const markdownIt = require("markdown-it");
+
+  const md = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
+  eleventyConfig.setLibrary("md", md);
+
+  eleventyConfig.addFilter("md", function(code) {
+    return md.render(code);
+  });
+  ```

@@ -77,3 +77,6 @@ export { handler }
 * [Deploying Vue CLI to Netlify](https://cli.vuejs.org/guide/deployment.html#netlify)
 * [Index Redirects](https://www.netlify.com/docs/redirects/#rewrites-and-proxying)
 
+* [No ‘Access-Control-Allow-Origin’ header](https://answers.netlify.com/t/no-access-control-allow-origin-header/14631)
+
+  Disable Asset Optimization

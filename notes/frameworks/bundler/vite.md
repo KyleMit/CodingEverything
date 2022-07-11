@@ -39,6 +39,15 @@ npm init vite@latest my-vue-app -- --template vue
 
 * Vite w/ CJS
 
-* [Error: ENOENT: no such file or directory when using with axios](https://github.com/vitejs/vite/issues/184)
-* [CommonJS Import with vite](https://github.com/vitejs/vite/issues/162)
+  * [Error: ENOENT: no such file or directory when using with axios](https://github.com/vitejs/vite/issues/184)
+  * [CommonJS Import with vite](https://github.com/vitejs/vite/issues/162)
+
+
+* [Importing Asset as String](https://vitejs.dev/guide/assets.html#importing-asset-as-string)
+
+  Add the `?raw` suffix
+
+  ```js
+  import shaderString from './shader.glsl?raw'
+  ```
 
