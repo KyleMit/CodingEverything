@@ -349,3 +349,19 @@ git rev-list --count <revision>
   [alias] chs = !git checkout $1 && git status
   ```
 
+* [Multi-line alias in .gitconfig?](https://stackoverflow.com/q/59034391/1366033)
+
+  ```ini
+  [alias]
+    save = "!f() { \
+            git status; \
+            git add -A; \
+            git commit -m "$1"; \
+            git push -f; \
+            git log -1;  \
+          }; \
+          f;  \
+          unset f"
+  ```
+
+

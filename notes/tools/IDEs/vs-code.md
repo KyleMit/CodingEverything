@@ -705,3 +705,9 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "isBackground": true
   }
   ```
+
+* [Run / Open VSCode from Mac Terminal](https://stackoverflow.com/q/30065227/1366033)
+
+   Run `Shell Command: Install code in PATH`
+
+

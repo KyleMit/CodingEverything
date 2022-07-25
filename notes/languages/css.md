@@ -139,3 +139,13 @@ button {
   }
   ```
 
+* [Specify fallback font sizes in CSS?](https://stackoverflow.com/q/5970947/1366033)
+
+  ```css
+  @font-face {
+    font-family: courier-new;
+    src: local(Courier New);
+    size-adjust: 91.6%
+  }
+  ```
+

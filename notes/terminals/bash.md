@@ -119,6 +119,8 @@ choco install gnuwin32-coreutils.portable
   echo $result
   ```
 
+  **Related**: [How do I set a variable to the output of a command in Bash?](https://stackoverflow.com/q/4651437/1366033)
+
 * [recursive mkdir](https://unix.stackexchange.com/questions/49263/recursive-mkdir)
 
   * [How to create nonexistent subdirectories recursively using Bash?](https://stackoverflow.com/q/1731767/1366033)
@@ -142,6 +144,19 @@ choco install gnuwin32-coreutils.portable
   * `-e` - Exit immediately if a command exits with a non-zero status
   * `-x` - Print commands and their arguments as they are executed
 
+
+* [Print all commands in a bash function](https://superuser.com/q/1382735/180163)
+
+  ```bash
+  FuncName()
+  {
+      set -x ;# Enable tracing on entry
+
+      ... (function code) ...
+
+      set +x ;# Disable tracing on exit
+  }
+  ```
 
 * [Shell script to open a URL](https://stackoverflow.com/q/38147620/1366033)
 
@@ -441,5 +456,13 @@ ls --color -h --group-directories-first
 
   ```bash
   winget install --id=gerardog.gsudo -e
+  ```
+
+* [Remove specific word in variable](https://unix.stackexchange.com/q/311758/128893)
+
+  ```bash
+  echo "origin/main" | sed 's/origin\///'          # "main"
+  echo "origin/main" | cut -c 8-                   # "main"
+  echo "origin/main" | awk '{ print substr($0,8)}' # "main"
   ```
 
