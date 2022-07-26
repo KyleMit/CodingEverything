@@ -365,3 +365,16 @@ git rev-list --count <revision>
   ```
 
 
+* fatal: detected dubious ownership in repository at 'C:/code/StackOverflow'
+
+  This was introduced as a security measure in git v2.35.2 (updated 4/12/2022)
+
+  ```bash
+  git config --global --add safe.directory C:/code/StackOverflow
+  ```
+
+  * Further Reading
+    * [security vulnerability CVE-2022-24765](https://github.blog/2022-04-12-git-security-vulnerability-announced/)
+    * [Fatal error "unsafe repository ('/home/repo' is owned by someone else)"](https://stackoverflow.com/q/71901632/1366033)
+    * [CVE 2022 24765 - I cannot add the parent directory to *safe.directory* in Git](https://stackoverflow.com/q/71849415/1366033)
+    * [git submodule update failed with 'fatal: detected dubious ownership in repository at'](https://stackoverflow.com/q/72978485/1366033)

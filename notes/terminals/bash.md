@@ -466,3 +466,29 @@ ls --color -h --group-directories-first
   echo "origin/main" | awk '{ print substr($0,8)}' # "main"
   ```
 
+* [How to find directory of some command?](https://stackoverflow.com/q/2869100/1366033)
+
+  ```bash
+  type git
+  type -a git
+  ```
+
+  or
+
+  ```bash
+  which git
+  which -a git
+  ```
+
+* [Why not use "which"? What to use then?](https://unix.stackexchange.com/q/85249/128893)
+
+
+* [How can I get the current working directory?](https://unix.stackexchange.com/q/188182/128893)
+
+  ```bash
+  echo "$PWD"
+  ```
+
+* [Is it better to use $(pwd) or $PWD?](https://unix.stackexchange.com/q/173916/128893)
+
+  One is a command, one is a variable

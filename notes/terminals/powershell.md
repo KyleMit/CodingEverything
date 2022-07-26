@@ -1205,3 +1205,9 @@ $env:LOCALAPPDATA
   ('a','a','b') | Group-Object -NoElement | Sort-Object Count -Descending
   ```
 
+* [Equivalent of cmd's "where" in powershell](https://superuser.com/q/675837/180163)
+
+  ```ps1
+  (Get-Command git).Pat
+  ```
+

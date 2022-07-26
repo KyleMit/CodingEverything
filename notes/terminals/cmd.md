@@ -67,3 +67,8 @@ AKA Batch Script
   * [`popd`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/popd)
 
 
+* [How do I find the location of an executable in Windows?](https://superuser.com/q/49104/180163)
+
+  ```cmd
+  where git
+  ```
