@@ -711,3 +711,17 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
    Run `Shell Command: Install code in PATH`
 
 
+* [How to add more indentation in the Visual Studio code explorer file tree structure?](https://stackoverflow.com/q/55310734/1366033)
+
+  ```json
+  "workbench.tree.indent": 10
+  ```
+
+* [Explorer: allow to expand a sub-tree fully via Alt-click #9456](https://github.com/microsoft/vscode/issues/9456)
+
+  Use <kbd>Alt</kbd> + Click
+
+  [Add "Expand All" Button to Tree](https://github.com/microsoft/vscode/issues/88682)
+
+
+

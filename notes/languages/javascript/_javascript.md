@@ -855,3 +855,13 @@ winget install graphviz
   ```js
   var isTrueSet = (myValue === 'true');
   ```
+
+* [Check if Object is Empty](https://stackoverflow.com/q/679915/1366033)
+
+
+  ```js
+  function isEmpty(obj) {
+      return Object.keys(obj).length === 0;
+  }
+  ```
+
