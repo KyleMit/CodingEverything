@@ -528,3 +528,10 @@ npm install -g nodemon
     node --no-deprecation script
     ```
 
+* [Locate a parent folder](https://stackoverflow.com/questions/7083045/fs-how-do-i-locate-a-parent-folder)
+
+    ```js
+    var path = require("path")
+    var parent = path.join(__dirname, "..");
+    ```
+
