@@ -357,3 +357,9 @@ namespace ExtensionMethods
   String.Join(",", myArray.Where(s => !string.IsNullOrEmpty(s)))
   ```
 
+* [How to Sort a `List<T>` by a property in the object](https://stackoverflow.com/q/3309188/1366033)
+
+  ```cs
+  var sortedList = myList.OrderBy(x => x.OrderDate).ToList();
+  ```
+

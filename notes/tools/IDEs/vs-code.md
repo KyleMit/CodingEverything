@@ -724,4 +724,26 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   [Add "Expand All" Button to Tree](https://github.com/microsoft/vscode/issues/88682)
 
 
+* [C# "go to definition" (F12) not working](https://stackoverflow.com/q/47995468/1366033)
 
+  Command Palette > OmniSharp: Restart OmniSharp
+
+
+* [How to avoid multi cursor on wrapped lines in VS Code?](https://stackoverflow.com/a/73311165/1366033)
+
+  PR - [Add info on logical lines by KyleMit](https://github.com/microsoft/vscode-docs/pull/5564)
+
+  ```json
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "textInputFocus",
+    "args": { "logicalLine": true },
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "textInputFocus",
+    "args": { "logicalLine": true },
+  },
+  ```
