@@ -118,3 +118,7 @@ kramdown:
 
   * [Allow users to set "Hide whitespace changes" by default](https://github.com/github/feedback/discussions/5486)
 
+* [Search repository by topic name](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories#search-by-repository-name-description-or-contents-of-the-readme-file)
+
+  `jquery in:topics` - matches repositories labeled with "jquery" as a topic
+

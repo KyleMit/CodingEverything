@@ -378,3 +378,10 @@ git rev-list --count <revision>
     * [Fatal error "unsafe repository ('/home/repo' is owned by someone else)"](https://stackoverflow.com/q/71901632/1366033)
     * [CVE 2022 24765 - I cannot add the parent directory to *safe.directory* in Git](https://stackoverflow.com/q/71849415/1366033)
     * [git submodule update failed with 'fatal: detected dubious ownership in repository at'](https://stackoverflow.com/q/72978485/1366033)
+
+* [List Git aliases](https://stackoverflow.com/q/7066325/1366033)
+
+  ```bash
+  git --list-cmds=alias
+  ```
+

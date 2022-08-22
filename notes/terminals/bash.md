@@ -492,3 +492,10 @@ ls --color -h --group-directories-first
 * [Is it better to use $(pwd) or $PWD?](https://unix.stackexchange.com/q/173916/128893)
 
   One is a command, one is a variable
+
+* [Piping output from Git Bash to clipboard](https://stackoverflow.com/q/18880062/1366033)
+
+  ```bash
+  git branch | clip
+  ```
+
