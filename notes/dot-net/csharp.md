@@ -363,3 +363,41 @@ namespace ExtensionMethods
   var sortedList = myList.OrderBy(x => x.OrderDate).ToList();
   ```
 
+* [Public readonly field v.s. get-only property](https://stackoverflow.com/q/40039175/1366033)
+
+  * [Read-Only Properties in C#](https://docs.microsoft.com/en-us/dotnet/csharp/properties#read-only)
+  * [readonly keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly)
+
+* [What is the difference between a field and a property?](https://stackoverflow.com/q/295104/1366033)
+
+  Properties expose fields. Fields should (almost always) be kept private
+
+  * Framework Design Guidelines
+    * [Member Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member?redirectedfrom=MSDN)
+    * [Property Design](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/property?redirectedfrom=MSDN)
+    * [Field Design](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/field?redirectedfrom=MSDN)
+
+* [What's the difference between struct and class in .NET?](https://stackoverflow.com/q/13049/1366033)
+
+  * [Choosing Between Class and Struct](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct)
+
+* [Value Types and Reference Types](https://stackoverflow.com/q/5057267/1366033)
+
+  * [Value Types and Reference Types](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types)
+
+* [ImmutableArray vs ImmutableList](https://stackoverflow.com/q/22349861/1366033)
+
+  * [Please welcome ImmutableArray](https://devblogs.microsoft.com/dotnet/please-welcome-immutablearrayt/)
+  * [Immutability in C# Part One](https://ericlippert.com/2007/11/13/immutability-in-c-part-one-kinds-of-immutability/)
+
+* ToImmutableArray vs ImmutableArray.Create
+
+  * [`ImmutableArray.Create`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablearray.create)
+  * [`ImmutableArray.ToImmutableArray`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablearray.toimmutablearray)
+
+  ```cs
+  var arr1 = new [] {1,2,3}.ToImmutableArray();
+  var arr2 = ImmutableArray.Create(new [] {1,2,3});
+  var arr3 = ImmutableArray.Create(1,2,3);
+  ```
+
