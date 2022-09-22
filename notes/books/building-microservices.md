@@ -185,3 +185,33 @@ flowchart TB
 * [Humio](https://www.humio.com/) - Modern Log Management for Real-Time Observability
 
 
+## Chapter 5 - Implementing Microservice Communication
+
+* Diffing Tools
+  * [protolock](https://github.com/nilslice/protolock)
+  * [json-schema-diff-validator](https://www.npmjs.com/package/json-schema-diff-validator)
+  * [Confluent Schema Registry](https://github.com/confluentinc/schema-registry#documentation)
+
+
+* Managing Breaking Changes
+  * Lockstep deployment
+  * Coexist incompatible microservice versions
+  * Emulate the old interface
+
+Running multiple versions of the same service to support old endpoints
+
+```mermaid
+graph TD
+    A[Web Shop] --> B{Customer Service <br/> v65}
+    C[Admin] --> D{Customer Service <br/>v50}
+    B & D --> E[(Database)]
+```
+
+
+
+
+## Contract Tests and Consumer-Driven Contracts (CDCs)
+
+* **CDCs** - Consumer-Driven Contracts
+
+* [Pact](https://pact.io/)

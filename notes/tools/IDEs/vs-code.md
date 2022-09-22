@@ -747,3 +747,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "args": { "logicalLine": true },
   },
   ```
+
+* [How do I open all files of a commit](https://stackoverflow.com/q/65284314/1366033)
+
+  1. Right click on the Commit
+  2. Open Changes
+  3. Open Files
+
+  **See Also**: [Feature Request: View All Changes In PR](https://github.com/microsoft/vscode-pull-request-github/issues/3047)
+

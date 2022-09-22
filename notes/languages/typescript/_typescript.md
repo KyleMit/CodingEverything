@@ -1150,3 +1150,13 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   npm install ts-node --save-dev
   ```
 
+* [Import class in definition file (*d.ts)](https://stackoverflow.com/q/39040108/1366033)
+
+  ```ts
+  declare namespace Express {
+    interface Request {
+      user: import("./user").User;
+    }
+  }
+  ```
+

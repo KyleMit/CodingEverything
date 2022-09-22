@@ -163,3 +163,15 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT DATEADD(DAY, 1, EOMONTH(DATEADD(MONTH, -1, GETDATE())))
     ```
+
+* [How to use SQL Select statement with IF EXISTS sub query?](https://stackoverflow.com/q/7805019/1366033)
+
+    ```sql
+    SELECT CASE WHEN EXISTS (
+        SELECT *
+        FROM [User]
+        WHERE UserID = 20070022
+    )
+    THEN CAST(1 AS BIT)
+    ELSE CAST(0 AS BIT) END
+    ```

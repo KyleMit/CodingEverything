@@ -2,9 +2,12 @@
 
 ## Docs
 
-### Functional Techniques
+* [Local functions](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
+* [Lambda expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)
 
-#### [Deconstructing tuples and other types](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct)
+## Functional Techniques
+
+### [Deconstructing tuples and other types](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct)
 
 ```cs
 public void Deconstruct(out string firstName, out string lastName)
@@ -15,9 +18,9 @@ public void Deconstruct(out string firstName, out string lastName)
 var (firstName, lastName) = p;
 ```
 
-### C# Programming Guide
+## C# Programming Guide
 
-#### Extension Methods
+## Extension Methods
 
 [Extension Methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
 
@@ -138,6 +141,7 @@ namespace ExtensionMethods
 
 ### C# 10
 
+* [What's new in C# 10](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10)
 * [**Constant interpolated strings**](https://github.com/dotnet/csharplang/issues/2951)
 
 
@@ -399,5 +403,68 @@ namespace ExtensionMethods
   var arr1 = new [] {1,2,3}.ToImmutableArray();
   var arr2 = ImmutableArray.Create(new [] {1,2,3});
   var arr3 = ImmutableArray.Create(1,2,3);
+  ```
+
+* [Switch Expression over Range of Values](https://stackoverflow.com/q/24335731/1366033)
+
+  ```cs
+  var season = DateTime.Today.Month switch
+  {
+      >= 3 and < 6 => "spring",
+      >= 6 and < 9 => "summer",
+      >= 9 and < 12 => "autumn",
+      12 or (>= 1 and < 3) => "winter",
+      _ => ""
+  };
+  ```
+
+* [How to read an entire file to a string using C#?](https://stackoverflow.com/q/7387085/1366033)
+
+  [How to read from a text file](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-from-a-text-file)
+
+  ```cs
+  string contents = System.IO.File.ReadAllText(@"C:\temp\test.txt");
+  ```
+
+
+* [Write string to text file](https://stackoverflow.com/q/1225857/1366033)
+
+  [How to write to a text file](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)
+
+  ```cs
+  System.IO.File.WriteAllText (@"D:\path.txt", contents);
+  ```
+
+* [Async await in linq select](https://stackoverflow.com/q/35011656/1366033)
+
+  ```cs
+  await Task.WhenAll(source.Select(async s => await method(s)));
+  ```
+
+* [Getting the Redirected URL from the Original URL](https://stackoverflow.com/q/704956/1366033)
+
+  ```cs
+  public static async Task<Uri> GetRedirectedUrlAsync(Uri uri, CancellationToken cancellationToken = default)
+  {
+      using var client = new HttpClient();
+      using var response = await client.GetAsync(uri, cancellationToken);
+      return response.RequestMessage.RequestUri;
+  }
+  ```
+
+* [delegate keyword vs. lambda notation](https://stackoverflow.com/q/299703/1366033)
+
+  * **Delegate**: `delegate { x = 0; }`
+  * **Lambda**: `() => { x = 0 }`
+
+
+* [Feature 'inferred delegate type' is not available in C# 9.0](https://stackoverflow.com/q/73814626/1366033)
+
+  Inferred delegate lambdas available in C#10
+
+  ```cs
+  var name = "Kyle";
+  var sayHello = () => $"Hello, {name}";
+  Console.WriteLine(sayHello());
   ```
 

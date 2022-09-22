@@ -185,11 +185,18 @@ graph TD
 
 * [Add Title To the Graph](https://github.com/mermaid-js/mermaid/issues/556)
 
-Use Subgraph
+* Use Subgraph
 
-```mermaid
-graph LR
-  subgraph This is my caption
-    A --> B
-  end
-```
+    ```mermaid
+    graph LR
+    subgraph This is my caption
+        A --> B
+    end
+    ```
+
+* [feat(git): allow custom merge commit ids](https://github.com/mermaid-js/mermaid/pull/3361)
+
+  Avail in v9.1.7
+
+
+

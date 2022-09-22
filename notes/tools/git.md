@@ -2,14 +2,12 @@
 
 ## Docs
 
-* [`git-clone` Documentation](https://git-scm.com/docs/git-clone)
-* [`git-sparse-checkout` Documentation](https://www.git-scm.com/docs/git-sparse-checkout)
-* [`git-archive` Documentation](https://git-scm.com/docs/git-archive)
-
-### [Commit](https://git-scm.com/docs/git-commit)
-
-
-`--no-verify` - This option bypasses the pre-commit and commit-msg [githooks](https://git-scm.com/docs/githooks)
+* [`git-init`](https://git-scm.com/docs/git-init)
+* [`git-clone`](https://git-scm.com/docs/git-clone)
+* [`git-sparse-checkout`](https://www.git-scm.com/docs/git-sparse-checkout)
+* [`git-archive`](https://git-scm.com/docs/git-archive)
+* [`git commit`](https://git-scm.com/docs/git-commit)
+  * `--no-verify` - This option bypasses the pre-commit and commit-msg [githooks](https://git-scm.com/docs/githooks)
 
 
 
@@ -300,6 +298,12 @@ git rev-list --count <revision>
   git config --get init.defaultBranch
   ```
 
+* [How can I create a Git repository with the default branch name other than "master"?](https://stackoverflow.com/q/42871542/1366033)
+
+  ```bash
+  git config --global init.defaultBranch main
+  ```
+
 * [Make git undo any whitespace-only changes?](https://stackoverflow.com/q/13793241/1366033)
 
   Also: [Add only non-whitespace changes](https://stackoverflow.com/q/3515597/1366033)
@@ -383,5 +387,24 @@ git rev-list --count <revision>
 
   ```bash
   git --list-cmds=alias
+  ```
+
+* [How to configure git push to automatically set upstream without -u?](https://stackoverflow.com/q/17847213/1366033)
+
+  ```bash
+  git config --global --add --bool push.autoSetupRemote true
+  ```
+
+* [Merge (with squash) all changes from another branch as a single commit](https://stackoverflow.com/q/3697178/1366033)
+
+  ```bash
+  git merge --squash <feature branch>
+  git commit
+  ```
+
+* [Erase git tracking from directory](https://stackoverflow.com/q/4754152/1366033)
+
+  ```bash
+  rm -rf .git
   ```
 
