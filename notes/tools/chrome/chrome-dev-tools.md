@@ -6,6 +6,7 @@ https://web.dev/
 
 * [Chrome 85](https://developers.google.com/web/updates/2020/06/devtools?utm_source=devtools)
 * [Chrome 90](https://developer.chrome.com/blog/new-in-devtools-90/)
+* [Chrome 106](https://developer.chrome.com/blog/new-in-devtools-106/)
 
 ## Network > [Filter requests](https://developers.google.com/web/tools/chrome-devtools/network/reference#filter)
 

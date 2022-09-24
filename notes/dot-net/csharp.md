@@ -468,3 +468,14 @@ namespace ExtensionMethods
   Console.WriteLine(sayHello());
   ```
 
+* [How can I find the method that called the current method?](https://stackoverflow.com/q/171970/1366033)
+
+  [Attributes interpreted by the C# compiler](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/caller-information)
+  [CallerMemberName Demo](https://dotnetfiddle.net/vjgmxS)
+
+  ```cs
+  using System.Runtime.CompilerServices;
+  public static void LoggerMethod([CallerMemberName] string memberName = "") {
+    Console.WriteLine($"Hello {memberName}");
+  }
+  ```

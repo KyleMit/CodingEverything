@@ -42,3 +42,7 @@
   })
   ```
 
+* [How to change text color in jQuery animate?](https://stackoverflow.com/q/16871967/1366033)
+
+  Add jQuery UI
+

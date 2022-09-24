@@ -45,3 +45,9 @@
 
 * [Changelog / Release Notes](https://codesandbox.io/changelog)
 
+## CodePen
+
+* [AutoRun](https://blog.codepen.io/2013/04/04/auto-run-in-javascript-now-optional/)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd> - Run Codepen
+
