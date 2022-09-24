@@ -279,11 +279,15 @@ scoop install FiraCode-NF-Mono
 
 ### Docker Config
 
+<!-- {% raw %} -->
+
 ```json
 {
     "psFormat": "table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}",
 }
 ```
+
+<!-- {% endraw %} -->
 
 ### Setup
 
