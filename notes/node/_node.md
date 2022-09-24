@@ -535,3 +535,15 @@ npm install -g nodemon
     var parent = path.join(__dirname, "..");
     ```
 
+* [How to remove a directory if it exists and is not empty?](https://stackoverflow.com/q/31917891/1366033)
+
+    ```js
+    fs.rm("/directory-to-delete", { recursive: true, force: true })
+    ```
+
+* [Get file name from absolute path in Nodejs?](https://stackoverflow.com/q/19811541/1366033)
+
+    ```js
+    path.basename('/foo/bar/asdf.html') // 'asdf.html'
+    ```
+

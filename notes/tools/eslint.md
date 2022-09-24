@@ -16,8 +16,9 @@
 ## Docs
 
 * [eslint](https://eslint.org/)
-* [eslint | Github](https://github.com/eslint/eslint)
-* [typescript-eslint | Github](https://github.com/typescript-eslint/typescript-eslint)
+* [Configuring ESLint](https://eslint.org/docs/latest/user-guide/configuring/)
+* [eslint](https://github.com/eslint/eslint)
+* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 
 
 ## Getting Started
@@ -57,7 +58,7 @@ rules: {}
 
 * [require-await](https://eslint.org/docs/rules/require-await)
 * [valid-jsdoc](https://eslint.org/docs/rules/valid-jsdoc)
-
+* [no-unused-vars](https://eslint.org/docs/latest/rules/no-unused-vars)
 
 ### TypeScript
 
@@ -102,3 +103,24 @@ rules: {}
   "max-lines": "error"
   "max-lines": ["error", { "max": 200, "skipBlankLines": true, "skipComments": true }]
   ```
+
+* [eslint: error Parsing error: The keyword 'const' is reserved](https://stackoverflow.com/q/)
+
+  ```json
+  {
+      "parserOptions": {
+          "ecmaVersion": "latest"
+      },
+
+      "env": {
+          "es6": true
+      }
+  }
+  ```
+
+* [Turning off eslint rule for a specific file](https://stackoverflow.com/q/34764287/1366033)
+
+  ```js
+  /* eslint-disable */
+  ```
+

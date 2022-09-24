@@ -23,3 +23,7 @@
 
 * [How do I break a string in YAML over multiple lines?](https://stackoverflow.com/q/3790454/1366033)
 
+* [Yaml Syntax - can not read a block mapping entry; a multiline key may not be an implicit key](https://stackoverflow.com/q/73838503/1366033)
+
+  Double check you didn't accidentally terminate a string wrapped in quotes
+
