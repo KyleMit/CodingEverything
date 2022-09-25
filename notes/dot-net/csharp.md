@@ -152,10 +152,14 @@ namespace ExtensionMethods
 
   Use double curly braces
 
+  <!-- {% raw %} -->
+
   ```cs
   var inVal = "1, 2, 3";
   var outVal = $" foo {{{inVal}}}";
   ```
+
+  <!-- {% endraw %} -->
 
 * [Check if element at position [x] exists in the list](https://stackoverflow.com/q/3949113/1366033)
 

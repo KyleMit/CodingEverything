@@ -408,15 +408,6 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ```
 
 
-* [How to escape braces (curly brackets) in a format string in .NET](https://stackoverflow.com/q/91362/1366033)
-
-  Use Double Braces
-
-  ```cs
-  string t = "1, 2, 3";
-  string v = String.Format(" foo {{{0}}}", t);
-  ```
-
 * [Is there a method to find the max of 3 numbers in C#?](https://stackoverflow.com/q/6800838/1366033)
 
   Use [`Enumerable.Max`](https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.max)

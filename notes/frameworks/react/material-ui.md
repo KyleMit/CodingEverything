@@ -62,10 +62,13 @@ import { Select } from '@material-ui/core';
 
 * [Set Material UI Select width?](https://stackoverflow.com/q/56120213/1366033)
 
+  <!-- {% raw %} -->
+
   ```jsx
   <FormControl style={{minWidth: 120}}>
   ```
 
+  <!-- {% endraw %} -->
 
 * TypeError: Cannot read property 'up' of undefined
 
@@ -146,6 +149,8 @@ import { Select } from '@material-ui/core';
 
 * [Material UI Overriding styles with increased specificity](https://stackoverflow.com/q/63880835/1366033)
 
+  <!-- {% raw %} -->
+
   ```tsx
   const useStyles = makeStyles(() => ({
     accordionHeader: {
@@ -171,6 +176,8 @@ import { Select } from '@material-ui/core';
     )
   };
   ```
+
+  <!-- {% endraw %} -->
 
   [Customizing components - Pseudo Classes](https://material-ui.com/customization/components/#pseudo-classes)
 

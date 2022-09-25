@@ -57,6 +57,9 @@ graph TD
 
 #### Shapes
 
+<!-- {% raw %} -->
+
+
 ```mermaid
 graph LR
     a[square]
@@ -89,6 +92,8 @@ graph LR
         a --> b --> c
     end
 ```
+
+<!-- {% endraw %} -->
 
 ### Pie
 

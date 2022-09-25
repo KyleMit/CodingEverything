@@ -13,6 +13,8 @@
 
 * [How to avoid <p> tag #42](https://github.com/remarkjs/react-markdown/issues/42)
 
+    <!-- {% raw %} -->
+
     ```js
     <Markdown
         source="Normally, this *sentence* would be wrapped in a paragraph."
@@ -20,8 +22,11 @@
     />
     ```
 
+    <!-- {% endraw %} -->
+
 * [Option for Setting target="_blank" on Links #12](https://github.com/remarkjs/react-markdown/issues/12)
 
+    <!-- {% raw %} -->
 
     ```js
     <ReactMarkdown
@@ -29,3 +34,5 @@
         renderers={{Link: props => <a href={props.href} target="_blank">{props.children</a>}}
     />
     ```
+
+    <!-- {% endraw %} -->
