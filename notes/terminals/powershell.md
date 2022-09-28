@@ -846,20 +846,20 @@ winget install oh-my-posh
 
 * [Powershell folder size of folders without listing Subdirectories](https://stackoverflow.com/q/26494744/1366033)
 
-```ps1
-foreach ($d in gci -Directory -Force) {
-  '{0,15:N0}' -f ((gci $d -File -Recurse -Force | measure length -sum).sum) + "`t`t$d"
-}
-```
+  ```ps1
+  foreach ($d in gci -Directory -Force) {
+    '{0,15:N0}' -f ((gci $d -File -Recurse -Force | measure length -sum).sum) + "`t`t$d"
+  }
+  ```
 
 
-```ps1
-$dirs = Get-ChildItem -Directory
-$dirs | ForEach-Object {
-    $size = (Get-ChildItem $_.Name -Force -Recurse | Measure-Object Length -Sum).Sum / 1Mb
-    Return $_.Name + ' ' + [Math]::Round($size, 2)
-}
-```
+  ```ps1
+  $dirs = Get-ChildItem -Directory
+  $dirs | ForEach-Object {
+      $size = (Get-ChildItem $_.Name -Force -Recurse | Measure-Object Length -Sum).Sum / 1Mb
+      Return $_.Name + ' ' + [Math]::Round($size, 2)
+  }
+  ```
 
 * [How do I get only directories using Get-ChildItem?](https://stackoverflow.com/q/3085295/1366033)
 
@@ -941,9 +941,9 @@ $env:LOCALAPPDATA
 * [How to check if a cmdlet exists in PowerShell at runtime via script](https://stackoverflow.com/q/3919798/1366033)
 
   ```ps1
-  function Check-Command($cmdname)
+  function Check-Command($cmdName)
   {
-      return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
+      return [bool](Get-Command -Name $cmdName -ErrorAction SilentlyContinue)
   }
   ```
 
@@ -1099,12 +1099,12 @@ $env:LOCALAPPDATA
 
 * Extract Regex Match
 
-
+  ```ps1
   $input = "Prefix: {123}"
   $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
   ($input | Select-String "{.*}").Matches.Value
   [Regex]::Matches($input, "{.*}" ).Value
-
+  ```
 
 * [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
 
@@ -1209,5 +1209,61 @@ $env:LOCALAPPDATA
 
   ```ps1
   (Get-Command git).Pat
+  ```
+
+* [Creating new file with touch command in PowerShell](https://stackoverflow.com/q/32448174/1366033)
+
+  ```ps1
+  New-Item -Type File -Path $Path
+  ```
+
+  ```ps1
+  function touch {
+    Param(
+      [Parameter(Mandatory=$true)]
+      [string]$Path
+    )
+
+    if (Test-Path -LiteralPath $Path) {
+      (Get-Item -Path $Path).LastWriteTime = Get-Date
+    } else {
+      New-Item -Type File -Path $Path -Force
+    }
+  }
+  ```
+
+* [Get count of all items in a folder by extension](https://stackoverflow.com/q/73884330/1366033)
+
+  ```ps1
+  Get-ChildItem -File -Recurse |
+    Group-Object Extension -NoElement |
+    Sort-Object Count -Descending
+  ```
+
+* [How to fix truncated PowerShell output, even when I've specified -width 300](https://superuser.com/q/1049531/180163)
+
+  ```ps1
+  $data | Format-Table -AutoSize
+  ```
+
+* [Function to round integer or float up to closest increment in Powershell](https://stackoverflow.com/q/18226298/1366033)
+
+  ```ps1
+  Function Get-Increment([float] $value, [int] $increment=5){
+      if($value -gt 1)
+      {
+        [Math]::Ceiling($value / $increment) * $increment;
+      }
+      else
+      {
+        [math]::Ceiling($value)
+      }
+  }
+  ```
+
+* [Count line lengths in file using powershell](https://stackoverflow.com/q/30139876/1366033)
+
+  ```ps1
+  Get-Content <file> | Group-Object -Property Length | Sort-Object -Property Name
   ```
 

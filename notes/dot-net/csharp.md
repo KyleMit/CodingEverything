@@ -483,3 +483,10 @@ namespace ExtensionMethods
     Console.WriteLine($"Hello {memberName}");
   }
   ```
+
+* [Escape double quotes in a string](https://stackoverflow.com/q/14480724/1366033)
+
+  ```cs
+  var msg1 = "Do you read \"books\"?"; // use escape sequence
+  var msg2 = @"Do you read ""books""?"; // no escape sequences, special "" syntax
+  ```

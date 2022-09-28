@@ -175,3 +175,19 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     THEN CAST(1 AS BIT)
     ELSE CAST(0 AS BIT) END
     ```
+
+* [Finding longest date gap between dates](https://stackoverflow.com/q/1315262/1366033)
+
+    ```sql
+    SELECT FORMAT(start.CreationDay, 'yyyy-MM-dd') AS StartDate,
+           FORMAT(next.CreationDay, 'yyyy-MM-dd') As NextDate,
+           DateDiff(DAY, start.CreationDay, next.CreationDay) As Gap
+    FROM SiteAccessDates start
+    CROSS APPLY (
+        SELECT TOP 1 CreationDay
+        FROM SiteAccessDates b
+        WHERE start.CreationDay < b.CreationDay
+        ORDER BY b.CreationDay
+    ) next
+    ORDER BY 3 DESC
+    ```
