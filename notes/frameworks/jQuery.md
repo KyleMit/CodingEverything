@@ -46,3 +46,9 @@
 
   Add jQuery UI
 
+* [Is there an "exists" function for jQuery?](https://stackoverflow.com/q/31044/1366033)
+
+  ```js
+  $("selector").length
+  ```
+

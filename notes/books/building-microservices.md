@@ -215,3 +215,76 @@ graph TD
 * **CDCs** - Consumer-Driven Contracts
 
 * [Pact](https://pact.io/)
+
+
+## Chapter 7 - The Build
+
+* **CI** - Continuous Integration
+* **CD** - Continuous Delivery - each check-in is treated as a release candidate
+* **CD** - Continuous Deployment - each check-in is deployed w/o manual intervention
+
+
+* Jez Humble’s three questions
+  * Do you check in to mainline once per day?
+  * Do you have a suite of tests to validate your changes?
+  * When the build is broken, is it the #1 priority of the team to fix it?
+
+* Branching Models
+  * trunk-based-development - everyone working off the same branch
+  * GitFlow
+
+* Build Pipeline
+
+* Artifact Creation
+  * Should build an artifact once and once only
+  * The artifact you verify should be the artifact you deploy
+  * any aspects of configuration that vary from environment to environment need to be kept outside the artifact itself.
+
+### Build Patterns
+
+* One Giant Repo, One Giant Build
+  * Pros
+    * If I have to work on multiple services at once, I just have to worry about one commit
+    * lockstep releases, where you don’t mind deploying multiple services at once.
+  * Cons
+    * This impacts our cycle time, the speed at which we can move a single change from development to live.
+
+
+* One Repository per Microservice (aka Multirepo)
+  * Cons
+    * developers may find themselves working with multiple repositories at a time
+      * which is especially painful if they are trying to make changes across multiple repositories at once
+    * Changes cannot be made in an atomic fashion across separate repositories,
+  * Smell
+    * If you are continually making changes across multiple microservices
+      * then your service boundaries might not be in the right place,
+
+* Monorepo
+  * Structure
+    * map multiple builds to different parts of the repo
+    * "common" folder used by all microservices, a change to which causes all microservices to be rebuilt.
+    * graph-based build tools like the open source [**Bazel**](https://bazel.build/)
+  * Pros
+    * Improved visibility of other people’s code, the ability to reuse code easily
+    * Easy Code-ReUse - When our unit of reuse is a library, we are potentially pulling in more code than we really want.
+
+  * **Note**: atomic commit across multiple services doesn’t give you atomic rollout.
+
+### Defining Ownership
+
+[CodeOwnership](https://martinfowler.com/bliki/CodeOwnership.html)
+
+* **Strong code ownership**
+  * If someone from outside that group wants to make a change
+    * they have to ask the owners to make the change for them.
+* **Weak code ownership**
+  * people outside the ownership group are allowed to make changes
+    * although any of these changes must be reviewed and accepted by someone in the ownership group.
+* **Collective code ownership**
+  * any developer can change any other microservice.
+  * small number of developers (20 or fewer, as a general guide),
+
+
+* Github - [`CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+  * ensures that code owners for source files are requested for review whenever a pull request is raised for the relevant files
+  * lots of good reasons to aim for smaller pull requests
