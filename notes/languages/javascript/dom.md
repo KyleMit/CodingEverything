@@ -78,3 +78,9 @@ Document Object Model
     }
   })
   ```
+
+* [How can I set multiple CSS styles in JavaScript?](https://stackoverflow.com/q/3968593/1366033)
+
+  ```js
+  Object.assign(el.style,{fontSize:"12px",left:"200px",top:"100px"});
+  ```

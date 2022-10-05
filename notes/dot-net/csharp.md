@@ -490,3 +490,21 @@ namespace ExtensionMethods
   var msg1 = "Do you read \"books\"?"; // use escape sequence
   var msg2 = @"Do you read ""books""?"; // no escape sequences, special "" syntax
   ```
+
+* [Invalid token '=' in class, struct, or interface member declaration](https://stackoverflow.com/q/36179921/1366033)
+
+  Setting Default-value for auto-implemented properties is only available from C#6+
+
+
+  ```cs
+  public class Player
+  {
+    public bool IsActive {get;set;} = true;
+  }
+  ```
+
+* [What is the best way to give a C# auto-property an initial value?](https://stackoverflow.com/q/40730/1366033)
+  * [C# version 6.0 > Auto-property initializers](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history#c-version-60)
+  * [Auto-Implemented Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
+  * [Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/properties)
+

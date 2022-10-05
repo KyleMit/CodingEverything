@@ -149,3 +149,9 @@ button {
   }
   ```
 
+* [Select the last 3 child elements](https://stackoverflow.com/q/14268156/1366033)
+
+  ```css
+  a:nth-last-child(-n+3)
+  ```
+

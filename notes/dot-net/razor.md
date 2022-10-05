@@ -39,3 +39,23 @@
 
   <p>@RenderList(Model.WhatNext)</p>
   ```
+
+* [MVC Razor @foreach](https://stackoverflow.com/q/11261590/1366033)
+
+  ```html
+  @foreach (var item in Model.Foos)
+  {
+      <div>@item.Bar</div>
+  }
+  ```
+
+* [Conditional attributes in HTML](https://stackoverflow.com/a/8071699/1366033)
+
+
+  ```html
+  <input type="text" id="@strElementID" class="@strCSSClass" />
+  ```
+
+  * [Jon Galloway - ASP.NET MVC 4 Beta Released!](https://weblogs.asp.net/jongalloway/asp-net-4-beta-released)
+  * [Conditional Attributes in Razor View Engine and ASP.NET MVC 4](https://www.davidhayden.me/blog/conditional-attributes-in-razor-view-engine-and-asp.net-mvc-4)
+

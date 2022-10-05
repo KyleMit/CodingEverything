@@ -439,3 +439,12 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   };
   ```
 
+
+* [How to change C# Language Version for all of the projects in my solution in one place?](https://stackoverflow.com/q/61434436/1366033)
+
+  Add to `Directory.Build.props`
+
+  [Customize your build](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build)
+
+
+  
