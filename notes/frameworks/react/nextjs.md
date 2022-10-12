@@ -16,6 +16,14 @@ npx create-next-app@latest
 npm install next react react-dom
 ```
 
+## Links
+
+* [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs)
+* [Github Discussions](https://github.com/vercel/next.js/discussions)
+* [Stack Overflow [next.js]](https://stackoverflow.com/questions/tagged/next.js)
+* [Discord](https://discord.com/channels/752553802359505017/752553802359505020)
+* [/r/Next.js](https://www.reddit.com/r/nextjs/)
+
 ## Docs
 
 * [Basic Features: Pages](https://nextjs.org/docs/basic-features/pages)

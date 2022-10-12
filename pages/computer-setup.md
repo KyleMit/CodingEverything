@@ -1172,3 +1172,9 @@ Hotkeys=72 ;F3
 
 -->
 
+
+## Questions
+
+* [How to remove hotkey on Amazon Kindle PC that opens application](https://superuser.com/q/1320544/180163)
+
+  Open Shortcut > Properties > Remove Shortcut Key

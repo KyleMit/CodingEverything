@@ -52,3 +52,11 @@
   $("selector").length
   ```
 
+* [Check, using jQuery, if an element is 'display:none' or block on click](https://stackoverflow.com/q/15924751/1366033)
+
+  ```js
+  hiddenElements = $(':hidden');
+  visibleElements = $(':visible');
+  ```
+
+  
