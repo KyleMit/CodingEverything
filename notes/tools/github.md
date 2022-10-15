@@ -122,3 +122,7 @@ kramdown:
 
   `jquery in:topics` - matches repositories labeled with "jquery" as a topic
 
+* [Permalinks to Code](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet)
+
+  1. Copy Permalink
+  2. Paste whole URL within same repo

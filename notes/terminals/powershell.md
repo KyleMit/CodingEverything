@@ -1267,3 +1267,20 @@ $env:LOCALAPPDATA
   Get-Content <file> | Group-Object -Property Length | Sort-Object -Property Name
   ```
 
+* [How do I kill a process in Powershell](https://stackoverflow.com/q/41116361/1366033)
+
+  ```ps1
+  Stop-Process -Name testhost
+  ```
+
+  [`Stop-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-process)
+
+
+* [*.ps1 cannot be loaded because running scripts is disabled on this system](https://stackoverflow.com/a/26955050/1366033)
+
+
+  ```ps1
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+
+  

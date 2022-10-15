@@ -447,4 +447,63 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   [Customize your build](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build)
 
 
-  
+* [Setting Authorization Header of HttpClient](https://stackoverflow.com/q/14627399/1366033)
+
+
+  ```cs
+  httpClient.DefaultRequestHeaders.Authorization =
+      new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+  ```
+
+* [How to convert base64 value from a database to a stream with C#](https://stackoverflow.com/q/31524343/1366033)
+
+  ```cs
+  var bytes = Convert.FromBase64String(base64EncodedString);
+  var stream = new MemoryStream(bytes);
+  var contents = new StreamContent(stream);
+  ```
+
+* [How do I get the path of the assembly the code is in?](https://stackoverflow.com/q/52797/1366033)
+
+  [`Assembly.Location`](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.location)
+
+  ```cs
+  Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+  ```
+
+* [Returning a stream from `File.OpenRead()`](https://stackoverflow.com/q/8741474/1366033)
+
+  [`File.Open`](https://learn.microsoft.com/en-us/dotnet/api/system.io.file.open)
+
+  ```cs
+  using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read)
+  ```
+
+* [How to measure elapsed time using DateTime class?](https://stackoverflow.com/q/45959959/1366033)
+
+  ```cs
+  var startTime = DateTime.Now;
+  Thread.Sleep(100);
+  var endTime = DateTime.Now;
+  var interval = (endTime - startTime)
+  Console.WriteLine(interval.TotalMilliseconds);
+  ```
+
+* [XmlDocument - load from string?](https://stackoverflow.com/q/4929653/1366033)
+
+  [`XmlDocument.LoadXml`](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmldocument.loadxml)
+
+  ```cs
+  XmlDocument doc = new XmlDocument();
+  doc.LoadXml(str);
+  ```
+
+* [How to get content body from a httpclient call?](https://stackoverflow.com/q/26597665/1366033)
+
+  [`HttpContent.ReadAsStringAsync`](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpcontent.readasstringasync)
+
+  ```cs
+  var response = await httpClient.PostAsync(...);
+  var contents = await response.Content.ReadAsStringAsync();
+  ```
+

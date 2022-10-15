@@ -252,3 +252,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   Options > Text Editor > General > Enable mouse click to perform Go to Definition
 
+* [Call an async method in the immediate window Visual Studio](https://stackoverflow.com/q/59053129/1366033)
+
+  Click the thread icon on the right side of the value in the watch window
