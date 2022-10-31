@@ -111,6 +111,12 @@ Babel in the browser
 </script>
 ```
 
+## Server Components
+
+* [React 18: React Server Components | Next.js](https://nextjs.org/docs/advanced-features/react-18/server-components)
+* [Introducing Zero-Bundle-Size React Server Components – React Blog](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)
+* [React Server Components](https://www.patterns.dev/posts/react-server-components/)
+
 ## Debug
 
 * [React Dev Tools](https://fb.me/react-devtools)

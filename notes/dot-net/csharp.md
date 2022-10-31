@@ -508,3 +508,5 @@ namespace ExtensionMethods
   * [Auto-Implemented Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
   * [Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/properties)
 
+* Coalesce null or empty string
+

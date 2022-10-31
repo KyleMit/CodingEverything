@@ -759,3 +759,11 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 * [How do I open the same file side by side in a single Visual Studio Code session](https://stackoverflow.com/q/48674275/1366033)
 
    View: Split Editor - <kbd>Ctrl</kbd> + <kbd>\</kbd>
+
+* [Disable Markdownlint settings for workspace](https://superuser.com/q/1295409/180163)
+
+  ```json
+  "markdownlint.config": {
+      "default": true,
+  }
+  ```
