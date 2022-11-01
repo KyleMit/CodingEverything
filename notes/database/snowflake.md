@@ -26,3 +26,8 @@
 
   Use `'\\b'`, not `'\b'`
 
+* [Snowflake SQL Filter by transactions in the last rolling 30 days](https://stackoverflow.com/a/68129314/1366033)
+
+  ```sql
+  where item_date_purchased > dateadd(day, -30, current_date());
+  ```

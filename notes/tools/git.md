@@ -408,3 +408,14 @@ git rev-list --count <revision>
   rm -rf .git
   ```
 
+* [Pull new updates from original GitHub repository into forked GitHub repository](https://stackoverflow.com/q/3903817/1366033)
+
+  ```ini
+  [remote "upstream"]
+    url = git@github.com:StackExchange/Stacks.git
+  ```
+
+  ```bash
+  git pull upstream main
+  ```
+

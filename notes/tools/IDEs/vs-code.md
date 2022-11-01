@@ -767,3 +767,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
       "default": true,
   }
   ```
+
+* [Increase max search limit](https://stackoverflow.com/q/73402465/1366033)
+
+  ```json
+  {
+    "search.maxResults": 40000
+  }
+  ```
+
