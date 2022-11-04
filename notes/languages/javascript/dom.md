@@ -84,3 +84,12 @@ Document Object Model
   ```js
   Object.assign(el.style,{fontSize:"12px",left:"200px",top:"100px"});
   ```
+
+* [Extract hostname name from string](https://stackoverflow.com/q/8498592/1366033)
+
+  ```js
+  const url = 'http://www.youtube.com/watch?v=ClkQA2Lb_iE';
+  const { hostname } = new URL(url);
+  console.log(hostname) // 'www.youtube.com'
+  ```
+

@@ -728,7 +728,6 @@ winget install graphviz
   ```
 
 
-
 * [What is the JavaScript version of sleep()?](https://stackoverflow.com/q/951021/1366033)
 
   ```js
@@ -838,8 +837,6 @@ winget install graphviz
   }
   ```
 
-
-
 * [Javascript: remove trailing spaces only](https://stackoverflow.com/q/37864460/1366033)
 
   [`String.prototype.trimEnd()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
@@ -863,5 +860,25 @@ winget install graphviz
   function isEmpty(obj) {
       return Object.keys(obj).length === 0;
   }
+  ```
+
+* [Counting the occurrences / frequency of array elements](https://stackoverflow.com/q/5667888/1366033)
+
+  * [Comma operator (`,`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+    * evaluates each of its operands (from left to right) and returns the value of the last operand
+  * [Lodash - `_.countBy`](https://lodash.com/docs/4.17.15#countBy)
+  * [Ramda - `R.countBy`](https://ramdajs.com/docs/#countBy)
+
+  ```js
+  const arr = ['a', 'a', 'a', 'a', 'a', 'b', 'c', 'c', 'c'];
+  const countBy = (arr) => arr.reduce((acc, cur) => (acc[cur] = (acc[cur] || 0) + 1, acc), {});
+  console.log(countBy(arr)); // {a: 5, b: 1, c: 3}
+  ```
+
+  ```js
+  const countBy = (arr) => arr.reduce((acc, cur) => {
+    acc[cur] = (acc[cur] || 0) + 1
+    return acc
+  }, {});
   ```
 
