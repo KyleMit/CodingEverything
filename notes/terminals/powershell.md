@@ -1240,6 +1240,12 @@ $env:LOCALAPPDATA
     Sort-Object Count -Descending
   ```
 
+* [How do I find files by their extension in a specific directory and go through them with Power Shell?](https://stackoverflow.com/q/42034488/1366033)
+
+  ```ps1
+  Get-ChildItem $path -Recurse -Filter *.ext
+  ```
+
 * [How to fix truncated PowerShell output, even when I've specified -width 300](https://superuser.com/q/1049531/180163)
 
   ```ps1
@@ -1283,4 +1289,9 @@ $env:LOCALAPPDATA
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
   ```
 
-  
+* [How to exclude files and folders from Get-ChildItem in PowerShell?](https://stackoverflow.com/q/61934452/1366033)
+
+  ```ps1
+  Get-ChildItem $path -Recurse | Where-Object FullName -INotLike *obj*
+  ```
+

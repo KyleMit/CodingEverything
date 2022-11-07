@@ -288,3 +288,69 @@ graph TD
 * Github - [`CODEOWNERS` file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
   * ensures that code owners for source files are requested for review whenever a pull request is raised for the relevant files
   * lots of good reasons to aim for smaller pull requests
+
+
+
+## Chapter 10 - From Monitoring to Observability
+
+### Production Pain
+
+> You won’t truly appreciate the potential pain, suffering, and anguish caused by a microservice architecture until you have it running in production and serving real traffic.
+
+
+### Murder Mystery
+
+> Tracking down what’s gone wrong, and what caused it, is our first port of call. But this gets difficult if we have a long list of suspects.
+
+* Multiple Services -> Multiple Servers
+
+### Three Pillars Of Observability
+
+* metrics
+* logging
+* distributed tracing
+
+New Relic even coined the term **MELT**
+
+* metrics
+* event
+* logs
+* traces
+
+* Log aggregation
+  * Collecting information across multiple microservices, a vital building block of any monitoring or observability solution
+* Metrics aggregation
+  * Capturing raw numbers from our microservices and infrastructure to help detect problems, drive capacity planning, and perhaps even scale our applications
+* Distributed tracing
+  * Tracking a flow of calls across multiple microservice boundaries to work out what went wrong and derive accurate latency information Are you doing OK?
+* Alerting
+  * What should you alert on? What does a good alert look like?
+* Semantic monitoring
+  * Thinking differently about the health of our systems, and about what should wake us up at 3 a.m.
+* Testing in production
+  * A summary of various testing in production techniques
+
+
+
+### Alerting
+
+* Relevant
+  * Make sure the alert is of value.
+* Unique
+  * Ensure that the alert isn’t duplicating another.
+* Timely
+  * We need to get the alert quickly enough to make use of it.
+* Prioritized
+  * Give the operator enough information to decide in what order the alerts should be dealt with.
+* Understandable
+  * The information in the alert needs to be clear and readable.
+* Diagnostic
+  * It needs to be clear what is wrong.
+* Advisory
+  * Help the operator understand what actions need to be taken.
+* Focusing
+  * Draw attention to the most important issues.
+
+> Not testing in prod is like not practicing with the full orchestra because your solo sounded fine at home.
+> \- ​Charity Majors
+

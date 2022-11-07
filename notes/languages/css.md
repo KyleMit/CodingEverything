@@ -155,3 +155,13 @@ button {
   a:nth-last-child(-n+3)
   ```
 
+* [sticky position on css grid items](https://stackoverflow.com/q/50794795/1366033)
+
+  ```css
+  section {
+    position: sticky;
+    top: 0;
+    align-self: start;
+  }
+  ```
+
