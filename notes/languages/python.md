@@ -2,7 +2,24 @@
 
 ## Links
 
+* [Python.org](https://www.python.org/)
+* [Documentation](https://docs.python.org/3/)
+* [Learn Python](https://www.learnpython.org/)
+
+## Learn
+
+* [w3schools](https://www.w3schools.com/python/default.asp)
+* [GeeksforGeeks](https://www.geeksforgeeks.org/python-programming-language/?ref=lbp)
+* [tutorialspoint](https://www.tutorialspoint.com/python/index.htm)
 * [Learn Python](https://exercism.org/tracks/python/)
+
+## PEP
+
+* **PEP** - Python Enhancement Proposals
+
+* [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008)
+* [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
+* [PEP 484 – Type Hints](https://peps.python.org/pep-0484)
 
 ## PIP
 
@@ -65,3 +82,40 @@ pytest --version
   alias python=python3
   ```
 
+* [How do I create a constant in Python?](https://stackoverflow.com/q/2682745/1366033)
+
+  ```py
+  MY_CONSTANT = "one"
+  ```
+
+  ```py
+  def MY_CONSTANT():
+      return "one"
+  ```
+
+* [How to use the pass statement](https://stackoverflow.com/q/13886168/1366033)
+
+  Prevents unimplemented exception
+
+  ```py
+  def meth_a(self):
+      pass
+  ```
+
+
+* [What are the most common Python docstring formats?](https://stackoverflow.com/q/3898572/1366033)
+
+  * **reST** - reStructuredText
+
+  ```py
+  """
+  This is a reST style.
+
+  :param param1: this is a first param
+  :param param2: this is a second param
+  :returns: this is a description of what is returned
+  :raises keyError: raises an exception
+  """
+  ```
+
+  
