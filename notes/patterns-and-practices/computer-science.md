@@ -1,8 +1,8 @@
-# Algorithms & Data Structures
+# Computer Science
 
 ## Algorithms
 
-### Big O Notation
+## Big O Notation
 
 ## Data Structures
 
@@ -15,8 +15,7 @@
 * Queues - control how items in a list are accessed.  Typically need to push/.pop records from a queue in a particular direction
   * Stack - LIFO (Last In, First Out), push/pop records on top of each other
   * Queue - FIFO (First In, First Out) - push records on top, and pop them off the bottom
-
-### Linked Lists
+* Linked Lists
 
 ## Wikipedia
 
@@ -26,6 +25,20 @@
 * [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
 * [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case)
 * [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort)
+
+
+## Programming Language Concepts
+
+* [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
+* [Duck typing](https://en.wikipedia.org/wiki/Duck_typing)
+* [Gradual typing](https://en.wikipedia.org/wiki/Gradual_typing)
+
+
+## Numbers
+
+* [Arbitrary-precision arithmetic](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)
+* [Floating Point Math](https://0.30000000000000004.com/)
+
 
 ## Sort
 
@@ -62,9 +75,6 @@
   * [Linked List - Implementation in C/C++](https://www.youtube.com/watch?v=vcQIFT79_50)
 
 ## Questions
-
-
-
 
 * [Trying to find factors of a number in JS](https://stackoverflow.com/q/22130043/1366033)
 

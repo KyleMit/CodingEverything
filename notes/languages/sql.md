@@ -191,3 +191,39 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ) next
     ORDER BY 3 DESC
     ```
+
+* [Fetch the rows which have the Max value for a column for each distinct value of another column](https://stackoverflow.com/q/121387/1366033)
+
+
+    ```sql
+    SELECT ph.* 
+    FROM dbo.PostHistory ph
+    WHERE ph.CreationDate = (
+        SELECT MAX(ph2.CreationDate)
+        FROM dbo.PostHistory ph2
+        WHERE ph.PostId = ph2.PostId
+    )
+    ```
+
+
+    ```sql
+    SELECT ph.* 
+    FROM (
+        SELECT ph2.*, ROW_NUMBER() OVER(PARTITION BY PostId ORDER BY CreationDate DESC) rn
+        FROM dbo.PostHistory ph2
+    ) ph
+    WHERE ph.rn = 1
+    ```
+
+    ```sql
+    ;WITH LatestPostHistory AS (
+        SELECT ph.PostId, MAX(ph.CreationDate) AS MaxCreationDate
+        FROM dbo.PostHistory ph
+        GROUP BY ph.PostId
+    )
+    SELECT ph.*
+    FROM dbo.PostHistory ph
+    RIGHT JOIN LatestPostHistory lph ON ph.PostId = lph.PostId AND ph.CreationDate = lph.MaxCreationDate 
+    ```
+
+

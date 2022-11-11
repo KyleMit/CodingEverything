@@ -64,3 +64,10 @@ https://web.dev/
 
   The Gear icon in the requests in means the request came from [service worker](https://developers.google.com/web/fundamentals/primers/service-workers)
 
+* [Save / export Chrome's JavaScript console input history](https://stackoverflow.com/q/51802601/1366033)
+
+  ```js
+  copy(JSON.parse(localStorage.getItem("consoleHistory")).join('\n'))
+  ```
+
+  
