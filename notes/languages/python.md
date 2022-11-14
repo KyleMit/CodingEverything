@@ -19,12 +19,16 @@ Inventor: [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)
 
 ## Docs
 
+* Bibliography
+  * [Gen Index Symbols](https://docs.python.org/3/genindex-Symbols.html)
+
 * Library
   * [Typing](https://docs.python.org/3/library/typing.html)
+  * [Built-in Functions](https://docs.python.org/3/library/functions.html)
   * [Built-in Constants](https://docs.python.org/3/library/constants.html)
-  * [doctest](https://docs.python.org/3/library/doctest.html)
   * [Built-in Types](https://docs.python.org/3/library/stdtypes.html#)
     * [Numbers](https://docs.python.org/3/library/stdtypes.html#typesnumeric)
+  * [doctest](https://docs.python.org/3/library/doctest.html)
 
 * Tutorial
   * [4. More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
@@ -78,6 +82,12 @@ Inventor: [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)
 * [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
 * [PEP 484 – Type Hints](https://peps.python.org/pep-0484)
 * [PEP 515 – Underscores in Numeric Literals](https://peps.python.org/pep-0515/)
+* [PEP 572 – Assignment Expressions](https://peps.python.org/pep-0572/)
+
+## Version History
+
+* [What’s New In Python 3.8](https://docs.python.org/3/whatsnew/3.8.html#what-s-new-in-python-3-8)
+  * Assignment Expressions
 
 ## PIP
 
@@ -194,5 +204,53 @@ pytest --version
   PytestUnknownMarkWarning: Unknown pytest.mark.task - is this a typo?
   You can register custom marks to avoid this warning
   See https://docs.pytest.org/en/stable/how-to/mark.html
+  ```
+
+* Power Operator / Exponents
+
+  * [6.5 Power Operator - `x ** y`](https://docs.python.org/3/reference/expressions.html?highlight=power%20operator#the-power-operator)
+  * [`pow(x,y`)](https://docs.python.org/3/library/functions.html#pow)
+  * [`math.pow(x,y)`](https://docs.python.org/3/library/math.html?highlight=power%20operator#math.pow)
+
+* [Assign and increment value on one line](https://stackoverflow.com/q/34693939/1366033)
+
+  `:=` - walrus operator - assignment expression - assign *and* return value
+
+  ```py
+  >>> print(f"{(x := 1)}")
+  1
+  >>> x
+  1
+  ```
+
+* [What exactly does `+=` do?](https://stackoverflow.com/q/4841436/1366033)
+
+  * [`object.__iadd__(self, other)`](https://docs.python.org/3/reference/datamodel.html#object.__iadd__)
+  * [7.2.1 Augmented assignment statements](https://docs.python.org/3/reference/simple_stmts.html#augmented-assignment-statements)
+
+* Modulo Operator
+
+  * [6.6 Binary arithmetic operations](https://docs.python.org/3.3/reference/expressions.html#binary-arithmetic-operations)
+  * [`divmod(a, b, /)](https://docs.python.org/3/library/functions.html#divmod)
+
+* [for loop in Python](https://stackoverflow.com/q/4170656/1366033)
+
+  ```py
+  myList = [1,2,3]
+  for item in myList:
+      print item
+  ```
+
+  ```py
+  myDict = { 1:'one', 2:'two', 3:'three' }
+  for key in myDict:
+      print key, myDict[key]
+  ```
+
+  When modifying list during iteration
+
+  ```py
+  for i, item in enumerate(myList):
+    myList[i] = item**2
   ```
 
