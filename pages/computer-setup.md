@@ -1151,7 +1151,7 @@ Hotkeys=72 ;F3
 * [How do I disable Aero Shake in Windows 7?](https://superuser.com/q/12156/180163)
 
     1. Run `gpedit.msc`
-    2. User Congiruation > Administrative Templates > Desktop
+    2. User Configuration > Administrative Templates > Desktop
     3. Enable "Turn off Aero Shake window minimizing mouse gesture"
 
 * [How to make Windows 10 taskbar thumbnail previews bigger?](https://superuser.com/q/958690/180163)

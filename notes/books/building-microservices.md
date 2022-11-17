@@ -354,3 +354,25 @@ New Relic even coined the term **MELT**
 > Not testing in prod is like not practicing with the full orchestra because your solo sounded fine at home.
 > \- ​Charity Majors
 
+
+## Chapter 11 - Security
+
+* Types of Security Controls
+  * Preventative
+  * Detective
+  * Responsive
+
+* [The Five Functions | NIST](https://www.nist.gov/cyberframework/online-learning/five-functions)
+  * Identify
+  * Protect
+  * Detect
+  * Respond
+  * Recover
+
+* Secrets
+  * Creation
+  * Distribution
+  * Storage
+  * Monitoring
+  * Rotation
+

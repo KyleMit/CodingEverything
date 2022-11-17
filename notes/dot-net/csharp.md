@@ -2,8 +2,18 @@
 
 ## Docs
 
-* [Local functions](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
-* [Lambda expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)
+* Appendix
+  * [C# Keywords](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/)
+
+* Programming Guide
+  * [Local functions](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
+
+* Language Reference
+  * [out parameter modifier](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
+  * [Lambda expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)
+  * [Floating-point numeric types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
+
+
 
 ## Functional Techniques
 
@@ -508,5 +518,30 @@ namespace ExtensionMethods
   * [Auto-Implemented Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
   * [Properties in C#](https://learn.microsoft.com/en-us/dotnet/csharp/properties)
 
-* Coalesce null or empty string
+* [Coalesce null or empty string](https://stackoverflow.com/q/2420125/1366033)
 
+  ```cs
+  s.SiteNumber.NullIfEmpty() ?? "No Number";
+  ```
+
+  ```cs
+  public static class StringExtensions
+  {
+      public static string NullIfEmpty(this string s)
+      {
+          return string.IsNullOrEmpty(s) ? null : s;
+      }
+  }
+  ```
+
+* [decimal vs double! - Which one should I use and when?](https://stackoverflow.com/q/1165761/1366033)
+
+  | .NET Type                   | C# Keyword | Precision     |
+  | --------------------------- | ---------- | ------------- |
+  | [`System.Single`][single]   | float      | ~6-9 digits   |
+  | [`System.Double`][double]   | double     | ~15-17 digits |
+  | [`System.Decimal`][decimal] | decimal    | 28-29 digits  |
+
+  [single]: https://learn.microsoft.com/en-us/dotnet/api/system.single
+  [double]: https://learn.microsoft.com/en-us/dotnet/api/system.double
+  [decimal]: https://learn.microsoft.com/en-us/dotnet/api/system.decimal
