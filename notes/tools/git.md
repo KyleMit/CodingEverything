@@ -419,3 +419,21 @@ git rev-list --count <revision>
   git pull upstream main
   ```
 
+* [How do you stash an untracked file?](https://stackoverflow.com/q/835501/1366033)
+
+  ```bash
+  git stash --include-untracked # -u
+  ```
+
+  ```bash
+  git add .
+  git stash
+  ```
+
+* [How to remove files from git staging area?](https://stackoverflow.com/q/19730565/1366033)
+
+  ```bash
+  git restore --staged .
+  ```
+
+  
