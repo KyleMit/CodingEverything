@@ -1,5 +1,5 @@
 
-# Code Playgrounds
+# Code Fiddles / Playgrounds
 
 * [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
 * [StackBlitz](https://stackblitz.com/@KyleMit)
@@ -50,4 +50,8 @@
 * [AutoRun](https://blog.codepen.io/2013/04/04/auto-run-in-javascript-now-optional/)
 
   <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd> - Run Codepen
+
+## JSFiddle
+
+[Fiddle Finder](https://jsfiddle.net/KyleMit/y8ah3nf7/)
 

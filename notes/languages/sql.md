@@ -226,4 +226,12 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     RIGHT JOIN LatestPostHistory lph ON ph.PostId = lph.PostId AND ph.CreationDate = lph.MaxCreationDate 
     ```
 
+* [Add a column with a default value to an existing table in SQL Server](https://stackoverflow.com/q/92082/1366033)
+
+    ```sql
+    ALTER TABLE {TABLE_NAME} 
+    ADD {COLUMN_NAME} {TYPE} {NULL|NOT NULL} 
+    CONSTRAINT {CONSTRAINT_NAME} DEFAULT {DEFAULT_VALUE}
+    WITH VALUES
+    ```
 
