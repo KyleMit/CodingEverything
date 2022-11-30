@@ -200,3 +200,28 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 * [karma plugin dependencies not being found](https://stackoverflow.com/q/32425580/1366033)
 
 * [ReferenceError: describe is not defined NodeJs](https://stackoverflow.com/q/28400459/1366033)
+
+* [Running the same mocha test multiple times with different data](https://stackoverflow.com/q/17144197/1366033)
+
+  ```js
+  describe('my tests', function () {
+    var runs = [
+      {it: 'options1', options: {...}},
+      {it: 'options2', options: {...}},
+    ];
+
+    runs.forEach(function (run) {
+      it('does sth with ' + run.it, function () {
+        ...
+      });
+    });
+  });
+  ```
+
+  * Packages
+    * [mocha-each](https://www.npmjs.com/package/mocha-each)
+    * [mocha-testcheck](https://www.npmjs.com/package/mocha-testcheck)
+  * Deprecated
+    * [leche](https://www.npmjs.com/package/leche)
+    * [mocha-testdata](https://www.npmjs.com/package/mocha-testdata)
+

@@ -186,7 +186,11 @@ git rev-list --count <revision>
 * [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
 
   ```bash
-  git branch | grep -v "master" | xargs git branch -D
+  git branch | grep -v "master" | xargs -r git branch -D
+  ```
+
+  ```bash
+  git branch --merged | grep -v \* | xargs -r git branch -D 
   ```
 
 * [Git command to show which specific files are ignored by .gitignore](https://stackoverflow.com/q/466764/1366033)
@@ -436,4 +440,14 @@ git rev-list --count <revision>
   git restore --staged .
   ```
 
-  
+* [How often should you use git-gc?](https://stackoverflow.com/q/55729/1366033)
+
+  [`git-gc`](https://git-scm.com/docs/git-gc)
+
+  [Git gc](https://www.atlassian.com/git/tutorials/git-gc)
+
+  ```bash
+  git count-objects
+  git gc
+  ```
+

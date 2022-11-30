@@ -499,3 +499,14 @@ ls --color -h --group-directories-first
   git branch | clip
   ```
 
+* [How to ignore xargs commands if stdin input is empty?](https://stackoverflow.com/q/8296710/1366033)
+
+  [`xargs(1)`](https://linux.die.net/man/1/xargs)
+
+  ```bash
+  --no-run-if-empty
+  -r
+  ```
+
+  > If the standard input does not contain any nonblanks, do not run the command.  Normally, the command is run once even if there is no input.  This option is a GNU extension.
+
