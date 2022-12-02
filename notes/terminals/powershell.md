@@ -1295,3 +1295,42 @@ $env:LOCALAPPDATA
   Get-ChildItem $path -Recurse | Where-Object FullName -INotLike *obj*
   ```
 
+* [Difference between using module, Import-Module, and #requires -Modules](https://stackoverflow.com/q/68455543/1366033)
+
+
+* [How to send notifications or messages to user?](https://stackoverflow.com/q/71490603/1366033)
+
+  * [Send a toast notification to logged user when running as Local System](https://stackoverflow.com/q/61971517/1366033)
+  * [Windos/BurntToast](https://github.com/Windos/BurntToast)
+
+  ```ps1
+  Install-Module -Name BurntToast
+  New-BurntToastNotification 
+  ```
+
+* [PowerShell show elapsed time](https://stackoverflow.com/q/10941756/1366033)
+
+  ```ps1
+  $timer = [Diagnostics.Stopwatch]::StartNew()
+  $timer.Stop()
+  [Math]::Floor($buildTimer.Elapsed.TotalSeconds)
+  ```
+
+* [PowerShell script to check the status of a URL](https://stackoverflow.com/q/20259251/1366033)
+
+  ```ps1
+  function Get-UrlStatusCode([string] $Url)
+  {
+      try
+      {
+          (Invoke-WebRequest -Uri $Url -UseBasicParsing -DisableKeepAlive).StatusCode
+      }
+      catch [Net.WebException]
+      {
+          [int]$_.Exception.Response.StatusCode
+      }
+  }
+
+  $statusCode = Get-UrlStatusCode 'https://example.com/'
+  ```
+

@@ -1,11 +1,12 @@
 
 # Code Fiddles / Playgrounds
 
-* [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
-* [StackBlitz](https://stackblitz.com/@KyleMit)
-* [CodePen](https://codepen.io/KyleMit)
-* [CodeSandbox](https://codesandbox.io/u/KyleMit)
-* [Plunker](https://plnkr.co/users/KyleMit/plunks)
+* Web
+  * [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
+  * [StackBlitz](https://stackblitz.com/@KyleMit)
+  * [CodePen](https://codepen.io/KyleMit)
+  * [CodeSandbox](https://codesandbox.io/u/KyleMit)
+  * [Plunker](https://plnkr.co/users/KyleMit/plunks)
 
 
 * Build and run github
@@ -20,6 +21,9 @@
   * [SQL Fiddle](http://sqlfiddle.com/) - sql
   * [.NET Fiddle](https://dotnetfiddle.net/) - dotnet
   * [TS Playground](https://www.typescriptlang.org/play)
+  * [ReplIt](https://replit.com/)
+  * [Glitch](https://glitch.com/)
+  * [Jupyter Notebook](https://github.com/jupyter/notebook)
 
 * Code Exercises
   * [LeetCode](https://leetcode.com/KyleMit/)

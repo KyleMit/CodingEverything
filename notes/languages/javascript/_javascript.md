@@ -548,10 +548,13 @@ winget install graphviz
   [3,1,2].sort((a, b) => a - b)
   ```
 
-* [How to compute the sum and average of elements in an array?](https://stackoverflow.com/q/10359907/1366033)
+* [How to find the sum of an array of numbers](https://stackoverflow.com/q/1230233/1366033)
+
+  * [How to compute the sum and average of elements in an array?](https://stackoverflow.com/q/10359907/1366033)
 
   ```js
-  const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
+  const sum = arr => arr.reduce(( p, c ) => p + c, 0 );
+  const average = arr => arr.reduce(( p, c ) => p + c, 0 ) / arr.length;
   ```
 
 * [How do I make the first letter of a string uppercase in JavaScript?](https://stackoverflow.com/q/1026069/1366033)

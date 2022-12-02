@@ -34,3 +34,7 @@ code %UserProfile%\.jupyter\jupyter_notebook_config.py
 ```py file:jupyter_notebook_config.py
 c.NotebookApp.browser = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe --app=%s"
 ```
+
+## VS Code
+
+[Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
