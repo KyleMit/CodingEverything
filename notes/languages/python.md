@@ -466,7 +466,13 @@ else:
 * [How to read a file without newlines?](https://stackoverflow.com/q/12330522/1366033)
 
   ```py
-  temp = file.read().splitlines()
+  with open("input.txt", "r") as file:
+    lines = file.read().splitlines()
+  ```
+
+  ```py
+  with open("input.txt", "r") as file:
+    lines = [line.strip() for line in file]
   ```
 
 * [String Interpolation](https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting)
@@ -509,3 +515,178 @@ else:
   print(myEnum.value)       # A
   print(myEnum == RPS.Rock) # true
   ```
+
+* [Replacements for switch statement in Python?](https://stackoverflow.com/q/60208/1366033)
+
+  [PEP 636 – Structural Pattern Matching](https://peps.python.org/pep-0636/#matching-against-constants-and-enums)
+
+  ```py
+  def http_error(status):
+      match status:
+          case 400:
+              return "Bad request"
+          case 404:
+              return "Not found"
+          case 418:
+              return "I'm a teapot"
+          case _:
+              return "Something's wrong with the Internet"
+  ```
+
+* [How to use values stored in variables as case patterns?](https://stackoverflow.com/q/66159432/1366033)
+
+  Use Constants or Convert to If statements
+
+* [Is it possible to write single line return statement with if statement?](https://stackoverflow.com/q/18669836/1366033)
+
+  [`PEP-0008` Style Guide > Whitespace](https://peps.python.org/pep-0008/#other-recommendations)
+
+  > Compound statements (multiple statements on the same line) are generally discouraged
+
+  ```py
+  if x is None: return None
+  ```
+
+* [How to implement an efficient bidirectional hash table?](https://stackoverflow.com/q/3318625/1366033)
+
+  ```py
+  myDict = {'a': 1, 'b': 2}
+  revDict = dict([reversed(i) for i in myDict.items()])
+
+  myDict['a'] # 1
+  revDict[1]  # 'a'
+  ```
+
+* [Get key by value in dictionary](https://stackoverflow.com/q/8023306/1366033)
+
+  ```py
+  myDict = {'a': 1, 'b': 2}
+  myDict.keys()[myDict.values().index(2)]  # 'b'
+  ```
+
+* [Is there a 'foreach' function in Python 3?](https://stackoverflow.com/q/18294534/1366033)
+
+  ```py
+  for val in [1,2,3]:
+      print(val)
+  ```
+
+* [Split a string into 2 in Python](https://stackoverflow.com/q/4789601/1366033)
+
+  ```py
+  chars = "ABCD"
+  first, last = chars[:len(chars)//2], chars[len(chars)//2:]
+  print(first) # "AB"
+  print(last)  # "CD"
+  ```
+
+* [How to find list intersection?](https://stackoverflow.com/q/3697432/1366033)
+
+  * [5.4 sets](https://docs.python.org/3/tutorial/datastructures.html#sets)
+  * [Set Types](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+
+  ```py
+  a = [1,2,3,4,5]
+  b = [1,3,5,6]
+  list(set(a) & set(b))
+  # [1, 3, 5]
+  ```
+
+  ```py
+  a = [1,2,3,4,5]
+  b = [1,3,5,6]
+  list(set(a).intersection(b))
+  # [1, 3, 5]
+  ```
+
+  ```py
+  # retains duplicates - O(N^2)
+  a = [1,2,3,3,4,5]
+  b = [1,3,5,6]
+  [x for x in a if x in b]
+  # [1, 3, 3, 5]
+  ```
+
+* [How can I convert a character to a integer in Python, and vice versa?](https://stackoverflow.com/q/704152/1366033)
+
+  Use [`chr`](https://docs.python.org/3/library/functions.html#chr) & [`ord`](https://docs.python.org/3/library/functions.html#ord)
+
+  ```py
+  chr(97)  # 'a'
+  ord('a') # 97
+  ```
+
+* [How to detect lowercase letters in Python?](https://stackoverflow.com/q/12934997/1366033)
+
+  ```py
+  'A'.islower() # false
+  ```
+
+* [How do I split a list into equally-sized chunks?](https://stackoverflow.com/q/312443/1366033)
+
+  ```py
+  def chunks(lst, size):
+      for i in range(0, len(lst), size):
+          yield list[i:i + size]
+  ```
+
+  ```py
+  def chunks(iterable, chunk_size):
+    i = 0;
+    while i < len(iterable):
+      yield iterable[i:i+chunk_size]
+      i += chunk_size
+  ```
+
+  Usage:
+
+  ```py
+  lst = [1,2,3,4,5,6]
+  print(list(chunks(lst, 2))) # [[1, 2], [3, 4], [5, 6]]
+  ```
+
+* [Behaviour of increment and decrement operators in Python](https://stackoverflow.com/q/1485841/1366033)
+
+  ```py
+  count += 1
+  ```
+
+* [Split Strings into words with multiple word boundary delimiters](https://stackoverflow.com/q/1059559/1366033)
+
+  use [`re`](https://docs.python.org/3/library/re.html)
+
+  ```py
+  import re
+  pair = "2-4,6-8"
+  re.split("-|,", pair)
+  # ['2', '4', '6', '8']
+  ```
+
+  ```py
+  pair = "2-4,6-8"
+  pair.replace("-",",").split(",")
+  # ['2', '4', '6', '8']
+  ```
+
+* [Convert all strings in a list to int](https://stackoverflow.com/q/7368789/1366033)
+
+  ```py
+  xs = ['1', '2', '3']
+  list(map(int, xs))
+  # [1,2,3]
+  ```
+
+  ```py
+  xs = ['1', '2', '3']
+  [int(x) for x in xs]
+  # [1,2,3]
+  ```
+
+* [Determine whether integer is between two other integers](https://stackoverflow.com/q/13628791/1366033)
+
+
+  ```py
+  if 10000 <= number <= 30000:
+  ```
+
+  
