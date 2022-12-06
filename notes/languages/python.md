@@ -689,4 +689,259 @@ else:
   if 10000 <= number <= 30000:
   ```
 
+* [Does Python have a string 'contains' substring method?](https://stackoverflow.com/q/3437059/1366033)
+
+  Use [`in` operator](https://docs.python.org/3/reference/expressions.html#membership-test-details)
+
+  ```py
+  'b' in "abc" # True
+  ```
+
+* Add item to list
+
+  Use [`list.append`](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
+  ```py
+  lst = ["a", "b", "c"]
+  lst.append("d")
+  # ["a", "b", "c", "d"]
+  ```
+
+* [Locating the position of a regex match in a string?](https://stackoverflow.com/q/2674391/1366033)
+
+  Returns [`Match` Object](https://docs.python.org/3/library/re.html#match-objects)
+
+  ```py
+  import re
+  re.search("b", 'abc').start() # 1
+  ```
+
+* [How to Get Positions and Values of Matches](https://stackoverflow.com/q/250271/1366033)
+
+  Use [`re.finditer`](https://docs.python.org/3/library/re.html#re.finditer)
+
+  ```py
+  import re
+  res = re.finditer("[a-z]", 'a1b2c3d4')
+  [[m.start(), m.group()] for m in res]
+  # [[0, 'a'], [2, 'b'], [4, 'c'], [6, 'd']]
+  ```
+
+* [Extract part of a regex match](https://stackoverflow.com/q/1327369/1366033)
+
+  Use [`Match.group`](https://docs.python.org/3.8/library/re.html#re.Match.group)
+
+  ```py
+  import re
+  re.search("#(.)#", '#a#').group(1) # 'a'
+  ```
+
+* [Checking whether a string starts with substring](https://stackoverflow.com/q/8802860/1366033)
+
+  ```py
+  string = "hello world"
+  string.startswith("hello") # True
+  ```
+
+* [How do I reverse a list or loop over it backwards?](https://stackoverflow.com/q/3940128/1366033)
+
+  [Modify list](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types) (in-place)
+
+  ```py
+  arr = [1,2,3]
+  arr.reverse()
+  print(arr) # [3, 2, 1]
+  ```
+
+  Use [`reversed`](https://docs.python.org/3/library/functions.html#reversed) function
+
+  ```py
+  arr = [1,2,3]
+  rev = list(reversed(arr))
+  print(rev) # [3, 2, 1]
+  ```
+
+  use [`a[start:stop:step]`](https://docs.python.org/3/library/functions.html#slice)
+
+  ```py
+  arr = [1,2,3]
+  rev = arr[::-1]
+  print(rev) # [3, 2, 1]
+  ```
+
+* [Create or append to a list in a dictionary](https://stackoverflow.com/q/4143698/1366033)
+
+  use [`collections.defaultdict`](https://docs.python.org/3/library/collections.html#collections.defaultdict)
+
+  ```py
+  from collections import defaultdict
+
+  result = defaultdict(list)
+  for widget_type, app in widgets:
+      result[widget_type].append(app)
+  ```
+
+* [How to concatenate (join) items in a list to a single string](https://stackoverflow.com/q/12453580/1366033)
+
+  use [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join)
+
+  ```py
+  a = ['a','b','c']
+  ''.join(a) # 'abc'
+  ```
+
+* [Run a process x times](https://stackoverflow.com/q/818828/1366033)
+
+  Use [`range`](https://docs.python.org/3/library/stdtypes.html#typesseq-range)
+
+  ```py
+  for _ in range(n):
+      do_something()
+  ```
+
+  Use [`itertools.repeat`](https://docs.python.org/3/library/itertools.html#itertools.repeat)
+
+  ```py
+  for _ in itertools.repeat(None, times):
+      do_something()
+  ```
+
+* [How do I get the last element of a list?](https://stackoverflow.com/q/930397/1366033)
+
+  ```py
+  lst = ['a','b','c']
+  lst[-1] # C
+  ```
+
+* [How to pop() a list n times](https://stackoverflow.com/q/12040744/1366033)
+
+```py
+a = ['a','b','c','d']
+b = [a.pop() for _ in range(2)]
+
+print(a) # ['a', 'b']
+print(b) # ['d', 'c']
+```
+
+* [How to append multiple values to a list in Python](https://stackoverflow.com/q/20196159/1366033)
+
+  use [`list.extend`](https://docs.python.org/3/library/stdtypes.html#immutable-sequence-types)
+
+  ```py
+  a = ['a','b']
+  a.extend(['c','d'])
+  print(a) # ['a', 'b', 'c', 'd']
+  ```
+
+* [Remove the last N elements of a list](https://stackoverflow.com/q/15715912/1366033)
+
+  ```py
+  n = 2
+  lst = [1, 2, 3, 4, 5]
+  del lst[-n:]
+  print(lst) # [1, 2, 3]
+  ```
+
+  ```py
+  n = 2
+  lst = [1, 2, 3, 4, 5]
+  lst = lst[:len(lst)-n]
+  print(lst) # [1, 2, 3]
+  ```
+
+* [Difference between del, remove, and pop on lists](https://stackoverflow.com/q/11520492/1366033)
+
+  * Pop - just 1 item
+  * Del - deletes items
+  * Remove - deletes by value (not index)
+
+* [Accessing the index in 'for' loops](https://stackoverflow.com/q/522563/1366033)
+
+  Use [`enumerate`](https://docs.python.org/3.3/library/functions.html#enumerate)
+
+  ```py
+  xs = ['a','b','c']
+  print(list(enumerate(xs))) # [(0, 'a'), (1, 'b'), (2, 'c')]
+
+  for idx, x in enumerate(xs):
+      print(idx, x)
+  ```
+  
+  **See Also**: [PEP 279 – The enumerate() built-in function](https://peps.python.org/pep-0279/)
+
+* [Iterating over dictionaries using 'for' loops](https://stackoverflow.com/q/3294889/1366033)
+
+  * [`dict.values](https://docs.python.org/3/library/stdtypes.html#dict.values)
+  * [`dict.keys`](https://docs.python.org/3/library/stdtypes.html#dict.keys)
+  * [`dict.values`](https://docs.python.org/3/library/stdtypes.html#dict.values)
+
+* [How to iterate `dict` with `enumerate` and unpack the index, key, and value along with iteration](https://stackoverflow.com/q/42193712/1366033)
+
+  ```py
+  dict = {'a':'x', 'b':'y'}
+  print([(idx,x) for idx, x in enumerate(dict.values())])
+  # [(0, 'x'), (1, 'y')]
+  ```
+
+* [What is the history of the variable names x and xs?](https://stackoverflow.com/q/6267735/1366033)
+
+  * `x` is a common variable name in mathematics
+  * `xs` is the plural form of `x`
+
+* [Printing Python version in output](https://stackoverflow.com/q/1252163/1366033)
+
+  ```py
+  import sys
+  print(sys.version)
+  ```
+
+* [How to set the python type hinting for a dictionary variable?](https://stackoverflow.com/q/52593803/1366033)
+
+  * [PEP 585 – Type Hinting Generics In Standard Collections](https://peps.python.org/pep-0585/)
+  * [typing — Support for type hints — Python 3.11.0 documentation](https://docs.python.org/3/library/typing.html)
+
+  3.8 and below
+
+  ```py
+  from typing import Dict
+  xs: Dict[int, str] = {1: 'a', 4: 'c'}
+  ```
+
+  3.9 and above
+
+  ```py
+  xs: dict[int, str] = {1: 'a', 4: 'c'}
+  ```
+
+* [Why is there no tuple comprehension in Python?](https://stackoverflow.com/q/16940293/1366033)
+
+  Use [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple)
+
+  ```py
+  print(tuple(x for x in range(3))) # (1,2,3)
+  ```
+
+  See Also: [5.3 - Tuples and Sequences](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)
+
+  Use splat (`*`) to unpack a generator
+
+  [PEP 448 – Additional Unpacking Generalizations](https://peps.python.org/pep-0448/)
+
+  ```py
+  tp = *(x for x in range(3)), # note the comma
+  print(tp) # (1,2,3)
+  print(tuple(x for x in xs))
+  print((1,2,3))
+  ```
+
+* [Testing whether a string has repeated characters](https://stackoverflow.com/q/32090058/1366033)
+
+  ```py
+  len(set(x)) == len(x)
+  ```
+
+* [how to stop a for loop](https://stackoverflow.com/q/6346492/1366033)
+
+  Use `break` and `continue`
+
   
