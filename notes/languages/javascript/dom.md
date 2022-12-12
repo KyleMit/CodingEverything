@@ -93,3 +93,14 @@ Document Object Model
   console.log(hostname) // 'www.youtube.com'
   ```
 
+* [How can I add an event for a one time click to a function?](https://stackoverflow.com/q/3393686/1366033)
+
+  [`EventTarget` Parameters](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#parameters)
+
+  ```js
+  EventTarget.addEventListener("click", function() {
+
+      // Do something cool
+
+  }, {once : true});
+  ```

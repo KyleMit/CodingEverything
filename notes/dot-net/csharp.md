@@ -94,8 +94,8 @@ namespace ExtensionMethods
 
 ### C#7
 
-[What's New in C# 7.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7)
-
+* [New Features in C# 7.0 - .NET Blog](https://devblogs.microsoft.com/dotnet/new-features-in-c-7-0/#literal-improvements)
+* [What's New in C# 7.0 - C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7)
 
 * **Discards**
 
@@ -126,6 +126,15 @@ namespace ExtensionMethods
       Console.WriteLine(result);
   else
       Console.WriteLine("Could not parse input");
+  ```
+
+* **literal improvements**
+
+  > C# 7.0 allows _ to occur as a digit separator inside number literals:
+
+  ```cs
+  var d = 123_456;
+  var x = 0xAB_CD_EF;
   ```
 
 ### C#8
@@ -545,3 +554,14 @@ namespace ExtensionMethods
   [single]: https://learn.microsoft.com/en-us/dotnet/api/system.single
   [double]: https://learn.microsoft.com/en-us/dotnet/api/system.double
   [decimal]: https://learn.microsoft.com/en-us/dotnet/api/system.decimal
+
+
+* [What do the underscores mean in a numeric literal in C#?](https://stackoverflow.com/q/43476056/1366033)
+
+  Digit Separators from C#7
+
+  ```cs
+  var hardToRead = 9000000000000000000; 
+  var easyToRead = 90000_00000_00000_0000;  
+  ```
+

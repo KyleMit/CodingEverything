@@ -815,13 +815,13 @@ else:
 
 * [How to pop() a list n times](https://stackoverflow.com/q/12040744/1366033)
 
-```py
-a = ['a','b','c','d']
-b = [a.pop() for _ in range(2)]
+  ```py
+  a = ['a','b','c','d']
+  b = [a.pop() for _ in range(2)]
 
-print(a) # ['a', 'b']
-print(b) # ['d', 'c']
-```
+  print(a) # ['a', 'b']
+  print(b) # ['d', 'c']
+  ```
 
 * [How to append multiple values to a list in Python](https://stackoverflow.com/q/20196159/1366033)
 
@@ -944,4 +944,209 @@ print(b) # ['d', 'c']
 
   Use `break` and `continue`
 
-  
+* [Explanation of how nested list comprehension works?](https://stackoverflow.com/q/20639180/1366033)
+
+  ```py
+  [leaf for branch in tree for leaf in branch]
+  ```
+
+  ```py
+  for branch in tree:
+      for leaf in branch:
+          yield leaf
+  ```
+
+* Python print array with new line
+
+  [4.7.4. Unpacking Argument Lists](https://docs.python.org/3.7/tutorial/controlflow.html#unpacking-argument-lists)
+
+  ```py
+  xs = ["Hello", "Goodbye"]
+  print(*xs, sep='\n')
+  # Hello
+  # Goodbye
+  ```
+
+* [Rotating a two-dimensional array in Python](https://stackoverflow.com/q/8421337/1366033)
+
+  ```py
+  grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ]
+
+  def rotateClockwise(original):
+      return list(zip(*original[::-1]))
+
+  def rotateCounterClockwise(original):
+      return list(zip(*original))[::-1]
+
+  print(*rotateClockwise(rotateCounterClockwise(grid)), sep="\n")
+  ```
+
+* [How do I measure elapsed time in Python?](https://stackoverflow.com/q/7370801/1366033)
+
+  ```py
+  from timeit import default_timer as timer
+
+  start = timer()
+  # ...
+  end = timer()
+  print(end - start) # Time in seconds, e.g. 5.38091952400282
+  ```
+
+
+* [`"".join(reversed(val))` vs `val[::-1]`](https://stackoverflow.com/q/1695385/1366033)
+
+  `x[::-1]` - "Martian Smiley"
+
+  ```bash
+  $ python -mtimeit '"".join(reversed("hello there!"))'
+  # 1000000 loops, best of 5: 363 nsec per loop
+
+  $ python -mtimeit '"hello there!"[::-1]'
+  # 5000000 loops, best of 5: 74 nsec per loop
+  ```
+
+
+* [Import Error: No module named numpy](https://stackoverflow.com/q/7818811/1366033)
+
+  ```bash
+  pip install numpy
+  ```
+
+* [Add two matrices in python](https://stackoverflow.com/q/6382705/1366033)
+
+  ```py
+  import numpy as np
+  a = np.array([[5, 4, 5, 4], [4, 5, 6, 8]])
+  b = np.array([[1, 2, 4, 5], [5, 6, 6, 2]])
+  c = a+b
+  print(c)
+  # [[ 6  6  9  9]
+  #  [ 9 11 12 10]]
+  ```
+
+* [Counting positive integer elements in a list with Python list comprehensions](https://stackoverflow.com/q/2900084/1366033)
+
+  use [`numpy.count_nonzero`](https://numpy.org/doc/stable/reference/generated/numpy.count_nonzero.html) 
+
+  ```py
+  import numpy as np
+  xs = [1,0,4,0,7]
+  print(np.count_nonzero(xs)) #3
+  ```
+
+* [How can I check if a list index exists?](https://stackoverflow.com/q/29715501/1366033)
+
+  [**LBYL**](https://docs.python.org/2/glossary.html#term-lbyl) - Look before you leap
+
+  ```py
+  if 0 <= index < len(myList):
+  ```
+
+  [**EAFP**](https://docs.python.org/2/glossary.html#term-eafp) - Easier to ask for forgiveness than permission
+
+  ```py
+  try:
+      myList[1]
+  except IndexError:
+      print "Index doesn't exist!"
+  ```
+
+& [How to emulate a do-while loop?](https://stackoverflow.com/q/743164/1366033)
+
+  ```py
+  while True:
+    stuff()
+    if fail_condition:
+      break
+  ```
+
+* [Calculating absolute value in Python](https://stackoverflow.com/q/32540121/1366033)
+
+  use [`abs()`](https://docs.python.org/3/library/functions.html#abs)
+
+  ```py
+  abs(-1) # 1
+  ```
+
+
+* [How do I make a flat list out of a list of lists?](https://stackoverflow.com/q/952914/1366033)
+
+  Use nested list comprehension
+
+  ```py
+  xss = [[1,2],[2,3]]
+  flat_list = [item for xs in xss for item in xs]
+  print(flat_list) # [1, 2, 2, 3]
+  ```
+
+  Use [`itertools.chain`](https://docs.python.org/3/library/itertools.html#itertools.chain)
+
+  ```py
+  import itertools
+
+  xss = [[1,2],[2,3]]
+  flat_list = list(itertools.chain(*xss))
+  print(flat_list) # [1, 2, 2, 3]
+  ```
+
+  Use [`numpy.concatenate`](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html)
+
+  ```py
+  import numpy as np
+
+  xss = [[1,2],[2,3]]
+  flat_list = list(np.concatenate(xss))
+  print(flat_list) # [1, 2, 2, 3]
+  ```
+
+* [Append values to a set in Python](https://stackoverflow.com/q/3392354/1366033)
+
+  * [`set.add`](https://docs.python.org/3/library/stdtypes.html#frozenset.add)
+  * [`set.update`](https://docs.python.org/3/library/stdtypes.html#frozenset.update)
+
+  ```py
+  a = set()
+
+  a.add(1)
+  a.add(2)
+  print(a) # {1, 2}
+
+  a.update([3, 4])
+  print(a) # {1, 2, 3, 4}
+  ```
+
+* [Create list of single item repeated N times](https://stackoverflow.com/q/3459098/1366033)
+
+  ```py
+  print([0] * 3)
+  # [0, 0, 0]
+  ```
+
+* [AttributeError: 'dict' object has no attribute 'predictors'](https://stackoverflow.com/q/35407560/1366033)
+
+  ```py
+  obj = {"a": 1, "b": 2}
+  # obj.x # AttributeError: 'dict' object has no attribute 'x'
+  obj["a"] # 1
+  ```
+
+* [Copy a Python dictionary N times into a list](https://stackoverflow.com/q/72539029/1366033)
+
+  ```py
+  [{"x": 0, "y": 0} for _ in range(2)]
+  ```
+
+* [How to copy a dictionary and only edit the copy](https://stackoverflow.com/q/2465921/1366033)
+
+  ```py
+  dict2 = dict(dict1)
+  ```
+
+  ```py
+  dict2 = dict1.copy()
+  ```
+
