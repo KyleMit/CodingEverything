@@ -451,3 +451,17 @@ git rev-list --count <revision>
   git gc
   ```
 
+* [Create a git patch from the uncommitted changes in the current working directory](https://stackoverflow.com/q/5159185/1366033)
+
+  Create patch from uncommited changes
+
+  ```bash
+  git diff > mypatch.patch
+  ```
+
+  Apply patch
+
+  ```bash
+  git apply mypatch.patch
+  ```
+

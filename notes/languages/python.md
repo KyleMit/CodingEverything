@@ -350,7 +350,103 @@ else:
 * [Sort a list of numerical strings in ascending order](https://stackoverflow.com/q/9758959/1366033)
 
   ```py
-  sorted(['10','3','2'])
+  sorted(['10','3','2']) # ['10', '2', '3']
+  sorted([10, 3, 2])     # [2, 3, 10]
+  ```
+
+* [Python list sort in descending order](https://stackoverflow.com/q/4183506/1366033)
+
+  ```py
+  sorted([2,3,1], reverse=True) # [3, 2, 1]
+  ```
+
+* [How to sort a list of objects based on an attribute of the objects?](https://stackoverflow.com/q/403421/1366033)
+
+  Use [`operator.attrgetter`](https://docs.python.org/3/library/operator.html#operator.attrgetter)
+
+  ```py
+  class Point:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+  xs = [Point(1,9), Point(5,2)]
+  ```
+
+  ```py
+  from operator import attrgetter
+  xs_sorted = sorted(xs, key=attrgetter("y"))
+  print([[i.x, i.y] for i in xs_sorted])
+  # [[5, 2], [1, 9]]
+  ```
+
+  ```py
+  xs_sorted = sorted(xs, key=lambda i: i.y)
+  print([[i.x, i.y] for i in xs_sorted])
+  # [[5, 2], [1, 9]]
+  ```
+
+* [How do I sort a list of dictionaries by a value of the dictionary?](https://stackoverflow.com/q/72899/1366033)
+
+  Use [`sorted`](https://docs.python.org/3/library/functions.html#sorted) with `key`
+
+  ```py
+  xs = [{"name":"Kyle", "age":30}, {"name":"Beth", "age":28}]
+  print(sorted(xs, key=lambda x: x["age"]))
+  # [{'name': 'Beth', 'age': 28}, {'name': 'Kyle', 'age': 30}]
+  ```
+
+  Use [`operator.itemgetter`](https://docs.python.org/3/library/operator.html#operator.itemgetter)
+
+  ```py
+  from operator import itemgetter
+  xs = [{"name":"Kyle", "age":30}, {"name":"Beth", "age":28}]
+  print(sorted(xs, key=itemgetter("name")))
+  # [{'name': 'Beth', 'age': 28}, {'name': 'Kyle', 'age': 30}]
+  ```
+
+* [Sort a list of lists with a custom compare function](https://stackoverflow.com/q/5213033/1366033)
+
+  Use [`functools.cmp_to_key`](https://docs.python.org/3/library/functools.html#functools.cmp_to_key)
+
+  * [key function](https://docs.python.org/3/glossary.html#term-key-function)
+  * [Sorting > Comparison Functions](https://docs.python.org/3/howto/sorting.html#comparison-functions)
+
+  > a comparison function such as cmp(a, b) will return:
+  >
+  > * a negative value for less-than
+  > * zero if the inputs are equal, or
+  > * a positive value for greater-than
+
+  ```py
+  from functools import cmp_to_key
+
+  xs = ["b","a","a","c"]
+
+  def compareStrings(a,b):
+      if a > b:
+          return 1
+      elif a < b:
+          return -1
+      else:
+          return 0
+
+  xs_sorted = sorted(xs, key=cmp_to_key(compareStrings))
+  print(sorted(xs_sorted)) # ['a', 'a', 'b', 'c']
+  ```
+
+* What does `operator.itemgetter` do?
+
+  ```py
+  import operator
+
+  obj = {"name":"Kyle", "age":30}
+
+  getName1 = operator.itemgetter("name")
+  getName2 = lambda x: x["name"]
+
+  print(getName1(obj)) # "Kyle"
+  print(getName2(obj)) # "Kyle"
   ```
 
 * [How to get first item in list on list](https://stackoverflow.com/q/32839561/1366033)
@@ -475,8 +571,11 @@ else:
     lines = [line.strip() for line in file]
   ```
 
-* [String Interpolation](https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting)
+* [Is there a Python equivalent to Ruby's string interpolation?](https://stackoverflow.com/q/4450592/1366033)
+  
+  Use Literal String Interpolation
 
+  * [String Interpolation](https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting)
   * [7.1.1 Formatted String Literals](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings)
   * [PEP 498 – Literal String Interpolation](https://peps.python.org/pep-0498/)
 
@@ -485,12 +584,29 @@ else:
   f'My name is {name}' # 'My name is Kyle'
   ```
 
-  [`str.format`](https://docs.python.org/3/library/stdtypes.html#str.format)
+  Use [`str.format`](https://docs.python.org/3/library/stdtypes.html#str.format)
 
   ```py
   name = "Kyle"
   print('My name is {}'.format(name))        # 'My name is Kyle'
   print('My name is {n1}'.format(n1 = name)) # 'My name is Kyle'
+  ```
+
+  Use [Template strings](https://docs.python.org/3/library/string.html#template-strings)
+
+  ```py
+  from string import Template
+  s = Template('My name is $name.')
+  s.substitute(name='Kyle')
+  # 'My name is Kyle'
+  ```
+
+  Use [printf-style](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting)
+
+  [Old string formatting](https://docs.python.org/3/tutorial/inputoutput.html#old-string-formatting)
+
+  ```py
+  print('My name is %s.' % "Kyle") # 'My name is Kyle'
   ```
 
 * [How can I represent an 'Enum' in Python?](https://stackoverflow.com/q/36932/1366033)
@@ -627,12 +743,12 @@ else:
   ```py
   def chunks(lst, size):
       for i in range(0, len(lst), size):
-          yield list[i:i + size]
+          yield lst[i:i + size]
   ```
 
   ```py
   def chunks(iterable, chunk_size):
-    i = 0;
+    i = 0
     while i < len(iterable):
       yield iterable[i:i+chunk_size]
       i += chunk_size
@@ -706,6 +822,24 @@ else:
   lst.append("d")
   # ["a", "b", "c", "d"]
   ```
+
+* [Check if string matches pattern](https://stackoverflow.com/q/12595051/1366033)
+
+  [`re.match`](https://docs.python.org/3/library/re.html#re.match)
+
+  > If zero or more characters at the *beginning* of string match the regular expression pattern  
+  > If you want to locate a match anywhere in string, use `search()` instead
+
+  ```py
+  import re
+
+  re.match("ab", "abc")  # <re.Match object; span=(0, 2), match='ab'>
+  re.match("b", "abc")   # None
+  re.search("ab", "abc") # <re.Match object; span=(0, 2), match='ab'>
+  re.search("b", "abc")  # <re.Match object; span=(1, 2), match='b'>
+  ```
+
+  **See Also**: [Search vs Match](https://docs.python.org/3/library/re.html#search-vs-match)
 
 * [Locating the position of a regex match in a string?](https://stackoverflow.com/q/2674391/1366033)
 
@@ -833,6 +967,40 @@ else:
   print(a) # ['a', 'b', 'c', 'd']
   ```
 
+* [How do I concatenate two lists in Python?](https://stackoverflow.com/q/1720421/1366033)
+
+  Use `+` operator
+
+  ```py
+  a = [1, 2, 3]
+  b = [4, 5, 6]
+
+  c = a + b
+  print(c) # [1, 2, 3, 4, 5, 6]
+  ```
+
+  Use [Additional Unpacking Generalizations](https://peps.python.org/pep-0448/)
+
+  ```py
+  a = [1, 2, 3]
+  b = [4, 5, 6]
+
+  c = [*a, *b]
+  print(c) # [1, 2, 3, 4, 5, 6]
+  ```
+
+  Use [`itertools.chain`](https://docs.python.org/3/library/itertools.html#itertools.chain)
+
+  ```py
+  from itertools import chain
+
+  a = [1, 2, 3]
+  b = [4, 5, 6]
+
+  c = chain(a,b)
+  print(list(c)) # [1, 2, 3, 4, 5, 6]
+  ```
+
 * [Remove the last N elements of a list](https://stackoverflow.com/q/15715912/1366033)
 
   ```py
@@ -847,6 +1015,14 @@ else:
   lst = [1, 2, 3, 4, 5]
   lst = lst[:len(lst)-n]
   print(lst) # [1, 2, 3]
+  ```
+
+* [How do I remove the first item from a list?](https://stackoverflow.com/q/4426663/1366033)
+
+  ```py
+  l = ['a', 'b', 'c', 'd']
+  print(l.pop(0)) # 'a'
+  print(l)        # ['b', 'c', 'd']
   ```
 
 * [Difference between del, remove, and pop on lists](https://stackoverflow.com/q/11520492/1366033)
@@ -956,15 +1132,26 @@ else:
           yield leaf
   ```
 
-* Python print array with new line
+* [Python print array with new line](https://stackoverflow.com/q/13893399/1366033)
 
-  [4.7.4. Unpacking Argument Lists](https://docs.python.org/3.7/tutorial/controlflow.html#unpacking-argument-lists)
+  Use [`print()`](https://docs.python.org/3/library/functions.html#print) with `sep`
 
   ```py
   xs = ["Hello", "Goodbye"]
   print(*xs, sep='\n')
   # Hello
   # Goodbye
+  ```
+
+  **See Also**: [4.7.4. Unpacking Argument Lists](https://docs.python.org/3.7/tutorial/controlflow.html#unpacking-argument-lists)
+
+* [How to print a list in Python "nicely"](https://stackoverflow.com/q/1523660/1366033)
+
+  use [`pprint`](https://docs.python.org/3/library/pprint.html)
+
+  ```py
+  from pprint import pprint
+  pprint(the_list)
   ```
 
 * [Rotating a two-dimensional array in Python](https://stackoverflow.com/q/8421337/1366033)
@@ -1055,7 +1242,7 @@ else:
       print "Index doesn't exist!"
   ```
 
-& [How to emulate a do-while loop?](https://stackoverflow.com/q/743164/1366033)
+* [How to emulate a do-while loop?](https://stackoverflow.com/q/743164/1366033)
 
   ```py
   while True:
@@ -1119,6 +1306,16 @@ else:
   print(a) # {1, 2, 3, 4}
   ```
 
+* [How to append multiple values to a list in Python](https://stackoverflow.com/q/20196159/1366033)
+
+  Use [`list.extend`](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types)
+
+  ```py
+  xs = [1,2]
+  xs.extend([3,4])
+  print(xs) # [1, 2, 3, 4]
+  ```
+
 * [Create list of single item repeated N times](https://stackoverflow.com/q/3459098/1366033)
 
   ```py
@@ -1126,12 +1323,63 @@ else:
   # [0, 0, 0]
   ```
 
+* [Get all object attributes in Python?](https://stackoverflow.com/q/192109/1366033)
+
+  use [`vars()`](https://docs.python.org/3/library/functions.html#vars)
+
+  ```py
+  class Point:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+  p = Point(1,9)
+  print(p)       # <__main__.Point object at 0x0000020F75E87700>
+  print(vars(p)) # {'x': 1, 'y': 9}
+  ```
+
+  use [`dir()`](https://docs.python.org/3/library/functions.html#dir)
+
+  ```py
+  def dump(obj):
+    for attr in dir(obj):
+      print("obj.%s = %r" % (attr, getattr(obj, attr)))
+
+  dump({"name":"Kyle", "age":30})
+  ```
+
+  ```py
+  dir(__builtins__)
+  __builtins__.__dict__
+  ```
+
+  * [`inspect`](https://docs.python.org/3/library/inspect.html)
+
+
+* [What's the difference between the square bracket and dot notations in Python?](https://stackoverflow.com/q/30250282/1366033)
+
+  * The dot operator is used for accessing attributes of any object
+  * Square bracket notation is used for accessing members of a collection, whether that's by key in the case of a dictionary or other mapping
+
+  **See Also**: [Different meanings of brackets in Python](https://stackoverflow.com/q/30700603/1366033)
+
 * [AttributeError: 'dict' object has no attribute 'predictors'](https://stackoverflow.com/q/35407560/1366033)
+
+  Use bracket notation, not dot notation
 
   ```py
   obj = {"a": 1, "b": 2}
   # obj.x # AttributeError: 'dict' object has no attribute 'x'
   obj["a"] # 1
+  ```
+
+* [How to use a dot "." to access members of dictionary?](https://stackoverflow.com/q/2352181/1366033)
+
+  ```py
+  from types import SimpleNamespace   
+  d = {"name":"Kyle", "age":30}
+  obj = SimpleNamespace(**d)
+  print(obj.name) # "Kyle"
   ```
 
 * [Copy a Python dictionary N times into a list](https://stackoverflow.com/q/72539029/1366033)
@@ -1150,3 +1398,328 @@ else:
   dict2 = dict1.copy()
   ```
 
+* [How to filter a list](https://stackoverflow.com/q/18217033/1366033)
+
+  ```py
+  xs = [1,2,3,4]
+  [x for x in xs if x % 2 == 0] # [2, 4]
+  ```
+
+  ```py
+  xs = [1,2,3,4]
+  list(filter(lambda x: x % 2 == 0, xs)) # [2, 4]
+  ```
+
+  ```py
+  xs = [1,2,3,4]
+  def isEven(x):
+      return x % 2 == 0
+  list(filter(isEven, xs)) # [2, 4]
+  ```
+
+  ```py
+  xs = [1,2,3,4]
+  evens = []
+  for x in xs:
+      if x % 2 == 0:
+          evens.append(x)
+  print(evens)
+  ```
+
+* [How are tuples unpacked in for loops?](https://stackoverflow.com/q/10867882/1366033)
+
+  ```py
+  xs = [("a", 1),("b", 2)]
+  for letter, number in xs:
+      print(f'{letter=}, {number=}')
+
+  # letter='a', number=1
+  # letter='b', number=2
+  ```
+
+  **See Also**: [Unpacking in Python: Beyond Parallel Assignment](https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment/)
+
+* [Destructuring-bind dictionary contents](https://stackoverflow.com/q/2955412/1366033)
+
+  ```py
+  params = {'a':1,'b':2}
+  a, b = params['a'], params['b']
+  ```
+
+  use [`operator.itemgetter`](https://docs.python.org/3/library/operator.html#operator.itemgetter)
+
+  ```py
+  from operator import itemgetter
+  params = {'a': 1, 'b': 2}
+  a, b = itemgetter('a', 'b')(params)
+  ```
+
+  ```py
+  pluck = lambda dict, *args: (dict[arg] for arg in args)
+  params = {'a': 1, 'b': 2}
+  a, b = pluck(params, 'a', 'b')
+  ```
+
+* [Can we have assignment in a condition?](https://stackoverflow.com/q/2603956/1366033)
+
+  [PEP 572 – Assignment Expressions](https://peps.python.org/pep-0572/) AKA "the walrus operator"
+
+  ```py
+  def some_func():
+      return 2
+
+  if a := some_func():
+      print(a)
+  ```
+
+* [Create dictionary from list of variables](https://stackoverflow.com/q/9495262/1366033)
+
+  ```py
+  from sorcery import dict_of
+
+  a = 1
+  b = 2
+  c = 3
+  d = dict_of(a, b, c)
+  print(d)
+  # {'a': 1, 'b': 2, 'c': 3}
+  ```
+
+* [Manually raising (throwing) an exception in Python](https://stackoverflow.com/q/2052390/1366033)
+
+[Exception hierarchy](https://docs.python.org/3/library/exceptions.html#exception-hierarchy)
+
+  ```py
+  try:
+      raise Exception('This is the exception you expect to handle')
+  except Exception as error:
+      print('Caught this error: ' + repr(error))
+  ```
+
+  ```py
+  try:
+      raise ValueError('Represents a hidden bug, do not catch this')
+  except ValueError as e:
+      print('Caught this error: ' + repr(error))
+  ```
+
+* [Built-in module to calculate the least common multiple](https://stackoverflow.com/q/51716916/1366033)
+
+  [`math.lcm`](https://docs.python.org/3/library/math.html#math.lcm)
+
+  ```py
+  import math
+  math.lcm(3,6,4) # 12
+  ```
+
+* [How to parse data in JSON format](https://stackoverflow.com/q/7771011/1366033)
+
+  ```py
+  import json
+  data = json.loads('{"one" : "1", "two" : "2", "three" : "3"}')
+  print(data['two'])  # 2
+  ```
+
+* [What is the most pythonic way to check if an object is a number?](https://stackoverflow.com/q/3441358/1366033)
+
+  ```py
+  from numbers import Number
+  print(isinstance(2, Number))   # True
+  print(isinstance("2", Number)) # False
+  ```
+
+* [Test if a variable is a list or tuple](https://stackoverflow.com/q/2184955/1366033)
+
+  Use [`type()`](https://docs.python.org/3/library/functions.html#type)
+
+  ```py
+  print(type([1,2]) is list)  # True
+  print(type((1,2)) is tuple) # True
+  ```
+
+  Use [`typing.List`](https://docs.python.org/3/library/typing.html#typing.List)
+  Use [`typing.Tuple`](https://docs.python.org/3/library/typing.html#typing.Tuple)
+
+  ```py
+  from typing import List, Tuple
+  print(isinstance([1,2], List))  # True
+  print(isinstance((1,2), Tuple)) # True
+  ```
+
+  Use [`collections.abc.Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)
+
+  ```py
+  import collections
+  print(isinstance([1,2], collections.abc.Iterable)) # True
+  print(isinstance((1,2), collections.abc.Iterable)) # True
+  ```
+
+* [Zip lists in Python](https://stackoverflow.com/q/13704860/1366033)
+
+  Use [`zip()`](https://docs.python.org/3/library/functions.html#zip)
+
+  ```py
+  a = [1,2,3]
+  b = ["a","b","c"]
+  c = zip(a,b)
+  print(list(c)) # [(1, 'a'), (2, 'b'), (3, 'c')]
+  ```
+
+* [How to enumerate a range of numbers starting at 1](https://stackoverflow.com/q/3303608/1366033)
+
+  Use [`enumerate(iterable, start=0)`](https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate)
+
+  ```py
+  xs = ["a","b","c"]
+  list(enumerate(xs, 1))
+  # [(1, 'a'), (2, 'b'), (3, 'c')]
+  ```
+
+* [Why do some functions have underscores `__` before and after the function name?](https://stackoverflow.com/q/8689964/1366033)
+
+  * `_foo`: Only a convention. A way for the programmer to indicate that the variable is private (whatever that means in Python).
+  * `__foo`: This has real meaning. The interpreter replaces this name with _classname__foo as a way to ensure that the name will not overlap with a similar name in another class.
+  * `__foo__`: Only a convention. A way for the Python system to use names that won't conflict with user names.
+
+  [What is the meaning of single and double underscore before an object name?](https://stackoverflow.com/q/1301346/1366033)
+
+* [What's the difference between a Python "property" and "attribute"?](https://stackoverflow.com/q/7374748/1366033)
+
+  Properties are a special kind of attribute that have a `__get__`, `__set__`, or `__delete__` method 
+
+  ```py
+  class MyClass(object):
+      _foo = 0 # A._foo is an attribute
+
+      @property
+      def Foo(self): # A.Foo is a property
+          return self._foo
+
+      @Foo.setter
+      def Foo(self, value):
+          self._foo = value
+
+  obj = MyClass()
+  obj.Foo = 7
+  print(obj.Foo)  # 7
+  ```
+
+  [3.3.2.2 Data model > Implementing Descriptors](https://docs.python.org/3/reference/datamodel.html#implementing-descriptors)
+
+* [What's the pythonic way to use getters and setters?](https://stackoverflow.com/q/2627002/1366033)
+
+  use [`property`](https://docs.python.org/3/library/functions.html#property)
+
+  ```py
+  class C:
+    def __init__(self):
+        self._x = None
+
+    def getx(self):
+        return self._x
+
+    def setx(self, value):
+        self._x = value
+
+    def delx(self):
+        del self._x
+
+    x = property(getx, setx, delx, "I'm the 'x' property.")
+  ```
+
+  Using [decorator](https://docs.python.org/3/glossary.html#term-decorator)
+
+  ```py
+  class C:
+    def __init__(self):
+        self._x = None
+
+    @property
+    def x(self):
+        """I'm the 'x' property."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @x.deleter
+    def x(self):
+        del self._x
+  ```
+
+  Use Attribute if you don't care about controller accessor / setter
+
+  ```py
+  class C:
+    def __init__(self):
+        self.X = None
+  ```
+
+* [What do `__init__` and `self` do in Python?](https://stackoverflow.com/q/625083/1366033)
+
+  `self` - instance of the object itself
+  `__init__` - class constructor (along with `__new__`)
+
+  ```py
+  class Point:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+  p = Point(1,2)
+
+  print(p.x) # 1
+  print(p.y) # 2
+  ```
+
+* [What is the difference between old style and new style classes in Python?](https://stackoverflow.com/q/54867/1366033)
+
+  New-style classes inherit from object, or from another new-style class.
+
+  ```py
+  class NewStyleClass(object): pass
+  class AnotherNewStyleClass(NewStyleClass): pass
+  ```
+
+  Old-style classes don't.
+
+  ```py
+  class OldStyleClass(): pass
+  ```
+
+* [Finding the index of an item in a list](https://stackoverflow.com/q/176918/1366033)
+
+  Use [`list.index`](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
+  ```py
+  xs = ["a", "b", "c"]
+  i = xs.index("b")
+  print(i) # 1
+  ```
+
+  Use enumerate plus list comprehension
+
+  ```py
+  xs = ["a", "b", "c"]
+  indices = [i for i, x in enumerate(xs) if x == "b"]
+  print(indices) # [1]
+  ```
+
+* [Fastest way to check if a value exists in a list](https://stackoverflow.com/q/7571635/1366033)
+
+  use [`in`](https://docs.python.org/3/reference/expressions.html#in) membership test operation
+
+  ```py
+  "b" in ["a", "b", "c"] # true
+  ```
+
+  **See Also**: [Common Sequence Operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
+
+* [How can I multiply all items in a list together with Python?](https://stackoverflow.com/q/13840379/1366033)
+
+  ```py
+  from math import prod
+
+  prod([2,3]) # 6
+  ```

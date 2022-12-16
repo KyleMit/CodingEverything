@@ -1160,3 +1160,13 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   }
   ```
 
+* [typescript: 'new' call to function](https://stackoverflow.com/q/66519278/1366033)
+
+* [Defining array with multiple types in TypeScript](https://stackoverflow.com/q/29382389/1366033)
+
+  Use **named tuples** in **TS 3.9+**
+
+  ```ts
+  const foo: [number, string] = [ 1, "message" ];
+  ```
+

@@ -25,6 +25,7 @@
 * [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
 * [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case)
 * [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort)
+* [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 
 ## Programming Language Concepts

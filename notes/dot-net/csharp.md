@@ -565,3 +565,21 @@ namespace ExtensionMethods
   var easyToRead = 90000_00000_00000_0000;  
   ```
 
+* [Advantages of using const instead of variables inside methods](https://stackoverflow.com/q/5833912/1366033)
+
+  In method, identical
+
+  ```cs
+  private static string LocalVarString()
+  {
+      var s = "hello";
+      return s;
+  }
+
+  private static string LocalConstString()
+  {
+      const string s = "hello";
+      return s;
+  }
+  ```
+
