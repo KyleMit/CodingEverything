@@ -279,11 +279,15 @@ scoop install FiraCode-NF-Mono
 
 ### Docker Config
 
+<!-- {% raw %} -->
+
 ```json
 {
     "psFormat": "table {{.Image}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}",
 }
 ```
+
+<!-- {% endraw %} -->
 
 ### Setup
 
@@ -1043,6 +1047,52 @@ Which installs CLI tools to here:
 
 
 
+<!-- DEPRECATED
+
+### Immersive Search
+
+[How to Enable or Disable Floating Immersive Search Bar in Windows 10](https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html)
+
+```ini file:ImmersiveSearch.reg
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Tutorial: https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html
+
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"ImmersiveSearch"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search\Flighting\Override]
+"CenterScreenRoundedCornerRadius"=dword:00000009
+"ImmersiveSearchFull"=dword:00000001
+```
+-->
+
+### Alt Drag
+
+[Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
+[Alt Drag - Hotkeys](https://stefansundin.github.io/altdrag/doc/hotkeys.html)
+[Virtual-Key Codes](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
+
+```ps1
+Get-ChildItem -Path $env:APPDATA -Filter "AltDrag.ini" -Recurse
+```
+
+```ini
+[General]
+Hotkeys=72 ;F3
+```
+
+
+### Scripts
+
+
+[archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
+
+
+
+
 ## Windows Settings
 
 * [How to Customize Any Icon in Windows 10](https://www.makeuseof.com/tag/customize-icon-windows/)
@@ -1101,7 +1151,7 @@ Which installs CLI tools to here:
 * [How do I disable Aero Shake in Windows 7?](https://superuser.com/q/12156/180163)
 
     1. Run `gpedit.msc`
-    2. User Congiruation > Administrative Templates > Desktop
+    2. User Configuration > Administrative Templates > Desktop
     3. Enable "Turn off Aero Shake window minimizing mouse gesture"
 
 * [How to make Windows 10 taskbar thumbnail previews bigger?](https://superuser.com/q/958690/180163)
@@ -1114,57 +1164,10 @@ Which installs CLI tools to here:
     ```
 
 
-<!-- DEPRECATED
+* [How to remove hotkey on Amazon Kindle PC that opens application](https://superuser.com/q/1320544/180163)
 
-### Immersive Search
+  Open Shortcut > Properties > Remove Shortcut Key
 
-[How to Enable or Disable Floating Immersive Search Bar in Windows 10](https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html)
+* [How to Center Your Windows 10 Taskbar Icons (Like Windows 11)](https://www.howtogeek.com/736658/how-to-center-your-windows-10-taskbar-icons-like-windows-11/)
 
-```ini file:ImmersiveSearch.reg
-Windows Registry Editor Version 5.00
-
-; Created by: Shawn Brink
-; Tutorial: https://www.tenforums.com/tutorials/98610-enable-disable-floating-immersive-search-bar-windows-10-a.html
-
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
-"ImmersiveSearch"=dword:00000001
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search\Flighting\Override]
-"CenterScreenRoundedCornerRadius"=dword:00000009
-"ImmersiveSearchFull"=dword:00000001
-```
--->
-
-### Alt Drag
-
-[Alt Drag - High DPI](https://github.com/stefansundin/altdrag/issues/7#issuecomment-50701359)
-[Alt Drag - Hotkeys](https://stefansundin.github.io/altdrag/doc/hotkeys.html)
-[Virtual-Key Codes](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
-
-```ps1
-Get-ChildItem -Path $env:APPDATA -Filter "AltDrag.ini" -Recurse
-```
-
-```ini
-[General]
-Hotkeys=72 ;F3
-```
-
-
-### Scripts
-
-
-[archive.ps1](https://gist.github.com/KyleMit/978086ae267ff5be17811e99c9607986)
-
-
-<!--
-
-### Work
-
-#### Active Directory Users & Computers
-
-
-
--->
-
+  * [TaskbarX | Center taskbar icons](https://chrisandriessen.nl/taskbarx)

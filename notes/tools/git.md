@@ -2,14 +2,12 @@
 
 ## Docs
 
-* [`git-clone` Documentation](https://git-scm.com/docs/git-clone)
-* [`git-sparse-checkout` Documentation](https://www.git-scm.com/docs/git-sparse-checkout)
-* [`git-archive` Documentation](https://git-scm.com/docs/git-archive)
-
-### [Commit](https://git-scm.com/docs/git-commit)
-
-
-`--no-verify` - This option bypasses the pre-commit and commit-msg [githooks](https://git-scm.com/docs/githooks)
+* [`git-init`](https://git-scm.com/docs/git-init)
+* [`git-clone`](https://git-scm.com/docs/git-clone)
+* [`git-sparse-checkout`](https://www.git-scm.com/docs/git-sparse-checkout)
+* [`git-archive`](https://git-scm.com/docs/git-archive)
+* [`git commit`](https://git-scm.com/docs/git-commit)
+  * `--no-verify` - This option bypasses the pre-commit and commit-msg [githooks](https://git-scm.com/docs/githooks)
 
 
 
@@ -188,7 +186,11 @@ git rev-list --count <revision>
 * [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
 
   ```bash
-  git branch | grep -v "master" | xargs git branch -D
+  git branch | grep -v "master" | xargs -r git branch -D
+  ```
+
+  ```bash
+  git branch --merged | grep -v \* | xargs -r git branch -D 
   ```
 
 * [Git command to show which specific files are ignored by .gitignore](https://stackoverflow.com/q/466764/1366033)
@@ -300,6 +302,12 @@ git rev-list --count <revision>
   git config --get init.defaultBranch
   ```
 
+* [How can I create a Git repository with the default branch name other than "master"?](https://stackoverflow.com/q/42871542/1366033)
+
+  ```bash
+  git config --global init.defaultBranch main
+  ```
+
 * [Make git undo any whitespace-only changes?](https://stackoverflow.com/q/13793241/1366033)
 
   Also: [Add only non-whitespace changes](https://stackoverflow.com/q/3515597/1366033)
@@ -347,5 +355,113 @@ git rev-list --count <revision>
 
   ```ini
   [alias] chs = !git checkout $1 && git status
+  ```
+
+* [Multi-line alias in .gitconfig?](https://stackoverflow.com/q/59034391/1366033)
+
+  ```ini
+  [alias]
+    save = "!f() { \
+            git status; \
+            git add -A; \
+            git commit -m "$1"; \
+            git push -f; \
+            git log -1;  \
+          }; \
+          f;  \
+          unset f"
+  ```
+
+
+* fatal: detected dubious ownership in repository at 'C:/code/StackOverflow'
+
+  This was introduced as a security measure in git v2.35.2 (updated 4/12/2022)
+
+  ```bash
+  git config --global --add safe.directory C:/code/StackOverflow
+  ```
+
+  * Further Reading
+    * [security vulnerability CVE-2022-24765](https://github.blog/2022-04-12-git-security-vulnerability-announced/)
+    * [Fatal error "unsafe repository ('/home/repo' is owned by someone else)"](https://stackoverflow.com/q/71901632/1366033)
+    * [CVE 2022 24765 - I cannot add the parent directory to *safe.directory* in Git](https://stackoverflow.com/q/71849415/1366033)
+    * [git submodule update failed with 'fatal: detected dubious ownership in repository at'](https://stackoverflow.com/q/72978485/1366033)
+
+* [List Git aliases](https://stackoverflow.com/q/7066325/1366033)
+
+  ```bash
+  git --list-cmds=alias
+  ```
+
+* [How to configure git push to automatically set upstream without -u?](https://stackoverflow.com/q/17847213/1366033)
+
+  ```bash
+  git config --global --add --bool push.autoSetupRemote true
+  ```
+
+* [Merge (with squash) all changes from another branch as a single commit](https://stackoverflow.com/q/3697178/1366033)
+
+  ```bash
+  git merge --squash <feature branch>
+  git commit
+  ```
+
+* [Erase git tracking from directory](https://stackoverflow.com/q/4754152/1366033)
+
+  ```bash
+  rm -rf .git
+  ```
+
+* [Pull new updates from original GitHub repository into forked GitHub repository](https://stackoverflow.com/q/3903817/1366033)
+
+  ```ini
+  [remote "upstream"]
+    url = git@github.com:StackExchange/Stacks.git
+  ```
+
+  ```bash
+  git pull upstream main
+  ```
+
+* [How do you stash an untracked file?](https://stackoverflow.com/q/835501/1366033)
+
+  ```bash
+  git stash --include-untracked # -u
+  ```
+
+  ```bash
+  git add .
+  git stash
+  ```
+
+* [How to remove files from git staging area?](https://stackoverflow.com/q/19730565/1366033)
+
+  ```bash
+  git restore --staged .
+  ```
+
+* [How often should you use git-gc?](https://stackoverflow.com/q/55729/1366033)
+
+  [`git-gc`](https://git-scm.com/docs/git-gc)
+
+  [Git gc](https://www.atlassian.com/git/tutorials/git-gc)
+
+  ```bash
+  git count-objects
+  git gc
+  ```
+
+* [Create a git patch from the uncommitted changes in the current working directory](https://stackoverflow.com/q/5159185/1366033)
+
+  Create patch from uncommited changes
+
+  ```bash
+  git diff > mypatch.patch
+  ```
+
+  Apply patch
+
+  ```bash
+  git apply mypatch.patch
   ```
 

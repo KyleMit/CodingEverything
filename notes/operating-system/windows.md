@@ -1,4 +1,4 @@
-# Windows Info
+# Windows OS
 
 
 ## Acronyms
@@ -16,8 +16,6 @@
 
 ## Hotkeys
 
-## Virtual Machines
-
 
 **Snapping window**: <kbd>⊞ Win</kbd> + <kbd>⮀</kbd> (can be used with <kbd>⮁</kbd> to get into quadrants)
 **Switch to recent window**:  <kbd>Alt</kbd> + <kbd>Tab</kbd>
@@ -25,6 +23,22 @@
 **Create new virtual desktop**: <kbd>⊞ Win</kbd> + <kbd>Ctrl</kbd> + <kbd>D</kbd>
 **Switch Virtual Desktops**: <kbd>⊞ Win</kbd> + <kbd>Ctrl</kbd> + <kbd>⮀</kbd>
 
+
+
+## Docs
+
+* [Security identifiers](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers)
+
+  * [Well-known SIDs](https://docs.microsoft.com/en-us/windows/win32/secauthz/well-known-sids)
+
+  | Identifier Authority     | SID String Prefix |
+  | ------------------------ | ----------------- |
+  | NULL_SID_AUTHORITY       | `S-1-0`           |
+  | WORLD_SID_AUTHORITY      | `S-1-1`           |
+  | LOCAL_SID_AUTHORITY      | `S-1-2`           |
+  | CREATOR_SID_AUTHORITY    | `S-1-3`           |
+  | NT_AUTHORITY             | `S-1-5`           |
+  | AUTHENTICATION_AUTHORITY | `S-1-18`          |
 
 ## Window Managers
 
@@ -117,7 +131,7 @@
     * Windows product activation
 
 
-## Questions
+## Change Default Lid Close Action
 
 * Get Current Power Plan
 

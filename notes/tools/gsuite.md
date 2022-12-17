@@ -36,6 +36,11 @@
   * <kbd>\`</kbd> - move to next ➞
   * <kbd>~</kbd> - move to previous 🠬
 
+* [Can I draft an Gmail message in Google Docs](https://superuser.com/q/1735177/180163)
+
+  Insert > Building blocks > Email draft
+
+
 ## Calendar
 
 * [Set your working hours & location](https://support.google.com/calendar/answer/7638168)
@@ -56,6 +61,7 @@
 
 * [Use Drive File Stream with work or school](https://support.google.com/drive/answer/7329379)
 * [Folders from "shared with me" don't show up in google file stream when copied to "my drive" online](https://support.google.com/a/thread/7885542)
+* [Reorder your files](https://support.google.com/drive/answer/2375177?hl=en&co=GENIE.Platform%3DDesktop)
 
 
 ## Docs

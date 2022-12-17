@@ -42,3 +42,21 @@
   })
   ```
 
+* [How to change text color in jQuery animate?](https://stackoverflow.com/q/16871967/1366033)
+
+  Add jQuery UI
+
+* [Is there an "exists" function for jQuery?](https://stackoverflow.com/q/31044/1366033)
+
+  ```js
+  $("selector").length
+  ```
+
+* [Check, using jQuery, if an element is 'display:none' or block on click](https://stackoverflow.com/q/15924751/1366033)
+
+  ```js
+  hiddenElements = $(':hidden');
+  visibleElements = $(':visible');
+  ```
+
+  

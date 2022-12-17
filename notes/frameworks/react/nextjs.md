@@ -14,7 +14,17 @@
 npx create-next-app@latest
 # manual
 npm install next react react-dom
+# blog example
+npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
 ```
+
+## Links
+
+* [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs)
+* [Github Discussions](https://github.com/vercel/next.js/discussions)
+* [Stack Overflow [next.js]](https://stackoverflow.com/questions/tagged/next.js)
+* [Discord](https://discord.com/channels/752553802359505017/752553802359505020)
+* [/r/Next.js](https://www.reddit.com/r/nextjs/)
 
 ## Docs
 
@@ -296,3 +306,9 @@ export default function Layout({ children }) {
     },
   }
   ```
+
+* `/_next/data/zzz/xxx.json` 404
+
+  * [why /_next/data/[hash]/xxx.json 404](https://github.com/vercel/next.js/discussions/38414)
+  * [handling 404 json after deployment](https://github.com/vercel/next.js/discussions/14726)
+

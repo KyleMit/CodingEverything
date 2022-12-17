@@ -7,7 +7,7 @@
             "name": "CLI - Sub Command",
             "program": "${workspaceFolder}/node_modules/create-eleventy-blog/cli/_cli.js",
             "args": [
-                "clean"
+                "build"
             ],
             "runtimeArgs": [
                 "--preserve-symlinks"

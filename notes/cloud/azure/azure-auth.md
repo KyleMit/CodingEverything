@@ -331,6 +331,8 @@ az ad sp create-for-rbac -n "kylemitofskysp"
 
 ### Get AAD Token
 
+<!-- {% raw %} -->
+
 ```bash
 curl --location --request POST 'https://login.microsoftonline.com/{{tenantId}}/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -339,6 +341,8 @@ curl --location --request POST 'https://login.microsoftonline.com/{{tenantId}}/o
 --data-urlencode 'client_secret={{clientSecret}}' \
 --data-urlencode 'resource={{resource}}'
 ```
+
+<!-- {% endraw %} -->
 
 <!-- spellchecker: disable -->
 

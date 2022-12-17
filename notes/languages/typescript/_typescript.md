@@ -1150,3 +1150,23 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   npm install ts-node --save-dev
   ```
 
+* [Import class in definition file (*d.ts)](https://stackoverflow.com/q/39040108/1366033)
+
+  ```ts
+  declare namespace Express {
+    interface Request {
+      user: import("./user").User;
+    }
+  }
+  ```
+
+* [typescript: 'new' call to function](https://stackoverflow.com/q/66519278/1366033)
+
+* [Defining array with multiple types in TypeScript](https://stackoverflow.com/q/29382389/1366033)
+
+  Use **named tuples** in **TS 3.9+**
+
+  ```ts
+  const foo: [number, string] = [ 1, "message" ];
+  ```
+

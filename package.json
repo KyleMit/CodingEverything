@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "create-eleventy-blog": "^0.1.8"
+  }
+}

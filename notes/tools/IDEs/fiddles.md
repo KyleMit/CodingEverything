@@ -1,11 +1,12 @@
 
-# Code Playgrounds
+# Code Fiddles / Playgrounds
 
-* [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
-* [StackBlitz](https://stackblitz.com/@KyleMit)
-* [CodePen](https://codepen.io/KyleMit)
-* [CodeSandbox](https://codesandbox.io/u/KyleMit)
-* [Plunker](https://plnkr.co/users/KyleMit/plunks)
+* Web
+  * [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)
+  * [StackBlitz](https://stackblitz.com/@KyleMit)
+  * [CodePen](https://codepen.io/KyleMit)
+  * [CodeSandbox](https://codesandbox.io/u/KyleMit)
+  * [Plunker](https://plnkr.co/users/KyleMit/plunks)
 
 
 * Build and run github
@@ -20,6 +21,9 @@
   * [SQL Fiddle](http://sqlfiddle.com/) - sql
   * [.NET Fiddle](https://dotnetfiddle.net/) - dotnet
   * [TS Playground](https://www.typescriptlang.org/play)
+  * [ReplIt](https://replit.com/)
+  * [Glitch](https://glitch.com/)
+  * [Jupyter Notebook](https://github.com/jupyter/notebook)
 
 * Code Exercises
   * [LeetCode](https://leetcode.com/KyleMit/)
@@ -44,4 +48,14 @@
   View > Editor Layout > Flip Full Layout
 
 * [Changelog / Release Notes](https://codesandbox.io/changelog)
+
+## CodePen
+
+* [AutoRun](https://blog.codepen.io/2013/04/04/auto-run-in-javascript-now-optional/)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd> - Run Codepen
+
+## JSFiddle
+
+[Fiddle Finder](https://jsfiddle.net/KyleMit/y8ah3nf7/)
 

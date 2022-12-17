@@ -31,6 +31,18 @@ List Tool versions:
 dotnet tool list -g
 ```
 
+## Custom CLI
+
+* Docs
+  * [dotnet tool install command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install)
+  * [Tutorial: Create a .NET tool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create)
+* Articles
+  * [Build a Command Line Interface(CLI) Program with .NET Core](https://medium.com/swlh/build-a-command-line-interface-cli-program-with-net-core-428c4c85221)
+  * [Create a CLI tool with .Net6. Probably you know the new windows](https://medium.com/geekculture/create-a-cli-tool-with-net6-94c03ad3e474)
+* YouTube
+  * [How to create your own .NET CLI tools to make your life easier](https://www.youtube.com/watch?v=JNDgcBDZPkU)
+  * [Intro To The .NET CLI - How To Use It, Why We Need It, And More](https://www.youtube.com/watch?v=RQLzp2Z8-BE)
+  * [Learn Command Line Interface (CLI) for Build, Run and Publish in .NET Core](https://www.youtube.com/watch?v=TxhFzrZF8kM)
 
 ## Questions
 

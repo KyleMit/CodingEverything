@@ -1,3 +1,7 @@
+---
+templateEngineOverride : md
+---
+
 # React
 
 * [React Getting Started](https://reactjs.org/docs/getting-started.html)
@@ -44,6 +48,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 [Passing Props](https://stackoverflow.com/a/55073712/1366033)
 
 <!-- {% raw %} -->
+
 ```js
 // function component syntax
 function HelloWorldFunc(props) {
@@ -67,6 +72,7 @@ const helloCreate = React.createElement(HelloWorldFunc, {user:{name:'Kyle'}});
 // JSX syntax
 const helloJSX = <HelloWorldClass user={{name:'Kyle'}} />
 ```
+
 <!-- {% endraw %} -->
 
 ## JSX
@@ -104,6 +110,12 @@ Babel in the browser
     ReactDOM.render(<App />, document.getElementById('root'))
 </script>
 ```
+
+## Server Components
+
+* [React 18: React Server Components | Next.js](https://nextjs.org/docs/advanced-features/react-18/server-components)
+* [Introducing Zero-Bundle-Size React Server Components – React Blog](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)
+* [React Server Components](https://www.patterns.dev/posts/react-server-components/)
 
 ## Debug
 

@@ -548,10 +548,13 @@ winget install graphviz
   [3,1,2].sort((a, b) => a - b)
   ```
 
-* [How to compute the sum and average of elements in an array?](https://stackoverflow.com/q/10359907/1366033)
+* [How to find the sum of an array of numbers](https://stackoverflow.com/q/1230233/1366033)
+
+  * [How to compute the sum and average of elements in an array?](https://stackoverflow.com/q/10359907/1366033)
 
   ```js
-  const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
+  const sum = arr => arr.reduce(( p, c ) => p + c, 0 );
+  const average = arr => arr.reduce(( p, c ) => p + c, 0 ) / arr.length;
   ```
 
 * [How do I make the first letter of a string uppercase in JavaScript?](https://stackoverflow.com/q/1026069/1366033)
@@ -728,7 +731,6 @@ winget install graphviz
   ```
 
 
-
 * [What is the JavaScript version of sleep()?](https://stackoverflow.com/q/951021/1366033)
 
   ```js
@@ -838,8 +840,6 @@ winget install graphviz
   }
   ```
 
-
-
 * [Javascript: remove trailing spaces only](https://stackoverflow.com/q/37864460/1366033)
 
   [`String.prototype.trimEnd()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
@@ -855,3 +855,33 @@ winget install graphviz
   ```js
   var isTrueSet = (myValue === 'true');
   ```
+
+* [Check if Object is Empty](https://stackoverflow.com/q/679915/1366033)
+
+
+  ```js
+  function isEmpty(obj) {
+      return Object.keys(obj).length === 0;
+  }
+  ```
+
+* [Counting the occurrences / frequency of array elements](https://stackoverflow.com/q/5667888/1366033)
+
+  * [Comma operator (`,`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+    * evaluates each of its operands (from left to right) and returns the value of the last operand
+  * [Lodash - `_.countBy`](https://lodash.com/docs/4.17.15#countBy)
+  * [Ramda - `R.countBy`](https://ramdajs.com/docs/#countBy)
+
+  ```js
+  const arr = ['a', 'a', 'a', 'a', 'a', 'b', 'c', 'c', 'c'];
+  const countBy = (arr) => arr.reduce((acc, cur) => (acc[cur] = (acc[cur] || 0) + 1, acc), {});
+  console.log(countBy(arr)); // {a: 5, b: 1, c: 3}
+  ```
+
+  ```js
+  const countBy = (arr) => arr.reduce((acc, cur) => {
+    acc[cur] = (acc[cur] || 0) + 1
+    return acc
+  }, {});
+  ```
+

@@ -6,6 +6,7 @@ https://web.dev/
 
 * [Chrome 85](https://developers.google.com/web/updates/2020/06/devtools?utm_source=devtools)
 * [Chrome 90](https://developer.chrome.com/blog/new-in-devtools-90/)
+* [Chrome 106](https://developer.chrome.com/blog/new-in-devtools-106/)
 
 ## Network > [Filter requests](https://developers.google.com/web/tools/chrome-devtools/network/reference#filter)
 
@@ -63,3 +64,10 @@ https://web.dev/
 
   The Gear icon in the requests in means the request came from [service worker](https://developers.google.com/web/fundamentals/primers/service-workers)
 
+* [Save / export Chrome's JavaScript console input history](https://stackoverflow.com/q/51802601/1366033)
+
+  ```js
+  copy(JSON.parse(localStorage.getItem("consoleHistory")).join('\n'))
+  ```
+
+  

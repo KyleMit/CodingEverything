@@ -846,20 +846,20 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 
 * [Powershell folder size of folders without listing Subdirectories](https://stackoverflow.com/q/26494744/1366033)
 
-```ps1
-foreach ($d in gci -Directory -Force) {
-  '{0,15:N0}' -f ((gci $d -File -Recurse -Force | measure length -sum).sum) + "`t`t$d"
-}
-```
+  ```ps1
+  foreach ($d in gci -Directory -Force) {
+    '{0,15:N0}' -f ((gci $d -File -Recurse -Force | measure length -sum).sum) + "`t`t$d"
+  }
+  ```
 
 
-```ps1
-$dirs = Get-ChildItem -Directory
-$dirs | ForEach-Object {
-    $size = (Get-ChildItem $_.Name -Force -Recurse | Measure-Object Length -Sum).Sum / 1Mb
-    Return $_.Name + ' ' + [Math]::Round($size, 2)
-}
-```
+  ```ps1
+  $dirs = Get-ChildItem -Directory
+  $dirs | ForEach-Object {
+      $size = (Get-ChildItem $_.Name -Force -Recurse | Measure-Object Length -Sum).Sum / 1Mb
+      Return $_.Name + ' ' + [Math]::Round($size, 2)
+  }
+  ```
 
 * [How do I get only directories using Get-ChildItem?](https://stackoverflow.com/q/3085295/1366033)
 
@@ -1099,12 +1099,12 @@ $env:LOCALAPPDATA
 
 * Extract Regex Match
 
-
+  ```ps1
   $input = "Prefix: {123}"
   $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
   ($input | Select-String "{.*}").Matches.Value
   [Regex]::Matches($input, "{.*}" ).Value
-
+  ```
 
 * [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
 
@@ -1210,4 +1210,132 @@ $env:LOCALAPPDATA
   Must use cmd prompt
 
 
+* [Equivalent of cmd's "where" in powershell](https://superuser.com/q/675837/180163)
+
+  ```ps1
+  (Get-Command git).Pat
+  ```
+
+* [Creating new file with touch command in PowerShell](https://stackoverflow.com/q/32448174/1366033)
+
+  ```ps1
+  New-Item -Type File -Path $Path
+  ```
+
+  ```ps1
+  function touch {
+    Param(
+      [Parameter(Mandatory=$true)]
+      [string]$Path
+    )
+
+    if (Test-Path -LiteralPath $Path) {
+      (Get-Item -Path $Path).LastWriteTime = Get-Date
+    } else {
+      New-Item -Type File -Path $Path -Force
+    }
+  }
+  ```
+
+* [Get count of all items in a folder by extension](https://stackoverflow.com/q/73884330/1366033)
+
+  ```ps1
+  Get-ChildItem -File -Recurse |
+    Group-Object Extension -NoElement |
+    Sort-Object Count -Descending
+  ```
+
+* [How do I find files by their extension in a specific directory and go through them with Power Shell?](https://stackoverflow.com/q/42034488/1366033)
+
+  ```ps1
+  Get-ChildItem $path -Recurse -Filter *.ext
+  ```
+
+* [How to fix truncated PowerShell output, even when I've specified -width 300](https://superuser.com/q/1049531/180163)
+
+  ```ps1
+  $data | Format-Table -AutoSize
+  ```
+
+* [Function to round integer or float up to closest increment in Powershell](https://stackoverflow.com/q/18226298/1366033)
+
+  ```ps1
+  Function Get-Increment([float] $value, [int] $increment=5){
+      if($value -gt 1)
+      {
+        [Math]::Ceiling($value / $increment) * $increment;
+      }
+      else
+      {
+        [math]::Ceiling($value)
+      }
+  }
+  ```
+
+* [Count line lengths in file using powershell](https://stackoverflow.com/q/30139876/1366033)
+
+  ```ps1
+  Get-Content <file> | Group-Object -Property Length | Sort-Object -Property Name
+  ```
+
+* [How do I kill a process in Powershell](https://stackoverflow.com/q/41116361/1366033)
+
+  ```ps1
+  Stop-Process -Name testhost
+  ```
+
+  [`Stop-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-process)
+
+
+* [*.ps1 cannot be loaded because running scripts is disabled on this system](https://stackoverflow.com/a/26955050/1366033)
+
+
+  ```ps1
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+
+* [How to exclude files and folders from Get-ChildItem in PowerShell?](https://stackoverflow.com/q/61934452/1366033)
+
+  ```ps1
+  Get-ChildItem $path -Recurse | Where-Object FullName -INotLike *obj*
+  ```
+
+* [Difference between using module, Import-Module, and #requires -Modules](https://stackoverflow.com/q/68455543/1366033)
+
+
+* [How to send notifications or messages to user?](https://stackoverflow.com/q/71490603/1366033)
+
+  * [Send a toast notification to logged user when running as Local System](https://stackoverflow.com/q/61971517/1366033)
+  * [Windos/BurntToast](https://github.com/Windos/BurntToast)
+
+  ```ps1
+  Install-Module -Name BurntToast
+  New-BurntToastNotification 
+  ```
+
+* [PowerShell show elapsed time](https://stackoverflow.com/q/10941756/1366033)
+
+  ```ps1
+  $timer = [Diagnostics.Stopwatch]::StartNew()
+  $timer.Stop()
+  [Math]::Floor($buildTimer.Elapsed.TotalSeconds)
+  ```
+
+* [PowerShell script to check the status of a URL](https://stackoverflow.com/q/20259251/1366033)
+
+  ```ps1
+  function Get-UrlStatusCode([string] $Url)
+  {
+      try
+      {
+          (Invoke-WebRequest -Uri $Url -UseBasicParsing -DisableKeepAlive).StatusCode
+      }
+      catch [Net.WebException]
+      {
+          [int]$_.Exception.Response.StatusCode
+      }
+  }
+
+  $statusCode = Get-UrlStatusCode 'https://example.com/'
+  ```
 

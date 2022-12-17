@@ -139,3 +139,29 @@ button {
   }
   ```
 
+* [Specify fallback font sizes in CSS?](https://stackoverflow.com/q/5970947/1366033)
+
+  ```css
+  @font-face {
+    font-family: courier-new;
+    src: local(Courier New);
+    size-adjust: 91.6%
+  }
+  ```
+
+* [Select the last 3 child elements](https://stackoverflow.com/q/14268156/1366033)
+
+  ```css
+  a:nth-last-child(-n+3)
+  ```
+
+* [sticky position on css grid items](https://stackoverflow.com/q/50794795/1366033)
+
+  ```css
+  section {
+    position: sticky;
+    top: 0;
+    align-self: start;
+  }
+  ```
+

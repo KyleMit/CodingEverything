@@ -440,12 +440,25 @@ npm install -g nodemon
 * [Node.js check if file exists](https://stackoverflow.com/a/35008327/1366033)
 
     ```js
-    async function checkFileExists(file) {
-    return fs.promises.access(file, fs.constants.F_OK)
-            .then(() => true)
-            .catch(() => false)
+    async function checkFileExists(path) {
+        return fs.promises.access(path, fs.constants.F_OK)
+                .then(() => true)
+                .catch(() => false)
     }
     ```
+
+
+    ```js
+    async function checkFileExists(path) {
+        try {
+            await fs.promises.access(path, fs.constants.F_OK)
+            return true;
+        } catch {
+            return false
+        }
+    }
+    ```
+
 
 * Must use import to load ES Module
 
@@ -513,5 +526,24 @@ npm install -g nodemon
 
     ```bash
     node --no-deprecation script
+    ```
+
+* [Locate a parent folder](https://stackoverflow.com/questions/7083045/fs-how-do-i-locate-a-parent-folder)
+
+    ```js
+    var path = require("path")
+    var parent = path.join(__dirname, "..");
+    ```
+
+* [How to remove a directory if it exists and is not empty?](https://stackoverflow.com/q/31917891/1366033)
+
+    ```js
+    fs.rm("/directory-to-delete", { recursive: true, force: true })
+    ```
+
+* [Get file name from absolute path in Nodejs?](https://stackoverflow.com/q/19811541/1366033)
+
+    ```js
+    path.basename('/foo/bar/asdf.html') // 'asdf.html'
     ```
 

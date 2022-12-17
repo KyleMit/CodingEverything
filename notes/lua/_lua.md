@@ -515,3 +515,7 @@ end
       return "<MyClass: "..self.foo..">"
   end
   ```
+
+* [Lua string to int](https://stackoverflow.com/q/10962085/1366033)
+
+   Use [`tonumber`](http://www.lua.org/manual/5.1/manual.html#pdf-tonumber)

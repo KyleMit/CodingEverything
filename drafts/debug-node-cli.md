@@ -1,6 +1,6 @@
 ---
 title: 'Setup Visual Studio Code debugger on your own Node CLI with NPM Link'
-summary: 'Debugging can be tricky when using sym links and hitting a local CLI.  Here's a walkthrough of how to setup a CLI using npm and then debug it from a different directory'
+summary: Debugging can be tricky when using sym links and hitting a local CLI.  Here's a walkthrough of how to setup a CLI using npm and then debug it from a different directory
 tags: ['post', 'npm', 'cli', 'debug']
 authors: ['Kyle']
 date: 2020-10-18

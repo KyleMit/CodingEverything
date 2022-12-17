@@ -96,24 +96,62 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 
 ## Debugging
 
+
+* [Mocha breakpoints using Visual Studio Code](https://stackoverflow.com/q/30023736/1366033)
+
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Mocha Tests",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": [
+          "${workspaceRoot}/node_modules/.bin/mocha",
+          "--inspect-brk",
+          "--no-timeouts",
+          "${workspaceRoot}/src/**/__tests__/*-test.js"
+        ],
+        "console": "integratedTerminal",
+        "port": 9229
+      },
+      {
+        "name": "Mocha (Current File)",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": [
+          "${workspaceRoot}/node_modules/.bin/mocha",
+          "--inspect-brk",
+          "--no-timeouts",
+          "${relativeFile}"
+        ],
+        "console": "integratedTerminal",
+        "port": 9229
+      }
+    ]
+  }
+  ```
+
+
 * [Debugging in Mocha in VS Code](https://codepunk.io/debugging-mocha-in-visual-studio-code/)
 * [What's the least resistance path to debugging mocha tests?](https://stackoverflow.com/q/14285201/1366033)
 * [What's the right way to enable the node debugger with mocha's `--debug-brk` switch?](https://stackoverflow.com/q/14352608/1366033)
 
-```json
-{
+  ```json
+  {
     "type": "node",
     "request": "launch",
     "name": "Mocha Tests",
     "program": "${workspaceRoot}/node_modules/mocha/bin/mocha",
     "args": [
-        "--inspect-brk",
-        "${workspaceFolder}/test/**/*.js"
+      "--inspect-brk",
+      "${workspaceFolder}/test/**/*.js"
     ],
     "port": 9229,
     "internalConsoleOptions": "openOnSessionStart"
-}
-```
+  }
+  ```
 
 * [`basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")` #4751](https://github.com/facebook/jest/issues/4751#issuecomment-361063215)
 
@@ -162,3 +200,28 @@ mocha --full-trace src/**/__tests__/**/*-test.js
 * [karma plugin dependencies not being found](https://stackoverflow.com/q/32425580/1366033)
 
 * [ReferenceError: describe is not defined NodeJs](https://stackoverflow.com/q/28400459/1366033)
+
+* [Running the same mocha test multiple times with different data](https://stackoverflow.com/q/17144197/1366033)
+
+  ```js
+  describe('my tests', function () {
+    var runs = [
+      {it: 'options1', options: {...}},
+      {it: 'options2', options: {...}},
+    ];
+
+    runs.forEach(function (run) {
+      it('does sth with ' + run.it, function () {
+        ...
+      });
+    });
+  });
+  ```
+
+  * Packages
+    * [mocha-each](https://www.npmjs.com/package/mocha-each)
+    * [mocha-testcheck](https://www.npmjs.com/package/mocha-testcheck)
+  * Deprecated
+    * [leche](https://www.npmjs.com/package/leche)
+    * [mocha-testdata](https://www.npmjs.com/package/mocha-testdata)
+

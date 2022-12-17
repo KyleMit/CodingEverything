@@ -119,6 +119,8 @@ choco install gnuwin32-coreutils.portable
   echo $result
   ```
 
+  **Related**: [How do I set a variable to the output of a command in Bash?](https://stackoverflow.com/q/4651437/1366033)
+
 * [recursive mkdir](https://unix.stackexchange.com/questions/49263/recursive-mkdir)
 
   * [How to create nonexistent subdirectories recursively using Bash?](https://stackoverflow.com/q/1731767/1366033)
@@ -142,6 +144,19 @@ choco install gnuwin32-coreutils.portable
   * `-e` - Exit immediately if a command exits with a non-zero status
   * `-x` - Print commands and their arguments as they are executed
 
+
+* [Print all commands in a bash function](https://superuser.com/q/1382735/180163)
+
+  ```bash
+  FuncName()
+  {
+      set -x ;# Enable tracing on entry
+
+      ... (function code) ...
+
+      set +x ;# Disable tracing on exit
+  }
+  ```
 
 * [Shell script to open a URL](https://stackoverflow.com/q/38147620/1366033)
 
@@ -442,4 +457,56 @@ ls --color -h --group-directories-first
   ```bash
   winget install --id=gerardog.gsudo -e
   ```
+
+* [Remove specific word in variable](https://unix.stackexchange.com/q/311758/128893)
+
+  ```bash
+  echo "origin/main" | sed 's/origin\///'          # "main"
+  echo "origin/main" | cut -c 8-                   # "main"
+  echo "origin/main" | awk '{ print substr($0,8)}' # "main"
+  ```
+
+* [How to find directory of some command?](https://stackoverflow.com/q/2869100/1366033)
+
+  ```bash
+  type git
+  type -a git
+  ```
+
+  or
+
+  ```bash
+  which git
+  which -a git
+  ```
+
+* [Why not use "which"? What to use then?](https://unix.stackexchange.com/q/85249/128893)
+
+
+* [How can I get the current working directory?](https://unix.stackexchange.com/q/188182/128893)
+
+  ```bash
+  echo "$PWD"
+  ```
+
+* [Is it better to use $(pwd) or $PWD?](https://unix.stackexchange.com/q/173916/128893)
+
+  One is a command, one is a variable
+
+* [Piping output from Git Bash to clipboard](https://stackoverflow.com/q/18880062/1366033)
+
+  ```bash
+  git branch | clip
+  ```
+
+* [How to ignore xargs commands if stdin input is empty?](https://stackoverflow.com/q/8296710/1366033)
+
+  [`xargs(1)`](https://linux.die.net/man/1/xargs)
+
+  ```bash
+  --no-run-if-empty
+  -r
+  ```
+
+  > If the standard input does not contain any nonblanks, do not run the command.  Normally, the command is run once even if there is no input.  This option is a GNU extension.
 

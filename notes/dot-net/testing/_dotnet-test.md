@@ -21,3 +21,14 @@
   ```bash
   dotnet test --filter FullyQualifiedName.IntegrationTests
   ```
+
+* [dotnet test verbosity level for test output only #1773](https://github.com/microsoft/vstest/issues/1773)
+
+
+  ```bash
+  dotnet test Test.csproj --verbosity quiet --logger:"console;verbosity=quiet"
+  ```
+
+  [`dotnet test` options](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test#options)
+
+

@@ -213,6 +213,8 @@ $compile (markup / directives) (scope) = live dom fragment
 
    * Access to Version control container
 
+<!-- {% raw %} -->
+
 ```js
 var ioc = angular.element('[ng-app]').injector(),
     $rootScope = ioc.get('$rootScope'),
@@ -226,6 +228,8 @@ var el = compile ( scope + markup)
 
 //el now operates live with two way data binding
 ```
+
+<!-- {% endraw %} -->
 
 
 #### Directives Refresher

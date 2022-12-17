@@ -705,3 +705,74 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "isBackground": true
   }
   ```
+
+* [Run / Open VSCode from Mac Terminal](https://stackoverflow.com/q/30065227/1366033)
+
+   Run `Shell Command: Install code in PATH`
+
+
+* [How to add more indentation in the Visual Studio code explorer file tree structure?](https://stackoverflow.com/q/55310734/1366033)
+
+  ```json
+  "workbench.tree.indent": 10
+  ```
+
+* [Explorer: allow to expand a sub-tree fully via Alt-click #9456](https://github.com/microsoft/vscode/issues/9456)
+
+  Use <kbd>Alt</kbd> + Click
+
+  [Add "Expand All" Button to Tree](https://github.com/microsoft/vscode/issues/88682)
+
+
+* [C# "go to definition" (F12) not working](https://stackoverflow.com/q/47995468/1366033)
+
+  Command Palette > OmniSharp: Restart OmniSharp
+
+
+* [How to avoid multi cursor on wrapped lines in VS Code?](https://stackoverflow.com/a/73311165/1366033)
+
+  PR - [Add info on logical lines by KyleMit](https://github.com/microsoft/vscode-docs/pull/5564)
+
+  ```json
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "textInputFocus",
+    "args": { "logicalLine": true },
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "textInputFocus",
+    "args": { "logicalLine": true },
+  },
+  ```
+
+* [How do I open all files of a commit](https://stackoverflow.com/q/65284314/1366033)
+
+  1. Right click on the Commit
+  2. Open Changes
+  3. Open Files
+
+  **See Also**: [Feature Request: View All Changes In PR](https://github.com/microsoft/vscode-pull-request-github/issues/3047)
+
+* [How do I open the same file side by side in a single Visual Studio Code session](https://stackoverflow.com/q/48674275/1366033)
+
+   View: Split Editor - <kbd>Ctrl</kbd> + <kbd>\</kbd>
+
+* [Disable Markdownlint settings for workspace](https://superuser.com/q/1295409/180163)
+
+  ```json
+  "markdownlint.config": {
+      "default": true,
+  }
+  ```
+
+* [Increase max search limit](https://stackoverflow.com/q/73402465/1366033)
+
+  ```json
+  {
+    "search.maxResults": 40000
+  }
+  ```
+

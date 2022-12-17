@@ -99,3 +99,13 @@
     * [Pandoc - About pandoc](https://pandoc.org/)
 
 * [Why would you select ATX or SETEXT markdown headers style?](https://stackoverflow.com/q/56350341/1366033)
+
+* [Representing Directory & File Structure in Markdown Syntax](https://stackoverflow.com/q/19699059/1366033)
+
+  ```none
+  ├── _data
+  │   └── members.yml
+  ├── _site
+  └── index.html
+  ```
+

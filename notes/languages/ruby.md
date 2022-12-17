@@ -4,6 +4,9 @@
 
 [Ruby Programming Language](https://www.ruby-lang.org/en/)
 
+## Download
+
+https://rubyinstaller.org/downloads/
 
 ## CLI Commands
 
@@ -31,4 +34,10 @@ ridk.cmd
 ## Packages
 
 Gems
+
+## Questions
+
+* [What is the difference between "if" statements with "then" at the end?](https://stackoverflow.com/q/3083636/1366033)
+
+  `then` is a delimiter to help Ruby identify the condition and the true-part of the expression.
 

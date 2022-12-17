@@ -92,11 +92,14 @@ https://www.bostoncodecamp.com/CC21/info
 * Add brackets - angular will look for property in model and track if it changes
 
 
+<!-- {% raw %} -->
 
 ```html
 Message: {{message}} <br/>
 <input type="text" ng-model="message"/>
 ```
+
+<!-- {% endraw %} -->
 
 * `ng-init` - Directive that exists **solely for demos**
   * Helps populate data

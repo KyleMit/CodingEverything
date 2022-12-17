@@ -503,6 +503,10 @@ csrutil disable
 
 * **SIP** - System Integrity Protection
 
+## Alfred
+
+* [Setting Up Your Own Fallback Searches](https://www.alfredapp.com/blog/tips-and-tricks/tutorial-setting-up-your-own-fallback-searches/)
+
 ## Questions
 
 * [How can I add a path to the PATH environment variable?](https://apple.stackexchange.com/q/12629/74706)
@@ -533,3 +537,36 @@ csrutil disable
 
     [Slow down screensaver pictures changes](https://apple.stackexchange.com/q/135766/74706)
     [Change screensaver slide duration](http://hints.macworld.com/article.php?story=20130215183522445)
+
+* Remove extra storage space
+
+* [How can I figure out what's slowly eating my HD space?](https://apple.stackexchange.com/q/5353/74706)
+* ["Other" taking up over HALF of my storage space](https://apple.stackexchange.com/q/378681/74706)
+* [Daisy Disk](https://daisydiskapp.com/)
+
+* [How to use f11 on a Mac](https://apple.stackexchange.com/q/218578/74706)
+
+   System Preferences > Keyboard > Shortcuts > Locate "F11" and uncheck it for Show Desktop
+
+* [Change Copy / Paste / Cut](https://apple.stackexchange.com/q/32297/74706)
+
+
+
+* [Karabiner-Elements](https://karabiner-elements.pqrs.org/) | [github](https://github.com/pqrs-org/Karabiner-Elements)
+
+    Config Path
+
+    ```none
+    /Users/MitMacPaddyWhack1/.config/karabiner/
+    ```
+
+    Presets
+
+    * https://ke-complex-modifications.pqrs.org/#pc_style_modifiers
+    * https://ke-complex-modifications.pqrs.org/#pc_shortcuts
+    * https://ke-complex-modifications.pqrs.org/#personal_bavelee_20200321
+
+* [How can I get an address bar in Finder?](https://superuser.com/a/573423/180163)
+  * Install [FinderPath](https://bahoom.com/finderpath/)
+  * When in Finder, type <kbd>Cmd</kbd> + <kbd>G</kbd>
+
