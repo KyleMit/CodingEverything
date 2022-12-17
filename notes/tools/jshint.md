@@ -24,3 +24,5 @@
 * [Ternary line breaking](https://github.com/jshint/jshint/issues/2528)
 
   * `laxbreak` will be removed in the near future
+
+* ['async functions' is only available in ES8](https://stackoverflow.com/q/42637630/1366033)

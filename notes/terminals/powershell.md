@@ -576,7 +576,7 @@ Set-PoshPrompt -Theme Paradox
 [Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/)
 
 ```ps
-winget install oh-my-posh
+winget install --id=JanDeDobbeleer.OhMyPosh  -e
 ```
 
 ## Articles
@@ -690,7 +690,7 @@ winget install oh-my-posh
 
 * [Automatic Variable `$HOME` vs Environment Variable `$Env:HOME`](https://superuser.com/q/1454263/180163)
 
-  `$HOME` is preferred for cross-platform compatability
+  `$HOME` is preferred for cross-platform compatibility
 
   * [Automatic Variables](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Automatic_Variables)
   * [Environment Variables](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables)
@@ -941,9 +941,9 @@ $env:LOCALAPPDATA
 * [How to check if a cmdlet exists in PowerShell at runtime via script](https://stackoverflow.com/q/3919798/1366033)
 
   ```ps1
-  function Check-Command($cmdname)
+  function Check-Command($cmdName)
   {
-      return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
+      return [bool](Get-Command -Name $cmdName -ErrorAction SilentlyContinue)
   }
   ```
 
@@ -1204,4 +1204,10 @@ $env:LOCALAPPDATA
   ```ps1
   ('a','a','b') | Group-Object -NoElement | Sort-Object Count -Descending
   ```
+
+* [The term 'mklink' is not recognized as the name of a cmdlet](https://superuser.com/q/98420/180163)
+
+  Must use cmd prompt
+
+
 
