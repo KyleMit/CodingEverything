@@ -309,3 +309,6 @@
 
   * Add Links, align links left, center right icons, remove link text
 
+* [File Explorer features in Windows 11 22H2](https://www.techrepublic.com/article/how-to-use-new-file-explorer-features-windows-11-22h2/)
+
+* [Disable Recent Files in Quick Access](https://www.makeuseof.com/windows-11-fix-quick-access-not-showing-recent-files/)

@@ -107,7 +107,11 @@ Inventor: [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)
 pip show <package name>
 ```
 
+### Packages
 
+```bash
+python -m pip install -U autopep8
+```
 
 ## PyTest
 
@@ -274,12 +278,12 @@ pytest --version
 
 * [Split double new lines in platform independent manner](https://stackoverflow.com/q/32121140/1366033)
 
-```py
-if "\n" in data:
-    data = data.replace("\r", "")
-else:
-    data = data.replace("\r", "\n")
-```
+  ```py
+  if "\n" in data:
+      data = data.replace("\r", "")
+  else:
+      data = data.replace("\r", "\n")
+  ```
 
 * [How to print map object with Python 3?](https://stackoverflow.com/q/7731213/1366033)
 
@@ -313,6 +317,14 @@ else:
   ys = []
   for x in xs:
       ys.append(x * 2)
+  ```
+
+* [Finding and replacing elements in a list](https://stackoverflow.com/q/2582138/1366033)
+
+  ```py
+  xs = [None, "#", None, "#"]
+  ["." if x == None else x for x in xs]
+  # ['.', '#', '.', '#']
   ```
 
 * [How to sum a list of numbers stored as strings](https://stackoverflow.com/q/30744195/1366033)
@@ -738,6 +750,18 @@ else:
   'A'.islower() # false
   ```
 
+* [Create an empty list with certain size in Python](https://stackoverflow.com/q/10712002/1366033)
+
+  ```py
+  xs = [None] * 3
+  xs # [None, None, None]
+  ```
+
+  ```py
+  xs = [None for _ in range(3)]
+  xs # [None, None, None]
+  ```
+
 * [How do I split a list into equally-sized chunks?](https://stackoverflow.com/q/312443/1366033)
 
   ```py
@@ -901,6 +925,24 @@ else:
   arr = [1,2,3]
   rev = arr[::-1]
   print(rev) # [3, 2, 1]
+  ```
+
+* [Loop backwards using indices](https://stackoverflow.com/q/869885/1366033)
+
+  use `step=-1` in [`range(start, stop, step=1)`](https://docs.python.org/3/library/functions.html#func-range)
+
+  ```py
+  [i for i in range(3, 0)]     # []
+  [i for i in range(3, 0, -1)] # [3, 2, 1]
+  ```
+
+* [Understanding slicing](https://stackoverflow.com/q/509211/1366033)
+
+  ```py
+  a[start:stop]  # items start through stop-1
+  a[start:]      # items start through the rest of the array
+  a[:stop]       # items from the beginning through stop-1
+  a[:]           # a copy of the whole array
   ```
 
 * [Create or append to a list in a dictionary](https://stackoverflow.com/q/4143698/1366033)
@@ -1217,13 +1259,27 @@ else:
 
 * [Counting positive integer elements in a list with Python list comprehensions](https://stackoverflow.com/q/2900084/1366033)
 
-  use [`numpy.count_nonzero`](https://numpy.org/doc/stable/reference/generated/numpy.count_nonzero.html) 
+  use [`numpy.count_nonzero`](https://numpy.org/doc/stable/reference/generated/numpy.count_nonzero.html)
 
   ```py
   import numpy as np
   xs = [1,0,4,0,7]
   print(np.count_nonzero(xs)) #3
   ```
+
+* [Get number of items from list (or other iterable) with certain condition](https://stackoverflow.com/q/15375093/1366033)
+
+  ```py
+  xs = [1,2,3,4]
+
+  print(len([x for x in xs if x > 2]))              # 2
+  print(sum([1 if x > 2 else 0 for x in xs]))       # 2
+  print(sum([1 for x in xs if x > 2]))              # 2
+  print(sum(map(lambda x: x > 2, xs)))              # 2
+  print(list(map(lambda x: x > 2, xs)).count(True)) # 2
+  ```
+
+  Use [`list.count`](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 
 * [How can I check if a list index exists?](https://stackoverflow.com/q/29715501/1366033)
 
@@ -1290,6 +1346,13 @@ else:
   print(flat_list) # [1, 2, 2, 3]
   ```
 
+* [How to convert a set to a list in python?](https://stackoverflow.com/q/6593979/1366033)
+
+  ```py
+  s = set([1, 2, 3, 4])
+  list(s) # [1, 2, 3, 4]
+  ```
+
 * [Append values to a set in Python](https://stackoverflow.com/q/3392354/1366033)
 
   * [`set.add`](https://docs.python.org/3/library/stdtypes.html#frozenset.add)
@@ -1304,6 +1367,22 @@ else:
 
   a.update([3, 4])
   print(a) # {1, 2, 3, 4}
+  ```
+
+* [How to remove multiple elements from a set?](https://stackoverflow.com/q/49348340/1366033)
+
+  use [`difference_update`](https://docs.python.org/3.6/library/stdtypes.html#frozenset.difference_update)
+
+  ```py
+  s = set([1,2,3,4])
+  s.difference_update([2,3])
+  print(s) # {1, 4}
+  ```
+
+  ```py
+  s = set([1,2,3,4])
+  s -= {2,3}
+  print(s) # {1, 4}
   ```
 
 * [How to append multiple values to a list in Python](https://stackoverflow.com/q/20196159/1366033)
@@ -1723,3 +1802,35 @@ else:
 
   prod([2,3]) # 6
   ```
+
+* [Finding and replacing elements in a list](https://stackoverflow.com/q/2582138/1366033)
+
+  Create new list
+
+  ```py
+  xs = [1, 4, 3]
+  [2 if x == 4 else x for x in xs]
+  # [1, 2, 3]
+  ```
+
+In place
+
+  ```py
+  xs = [1, 4, 3]
+  for i, n in enumerate(xs):
+      if n == 4:
+          xs[i] = 2
+  print(xs)
+  # [1, 2, 3]
+  ```
+
+* [How to create a matrix with negative index position?](https://stackoverflow.com/q/53494616/1366033)
+
+  ```py
+  a={i:0 for i in range(-3,3)}
+  ```
+
+  ```py
+  a={(i,j):0 for i in range(-3,3) for j in range(-3,3)}
+  ```
+

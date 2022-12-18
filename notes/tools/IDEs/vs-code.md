@@ -776,3 +776,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   }
   ```
 
+* [How to completely uninstall VS Code on Windows?](https://stackoverflow.com/q/47689536/1366033)
+
+1. Uninstall
+2. Delete:
+   * `%UserProfile%/.vscode`
+   * `%AppData%/Code`
+
