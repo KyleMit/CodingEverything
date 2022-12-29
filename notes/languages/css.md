@@ -165,3 +165,26 @@ button {
   }
   ```
 
+* [Is there a "previous sibling" selector?](https://stackoverflow.com/q/1817792/1366033)
+
+  Use [`:has()`](https://www.w3.org/TR/selectors-4/#relational) selector
+
+  ```css
+  previous:has(+ next) {}
+  ```
+
+* [Make any hovered color darker/lighter that the original](https://stackoverflow.com/q/53682577/1366033)
+
+  Use [`brightness`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness) filter
+
+  ```css
+  .light-on-hover:hover {
+    filter: brightness(5.00);
+  }
+
+  .dark-on-hover:hover {
+    filter: brightness(0.5);
+  }
+  ``
+
+  
