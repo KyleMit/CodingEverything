@@ -228,26 +228,6 @@ let sayHelloDebounced = debounce(sayHello, 2000)
 sayHelloDebounced('David')
 ```
 
-[Using async/await with a forEach loop](https://stackoverflow.com/q/37576685/1366033)
-
-```js
-async function printFiles () {
-  const files = await getFilePaths();
-
-  await Promise.all(files.map(async (file) => {
-    const contents = await fs.readFile(file, 'utf8')
-    console.log(contents)
-  }));
-}
-```
-
-[What does a tilde do when it precedes an expression?](https://stackoverflow.com/q/12299665/1366033)
-
-```js
-console.log(~"apple".indexOf("a"))     // true
-console.log("apple".indexOf("a") >= 0) // true
-console.log("apple".includes("a"))     // true
-```
 
 ## `Object.defineProperty()`
 
@@ -365,6 +345,27 @@ winget install graphviz
 * [get the second to last item of an array](https://stackoverflow.com/a/24331358/1366033)
 * [Async and Await with Array.map()](https://flaviocopes.com/javascript-async-await-array-map/)
 
+* [Using async/await with a forEach loop](https://stackoverflow.com/q/37576685/1366033)
+
+  ```js
+  async function printFiles () {
+    const files = await getFilePaths();
+
+    await Promise.all(files.map(async (file) => {
+      const contents = await fs.readFile(file, 'utf8')
+      console.log(contents)
+    }));
+  }
+  ```
+
+* [What does a tilde do when it precedes an expression?](https://stackoverflow.com/q/12299665/1366033)
+
+  ```js
+  console.log(~"apple".indexOf("a"))     // true
+  console.log("apple".indexOf("a") >= 0) // true
+  console.log("apple".includes("a"))     // true
+  ```
+
 
 * [Getting Text From Fetch Response Object](https://stackoverflow.com/a/41946517/1366033)
 
@@ -481,7 +482,10 @@ winget install graphviz
 
 * [Check if string in another string (`includes`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 
-
+  ```JS
+  "abc".includes("b")         // true
+  ["a","b","c"].includes("b") // true
+  ```
 
 * [Pop, Push, Shift and Unshift Array Methods in JavaScript](https://alligator.io/js/push-pop-shift-unshift-array-methods/)
 
@@ -489,8 +493,9 @@ winget install graphviz
 
   ```js
   let cats = ['Bob', 'Willy', 'Mini'];
-  cats.pop(); // ['Bob', 'Willy']
-  pop() // returns the removed item.
+  let cat = cats.pop(); 
+  console.log(cats) // ['Bob', 'Willy']
+  console.log(cat)  // 'Mini'
   ```
 
 * `push()`  Add items to the end of an array
@@ -499,15 +504,14 @@ winget install graphviz
   let cats = ['Bob'];
   cats.push('Willy'); // ['Bob', 'Willy']
   cats.push('Puff', 'George'); // ['Bob', 'Willy', 'Puff', 'George']
-  push() // returns the new array length.
   ```
 
 * `shift()` - Remove an item from the beginning of an array
 
   ```js
   let cats = ['Bob', 'Willy', 'Mini'];
-  cats.shift(); // ['Willy', 'Mini']
-  shift() // returns the removed item.
+  let cat = cats.shift(); // ['Willy', 'Mini']
+  console.log(cat) // "Bob"
   ```
 
 * `unshift()` - Add items to the beginning of an array
@@ -516,7 +520,6 @@ winget install graphviz
   let cats = ['Bob'];
   cats.unshift('Willy'); // ['Willy', 'Bob']
   cats.unshift('Puff', 'George'); // ['Puff', 'George', 'Willy', 'Bob']
-  unshift() // returns the new array length
   ```
 
 * Iteration and Generation
