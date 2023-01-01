@@ -762,6 +762,13 @@ pytest --version
   xs # [None, None, None]
   ```
 
+* [How do I create a list with numbers between two values?](https://stackoverflow.com/q/18265935/1366033)
+
+  ```py
+  list(range(3 + 1))
+  # [1,2,3]
+  ```
+
 * [How do I split a list into equally-sized chunks?](https://stackoverflow.com/q/312443/1366033)
 
   ```py
@@ -1383,6 +1390,25 @@ pytest --version
   s = set([1,2,3,4])
   s -= {2,3}
   print(s) # {1, 4}
+  ```
+
+* [How to retrieve an element from a set without removing it?](https://stackoverflow.com/q/59825/1366033)
+
+  Use [`next`](https://docs.python.org/3/library/functions.html#next) and [`iter`](https://docs.python.org/3/library/functions.html#iter)
+
+  ```py
+  s = set([2])
+  next(iter(s)) # 2
+  ```
+
+  ```py
+  s = set([2])
+  s.__iter__().__next__() # 2
+  ```
+
+  ```py
+  s = set([2])
+  list(s)[0] # 2
   ```
 
 * [How to append multiple values to a list in Python](https://stackoverflow.com/q/20196159/1366033)
