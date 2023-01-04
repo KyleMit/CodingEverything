@@ -465,3 +465,22 @@ git rev-list --count <revision>
   git apply mypatch.patch
   ```
 
+* [How do I run a code formatter over my source without modifying git history?](https://stackoverflow.com/q/53502654/1366033)
+
+  1. Create a file `.git-blame-ignore-revs`
+
+  2. Add `blame.ignoreRevsFile` to git config
+
+    ```bash
+    git config --local blame.ignoreRevsFile .git-blame-ignore-revs
+    ```
+
+  To check origin ignore config:
+
+  ```bash
+  ❯ git config --show-origin blame.ignoreRevsFile
+  # file:.git/config        .git-blame-ignore-revs
+  ```
+
+  * [GitHub - Ignore commits in the blame view](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view)
+  * [`git-blame` docs](https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt)

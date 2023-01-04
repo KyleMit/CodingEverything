@@ -778,8 +778,12 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
 * [How to completely uninstall VS Code on Windows?](https://stackoverflow.com/q/47689536/1366033)
 
-1. Uninstall
-2. Delete:
-   * `%UserProfile%/.vscode`
-   * `%AppData%/Code`
+  1. Uninstall
+  2. Delete:
+     * `%UserProfile%/.vscode`
+     * `%AppData%/Code`
+
+* [vscode-gitlens - Support ignoring revisions on blame](https://github.com/gitkraken/vscode-gitlens/issues/947)
+
+  Use built in `blame.ignoreRevsFile=.git-blame-ignore-revs`
 

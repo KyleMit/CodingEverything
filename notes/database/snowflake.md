@@ -28,6 +28,18 @@
 
 * [Snowflake SQL Filter by transactions in the last rolling 30 days](https://stackoverflow.com/a/68129314/1366033)
 
+  [`DATEADD`](https://docs.snowflake.com/en/sql-reference/functions/dateadd.html)
+  [`CURRENT_DATE`](https://docs.snowflake.com/en/sql-reference/functions/current_date.html)
+
   ```sql
   where item_date_purchased > dateadd(day, -30, current_date());
   ```
+
+* String ends with another string
+
+  [`endswith`](https://docs.snowflake.com/en/sql-reference/functions/endswith.html)
+
+  ```sql
+  where endswith(hostname, '.com')
+  ```
+

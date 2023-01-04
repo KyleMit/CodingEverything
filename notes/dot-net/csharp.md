@@ -1,5 +1,9 @@
 # C Sharp
 
+## Links
+
+* [SharpLab](https://sharplab.io/)
+
 ## Docs
 
 * Appendix
@@ -581,5 +585,67 @@ namespace ExtensionMethods
       const string s = "hello";
       return s;
   }
+  ```
+
+* [Destructuring assignment - object properties to variables in C#](https://stackoverflow.com/q/35754020/1366033)
+
+  * [Deconstructing Records](https://dotnetfiddle.net/zIlmvv)
+  * [Deconstructing tuples and other types](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct)
+
+  ```cs
+  public record Person(string firstName, string lastName) {}
+
+  var person = new Person("Kyle", "Mit");
+  var (firstName, lastName) = person;
+  Console.WriteLine(firstName); // "Kyle"
+  ```
+
+* [with expression vs new keyword](https://stackoverflow.com/q/62418120/1366033)
+
+  [with expression](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/with-expression)
+
+  [.NET Fiddle](https://dotnetfiddle.net/rzkuFy)
+
+  ```cs
+  public record Person(string FirstName, string LastName) {}
+
+  var person = new Person("Kyle", "Mit");
+  var newPerson = person with { FirstName = "Beth" };
+
+  Console.WriteLine(person.FirstName);   // "Kyle"
+  Console.WriteLine(newPerson.FirstName); // "Beth"
+  ```
+
+  [Compiles into](https://sharplab.io/#v2:EYLgtghglgdgPgAQEwEYCwAoTCDMACBFANgKT0ljwG9M86D9CSEAWPAWQAoBKazASH4A3CACc8ABwCmogM4B7GHgC8eGFIDueAAoyFMTgCIA0gE8ANlMMAaPIfZQALoe4BuWvU8jx6jbrmKKpJ6gRpOABbUeABiUHKOAHIQYFJBhgBCUo7hhngAvu4Ygh6edIQAnJzSATAAdLHxSSlu9AD0rXZmloYC/BWcvv769XGyiclSLe12mdk9GJ55mEtYGLh4olIAxvKiACY6IQaEAAwxo+Mptqd4ADIQY02T1HlAA)
+
+  ```cs
+  Person person = new Person("Kyle", "Mit");
+  Person person2 = person.<Clone>$();
+  person2.FirstName = "Beth";
+  ```
+
+* [When to use record vs class vs struct](https://stackoverflow.com/q/64816714/1366033)
+
+  * Types
+    * [Classes](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)
+      * [class keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class)
+    * [Structs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/structs)
+      * [Structure types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct)
+    * [Anonymous Types](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)
+      * new operator together with an object initializer
+    * [Tuple types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples)
+    * [Records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record)
+      * [Use record types](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records)
+    * [ExpandoObject Class (System.Dynamic)](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?redirectedfrom=MSDN&view=net-6.0)
+
+  * Learning
+    * [Choosing between anonymous and tuple types](https://learn.microsoft.com/en-us/dotnet/standard/base-types/choosing-between-anonymous-and-tuple)
+
+
+* [Better naming in Tuple classes than "Item1", "Item2"](https://stackoverflow.com/q/7745938/1366033)
+
+  ```cs
+  (string first, string middle, string last) person = ("A", "B", "C");
+  person.first; // "A"
   ```
 

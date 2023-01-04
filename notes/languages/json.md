@@ -1,5 +1,7 @@
 # JSON
 
+* **JSON** - JavaScript Object Notation
+
 ## JSON W/ Comments
 
 * [jsonc]([jsonc](https://komkom.github.io/))
