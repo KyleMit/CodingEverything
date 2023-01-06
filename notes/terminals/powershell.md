@@ -1097,6 +1097,18 @@ $env:LOCALAPPDATA
   "abc" -like "*b*"
   ```
 
+* [Powershell match operator on cmdlet output OR variable name for pipeline output?](https://stackoverflow.com/q/73666512/1366033)
+
+  ```ps1
+  (echo abc | Select-String "b").Matches.Success # true
+  ```
+
+* [How to grep command output?](https://stackoverflow.com/q/1485215/1366033)
+
+  ```ps1
+  echo "abc" | findstr -i "b"
+  ```
+
 * Extract Regex Match
 
   ```ps1
@@ -1339,3 +1351,15 @@ $env:LOCALAPPDATA
   $statusCode = Get-UrlStatusCode 'https://example.com/'
   ```
 
+* [Safely converting string to bool in PowerShell](https://stackoverflow.com/q/27484682/1366033)
+
+  ```ps1
+  [bool]"" # False
+  [bool]"a" # False
+  [System.Convert]::ToBoolean(1) # True
+  [System.Convert]::ToBoolean(0) # False
+  [System.Convert]::ToBoolean("True")  # True
+  [System.Convert]::ToBoolean("False") # False
+  ```
+
+  

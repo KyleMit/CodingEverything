@@ -1,4 +1,4 @@
-# Windows CMD
+# Windows CMD / DOS
 
 AKA Batch Script
 
@@ -29,6 +29,7 @@ AKA Batch Script
 
 * [dir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
 * [mklink](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink)
+* [findstr](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr)
 
 ## Questions
 
