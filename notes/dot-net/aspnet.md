@@ -37,3 +37,31 @@
   var params = httpRequest.Query.ToDictionary()
   ```
 
+* [ASP.NET MVC 3 Razor: Include JavaScript file in the head tag](https://stackoverflow.com/q/4311783/1366033)
+
+  `_Layout.cshtml`
+
+  ```cs
+  @RenderSection("JavaScript", required: false)
+  ```
+
+  `_SomeView.cshtml`
+
+  ```cs
+  @section JavaScript
+  {
+      <script type="text/javascript" src="@Url.Content("/Scripts/SomeScript.js")"></script>
+      <script type="text/javascript" src="@Url.Content("/Scripts/AnotherScript.js")"></script>
+  }
+  ```
+
+* [What is an MvcHtmlString and when should I use it?](https://stackoverflow.com/q/2293357/1366033)
+
+  [`System.Web.Mvc.MvcHtmlString`](https://learn.microsoft.com/en-us/dotnet/api/system.web.mvc.mvchtmlstring)
+
+
+  > Razor encodes everything by default, but by using MvcHtmlString in your html helpers you can tell razor that it doesn't need to encode it.
+
+* [Equivalent for MvcHtmlString in ASP.NET 5?](https://stackoverflow.com/q/29602202/1366033)
+
+  Use [`Microsoft.AspNetCore.Html.HtmlString](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.html.htmlstring)

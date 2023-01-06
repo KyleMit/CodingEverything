@@ -1,8 +1,9 @@
 # YAML
 
-* [YAML Ain’t Markup Language (YAML™) Version 1.2](https://yaml.org/spec/1.2/spec.html)
-* [Convert JSON to YAML](https://www.json2yaml.com/)
+* **YAML** - YAML Ain’t Markup Language
 
+* [Spec Version 1.2](https://yaml.org/spec/1.2/spec.html)
+* [Convert JSON to YAML](https://www.json2yaml.com/)
 
 ## Questions
 

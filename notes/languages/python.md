@@ -1839,7 +1839,7 @@ pytest --version
   # [1, 2, 3]
   ```
 
-In place
+  In place
 
   ```py
   xs = [1, 4, 3]
