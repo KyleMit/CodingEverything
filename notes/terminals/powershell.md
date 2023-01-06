@@ -654,12 +654,12 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 * [Search Depth](https://stackoverflow.com/a/13250444/1366033)
 
 * [Reddit Join](https://www.reddit.com/r/PowerShell/comments/2zqff6/join_objects_arrays_together_like_sql_join/)
-* [SO Join](http://stackoverflow.com/questions/11721835/in-powershell-how-can-i-combine-the-results-of-two-commands-that-have-a-1-to-1)
-* [SO Join](http://stackoverflow.com/questions/1851087/powershell-join)
-* [Join-Object](http://poshcode.org/1461)
-* [Join-Object](http://blogs.msdn.com/b/powershell/archive/2012/07/13/join-object.aspx)
-* [Join-Object](http://ramblingcookiemonster.github.io/Join-Object/)
-* [Join-Object](https://github.com/RamblingCookieMonster/PowerShell/blob/master/Join-Object.ps1)
+  * [SO Join](http://stackoverflow.com/questions/11721835/in-powershell-how-can-i-combine-the-results-of-two-commands-that-have-a-1-to-1)
+  * [SO Join](http://stackoverflow.com/questions/1851087/powershell-join)
+  * [Join-Object](http://poshcode.org/1461)
+  * [Join-Object](http://blogs.msdn.com/b/powershell/archive/2012/07/13/join-object.aspx)
+  * [Join-Object](http://ramblingcookiemonster.github.io/Join-Object/)
+  * [Join-Object](https://github.com/RamblingCookieMonster/PowerShell/blob/master/Join-Object.ps1)
 * [Calculated Properties](https://technet.microsoft.com/en-us/library/ff730948.aspx)
 
 * [PS Object Array](https://stackoverflow.com/a/17354800/1366033)
@@ -1339,3 +1339,34 @@ $env:LOCALAPPDATA
   $statusCode = Get-UrlStatusCode 'https://example.com/'
   ```
 
+* [PowerShell: How do I convert an array object to a string in PowerShell?](https://stackoverflow.com/q/7723584/1366033)
+
+  ```ps1
+  $a = 'This', 'is', 'a', 'cat'
+  $a -join ' ' # This is a cat
+  ```
+
+* [How to split string by string in Powershell](https://stackoverflow.com/q/16435240/1366033)
+
+  ```ps1
+  $a = "This is a cat"
+  $a -split ' ' # ('This', 'is', 'a', 'cat')
+  ```
+
+* [Select/map each item of a Powershell array to a new array](https://stackoverflow.com/q/8908879/1366033)
+
+
+  ```ps1
+  $nums = (1,2,3)
+  $nums | ForEach-Object { $_ + 1 } # (2,3,4)
+  ```
+
+* [How to convert string to integer in PowerShell](https://stackoverflow.com/q/33707193/1366033)
+
+
+  ```ps1
+  $string = "1654"
+  $integer = [int]$string
+  ```
+
+  

@@ -43,3 +43,20 @@
   where endswith(hostname, '.com')
   ```
 
+* [Snowflake date_trunc to remove time from date](https://stackoverflow.com/q/58111744/1366033)
+
+  ```sql
+  select to_timestamp('2019-09-23 12:33:25') -- 2019-09-23T12:33:25Z
+  select date_trunc('DAY', to_timestamp('2019-09-23 12:33:25')) -- 2019-09-23T00:00:00Z
+  select cast(date_trunc('DAY',  to_timestamp('2019-09-23 12:33:25')) as date) -- 2019-09-23
+  select cast(to_timestamp('2019-09-23 12:33:25') as date) -- 2019-09-23
+  select to_timestamp('2019-09-23 12:33:25')::date -- 2019-09-23
+  select date(to_timestamp('2019-09-23 12:33:25')) -- 2019-09-23
+  ```
+
+  * [Date & Time Data Types](https://docs.snowflake.com/en/sql-reference/data-types-datetime.html)
+  * [Date and Time Input / Output](https://docs.snowflake.com/en/user-guide/date-time-input-output.html)
+  * [Date & Time Functions](https://docs.snowflake.com/en/sql-reference/functions-date-time.html)
+    * [CURRENT_TIMESTAMP](https://docs.snowflake.com/en/sql-reference/functions/current_timestamp.html)
+    * [TO_DATE , DATE](https://docs.snowflake.com/en/sql-reference/functions/to_date.html)
+    * [DATE_PART](https://docs.snowflake.com/en/sql-reference/functions/date_part.html)
