@@ -409,6 +409,7 @@ npm install -g nodemon
     ```js
     let currentWorkingDirectory = process.cwd()
     let currentFileDirectory = __dirname
+    let pathToCurrentFile = __filename
     ```
 
 * [Simplest Node.js server is just](https://stackoverflow.com/a/23122981/1366033)
@@ -547,3 +548,17 @@ npm install -g nodemon
     path.basename('/foo/bar/asdf.html') // 'asdf.html'
     ```
 
+
+
+* [Why is __dirname not defined in node REPL?](https://stackoverflow.com/q/8817423/1366033)
+
+
+    > If you are using Node.js modules, `__dirname` and `__filename` don't exist.
+
+    ```js
+    import { fileURLToPath } from 'url';
+    import { dirname } from 'path';
+
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+    ```

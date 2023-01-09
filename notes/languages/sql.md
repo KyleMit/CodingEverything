@@ -235,3 +235,14 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     WITH VALUES
     ```
 
+* [Check if a varchar is a number (TSQL)](https://stackoverflow.com/q/4603292/1366033)
+
+    Use [`ISNUMERIC`](https://learn.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql)
+
+    ```sql
+    SELECT ISNUMERIC(null)  -- 0
+    SELECT ISNUMERIC('abc') -- 0
+    SELECT ISNUMERIC(2)	    -- 1
+    SELECT ISNUMERIC('2')   -- 1
+    ```
+
