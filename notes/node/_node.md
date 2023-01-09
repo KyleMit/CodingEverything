@@ -547,3 +547,126 @@ npm install -g nodemon
     path.basename('/foo/bar/asdf.html') // 'asdf.html'
     ```
 
+* [Get user input through Node.js console](https://stackoverflow.com/q/61394928/1366033)
+
+    Use [`readline/promises`](https://nodejs.org/api/readline.html#promises-api)
+
+    ```js
+    import * as readline from 'node:readline/promises';
+    import { stdin as input, stdout as output } from 'node:process';
+
+    const rl = readline.createInterface({ input, output });
+    const answer = await rl.question('What do you think of Node.js? ');
+    console.log(`Thank you for your valuable feedback: ${answer}`);
+
+    rl.close();
+    ```
+
+    Wrap in Promise
+
+    ```js
+    import { createInterface } from 'readline';
+    import { stdin , stdout } from 'process';
+
+    (async() => {
+        const rl = createInterface({ input: stdin, output: stdout });
+        const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
+        const name = await prompt("What's your name: ");
+        console.log(`Hello ${name}`);
+        rl.close();
+    })();
+    ```
+
+* [How to use nodejs to open default browser and navigate to a specific URL](https://stackoverflow.com/q/8500326/1366033)
+
+    Use [`sindresorhus/open`](https://github.com/sindresorhus/open)
+
+    ```bash
+    npm install open
+    ```
+
+    ```js
+    const open = require('open');
+    open('http://sindresorhus.com');
+    ```
+
+    Execute Child Process
+
+    ```js
+    import cp from 'child_process'
+    import {platform} from 'process'
+
+    var url = 'https://stackoverflow.com/';
+    var start = platform == 'darwin' ? 'open'
+            : platform == 'win32' ? 'start'
+            : 'xdg-open';
+    cp.exec(start + ' ' + url);
+    ```
+
+* [Using Node.JS, how do I read a JSON file into (server) memory?](https://stackoverflow.com/q/10011011/1366033)
+
+    ```js
+    import { promises as fs } from "fs"
+    const contents = await fs.readFile("./config.json", { encoding: 'utf8'})
+    const obj = JSON.parse(contents);
+    ```
+
+* [Hide the console cursor without affecting it's position?](https://stackoverflow.com/q/73101623/1366033)
+
+    [ANSI Escape Codes](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
+
+    ```js
+    import { stdout } from "process"
+
+    stdout.write('\u001B[?25l'); // hides cursor
+    stdout.write('\u001B[?25h'); // show cursor 
+    ```
+
+* [How to make a loading animation in Console Application written in JavaScript or NodeJs?](https://stackoverflow.com/q/34848505/1366033)
+
+    ```js
+    import { stdout } from "process"
+
+    function startSpinner() {
+        const characters = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+        const cursorEsc = {
+            hide: '\u001B[?25l',
+            show: '\u001B[?25h',
+        }
+        stdout.write(cursorEsc.hide)
+
+        let i = 0;
+        const timer = setInterval(function () {
+            stdout.write("\r" + characters[i++]);
+            i = i >= characters.length ? 0 : i;
+        }, 150);
+
+        return () => {
+            clearInterval(timer)
+            stdout.write("\r")
+            stdout.write(cursorEsc.show)
+        }
+    }
+
+
+    const stopSpinner = startSpinner();
+
+    setTimeout(() => {
+        stopSpinner()
+        console.log("done")
+    },4000)
+    ```
+
+  * [sindresorhus/cli-spinners: Spinners for use in the terminal](https://github.com/sindresorhus/cli-spinners)
+  * [sindresorhus/ora: Elegant terminal spinner](https://github.com/sindresorhus/ora)
+
+* [How can I specify the required Node.js version in package.json?](https://stackoverflow.com/q/29349684/1366033)
+
+    Use [`engines`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines)
+
+    ```json
+    "engines" : { 
+    "npm" : ">=8.0.0 <9.0.0",
+    "node" : ">=16.0.0 <17.0.0"
+    }
+    ```

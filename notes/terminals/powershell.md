@@ -871,12 +871,6 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 
   > Unlike the `CMD.EXE CHDIR` or `CD` command, the PowerShell [`Set-Location`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2) cmdlet will change *both* drive and directory
 
-* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
-
-    ```ps1
-    $resp = gh auth status 2>&1
-    $resp = cmd /c gh auth status '2>&1'
-    ```
 
 * [Why use "Cmd /c Powershell" instead of just "Powershell"?](https://superuser.com/q/1246339/180163)
 
@@ -1390,4 +1384,43 @@ $env:LOCALAPPDATA
   $integer = [int]$string
   ```
 
-  
+* [What does the & symbol in powershell mean?](https://stackoverflow.com/q/22074507/1366033)
+
+  [**Call operator** `&`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3#call-operator-) AKA "Invocation Operator"
+
+  > Runs a command, script, or script block
+
+  ```ps1
+  function SayHi() { Write-Host "Hello" }
+  & SayHi
+  ```
+
+* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
+
+    ```ps1
+    $resp = gh auth status 2>&1
+    $resp = cmd /c gh auth status '2>&1'
+    ```
+
+
+* [With PowerShell, how can I get Write-Debug output to appear in the console?](https://stackoverflow.com/q/45289719/1366033)
+
+  Use [`$DebugPreference`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Preference_Variables?view=powershell-7.3#debugpreference)
+
+  ```ps1
+  $DebugPreference = 'Continue'
+  Write-Debug "Debug Stream"
+  $DebugPreference = 'SilentlyContinue'
+  ```
+
+* [How to run a PowerShell script with verbose output?](https://stackoverflow.com/q/41324882/1366033)
+
+  Use [`$VerbosePreference`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Preference_Variables?view=powershell-7.3#verbosepreference)
+
+  ```ps1
+  $VerbosePreference = 'Continue'
+  Write-Verbose "Verbose Stream"
+  $VerbosePreference = 'SilentlyContinue'
+  ```
+
+* Capture program stdout and stderr to separate variables
