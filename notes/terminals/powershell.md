@@ -871,12 +871,6 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 
   > Unlike the `CMD.EXE CHDIR` or `CD` command, the PowerShell [`Set-Location`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-location?view=powershell-7.2) cmdlet will change *both* drive and directory
 
-* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
-
-    ```ps1
-    $resp = gh auth status 2>&1
-    $resp = cmd /c gh auth status '2>&1'
-    ```
 
 * [Why use "Cmd /c Powershell" instead of just "Powershell"?](https://superuser.com/q/1246339/180163)
 
@@ -1095,6 +1089,18 @@ $env:LOCALAPPDATA
   ```ps1
   "abc" -match "b"
   "abc" -like "*b*"
+  ```
+
+* [Powershell match operator on cmdlet output OR variable name for pipeline output?](https://stackoverflow.com/q/73666512/1366033)
+
+  ```ps1
+  (echo abc | Select-String "b").Matches.Success # true
+  ```
+
+* [How to grep command output?](https://stackoverflow.com/q/1485215/1366033)
+
+  ```ps1
+  echo "abc" | findstr -i "b"
   ```
 
 * Extract Regex Match
@@ -1339,6 +1345,17 @@ $env:LOCALAPPDATA
   $statusCode = Get-UrlStatusCode 'https://example.com/'
   ```
 
+* [Safely converting string to bool in PowerShell](https://stackoverflow.com/q/27484682/1366033)
+
+  ```ps1
+  [bool]"" # False
+  [bool]"a" # False
+  [System.Convert]::ToBoolean(1) # True
+  [System.Convert]::ToBoolean(0) # False
+  [System.Convert]::ToBoolean("True")  # True
+  [System.Convert]::ToBoolean("False") # False
+  ```
+
 * [PowerShell: How do I convert an array object to a string in PowerShell?](https://stackoverflow.com/q/7723584/1366033)
 
   ```ps1
@@ -1355,7 +1372,6 @@ $env:LOCALAPPDATA
 
 * [Select/map each item of a Powershell array to a new array](https://stackoverflow.com/q/8908879/1366033)
 
-
   ```ps1
   $nums = (1,2,3)
   $nums | ForEach-Object { $_ + 1 } # (2,3,4)
@@ -1363,10 +1379,48 @@ $env:LOCALAPPDATA
 
 * [How to convert string to integer in PowerShell](https://stackoverflow.com/q/33707193/1366033)
 
-
   ```ps1
   $string = "1654"
   $integer = [int]$string
   ```
 
-  
+* [What does the & symbol in powershell mean?](https://stackoverflow.com/q/22074507/1366033)
+
+  [**Call operator** `&`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3#call-operator-) AKA "Invocation Operator"
+
+  > Runs a command, script, or script block
+
+  ```ps1
+  function SayHi() { Write-Host "Hello" }
+  & SayHi
+  ```
+
+* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
+
+    ```ps1
+    $resp = gh auth status 2>&1
+    $resp = cmd /c gh auth status '2>&1'
+    ```
+
+
+* [With PowerShell, how can I get Write-Debug output to appear in the console?](https://stackoverflow.com/q/45289719/1366033)
+
+  Use [`$DebugPreference`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Preference_Variables?view=powershell-7.3#debugpreference)
+
+  ```ps1
+  $DebugPreference = 'Continue'
+  Write-Debug "Debug Stream"
+  $DebugPreference = 'SilentlyContinue'
+  ```
+
+* [How to run a PowerShell script with verbose output?](https://stackoverflow.com/q/41324882/1366033)
+
+  Use [`$VerbosePreference`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Preference_Variables?view=powershell-7.3#verbosepreference)
+
+  ```ps1
+  $VerbosePreference = 'Continue'
+  Write-Verbose "Verbose Stream"
+  $VerbosePreference = 'SilentlyContinue'
+  ```
+
+* Capture program stdout and stderr to separate variables
