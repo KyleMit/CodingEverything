@@ -289,11 +289,28 @@ git rev-list --count <revision>
 
 * [How to get default branch name?](https://stackoverflow.com/q/28666357/1366033)
 
+  Use [`git-rev-parse`](https://git-scm.com/docs/git-rev-parse)
+
   ```bash
   git rev-parse --abbrev-ref origin/HEAD
-  git remote show origin
+  ```
+
+  Use [`git-remote`](https://git-scm.com/docs/git-remote)
+
+  ```bash
+  git remote show origin | grep "HEAD branch"
+  ```
+
+  Use [`git-symbolic-ref`](https://git-scm.com/docs/git-symbolic-ref)
+
+  ```bash
   git symbolic-ref refs/remotes/origin/HEAD
-  git remote set-head origin -a
+  ```
+
+  Use [`git-branch --remotes`](https://git-scm.com/docs/git-branch#Documentation/git-branch.txt---remotes)
+
+  ```bash
+  git branch --remotes --list '*/HEAD'
   ```
 
 * [Get Preferred Default Branch](https://stackoverflow.com/q/65703168/1366033)

@@ -787,3 +787,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   Use built in `blame.ignoreRevsFile=.git-blame-ignore-revs`
 
+* [How do I turn on text wrapping by default in VS Code](https://stackoverflow.com/q/38561881/1366033)
+
+  ```json
+  "editor.wordWrap": "on",
+  ```

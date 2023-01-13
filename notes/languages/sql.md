@@ -246,3 +246,11 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT ISNUMERIC('2')   -- 1
     ```
 
+* [Query to select dates between two dates](https://stackoverflow.com/q/5125076/1366033)
+
+    Use [`BETWEEN`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/between-transact-sql)
+
+    ```sql
+    SELECT * FROM Records
+    WHERE CreationDate BETWEEN '12/1/2022' AND '1/10/2023'
+    ```

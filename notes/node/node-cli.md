@@ -116,7 +116,7 @@ program
 * [How to list all the Node.js modules I have linked with npm](https://stackoverflow.com/q/24933955/1366033)
 
    ```bash
-   npm ls -global --depth=0 --link=true
+   npm ls --global --depth=0 --link=true
    ```
 
 * [How do I uninstall a package installed using npm link?](https://stackoverflow.com/q/19094630/1366033)
@@ -124,4 +124,3 @@ program
    ```bash
    npm rm --global foo
    ```
-   

@@ -255,3 +255,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Call an async method in the immediate window Visual Studio](https://stackoverflow.com/q/59053129/1366033)
 
   Click the thread icon on the right side of the value in the watch window
+
+* [Why does it say "Project with that name already opened in the solution"](https://stackoverflow.com/questions/923235/)
+
+  1. Remove Project
+  2. Close & ReOpen VS
+  3. Add Project
