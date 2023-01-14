@@ -507,3 +507,13 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   var contents = await response.Content.ReadAsStringAsync();
   ```
 
+* [How the int.TryParse actually works](https://stackoverflow.com/q/15294878/1366033)
+
+  [`int.TryParse`](https://learn.microsoft.com/en-us/dotnet/api/system.int32.tryparse)
+
+  ```cs
+  var valueStr = "6";
+  var success = int.TryParse(valueStr, out var valueInt);
+  // success = true
+  // valueInt = 6
+  ```

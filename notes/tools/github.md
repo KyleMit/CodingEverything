@@ -1,17 +1,5 @@
 # Github
 
-## Github CLI
-
-* [cli.github.com](https://cli.github.com)
-* [github/hub](https://github.com/github/hub)
-* [cli/cli](https://github.com/cli/cli)
-
-* [GitHub CLI vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
-
-```bash
-gh repo clone github/hub
-git clone git@github.com:github/hub.git
-```
 
 ## Github Developer Program
 
@@ -80,6 +68,22 @@ kramdown:
 * [github/copilot-docs: Documentation for GitHub Copilot](https://github.com/github/copilot-docs)
 * [GitHub Copilot - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
+
+## Github CLI
+
+* [cli.github.com](https://cli.github.com)
+* [github/hub](https://github.com/github/hub)
+* [cli/cli](https://github.com/cli/cli)
+
+* [GitHub CLI vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
+
+```bash
+gh repo clone github/hub
+git clone git@github.com:github/hub.git
+```
+
+[Installation on Windows](https://github.com/cli/cli#windows)
+
 ## Questions
 
 * [How to change tab size on GitHub?](https://stackoverflow.com/q/8833953/1366033)
@@ -91,7 +95,6 @@ kramdown:
   ```css
   * { tab-size: 4 }
   ```
-
 
 * [How to I get Github to notify me of review requests?](https://stackoverflow.com/q/62421084/1366033)
 

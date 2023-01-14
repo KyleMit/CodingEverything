@@ -1445,3 +1445,20 @@ $env:LOCALAPPDATA
   ```
 
 * Capture program stdout and stderr to separate variables
+
+
+* [Powershell hashtable keys with special characters](https://stackoverflow.com/q/15708203/1366033)
+
+  ```ps1
+  $h=@{'application/pdf'='application/pdf'}
+  $h["application/pdf"] # application/pdf
+  $h."application/pdf"  # application/pdf
+  ```
+
+* ["rm -rf" equivalent for Windows PowerShell?](https://stackoverflow.com/q/61573115/1366033)
+
+  ```ps1
+  Remove-Item -Recurse -Force -Path app
+  ```
+
+  

@@ -235,3 +235,22 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     WITH VALUES
     ```
 
+* [Check if a varchar is a number (TSQL)](https://stackoverflow.com/q/4603292/1366033)
+
+    Use [`ISNUMERIC`](https://learn.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql)
+
+    ```sql
+    SELECT ISNUMERIC(null)  -- 0
+    SELECT ISNUMERIC('abc') -- 0
+    SELECT ISNUMERIC(2)	    -- 1
+    SELECT ISNUMERIC('2')   -- 1
+    ```
+
+* [Query to select dates between two dates](https://stackoverflow.com/q/5125076/1366033)
+
+    Use [`BETWEEN`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/between-transact-sql)
+
+    ```sql
+    SELECT * FROM Records
+    WHERE CreationDate BETWEEN '12/1/2022' AND '1/10/2023'
+    ```
