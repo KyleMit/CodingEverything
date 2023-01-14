@@ -1211,10 +1211,31 @@ $env:LOCALAPPDATA
   ('a','a','b') | Group-Object -NoElement | Sort-Object Count -Descending
   ```
 
-* [The term 'mklink' is not recognized as the name of a cmdlet](https://superuser.com/q/98420/180163)
+* [Creating hard and soft links using PowerShell](https://stackoverflow.com/q/894430/1366033)
 
-  Must use cmd prompt
+  Use [`New-Item`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item)
 
+  ```ps1
+  New-Item -ItemType SymbolicLink|Junction|HardLink -Name Foo -Target Bar
+  ```
+
+  Use cmd prompt + [`mklink`](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink)
+
+  ```ps1
+  cmd /c mklink c:\path\to\symlink c:\target\file
+  ```
+
+  See Also: [The term 'mklink' is not recognized as the name of a cmdlet](https://superuser.com/q/98420/180163)
+
+* [Find out whether a file is a symbolic link in PowerShell](https://stackoverflow.com/q/817794/1366033)
+
+  Use [`Get-Item`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-item)
+
+* [Check if an item exists without an error if it doesn't exist](https://stackoverflow.com/q/4362275/1366033)
+
+  ```ps1
+  Get-Item blah -ErrorAction SilentlyContinue
+  ```
 
 * [Equivalent of cmd's "where" in powershell](https://superuser.com/q/675837/180163)
 
