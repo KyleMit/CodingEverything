@@ -273,6 +273,8 @@ scoop install FiraCode-NF
 scoop install FiraCode-NF-Mono
 ```
 
+[Weird behavior for installed fonts after Windows 11 22H2 update · Issue #198 · matthewjberger/scoop-nerd-fonts](https://github.com/matthewjberger/scoop-nerd-fonts/issues/198)
+
 ## DotFiles
 
 [Saving DotFiles to Github](https://dotfiles.github.io/)
