@@ -803,4 +803,8 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   See Also: [How to select the whole variable name including $ in Visual Studio Code in PHP?](https://stackoverflow.com/q/55931937/1366033)
 
+* [How to syntax-highlight HTML inside JavaScript strings](https://stackoverflow.com/q/49166328/1366033)
+
+  Use [**es6-string-html**](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+
   

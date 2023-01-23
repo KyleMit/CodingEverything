@@ -51,3 +51,60 @@ npm init vite@latest my-vue-app -- --template vue
   import shaderString from './shader.glsl?raw'
   ```
 
+* [In vite, is there a way to update the root html name from index.html](https://stackoverflow.com/q/71295772/1366033)
+
+  Use [Rollup Options Input](https://rollupjs.org/configuration-options/#input)
+
+  ```js
+  import { defineConfig } from 'vite'
+  export default defineConfig({
+    build: {
+      outDir: '../dist',
+      rollupOptions: {
+        input: {
+          app: './src/index.html',
+        },
+      },
+    },
+  })
+  ```
+
+* [How to add a public directory in vitejs configuration file](https://stackoverflow.com/q/68654761/1366033)
+
+  ```js
+  {
+    publicDir: 'assets'
+  }
+  ```
+
+* ["jQuery is not a function" when running vite in production mode](https://stackoverflow.com/q/73172426/1366033)
+
+  ```js
+  import { defineConfig } from 'vite';
+  import inject from '@rollup/plugin-inject';
+
+  // https://vitejs.dev/config/
+  export default defineConfig({
+    plugins: [
+      inject({
+          //Remember to add `"jquery": "^3.6.1"` in `dependencies` for `package.json`
+          jQuery: "jquery",
+          "window.jQuery": "jquery",
+          $: "jquery"
+      })
+    ]
+  })
+  ```
+
+  See Also: [How to use a jQuery plugin inside Vue](https://stackoverflow.com/q/37928998/1366033)
+
+* [Equivalent of a window object in JavaScript modules?](https://stackoverflow.com/q/73738804/1366033)
+
+  ```js
+  Object.assign(window, {foo})
+  ```
+
+* [Change the output path for certain files during build](https://stackoverflow.com/q/71388154/1366033)
+
+  Set `root` to `'./src/pages'`
+
