@@ -185,3 +185,9 @@ Available in Node 8.2 / npm 5.2.0
 
   > If the names are identical without punctuation, we do not allow the package to be created
 
+* [How do you prevent install of "devDependencies" NPM modules?](https://stackoverflow.com/q/9268259/1366033)
+
+  ```bash
+  npm install --production
+  ```
+

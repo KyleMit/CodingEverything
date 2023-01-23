@@ -517,3 +517,70 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   // success = true
   // valueInt = 6
   ```
+
+* [Converting byte array to string and printing out to console](https://stackoverflow.com/q/10940883/1366033)
+
+  ```cs
+  var bytes = new byte[] { 1, 255, 12 };
+  var str = string.Join(",", bytes);
+  Console.WriteLine(str) // 1,255,12
+  ```
+
+* [Read a XML from a string](https://stackoverflow.com/q/8401280/1366033)
+
+  ```cs
+  var rawStringXML = @"<?xml version='1.0'?><response><error code='1'> Success</error></response>";
+  var xmlDoc = new XmlDocument();
+  xmlDoc.LoadXml(rawStringXML);
+  ```
+
+* [Format XML string to print friendly XML string](https://stackoverflow.com/q/1123718/1366033)
+
+  ```cs
+  var rawStringXML = @"<?xml version='1.0'?><response><error code='1'> Success</error></response>";
+  var xmlDoc = new XmlDocument();
+  var sw = new StringWriter();
+  xmlDoc.LoadXml(rawStringXML);
+  xmlDoc.Save(sw);
+  var formattedXml = sw.ToString();
+  ```
+
+* [Can't specify the 'async' modifier on the 'Main' method of a console app](https://stackoverflow.com/q/9208921/1366033)
+
+  [Available in **C# 7.1**](https://devblogs.microsoft.com/dotnet/welcome-to-c-7-1/#gist82557368)
+
+  ```cs
+  class Program
+  {
+      static async Task Main(string[] args)
+      {
+          Bootstrapper bs = new Bootstrapper();
+          var list = await bs.GetList();
+      }
+  }
+  ```
+
+* [How to load a file into memory stream](https://stackoverflow.com/q/6213993/1366033)
+
+  ```cs
+  FileStream str = File.OpenRead("C:/temp/image.png")
+  ```
+
+* [How to send POST with form data in C#](https://stackoverflow.com/q/62679718/1366033)
+
+  Use [`HttpClient`](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netframework-4.8)
+
+  ```cs
+  private static readonly HttpClient client = new HttpClient();
+
+  private async Task<string> PostHTTPRequestAsync(string url, Dictionary<string, string> data)
+  {
+      using HttpContent formContent = new FormUrlEncodedContent(data);
+      using HttpResponseMessage response = await client.PostAsync(url, formContent).ConfigureAwait(false);
+      response.EnsureSuccessStatusCode();
+      return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+  }
+  ```
+
+  **See Also**: [Use IHttpClientFactory to implement resilient HTTP requests](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
+

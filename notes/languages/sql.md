@@ -242,7 +242,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT ISNUMERIC(null)  -- 0
     SELECT ISNUMERIC('abc') -- 0
-    SELECT ISNUMERIC(2)	    -- 1
+    SELECT ISNUMERIC(2)     -- 1
     SELECT ISNUMERIC('2')   -- 1
     ```
 
@@ -253,4 +253,24 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT * FROM Records
     WHERE CreationDate BETWEEN '12/1/2022' AND '1/10/2023'
+    ```
+
+* [WHERE string ends with Column](https://stackoverflow.com/q/25413692/1366033)
+
+    ```sql
+    select * from users where email like '%yahoo.com'
+    ```
+
+* [How to select true/false based on column value?](https://stackoverflow.com/q/2396889/1366033)
+
+    ```sql
+    SELECT CASE WHEN EntityProfile IS NULL THEN 'False' ELSE 'True' END AS HasProfile
+    ```
+
+    ```sql
+    SELECT CASE 
+            WHEN EntityProfile IS NULL 
+            THEN CAST(0 as bit) 
+            ELSE CAST(1 as bit)
+        END AS HasProfile
     ```
