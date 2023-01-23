@@ -157,64 +157,64 @@
 ],
 ```
 
-[URL Validation / Format](https://github.com/json-schema-org/json-schema-spec/issues/233#issuecomment-279180514)
+* [URL Validation / Format](https://github.com/json-schema-org/json-schema-spec/issues/233#issuecomment-279180514)
 
-```json
-{
-    "type": "string",
-    "format": "uri",
-    "pattern": "^(https?|wss?|ftp)://"
-}
-```
-
-
-[JsonSchema - Array](https://cswr.github.io/JsonSchema/spec/arrays/)
-
-```json
-{
-    "type": "array",
-    "items": {
-        "type": "string"
-    }
-}
-```
+  ```json
+  {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|wss?|ftp)://"
+  }
+  ```
 
 
-[JsonSchema - String](https://json-schema.org/understanding-json-schema/reference/string.html)
+* [JsonSchema - Array](https://cswr.github.io/JsonSchema/spec/arrays/)
 
-```json
-{ "type": "string" }
-```
-
-
-[Using RegEx in JSON Schema](https://stackoverflow.com/q/16491973/1366033)
-
-```json
-"phone": {
-    "type": "string",
-    "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
-}
-```
+  ```json
+  {
+      "type": "array",
+      "items": {
+          "type": "string"
+      }
+  }
+  ```
 
 
-[Annotate Enum Values with description](https://github.com/json-schema-org/json-schema-spec/issues/57#issuecomment-247861695)
+* [JsonSchema - String](https://json-schema.org/understanding-json-schema/reference/string.html)
 
-Instead of:
+  ```json
+  { "type": "string" }
+  ```
 
-```js
-"enum": ["foo", "bar", "whatever"]
-```
 
-Do This:
+* [Using RegEx in JSON Schema](https://stackoverflow.com/q/16491973/1366033)
 
-```js
-"oneOf": [
-    {"const": "foo", "title": "Pick Foo"},
-    {"const": "bar", "title": "Pick Bar"},
-    {"const": "whatever", "title": "Don't Care"}
-]
-```
+  ```json
+  "phone": {
+      "type": "string",
+      "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  }
+  ```
 
-[Make sure item property in array is unique in Json Schema?](https://stackoverflow.com/q/24763759/1366033)
 
-> Nope
+* [Annotate Enum Values with description](https://github.com/json-schema-org/json-schema-spec/issues/57#issuecomment-247861695)
+
+  Instead of:
+
+  ```js
+  "enum": ["foo", "bar", "whatever"]
+  ```
+
+  Do This:
+
+  ```js
+  "oneOf": [
+      {"const": "foo", "title": "Pick Foo"},
+      {"const": "bar", "title": "Pick Bar"},
+      {"const": "whatever", "title": "Don't Care"}
+  ]
+  ```
+
+* [Make sure item property in array is unique in Json Schema?](https://stackoverflow.com/q/24763759/1366033)
+
+  > Nope

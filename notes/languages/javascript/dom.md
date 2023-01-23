@@ -104,3 +104,21 @@ Document Object Model
 
   }, {once : true});
   ```
+
+* [List every font a user's browser can display](https://stackoverflow.com/q/3368837/1366033)
+
+  Chrome only in Jan 2023
+
+  Use [Local Font Access API](https://developer.mozilla.org/en-US/docs/Web/API/Local_Font_Access_API)
+
+  ```js
+  const fonts = await queryLocalFonts();
+  ```
+
+  Use [`Navigator.permissions`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions)
+
+  ```js
+  const {state} = await navigator.permissions.query({name: 'local-fonts'});
+  console.log(state); // Either 'granted', 'prompt' or 'denied'
+  ```
+

@@ -1,8 +1,8 @@
 # Vue
 
-## Debug
+## Getting Started
 
-[vuejs/**vue-devtools**](https://github.com/vuejs/vue-devtools) - Browser devtools extension for debugging Vue.js applications
+[vuejs/create-vue: 🛠️ The recommended way to start a Vite-powered Vue project](https://github.com/vuejs/create-vue)
 
 ## Vue CLI
 
@@ -20,8 +20,16 @@ vue-cli-service serve
 vue-cli-service build
 ```
 
+## VS Code
 
-### Third Party Plugins
+* [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+
+## Debug
+
+[vuejs/**vue-devtools**](https://github.com/vuejs/vue-devtools) - Browser devtools extension for debugging Vue.js applications
+
+## Third Party Plugins
 
 
 ### Bootstrap Vue
@@ -36,8 +44,6 @@ vue-cli-service build
 * [Router Transitions](https://router.vuejs.org/guide/advanced/transitions.html#per-route-transition)
 * [Router Transitions Demo](https://markus.oberlehner.net/blog/vue-router-page-transitions/)
 * [History Mode](https://router.vuejs.org/guide/essentials/history-mode.html)
-
-
 
 ### Vue-Markdown
 
@@ -60,3 +66,41 @@ vue-cli-service build
 * [Conditional Class](https://stackoverflow.com/a/43210564/1366033)
 * [Add LocalStorage](https://travishorn.com/add-localstorage-to-your-vue-app-in-2-lines-of-code-56eb2c9f371b)
 * [Offline States](https://github.com/filrak/vue-offline)
+
+
+* [How to fix "unsafe-eval" error with Vue3 for the client-side version?](https://stackoverflow.com/q/68459611/1366033)
+
+  > Error parsing JavaScript expression: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive
+
+  1. Use precompiled templates
+  2. Use `vue.runtime.js` runtime version instead of `vue.js` full version.
+
+* [You are using the runtime-only build of Vue where the template compiler is not available](https://stackoverflow.com/q/47332728/1366033)
+
+  > Component provided template option but runtime compilation is not supported in this build of Vue. Use "vue.global.js" instead.
+
+  [Vue Global](https://jsfiddle.net/KyleMit/8pnqh0xa/)
+
+  ```html
+  <div id="app">{{ message }}</div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    Vue.createApp({
+      data: () => ({ message: 'Hello Vue!' })
+    }).mount('#app')
+  </script>
+  ```
+
+  [Vue Global Runtime](https://jsfiddle.net/KyleMit/ce2sfk4d/)
+
+  ```html
+  <div id="app"></div>
+  <script src="https://unpkg.com/vue@3/dist/vue.runtime.global.js"></script>
+  <script>
+    Vue.createApp({
+      render: () => 'Hello Vue!'
+    }).mount('#app')
+  </script>
+  ```
+
+  **See Also**: [What exactly is Vue's runtime-only build and how does it differ from compiler build?](https://stackoverflow.com/q/66393740/1366033)

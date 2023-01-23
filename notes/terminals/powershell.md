@@ -784,6 +784,28 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
     1..3 | foreach -parallel { & $using:a }
     ```
 
+
+* [How to check if a cmdlet exists in PowerShell at runtime via script](https://stackoverflow.com/q/3919798/1366033)
+
+  ```ps1
+  function Check-Command($cmdName)
+  {
+      return [bool](Get-Command -Name $cmdName -ErrorAction SilentlyContinue)
+  }
+  ```
+
+* [Equivalent of cmd's "where" in powershell](https://superuser.com/q/675837/180163)
+
+  Use [`Get-Command`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.3)
+
+  ```ps1
+  (Get-Command git).Path
+  ```
+
+  **See Also**: [Equivalent of *Nix 'which' command in PowerShell?](https://stackoverflow.com/q/63805/1366033)
+
+
+
 * [Powershell 'Move-Item' doesn't make directory if it doesn't exists](https://stackoverflow.com/q/13912038/1366033)
 
     ```ps1
@@ -932,14 +954,6 @@ $env:LOCALAPPDATA
 * [working with registry entries](https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-entries?view=powershell-7.2)
 
 
-* [How to check if a cmdlet exists in PowerShell at runtime via script](https://stackoverflow.com/q/3919798/1366033)
-
-  ```ps1
-  function Check-Command($cmdName)
-  {
-      return [bool](Get-Command -Name $cmdName -ErrorAction SilentlyContinue)
-  }
-  ```
 
 * [Load all functions into PowerShell from a certain directory](https://stackoverflow.com/q/763799/1366033)
 
@@ -1237,12 +1251,6 @@ $env:LOCALAPPDATA
   Get-Item blah -ErrorAction SilentlyContinue
   ```
 
-* [Equivalent of cmd's "where" in powershell](https://superuser.com/q/675837/180163)
-
-  ```ps1
-  (Get-Command git).Pat
-  ```
-
 * [Creating new file with touch command in PowerShell](https://stackoverflow.com/q/32448174/1366033)
 
   ```ps1
@@ -1444,8 +1452,52 @@ $env:LOCALAPPDATA
   $VerbosePreference = 'SilentlyContinue'
   ```
 
-* Capture program stdout and stderr to separate variables
+* [How do I suppress standard error output in PowerShell?](https://stackoverflow.com/q/11969596/1366033)
 
+  ```ps1
+  & {
+    Write-Error "Error Info" -ErrorAction Continue
+  } 2>$null
+  ```
+
+* [How do I capture the output into a variable from an external process in PowerShell?](https://stackoverflow.com/q/8097354/1366033)
+
+  Use [redirection](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.3) to divert additional streams to output stream
+
+  | Operator | Description                                           | Syntax |
+  | -------- | ----------------------------------------------------- | ------ |
+  | `>`      | Send specified stream to a file.                      | `n>`   |
+  | `>>`     | Append specified stream to a file.                    | `n>>`  |
+  | `>&1`    | Redirects the specified stream to the Success stream. | `n>&1` |
+
+  Use numbers based on [output streams](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_output_streams?view=powershell-7.3)
+
+  | Stream # | Description            | Write Cmdlet        |
+  | -------- | ---------------------- | ------------------- |
+  | **1**    | **Success** stream     | `Write-Output`      |
+  | **2**    | **Error** stream       | `Write-Error`       |
+  | **3**    | **Warning** stream     | `Write-Warning`     |
+  | **4**    | **Verbose** stream     | `Write-Verbose`     |
+  | **5**    | **Debug** stream       | `Write-Debug`       |
+  | **6**    | **Information** stream | `Write-Information` |
+  | n/a      | **Progress** stream    | `Write-Progress`    |
+
+  ```ps1
+  $output = Write-All -ErrorAction Continue 2>&1
+  ```
+
+* [Capture program stdout and stderr to separate variables](https://stackoverflow.com/q/24222088/1366033)
+
+  ```ps1
+  function Write-All() {
+    Write-Output "Host Info"
+    Write-Error "Error Info" 
+  }
+
+  $output = Write-All -ErrorAction Continue 2>&1
+  $stdout = $output | Where-Object { $_ -isnot [System.Management.Automation.ErrorRecord] }
+  $stderr = $output | Where-Object { $_ -is [System.Management.Automation.ErrorRecord] }
+  ```
 
 * [Powershell hashtable keys with special characters](https://stackoverflow.com/q/15708203/1366033)
 
@@ -1455,10 +1507,157 @@ $env:LOCALAPPDATA
   $h."application/pdf"  # application/pdf
   ```
 
+* [Format-Table on Array of Hash Tables](https://stackoverflow.com/q/20874464/1366033)
+
+  Convert to [`[PSCustomObject]`](https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pscustomobject?view=powershell-7.3) first
+
+  ```ps1
+  $table = @(
+      @{Name="A";Age=12},
+      @{Name="B";Age=21}
+  )
+  $table | ForEach-Object { [PSCustomObject]$_ } | Format-Table -AutoSize
+  ```
+
 * ["rm -rf" equivalent for Windows PowerShell?](https://stackoverflow.com/q/61573115/1366033)
 
   ```ps1
   Remove-Item -Recurse -Force -Path app
   ```
 
-  
+* [Is it possible to open a Windows Explorer window from PowerShell?](https://stackoverflow.com/q/320509/1366033)
+
+  Use [`explorer`](https://ss64.com/nt/explorer.html)
+
+  ```ps1
+  explorer C:\Users
+  ```
+
+  Use [`Invoke-Item`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/invoke-item?view=powershell-7.3)
+
+  ```ps1
+  Invoke-Item C:\Users
+  ```
+
+* [How do I use Join-Path to combine more than two strings into a file path?](https://stackoverflow.com/q/25880122/1366033)
+
+
+  Use [`Join-Path`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/join-path)
+
+  ```ps1
+  $root = "C:\Temp"
+  $file = "data.csv"
+  $fullPath = Join-Path $root $file
+  # C:\Temp\data.csv
+  ```
+
+* [What is the Linq.First equivalent in PowerShell?](https://stackoverflow.com/q/5360145/1366033)
+
+  Use [`WhereOperatorSelectionMode` Enum](https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.whereoperatorselectionmode?view=powershellsdk-7.3.0)
+
+  ```ps1
+  $mode = [System.Management.Automation.WhereOperatorSelectionMode]::First
+  (1..9).Where({ $_ -gt 3}, $mode) # 4
+  ```
+
+* [Advanced Functions - Input processing methods](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods?view=powershell-7.3#input-processing-methods)
+
+  ```ps1
+  Function Test-Demo
+  {
+    Param ($Param1)
+    Begin{ Write-Output "Starting"}
+    Process{ Write-Output "processing $_ with $Param1"}
+    End{ Write-Output "Ending"}
+  }
+
+  $output = Write-Output Testing1, Testing2 | Test-Demo Sample
+
+  # Starting
+  # processing Testing1 with Sample
+  # processing Testing2 with Sample
+  # Ending
+  ```
+
+* [Pipe complete array-objects instead of array items one at a time?](https://stackoverflow.com/q/29973212/1366033)
+
+  Use [`Write-Output -NoEnumerate`](https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.2#write-output--noenumerate)
+
+  ```ps1
+  $data = @('red','green','blue')
+
+  $data | Get-Member
+  # TypeName: System.String
+
+  Write-Output -NoEnumerate $data | Get-Member
+  # TypeName: System.Object[]
+  ```
+
+  Use [Comma operator `,`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators#comma-operator-)
+
+  ```ps1
+  $data = @('red','green','blue')
+
+  , $data | Get-Member
+  # TypeName: System.Object[]
+  ```
+
+* [Can LINQ be used in PowerShell?](https://stackoverflow.com/q/38360545/1366033)
+
+  Mostly, use built in functions (`Select-Object`, `Where-Object`, `Sort-Object`, etc)
+
+  ```ps1
+  $data = 0..5
+  $func = [Func[object,bool]]{ param($x) $x -gt 3 }
+  $result = [System.Linq.Enumerable]::Where($data, $func)
+  # (4,5)
+  ```
+
+  **Further Reading**
+
+  * [High Performance PowerShell with LINQ - Simple Talk](https://www.red-gate.com/simple-talk/sysadmin/powershell/high-performance-powershell-linq/#post-71022-_Toc482783752)
+  * [PowerShell One-Liners: Collections, Hashtables, Arrays and Strings - Simple Talk](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-one-liners--collections,-hashtables,-arrays-and-strings/#fifth)
+
+
+* [PowerShell equivalent of LINQ Any()?](https://stackoverflow.com/q/1499466/1366033)
+
+  ```ps1
+  function Test-Any() { 
+    begin { 
+      $any = $false
+    } 
+    process { 
+      if ($_ -eq $true) {
+        $any = $true
+      }
+    } 
+    end { 
+      Write-Output $any
+    } 
+  }
+
+  @($true, $false) | Test-Any  # True
+  @($false, $false) | Test-Any # False
+  ```
+
+* [What is the PowerShell equivalent of LINQ's All()?](https://stackoverflow.com/q/35258183/1366033)
+
+  ```ps1
+  function Test-All() { 
+    begin { 
+      $all = $true
+    } 
+    process { 
+      if ($_ -ne $true) {
+        $all = $false
+      }
+    } 
+    end { 
+      Write-Output $all
+    } 
+  }
+
+  @($true, $false) | Test-All  # False
+  @($true, $true) | Test-All   # True
+  ```
+

@@ -21,7 +21,7 @@ redirects = [
   {from="/2014/05/AspDotNetSharedProperties.html",  to="/posts/global-properties-in-web-windows/"},
   {from="/2014/05/mvcbootstrapactivenavbar.html",  to="/posts/navbar-active-class-mvc/"},
   {from="/2014/02/BootstrapDocsSideBar.html",  to="/posts/bootstrap-docs-sidebar-explained/"},
-  {from="/2014/01/ChromeExtensionContentScripts.html",  to="/posts/chrome-extension/"},
+  {from="/2014/01/ChromeExtensionContentScripts.html",  to="/posts/intro-to-chrome-extensions/"},
   {from="/2013/12/InFunction.html",  to="/posts/in-function-for-dotnet/"},
   {from="/2013/12/LinqMethods.html",  to="/posts/linq-enumerable-methods/"},
   {from="/2013/12/ForXmlPath.html",  to="/posts/for-xml-path/"},
