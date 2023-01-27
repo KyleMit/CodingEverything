@@ -59,3 +59,26 @@
   * [Jon Galloway - ASP.NET MVC 4 Beta Released!](https://weblogs.asp.net/jongalloway/asp-net-4-beta-released)
   * [Conditional Attributes in Razor View Engine and ASP.NET MVC 4](https://www.davidhayden.me/blog/conditional-attributes-in-razor-view-engine-and-asp.net-mvc-4)
 
+* [Preprocessor directives in Razor](https://stackoverflow.com/q/4696175/1366033)
+
+  ```html
+  @{
+
+  #if DEBUG
+  {
+      @:<div>Debug Mode</div>
+  }
+  #else
+  {
+      <text>
+          <div>
+              Release Mode
+          </div>
+      </text>
+  }
+  #endif
+
+  }
+  ```
+
+  

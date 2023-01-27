@@ -807,4 +807,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   Use [**es6-string-html**](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
-  
+* [XML indentation using plugin for VS code - Wrap Attributes](https://stackoverflow.com/q/69598825/1366033)
+
+  ```json
+  {
+    "xml.format.splitAttributes": true
+  }
+  ```
