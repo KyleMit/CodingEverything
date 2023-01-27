@@ -127,6 +127,10 @@ pip install -U pytest
 pytest --version
 ```
 
+## VS Code
+
+[Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+
 ## Questions
 
 * [pip install failing with: OSError: [Errno 13] Permission denied on directory](https://stackoverflow.com/q/31512422/1366033)
@@ -301,6 +305,12 @@ pytest --version
 
   ```py
   [*map(chr,[65,66,67,68])]    # ['A', 'B', 'C', 'D']
+  ```
+
+* [How do I get the number of elements in a list](https://stackoverflow.com/q/1712227/1366033)
+
+  ```py
+  len([1, 2, 3]) # 3
   ```
 
 * [Map array of data](https://stackoverflow.com/q/10973766/1366033)
@@ -644,7 +654,7 @@ pytest --version
   print(myEnum == RPS.Rock) # true
   ```
 
-* [Replacements for switch statement in Python?](https://stackoverflow.com/q/60208/1366033)
+* [Switch statement in Python?](https://stackoverflow.com/q/60208/1366033)
 
   [PEP 636 – Structural Pattern Matching](https://peps.python.org/pep-0636/#matching-against-constants-and-enums)
 
@@ -664,6 +674,29 @@ pytest --version
 * [How to use values stored in variables as case patterns?](https://stackoverflow.com/q/66159432/1366033)
 
   Use Constants or Convert to If statements
+
+  ```py
+  class StatusCodes:
+      SUCCESS = 200
+      NOT_FOUND = 404
+
+  def handle(code):
+      match code:
+          case StatusCodes.SUCCESS:
+              print("success")
+          case StatusCodes.NOT_FOUND:
+              print("not found")
+          case _:
+              print("unknown")
+
+
+  handle(200)  # "success"
+  handle(StatusCodes.NOT_FOUND)  # "not found"
+  ```
+
+  * [PEP 622 – Structural Pattern Matching](https://peps.python.org/pep-0622/#patterns)
+  * [PEP 634 – Structural Pattern Matching: Specification](https://peps.python.org/pep-0634/)
+  * [PEP 636 – Structural Pattern Matching: Tutorial](https://peps.python.org/pep-0636/#matching-against-constants-and-enums)
 
 * [Is it possible to write single line return statement with if statement?](https://stackoverflow.com/q/18669836/1366033)
 
@@ -1859,4 +1892,43 @@ pytest --version
   ```py
   a={(i,j):0 for i in range(-3,3) for j in range(-3,3)}
   ```
+
+* [How to split an integer into a list of digits?](https://stackoverflow.com/q/1906717/1366033)
+
+  ```py
+  [int(i) for i in str(12345)]
+  # [1, 2, 3, 4, 5]
+  ```
+
+* [How to choose randomly between two values?](https://stackoverflow.com/q/55399338/1366033)
+
+  ```py
+  import random
+  random.randint(0, 10)
+  ```
+
+* [Check if all elements in a list are identical](https://stackoverflow.com/q/3844801/1366033)
+
+  ```py
+  xs = [1,1,1]
+  len(set(xs)) <= 1 # True
+  ```
+
+* [How to check if all elements of a list match a condition?](https://stackoverflow.com/q/10666163/1366033)
+
+  Use [`all()`](https://docs.python.org/3/library/functions.html#all)
+
+  ```py
+  xs = [1,1,1]
+  all(i == 1 for i in xs) # True
+  ```
+
+* [Python group by](https://stackoverflow.com/q/3749512/1366033)
+
+
+  * [Group list by values](https://stackoverflow.com/questions/5695208/)
+  * [group elements together in list](https://stackoverflow.com/questions/55114008/)
+  * [`itertools.groupby`](https://docs.python.org/3.5/library/itertools.html#itertools.groupby)
+
+* [How do I count the occurrences of a list item?](https://stackoverflow.com/questions/2600191/)
 
