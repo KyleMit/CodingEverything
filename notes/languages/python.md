@@ -289,6 +289,33 @@ pytest --version
       data = data.replace("\r", "\n")
   ```
 
+* [How do I remove a substring from the end of a string?](https://stackoverflow.com/q/1038824/1366033)
+
+  Use [`str.removeprefix`](https://docs.python.org/3/library/stdtypes.html#str.removeprefix) or [`str.removesuffix`](https://docs.python.org/3/library/stdtypes.html#str.removesuffix)
+
+  ```py
+  s = "example.com" 
+  s.removesuffix(".com") # 'example'
+  ```
+
+* [How do I trim whitespace?](https://stackoverflow.com/q/1185524/1366033)
+
+  use [`str.strip`](https://docs.python.org/3/library/stdtypes.html#str.strip)
+
+  ```py
+  "  a  ".strip() # "a"
+  ```
+
+* [How to check if the string is empty?](https://stackoverflow.com/q/9573244/1366033)
+
+  ```py
+  if not myString:
+  ```
+
+  ```py
+  if myString == "":
+  ```
+
 * [How to print map object with Python 3?](https://stackoverflow.com/q/7731213/1366033)
 
   `map` returns a **generator** / **iterable**
@@ -478,6 +505,18 @@ pytest --version
   arr[0] # 'a'
   ```
 
+* [Skip first entry in for loop in python?](https://stackoverflow.com/q/10079216/1366033)
+
+  ```py
+  # skip first entry
+  for car in cars[1:]:
+    pass
+
+  # skip last entry
+  for car in cars[:-1]:
+      pass
+  ```
+
 * [How to take the first N items from a generator or list?](https://stackoverflow.com/q/5234090/1366033)
 
   Slice `array[start:stop:step]`
@@ -493,6 +532,26 @@ pytest --version
   import itertools
   arr = [1,2,3,4]
   list(itertools.islice(arr,2)) # [1, 2]
+  ```
+
+* [Head and tail in one line](https://stackoverflow.com/q/10532473/1366033)
+
+  Use [PEP 3132 – Extended Iterable Unpacking](https://peps.python.org/pep-3132/)
+
+  ```py
+  xs = [1,2,3,4]
+  first, *rest = xs
+  print(first) # 1
+  print(rest)  # [2,3,4]
+  ```
+
+  Use slice
+
+  ```py
+  xs = [1,2,3,4]
+  first, rest = xs[0], xs[1:]
+  print(first) # 1
+  print(rest)  # [2,3,4]
   ```
 
 * [Print a variable's name and value?](https://stackoverflow.com/q/32000934/1366033)
@@ -783,6 +842,24 @@ pytest --version
   'A'.islower() # false
   ```
 
+* [Check if all characters of a string are uppercase](https://stackoverflow.com/q/33883512/1366033)
+
+  use [`str.isupper()`](https://docs.python.org/3/library/stdtypes.html#str.isupper)
+
+  ```py
+  "A".isupper()  # True
+  "Ab".isupper() # False
+  "AB".isupper() # True
+  ```
+
+* [How can I capitalize the first letter of each word in a string?](https://stackoverflow.com/q/1549641/1366033)
+
+Use [`str.title()`](https://docs.python.org/3/library/stdtypes.html#str.title)
+
+```py
+"hello world".title() # 'Hello World'
+```
+
 * [Create an empty list with certain size in Python](https://stackoverflow.com/q/10712002/1366033)
 
   ```py
@@ -941,6 +1018,67 @@ pytest --version
   string.startswith("hello") # True
   ```
 
+* [Remove specific characters from a string in Python](https://stackoverflow.com/q/3939361/1366033)
+
+  Daisy chain [`str.replace`](https://docs.python.org/3/library/stdtypes.html#str.replace)
+
+  ```py
+  s = "a _."
+  s.replace(" ","").replace("_", "").replace(".","") 
+  # "a"
+  ```
+
+  Use [`str.translate`](https://docs.python.org/3/library/stdtypes.html#str.translate)
+
+  ```py
+  s = "a _."
+  table = dict.fromkeys([ord(c) for c in " _."], None)
+  # {32: None, 95: None, 46: None}
+  s.translate(table) # "a"
+  ```
+
+  Use [`str.maketrans`](https://docs.python.org/3/library/stdtypes.html#str.maketrans)
+
+  ```py
+  import string
+  s = "a _."
+  table = str.maketrans("", "", " _.")    
+  # {32: None, 95: None, 46: None}
+  s.translate(table) # "a"
+  ```
+
+  Use [`re.sub`](https://docs.python.org/3/library/re.html#re.sub)
+
+  ```py
+  import re
+  s = "a _."
+  re.sub(" _\.", "", s) # "a"
+  ```
+
+* [Remove all non-alphabet chars from string](https://stackoverflow.com/q/22520932/1366033)
+
+  Use [`re.sub`](https://docs.python.org/3/library/re.html#re.sub)
+
+  ```py
+  import re
+  re.sub('[^a-zA-Z]', '', "A _.") # "A"
+  ```
+
+  Use [`str.isalpha`](https://docs.python.org/3/library/stdtypes.html#str.isalpha)
+
+  ```py
+  s = "A _."
+  ''.join([i for i in s if i.isalpha()]) # A
+  ```
+
+* [Starts with a list of strings to test for](https://stackoverflow.com/q/20461847/1366033)
+
+  ```py
+  "abc".startswith(("a", "b")) # True
+  "bac".startswith(("a", "b")) # True
+  "cab".startswith(("a", "b")) # False
+  ```
+
 * [How do I reverse a list or loop over it backwards?](https://stackoverflow.com/q/3940128/1366033)
 
   [Modify list](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types) (in-place)
@@ -1029,6 +1167,13 @@ pytest --version
   lst[-1] # C
   ```
 
+* [Remove final character from string](https://stackoverflow.com/q/15478127/1366033)
+
+  ```py
+  s = "abc"
+  s[:-1] # 'ab'
+  ```
+
 * [How to pop() a list n times](https://stackoverflow.com/q/12040744/1366033)
 
   ```py
@@ -1081,6 +1226,17 @@ pytest --version
 
   c = chain(a,b)
   print(list(c)) # [1, 2, 3, 4, 5, 6]
+  ```
+
+
+* [How do I prepend to a short python list?](https://stackoverflow.com/q/8537916/1366033)
+
+  Use [`list.insert`](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
+  ```py
+  xs = [2,3,4]
+  xs.insert(0, 1)
+  print(xs) # [1, 2, 3, 4]
   ```
 
 * [Remove the last N elements of a list](https://stackoverflow.com/q/15715912/1366033)
@@ -1152,6 +1308,15 @@ pytest --version
   import sys
   print(sys.version)
   ```
+
+* [How do Python functions handle the types of parameters that you pass in?](https://stackoverflow.com/q/2489669/1366033)
+
+  ```py
+  def pick(l: list, index: int) -> int:
+      return l[index]
+  ```
+
+  **See Also**: [PEP 3107 – Function Annotations](https://peps.python.org/pep-3107/)
 
 * [How to set the python type hinting for a dictionary variable?](https://stackoverflow.com/q/52593803/1366033)
 
@@ -1900,6 +2065,17 @@ pytest --version
   # [1, 2, 3, 4, 5]
   ```
 
+* [Convert integer to string in Python](https://stackoverflow.com/q/961632/1366033)
+
+  Use [`int()`](https://docs.python.org/3/library/functions.html#int) or [`str()`](https://docs.python.org/3/library/functions.html#func-str)
+
+  ```py
+  str(42)   # "42"
+  int("42") # 42
+  ```
+
+
+
 * [How to choose randomly between two values?](https://stackoverflow.com/q/55399338/1366033)
 
   ```py
@@ -1925,10 +2101,104 @@ pytest --version
 
 * [Python group by](https://stackoverflow.com/q/3749512/1366033)
 
+  use [`collections.defaultdict`](https://docs.python.org/3/library/collections.html#collections.defaultdict)
+
+  ```py
+  from collections import defaultdict
+
+  xs = [
+      {"key": "a", "val": "1"},
+      {"key": "a", "val": "2"},
+      {"key": "b", "val": "3"},
+  ]
+
+  res = defaultdict(list)
+  for obj in xs:
+      res[obj["key"]].append(obj["val"])
+
+  print(res) #  {'a': ['1', '2'], 'b': ['3']}
+  ```
+
+  use [`itertools.groupby`](https://docs.python.org/3.5/library/itertools.html#itertools.groupby)
+
+
+  ```py
+  from itertools import groupby
+  from operator import itemgetter
+
+  xs = [
+      {"key": "a", "val": "1"},
+      {"key": "b", "val": "3"},
+      {"key": "a", "val": "2"},
+  ]
+
+  sort = sorted(xs, key=itemgetter("key"))
+  grouped = groupby(sort, key=itemgetter("key"))
+  res = [(k, list(v)) for k, v in grouped]
+
+  print(res)
+
+  # [
+  #     ('a', [{'key': 'a', 'val': '1'}, {'key': 'a', 'val': '2'}]),
+  #     ('b', [{'key': 'b', 'val': '3'}])
+  # ]
+  ```
+
+  **Further Reading**:
 
   * [Group list by values](https://stackoverflow.com/questions/5695208/)
   * [group elements together in list](https://stackoverflow.com/questions/55114008/)
-  * [`itertools.groupby`](https://docs.python.org/3.5/library/itertools.html#itertools.groupby)
 
 * [How do I count the occurrences of a list item?](https://stackoverflow.com/questions/2600191/)
+
+  use [`collections.Counter`](https://docs.python.org/3/library/collections.html#collections.Counter)
+
+  ```py
+  from collections import Counter
+
+  xs = ["a", "b", "a", "c", "a", "b"]
+  cnt = Counter(xs)
+  print(cnt) # Counter({'a': 3, 'b': 2, 'c': 1})
+  ```
+
+  use `set` to get unique elements and `list.count` to count each in original list
+
+  ```py
+  xs = ["a", "b", "a", "c", "a", "b"]
+  [(x, xs.count(x)) for x in set(xs)]
+  # [('a', 3), ('c', 1), ('b', 2)]
+  ```
+
+* [Longest Consecutive Subsequence](https://www.geeksforgeeks.org/longest-consecutive-subsequence/)
+
+  ```py
+  from itertools import groupby
+  from operator import itemgetter
+
+  xs = [1, 1, 4, 2, 3, 6]
+
+  uniques = list(set(sorted(xs)))
+
+  longestRun = 0
+  currentRun = 0
+
+  for i, el in enumerate(uniques):
+      if i == 0:
+          currentRun = 1
+      elif el == uniques[i - 1] + 1:
+          currentRun += 1
+      else:
+          currentRun = 1
+
+      longestRun = max(longestRun, currentRun)
+
+  print(longestRun) # 4
+  ```
+
+* [Python Checking a string's first and last character](https://stackoverflow.com/q/19954593/1366033)
+
+
+```py
+"abc".endswith("c")
+```
 
