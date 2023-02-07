@@ -14,6 +14,11 @@
   * Dev
   * Canary
 
+## Extensions
+
+* [Measuremate - Chrome Web Store](https://chrome.google.com/webstore/detail/measuremate/fcbffocoaopnenhgbchlchgndohggdei/related?hl=en)
+  * [Measuremate](https://measuremate.xyz/)
+
 ## Questions
 
 * [Is there a shortcut key to duplicate a tab in Google Chrome?](https://superuser.com/q/284115/180163)

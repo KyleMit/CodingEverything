@@ -274,3 +274,9 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
             ELSE CAST(1 as bit)
         END AS HasProfile
     ```
+
+* [How do I retrieve decimals when rounding an average in SQL](https://stackoverflow.com/q/13237477/1366033)
+
+    ```sql
+    SELECT ROUND(AVG(CAST(column_name AS FLOAT)), 2)
+    ```
