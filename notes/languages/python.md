@@ -1071,6 +1071,12 @@ Use [`str.title()`](https://docs.python.org/3/library/stdtypes.html#str.title)
   ''.join([i for i in s if i.isalpha()]) # A
   ```
 
+* [How do I check if a string represents a number (float or int)?](https://stackoverflow.com/q/354038/1366033)
+
+  ```py
+  "03523".isdigit() # True
+  ```
+
 * [Starts with a list of strings to test for](https://stackoverflow.com/q/20461847/1366033)
 
   ```py
@@ -2197,8 +2203,51 @@ Use [`str.title()`](https://docs.python.org/3/library/stdtypes.html#str.title)
 
 * [Python Checking a string's first and last character](https://stackoverflow.com/q/19954593/1366033)
 
+  ```py
+  "abc".endswith("c")
+  ```
 
-```py
-"abc".endswith("c")
-```
+* [What is the difference between range and xrange functions in Python 2.X](https://stackoverflow.com/q/94935/1366033)
 
+  In Python 2, `range` loaded list in memory, while `xrange` evaluated lazily
+  In Python 3, `xrange` is deprecated
+
+* [Integer square root in python](https://stackoverflow.com/q/15390807/1366033)
+
+  **Update Python 3.8** - use [`math.isqrt`](https://docs.python.org/3/library/math.html#math.isqrt)
+
+  ```py
+  math.sqrt(2)  # 1.4142135623730951
+  math.isqrt(2) # 1
+  ```
+
+* [What is the best way to get all the divisors of a number?](https://stackoverflow.com/q/171765/1366033)
+
+  ```py
+  def divisors(n):
+      divs = [1]
+      for i in range(2, math.isqrt(n) + 1):
+          if n % i == 0:
+              divs.extend([i, n // i])
+      return list(set(divs))
+
+  divisors(12) # [1, 2, 3, 4, 6]
+  ```
+
+* [Specifying a type to be a List of numbers (ints and/or floats)?](https://stackoverflow.com/q/43957034/1366033)
+
+  ```py
+  from typing import Union, List
+  Num = Union[int, float]
+  def quick_sort(arr: List[Num]) -> List[Num]:
+  ```
+
+* [How can I compare two ordered lists in python?](https://stackoverflow.com/q/36420022/1366033)
+
+  Use `==` operator
+
+  ```py
+  [0,1,2] == [0,1,2] # True
+  [0,1,2] == [0,2,1] # False
+  ```
+  

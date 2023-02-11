@@ -1,5 +1,7 @@
 # Computer Science
 
+* [CS50 2020](https://www.youtube.com/watch?v=YoXxevp1WRQ&list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8)
+
 ## Algorithms
 
 ## Big O Notation
@@ -26,6 +28,12 @@
 * [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case)
 * [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort)
 * [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+* [Boyer–Moore string-search algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
+
+## Maths
+
+* [Aliquot sum](https://en.wikipedia.org/wiki/Aliquot_sum)
+* [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 
 ## Programming Language Concepts
@@ -106,4 +114,10 @@
 
   const gcd = (...arr) => arr.reduce((acc, cur) => _gcd(cur, acc), 0)
   const lcm = (...arr) => arr.reduce((acc, cur) => _lcm(cur, acc), 1)
+  ```
+
+* [Equation for testing if a point is inside a circle](https://stackoverflow.com/q/481144/1366033)
+
+  ```none
+  (x - center_x)² + (y - center_y)² < radius²
   ```

@@ -104,12 +104,3 @@ Database servers
 Load balancers
 Shared file Servers
 
-
-Favorite Part
-
-10-12 years
-Lose instituional knowelge
-
-jquery - javascript / ts
-
-standup - blockers
