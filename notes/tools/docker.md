@@ -316,3 +316,23 @@ INSTRUCTION arguments
     db:
       image: postgres
   ```
+
+* [How to start the docker daemon?](https://stackoverflow.com/q/44169435/1366033)
+
+  ```ps1
+  Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+  ```
+
+* [How to check if Docker is running on Windows?](https://stackoverflow.com/a/75405162/1366033)
+
+  ```ps1
+  $dockerIsRunning = (docker ps 2>&1 | Out-String) -match "^(?!error)"
+  $dockerIsNotRunning = (docker ps 2>&1 | Out-String) -match "^error"
+  ```
+
+  ```ps1
+  docker ps
+  Get-Process 'com.docker.proxy'
+  Get-Process "*docker desktop*"
+  ```
+

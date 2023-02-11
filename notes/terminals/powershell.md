@@ -1661,3 +1661,24 @@ $env:LOCALAPPDATA
   @($true, $true) | Test-All   # True
   ```
 
+* [Capturing command output in Powershell as string instead of array of strings](https://stackoverflow.com/q/21028162/1366033)
+
+  Use [`Out-String`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-string)
+
+  ```ps1
+  (Get-Process).GetType()              # Object[]
+  (Get-Process | Out-String).GetType() # String
+  ([string](Get-Process)).GetType()    # String
+  ((Get-Process) -join "`n").GetType() # String
+  ```
+
+
+* [If strings starts with in PowerShell](https://stackoverflow.com/q/35654569/1366033)
+
+  Use [`String.StartsWith`](https://learn.microsoft.com/en-us/dotnet/api/system.string.startswith?view=net-7.0#system-string-startswith(system-string))
+
+  ```ps1
+  "123".StartsWith("1") # True
+  "123".StartsWith("2") # False
+  ```
+

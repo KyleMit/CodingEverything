@@ -59,4 +59,16 @@
   visibleElements = $(':visible');
   ```
 
+* [jQuery closest exclude self](https://stackoverflow.com/q/15628889/1366033)
+
+  ```js
+  $(this).parent().closest('.container');
+  ```
+
+* [find() children until a certain threshold element is encountered](https://stackoverflow.com/q/13305514/1366033)
+
+  ```js
+  this.find(selector).not(this.find(mask).find(selector))
+  ```
+
   
