@@ -28,17 +28,50 @@
         @items[0]
       }
       else {
-      <ul>
-        @foreach(var item in items) {
-          <li>@item</li>
-        }
-      </ul>
+        <ul>
+          @foreach(var item in items) {
+            <li>@item</li>
+          }
+        </ul>
       }
     }
   }
 
   <p>@RenderList(Model.WhatNext)</p>
   ```
+
+* [Looping through a list in razor and adding a separator between items](https://stackoverflow.com/a/75512520/1366033)
+
+  ```cs
+  public static class Helpers
+  {
+      public static IHtmlContent HtmlJoin<T>(
+          this IEnumerable<T> items,
+          Func<T, IHtmlContent> separator,
+          Func<T, IHtmlContent> itemTemplate)
+      {
+          var html = new HtmlContentBuilder();
+          var first = true;
+
+          foreach (var item in items)
+          {
+              if (!first) {
+                  html.AppendHtml(separator(item));
+              }
+              html.AppendHtml(itemTemplate(item));
+              first = false;
+          }
+
+          return html;
+      }
+  }
+  ```
+
+  ```cs
+  var veggies = new [] { "Acai", "Bean", "Corn" };
+  @veggies.HtmlJoin(@<span> | </span>, @<span>@item</span>) 
+  ```
+
 
 * [MVC Razor @foreach](https://stackoverflow.com/q/11261590/1366033)
 
