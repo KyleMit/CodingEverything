@@ -649,3 +649,29 @@ namespace ExtensionMethods
   person.first; // "A"
   ```
 
+* [Checking for the last element in a foreach](https://stackoverflow.com/q/6199465/1366033)
+
+  [Enumerate Extension Method](https://dotnetfiddle.net/X97m8V)
+
+  ```cs
+  public static class ListExtensions
+  {
+      public static IEnumerable<(T element, int index, bool isFirst, bool isLast)> Enumerate<T>(this IEnumerable<T> list) {
+          var len = list.Count();     
+          return list.Select((el, i) => (el, i, i == 0, i == len - 1));
+      }
+  }
+
+  var list = new[] {'A','B','C'};
+  foreach(var (el, i, isFirst, isLast) in list.Enumerate()) {
+      Console.WriteLine($"el={el}, i={i}, isFirst={isFirst}, isLast={isLast}");
+  }
+
+  // el=A, i=0, isFirst=True,  isLast=False
+  // el=B, i=1, isFirst=False, isLast=False
+  // el=C, i=2, isFirst=False, isLast=True
+  ```
+
+* [Comparing a boolean value before setting it](https://stackoverflow.com/q/4086572/1366033)
+
+  Just set it - avoids branch detection
