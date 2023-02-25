@@ -1682,3 +1682,30 @@ $env:LOCALAPPDATA
   "123".StartsWith("2") # False
   ```
 
+* [Find specific String in Text file](https://stackoverflow.com/q/41871147/1366033)
+
+  ```ps1
+  Select-String -Path C:\Temp\File.txt -Pattern "Test"
+  ```
+
+* [Append to text file](https://stackoverflow.com/q/28812239/1366033)
+
+  Use [`Add-Content`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.3)
+
+  ```ps1
+  Add-Content -Path C:\temp.txt -Value "hello"
+  ```
+
+  Use [`Out-File -Append`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-7.3#-append)
+
+  ```ps1
+  "hello" | Out-File -FilePath C:\temp.txt -Append
+  ```
+
+* [How do I define a function in a file and call it from the PowerShell commandline?](https://stackoverflow.com/q/6016436/1366033)
+  
+  Use [Dot Source Notation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-5.1#using-dot-source-notation-with-scope)
+
+  ```ps1
+  . .\MyFunctions.ps1
+  ```

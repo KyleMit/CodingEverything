@@ -527,4 +527,12 @@ git rev-list --count <revision>
   git log --oneline -n 5
   ```
 
-  
+* [Is it possible to include a file in your .gitconfig](https://stackoverflow.com/q/1557183/1366033)
+
+  Use [`config.includes`](https://git-scm.com/docs/git-config#_includes)
+
+  ```ini
+  [include]
+      path = /path/to/file
+  ```
+

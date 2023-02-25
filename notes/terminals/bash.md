@@ -510,3 +510,9 @@ ls --color -h --group-directories-first
 
   > If the standard input does not contain any nonblanks, do not run the command.  Normally, the command is run once even if there is no input.  This option is a GNU extension.
 
+* [Include additional files in .bashrc](https://stackoverflow.com/q/4952177/1366033)
+
+  ```bash
+  test -f ~/.kyle.bashrc && . ~/.kyle.bashrc
+  ```
+  
