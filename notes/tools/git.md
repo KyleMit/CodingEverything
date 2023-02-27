@@ -183,16 +183,6 @@ git rev-list --count <revision>
   ```
 
 
-* [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
-
-  ```bash
-  git branch | grep -v "master" | xargs -r git branch -D
-  ```
-
-  ```bash
-  git branch --merged | grep -v \* | xargs -r git branch -D 
-  ```
-
 * [Git command to show which specific files are ignored by .gitignore](https://stackoverflow.com/q/466764/1366033)
 
   ```bash
@@ -527,4 +517,31 @@ git rev-list --count <revision>
   git log --oneline -n 5
   ```
 
+* [What does git fsck stand for?](https://stackoverflow.com/q/21151945/1366033)
+
+  **`fsck`** - File System ChecK
+
+* [Git slow](https://stackoverflow.com/questions/4485059/1366033)
+
+  ```bash
+  git gc
+  ```
+
+  There are too many unreachable loose objects
   
+  ```bash
+  git prune
+  ```
+
+  **See Also**: [Git Status Takes a Long Time to Complete](https://stackoverflow.com/questions/1183769/1366033)
+
+
+* [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
+
+  ```bash
+  git branch | grep -v "main" | xargs -r git branch -D
+  ```
+
+  ```bash
+  git branch --merged | grep -v \* | xargs -r git branch -D 
+  ```

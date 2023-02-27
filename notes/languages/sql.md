@@ -280,3 +280,8 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT ROUND(AVG(CAST(column_name AS FLOAT)), 2)
     ```
+
+* [INSERT vs INSERT INTO](https://stackoverflow.com/q/233919/1366033)
+
+  `INTO` is typically optional, though some sql variants require it
+  
