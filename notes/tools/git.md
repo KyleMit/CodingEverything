@@ -536,3 +536,12 @@ git rev-list --count <revision>
       path = /path/to/file
   ```
 
+* [How to modify existing, unpushed commit messages?](https://stackoverflow.com/q/179123/1366033)
+
+  ```bash
+  git commit --amend
+  ```
+
+  ```bash
+  git commit --amend -m "New commit message"
+  ```
