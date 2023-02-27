@@ -937,23 +937,53 @@ $env:LOCALAPPDATA
   ```
 
 
-
 * [Get registry key value](https://stackoverflow.com/q/15511809)
 
-    ```ps1
-    $profileKeys = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
-    $profileKeys = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
-    ```
+  Use [`Get-ItemPropertyValue`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itempropertyvalue) - PSv5+
+
+  ```ps1
+  Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' 'ProgramFilesDir'
+  # C:\Program Files
+  ```
+
+  Use [`Get-ItemProperty`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-7.3)
+
+  ```ps1
+  (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Name 'ProgramFilesDir').ProgramFilesDir
+  # C:\Program Files
+  ```
+
 
 * [Get registry subkeys](https://stackoverflow.com/a/37746096)
 
   ```ps1
-  Get-ItemProperty hklm:\SOFTWARE\Wow6432Node\*
+  $profileKeys = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
+  $profileKeys = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\*"
+  Get-ItemProperty $profileKeys
   ```
 
-* [working with registry entries](https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-entries?view=powershell-7.2)
+  **See Also**: [Working with registry entries](https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-entries?view=powershell-7.2)
 
 
+* [Test if registry value exists](https://stackoverflow.com/q/5648931/1366033)
+
+  ```ps1
+  (Get-Item 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -EA Ignore).Property -contains 'ProgramFilesDir'
+  ```
+
+* [Set registry value](https://stackoverflow.com/q/6551224/1366033)
+
+  Use [`Set-ItemProperty`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-itemproperty) or [`New-ItemProperty`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-itemproperty?view=powershell-7.3#-propertytype)  with []`RegistryValueKind` Enum](https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.registryvaluekind)
+
+  ```ps1
+  If ( !(Test-Path $thumbnailPath) ) { New-Item -Path $thumbnailPath -Force; };
+  New-ItemProperty `
+      -Path $thumbnailPath `
+      -Name $thumbnailKey `
+      -Value $thumbnailValue `
+      -PropertyType "$([Microsoft.Win32.RegistryValueKind]::DWord)" `
+      -Force;
+  ```
 
 * [Load all functions into PowerShell from a certain directory](https://stackoverflow.com/q/763799/1366033)
 
@@ -1682,3 +1712,30 @@ $env:LOCALAPPDATA
   "123".StartsWith("2") # False
   ```
 
+* [Find specific String in Text file](https://stackoverflow.com/q/41871147/1366033)
+
+  ```ps1
+  Select-String -Path C:\Temp\File.txt -Pattern "Test"
+  ```
+
+* [Append to text file](https://stackoverflow.com/q/28812239/1366033)
+
+  Use [`Add-Content`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.3)
+
+  ```ps1
+  Add-Content -Path C:\temp.txt -Value "hello"
+  ```
+
+  Use [`Out-File -Append`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-7.3#-append)
+
+  ```ps1
+  "hello" | Out-File -FilePath C:\temp.txt -Append
+  ```
+
+* [How do I define a function in a file and call it from the PowerShell commandline?](https://stackoverflow.com/q/6016436/1366033)
+  
+  Use [Dot Source Notation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-5.1#using-dot-source-notation-with-scope)
+
+  ```ps1
+  . .\MyFunctions.ps1
+  ```

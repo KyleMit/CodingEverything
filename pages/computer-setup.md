@@ -184,7 +184,13 @@ Look Up Computer Stats:
 * Pinned Items > Remove extra gap between items
 * Other > Hide the "Show Desktop" button
 
+```bash
+winget install --id=RamenSoftware.Windhawk -e 
+```
 
+* **New**: Windhawk
+  * [Taskbar Thumbnail Reorder](https://windhawk.net/mods/taskbar-thumbnail-reorder)
+    * [taskbar-thumbnail-reorder.wh.cpp](https://github.com/ramensoftware/windhawk-mods/blob/main/mods/taskbar-thumbnail-reorder.wh.cpp)
 
 ## Configuration
 

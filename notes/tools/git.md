@@ -543,5 +543,24 @@ git rev-list --count <revision>
   ```
 
   ```bash
-  git branch --merged | grep -v \* | xargs -r git branch -D 
+  git branch --merged | grep -v \* | xargs -r git branch -D
+  ```
+
+* [Is it possible to include a file in your .gitconfig](https://stackoverflow.com/q/1557183/1366033)
+
+  Use [`config.includes`](https://git-scm.com/docs/git-config#_includes)
+
+  ```ini
+  [include]
+      path = /path/to/file
+  ```
+
+* [How to modify existing, unpushed commit messages?](https://stackoverflow.com/q/179123/1366033)
+
+  ```bash
+  git commit --amend
+  ```
+
+  ```bash
+  git commit --amend -m "New commit message"
   ```
