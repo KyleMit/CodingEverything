@@ -163,9 +163,15 @@ git remote prune origin
 
 * [How to remove local (untracked) files from the current Git working tree](https://stackoverflow.com/q/61212/1366033)
 
+  Use [`git clean`](https://git-scm.com/docs/git-clean)
+
   ```bash
   git clean -dfx
   ```
+  
+  * `-d` - include directories
+  * `-f` - force
+  * `-x` - include ignored files
 
 * [How do I get the Git commit count?](https://stackoverflow.com/q/677436/1366033)
 
@@ -564,3 +570,4 @@ git rev-list --count <revision>
   ```bash
   git commit --amend -m "New commit message"
   ```
+
