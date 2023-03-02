@@ -49,6 +49,10 @@
 * [Search on Google Calendar](https://support.google.com/calendar/answer/37176)
 * [Events > Event Settings > Guest Permissions > Modify Event](https://support.google.com/a/users/answer/9282963)
 
+* [Generate a URL to Add Events to Google Calendar](https://help.lafayette.edu/generate-a-url-to-add-events-to-google-calendar/)
+
+  Triple Dot > Publish Event
+
 ## Groups
 
 * [Emails to Google Groups email address aren't working](https://webapps.stackexchange.com/q/148192/38656)

@@ -45,23 +45,35 @@
 <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
 
-## VS Terminal
+## Terminal
 
 * [The PowerShell you know and love now with a side of Visual Studio - Aug, 2019](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
 * [Say hello to the new Visual Studio terminal! - Sep, 2019](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
 * [A more integrated terminal experience - Jan, 2021](https://devblogs.microsoft.com/visualstudio/a-more-integrated-terminal-experience/)
 
+```none
+**********************************************************************
+** Visual Studio 2022 Developer PowerShell v17.5.1
+** Copyright (c) 2022 Microsoft Corporation
+**********************************************************************
+```
+
 * View > Terminal Window
 
 * Create Terminal Profiles
 
-```none
+```ps1
 C:\Program Files\PowerShell\7\pwsh.exe \
 C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe \
 C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe \
 
 -NoExit -Command "& { Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll}; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\
 -noe -c "&{Import-Module """C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell ac9611f0}"
+```
+
+```ps1
+C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+-NoExit -Command "& { Import-Module """$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}"
 
 C:\Windows\system32\cmd.exe \
 /k ""%VSAPPIDDIR%\..\Tools\VsDevCmd.bat"
@@ -70,6 +82,16 @@ $env:VSAPPIDDIR
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll
 ```
+
+```ps1
+$env:VSAPPIDDIR = "C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\"
+Import-Module "$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll
+Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\
+```
+
+* [How can I open the terminal in Visual Studio?](https://stackoverflow.com/q/43410898/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>`</kbd>
 
 ### Enter-VSDevShell
 
@@ -92,6 +114,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
 * [VS 2019 Release Notes](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
   * [History](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes-history)
+* [Visual Studio 2022 - 17.5 Released](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-released/)
 
 ## Resources
 
@@ -155,6 +178,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   or
 
   Solution Explorer > Preview Selected Items Icon ("Hat Icon")
+
+* [Visual Studio 2017 keep file open by default](https://stackoverflow.com/q/61943325/1366033)
+
+  Uncheck `Allow new files to be opened in the preview tab` in `Settings > Environment > Tabs and Windows`
 
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
@@ -237,8 +264,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   * [Tabs Studio](https://tabsstudio.com/)
 
 
-
-
 * [How to switch view modes in built-in Diff viewer of Visual Studio 2012 and 2013?](https://stackoverflow.com/q/20067385/1366033)
 
   'Compare Files' toolbox
@@ -261,3 +286,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   1. Remove Project
   2. Close & ReOpen VS
   3. Add Project
+
+* [Remove "Visual Studio 2022 Developer PowerShell" header in Visual Studio Terminal](https://stackoverflow.com/q/75608065/1366033)
+
+  Redirect output to null using `*>$null`
+
+  ```diff
+  - -NoExit -Command "& { Import-Module """$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}"
+  + -NoExit -Command "Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\ *>$null"
+  ```

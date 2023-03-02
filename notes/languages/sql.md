@@ -284,4 +284,17 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 * [INSERT vs INSERT INTO](https://stackoverflow.com/q/233919/1366033)
 
   `INTO` is typically optional, though some sql variants require it
-  
+
+* [Escape Square brackets in LIKE statement](https://stackoverflow.com/q/3661125/1366033)
+
+    Include a `[` character within a wildcard bracket
+
+    ```sql
+    SELECT * FROM tbl WHERE txt LIKE '[[]%'
+    ```
+
+    USE `ESCAPE` option in [`LIKE`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql)
+
+    ```sql
+    SELECT * FROM tbl WHERE txt LIKE '\[%' ESCAPE '\'
+    ```
