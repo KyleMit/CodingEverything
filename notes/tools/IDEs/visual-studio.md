@@ -295,3 +295,8 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
   - -NoExit -Command "& { Import-Module """$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}"
   + -NoExit -Command "Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\ *>$null"
   ```
+
+* [Can code lens appear above method attributes?](https://stackoverflow.com/q/20389267/1366033)
+
+  No
+

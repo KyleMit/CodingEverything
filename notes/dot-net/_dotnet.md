@@ -584,3 +584,45 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   **See Also**: [Use IHttpClientFactory to implement resilient HTTP requests](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
 
+
+* [Verifying that a string contains only letters in C#](https://stackoverflow.com/q/1181419/1366033)
+
+  ```cs
+  Regex.IsMatch(input, @"^[a-zA-Z]+$");
+  ```
+
+  Use [`Char.IsLetter`](https://learn.microsoft.com/en-us/dotnet/api/system.char.isletter?view=net-7.0)
+
+  ```cs
+  bool result = input.All(Char.IsLetter);
+  ```
+
+* [Is a LINQ statement faster than a 'foreach' loop?](https://stackoverflow.com/q/3156059/1366033)
+
+  No
+
+* [Which loop runs faster, 'for' or 'foreach'?](https://stackoverflow.com/q/365615/1366033)
+
+  `for` is faster, but `foreach` is useful on collections with `IEnumerable`
+
+* [Convert integer to binary](https://stackoverflow.com/q/2954962/1366033)
+
+  ```cs
+  var binary = Convert.ToString(3, 2); // 11
+  ```
+
+* [Convert an integer to a binary string with leading zeros](https://stackoverflow.com/q/23905188/1366033)
+
+  ```cs
+  Convert.ToString(3, 2).PadLeft(4, '0') // 0011
+  ```
+
+* [Checking for "a-z" and "A-Z"](https://stackoverflow.com/q/6017778/1366033)
+
+  Use [`Char.IsAsciiLetter(Char)`](https://learn.microsoft.com/en-us/dotnet/api/system.char.isasciiletter)
+
+  ```cs
+  Char.IsAsciiLetter('a') // true
+  ```
+
+  

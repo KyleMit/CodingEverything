@@ -675,3 +675,23 @@ namespace ExtensionMethods
 * [Comparing a boolean value before setting it](https://stackoverflow.com/q/4086572/1366033)
 
   Just set it - avoids branch detection
+
+* [C# binary literals](https://stackoverflow.com/q/594720/1366033)
+
+  ```cs
+  var i32 = 0b100_000
+  ```
+
+  * [C# 7 Work List of Features · Issue #2136 · dotnet/roslyn](https://github.com/dotnet/roslyn/issues/2136)
+  * [Proposal: Binary literals · Issue #215 · dotnet/roslyn](https://github.com/dotnet/roslyn/issues/215)
+
+* What is the difference between “int” and “uint” / “long” and “ulong”?
+
+  * `int`: –2147483648 to 2147483647
+  * `uint`: 0 to 4294967295
+  * `long`: -9223372036854775808 to 9223372036854775807
+  * `ulong`: 0 to 18446744073709551615
+
+  **See Also**: [Integral numeric types - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+
+
