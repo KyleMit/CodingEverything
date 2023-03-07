@@ -625,4 +625,23 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   Char.IsAsciiLetter('a') // true
   ```
 
-  
+* [Get a list of distinct values in List](https://stackoverflow.com/q/10255121/1366033)
+
+  Use [`Enumerable.Distinct`](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.distinct?view=net-8.0)
+
+  ```cs
+  Notes.Select(x => x.Author).Distinct();
+  ```
+
+* [Trim start of string](https://stackoverflow.com/q/4335878/1366033)
+
+  ```cs
+  public static string RemovePrefix(this string s, string prefix)
+  {
+      if (s.StartsWith(prefix))
+      {
+          return s.Substring(prefix.Length);
+      }
+      return s;
+  }
+  ```
