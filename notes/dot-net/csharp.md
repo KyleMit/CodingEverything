@@ -695,3 +695,19 @@ namespace ExtensionMethods
   **See Also**: [Integral numeric types - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 
+* [Best way to check for nullable bool in a condition expression (if ...)](https://stackoverflow.com/q/2673918/1366033)
+
+  ```cs
+  bool? x = true;
+
+  // Console.WriteLine(x ? "yes" : "no"); // Cannot implicitly convert type 'bool?' to 'bool'.
+
+  Console.WriteLine(x.HasValue && x.Value ? "yes" : "no");
+  Console.WriteLine(x ?? false ? "yes" : "no");
+  Console.WriteLine(x == true ? "yes" : "no");
+  Console.WriteLine(x is true ? "yes" : "no");
+  ```
+
+  Fiddle: [Nullable Bool Is True](https://dotnetfiddle.net/oC43kZ)
+
+  
