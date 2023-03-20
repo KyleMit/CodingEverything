@@ -571,3 +571,8 @@ git rev-list --count <revision>
   git commit --amend -m "New commit message"
   ```
 
+* [Go back N commits](https://stackoverflow.com/q/16738949/1366033)
+
+  ```bash
+  git checkout HEAD~N
+  ```

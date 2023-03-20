@@ -42,8 +42,12 @@
 * <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Move Lines Up (`Edit.MoveSelectedLinesUp`)
 * <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
-<kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
+* <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
+
+### Custom Shortcuts
+
+* <kbd>Ctrl</kbd> + <kbd>,</kbd> - `Tools.Options`
 
 ## Terminal
 
@@ -158,20 +162,29 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 
 * [Show Active Item in Solution Explorer](https://stackoverflow.com/q/12682656/1366033)
 
-
 * [Scroll Solution Explorer to current file](https://stackoverflow.com/a/12682819/1366033)
 
   Tools > Options > Projects and Solutions > Track Active Item in Solution Explorer
 
 * [Shortcut to scroll solution explorer to current file](https://stackoverflow.com/q/14937284/1366033)
 
-  <kbd>Ctrl</kbd> + <kbd>[</kbd>, <kbd>S</kbd> - `SolutionExplorer.SyncWithActiveDocument` - Show current file in Solution Explorer
+  * `SolutionExplorer.SyncWithActiveDocument` - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd> - Show current file in Solution Explorer
+    * Default: <kbd>Ctrl</kbd> + <kbd>`[`</kbd>, <kbd>S</kbd>
+
+* [Hotkey for showing/hiding sidebar](https://stackoverflow.com/q/6238719/1366033)
+
+  * `View.SolutionExplorer` - <kbd>Ctrl</kbd> + <kbd>E</kbd>
+    * Default: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>
+
+* [Pin / Unpin Window](https://stackoverflow.com/q/3827645/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - `Window.PinTab`
 
 * [Is there a way to navigate to real implementation of method behind an interface?](https://stackoverflow.com/a/53273845/1366033)
 
   `Edit.GoToImplementation` <kbd>Ctrl</kbd> + <kbd>F12</kbd>
 
-* [Disable Preview Tab](https://stackoverflow.com/a/18492029/1366033)
+* [Disable Preview Tab](https://stackoverflow.com/q/10952185/1366033)
 
   Options > Environment > Tabs and Windows > Preview Tab
 
@@ -193,6 +206,9 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 
 * [Keyboard shortcut to move line up/down in Visual Studio 2012?](https://superuser.com/a/1650238/180163)
 
+  * `Edit.MoveSelectedLinesUp` - <kbd>Alt</kbd> + <kbd>↑</kbd>
+  * `Edit.MoveSelectedLinesDown` - <kbd>Alt</kbd> + <kbd>↓</kbd>
+  
 
 * Move "Go To All" Window to Center
 
@@ -217,8 +233,10 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 
 * [What is the equivalent shortcut for CTRL + D from VSCode in Visual Studio?](https://stackoverflow.com/a/70379900/1366033)
 
-  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd> - **`Edit.InsertNextMatchingCaret`**
-  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>;</kbd> - **`Edit.InsertCaretsAtAllMatching`**
+  * **`Edit.InsertNextMatchingCaret`** - <kbd>Ctrl</kbd> + <kbd>D</kbd>
+    * Default: <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd>
+  * **`Edit.InsertCaretsAtAllMatching`** - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>
+    * <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>;</kbd>
 
 * [How can I close Visual Studio's windows with my keyboard?](https://stackoverflow.com/a/10549070/1366033)
 
@@ -241,12 +259,6 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 
   * [Where does Visual Studio 2017 store its config?](https://stackoverflow.com/q/41119996/1366033)
   * [Disable Visual Studio 2022 IIS security attach warning](https://www.davici.nl/blog/disable-visual-studio-2022-iis-security-attach-warning)
-
-* [Pin / Unpin Window](https://stackoverflow.com/q/3827645/1366033)
-
-  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - `Window.PinTab`
-
-* [Hotkey for showing/hiding sidebar](https://stackoverflow.com/q/20404092/1366033)
 
 * [How do I get a console project to group my appsettings.json files?](https://stackoverflow.com/q/51253779/1366033)
 

@@ -31,8 +31,17 @@
 ## Docs
 
 * [Quick Start Guide](https://www.jetbrains.com/help/phpstorm/quick-start-guide-phpstorm.html)
+* [Editor basics | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/using-code-editor.html)
 * [Spellchecking](https://www.jetbrains.com/help/phpstorm/spellchecking.html#fix-typo)
 * [PhpStorm > Terminal](https://www.jetbrains.com/help/phpstorm/terminal-emulator.html)
+
+## Blog
+
+* [Using a custom shell with Rider’s built-in terminal](https://blog.jetbrains.com/dotnet/2017/11/15/using-custom-shell-riders-built-terminal/)
+
+## Plugins
+
+* [Entity Framework Core UI - Rider Plugin | Marketplace](https://plugins.jetbrains.com/plugin/18147-entity-framework-core-ui)
 
 ## Questions
 
@@ -85,3 +94,8 @@
 
   Settings > Editor > File Types
 
+* [Combine multiple split panes into single window with tabs in IntelliJ IDEA](https://stackoverflow.com/q/75757976/1366033)
+
+  Go to `Window` > `Editor Tabs` > `Unsplit`
+
+  

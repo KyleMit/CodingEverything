@@ -814,3 +814,14 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     "xml.format.splitAttributes": true
   }
   ```
+
+* [How to undo split screen](https://stackoverflow.com/q/56409944/1366033)
+
+  `View: Single Column Editor Layout`
+
+  ```json
+  "command aliases": {
+    "workbench.action.editorLayoutSingle": "Unsplit All"
+  },
+  ```
+
