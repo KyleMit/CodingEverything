@@ -98,4 +98,13 @@
 
   Go to `Window` > `Editor Tabs` > `Unsplit`
 
-  
+* [IntelliJ IDEA back/forward with mouse](https://stackoverflow.com/a/75801572/1366033)
+
+  Settings > Keymap > Add Mouse Shortcut
+
+* Change Color for Diff Editor Deletion to Red
+
+  Settings > Editor > Color Scheme > Diff & Merge > Deleted
+
+  * [What do the colors in the Diff viewer mean?? – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000243060-What-do-the-colors-in-the-Diff-viewer-mean-)
+  * [Colors and fonts | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/configuring-colors-and-fonts.html#tips)
