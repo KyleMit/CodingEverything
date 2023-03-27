@@ -572,6 +572,14 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   }
   ```
 
+* [How to set working directory for debugging](https://stackoverflow.com/q/38623138/1366033)
+
+  Set `cwd`
+
+  ```json
+  "cwd": "${workspaceFolder}/docs",
+  ```
+
 * To enable the Visual Studio Code GitHub Support, please set a Personal Access Token
 
 * [Format is not using indent settings](https://stackoverflow.com/q/36251820/1366033)

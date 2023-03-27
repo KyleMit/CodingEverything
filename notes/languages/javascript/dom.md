@@ -122,3 +122,10 @@ Document Object Model
   console.log(state); // Either 'granted', 'prompt' or 'denied'
   ```
 
+* [How to remove all elements of a certain class from the DOM?](https://stackoverflow.com/q/10842471/1366033)
+
+  ```js
+  document.querySelectorAll('.classname').forEach(e => e.remove());
+  ```
+
+  

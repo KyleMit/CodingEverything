@@ -696,8 +696,20 @@ winget install graphviz
 
 * [Remove line breaks from start and end of string](https://stackoverflow.com/q/14572413/1366033)
 
+  Use [`string.trim()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
+
+  ```js
+  "  abc  ".trim() // "abc"
+  ```
+
   ```js
   const trimWhitespace = (str) => str.replace(/^\s+|\s+$/g, '');
+  ```
+
+* [How to remove the extra spaces in a string?](https://stackoverflow.com/q/16974664/1366033)
+
+  ```js
+  const trimExtraWhiteSpace = (text) => text.replace(/\s+/g, " ")
   ```
 
 * [Filtering an array with a function that returns a promise](https://stackoverflow.com/a/53508547/1366033)
@@ -888,3 +900,14 @@ winget install graphviz
   }, {});
   ```
 
+* [Trying to use the DOMParser with node js](https://stackoverflow.com/q/11398419/1366033)
+
+  Use [**jsdom**](https://www.npmjs.com/package/jsdom)
+
+  ```js
+  const jsdom = require("jsdom");
+  const dom = new jsdom.JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+  dom.window.document.querySelector("p").textContent; // 'Hello world'
+  ```
+
+  
