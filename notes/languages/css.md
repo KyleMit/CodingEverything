@@ -187,4 +187,6 @@ button {
   }
   ``
 
-  
+* [My position sticky element isn't sticky when using flexbox](https://stackoverflow.com/q/44446671/1366033)  
+
+  Add `align-self: flex-start` to set height to auto, to allow scrolling

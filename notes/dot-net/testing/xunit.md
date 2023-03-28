@@ -4,6 +4,10 @@
 
 > xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework
 
+## Links
+
+* [Comparing xUnit.net to other frameworks](https://xunit.net/docs/comparisons)
+
 ## Fluent Assertions
 
 * [Fluent Assertions](https://fluentassertions.com)
@@ -127,3 +131,8 @@
   * [How can I compare two lists with xunit test](https://stackoverflow.com/q/59458136/1366033)
   * [comparing two lists with Xunit](https://stackoverflow.com/q/45284937/1366033)
 
+* Skip / ignore a particular test
+
+  ```cs
+  [Fact(Skip="reason")]
+  ```
