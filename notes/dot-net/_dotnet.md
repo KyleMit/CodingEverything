@@ -645,3 +645,12 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
       return s;
   }
   ```
+
+* [Add item to beginning of list](https://stackoverflow.com/q/390491/1366033)
+
+  Use [`List.Insert`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.insert?view=net-7.0) with position `0`
+
+  ```cs
+  ti.Insert(0, initialItem);
+  ```
+

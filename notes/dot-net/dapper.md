@@ -47,3 +47,13 @@ new {A = 1, B = "b"} // A will be mapped to the param @A, B to the param @B
 connection.Query("select * from User where UserTypeId = {=Admin}", new { UserTypeId.Admin });
 ```
 
+## Questions
+
+* [Dapper Parameter replace not working for Top](https://stackoverflow.com/q/36946879/1366033)
+
+    Use Parentheses with Top expression
+
+    ```cs
+    var sql = "Select Top ({=MaxLimit}) from Table";
+    ```
+

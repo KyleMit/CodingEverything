@@ -108,3 +108,12 @@
 
   * [What do the colors in the Diff viewer mean?? – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000243060-What-do-the-colors-in-the-Diff-viewer-mean-)
   * [Colors and fonts | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/configuring-colors-and-fonts.html#tips)
+
+* Show all files in solution
+
+  In [Explorer](https://www.jetbrains.com/help/rider/Project_Tool_Window.html), toggle from Solution View to File System View
+
+* [Is there a way to sync settings across JetBrains IDEs?](https://stackoverflow.com/q/21660554/1366033)
+
+  File > Manage IDE Settings > Export & Import
+
