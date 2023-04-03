@@ -57,3 +57,6 @@ connection.Query("select * from User where UserTypeId = {=Admin}", new { UserTyp
     var sql = "Select Top ({=MaxLimit}) from Table";
     ```
 
+* Using Dapper to get nvarchar(max) returns a string trimmed to 4000 characters. Can this behaviour be changed?
+
+    [Default value is 4000 characters](https://github.com/DapperLib/Dapper/blob/a31dfd3dd4d7f3f2580bd33c877199d7ef3e3ef9/Dapper/DbString.cs#L16-L21)

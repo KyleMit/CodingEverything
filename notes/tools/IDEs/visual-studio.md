@@ -312,3 +312,6 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 
   No
 
+* [Find all references of a dll in a project](https://stackoverflow.com/q/17131228/1366033)
+
+  * Resharper > References > Find code Dependent On Module
