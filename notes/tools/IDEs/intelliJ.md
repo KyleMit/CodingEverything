@@ -1,4 +1,4 @@
-# JetBrains IDE
+# JetBrains IDE / IntelliJ IDE / Rider
 
 ## Products
 
@@ -117,3 +117,6 @@
 
   File > Manage IDE Settings > Export & Import
 
+* [Is there a way in Intellij IDEA to see the name of the method the current line belongs to?](https://stackoverflow.com/q/1920451/1366033)
+
+  Settings > Breadcrumbs

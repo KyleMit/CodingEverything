@@ -128,4 +128,12 @@ Document Object Model
   document.querySelectorAll('.classname').forEach(e => e.remove());
   ```
 
+* [What is the difference between insertAdjacentHtml and insertAdjacentElement?](https://stackoverflow.com/q/57111065/1366033)
+
+  * [`Element.insertAdjacentHTML()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+  * [`Element.insertAdjacentElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
+
+  `HTML` for text, `Element` for nodes already in the DOM
+
+
   
