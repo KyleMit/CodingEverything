@@ -124,3 +124,29 @@ program
    ```bash
    npm rm --global foo
    ```
+
+* [How to test an `npm publish` result, without actually publishing to NPM?](https://stackoverflow.com/q/50206729/1366033)
+
+   ```bash
+   npm publish --dry-run
+   ```
+
+   ```bash
+   npm pack
+   ```
+
+   **See Also**: [npm > developers > Testing whether your .npmignore or files config works](https://docs.npmjs.com/cli/v9/using-npm/developers#testing-whether-your-npmignore-or-files-config-works)
+
+* [Does NPM ignore files listed in .gitignore?](https://stackoverflow.com/q/24942161/1366033)
+
+  Yes, unless you have a `.npmignore` and then it'll use that
+
+  **See Also**: [npm > developers > Keeping files out of your Package](https://docs.npmjs.com/cli/v9/using-npm/developers#keeping-files-out-of-your-package)
+
+* [Should I .npmignore my tests?](https://stackoverflow.com/q/25124844/1366033)
+
+  Yes, but with `package.json` > `files`
+
+  **See Also**: [For the love of god, don’t use .npmignore](https://medium.com/@jdxcode/for-the-love-of-god-dont-use-npmignore-f93c08909d8d)
+
+  

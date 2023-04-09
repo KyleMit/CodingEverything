@@ -3,7 +3,9 @@
 ## Alternatives
 
 * [Swagger](https://swagger.io/)
+* [Insomnia](https://insomnia.rest/)
 * [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+* [HTTP Client](https://www.jetbrains.com/help/rider/Http_client_in__product__code_editor.html)
 
 ## Questions
 
