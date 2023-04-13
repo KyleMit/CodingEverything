@@ -44,7 +44,7 @@ Elasticsearch is a distributed, RESTful search and analytics engine
 
 ## Query String DSL
 
-[Query string query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
+* [Query string query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
 
 ## Text Analysis
 

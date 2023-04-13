@@ -654,3 +654,37 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ti.Insert(0, initialItem);
   ```
 
+* [Check if a string contains an element from a list (of strings)](https://stackoverflow.com/q/500925/1366033)
+
+  [ContainsAny | .NET Fiddle](https://dotnetfiddle.net/It1G06)
+
+  ```cs
+  var containsMatch = "Hello World".ContainsAny(new[] { "World", "Earth" }); // true
+
+  public static class StringExtensions
+  {
+      /// <summary>
+      /// Tests whether any of the entries in the search list can be found in the source string
+      /// </summary>
+      public static bool ContainsAny(this string source, IEnumerable<string> search)
+      {
+          return search.Any(source.Contains);
+      }
+  }
+  ```
+
+  ```cs
+  var list = new [] {"a","b"};
+  var containsMatch = list.ContainsAny(new [] {"b", "c"}); // true
+
+  public static class LinqExtensions
+  {
+      /// <summary>
+      /// Tests whether the any value in the source list matches any of the values in the search list
+      /// </summary>
+      public static bool ContainsAny<T>(this IEnumerable<T> source, IEnumerable<T> search)
+      {
+          return source.Any(search.Contains);
+      }
+  }
+  ```

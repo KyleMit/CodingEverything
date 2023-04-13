@@ -164,6 +164,10 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT DATEADD(DAY, 1, EOMONTH(DATEADD(MONTH, -1, GETDATE())))
     ```
 
+    ```sql
+    SELECT FORMAT(GETDATE(), 'yyyy-MM-01')
+    ```
+
 * [How to use SQL Select statement with IF EXISTS sub query?](https://stackoverflow.com/q/7805019/1366033)
 
     ```sql
