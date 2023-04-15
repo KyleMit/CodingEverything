@@ -51,7 +51,6 @@
   * Terminal
   * Set to `pwsh.exe`
 
-
 * [How to configure dictionary that is already under version control?](https://stackoverflow.com/a/51104437/1366033)
 
     ```none
@@ -78,6 +77,24 @@
 
   Plugins > [VSCode Keymap](https://plugins.jetbrains.com/plugin/12062-vscode-keymap/)
 
+* [IntelliJ IDEA back/forward with mouse](https://stackoverflow.com/a/75801572/1366033)
+
+  Settings > Keymap > Add Mouse Shortcut
+
+* [IntelliJ Column Selection using Cursor Keys](https://stackoverflow.com/q/26386079/1366033)
+
+* `Clone Caret Above` - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>↑</kbd>
+  * Custom: <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>↑</kbd>
+* `Clone Caret Below` - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>↓</kbd>
+  * Custom: <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>↓</kbd>
+
+* Add remaining text to selection
+
+  * `Editor Actions` > `Move Caret to Page Top with Selection`
+  * `Editor Actions` > `Move Caret to Page Bottom with Selection`
+
+  **See Also**: [Create and edit code > Editor Basics > Handle Caret and Select Text](https://www.jetbrains.com/help/rider/Selecting_Text_in_the_Editor.html#select-text)
+
 * [Locate current file in IntelliJ](https://stackoverflow.com/q/1086041/1366033)
 
   1. <kbd>Alt</kbd> + <kbd>F1</kbd>
@@ -97,10 +114,6 @@
 * [Combine multiple split panes into single window with tabs in IntelliJ IDEA](https://stackoverflow.com/q/75757976/1366033)
 
   Go to `Window` > `Editor Tabs` > `Unsplit`
-
-* [IntelliJ IDEA back/forward with mouse](https://stackoverflow.com/a/75801572/1366033)
-
-  Settings > Keymap > Add Mouse Shortcut
 
 * Change Color for Diff Editor Deletion to Red
 

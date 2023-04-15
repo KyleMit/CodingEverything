@@ -136,4 +136,22 @@ Document Object Model
   `HTML` for text, `Element` for nodes already in the DOM
 
 
+* [How to insert an element after another element in JavaScript without using a library?](https://stackoverflow.com/q/4793604/1366033)
+
+  Use [`insertAdjacentElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
+
+  ```js
+  insertAdjacentElement(position, element)
+  ```
+
+  ```html
+  <!-- beforebegin -->
+  <p>
+    <!-- afterbegin -->
+    foo
+    <!-- beforeend -->
+  </p>
+  <!-- afterend -->
+  ```
+
   
