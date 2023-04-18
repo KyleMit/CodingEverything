@@ -910,4 +910,28 @@ winget install graphviz
   dom.window.document.querySelector("p").textContent; // 'Hello world'
   ```
 
-  
+* [How to group by and sum an array of objects?](https://stackoverflow.com/q/19233283/1366033)
+
+  ```js
+  const data = [
+      { Sport: "Soccer",   Points: 05 },
+      { Sport: "Soccer",   Points: 10 },
+      { Sport: "Football", Points: 20 }
+  ]
+
+  const grouped = data.reduce((acc, el) => {
+      const key = el.Sport
+      const prev = acc[key] ?? 0
+      acc[key] = prev + el.Points;
+      return acc;
+  }, {})
+
+  // {Soccer: 15, Football: 20}
+  ```
+
+  Clever single line using [comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+
+  ```js
+  data.reduce((acc, el) => (acc[el.Sport] = (acc[el.Sport] ?? 0) + el.Points, acc), {})
+  ```
+

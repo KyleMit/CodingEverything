@@ -151,13 +151,18 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [How can I select the first day of a month in SQL?](https://stackoverflow.com/q/1520789/1366033)
 
+    SQL Server 2022, use [`DATETRUNC`](https://learn.microsoft.com/en-us/sql/t-sql/functions/datetrunc-transact-sql?view=sql-server-ver16)
 
     ```sql
-    SELECT DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0)
+    SELECT DATETRUNC(month, GETDATE())
     ```
 
     ```sql
-    SELECT DATEFROMPARTS(YEAR(GETDATE()),MONTH(GETDATE()),1)
+    SELECT DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
+    ```
+
+    ```sql
+    SELECT DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0)
     ```
 
     ```sql
@@ -167,6 +172,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT FORMAT(GETDATE(), 'yyyy-MM-01')
     ```
+
 
 * [How to use SQL Select statement with IF EXISTS sub query?](https://stackoverflow.com/q/7805019/1366033)
 
