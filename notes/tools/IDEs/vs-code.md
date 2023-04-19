@@ -833,3 +833,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   },
   ```
 
+* [VS Code Markdown - is there a clever way to make links intellisense?](https://stackoverflow.com/q/59830081/1366033)
+
+  See [Markdown workspace header link completions](https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_76.md#markdown-workspace-header-link-completions)
+
+  ```json
+  "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onSingleOrDoubleHash",
+  ```

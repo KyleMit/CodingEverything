@@ -130,6 +130,16 @@
 
   File > Manage IDE Settings > Export & Import
 
-* [Is there a way in Intellij IDEA to see the name of the method the current line belongs to?](https://stackoverflow.com/q/1920451/1366033)
+* [Is there a way in IntelliJ IDEA to see the name of the method the current line belongs to?](https://stackoverflow.com/q/1920451/1366033)
 
   Settings > Breadcrumbs
+
+* [IntelliJ IDEA highlight all occurrences of selected text](https://stackoverflow.com/q/52373402/1366033)
+
+  Install [BrowseWordAtCaret](https://plugins.jetbrains.com/plugin/201-browsewordatcaret)
+
+  Native - Highlight Usages of element at caret
+
+  See Also: IntelliJ: [How to auto-highlight variables like in Eclipse](https://stackoverflow.com/q/3763183/1366033)
+
+  

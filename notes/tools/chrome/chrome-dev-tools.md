@@ -78,4 +78,8 @@ https://web.dev/
   localStorage.setItem("consoleHistory", JSON.stringify(filteredHistory, null, 0))
   ```
 
-  
+* [Is there a way to see the stacking context, in IE/Firefox/Chrome/etc.?](https://stackoverflow.com/q/6800511/1366033)
+
+  Chrome > Layers
+  Edge > 3D View
+

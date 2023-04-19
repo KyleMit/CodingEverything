@@ -26,3 +26,14 @@ contestant.Points.ShouldBe(1337);
 dotnet add package Shouldly
 ```
 
+## Questions
+
+* Should contain item in list
+
+  [Enumerable > Contain](https://docs.shouldly.org/documentation/enumerable/contain)
+
+  ```cs
+  list.ShouldContain(m => m > 100)
+  ```
+
+  
