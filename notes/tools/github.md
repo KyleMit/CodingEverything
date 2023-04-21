@@ -129,3 +129,16 @@ git clone git@github.com:github/hub.git
 
   1. Copy Permalink
   2. Paste whole URL within same repo
+
+* [GitHub: filter for issues that are either assigned to somebody or somebody is mentioned](https://stackoverflow.com/q/70665771/1366033)
+
+  Use [`involves:user`](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-by-a-user-thats-involved-in-an-issue-or-pull-request)
+
+* [Find PRs where user is a reviewer](https://stackoverflow.com/q/41506891/1366033)
+
+  * `reviewed-by:KyleMit`
+  * `review-requested:KyleMit`
+
+  **See Also**: [Filter pull request reviews and review requests](https://github.blog/2017-01-23-filter-pull-request-reviews-and-review-requests/)
+
+  

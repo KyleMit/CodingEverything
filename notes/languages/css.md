@@ -155,6 +155,14 @@ button {
   a:nth-last-child(-n+3)
   ```
 
+* [Select second last element with css](https://stackoverflow.com/q/5418744/1366033)
+
+  Use [`:nth-last-child()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child)
+
+  ```cs
+  :nth-last-child(2)
+  ```
+
 * [sticky position on css grid items](https://stackoverflow.com/q/50794795/1366033)
 
   ```css
@@ -171,6 +179,14 @@ button {
 
   ```css
   previous:has(+ next) {}
+  ```
+
+* [Is there a CSS parent selector?](https://stackoverflow.com/q/1014861/1366033)
+
+  Use [`:has()`](https://www.w3.org/TR/selectors-4/#relational) selector
+
+  ```cs
+  li:has(> a.active) { /* styles to apply to the li tag */ }
   ```
 
 * [Make any hovered color darker/lighter that the original](https://stackoverflow.com/q/53682577/1366033)
@@ -190,3 +206,4 @@ button {
 * [My position sticky element isn't sticky when using flexbox](https://stackoverflow.com/q/44446671/1366033)  
 
   Add `align-self: flex-start` to set height to auto, to allow scrolling
+

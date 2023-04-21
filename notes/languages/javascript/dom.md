@@ -141,7 +141,7 @@ Document Object Model
   Use [`insertAdjacentElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
 
   ```js
-  insertAdjacentElement(position, element)
+  el.insertAdjacentElement(position, newEl)
   ```
 
   ```html
@@ -152,6 +152,30 @@ Document Object Model
     <!-- beforeend -->
   </p>
   <!-- afterend -->
+  ```
+
+  Use [`Element.after()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/after)
+
+  ```js
+  el.after(newEl)
+  ```
+
+* [Is it possible to clone html element objects in JavaScript?](https://stackoverflow.com/q/921290/1366033)
+
+  Use [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
+
+* [Change textNode value](https://stackoverflow.com/q/680431/1366033)
+
+  ```js
+  node.nodeValue="new value";
+  ```
+
+  **See Also**: [`#text` node](https://developer.mozilla.org/en-US/docs/Web/API/Text#instance_properties)
+
+* [How to get the text node of an element?](https://stackoverflow.com/q/6520192/1366033)
+
+  ```js
+  [...el.childNodes].find(child => child.nodeType === Node.TEXT_NODE);
   ```
 
   
