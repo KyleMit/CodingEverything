@@ -935,3 +935,10 @@ winget install graphviz
   data.reduce((acc, el) => (acc[el.Sport] = (acc[el.Sport] ?? 0) + el.Points, acc), {})
   ```
 
+* [Getting the date of next Monday](https://stackoverflow.com/q/33078406/1366033)
+
+  ```js
+  var d = new Date();
+  d.setDate(d.getDate() + (((1 + 7 - d.getDay()) % 7) || 7));
+  console.log(d);
+  ```

@@ -142,4 +142,6 @@
 
   See Also: IntelliJ: [How to auto-highlight variables like in Eclipse](https://stackoverflow.com/q/3763183/1366033)
 
-  
+* [Turn off background color for SQL strings in PHP Storm](https://stackoverflow.com/q/31376913/1366033)
+
+  Settings > Editor > Color Scheme > General > Code > Injected language fragment
