@@ -710,4 +710,44 @@ namespace ExtensionMethods
 
   Fiddle: [Nullable Bool Is True](https://dotnetfiddle.net/oC43kZ)
 
-  
+* [Cast Named Tuple to System Tuple](https://stackoverflow.com/q/43576919/1366033)
+
+  Need to use [`ValueTuple`](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple)
+
+  ```cs
+  (string name, int age) p1 = ("Kyle", 35);
+  (string name, int age) p2 = ValueTuple.Create<string, int>("Ryan", 36);
+  (string, int) p3 = ValueTuple.Create<string, int>("Parker", 34);
+
+  Console.WriteLine(p1.name);
+  Console.WriteLine(p2.name);
+  Console.WriteLine(p3.Item1);
+  ```
+
+  **Demo**: [Named Tuple Creation](https://dotnetfiddle.net/sxEoT2)
+
+* [What's the difference between `System.ValueTuple` and `System.Tuple`?](https://stackoverflow.com/q/41084411/1366033)
+
+  * [`System.Tuple` Class](https://learn.microsoft.com/en-gb/dotnet/api/system.tuple?view=net-7.0)
+  * [`System.ValueTuple` Struct](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple?redirectedfrom=MSDN&view=net-7.0)
+
+  * Tuple is a class
+  * ValueTuple is a struct
+
+* [Better naming in Tuple classes than "Item1", "Item2"](https://stackoverflow.com/q/7745938/1366033)
+
+  In [C#7](https://devblogs.microsoft.com/dotnet/new-features-in-c-7-0/#tuples)- use `ValueTuple`
+
+  Named Tuple Type
+
+  ```cs
+  (string first, string last) person = ("Kyle", "Mit");
+  ```
+
+  Named Tuple Literal
+
+  ```cs
+  var person = (first: "Kyle", last: "Mit");
+  ```
+
+

@@ -87,3 +87,21 @@
   ```sql
   SELECT PARSE_URL('https://www.snowflake.com/'):host -- www.snowflake.com
   ```
+
+  ```sql
+  SELECT PARSE_URL('https://www.snowflake.com/')['host'] -- www.snowflake.com
+  ```
+
+* [Concat two Strings](https://stackoverflow.com/q/59581699/1366033)
+
+  Use [`CONCAT`](https://docs.snowflake.com/en/sql-reference/functions/concat)
+
+  ```sql
+  SELECT CONCAT('hello', ' ', 'world') -- 'hello world'
+  ```
+
+  Use `||`
+
+  ```sql
+  SELECT 'hello' || ' ' || 'world' -- 'hello world'
+  ```

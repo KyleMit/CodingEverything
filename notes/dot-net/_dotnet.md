@@ -688,3 +688,24 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
       }
   }
   ```
+
+* [`Console.WriteLine` with multiple variables into single line](https://stackoverflow.com/q/15418467/1366033)
+
+  C#6 - Use [String Interpolation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
+
+  ```cs
+  var id = 1;
+  var name = "Kyle"
+  Console.WriteLine($"{id} - {name}"); // 1 - Kyle
+  ```
+
+  Use [Composite Formatting](https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting)
+
+  ```cs
+  var id = 1;
+  var name = "Kyle"
+  Console.WriteLine("{0} - {1}", id, name); // 1 - Kyle
+  ```
+
+
+
