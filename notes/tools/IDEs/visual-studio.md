@@ -315,3 +315,10 @@ Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env
 * [Find all references of a dll in a project](https://stackoverflow.com/q/17131228/1366033)
 
   * Resharper > References > Find code Dependent On Module
+
+
+* [How to filter debug output](https://stackoverflow.com/q/30212152/1366033)
+
+  Use [Debug Output Filter](https://niahtextfilter.com/)
+
+

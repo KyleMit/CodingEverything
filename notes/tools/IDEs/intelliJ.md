@@ -28,6 +28,12 @@
 * <kbd>Alt</kbd> + <kbd>1</kbd> - Focus Project tool window
 * <kbd>Esc</kbd> - Focus Editor
 
+## Issues
+
+* [Allow to filter debug output](https://youtrack.jetbrains.com/v2/issue/RIDER-17528)
+  * [Implement pattern-based filters for 'Debug Output'](https://youtrack.jetbrains.com/issue/RIDER-67404)
+  * [Debug Output Filter](https://rider-support.jetbrains.com/hc/en-us/community/posts/360001334220-Debug-Output-Filter)
+
 ## Docs
 
 * [Quick Start Guide](https://www.jetbrains.com/help/phpstorm/quick-start-guide-phpstorm.html)

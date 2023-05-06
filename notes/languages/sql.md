@@ -267,8 +267,16 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [WHERE string ends with Column](https://stackoverflow.com/q/25413692/1366033)
 
+    Use [`LIKE`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver16) Operator
+
     ```sql
     select * from users where email like '%yahoo.com'
+    ```
+
+    Use [`RIGHT()`](https://learn.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver16) Function
+
+    ```sql
+    select * from users where right(email, len('yahoo.com')) = 'yahoo.com'
     ```
 
 * [How to select true/false based on column value?](https://stackoverflow.com/q/2396889/1366033)

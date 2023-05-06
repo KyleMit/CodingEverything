@@ -450,6 +450,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   In extension, call `vscode.commands.getCommands()`
 
+* [VSCode some shortcuts not working properly](https://stackoverflow.com/q/58946149/1366033)
+
+  Run > `Developer: Toggle Keyboard Shortcuts Troubleshooting`
+
 * [Change keyboard shortcut bindings in Visual Studio Code?](https://stackoverflow.com/a/33791170/1366033)
 * [VS Code - Mouse Wheel Zoom](https://stackoverflow.com/q/30192884/1366033)
 

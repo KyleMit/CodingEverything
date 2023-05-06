@@ -707,5 +707,19 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   Console.WriteLine("{0} - {1}", id, name); // 1 - Kyle
   ```
 
+* [How to reference generic classes and methods in xml documentation](https://stackoverflow.com/q/532166/1366033)
 
+  Surround the generic type parameter list with curly braces `{}`
+
+  How would I reference `FancyClass<T>`
+
+  ```cs
+  // <see cref="FancyClass{T}"/>
+  ```
+
+* [How do I reference a C# keyword in XML documentation?](https://stackoverflow.com/q/693196/1366033)
+
+  ```cs
+  /// <see langword="true"/>
+  ```
 
