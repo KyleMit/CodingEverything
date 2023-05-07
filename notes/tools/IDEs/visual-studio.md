@@ -42,26 +42,42 @@
 * <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> - Move Lines Up (`Edit.MoveSelectedLinesUp`)
 * <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
-<kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
+* <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
 
-## VS Terminal
+### Custom Shortcuts
+
+* <kbd>Ctrl</kbd> + <kbd>,</kbd> - `Tools.Options`
+
+## Terminal
 
 * [The PowerShell you know and love now with a side of Visual Studio - Aug, 2019](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
 * [Say hello to the new Visual Studio terminal! - Sep, 2019](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
 * [A more integrated terminal experience - Jan, 2021](https://devblogs.microsoft.com/visualstudio/a-more-integrated-terminal-experience/)
 
+```none
+**********************************************************************
+** Visual Studio 2022 Developer PowerShell v17.5.1
+** Copyright (c) 2022 Microsoft Corporation
+**********************************************************************
+```
+
 * View > Terminal Window
 
 * Create Terminal Profiles
 
-```none
+```ps1
 C:\Program Files\PowerShell\7\pwsh.exe \
 C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe \
 C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe \
 
 -NoExit -Command "& { Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll}; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\
 -noe -c "&{Import-Module """C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell ac9611f0}"
+```
+
+```ps1
+C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+-NoExit -Command "& { Import-Module """$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}"
 
 C:\Windows\system32\cmd.exe \
 /k ""%VSAPPIDDIR%\..\Tools\VsDevCmd.bat"
@@ -70,6 +86,16 @@ $env:VSAPPIDDIR
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll
 ```
+
+```ps1
+$env:VSAPPIDDIR = "C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\"
+Import-Module "$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll
+Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\
+```
+
+* [How can I open the terminal in Visual Studio?](https://stackoverflow.com/q/43410898/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>`</kbd>
 
 ### Enter-VSDevShell
 
@@ -92,6 +118,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 * [Visual Studio Roadmap](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)
 * [VS 2019 Release Notes](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
   * [History](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes-history)
+* [Visual Studio 2022 - 17.5 Released](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-5-released/)
 
 ## Resources
 
@@ -135,26 +162,39 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Show Active Item in Solution Explorer](https://stackoverflow.com/q/12682656/1366033)
 
-
 * [Scroll Solution Explorer to current file](https://stackoverflow.com/a/12682819/1366033)
 
   Tools > Options > Projects and Solutions > Track Active Item in Solution Explorer
 
 * [Shortcut to scroll solution explorer to current file](https://stackoverflow.com/q/14937284/1366033)
 
-  <kbd>Ctrl</kbd> + <kbd>[</kbd>, <kbd>S</kbd> - `SolutionExplorer.SyncWithActiveDocument` - Show current file in Solution Explorer
+  * `SolutionExplorer.SyncWithActiveDocument` - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd> - Show current file in Solution Explorer
+    * Default: <kbd>Ctrl</kbd> + <kbd>`[`</kbd>, <kbd>S</kbd>
+
+* [Hotkey for showing/hiding sidebar](https://stackoverflow.com/q/6238719/1366033)
+
+  * `View.SolutionExplorer` - <kbd>Ctrl</kbd> + <kbd>E</kbd>
+    * Default: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>L</kbd>
+
+* [Pin / Unpin Window](https://stackoverflow.com/q/3827645/1366033)
+
+  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - `Window.PinTab`
 
 * [Is there a way to navigate to real implementation of method behind an interface?](https://stackoverflow.com/a/53273845/1366033)
 
   `Edit.GoToImplementation` <kbd>Ctrl</kbd> + <kbd>F12</kbd>
 
-* [Disable Preview Tab](https://stackoverflow.com/a/18492029/1366033)
+* [Disable Preview Tab](https://stackoverflow.com/q/10952185/1366033)
 
   Options > Environment > Tabs and Windows > Preview Tab
 
   or
 
   Solution Explorer > Preview Selected Items Icon ("Hat Icon")
+
+* [Visual Studio 2017 keep file open by default](https://stackoverflow.com/q/61943325/1366033)
+
+  Uncheck `Allow new files to be opened in the preview tab` in `Settings > Environment > Tabs and Windows`
 
 * [How to open new tabs on the right side](https://stackoverflow.com/q/4388110/1366033)
 
@@ -166,6 +206,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [Keyboard shortcut to move line up/down in Visual Studio 2012?](https://superuser.com/a/1650238/180163)
 
+  * `Edit.MoveSelectedLinesUp` - <kbd>Alt</kbd> + <kbd>↑</kbd>
+  * `Edit.MoveSelectedLinesDown` - <kbd>Alt</kbd> + <kbd>↓</kbd>
+  
 
 * Move "Go To All" Window to Center
 
@@ -190,8 +233,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
 * [What is the equivalent shortcut for CTRL + D from VSCode in Visual Studio?](https://stackoverflow.com/a/70379900/1366033)
 
-  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd> - **`Edit.InsertNextMatchingCaret`**
-  <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>;</kbd> - **`Edit.InsertCaretsAtAllMatching`**
+  * **`Edit.InsertNextMatchingCaret`** - <kbd>Ctrl</kbd> + <kbd>D</kbd>
+    * Default: <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>.</kbd>
+  * **`Edit.InsertCaretsAtAllMatching`** - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>
+    * <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>;</kbd>
 
 * [How can I close Visual Studio's windows with my keyboard?](https://stackoverflow.com/a/10549070/1366033)
 
@@ -215,12 +260,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   * [Where does Visual Studio 2017 store its config?](https://stackoverflow.com/q/41119996/1366033)
   * [Disable Visual Studio 2022 IIS security attach warning](https://www.davici.nl/blog/disable-visual-studio-2022-iis-security-attach-warning)
 
-* [Pin / Unpin Window](https://stackoverflow.com/q/3827645/1366033)
-
-  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - `Window.PinTab`
-
-* [Hotkey for showing/hiding sidebar](https://stackoverflow.com/q/20404092/1366033)
-
 * [How do I get a console project to group my appsettings.json files?](https://stackoverflow.com/q/51253779/1366033)
 
   ```xml
@@ -235,8 +274,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
 
   * [File Path On Footer](https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter)
   * [Tabs Studio](https://tabsstudio.com/)
-
-
 
 
 * [How to switch view modes in built-in Diff viewer of Visual Studio 2012 and 2013?](https://stackoverflow.com/q/20067385/1366033)
@@ -261,3 +298,27 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\M
   1. Remove Project
   2. Close & ReOpen VS
   3. Add Project
+
+* [Remove "Visual Studio 2022 Developer PowerShell" header in Visual Studio Terminal](https://stackoverflow.com/q/75608065/1366033)
+
+  Redirect output to null using `*>$null`
+
+  ```diff
+  - -NoExit -Command "& { Import-Module """$env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\}"
+  + -NoExit -Command "Import-Module $env:VSAPPIDDIR\..\Tools\Microsoft.VisualStudio.DevShell.dll; Enter-VsDevShell -SkipAutomaticLocation -SetDefaultWindowTitle -InstallPath $env:VSAPPIDDIR\..\..\ *>$null"
+  ```
+
+* [Can code lens appear above method attributes?](https://stackoverflow.com/q/20389267/1366033)
+
+  No
+
+* [Find all references of a dll in a project](https://stackoverflow.com/q/17131228/1366033)
+
+  * Resharper > References > Find code Dependent On Module
+
+
+* [How to filter debug output](https://stackoverflow.com/q/30212152/1366033)
+
+  Use [Debug Output Filter](https://niahtextfilter.com/)
+
+

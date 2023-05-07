@@ -163,9 +163,15 @@ git remote prune origin
 
 * [How to remove local (untracked) files from the current Git working tree](https://stackoverflow.com/q/61212/1366033)
 
+  Use [`git clean`](https://git-scm.com/docs/git-clean)
+
   ```bash
   git clean -dfx
   ```
+  
+  * `-d` - include directories
+  * `-f` - force
+  * `-x` - include ignored files
 
 * [How do I get the Git commit count?](https://stackoverflow.com/q/677436/1366033)
 
@@ -182,16 +188,6 @@ git rev-list --count <revision>
   git checkout -t <name of remote>/test
   ```
 
-
-* [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
-
-  ```bash
-  git branch | grep -v "master" | xargs -r git branch -D
-  ```
-
-  ```bash
-  git branch --merged | grep -v \* | xargs -r git branch -D 
-  ```
 
 * [Git command to show which specific files are ignored by .gitignore](https://stackoverflow.com/q/466764/1366033)
 
@@ -527,6 +523,35 @@ git rev-list --count <revision>
   git log --oneline -n 5
   ```
 
+* [What does git fsck stand for?](https://stackoverflow.com/q/21151945/1366033)
+
+  **`fsck`** - File System ChecK
+
+* [Git slow](https://stackoverflow.com/questions/4485059/1366033)
+
+  ```bash
+  git gc
+  ```
+
+  There are too many unreachable loose objects
+  
+  ```bash
+  git prune
+  ```
+
+  **See Also**: [Git Status Takes a Long Time to Complete](https://stackoverflow.com/questions/1183769/1366033)
+
+
+* [Delete all branches except master](https://stackoverflow.com/q/10610327/1366033)
+
+  ```bash
+  git branch | grep -v "main" | xargs -r git branch -D
+  ```
+
+  ```bash
+  git branch --merged | grep -v \* | xargs -r git branch -D
+  ```
+
 * [Is it possible to include a file in your .gitconfig](https://stackoverflow.com/q/1557183/1366033)
 
   Use [`config.includes`](https://git-scm.com/docs/git-config#_includes)
@@ -544,4 +569,10 @@ git rev-list --count <revision>
 
   ```bash
   git commit --amend -m "New commit message"
+  ```
+
+* [Go back N commits](https://stackoverflow.com/q/16738949/1366033)
+
+  ```bash
+  git checkout HEAD~N
   ```

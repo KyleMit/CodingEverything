@@ -1197,12 +1197,6 @@ $env:LOCALAPPDATA
   Get-Content (Get-PSReadlineOption).HistorySavePath | Group-Object -NoElement | Sort-Object -Property Count -Descending | Select-Object -First 10
   ```
 
-
-* IISAdministration vs WebAdministration Modules
-
-  * [`IISAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/iisadministration/?view=windowsserver2022-ps)
-  * [`WebAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/webadministration/?view=windowsserver2022-ps)
-
 * [Move to the directory root](https://stackoverflow.com/q/58640721/1366033)
 
   ```cs
@@ -1739,3 +1733,40 @@ $env:LOCALAPPDATA
   ```ps1
   . .\MyFunctions.ps1
   ```
+
+* [Difference between Get-Unique and select-object -unique](https://stackoverflow.com/q/26333961/1366033)
+
+   [`Get-Unique`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-unique?view=powershell-7.3) requires list is pre-sorted
+
+   [`Sort-Object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-7.3) with `Unique` will sort and make distinct
+
+* [How to prepend an element to an array in Powershell?](https://stackoverflow.com/q/2201571/1366033)
+
+  ```ps1
+  $x = "a"
+  $xs = @("b", "c")
+
+  $xs = ,$x + $xs # a,b,c
+  ```
+
+  ```ps1
+  $x = "a"
+  $xs = @("b", "c")
+
+  $xs = @($x) + $xs # a,b,c
+  ```
+
+* [How do I add a newline to command output in PowerShell?](https://stackoverflow.com/q/1639291/1366033)
+
+  ```ps1
+  ❯ "a`r`nb"
+  # a
+  # b
+  ```
+
+  ```ps1
+  ❯ "a$([Environment]::NewLine)b"
+  # a
+  # b
+  ```
+

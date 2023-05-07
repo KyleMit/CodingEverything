@@ -60,3 +60,48 @@
     * [CURRENT_TIMESTAMP](https://docs.snowflake.com/en/sql-reference/functions/current_timestamp.html)
     * [TO_DATE , DATE](https://docs.snowflake.com/en/sql-reference/functions/to_date.html)
     * [DATE_PART](https://docs.snowflake.com/en/sql-reference/functions/date_part.html)
+
+* [How to extract a substring of a URL with regex](https://stackoverflow.com/q/71610700/1366033)
+
+  Use [`PARSE_URL`](https://docs.snowflake.com/sql-reference/functions/parse_url)
+
+  ```sql
+  SELECT PARSE_URL('https://www.snowflake.com/');
+  -- +-----------------------------------------+
+  -- | PARSE_URL('HTTPS://WWW.SNOWFLAKE.COM/') |
+  -- |-----------------------------------------|
+  -- | {                                       |
+  -- |   "fragment": null,                     |
+  -- |   "host": "www.snowflake.com",          |
+  -- |   "parameters": null,                   |
+  -- |   "path": "",                           |
+  -- |   "port": null,                         |
+  -- |   "query": null,                        |
+  -- |   "scheme": "https"                     |
+  -- | }                                       |
+  -- +-----------------------------------------+
+  ```
+
+  [How To Query JSON Data in Snowflake](https://www.bmc.com/blogs/snowflake-query-json-data/)
+
+  ```sql
+  SELECT PARSE_URL('https://www.snowflake.com/'):host -- www.snowflake.com
+  ```
+
+  ```sql
+  SELECT PARSE_URL('https://www.snowflake.com/')['host'] -- www.snowflake.com
+  ```
+
+* [Concat two Strings](https://stackoverflow.com/q/59581699/1366033)
+
+  Use [`CONCAT`](https://docs.snowflake.com/en/sql-reference/functions/concat)
+
+  ```sql
+  SELECT CONCAT('hello', ' ', 'world') -- 'hello world'
+  ```
+
+  Use `||`
+
+  ```sql
+  SELECT 'hello' || ' ' || 'world' -- 'hello world'
+  ```

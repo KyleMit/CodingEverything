@@ -30,3 +30,10 @@ dotnet tool install --global dotnet-script
   }
   ```
 
+* [Referring to NuGet packages from csx script](https://stackoverflow.com/q/34920408/1366033)
+
+  ```cs
+  #r "nuget: AutoMapper, 6.1.0"
+  ```
+
+  

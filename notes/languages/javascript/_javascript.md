@@ -696,8 +696,20 @@ winget install graphviz
 
 * [Remove line breaks from start and end of string](https://stackoverflow.com/q/14572413/1366033)
 
+  Use [`string.trim()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
+
+  ```js
+  "  abc  ".trim() // "abc"
+  ```
+
   ```js
   const trimWhitespace = (str) => str.replace(/^\s+|\s+$/g, '');
+  ```
+
+* [How to remove the extra spaces in a string?](https://stackoverflow.com/q/16974664/1366033)
+
+  ```js
+  const trimExtraWhiteSpace = (text) => text.replace(/\s+/g, " ")
   ```
 
 * [Filtering an array with a function that returns a promise](https://stackoverflow.com/a/53508547/1366033)
@@ -888,3 +900,45 @@ winget install graphviz
   }, {});
   ```
 
+* [Trying to use the DOMParser with node js](https://stackoverflow.com/q/11398419/1366033)
+
+  Use [**jsdom**](https://www.npmjs.com/package/jsdom)
+
+  ```js
+  const jsdom = require("jsdom");
+  const dom = new jsdom.JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+  dom.window.document.querySelector("p").textContent; // 'Hello world'
+  ```
+
+* [How to group by and sum an array of objects?](https://stackoverflow.com/q/19233283/1366033)
+
+  ```js
+  const data = [
+      { Sport: "Soccer",   Points: 05 },
+      { Sport: "Soccer",   Points: 10 },
+      { Sport: "Football", Points: 20 }
+  ]
+
+  const grouped = data.reduce((acc, el) => {
+      const key = el.Sport
+      const prev = acc[key] ?? 0
+      acc[key] = prev + el.Points;
+      return acc;
+  }, {})
+
+  // {Soccer: 15, Football: 20}
+  ```
+
+  Clever single line using [comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+
+  ```js
+  data.reduce((acc, el) => (acc[el.Sport] = (acc[el.Sport] ?? 0) + el.Points, acc), {})
+  ```
+
+* [Getting the date of next Monday](https://stackoverflow.com/q/33078406/1366033)
+
+  ```js
+  var d = new Date();
+  d.setDate(d.getDate() + (((1 + 7 - d.getDay()) % 7) || 7));
+  console.log(d);
+  ```

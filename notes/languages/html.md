@@ -81,3 +81,6 @@
 
   Today, just use `<main>`
 
+* [Should `ol/ul` be inside `<p>` or outside?](https://stackoverflow.com/q/5681481/1366033)
+
+  `ol` elements are not legally allowed inside `p` elements

@@ -59,3 +59,9 @@
 
 [Fiddle Finder](https://jsfiddle.net/KyleMit/y8ah3nf7/)
 
+## Dotnet Fiddle
+
+* [Using BenchmarkDotNet](https://dotnetfiddle.net/Packages/24747/BenchmarkDotNet)
+  * [Example](https://dotnetfiddle.net/pWKwSr)
+  * [WithIterationTime](https://github.com/dotnet/BenchmarkDotNet/blob/0772ce21aa32914050ccf4339514e9bc05563ec0/src/BenchmarkDotNet/Jobs/JobExtensions.cs#L171)
+

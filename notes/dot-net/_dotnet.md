@@ -584,3 +584,142 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   **See Also**: [Use IHttpClientFactory to implement resilient HTTP requests](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
 
+
+* [Verifying that a string contains only letters in C#](https://stackoverflow.com/q/1181419/1366033)
+
+  ```cs
+  Regex.IsMatch(input, @"^[a-zA-Z]+$");
+  ```
+
+  Use [`Char.IsLetter`](https://learn.microsoft.com/en-us/dotnet/api/system.char.isletter?view=net-7.0)
+
+  ```cs
+  bool result = input.All(Char.IsLetter);
+  ```
+
+* [Is a LINQ statement faster than a 'foreach' loop?](https://stackoverflow.com/q/3156059/1366033)
+
+  No
+
+* [Which loop runs faster, 'for' or 'foreach'?](https://stackoverflow.com/q/365615/1366033)
+
+  `for` is faster, but `foreach` is useful on collections with `IEnumerable`
+
+* [Convert integer to binary](https://stackoverflow.com/q/2954962/1366033)
+
+  ```cs
+  var binary = Convert.ToString(3, 2); // 11
+  ```
+
+* [Convert an integer to a binary string with leading zeros](https://stackoverflow.com/q/23905188/1366033)
+
+  ```cs
+  Convert.ToString(3, 2).PadLeft(4, '0') // 0011
+  ```
+
+* [Checking for "a-z" and "A-Z"](https://stackoverflow.com/q/6017778/1366033)
+
+  Use [`Char.IsAsciiLetter(Char)`](https://learn.microsoft.com/en-us/dotnet/api/system.char.isasciiletter)
+
+  ```cs
+  Char.IsAsciiLetter('a') // true
+  ```
+
+* [Get a list of distinct values in List](https://stackoverflow.com/q/10255121/1366033)
+
+  Use [`Enumerable.Distinct`](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.distinct?view=net-8.0)
+
+  ```cs
+  Notes.Select(x => x.Author).Distinct();
+  ```
+
+* [Trim start of string](https://stackoverflow.com/q/4335878/1366033)
+
+  ```cs
+  public static string RemovePrefix(this string s, string prefix)
+  {
+      if (s.StartsWith(prefix))
+      {
+          return s.Substring(prefix.Length);
+      }
+      return s;
+  }
+  ```
+
+* [Add item to beginning of list](https://stackoverflow.com/q/390491/1366033)
+
+  Use [`List.Insert`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.insert?view=net-7.0) with position `0`
+
+  ```cs
+  ti.Insert(0, initialItem);
+  ```
+
+* [Check if a string contains an element from a list (of strings)](https://stackoverflow.com/q/500925/1366033)
+
+  [ContainsAny | .NET Fiddle](https://dotnetfiddle.net/It1G06)
+
+  ```cs
+  var containsMatch = "Hello World".ContainsAny(new[] { "World", "Earth" }); // true
+
+  public static class StringExtensions
+  {
+      /// <summary>
+      /// Tests whether any of the entries in the search list can be found in the source string
+      /// </summary>
+      public static bool ContainsAny(this string source, IEnumerable<string> search)
+      {
+          return search.Any(source.Contains);
+      }
+  }
+  ```
+
+  ```cs
+  var list = new [] {"a","b"};
+  var containsMatch = list.ContainsAny(new [] {"b", "c"}); // true
+
+  public static class LinqExtensions
+  {
+      /// <summary>
+      /// Tests whether the any value in the source list matches any of the values in the search list
+      /// </summary>
+      public static bool ContainsAny<T>(this IEnumerable<T> source, IEnumerable<T> search)
+      {
+          return source.Any(search.Contains);
+      }
+  }
+  ```
+
+* [`Console.WriteLine` with multiple variables into single line](https://stackoverflow.com/q/15418467/1366033)
+
+  C#6 - Use [String Interpolation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
+
+  ```cs
+  var id = 1;
+  var name = "Kyle"
+  Console.WriteLine($"{id} - {name}"); // 1 - Kyle
+  ```
+
+  Use [Composite Formatting](https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting)
+
+  ```cs
+  var id = 1;
+  var name = "Kyle"
+  Console.WriteLine("{0} - {1}", id, name); // 1 - Kyle
+  ```
+
+* [How to reference generic classes and methods in xml documentation](https://stackoverflow.com/q/532166/1366033)
+
+  Surround the generic type parameter list with curly braces `{}`
+
+  How would I reference `FancyClass<T>`
+
+  ```cs
+  // <see cref="FancyClass{T}"/>
+  ```
+
+* [How do I reference a C# keyword in XML documentation?](https://stackoverflow.com/q/693196/1366033)
+
+  ```cs
+  /// <see langword="true"/>
+  ```
+

@@ -70,4 +70,16 @@ https://web.dev/
   copy(JSON.parse(localStorage.getItem("consoleHistory")).join('\n'))
   ```
 
-  
+* [Error saving setting with name: consoleHistory, value length: 8613059](https://stackoverflow.com/q/29277964/1366033)
+
+  ```js
+  var currentHistory = JSON.parse(localStorage.getItem("consoleHistory"))
+  var filteredHistory = currentHistory.filter(el => el.length < 2000)
+  localStorage.setItem("consoleHistory", JSON.stringify(filteredHistory, null, 0))
+  ```
+
+* [Is there a way to see the stacking context, in IE/Firefox/Chrome/etc.?](https://stackoverflow.com/q/6800511/1366033)
+
+  Chrome > Layers
+  Edge > 3D View
+

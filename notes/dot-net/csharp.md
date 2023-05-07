@@ -675,3 +675,79 @@ namespace ExtensionMethods
 * [Comparing a boolean value before setting it](https://stackoverflow.com/q/4086572/1366033)
 
   Just set it - avoids branch detection
+
+* [C# binary literals](https://stackoverflow.com/q/594720/1366033)
+
+  ```cs
+  var i32 = 0b100_000
+  ```
+
+  * [C# 7 Work List of Features · Issue #2136 · dotnet/roslyn](https://github.com/dotnet/roslyn/issues/2136)
+  * [Proposal: Binary literals · Issue #215 · dotnet/roslyn](https://github.com/dotnet/roslyn/issues/215)
+
+* What is the difference between “int” and “uint” / “long” and “ulong”?
+
+  * `int`: –2147483648 to 2147483647
+  * `uint`: 0 to 4294967295
+  * `long`: -9223372036854775808 to 9223372036854775807
+  * `ulong`: 0 to 18446744073709551615
+
+  **See Also**: [Integral numeric types - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+
+
+* [Best way to check for nullable bool in a condition expression (if ...)](https://stackoverflow.com/q/2673918/1366033)
+
+  ```cs
+  bool? x = true;
+
+  // Console.WriteLine(x ? "yes" : "no"); // Cannot implicitly convert type 'bool?' to 'bool'.
+
+  Console.WriteLine(x.HasValue && x.Value ? "yes" : "no");
+  Console.WriteLine(x ?? false ? "yes" : "no");
+  Console.WriteLine(x == true ? "yes" : "no");
+  Console.WriteLine(x is true ? "yes" : "no");
+  ```
+
+  Fiddle: [Nullable Bool Is True](https://dotnetfiddle.net/oC43kZ)
+
+* [Cast Named Tuple to System Tuple](https://stackoverflow.com/q/43576919/1366033)
+
+  Need to use [`ValueTuple`](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple)
+
+  ```cs
+  (string name, int age) p1 = ("Kyle", 35);
+  (string name, int age) p2 = ValueTuple.Create<string, int>("Ryan", 36);
+  (string, int) p3 = ValueTuple.Create<string, int>("Parker", 34);
+
+  Console.WriteLine(p1.name);
+  Console.WriteLine(p2.name);
+  Console.WriteLine(p3.Item1);
+  ```
+
+  **Demo**: [Named Tuple Creation](https://dotnetfiddle.net/sxEoT2)
+
+* [What's the difference between `System.ValueTuple` and `System.Tuple`?](https://stackoverflow.com/q/41084411/1366033)
+
+  * [`System.Tuple` Class](https://learn.microsoft.com/en-gb/dotnet/api/system.tuple?view=net-7.0)
+  * [`System.ValueTuple` Struct](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple?redirectedfrom=MSDN&view=net-7.0)
+
+  * Tuple is a class
+  * ValueTuple is a struct
+
+* [Better naming in Tuple classes than "Item1", "Item2"](https://stackoverflow.com/q/7745938/1366033)
+
+  In [C#7](https://devblogs.microsoft.com/dotnet/new-features-in-c-7-0/#tuples)- use `ValueTuple`
+
+  Named Tuple Type
+
+  ```cs
+  (string first, string last) person = ("Kyle", "Mit");
+  ```
+
+  Named Tuple Literal
+
+  ```cs
+  var person = (first: "Kyle", last: "Mit");
+  ```
+
+

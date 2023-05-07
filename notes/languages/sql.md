@@ -151,18 +151,28 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [How can I select the first day of a month in SQL?](https://stackoverflow.com/q/1520789/1366033)
 
+    SQL Server 2022, use [`DATETRUNC`](https://learn.microsoft.com/en-us/sql/t-sql/functions/datetrunc-transact-sql?view=sql-server-ver16)
+
+    ```sql
+    SELECT DATETRUNC(month, GETDATE())
+    ```
+
+    ```sql
+    SELECT DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
+    ```
 
     ```sql
     SELECT DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0)
     ```
 
     ```sql
-    SELECT DATEFROMPARTS(YEAR(GETDATE()),MONTH(GETDATE()),1)
+    SELECT DATEADD(DAY, 1, EOMONTH(DATEADD(MONTH, -1, GETDATE())))
     ```
 
     ```sql
-    SELECT DATEADD(DAY, 1, EOMONTH(DATEADD(MONTH, -1, GETDATE())))
+    SELECT FORMAT(GETDATE(), 'yyyy-MM-01')
     ```
+
 
 * [How to use SQL Select statement with IF EXISTS sub query?](https://stackoverflow.com/q/7805019/1366033)
 
@@ -257,8 +267,16 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [WHERE string ends with Column](https://stackoverflow.com/q/25413692/1366033)
 
+    Use [`LIKE`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver16) Operator
+
     ```sql
     select * from users where email like '%yahoo.com'
+    ```
+
+    Use [`RIGHT()`](https://learn.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver16) Function
+
+    ```sql
+    select * from users where right(email, len('yahoo.com')) = 'yahoo.com'
     ```
 
 * [How to select true/false based on column value?](https://stackoverflow.com/q/2396889/1366033)
@@ -279,4 +297,22 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
     ```sql
     SELECT ROUND(AVG(CAST(column_name AS FLOAT)), 2)
+    ```
+
+* [INSERT vs INSERT INTO](https://stackoverflow.com/q/233919/1366033)
+
+  `INTO` is typically optional, though some sql variants require it
+
+* [Escape Square brackets in LIKE statement](https://stackoverflow.com/q/3661125/1366033)
+
+    Include a `[` character within a wildcard bracket
+
+    ```sql
+    SELECT * FROM tbl WHERE txt LIKE '[[]%'
+    ```
+
+    USE `ESCAPE` option in [`LIKE`](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql)
+
+    ```sql
+    SELECT * FROM tbl WHERE txt LIKE '\[%' ESCAPE '\'
     ```

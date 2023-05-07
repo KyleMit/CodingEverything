@@ -65,3 +65,9 @@
 * [Equivalent for MvcHtmlString in ASP.NET 5?](https://stackoverflow.com/q/29602202/1366033)
 
   Use [`Microsoft.AspNetCore.Html.HtmlString](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.html.htmlstring)
+
+* [Where does Console.WriteLine go in ASP.NET?](https://stackoverflow.com/q/137660/1366033)
+
+  Use [`System.Diagnostics.Debug.WriteLine()`](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.debug.writeline?view=net-7.0)
+
+  Shows up in Output Window > Debug

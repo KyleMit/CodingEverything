@@ -450,6 +450,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
 
   In extension, call `vscode.commands.getCommands()`
 
+* [VSCode some shortcuts not working properly](https://stackoverflow.com/q/58946149/1366033)
+
+  Run > `Developer: Toggle Keyboard Shortcuts Troubleshooting`
+
 * [Change keyboard shortcut bindings in Visual Studio Code?](https://stackoverflow.com/a/33791170/1366033)
 * [VS Code - Mouse Wheel Zoom](https://stackoverflow.com/q/30192884/1366033)
 
@@ -570,6 +574,14 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     // Show variable values inline in editor while debugging.
     "debug.inlineValues": true,
   }
+  ```
+
+* [How to set working directory for debugging](https://stackoverflow.com/q/38623138/1366033)
+
+  Set `cwd`
+
+  ```json
+  "cwd": "${workspaceFolder}/docs",
   ```
 
 * To enable the Visual Studio Code GitHub Support, please set a Personal Access Token
@@ -813,4 +825,22 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   {
     "xml.format.splitAttributes": true
   }
+  ```
+
+* [How to undo split screen](https://stackoverflow.com/q/56409944/1366033)
+
+  `View: Single Column Editor Layout`
+
+  ```json
+  "command aliases": {
+    "workbench.action.editorLayoutSingle": "Unsplit All"
+  },
+  ```
+
+* [VS Code Markdown - is there a clever way to make links intellisense?](https://stackoverflow.com/q/59830081/1366033)
+
+  See [Markdown workspace header link completions](https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_76.md#markdown-workspace-header-link-completions)
+
+  ```json
+  "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onSingleOrDoubleHash",
   ```

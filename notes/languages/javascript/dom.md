@@ -122,3 +122,60 @@ Document Object Model
   console.log(state); // Either 'granted', 'prompt' or 'denied'
   ```
 
+* [How to remove all elements of a certain class from the DOM?](https://stackoverflow.com/q/10842471/1366033)
+
+  ```js
+  document.querySelectorAll('.classname').forEach(e => e.remove());
+  ```
+
+* [What is the difference between insertAdjacentHtml and insertAdjacentElement?](https://stackoverflow.com/q/57111065/1366033)
+
+  * [`Element.insertAdjacentHTML()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+  * [`Element.insertAdjacentElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
+
+  `HTML` for text, `Element` for nodes already in the DOM
+
+
+* [How to insert an element after another element in JavaScript without using a library?](https://stackoverflow.com/q/4793604/1366033)
+
+  Use [`insertAdjacentElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement)
+
+  ```js
+  el.insertAdjacentElement(position, newEl)
+  ```
+
+  ```html
+  <!-- beforebegin -->
+  <p>
+    <!-- afterbegin -->
+    foo
+    <!-- beforeend -->
+  </p>
+  <!-- afterend -->
+  ```
+
+  Use [`Element.after()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/after)
+
+  ```js
+  el.after(newEl)
+  ```
+
+* [Is it possible to clone html element objects in JavaScript?](https://stackoverflow.com/q/921290/1366033)
+
+  Use [`cloneNode`](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
+
+* [Change textNode value](https://stackoverflow.com/q/680431/1366033)
+
+  ```js
+  node.nodeValue="new value";
+  ```
+
+  **See Also**: [`#text` node](https://developer.mozilla.org/en-US/docs/Web/API/Text#instance_properties)
+
+* [How to get the text node of an element?](https://stackoverflow.com/q/6520192/1366033)
+
+  ```js
+  [...el.childNodes].find(child => child.nodeType === Node.TEXT_NODE);
+  ```
+
+  
