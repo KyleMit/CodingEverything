@@ -942,3 +942,14 @@ winget install graphviz
   d.setDate(d.getDate() + (((1 + 7 - d.getDay()) % 7) || 7));
   console.log(d);
   ```
+
+* [Convert a Unix timestamp to time in JavaScript](https://stackoverflow.com/q/847185/1366033)
+
+  Convert from seconds to ms
+
+  ```js
+  var unixTimestamp = 1683466458
+  var date = new Date(1683466458  * 1000);
+  // Sun May 07 2023 09:34:18
+  ```
+
