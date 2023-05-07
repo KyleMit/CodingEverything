@@ -11,5 +11,6 @@
 
 ## Completions
 
-[Completions API Reference](https://beta.openai.com/docs/api-reference/completions/create)
+* [Completions API Reference](https://beta.openai.com/docs/api-reference/completions/create)
+  * [`messages`](https://platform.openai.com/docs/api-reference/chat/create#chat/create-messages)
 
