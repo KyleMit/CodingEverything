@@ -68,6 +68,9 @@ kramdown:
 * [github/copilot-docs: Documentation for GitHub Copilot](https://github.com/github/copilot-docs)
 * [GitHub Copilot - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
+## CoPilot CLI
+
+<https://www.npmjs.com/package/@githubnext/github-copilot-cli>
 
 ## Github CLI
 
@@ -83,6 +86,10 @@ git clone git@github.com:github/hub.git
 ```
 
 [Installation on Windows](https://github.com/cli/cli#windows)
+
+## Blocks
+
+<https://blocks.githubnext.com/>
 
 ## Questions
 
