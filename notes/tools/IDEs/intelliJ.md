@@ -34,6 +34,9 @@
   * [Implement pattern-based filters for 'Debug Output'](https://youtrack.jetbrains.com/issue/RIDER-67404)
   * [Debug Output Filter](https://rider-support.jetbrains.com/hc/en-us/community/posts/360001334220-Debug-Output-Filter)
 
+* [pull requests: don't mark files as viewed automatically](https://youtrack.jetbrains.com/issue/IDEA-284941/pull-requests-dont-mark-files-as-viewed-automatically)
+  * [Explicitly mark reviewed files as Viewed](https://youtrack.jetbrains.com/issue/IDEA-282201/)
+
 ## Docs
 
 * [Quick Start Guide](https://www.jetbrains.com/help/phpstorm/quick-start-guide-phpstorm.html)
@@ -151,3 +154,15 @@
 * [Turn off background color for SQL strings in PHP Storm](https://stackoverflow.com/q/31376913/1366033)
 
   Settings > Editor > Color Scheme > General > Code > Injected language fragment
+
+* [How to review a pull request in IntelliJ IDEA?](https://stackoverflow.com/q/40217494/1366033)
+
+  As of [IntelliJ IDEA 2020.2](https://blog.jetbrains.com/idea/2020/05/intellij-idea-2020-2-early-access-program-is-starting/#version_control), use **Git** > **Pull Requests**
+
+* [JetBrains Rider to stop opening diff tab on navigation](https://stackoverflow.com/q/64638884/1366033)
+
+  As of [Rider 2019.3 EAP](https://blog.jetbrains.com/dotnet/2019/11/18/new-way-commit-introducing-commit-repository-tool-windows-rider-2019-3-eap/)
+
+  Single Click - Diff
+  Double Click - Source or <kbd>F4</kbd>
+
