@@ -953,3 +953,42 @@ winget install graphviz
   // Sun May 07 2023 09:34:18
   ```
 
+
+* [Access class members from nested functions](https://stackoverflow.com/q/3949887/1366033)
+
+  > Potentially invalid reference access to a class field via 'this.' of a nested function
+
+
+  Save Object reference
+
+  ```js
+  class VoteController {
+    setupHandler() {
+      var self = this;
+      window.addEventListener('click', function (event) {
+          self.sendFeedback()
+      });
+    }
+  }
+  ```
+
+  Use Lambda Function
+
+  ```js
+  class VoteController {
+    setupHandler() {
+      window.addEventListener('click', (event) => {
+          this.sendFeedback()
+      });
+    }
+  }
+  ```
+
+* [Does JavaScript have an indexOf(lambda) or similar?](https://stackoverflow.com/q/38296703/1366033)
+
+  Use [`Array.prototype.findIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+
+  ```js
+  ['a','b','c'].findIndex('b') // 1
+  ```
+

@@ -178,4 +178,28 @@ Document Object Model
   [...el.childNodes].find(child => child.nodeType === Node.TEXT_NODE);
   ```
 
-  
+* [Multiple OnBeforeUnload](https://stackoverflow.com/q/8999439/1366033)
+
+  ```js
+  window.addEventListener('beforeunload', function (event) {
+    console.log('I am preventing losing form data')
+    event.preventDefault()
+    event.returnValue = ''
+  });
+  ```
+
+* [How can I remove a JavaScript event listener?](https://stackoverflow.com/q/4402287/1366033)
+
+  [Remove Specific Event Listener](https://codepen.io/KyleMit/pen/YzJvPzb?editors=1011)
+
+  ```js
+  const btn = document.querySelector("#btn")
+
+  btn.addEventListener("click", listenOne)
+  btn.addEventListener("click", listenTwo)
+  btn.removeEventListener("click", listenOne)
+
+  function listenOne() { console.log("one") }
+  function listenTwo() { console.log("two") }
+  ```
+

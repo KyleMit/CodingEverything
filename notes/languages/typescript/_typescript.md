@@ -1170,3 +1170,15 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   const foo: [number, string] = [ 1, "message" ];
   ```
 
+* ["Computed" property in Typescript](https://stackoverflow.com/q/53238881/1366033)
+
+  ```ts
+  class SimplePerson {
+      public firstName: string;
+      public lastName: string;
+      get fullName(): string { // read-only property with getter function
+          return this.firstName + " " + this.lastName;
+      }
+  }
+  ```
+
