@@ -1182,3 +1182,9 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   }
   ```
 
+* [Rename typescript class on import](https://stackoverflow.com/q/39610294/1366033)
+
+  ```ts
+  import { Class1 as Alias } from '../location2/class1'
+  ```
+

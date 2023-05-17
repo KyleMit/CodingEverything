@@ -173,6 +173,11 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT FORMAT(GETDATE(), 'yyyy-MM-01')
     ```
 
+* [Round Date to Nearest Minute](https://stackoverflow.com/q/6666866/1366033)
+
+    ```sql
+    CAST(GETDATE() as smalldatetime);
+    ```
 
 * [How to use SQL Select statement with IF EXISTS sub query?](https://stackoverflow.com/q/7805019/1366033)
 
