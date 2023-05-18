@@ -203,3 +203,14 @@ Document Object Model
   function listenTwo() { console.log("two") }
   ```
 
+* [Unescape HTML entities in JavaScript?](https://stackoverflow.com/q/1912501/1366033)
+
+  ```js
+  function decodeHtml(html) {
+      var txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+  }
+  ```
+
+  * [What's the right way to decode a string that has special HTML entities in it?](https://stackoverflow.com/q/7394748/1366033)

@@ -71,4 +71,9 @@
   this.find(selector).not(this.find(mask).find(selector))
   ```
 
-  
+* [How to check a radio button with jQuery?](https://stackoverflow.com/q/5665915/1366033)
+
+  ```js
+  $("#radio_1").prop("checked", true);
+  ```
+

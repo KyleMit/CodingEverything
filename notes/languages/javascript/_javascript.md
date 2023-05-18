@@ -992,3 +992,30 @@ winget install graphviz
   ['a','b','c'].findIndex('b') // 1
   ```
 
+* [Function that can be called only once](https://stackoverflow.com/q/12713564/1366033)
+
+  ```js
+  function callOnce(fn) {
+    var done = false;
+    return function (...args) {
+      if (!done) {
+        done = true;
+        return fn.apply(this, args);
+      }
+    }
+  }
+
+  function sayHello(name) {
+    console.log(`Hello, ${name}`) 
+  }
+
+  const sayHelloOnce = callOnce(sayHello)
+
+  sayHelloOnce("Kyle")
+  sayHelloOnce("Beth")
+  sayHelloOnce("Ryan")
+  // Hello, Kyle
+  ```
+
+  * [Lodash Documentation](https://lodash.com/docs/#once)
+  * [Underscore.js](http://underscorejs.org/#once)
