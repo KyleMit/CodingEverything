@@ -43,6 +43,14 @@
 * [Editor basics | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/using-code-editor.html)
 * [Spellchecking](https://www.jetbrains.com/help/phpstorm/spellchecking.html#fix-typo)
 * [PhpStorm > Terminal](https://www.jetbrains.com/help/phpstorm/terminal-emulator.html)
+* [New UI](https://www.jetbrains.com/help/rider/New_UI.html)
+
+## Changelog / History / Versions / What's New
+
+* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What’s New in 2022-3](https://www.jetbrains.com/rider/whatsnew/2022-3/)
+* [What's new in 2018.2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
+
 
 ## Blog
 
@@ -131,6 +139,10 @@
   * [What do the colors in the Diff viewer mean?? – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000243060-What-do-the-colors-in-the-Diff-viewer-mean-)
   * [Colors and fonts | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/configuring-colors-and-fonts.html#tips)
 
+* [Is it possible to change the console font size in IntelliJ IDEA](https://stackoverflow.com/q/35829103/1366033)
+
+  Settings > Editor > Color Scheme > Console Font
+
 * Show all files in solution
 
   In [Explorer](https://www.jetbrains.com/help/rider/Project_Tool_Window.html), toggle from Solution View to File System View
@@ -166,3 +178,32 @@
   Single Click - Diff
   Double Click - Source or <kbd>F4</kbd>
 
+* [Customize Inline / Inlay Parameter Hints](https://stackoverflow.com/q/61727399/1366033)
+
+  * [Configure inlay hints](https://www.jetbrains.com/help/rider/Inline_Parameter_Name_Hints.html#configure-inlay-hints)
+
+  Settings > Editor > Inlay Hints > C# > Parameter Name Hints
+
+  **See Also**: [IntelliJ shows method parameter hints on usage - How to disable it](https://stackoverflow.com/q/40866202/1366033)
+
+  * [IntelliJ](https://stackoverflow.com/q/40866202/)
+  * [PhpStorm](https://stackoverflow.com/q/41743888/)
+  * [Android Studio](https://stackoverflow.com/q/42346480/)
+
+* [IntelliJ IDEA underlines variables when using += in JAVA](https://stackoverflow.com/q/51697168/1366033)
+
+  Settings > Editor > Color Scheme > Language Defaults
+
+  **See Also** [What does a gray underline mean in Rider?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000395439-Underlined-variables-)
+
+* [How do you change background color in the settings of JetBrain's IDE?](https://stackoverflow.com/q/19411510/1366033)
+
+  Settings > Editor > Color Scheme > General > Text > Default Text > Background
+
+  **See Also**: [Colors schemes: fonts and colors of IDE text](https://www.jetbrains.com/help/rider/Configuring_Colors_and_Fonts.html#tips)
+
+* [Resharper - turn off solution wide analysis](https://stackoverflow.com/q/9287765/1366033)
+
+  Settings > Editor > Inspection Settings > Enable Solution Wide Analysis
+
+  **See Also** [Solution-wide analysis](https://www.jetbrains.com/help/rider/Code_Analysis__Solution-Wide_Analysis.html)

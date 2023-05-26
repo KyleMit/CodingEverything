@@ -723,3 +723,7 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   /// <see langword="true"/>
   ```
 
+* [Difference between InvariantCulture and Ordinal string comparison](https://stackoverflow.com/q/492799/1366033)
+
+  * Use `StringComparison.Ordinal` for performance and default use case
+

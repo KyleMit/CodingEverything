@@ -7,6 +7,10 @@
 * [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 * [HTTP Client](https://www.jetbrains.com/help/rider/Http_client_in__product__code_editor.html)
 
+## GUIs
+
+* [VS Code Extension](https://blog.postman.com/introducing-the-postman-vs-code-extension/)
+
 ## Questions
 
 * [How to import Swagger APIs into Postman?](https://stackoverflow.com/q/39072216/1366033)
