@@ -207,3 +207,11 @@
   Settings > Editor > Inspection Settings > Enable Solution Wide Analysis
 
   **See Also** [Solution-wide analysis](https://www.jetbrains.com/help/rider/Code_Analysis__Solution-Wide_Analysis.html)
+
+* [How can I tell IntelliJ's "Find in Files" to ignore generated files?](https://stackoverflow.com/q/16671706/1366033)
+
+  Scope > Custom
+
+  Possible to exclude files matched by gitignore when searching with "Find in Files"
+
+  [Files ignored by .gitignore appear in search results : IDEA-125906](https://youtrack.jetbrains.com/issue/IDEA-125906/Files-ignored-by-.gitignore-appear-in-search-results)
