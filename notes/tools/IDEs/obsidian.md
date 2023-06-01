@@ -55,3 +55,6 @@
 
 * [How to customize your own Obsidian theme with CSS in 3 steps | by Project Eme | Medium](https://projecteme.medium.com/how-to-customise-your-own-obsidian-css-in-3-steps-ae319e53f5d4)
 
+* [Indent using spaces](https://forum.obsidian.md/t/use-tabs-off-only-replaces-tabs-with-spaces-in-lists/3583)
+
+  Settings > Editor > Disable "Indent using tabs"
