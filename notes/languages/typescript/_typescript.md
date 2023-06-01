@@ -1188,3 +1188,9 @@ type Disjoint <T1, T2> = Extract<keyof T1, keyof T2> extends never ? T2 : never;
   import { Class1 as Alias } from '../location2/class1'
   ```
 
+* [Where to get return type for `setTimeout` (node vs window)](https://stackoverflow.com/q/45802988/1366033)
+
+  ```ts
+  let timer: ReturnType<typeof setTimeout> = setTimeout(() => { ... });
+  ```
+
