@@ -10,7 +10,9 @@
 
 ## Plugins
 
-* [Quick Switcher++](https://github.com/darlal/obsidian-switcher-plus) 
+* [Quick Switcher++](https://github.com/darlal/obsidian-switcher-plus)
+* [obsidian-git](https://github.com/denolehov/obsidian-git) - Backup your Obsidian.md vault with git
+* [obsidian-editor-shortcuts](https://github.com/timhor/obsidian-editor-shortcuts) - Obsidian plugin to add keyboard shortcuts commonly found in code editors such as Visual Studio Code (vscode) or Sublime Text
 
 ## Hotkeys
 
@@ -58,3 +60,9 @@
 * [Indent using spaces](https://forum.obsidian.md/t/use-tabs-off-only-replaces-tabs-with-spaces-in-lists/3583)
 
   Settings > Editor > Disable "Indent using tabs"
+
+* [Column Selection and Editing Mode](https://forum.obsidian.md/t/column-selection-and-editing-mode/32191)
+
+  **See**: [Multiple cursors](https://help.obsidian.md/Editing+and+formatting/Multiple+cursors), but only for mouse 
+
+* [Add Selection to next find match hotkey](https://forum.obsidian.md/t/add-selection-to-next-find-match-hotkey/2226)
