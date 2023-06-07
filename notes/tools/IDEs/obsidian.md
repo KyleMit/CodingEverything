@@ -63,6 +63,17 @@
 
 * [Column Selection and Editing Mode](https://forum.obsidian.md/t/column-selection-and-editing-mode/32191)
 
-  **See**: [Multiple cursors](https://help.obsidian.md/Editing+and+formatting/Multiple+cursors), but only for mouse 
+  Use [obsidian-editor-shortcuts](https://github.com/timhor/obsidian-editor-shortcuts)
+
+  **See Also**: [Multiple cursors](https://help.obsidian.md/Editing+and+formatting/Multiple+cursors) (but only for mouse)
 
 * [Add Selection to next find match hotkey](https://forum.obsidian.md/t/add-selection-to-next-find-match-hotkey/2226)
+
+  Use [obsidian-editor-shortcuts](https://github.com/timhor/obsidian-editor-shortcuts)
+
+* [How to type only one * at a time](https://www.reddit.com/r/ObsidianMD/comments/sz402s/how_to_type_only_one_at_a_time/)
+
+  Settings > Editor > Auto pair Markdown syntax (pair symbols automatically for bold and italic)
+
+
+  

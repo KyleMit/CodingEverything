@@ -77,3 +77,22 @@
   $("#radio_1").prop("checked", true);
   ```
 
+* [Convert form data to JavaScript object with jQuery](https://stackoverflow.com/q/1184624/1366033)
+
+
+  Use [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+
+  ```js
+  const formData = Object.fromEntries(new FormData(form))
+  ```
+
+  Create Custom Function
+
+  ```js
+  jQuery.fn.serializeObject = function() {
+    const arrayData = this.serializeArray();
+    const formEntries = arrayData.map(x => ([x.name, x.value]))
+    const formObj = Object.fromEntries(formEntries)
+    return formObj;
+  };
+  ```

@@ -1,5 +1,13 @@
 # Node Package Manager
 
+* <https://www.npmjs.com/>
+* <https://docs.npmjs.com/>
+
+## Alternatives
+
+* [yarn](https://yarnpkg.com/)
+* [pnpm](https://pnpm.js.org/)
+
 
 ## Docs
 
@@ -40,15 +48,15 @@ npm i
 npm ci # only use package-lock
 ```
 
+## Workspaces
+
+[workspaces](https://docs.npmjs.com/cli/v9/using-npm/workspaces)
+
+> managing multiple packages from your local file system from within a singular top-level, root package
+
 ## Badge Provider
 
 [Version Badge for npm, RubyGems, PyPI, Bower and other packages](https://badge.fury.io/)
-
-## Alternatives
-
-* [yarn](https://yarnpkg.com/)
-* [pnpm](https://pnpm.js.org/)
-
 
 ## Ecosystem
 

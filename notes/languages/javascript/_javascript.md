@@ -1019,3 +1019,24 @@ winget install graphviz
 
   * [Lodash Documentation](https://lodash.com/docs/#once)
   * [Underscore.js](http://underscorejs.org/#once)
+
+* [POST Request with Fetch API?](https://stackoverflow.com/q/39565706/1366033)
+
+  Use [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) & [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+
+
+  ```js
+  const form = document.getElementById('form');
+  const data = new FormData();
+  data.append('name', form.name.value);
+
+  const res = fetch('../php/contact.php', {
+    method: 'POST',
+    headers: {
+      "content-type": "multipart/form-data"
+    },
+    body: data,
+  });
+  ```
+
+  

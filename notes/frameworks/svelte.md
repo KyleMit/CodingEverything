@@ -20,23 +20,14 @@
 
 ## Examples
 
+### [Saved Examples](https://svelte.dev/apps)
+
 * [Pass Value from Child to Parent](https://svelte.dev/repl/24adfb0a93734265952e2870155aeb49?version=3.43.1)
 
 ## Convention
 
 * Capitalize Svelte Component name to differentiate from HTML Tags
 
-## Questions
-
-* [Can we write typescript inside a svelte component?](https://stackoverflow.com/q/57034573/1366033)
-
-  Add `lang="ts"` to your `script` block
-
-  ```svelte
-  <script lang="ts">
-    export const hello: string = 'world';
-  </script>
-  ```
 
 ## API
 
@@ -288,3 +279,69 @@ class App extends SvelteComponent {
 
 export default App;
 ```
+
+
+## Questions
+
+* [Can we write typescript inside a svelte component?](https://stackoverflow.com/q/57034573/1366033)
+
+  Add `lang="ts"` to your `script` block
+
+  ```svelte
+  <script lang="ts">
+    export const hello: string = 'world';
+  </script>
+  ```
+
+* [Handle form submit with TypeScript types](https://stackoverflow.com/q/64527549/1366033)
+
+  Demo in [Svelte REPL](https://svelte.dev/repl/8eb540552faa4651a398b182fa5cdd48?version=3.24.1)
+
+  ```svelte
+  <script lang="ts">
+    function handleSubmit(e: SubmitEvent) {
+      const formData = new FormData(e.target as HTMLFormElement)
+    }
+  </script>
+
+  <form on:submit|preventDefault={handleSubmit}>
+  ```
+
+* [Can I keep "unused css selector"?](https://stackoverflow.com/q/68499862/1366033)
+
+  Use `global` style attribute
+
+  ```svelte
+  <style global>
+    .red {
+        color: red;
+    }
+  </style>
+  ```
+
+  Use `:global` selector
+
+  ```css
+  :global(.red) {
+      color: red;
+  }
+  ```
+
+  Use `:is` selector
+
+  ```css
+  :is(.red) {
+      color: red;
+  }
+  ```
+
+* [How to render html in svelte](https://stackoverflow.com/q/57580013/1366033)
+
+  Use [`{@html ...}` expression](https://svelte.dev/docs#template-syntax-html)
+
+  ```svelte
+  {@html post.content}
+  ```
+
+
+  

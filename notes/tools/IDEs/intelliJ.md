@@ -215,3 +215,5 @@
   Possible to exclude files matched by gitignore when searching with "Find in Files"
 
   [Files ignored by .gitignore appear in search results : IDEA-125906](https://youtrack.jetbrains.com/issue/IDEA-125906/Files-ignored-by-.gitignore-appear-in-search-results)
+
+* [Solution explorer files are duplicated](https://youtrack.jetbrains.com/issue/RIDER-90671/Solution-explorer-files-are-duplicated)
