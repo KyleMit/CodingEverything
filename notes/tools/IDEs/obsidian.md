@@ -76,4 +76,9 @@
   Settings > Editor > Auto pair Markdown syntax (pair symbols automatically for bold and italic)
 
 
-  
+* [Automatically insert markdown formatted link if text is selected when pasting](https://forum.obsidian.md/t/automatically-insert-markdown-formatted-link-if-text-is-selected-when-pasting/3646)
+
+
+  Can use <kbd>Ctrl</kbd> + <kbd>K</kbd> to "Insert Link"
+
+  Use [Paste URL into selection](https://github.com/denolehov/obsidian-url-into-selection)

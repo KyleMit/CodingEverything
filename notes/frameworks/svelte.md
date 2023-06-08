@@ -42,10 +42,60 @@
   * claim
   * create
 
-## Template Syntax
+## Syntax / Tutorial
+
+### Introduction
 
 
-* Instantiate Component
+
+* [Html Superset](https://svelte.dev/tutorial/basics)
+
+  ```svelte
+  <h1>Hello world!</h1>
+  ```
+
+* [Interpolation](https://svelte.dev/tutorial/adding-data)
+
+  ```html
+  <h1>Hello {world}</h1>
+  ```
+
+* [Shorthand Attributes](https://svelte.dev/tutorial/dynamic-attributes)
+
+  ```html
+  <img {src}>
+  <img src={src}>
+  ```
+
+* [Scoped Styles](https://svelte.dev/tutorial/styling)
+
+  ```svelte
+  <p>This is a paragraph.</p>
+
+  <style>
+    p {
+      color: purple;
+    }
+  </style>
+  ```
+
+  Output
+
+  ```css
+  p.svelte-i8x8i0{color:purple}
+  ```
+
+* [Import and use component](https://svelte.dev/tutorial/nested-components)
+
+  ```svelte
+  <script>
+    import Nested from './Nested.svelte'
+  </script>
+
+  <Nested/>
+  ```
+
+* [Instantiate Component](https://svelte.dev/tutorial/making-an-app)
 
   ```js
   import App from './App.svelte';
@@ -58,39 +108,21 @@
   });
   ```
 
-* Interpolation
+### Reactivity
 
-  ```html
-  <h1>Hello {world}</h1>
-  ```
-
-* Shorthand Attributes
-
-  ```html
-  <img {src}>
-  <img src={src}>
-  ```
-
-* Import and use component
+* [Reactive assignment based on bound DOM events](https://svelte.dev/tutorial/reactive-assignments)
 
   ```svelte
   <script>
-    import Nested from './Nested.svelte'
-  </script>
+    let count = 0;
 
-  <Nested/>
+    function incrementCount()  { count++ }
+  </script>
+  
+  <button on:click={incrementCount}>{count}</button>
   ```
 
-* Bind DOM events
-
-  ```svelte
-  <button on:click={incrementCount}>
-  <script>
-  function incrementCount()  {}
-  </script>
-  ```
-
-* Reactive variable declaration
+* [Reactive variable declaration](https://svelte.dev/tutorial/reactive-declarations)
 
   ```js
   $: doubled = count * 2;
@@ -100,7 +132,7 @@
 
   **Note**: Uses [`label` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label)
 
-* Reactive statements / block
+* [Reactive statements / block](https://svelte.dev/tutorial/reactive-statements)
 
   ```js
   $: console.log('the count is ' + count);
@@ -112,7 +144,7 @@
   }
   ```
 
-* Reactivity when mutating object (not assigning) -> assign anyway
+* [Reactivity when mutating object (not assigning) -> assign anyway](https://svelte.dev/tutorial/updating-arrays-and-objects)
 
   ```js
   // does not work
@@ -123,7 +155,9 @@
 
   > The updated variable must directly appear on the left hand side of the assignment.
 
-* Declaring Props
+### Props
+
+* [Declaring Props](https://svelte.dev/tutorial/declaring-props)
 
   **Parent.Svelte**
 
@@ -141,20 +175,22 @@
   </script>
   ```
 
-* Props - Default Value
+* [Default Prop Value](https://svelte.dev/tutorial/default-values)
 
   ```js
   export let answer = 'a mystery';
   ```
 
-* Props - Spread Props
+* [Spread Props](https://svelte.dev/tutorial/spread-props)
 
   ```diff
   - <Info name={pkg.name} version={pkg.version} speed={pkg.speed} website={pkg.website}/>
   + <Info {...pkg}/>
   ```
 
-* Templating Logic - If Blocks
+### Templating Logic
+
+* [If Blocks](https://svelte.dev/tutorial/if-blocks)
 
   ```svelte
   {#if user.loggedIn}
@@ -164,7 +200,7 @@
   {/if}
   ```
 
-* Templating Logic - If/Else Blocks
+* [If/Else Blocks](https://svelte.dev/tutorial/else-blocks)
 
   ```svelte
   {#if user.loggedIn}
@@ -178,7 +214,7 @@
   * `/` indicates a block *closing* tag ex. `{/if}`
   * `:` indicates a block *continuation* tag ex. `{:else}`
 
-* Templating Logic - Each Loop
+* [For Each Loop](https://svelte.dev/tutorial/each-blocks)
 
   ```svelte
   <script>
@@ -192,7 +228,7 @@
   </ol>
   ```
 
-* Templating Logic - Each Loop w/ Index
+* For Each Loop w/ Index
 
   ```svelte
   <script>
@@ -204,7 +240,7 @@
   {/each}
   ```
 
-* Templating Logic - Each Loop w/ Destructuring
+* For Each Loop w/ Destructuring
 
   ```svelte
   <script>
@@ -216,7 +252,7 @@
   {/each}
   ```
 
-* Templating Logic - Each Loop w/ Key
+* [For Each Loop w/ Key](https://svelte.dev/tutorial/keyed-each-blocks)
 
   ```svelte
   <script>
@@ -226,6 +262,116 @@
   {#each names as , i}
     {id}
   {/each}
+  ```
+
+* [Await Blocks](https://svelte.dev/tutorial/await-blocks)
+
+  ```svelte
+  {#await promise}
+    <p>...waiting</p>
+  {:then number}
+    <p>The number is {number}</p>
+  {:catch error}
+    <p style="color: red">{error.message}</p>
+  {/await}
+  ```
+
+  Or only include when promise is resolved
+
+  ```svelte
+  {#await promise then number}
+    <p>the number is {number}</p>
+  {/await}
+  ```
+
+### Events
+
+* [DOM Events](https://svelte.dev/tutorial/dom-events)
+
+  Listen to any event with `on:` directive
+
+
+  ```svelte
+  <script>
+    let m = { x: 0, y: 0 };
+
+    function handleMousemove(event) {
+      m.x = event.clientX;
+      m.y = event.clientY;
+    }
+  </script>
+
+  <div on:mousemove={handleMousemove}>
+    The mouse position is {m.x} × {m.y}
+  </div>
+  ```
+
+* [Inline Event handler](https://svelte.dev/tutorial/inline-handlers)
+
+  ```svelte
+  <script>
+    let count = 0;
+  </script>
+
+  <button on:click={e => count++}>
+    {count}
+  </button>
+  ```
+
+  Can also surround with *optional* quotes for syntax highlighting
+
+  ```svelte
+  <button on:click="{e => count++}">
+  ```
+
+* [Event Modifiers](https://svelte.dev/tutorial/event-modifiers)
+
+  * `preventDefault` — calls `event.preventDefault()` before running the handler
+  * `stopPropagation` — calls `event.stopPropagation()`, preventing the event reaching the next element
+  * `passive` — improves scrolling performance on touch/wheel events
+  * `nonpassive` — explicitly set `passive: false`
+  * `capture` — fires the handler during the capture phase instead of the bubbling phase
+  * `once` — remove the handler after the first time it runs
+  * `self` — only trigger handler if `event.target` is the element itself
+  * `trusted` — only trigger handler if `event.isTrusted` is true
+    * i.e. if the event is triggered by a user action.
+
+  ```svelte
+  <button on:click|once={handleClick}>
+    Click me
+  </button>
+  ```
+
+* [Component Events](https://svelte.dev/tutorial/component-events)
+
+  **Child Component**
+
+  ```svelte
+  <script>
+    import { createEventDispatcher } from 'svelte';
+
+    const dispatch = createEventDispatcher();
+
+    function sayHello() {
+      dispatch('message', {
+        text: 'Hello!'
+      });
+    }
+  </script>
+  ```
+
+  **Parent Component**
+
+  ```svelte
+  <script>
+    import Inner from './Inner.svelte';
+
+    function handleMessage(event) {
+      alert(event.detail.text);
+    }
+  </script>
+
+  <Inner on:message={handleMessage}/>
   ```
 
 ## Compilation
