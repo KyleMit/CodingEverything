@@ -216,3 +216,14 @@ button {
   }
   ```
 
+* [Change an HTML input's placeholder color with CSS](https://stackoverflow.com/q/2610497/1366033)
+
+  Use [`::placeholder`](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder)
+
+  ```css
+  input::placeholder {
+      color: red !important;
+  }
+  ```
+
+  

@@ -649,6 +649,25 @@ namespace ExtensionMethods
   person.first; // "A"
   ```
 
+* [How do you get the index of the current iteration of a foreach loop?](https://stackoverflow.com/q/43021/1366033)
+
+  ```cs
+  using System.Collections.Generic;
+
+  public static class EnumExtension {
+      public static IEnumerable<(T item, int index)> WithIndex<T>(this IEnumerable<T> self)       
+        => self.Select((item, index) => (item, index));
+  }
+  ```
+
+  ```cs
+  foreach (var (item, index) in collection.WithIndex())
+  {
+      Debug.WriteLine($"{index}: {item}");
+  }
+  ```
+
+
 * [Checking for the last element in a foreach](https://stackoverflow.com/q/6199465/1366033)
 
   [Enumerate Extension Method](https://dotnetfiddle.net/X97m8V)

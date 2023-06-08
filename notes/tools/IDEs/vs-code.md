@@ -844,3 +844,10 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   ```json
   "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onSingleOrDoubleHash",
   ```
+
+* [Compare two files](https://stackoverflow.com/q/30139597/1366033)
+
+  Command Palette > "File: Compare Active File With"
+
+
+  

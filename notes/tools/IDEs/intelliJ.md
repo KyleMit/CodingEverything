@@ -34,12 +34,23 @@
   * [Implement pattern-based filters for 'Debug Output'](https://youtrack.jetbrains.com/issue/RIDER-67404)
   * [Debug Output Filter](https://rider-support.jetbrains.com/hc/en-us/community/posts/360001334220-Debug-Output-Filter)
 
+* [pull requests: don't mark files as viewed automatically](https://youtrack.jetbrains.com/issue/IDEA-284941/pull-requests-dont-mark-files-as-viewed-automatically)
+  * [Explicitly mark reviewed files as Viewed](https://youtrack.jetbrains.com/issue/IDEA-282201/)
+
 ## Docs
 
 * [Quick Start Guide](https://www.jetbrains.com/help/phpstorm/quick-start-guide-phpstorm.html)
 * [Editor basics | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/using-code-editor.html)
 * [Spellchecking](https://www.jetbrains.com/help/phpstorm/spellchecking.html#fix-typo)
 * [PhpStorm > Terminal](https://www.jetbrains.com/help/phpstorm/terminal-emulator.html)
+* [New UI](https://www.jetbrains.com/help/rider/New_UI.html)
+
+## Changelog / History / Versions / What's New
+
+* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What’s New in 2022-3](https://www.jetbrains.com/rider/whatsnew/2022-3/)
+* [What's new in 2018.2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
+
 
 ## Blog
 
@@ -128,6 +139,10 @@
   * [What do the colors in the Diff viewer mean?? – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000243060-What-do-the-colors-in-the-Diff-viewer-mean-)
   * [Colors and fonts | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/configuring-colors-and-fonts.html#tips)
 
+* [Is it possible to change the console font size in IntelliJ IDEA](https://stackoverflow.com/q/35829103/1366033)
+
+  Settings > Editor > Color Scheme > Console Font
+
 * Show all files in solution
 
   In [Explorer](https://www.jetbrains.com/help/rider/Project_Tool_Window.html), toggle from Solution View to File System View
@@ -151,3 +166,54 @@
 * [Turn off background color for SQL strings in PHP Storm](https://stackoverflow.com/q/31376913/1366033)
 
   Settings > Editor > Color Scheme > General > Code > Injected language fragment
+
+* [How to review a pull request in IntelliJ IDEA?](https://stackoverflow.com/q/40217494/1366033)
+
+  As of [IntelliJ IDEA 2020.2](https://blog.jetbrains.com/idea/2020/05/intellij-idea-2020-2-early-access-program-is-starting/#version_control), use **Git** > **Pull Requests**
+
+* [JetBrains Rider to stop opening diff tab on navigation](https://stackoverflow.com/q/64638884/1366033)
+
+  As of [Rider 2019.3 EAP](https://blog.jetbrains.com/dotnet/2019/11/18/new-way-commit-introducing-commit-repository-tool-windows-rider-2019-3-eap/)
+
+  Single Click - Diff
+  Double Click - Source or <kbd>F4</kbd>
+
+* [Customize Inline / Inlay Parameter Hints](https://stackoverflow.com/q/61727399/1366033)
+
+  * [Configure inlay hints](https://www.jetbrains.com/help/rider/Inline_Parameter_Name_Hints.html#configure-inlay-hints)
+
+  Settings > Editor > Inlay Hints > C# > Parameter Name Hints
+
+  **See Also**: [IntelliJ shows method parameter hints on usage - How to disable it](https://stackoverflow.com/q/40866202/1366033)
+
+  * [IntelliJ](https://stackoverflow.com/q/40866202/)
+  * [PhpStorm](https://stackoverflow.com/q/41743888/)
+  * [Android Studio](https://stackoverflow.com/q/42346480/)
+
+* [IntelliJ IDEA underlines variables when using += in JAVA](https://stackoverflow.com/q/51697168/1366033)
+
+  Settings > Editor > Color Scheme > Language Defaults
+
+  **See Also** [What does a gray underline mean in Rider?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000395439-Underlined-variables-)
+
+* [How do you change background color in the settings of JetBrain's IDE?](https://stackoverflow.com/q/19411510/1366033)
+
+  Settings > Editor > Color Scheme > General > Text > Default Text > Background
+
+  **See Also**: [Colors schemes: fonts and colors of IDE text](https://www.jetbrains.com/help/rider/Configuring_Colors_and_Fonts.html#tips)
+
+* [Resharper - turn off solution wide analysis](https://stackoverflow.com/q/9287765/1366033)
+
+  Settings > Editor > Inspection Settings > Enable Solution Wide Analysis
+
+  **See Also** [Solution-wide analysis](https://www.jetbrains.com/help/rider/Code_Analysis__Solution-Wide_Analysis.html)
+
+* [How can I tell IntelliJ's "Find in Files" to ignore generated files?](https://stackoverflow.com/q/16671706/1366033)
+
+  Scope > Custom
+
+  Possible to exclude files matched by gitignore when searching with "Find in Files"
+
+  [Files ignored by .gitignore appear in search results : IDEA-125906](https://youtrack.jetbrains.com/issue/IDEA-125906/Files-ignored-by-.gitignore-appear-in-search-results)
+
+* [Solution explorer files are duplicated](https://youtrack.jetbrains.com/issue/RIDER-90671/Solution-explorer-files-are-duplicated)

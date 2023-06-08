@@ -953,3 +953,90 @@ winget install graphviz
   // Sun May 07 2023 09:34:18
   ```
 
+
+* [Access class members from nested functions](https://stackoverflow.com/q/3949887/1366033)
+
+  > Potentially invalid reference access to a class field via 'this.' of a nested function
+
+
+  Save Object reference
+
+  ```js
+  class VoteController {
+    setupHandler() {
+      var self = this;
+      window.addEventListener('click', function (event) {
+          self.sendFeedback()
+      });
+    }
+  }
+  ```
+
+  Use Lambda Function
+
+  ```js
+  class VoteController {
+    setupHandler() {
+      window.addEventListener('click', (event) => {
+          this.sendFeedback()
+      });
+    }
+  }
+  ```
+
+* [Does JavaScript have an indexOf(lambda) or similar?](https://stackoverflow.com/q/38296703/1366033)
+
+  Use [`Array.prototype.findIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+
+  ```js
+  ['a','b','c'].findIndex('b') // 1
+  ```
+
+* [Function that can be called only once](https://stackoverflow.com/q/12713564/1366033)
+
+  ```js
+  function callOnce(fn) {
+    var done = false;
+    return function (...args) {
+      if (!done) {
+        done = true;
+        return fn.apply(this, args);
+      }
+    }
+  }
+
+  function sayHello(name) {
+    console.log(`Hello, ${name}`) 
+  }
+
+  const sayHelloOnce = callOnce(sayHello)
+
+  sayHelloOnce("Kyle")
+  sayHelloOnce("Beth")
+  sayHelloOnce("Ryan")
+  // Hello, Kyle
+  ```
+
+  * [Lodash Documentation](https://lodash.com/docs/#once)
+  * [Underscore.js](http://underscorejs.org/#once)
+
+* [POST Request with Fetch API?](https://stackoverflow.com/q/39565706/1366033)
+
+  Use [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) & [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+
+
+  ```js
+  const form = document.getElementById('form');
+  const data = new FormData();
+  data.append('name', form.name.value);
+
+  const res = fetch('../php/contact.php', {
+    method: 'POST',
+    headers: {
+      "content-type": "multipart/form-data"
+    },
+    body: data,
+  });
+  ```
+
+  
