@@ -51,7 +51,7 @@
   * Settings > Appearance > Font > Text Font
   * Settings > Appearance > Font > Monospace Font
 
-* Move settings from vault to user settings
+* [Share .obsidian between vault?](https://forum.obsidian.md/t/share-obsidian-between-vault/12224)
 
   [Working with multiple vaults](https://help.obsidian.md/How+to/Working+with+multiple+vaults)
 
@@ -82,3 +82,21 @@
   Can use <kbd>Ctrl</kbd> + <kbd>K</kbd> to "Insert Link"
 
   Use [Paste URL into selection](https://github.com/denolehov/obsidian-url-into-selection)
+
+* [Obsidian: How can I paste image into dir "images", not root.](https://www.reddit.com/r/ObsidianMD/comments/rvkhj9/obsidian_how_can_i_paste_image_into_dir_images/?utm_source=share&utm_medium=web2x&context=3)
+
+  Settings > Files & Links > Default location for new attachments
+
+  ```json
+  {
+    "attachmentFolderPath": "/Assets/obsidian"
+  }
+  ```
+  
+  See Also: [Choose path when pasting images](https://forum.obsidian.md/t/choose-path-when-pasting-images/738)
+
+* [Rename image when pasting](https://www.reddit.com/r/ObsidianMD/comments/u75xqu/introducing_paste_image_rename_plugin/)
+
+  Use [obsidian-paste-image-rename](https://github.com/reorx/obsidian-paste-image-rename) - Renames pasted images and all the other attachments added to the vault
+
+* [How to add your theme to the community theme store](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/How+to+add+your+theme+to+the+community+theme+store)

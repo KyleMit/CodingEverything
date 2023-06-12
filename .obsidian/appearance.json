@@ -1,0 +1,10 @@
+{
+  "accentColor": "#556ad3",
+  "cssTheme": "Oceanic",
+  "textFontFamily": "FiraCode NF Retina,FiraCode NF",
+  "monospaceFontFamily": "FiraCode NF Retina,FiraCode NF",
+  "baseFontSize": 13,
+  "enabledCssSnippets": [
+    "obsidian"
+  ]
+}

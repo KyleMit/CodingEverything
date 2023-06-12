@@ -1,0 +1,12 @@
+{
+  "livePreview": false,
+  "showInlineTitle": false,
+  "showLineNumber": true,
+  "readableLineLength": false,
+  "useTab": false,
+  "tabSize": 2,
+  "promptDelete": false,
+  "autoPairMarkdown": false,
+  "attachmentFolderPath": "/Assets/obsidian",
+  "alwaysUpdateLinks": true
+}
