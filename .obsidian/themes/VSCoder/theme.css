@@ -75,6 +75,9 @@ body
     --h6-size: 1.12em;
 
     --code-size: 1.02em;
+
+    --tab-width: auto;
+    --tab-max-width: 200px;
 }
 
 .theme-dark
@@ -189,6 +192,17 @@ body
 
 .workspace-tabs .workspace-leaf {
     background-color: #181818;
+}
+
+/* tabs */
+.workspace .mod-root .workspace-tab-header {
+    /* width: var(--tab-width); */
+    /* max-width: var(--tab-max-width); */
+    min-width: auto;
+}
+
+.workspace-tab-header-inner-title {
+    margin-right: 10px;
 }
 
 /* elements */

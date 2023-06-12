@@ -100,3 +100,10 @@
   Use [obsidian-paste-image-rename](https://github.com/reorx/obsidian-paste-image-rename) - Renames pasted images and all the other attachments added to the vault
 
 * [How to add your theme to the community theme store](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/How+to+add+your+theme+to+the+community+theme+store)
+
+* Syncing across devices
+
+  * [Syncthing](https://syncthing.net/)
+  * [Obsidian Sync](https://obsidian.md/sync)
+  * [denolehov/obsidian-git: Backup your Obsidian.md vault with git](https://github.com/denolehov/obsidian-git)
+  * [Working Copy, Git on iOS](https://workingcopy.app/)
