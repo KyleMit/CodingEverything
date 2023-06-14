@@ -727,3 +727,15 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   * Use `StringComparison.Ordinal` for performance and default use case
 
+
+* [How to mark a method as obsolete or deprecated?](https://stackoverflow.com/q/1759352/1366033)
+
+  Use [`ObsoleteAttribute`](https://learn.microsoft.com/en-us/dotnet/api/system.obsoleteattribute)
+
+  ```cs
+  [Obsolete("Method1 is deprecated, please use Method2 instead.")]
+  public void Method1()
+  { … }
+  ```
+
+  

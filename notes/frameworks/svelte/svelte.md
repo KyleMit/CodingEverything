@@ -8,6 +8,7 @@
 
 * [Github](https://github.com/sveltejs/svelte)
 * [Examples](https://svelte.dev/examples/hello-world)
+* [Svelte Society](https://sveltesociety.dev/)
 * [Svelte Origins: A JavaScript Documentary](https://www.youtube.com/watch?v=kMlkCYL9qo0)
 
 ## Typescript

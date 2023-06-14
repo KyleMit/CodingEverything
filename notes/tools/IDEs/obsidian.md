@@ -7,12 +7,19 @@
 * [Custom hotkeys](https://help.obsidian.md/Customization/Custom+hotkeys)
 * [Themes](https://help.obsidian.md/Extending+Obsidian/Themes)
 * [Plugin security](https://help.obsidian.md/Extending+Obsidian/Plugin+security)
+* [Basic formatting syntax](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code%20blocks)
+  * [Prism](https://prismjs.com/#supported-languages)
 
 ## Plugins
 
 * [Quick Switcher++](https://github.com/darlal/obsidian-switcher-plus)
 * [obsidian-git](https://github.com/denolehov/obsidian-git) - Backup your Obsidian.md vault with git
 * [obsidian-editor-shortcuts](https://github.com/timhor/obsidian-editor-shortcuts) - Obsidian plugin to add keyboard shortcuts commonly found in code editors such as Visual Studio Code (vscode) or Sublime Text
+
+## Plugin Docs
+
+* [Create your first plugin](https://marcus.se.net/obsidian-plugin-docs/getting-started/create-your-first-plugin)
+* [Svelte](https://marcus.se.net/obsidian-plugin-docs/getting-started/svelte)
 
 ## Hotkeys
 
@@ -107,3 +114,15 @@
   * [Obsidian Sync](https://obsidian.md/sync)
   * [denolehov/obsidian-git: Backup your Obsidian.md vault with git](https://github.com/denolehov/obsidian-git)
   * [Working Copy, Git on iOS](https://workingcopy.app/)
+
+* [Context Menu (aka right click menu) Hotkey](https://forum.obsidian.md/t/context-menu-aka-right-click-menu-hotkey/22059)
+
+  <kbd>Ctrl</kbd> + <kbd>.</kbd> - Show context menu under cursor
+
+
+* [Add option to automatically “Reveal file in navigation” when you open a note](https://forum.obsidian.md/t/add-option-to-automatically-reveal-file-in-navigation-when-you-open-a-note/9429)
+
+  * Hotkey > `Files: Reveal current file in navigation`
+  * Right Click Tab > `Reveal current file in navigation`
+  * Use [obsidian-reveal-active-file](https://github.com/shichongrui/obsidian-reveal-active-file)
+    * BUT... [Active pane loses focus when opening a file in Obsidian 0.15.3 #11](https://github.com/shichongrui/obsidian-reveal-active-file/issues/11)
