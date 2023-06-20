@@ -186,4 +186,8 @@ export default App;
 
   [Destiny Operator](https://youtu.be/AdNJ3fydeao?t=863)
 
-  **See Also**: [The many meanings of $ in Svelte - Geoff Rich](https://geoffrich.net/posts/svelte-$-meanings/)
+  **See Also**: [The many meanings of $ in Svelte](https://geoffrich.net/posts/svelte-$-meanings/)
+
+* [Debugging with svelte](https://stackoverflow.com/q/57390682/1366033)
+
+  Use https://github.com/sveltejs/svelte-devtools

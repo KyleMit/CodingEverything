@@ -739,3 +739,25 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ```
 
   
+* [json.net required property not found in json](https://stackoverflow.com/q/7472486/1366033)
+
+  [Required Docs](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Required.htm)
+
+  | Option                  | Must be present | Can be Null value |
+  | ----------------------- | :-------------: | :---------------: |
+  | `Required.Default`      |                 |         ✓         |
+  | `Required.AllowNull`    |        ✓        |         ✓         |
+  | `Required.Always`       |        ✓        |                   |
+  | `Required.DisallowNull` |                 |                   |
+
+
+* [How to handle null/empty values in JsonConvert.DeserializeObject](https://stackoverflow.com/q/31813055/1366033)
+
+  ```cs
+  var settings = new JsonSerializerSettings
+  {
+      NullValueHandling = NullValueHandling.Ignore,
+      MissingMemberHandling = MissingMemberHandling.Ignore
+  };
+  var jsonModel = JsonConvert.DeserializeObject<Customer>(jsonString, settings);
+  ```

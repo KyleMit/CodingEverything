@@ -71,3 +71,16 @@
   Use [`System.Diagnostics.Debug.WriteLine()`](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.debug.writeline?view=net-7.0)
 
   Shows up in Output Window > Debug
+
+* [How to get raw request body in ASP.NET?](https://stackoverflow.com/q/6362781/1366033)
+
+  ```cs
+  public async Task<string> GetRequestBodyAsync()
+  {
+      using var reader = new StreamReader(HttpContext.Request.Body);
+      var body = await reader.ReadToEndAsync();
+      return body;
+  }
+  ```
+
+  

@@ -62,15 +62,6 @@ kramdown:
 [gist.github.com](https://gist.github.com/)
 [KyleMit Gists](https://gist.github.com/KyleMit)
 
-## Copilot
-
-* [GitHub Copilot · Your AI pair programmer](https://copilot.github.com/)
-* [github/copilot-docs: Documentation for GitHub Copilot](https://github.com/github/copilot-docs)
-* [GitHub Copilot - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-
-## CoPilot CLI
-
-<https://www.npmjs.com/package/@githubnext/github-copilot-cli>
 
 ## Github CLI
 
