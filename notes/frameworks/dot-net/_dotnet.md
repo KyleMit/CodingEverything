@@ -761,3 +761,21 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   };
   var jsonModel = JsonConvert.DeserializeObject<Customer>(jsonString, settings);
   ```
+
+* [How to take all but the last element in a sequence using LINQ?](https://stackoverflow.com/q/1779129/1366033)
+
+  Use [`SkipLast`](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.skiplast)
+
+  ```cs
+  var sequence = new List<string>() {"A","B","C"};
+  var allButLast = sequence.SkipLast(1);
+  Console.WriteLine(string.Join(",", allButLast)); // A,B
+  ```
+
+  Use [Ranges and Indices](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)
+
+  ```cs
+  var allButLast = sequence[..^1];
+  ```
+
+  

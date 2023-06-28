@@ -191,3 +191,13 @@ export default App;
 * [Debugging with svelte](https://stackoverflow.com/q/57390682/1366033)
 
   Use https://github.com/sveltejs/svelte-devtools
+
+* [`</script>` inside a string is parsed by the compiler as a closing script tag](https://github.com/sveltejs/svelte/issues/5024)
+
+  Escape the slash
+
+  ```js
+  let name = 'abc <\/script>';
+  ```
+
+
