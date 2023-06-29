@@ -850,4 +850,66 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
   Command Palette > "File: Compare Active File With"
 
 
+* [How can I attach to a specific process in Visual Studio Code](https://stackoverflow.com/q/60440765/1366033)
   
+  ```json
+  {
+    "request": "attach",
+    "processId":"${command:pickProcess}"
+  }
+  ```
+  
+  
+  ```json
+  {
+    "request": "attach",
+    "processName": "someProcess.exe"
+  }
+  ```
+  
+  **See Also**: [Debugging in Visual Studio Code > Launch versus attach configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations)
+
+* [Is it possible to supply process-id with shell command when attaching to process?](https://stackoverflow.com/q/65723608/1366033)
+
+
+  Use [**Tasks Shell Input**](https://marketplace.visualstudio.com/items?itemName=augustocdias.tasks-shell-input) extension
+
+  ```json
+  "launch": {
+      "configurations": [
+          {
+              // ...
+              "processId": "${input:FindVivadoPID}",
+              // ...
+          }
+      ],
+      "inputs": [
+          {
+            "id": "FindVivadoPID",
+            "type": "command",
+            "command": "shellCommand.execute",
+            "args": {
+              "command": "pgrep 'ecold.*lnx64.g/vivado' -f",
+              "description": "Select your Vivado PID",
+              "useFirstResult": true,
+            }
+          }
+      ]
+  }
+  ```
+
+
+  * **Further Reading**
+    * [Debugging](https://code.visualstudio.com/docs/editor/debugging)
+    * [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+    * [Variables > Input Variables](https://code.visualstudio.com/docs/editor/variables-reference#_input-variables)
+
+
+* [Can vscode use a profile from `Properties/launchSettings.json`?](https://stackoverflow.com/q/70869011/1366033)
+
+  ```json
+  "launchSettingsProfile": "${workspaceFolder}/<Relative-Path-To-Project-Directory>/Properties/launchSettings.json"
+  ```
+
+
+

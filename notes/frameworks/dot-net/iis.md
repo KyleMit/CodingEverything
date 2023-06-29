@@ -42,3 +42,11 @@
 
   * [`IISAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/iisadministration/?view=windowsserver2022-ps)
   * [`WebAdministration` Module](https://docs.microsoft.com/en-us/powershell/module/webadministration/?view=windowsserver2022-ps)
+
+* [Using Powershell to obtain an IIS Application Pool ProcessID](https://stackoverflow.com/a/76583052/1366033)
+
+  Use [`appcmd.exe`](https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe)
+
+  ```ps1
+  C:\Windows\System32\inetsrv\appcmd list wp /apppool.name:"testSite1" /text:WP.NAME
+  ```

@@ -1,4 +1,4 @@
-# Windows CMD / DOS
+# Windows CMD / MS DOS / Batch File
 
 AKA Batch Script
 
@@ -72,4 +72,12 @@ AKA Batch Script
 
   ```cmd
   where git
+  ```
+
+* [Getting curl to output HTTP status code?](https://superuser.com/q/272265/180163)
+
+  Use [`-I` or `--head`](https://man7.org/linux/man-pages/man1/curl.1.html#:~:text=Fetch%20the%20headers%20only) to fetch headers only
+
+  ```cmd
+  curl --head http://www.example.org
   ```
