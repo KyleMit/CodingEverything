@@ -7,10 +7,14 @@ Document Object Model
 [DOM Standard](https://dom.spec.whatwg.org/)
 [whatwg/dom: DOM Standard](https://github.com/whatwg/dom)
 
+## Questions
+
 * [Remove element by id](https://stackoverflow.com/q/3387427/1366033)
 
+  Use [`Element.remove()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/remove)
+
   ```js
-  element.remove()
+  el.remove()
   ```
 
 * [How to get the `<html>` tag HTML](https://stackoverflow.com/q/4196971/1366033)
@@ -213,4 +217,5 @@ Document Object Model
   }
   ```
 
-  * [What's the right way to decode a string that has special HTML entities in it?](https://stackoverflow.com/q/7394748/1366033)
+  **See Also**: [What's the right way to decode a string that has special HTML entities in it?](https://stackoverflow.com/q/7394748/1366033)
+

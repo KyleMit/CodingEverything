@@ -778,4 +778,22 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   var allButLast = sequence[..^1];
   ```
 
-  
+* [Get first k words of a string?](https://stackoverflow.com/q/13368345/1366033)
+
+  ```cs
+  /// <summary>
+  /// Fluent version of <code>string.Join</code>.
+  /// </summary>
+  public static string StringJoin(this IEnumerable<string> strings, string joinSeparator = "\n")
+  {
+      return strings == null ? null : string.Join(joinSeparator, strings);
+  }
+  ```
+
+  ```cs
+  public static string TakeFirstKWords(this string str, int k)
+  {
+      return str.Split().Where(s => s.HasValue()).Take(k).StringJoin(" ");
+  }
+  ```
+
