@@ -200,4 +200,50 @@ export default App;
   let name = 'abc <\/script>';
   ```
 
+* [Svelte transition between two elements "jumps"](https://stackoverflow.com/q/59882179/1366033)
 
+  Use css grid so both elements don't depend on each other for DOM flow
+
+  ```css
+  .grid {
+    display: grid;
+  }
+  .grid > * {
+    grid-area: 1/1/2/2;
+  }
+  ```
+  
+  [Swap Out Elements • REPL • Svelte](https://svelte.dev/repl/dc1aba49f6ce4366b7bc0efee64a84e8?version=4.0.5)
+
+  Use delay to prevent new element from entering until after out has completed
+
+  ```svelte
+  <div in:fade={{ delay: 500}} out:fade={{ duration: 500}} >
+  ```
+
+  [Swap Out Elements - Delay • REPL • Svelte](https://svelte.dev/repl/22265f45e3c942a585a50a8df107b732?version=4.0.5)
+
+  **See Also**: [Equivalent of Vue's out-in transition mode](https://github.com/sveltejs/svelte/issues/544)
+
+
+* [change variable value inside html block](https://stackoverflow.com/q/68393239/1366033)
+
+
+  Use [`{@const ...}`](https://svelte.dev/docs/special-tags#const)
+
+  ```svelte
+  <script>
+    const list = ['a','b','c']
+  </script>
+
+  <ul>
+  {#each list as item}
+      {@const isB = item === "b"}
+      <li>
+        <code>Item: "{item}" | IsB: {isB}</code>
+      </li>
+  {/each}
+  </ul>
+  ```
+
+  [Demo in REPL](https://svelte.dev/repl/a42d598c79f3493ebed2fbf96f695336?version=4.0.5)

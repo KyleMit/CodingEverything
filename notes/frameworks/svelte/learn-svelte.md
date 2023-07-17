@@ -399,3 +399,50 @@ Can also surround with *optional* quotes for syntax highlighting
 * Component can set attributes on element, but not vice versa
 * Bindings allow for two way data exchange
 * Prevents attaching `on:input` handler and updating on every change
+
+
+
+## Transitions
+
+### [Transition Directive](https://learn.svelte.dev/tutorial/transition)
+
+
+```svelte
+<script>
+import { fade } from 'svelte/transition';
+</script>
+
+<p transition:fade>
+```
+
+### [Transition Parameters](https://learn.svelte.dev/tutorial/adding-parameters-to-transitions)
+
+
+```svelte
+import { fly } from 'svelte/transition';
+
+<p transition:fly={{ y: 200, duration: 2000 }}>
+```
+
+### [In and Out Transitions](https://learn.svelte.dev/tutorial/in-and-out)
+
+```svelte
+<p in:fly={{ y: 200, duration: 2000 }} out:fade>
+```
+
+### [Custom CSS Transition](https://learn.svelte.dev/tutorial/custom-css-transitions)
+
+
+```js
+function fader(node, { delay = 0, duration = 400}) {
+  const o = +getComputedStyle(node).opacity;
+
+  return {
+    delay,
+    duration,
+    css: (t) => `opacity: ${t * 0}`
+  }
+}
+```
+
+

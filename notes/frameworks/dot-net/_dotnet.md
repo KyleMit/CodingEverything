@@ -797,3 +797,42 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   }
   ```
 
+
+* [A list of multiple data types?](https://stackoverflow.com/q/4343336/1366033)
+
+  ```cs
+  public interface IAnimal {}
+  public class Cat : IAnimal {}
+  public class Dog : IAnimal {}
+
+  var animals = new List<IAnimal>();
+  ```
+
+* [How can you use LINQ to cast from a collection of base class objects to a filtered list of their respective subclasses?](https://stackoverflow.com/q/16051096/1366033)
+
+  Use [`.OfType<>`](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.oftype?view=net-7.0)
+
+  ```cs
+  public class Animal {}
+  public class Cat : Animal {}
+  public class Dog : Animal {}
+
+  var animals = new List<Animal>();
+  ```
+
+  ```cs
+  var cats = animals.OfType<Cat>();
+  ```
+
+  ```cs
+  var animals = new List<Animal>();
+  var cats = animals
+    .Where(x => x is Cat)
+    .Select(x => x as Cat);
+  ```
+
+* [WaitAll vs WhenAll](https://stackoverflow.com/q/6123406/1366033)
+
+  * [`Task.WaitAll`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=net-7.0) blocks the current thread until everything has completed.
+  * [`Task.WhenAll`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.whenall?view=net-7.0) returns a task which represents the action of waiting until everything has completed.
+
