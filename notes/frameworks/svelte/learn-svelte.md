@@ -446,3 +446,34 @@ function fader(node, { delay = 0, duration = 400}) {
 ```
 
 
+## Context API
+
+### [setContext and getContext](https://learn.svelte.dev/tutorial/context-api)
+
+* [`setContext`](https://svelte.dev/docs/svelte#setcontext)
+* [`getContext`](https://svelte.dev/docs/svelte#getcontext)
+
+```svelte
+<script>
+  import { setContext } from "svelte"
+  import Card from "./Card.svelte"
+
+  setContext('secret', "password")
+</script>
+
+<Card />
+```
+
+```svelte
+<script>
+  import { getContext } from "svelte"
+
+  var secret = getContext("secret")
+</script>
+
+<div style="text-decoration: line-through;">
+  {secret}
+</div>
+```
+
+[Context API REPL](https://svelte.dev/repl/5a553a25b9e34a52bdc00f2462797263?version=4.0.5)

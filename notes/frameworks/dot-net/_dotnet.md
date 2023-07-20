@@ -836,3 +836,57 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   * [`Task.WaitAll`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=net-7.0) blocks the current thread until everything has completed.
   * [`Task.WhenAll`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.whenall?view=net-7.0) returns a task which represents the action of waiting until everything has completed.
 
+
+* [Using blocks in C# switch expression?](https://stackoverflow.com/q/59729459/1366033)
+
+  **Constraint**: The bodies are expressions, not statements.
+  **Proposal**: [Block-bodied switch expression arms · Issue #3037 · dotnet/csharplang](https://github.com/dotnet/csharplang/issues/3037)
+
+  * **Workaround 1**: Use Switch Expression
+  * **Workaround 2**: Call method and execute multiple statements there
+  * **Workaround 3**: Define a local lambda and invoke it
+
+* [C# 8 switch expression with multiple cases with same result](https://stackoverflow.com/q/56676260/1366033)
+
+  Use `or` pattern matching to combine multiple values into single returned expression
+
+  ```cs
+  var switchValue = 3;
+  var resultText = switchValue switch
+  {
+      1 or 2 or 3 => "one, two, or three",
+      4 => "four",
+      5 => "five",
+      _ => "unknown",
+  };
+  ```
+
+* [How to call protected constructor in c#?](https://stackoverflow.com/q/4365745/1366033)
+
+  [`protected`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected)
+
+  > A protected member is accessible within its class and by derived class instances
+
+  ```cs
+  public abstract class ChatMessageBase
+  {
+      protected ChatMessageBase(AIChatMessage dbMessage)
+      {
+          Id = dbMessage.Id;
+          CreationDate = dbMessage.CreationDate;
+      }
+
+      public int Id { get; set; }
+      public DateTime CreationDate { get; set; }
+  }
+
+  public class UserChatMessage : ChatMessageBase
+  {
+      public UserChatMessage(AIChatMessage dbMessage) : base(dbMessage)
+      {
+          Prompt = dbMessage.Contents;
+      }
+      public string Prompt { get; set; }
+  }
+  ```
+

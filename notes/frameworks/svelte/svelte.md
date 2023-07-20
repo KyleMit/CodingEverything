@@ -13,7 +13,14 @@
 
 ## Typescript
 
-* [Svelte <3 TypeScript](https://svelte.dev/blog/svelte-and-typescript)
+* Docs
+  * [Svelte <3 TypeScript](https://svelte.dev/blog/svelte-and-typescript)
+  * [TypeScript • Docs • Svelte](https://svelte.dev/docs/typescript)
+* Issues
+  * [Add TypeScript support · Issue #156 · sveltejs/sites](https://github.com/sveltejs/sites/issues/156)
+* Fiddles
+  * [TS REPL using stackblitz](https://stackblitz.com/edit/svelte-typescript?file=src%2FApp.svelte)
+  * [TS REPL using codesandbox](https://codesandbox.io/p/sandbox/distracted-glitter-cnmvsn?file=%2Fsrc%2FApp.svelte%3A5%2C29)
 
 ## Svelte Kit
 
@@ -247,3 +254,45 @@ export default App;
   ```
 
   [Demo in REPL](https://svelte.dev/repl/a42d598c79f3493ebed2fbf96f695336?version=4.0.5)
+
+
+* [difference between svelte store and svelte context](https://stackoverflow.com/q/74361924/1366033)
+
+  * A context is data that is inherited within a component hierarchy
+  * A store encapsulates reactivity via a subscription system
+
+
+* [TypeScript get Svelte component's prop type](https://stackoverflow.com/q/70103438/1366033)
+
+  Use [`ComponentProps`](https://svelte.dev/docs/typescript#types-componentprops)
+
+  ```svelte
+  <script lang="ts">
+    import type { ComponentProps } from 'svelte';
+    import Animal from 'animals';
+    // The below has the types of all props on the Animal component now
+    export type AnimalPropTypes = ComponentProps<Animal>;
+  </script>
+  ```
+
+  [Demo in StackBlitz](https://stackblitz.com/edit/svelte-typed-props?file=src%2FCard.svelte,src%2FApp.svelte)
+
+  [This fixes like all my problems with Svelte typescript](https://twitter.com/BertBengtson/status/1679887855307374593)
+
+* [first, last, even, odd field in {#each} loop](https://github.com/sveltejs/svelte/issues/7473)
+
+  Use [`#each` block](https://svelte.dev/docs/logic-blocks#each)
+
+  ```svelte
+  <script>
+    const list = ['A', 'B', 'C']
+  </script>
+
+  {#each list as item, i}
+    {@const isLast = i === list.length - 1}
+    {item}{#if !isLast},{/if}
+  {/each}
+  ```
+
+  [Each (Last) in REPL](https://svelte.dev/repl/86cb267ba7fb41898c9ffc4e9d7e506a?version=4.0.5)
+
