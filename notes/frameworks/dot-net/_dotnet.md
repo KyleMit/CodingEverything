@@ -890,3 +890,11 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   }
   ```
 
+* [How to use the ternary operator inside an interpolated string?](https://stackoverflow.com/q/31844058/1366033)
+
+  Wrap in `()`
+
+  ```cs
+  var result = $"Descending {(isDescending ? "yes" : "no")}";
+  ```
+

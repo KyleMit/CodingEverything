@@ -217,3 +217,13 @@
   [Files ignored by .gitignore appear in search results : IDEA-125906](https://youtrack.jetbrains.com/issue/IDEA-125906/Files-ignored-by-.gitignore-appear-in-search-results)
 
 * [Solution explorer files are duplicated](https://youtrack.jetbrains.com/issue/RIDER-90671/Solution-explorer-files-are-duplicated)
+
+* [How to exclude a file extension from IntelliJ IDEA search?](https://stackoverflow.com/q/22143881/1366033)
+
+  Use `!` in file mask
+
+  * `!*en.js, !*.d.ts, !*.map`
+  * `*.cs,*.ts,*.svelte,!*.d.ts`
+
+
+
