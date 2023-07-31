@@ -898,3 +898,23 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   var result = $"Descending {(isDescending ? "yes" : "no")}";
   ```
 
+* [The annotation for nullable reference types should only be used in code within a '#nullable' annotations context](https://stackoverflow.com/q/55492214/1366033)
+
+  Use [nullable](https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-contexts) pragma
+
+  ```cs
+  class Program
+  {
+      static void Main(string[] args)
+      {
+  #nullable enable
+          string? message = "Hello World";
+  #nullable disable
+          string message2 = null;
+
+          Console.WriteLine(message);
+          Console.WriteLine(message2);
+      }
+  }
+  ```
+

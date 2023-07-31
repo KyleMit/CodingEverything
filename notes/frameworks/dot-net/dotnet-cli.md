@@ -92,3 +92,11 @@ dotnet tool list -g
   ```
 
 
+  ```bash
+  dotnet --version
+  ```
+
+  ```bash
+  dotnet --list-sdks
+  ```
+
