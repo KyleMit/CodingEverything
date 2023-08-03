@@ -321,3 +321,10 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```sql
     SELECT * FROM tbl WHERE txt LIKE '\[%' ESCAPE '\'
     ```
+
+* [Identity increment is jumping in SQL Server database](https://stackoverflow.com/q/14146148/1366033)
+
+    > By default uses a cache size of 1,000 when allocating `IDENTITY`` values for an int column  
+    > And restarting the service can "lose" unused values  
+    > (The cache size is 10,000 for bigint/numeric)
+

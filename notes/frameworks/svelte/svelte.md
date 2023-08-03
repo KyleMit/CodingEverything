@@ -173,6 +173,8 @@ export default App;
   }
   ```
 
+  [Styling child](https://svelte.dev/repl/d7f454927ae548d690a05902654dafda?version=3.59.2)
+
 * [How to render html in svelte](https://stackoverflow.com/q/57580013/1366033)
 
   Use [`{@html ...}` expression](https://svelte.dev/docs#template-syntax-html)

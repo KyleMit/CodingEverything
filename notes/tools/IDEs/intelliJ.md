@@ -226,4 +226,9 @@
   * `*.cs,*.ts,*.svelte,!*.d.ts`
 
 
+* [Empty tag doesn't work in some browsers warning](https://stackoverflow.com/questions/61279364/)
+
+  Settings > Editor > Inspection Settings > Other Languages > Html > Empty Tag
+
+  [Svelte: Empty tag doesn't work in some browsers warning is not relevant](https://youtrack.jetbrains.com/issue/WEB-60591)
 

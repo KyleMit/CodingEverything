@@ -126,3 +126,11 @@
   * Right Click Tab > `Reveal current file in navigation`
   * Use [obsidian-reveal-active-file](https://github.com/shichongrui/obsidian-reveal-active-file)
     * BUT... [Active pane loses focus when opening a file in Obsidian 0.15.3 #11](https://github.com/shichongrui/obsidian-reveal-active-file/issues/11)
+
+* [Exclude specific folders from "quick switcher"](https://www.reddit.com/r/ObsidianMD/comments/nr22jo/exclude_specific_folders_from_quick_switcher/)
+
+  You can go to **Options > Files & Links > Excluded Files**
+
+  * [Exclude all paths containing "attachments" from Quick Switcher](https://www.reddit.com/r/ObsidianMD/comments/vqdf4m/exclude_all_paths_containing_attachments_from/)
+  * [Config to ignore/hide select files and folders](https://forum.obsidian.md/t/config-to-ignore-hide-select-files-and-folders/4186)
+
