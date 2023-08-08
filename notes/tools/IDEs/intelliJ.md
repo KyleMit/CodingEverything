@@ -232,3 +232,10 @@
 
   [Svelte: Empty tag doesn't work in some browsers warning is not relevant](https://youtrack.jetbrains.com/issue/WEB-60591)
 
+* [Soft wrap long line](https://stackoverflow.com/q/23004520/1366033)
+
+  * <kbd>Alt</kbd> + <kbd>Z</kbd> - Toggle Soft Wrap
+
+  Settings > Editor > General > Soft Wraps
+
+  **See Also**: [Enable Soft Wrap - IntelliJ IDEA Guide](https://www.jetbrains.com/idea/guide/tips/enable-soft-wrap/)

@@ -197,6 +197,42 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
 * [Why is `StringValues` used for `Request.Query` values?](https://stackoverflow.com/q/48188934/1366033)
 
+* [How to build a query string for a URL in C#?](https://stackoverflow.com/q/829080/1366033)
+
+  Use [`QueryBuilder`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.extensions.querybuilder?view=aspnetcore-7.0)
+
+  ```cs
+  var qb = new QueryBuilder();
+  qb.Add("message", "Hello World");
+  var searchParams = qb.ToQueryString();
+  Console.WriteLine(searchParams); // ?message=Hello%20World
+  ```
+
+  [.NET Fiddle > Build Query Params > QueryBuilder](https://dotnetfiddle.net/IPkYbS)
+
+
+  Create Extension Method
+
+
+  ```cs
+  public static class HttpExtensions
+  {
+    public static string ToQueryString(this NameValueCollection nvc)
+    {
+      var array = (
+        from key in nvc.AllKeys
+        from value in nvc.GetValues(key)
+          select string.Format(
+            "{0}={1}",
+            HttpUtility.UrlEncode(key),
+            HttpUtility.UrlEncode(value))
+        ).ToArray();
+      return "?" + string.Join("&", array);
+    }
+  }
+  ```
+
+  [.NET Fiddle > Build Query Params > Ext Method](https://dotnetfiddle.net/BWkUa5)
 
 * [How to load appsettings.json section into Dictionary in .NET Core?](https://stackoverflow.com/q/42846296/1366033)
 

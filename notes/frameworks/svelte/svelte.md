@@ -298,3 +298,43 @@ export default App;
 
   [Each (Last) in REPL](https://svelte.dev/repl/86cb267ba7fb41898c9ffc4e9d7e506a?version=4.0.5)
 
+* [Is there a convenient way to reference a DOM element in Svelte components?](https://stackoverflow.com/q/58362558/1366033)
+
+
+  Use [`bind:this`](https://svelte.dev/docs/element-directives#bind-this)
+
+  ```svelte
+  <script>
+  let myElem
+  </script>
+
+  <div bind:this={myElem}>
+  ```
+
+  [Tutorial Bind This](https://learn.svelte.dev/tutorial/bind-this)
+
+  Use [`use:action`](https://svelte.dev/docs/element-directives#use-action)
+
+* [Understanding Svelte tick() lifecycle](https://stackoverflow.com/q/61295334/1366033)
+
+  > Returns a promise that resolves once any pending state changes have been applied, or in the next microtask if there are none.
+
+  **Further Reading**
+
+  * [Tutorial > Lifecycle > tick](https://learn.svelte.dev/tutorial/tick)
+  * [Docs > svelte > tick](https://svelte.dev/docs/svelte#tick)
+
+
+* [How do I scroll to the last item in an {#each} block](https://stackoverflow.com/q/76854718/1366033)
+
+  ```svelte
+  <script>
+  const initialCount = messages.length;
+  const scroll = node => {
+      if (messages.length > initialCount)
+          node.scrollIntoView()
+  }
+  </script>
+
+  <div class="card" use:scroll />
+  ```

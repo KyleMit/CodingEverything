@@ -219,3 +219,12 @@ Document Object Model
 
   **See Also**: [What's the right way to decode a string that has special HTML entities in it?](https://stackoverflow.com/q/7394748/1366033)
 
+* [How to get last child from parent element](https://stackoverflow.com/q/72750452/1366033)
+
+  Use [`Element.lastElementChild`](https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild)
+
+  ```js
+  var list = document.getElementById("list-container");
+  var last = list.lastElementChild
+  ```
+
