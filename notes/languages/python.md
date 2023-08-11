@@ -2251,3 +2251,17 @@ Use [`str.title()`](https://docs.python.org/3/library/stdtypes.html#str.title)
   [0,1,2] == [0,2,1] # False
   ```
   
+* [Reading in environment variables from an environment file](https://stackoverflow.com/q/40216311/1366033)
+
+  Use [python-dotenv](https://pypi.org/project/python-dotenv/)
+
+  And [`os.getenv`](https://docs.python.org/3/library/os.html#os.getenv)
+
+  ```py
+  import os
+  from dotenv import load_dotenv
+
+  load_dotenv()
+
+  MY_ENV_VAR = os.getenv('MY_ENV_VAR')
+  ```

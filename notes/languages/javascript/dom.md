@@ -228,3 +228,20 @@ Document Object Model
   var last = list.lastElementChild
   ```
 
+* [Request with URL that includes credentials](https://stackoverflow.com/q/45067331/1366033)
+
+  Instead of:
+
+  ```js
+  fetch(`http://${user}:${pass}@host.com`)
+  ```
+
+  Do this:
+
+  ```js
+  var headers = new Headers({
+      'Authorization': `Basic ${btoa(user + ':' + pass)}`
+  });
+
+  fetch('https://host.com', {headers: headers})
+  ```

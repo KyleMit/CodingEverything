@@ -328,3 +328,10 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     > And restarting the service can "lose" unused values  
     > (The cache size is 10,000 for bigint/numeric)
 
+* [SQL Server Cumulative Sum by Group](https://stackoverflow.com/q/17971988/1366033)
+
+    ```sql
+    SELECT v.CreationDate,
+        SUM(v.BountyAmount) over (order by v.CreationDate) as Cumulative
+    FROM Votes v
+    ```

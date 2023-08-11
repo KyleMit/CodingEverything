@@ -326,6 +326,7 @@ Format Selection - <kbd>Ctrl</kbd>+<kbd>K</kbd> <kbd>Ctrl</kbd>+<kbd>F</kbd>
     * Symbol Lookup - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>
   * Send Request
     * Click Link or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>
+  * [Native .env file support?](https://github.com/Huachao/vscode-restclient/issues/418)
 
 
 
