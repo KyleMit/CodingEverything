@@ -335,3 +335,23 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
         SUM(v.BountyAmount) over (order by v.CreationDate) as Cumulative
     FROM Votes v
     ```
+
+* [Return value after INSERT](https://stackoverflow.com/q/7917695/1366033)
+
+    Use [`OUTPUT` clause](https://learn.microsoft.com/en-us/sql/t-sql/queries/output-clause-transact-sql?view=sql-server-ver16)
+
+    ```sql
+    INSERT INTO table (name)
+    OUTPUT Inserted.ID
+    VALUES('bob');
+    ```
+
+    USE [`SCOPE_IDENTITY`](https://learn.microsoft.com/en-us/sql/t-sql/functions/scope-identity-transact-sql?view=sql-server-ver16)
+
+    ```sql
+    INSERT INTO table (name)
+    VALUES('bob');
+    SELECT SCOPE_IDENTITY()
+    ```
+
+

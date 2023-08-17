@@ -954,3 +954,14 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   }
   ```
 
+* [Remove leading and trailing double quotes (`"`)](https://stackoverflow.com/q/3281772/1366033)
+
+  Use [`String.Trim`](https://learn.microsoft.com/en-us/dotnet/api/system.string.trim?view=net-7.0#system-string-trim(system-char)) with `trimChar` param
+
+  ```cs
+  var quoted = "\"Kyle\"";
+  var trimmed = quoted.Trim('"'); // Kyle
+  ```
+
+  [Trim Leading and Trailing Quotes](https://dotnetfiddle.net/Mo7NcO)
+
