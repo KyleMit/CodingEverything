@@ -965,3 +965,24 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
 
   [Trim Leading and Trailing Quotes](https://dotnetfiddle.net/Mo7NcO)
 
+* [Usage of EnsureSuccessStatusCode and handling of HttpRequestException it throws](https://stackoverflow.com/q/21097730/1366033)
+
+  ```cs
+  public static partial class CommonExtensionMethods
+  {
+      public static async Task<HttpResponseMessage> EnsureSuccessStatusCodeWithDetailAsync(this HttpResponseMessage response)
+      {
+          if (response.IsSuccessStatusCode)
+          {
+              return response;
+          }
+
+          var content = await response.Content.ReadAsStringAsync();
+
+          throw new HttpRequestException(response.ReasonPhrase, new Exception(content), response.StatusCode);
+      }
+  }
+  ```
+
+
+  

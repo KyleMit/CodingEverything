@@ -239,3 +239,9 @@
   Settings > Editor > General > Soft Wraps
 
   **See Also**: [Enable Soft Wrap - IntelliJ IDEA Guide](https://www.jetbrains.com/idea/guide/tips/enable-soft-wrap/)
+
+
+* Incremental Build
+
+  * [Incremental build in Rider | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2017/05/24/incremental-build-rider/)
+  * [Build process | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/Build_Process.html)

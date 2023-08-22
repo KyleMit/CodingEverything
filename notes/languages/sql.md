@@ -354,4 +354,243 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT SCOPE_IDENTITY()
     ```
 
+* [Table Naming Dilemma: Singular vs. Plural Names](https://stackoverflow.com/q/338156/1366033)
 
+   Use Singular
+
+* [Composite Unique Key](https://stackoverflow.com/q/37810760/1366033)
+
+    [Create Unique Constraints](https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-unique-constraints?view=sql-server-ver16)
+
+    ```sql
+    CREATE TABLE PhoneNumber (
+        CountryCode int NOT NULL,
+        AreaCode int NOT NULL,
+        Prefix int NOT NULL,
+        CONSTRAINT UC_PhoneNumber UNIQUE (CountryCode, AreaCode, Prefix)
+    );
+    ```
+
+* [Create Primary Key](https://www.w3schools.com/sql/sql_primarykey.ASP)
+
+    ```sql
+    -- Inline
+    CREATE TABLE Person (
+        Id INT NOT NULL PRIMARY KEY,
+        Name VARCHAR(50)
+    )
+
+    -- Explicit
+    CREATE TABLE Person (
+        Id INT NOT NULL,
+        Name VARCHAR(50),
+        CONSTRAINT PK_Person PRIMARY KEY (Id)
+    )
+    ```
+
+* [Create Foreign Key Constraint](https://www.w3schools.com/sql/sql_foreignkey.asp)
+
+    [Demo in SQLFiddle](http://sqlfiddle.com/#!18/e55efa/3)
+
+    ```sql
+    CREATE TABLE Person (
+        Id INT NOT NULL PRIMARY KEY,
+        Name VARCHAR(50)
+    )
+
+    CREATE TABLE Note (
+        Id INT NOT NULL PRIMARY KEY,
+        Message VARCHAR(200),
+        PersonId INT FOREIGN KEY REFERENCES Person(Id) -- inline
+    )
+
+    CREATE TABLE Note (
+        Id INT NOT NULL PRIMARY KEY,
+        Message VARCHAR(200),
+        PersonId INT,
+        CONSTRAINT FK_Person_Note FOREIGN KEY (PersonId) REFERENCES Person(Id) -- explicit
+    )
+    ```
+
+    ```sql
+    INSERT INTO Person
+        (Id, Name) 
+    VALUES
+    (1, 'Kyle'),
+    (2, 'Beth');
+
+    SELECT * FROM Person;
+
+    INSERT INTO Note
+    (Id, Message, PersonId) 
+    VALUES
+    (1, 'Do Dishes', 1),
+    (2, 'Water Plants', 2);
+
+    SELECT * FROM Note;
+    ```
+
+* [Add Cascade Delete to FK](https://stackoverflow.com/q/6260688/1366033)
+
+    [Demo in SQL Fiddle](http://sqlfiddle.com/#!18/fcd80/1)
+
+    ```sql
+    CREATE TABLE Person (
+        Id INT NOT NULL PRIMARY KEY,
+        Name VARCHAR(50)
+    );
+
+    CREATE TABLE Note (
+        Id INT NOT NULL PRIMARY KEY,
+        Message VARCHAR(200),
+        PersonId INT,
+        CONSTRAINT FK_Person_Note_Cascade FOREIGN KEY (PersonId) REFERENCES Person(Id) ON DELETE CASCADE
+    );
+
+    INSERT INTO Person
+        (Id, Name) 
+    VALUES
+        (1, 'Kyle'),
+        (2, 'Beth');
+
+    INSERT INTO Note
+        (Id, Message, PersonId) 
+    VALUES
+        (1, 'Do Dishes', 1),
+        (2, 'Water Plants', 2);
+
+
+    DELETE FROM Person
+    WHERE Id = 1;
+
+    SELECT * FROM Note;
+    SELECT * FROM Person;
+    ```
+
+    [On Delete - Cascade vs Restrict](https://dba.stackexchange.com/a/44962/31340)
+
+* [Check information schema for cascade deletes](https://stackoverflow.com/q/16986648/1366033)
+
+    ```sql
+    SELECT DELETE_RULE, COUNT(*)
+    FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS 
+    GROUP BY DELETE_RULE
+    ```
+
+    ```sql
+    SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+    SELECT * FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS 
+    ```
+
+* [How do you determine what SQL Tables have an identity column programmatically](https://stackoverflow.com/q/87747/1366033)
+
+    USE [`COLUMNPROPERTY`](https://learn.microsoft.com/en-us/sql/t-sql/functions/columnproperty-transact-sql?view=sql-server-ver16)
+
+    ```sql
+    SELECT 
+        COLUMN_NAME,
+        TABLE_NAME,
+        COLUMNPROPERTY(object_id(TABLE_SCHEMA+'.'+TABLE_NAME), COLUMN_NAME, 'IsIdentity') AS IsIdentity
+    FROM INFORMATION_SCHEMA.COLUMNS c
+    WHERE TABLE_NAME LIKE '%Types'
+    ORDER BY c.TABLE_NAME 
+    ```
+
+* [Query to list number of records in each table in a database](https://stackoverflow.com/q/1443704/1366033)
+
+    ```sql
+    SELECT 
+        o.[name],
+        ddps.row_count 
+    FROM sys.indexes AS i
+    INNER JOIN sys.objects AS o ON i.object_id = o.object_id
+    INNER JOIN sys.dm_db_partition_stats AS ddps ON i.object_id = ddps.object_id
+    AND i.index_id = ddps.index_id 
+    WHERE i.index_id < 2 
+    AND o.is_ms_shipped = 0
+    ORDER BY o.[name] 
+    ```
+
+    ```sql
+    SELECT 
+        t.[name] AS TableName,
+        i.[name] as indexName,
+        p.[rows]
+    FROM sys.tables t
+    INNER JOIN sys.indexes i ON t.object_id = i.object_id
+    INNER JOIN sys.partitions p ON i.object_id = p.object_id
+                            AND i.index_id = p.index_id
+    WHERE
+        t.[name] NOT LIKE 'dt%' AND
+        i.object_id > 255 AND   
+        i.index_id <= 1
+    GROUP BY 
+        t.[name], i.object_id, i.index_id, i.name, p.[rows]
+    ORDER BY 
+        object_name(i.object_id) 
+    ```
+
+  **See Also**: [How to fetch the row count for all tables in a SQL SERVER database](https://stackoverflow.com/q/2221555/1366033)
+
+
+* [Auto increment Primary Key](https://stackoverflow.com/a/10992101/1366033)
+
+    Use [`IDENTITY(Seed, Increment)`](https://learn.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms186775(v=sql.105))
+
+    **See Also**: [Alter Table](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-table-column-definition-transact-sql)
+
+* [How to turn IDENTITY_INSERT on and off using SQL Server 2008?](https://stackoverflow.com/q/7063501/1366033)
+
+    ```sql
+    SET IDENTITY_INSERT MyTable ON
+
+    INSERT INTO MyTable 
+        (IdentityColumn, col2, col3, ...)
+    VALUES 
+        (AnIdentityValue, col2value, col3value, ...)
+
+    SET IDENTITY_INSERT MyTable OFF
+    ```
+
+* [Solutions for INSERT OR UPDATE on SQL Server](https://stackoverflow.com/q/108403/1366033)
+
+    USE `@@ROWCOUNT`
+
+    ```sql
+    BEGIN TRANSACTION;
+
+    UPDATE dbo.table WITH (UPDLOCK, SERIALIZABLE) 
+    SET ... WHERE PK = @PK;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+    INSERT dbo.table(PK, ...) SELECT @PK, ...;
+    END
+
+    COMMIT TRANSACTION;
+    ```
+
+    USE `MERGE`
+
+    ```sql
+    MERGE INTO table_name WITH (HOLDLOCK) USING table_name ON (condition)
+    WHEN MATCHED THEN UPDATE SET column1 = value1 [, column2 = value2 ...]
+    WHEN NOT MATCHED THEN INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])
+    ```
+
+    USE `IF EXISTS()...ELSE`
+
+    ```sql
+    IF NOT EXISTS (SELECT * FROM dbo.Employee WHERE ID = @SomeID)
+
+        INSERT INTO dbo.Employee(Col1, ..., ColN)
+        VALUES(Val1, .., ValN)
+
+    ELSE
+
+        UPDATE dbo.Employee
+        SET Col1 = Val1, Col2 = Val2, ...., ColN = ValN
+        WHERE ID = @SomeID
+    ```
+
+    **See Also**: [How to upsert (update or insert) in SQL Server 2005](https://stackoverflow.com/q/11010511/1366033)

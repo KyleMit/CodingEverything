@@ -131,3 +131,9 @@ https://microsoft.com/devicelogin
     "confirmCloseAllTabs": false
   }
   ```
+
+* Open new tabs as Admin
+
+  * <kbd>Alt</kbd> + <kbd>Click</kbd> to split the current window
+  * <kbd>Shift</kbd> + <kbd>Click</kbd> to open a new window
+  * <kbd>Ctrl</kbd> + <kbd>Click</kbd> to open as administrator

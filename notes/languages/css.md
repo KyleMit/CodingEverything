@@ -226,4 +226,11 @@ button {
   }
   ```
 
+* [How to set maximum height for table-cell?](https://stackoverflow.com/q/13667941/1366033)
+
+  See [CSS 2.2 Tables > Height Algorithms](https://www.w3.org/TR/CSS22/tables.html#height-layout)
+
+  Place `<td>` contents in `<div>` and set max-height on that
+
+
   
