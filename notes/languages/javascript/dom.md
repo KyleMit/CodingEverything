@@ -245,3 +245,22 @@ Document Object Model
 
   fetch('https://host.com', {headers: headers})
   ```
+
+* [Stop pasting html style in a contenteditable div only paste the plain text](https://stackoverflow.com/q/58980235/1366033)
+
+  ```js
+  var ce = document.querySelector('[contenteditable]')
+  ce.addEventListener('paste', function (e) {
+    e.preventDefault()
+    var text = e.clipboardData.getData('text/plain')
+    document.execCommand('insertText', false, text)
+  })
+  ```
+
+* [How to trigger change when using the back button with history.pushstate and popstate?](https://stackoverflow.com/q/8038726/1366033)
+
+  ```js
+  window.addEventListener("popstate", function (e) {
+      window.location.reload();
+  });
+  ```

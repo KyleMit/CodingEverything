@@ -984,5 +984,39 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   }
   ```
 
+* [Can I split an IEnumerable into two by a boolean criteria without two queries?](https://stackoverflow.com/q/4549339/1366033)
 
-  
+  ```cs
+  public static (IEnumerable<T> matches, IEnumerable<T> nonMatches) Fork<T>(
+      this IEnumerable<T> source,
+      Func<T, bool> pred)
+  {
+      var groupedByMatching = source.ToLookup(pred);
+      return (groupedByMatching[true], groupedByMatching[false]);
+  }
+  ```
+
+  [Demo in dotnet fiddle](https://dotnetfiddle.net/aObEEK)
+
+
+* [Convert list to dictionary using linq and not worrying about duplicates](https://stackoverflow.com/q/3319016/1366033)
+
+  > An item with the same key has already been added
+
+  ```cs
+  var byId = users
+    .GroupBy(p => p.Id)
+    .ToDictionary(g => g.Key, g => g.First());
+  ```
+
+  [Demo in dotnet fiddle](https://dotnetfiddle.net/aObEEK)
+
+* [Get duplicates in List](https://stackoverflow.com/q/18547354/1366033)
+
+  ```cs
+  var duplicates = ids
+    .GroupBy(p => p)
+    .Where(g => g.Count() > 1)
+    .Select(g => g.Key);
+  ```
+
