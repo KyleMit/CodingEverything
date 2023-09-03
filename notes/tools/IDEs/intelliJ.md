@@ -245,3 +245,11 @@
 
   * [Incremental build in Rider | The .NET Tools Blog](https://blog.jetbrains.com/dotnet/2017/05/24/incremental-build-rider/)
   * [Build process | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/Build_Process.html)
+
+
+* [Git Stash vs Shelve in IntelliJ IDEA](https://stackoverflow.com/q/28008139/1366033)
+
+  * Stash - Git feature
+  * Shelve - IntelliJ feature
+
+
