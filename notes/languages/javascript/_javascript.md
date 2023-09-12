@@ -1039,4 +1039,22 @@ winget install graphviz
   });
   ```
 
-  
+* [How to do a "flat push" in javascript?](https://stackoverflow.com/q/1374126/1366033)
+
+  ```js
+  var arr1 = [1,2,3] 
+  var arr2 = [4,5,6] 
+  arr1.push(...arr2) //arr1 now contains [1,2,3,4,5,6]
+  ```
+
+
+* [Find elements in array that are not in another array](https://stackoverflow.com/q/2963281/1366033)
+
+  Use [`set.prototype.difference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.difference)
+
+  ```js
+  var x = new Set(["a","b","c","t"]);
+  var y = new Set(["d","a","t","e","g"]);
+
+  var z = y.difference(x) // [ "d", "e", "g" ]
+  ```
