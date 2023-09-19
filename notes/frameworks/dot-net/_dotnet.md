@@ -515,6 +515,15 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read)
   ```
 
+* [Create a TextReader object from a string](https://stackoverflow.com/q/7837826/1366033)
+
+  Use [`StringReader`](https://learn.microsoft.com/en-us/dotnet/api/system.io.stringreader?view=net-7.0)
+
+  ```cs
+  var str = "Hello World"
+  using var reader = new StringReader(str);
+  ```
+
 * [How to measure elapsed time using DateTime class?](https://stackoverflow.com/q/45959959/1366033)
 
   ```cs

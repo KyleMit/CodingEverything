@@ -537,14 +537,6 @@ winget install graphviz
   }
   ```
 
-* [How to convert number to date in JavaScript](https://stackoverflow.com/q/53975796/1366033)
-
-  ```js
-  let epochToDate = (epoch) => new Date(epoch * 1000)
-  console.log(epochToDate(1546108200))
-  ```
-
-
 * [How to sort an array of integers correctly](https://stackoverflow.com/q/1063007/1366033)
 
   ```js
@@ -571,6 +563,22 @@ winget install graphviz
   ```js
   String(1).padStart(2, '0'); // '01'
   ```
+
+* [How do I get a date in YYYY-MM-DD format?](https://stackoverflow.com/q/32192922/1366033)
+
+  Use [`toISOString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+
+  ```js
+  var date = (new Date()).toISOString().split('T')[0];
+  ```
+
+* [How to convert number to date in JavaScript](https://stackoverflow.com/q/53975796/1366033)
+
+  ```js
+  let epochToDate = (epoch) => new Date(epoch * 1000)
+  console.log(epochToDate(1546108200))
+  ```
+
 
 * [Get number days in a specified month using JavaScript?](https://stackoverflow.com/q/1184334/1366033)
 

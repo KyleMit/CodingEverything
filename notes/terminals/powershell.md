@@ -624,7 +624,6 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 * [match all chars except w/ negated set](https://stackoverflow.com/a/1409170/1366033)
 * [don't match particular chars w/ negative lookahead](https://stackoverflow.com/a/2973495/1366033)
 * [regex expression for OU groups](https://regexr.com/4st2i)
-* [powershell regex capture groups](https://stackoverflow.com/a/59900840/1366033)
 * [Anonymous Object](https://stackoverflow.com/a/56813241/1366033)
 * [Calculated Property](https://stackoverflow.com/q/59901298/1366033)
 
@@ -1216,8 +1215,23 @@ $env:LOCALAPPDATA
   ```ps1
   $input = "Prefix: {123}"
   $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
+  ```
+
+  ```ps1
+  $input = "Prefix: {123}"
   ($input | Select-String "{.*}").Matches.Value
+  ```
+
+  ```ps1
+  $input = "Prefix: {123}"
   [Regex]::Matches($input, "{.*}" ).Value
+  ```
+
+* [powershell regex capture groups](https://stackoverflow.com/a/59900840/1366033)
+
+  ```ps1
+  $allChanges = git diff --name-status 2>&1
+  $changed = $allChanges | Select-String "M\s+(.*)" | ForEach-Object { $_.Matches.Groups[1].value }
   ```
 
 * [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
