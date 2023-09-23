@@ -22,6 +22,13 @@
 * **Core** - pwsh.exe
 * **Classic** - powershell.exe
 
+## Installation
+
+```bash
+winget install --id Microsoft.PowerShell
+winget list Microsoft.PowerShell 
+winget upgrade --id Microsoft.PowerShell
+```
 
 ## Docs
 
@@ -1942,3 +1949,24 @@ $env:LOCALAPPDATA
   ```
 
   **See Also**: [Windows PowerShell Tip: Using Calculated Properties](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-powershell-1.0/ff730948(v=technet.10))
+
+* [PowerShell steps to fix slow startup](https://stackoverflow.com/q/59341482/1366033)
+
+  ```ps1
+  echo $env:PSModulePath
+  # C:\Users\kmitofsky\Documents\PowerShell\Modules
+  # C:\Program Files\PowerShell\Modules
+  # C:\program files\powershell\7\Modules
+  # C:\Program Files\WindowsPowerShell\Modules
+  # C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+  # C:\Program Files (x86)\Microsoft SQL Server\150\Tools\PowerShell\Modules\
+
+  $profile | select *                             
+
+  # AllUsersAllHosts       : C:\Program Files\PowerShell\7\profile.ps1                               
+  # AllUsersCurrentHost    : C:\Program Files\PowerShell\7\Microsoft.PowerShell_profile.ps1          
+  # CurrentUserAllHosts    : C:\Users\kmitofsky\Documents\PowerShell\profile.ps1                     
+  # CurrentUserCurrentHost : C:\Users\kmitofsky\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+  # Length                 : 72    
+  ```
+

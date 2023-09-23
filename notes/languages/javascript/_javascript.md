@@ -384,6 +384,16 @@ winget install graphviz
   <script src="file1.js" type="module" ></script>
   ```
 
+* [How to create a stopwatch using JavaScript?](https://stackoverflow.com/q/20318822/1366033)
+
+  Use [`performance.now`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+
+  ```js
+  const t0 = performance.now();
+  doSomething();
+  const t1 = performance.now();
+  console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
+  ```
 
 * Console timer
 
