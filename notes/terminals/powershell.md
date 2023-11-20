@@ -22,6 +22,13 @@
 * **Core** - pwsh.exe
 * **Classic** - powershell.exe
 
+## Installation
+
+```bash
+winget install --id Microsoft.PowerShell
+winget list Microsoft.PowerShell 
+winget upgrade --id Microsoft.PowerShell
+```
 
 ## Docs
 
@@ -204,7 +211,6 @@
 ## Linting / Static Analysis
 
 * [List of PSScriptAnalyzer rules](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules)
-  * [Approved Verbs for PowerShell Commands](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands?view=powershell-7.2#common-verbs)
   * [AvoidUsingCmdletAliases](https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/AvoidUsingCmdletAliases?view=ps-modules)
 * [PowerShell editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/powershell#_plaster)
 * [Invoke-ScriptAnalyzer (PSScriptAnalyzer)](https://docs.microsoft.com/en-us/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules)
@@ -212,6 +218,11 @@
 
 > The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be used instead.
 
+### Approved Verbs
+
+* [Approved Verbs for PowerShell Commands](https://learn.microsoft.com/en-us/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
+
+* [`System.Management.Automation.VerbsCommon`](https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.verbscommon?view=powershellsdk-7.3.0)
 
 ## Startup Error
 
@@ -367,18 +378,8 @@ You can add any number of optional white-space separated [parameter attributes](
 * [Import-Module](https://technet.microsoft.com/en-us/library/Hh849725.aspx)
 * [Create Module](http://blogs.technet.com/b/heyscriptingguy/archive/2010/01/21/hey-scripting-guy-january-21-2010.aspx)
 * [How And When To Create And Use PowerShell Modules](http://www.tomsitpro.com/articles/powershell-modules,2-846.html)
-[`ParameterSetName="__AllParameterSets"`](http://powershell.org/wp/forums/topic/trouble-with-dynamic-parameter-positioning-in-parametersets/)
-[Get Object Type](http://stackoverflow.com/q/7634555/1366033):
+* [`ParameterSetName="__AllParameterSets"`](http://powershell.org/wp/forums/topic/trouble-with-dynamic-parameter-positioning-in-parametersets/)
 
-> WARNING: The names of some imported commands from the module 'Maintain-IIS' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
-
-[Approved Verbs for Windows PowerShell Commands](https://technet.microsoft.com/en-us/library/ms714428(v=vs.85).aspx)
-
-
-
-```bash
-$a.GetType();
-```
 
 
 ### Doc Comments
@@ -630,7 +631,6 @@ winget install --id=JanDeDobbeleer.OhMyPosh  -e
 * [match all chars except w/ negated set](https://stackoverflow.com/a/1409170/1366033)
 * [don't match particular chars w/ negative lookahead](https://stackoverflow.com/a/2973495/1366033)
 * [regex expression for OU groups](https://regexr.com/4st2i)
-* [powershell regex capture groups](https://stackoverflow.com/a/59900840/1366033)
 * [Anonymous Object](https://stackoverflow.com/a/56813241/1366033)
 * [Calculated Property](https://stackoverflow.com/q/59901298/1366033)
 
@@ -921,12 +921,35 @@ $env:LOCALAPPDATA
     #Requires -RunAsAdministrator
     ```
 
+* [Flatten array in PowerShell](https://stackoverflow.com/q/711991/1366033)
+
+  Just run though `| ForEach-Object {$_}`
+
+  ```ps1
+  $xss = @(1, @(2, @(3)))
+  $xs = $xss | ForEach-Object {$_}
+  $xs.Count
+  ```
+
 * [Convert json to object](https://stackoverflow.com/q/35863103/1366033)
 
     ```ps1
     Get-Content <jsonFile> | ConvertFrom-Json
     ```
 
+* [Why does powershell ConvertFrom-Json not work when converting json array and streaming output to ForEach-Object](https://stackoverflow.com/q/71156494/1366033)
+
+  ```ps1
+  # Bad
+  $arrays = ("[1,2]", "[3,4]")
+  $nums = $arrays | ForEach-Object { $_ | ConvertFrom-Json }
+  $nums.Count # 2
+
+  # Good
+  $arrays = ("1,2", "3,4")
+  $nums = $arrays | ForEach-Object {  return $_.Split(",") }
+  $nums.Count # 4
+  ```
 
 * [What is the Linq.First equivalent in PowerShell?](https://stackoverflow.com/q/5360145)
 
@@ -1001,6 +1024,53 @@ $env:LOCALAPPDATA
 
   ```ps1
   Import-Module $PSScriptRoot\Script1.ps1
+  ```
+
+* [What does `::` do in powershell scripts?](https://stackoverflow.com/q/38483692/1366033)
+
+  See [Static member operator `::`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3#static-member-operator-)
+
+  > Calls the static properties and methods of a .NET Framework class
+
+  ```ps1
+  [datetime]::Now
+  ```
+
+* [Use enum types in PowerShell](https://stackoverflow.com/q/53829869/1366033)
+
+  ```ps1
+  [System.Net.HttpStatusCode]::OK
+
+  $status = [System.Net.HttpStatusCode]
+  $status::OK
+  ```
+
+  Use [using namespace statement](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.3&viewFallbackFrom=powershell-6)
+
+  ```ps1
+  using namespace System.Net
+  [HttpStatusCode]::OK
+  ```
+
+* [How can you check whether input value is in array or not](https://stackoverflow.com/q/16965537/1366033)
+
+  Use [`-in` operator](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.3#-in-and--notin) v3+
+
+  ```ps1
+  'a' -in $('a','b','c')       # True
+  ```
+
+  Use [`-contains` operator](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.3#containment-operators)
+
+  ```ps1
+  $('a','b','c') -contains 'a' # True
+  ```
+
+* [How to tell if a number is within a range in PowerShell](https://stackoverflow.com/q/23399104/1366033)
+
+  ```ps1
+  5 -in 1..10           # True
+  5 -ge 1 -and 5 -le 10 # True
   ```
 
 * [Powershell split() vs -split - what's the difference?](https://stackoverflow.com/q/23796959/1366033)
@@ -1152,8 +1222,23 @@ $env:LOCALAPPDATA
   ```ps1
   $input = "Prefix: {123}"
   $input | Select-String "{.*}" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Value
+  ```
+
+  ```ps1
+  $input = "Prefix: {123}"
   ($input | Select-String "{.*}").Matches.Value
+  ```
+
+  ```ps1
+  $input = "Prefix: {123}"
   [Regex]::Matches($input, "{.*}" ).Value
+  ```
+
+* [powershell regex capture groups](https://stackoverflow.com/a/59900840/1366033)
+
+  ```ps1
+  $allChanges = git diff --name-status 2>&1
+  $changed = $allChanges | Select-String "M\s+(.*)" | ForEach-Object { $_.Matches.Groups[1].value }
   ```
 
 * [What's the equivalent of xargs in PowerShell?](https://stackoverflow.com/q/36428949/1366033)
@@ -1182,20 +1267,6 @@ $env:LOCALAPPDATA
   $node = $xmlDoc.catalog.book | Where-Object { $_.id -eq 2 }
   ```
 
-* [How to view command history](https://superuser.com/q/1000489/180163)
-
-  ```ps1
-  function Get-PSReadLineHistory
-  {
-      Get-Content (Get-PSReadlineOption).HistorySavePath
-  }
-  ```
-
-* Top 10 Commands
-
-  ```ps1
-  Get-Content (Get-PSReadlineOption).HistorySavePath | Group-Object -NoElement | Sort-Object -Property Count -Descending | Select-Object -First 10
-  ```
 
 * [Move to the directory root](https://stackoverflow.com/q/58640721/1366033)
 
@@ -1242,11 +1313,56 @@ $env:LOCALAPPDATA
   $a.Substring(0, [Math]::Min($a.Length, 20))
   ```
 
+* [How to view command history](https://superuser.com/q/1000489/180163)
+
+  ```ps1
+  function Get-PSReadLineHistory
+  {
+      Get-Content (Get-PSReadlineOption).HistorySavePath
+  }
+  ```
+
+* Get Top 10 Commands
+
+  ```ps1
+  Get-Content (Get-PSReadlineOption).HistorySavePath | Group-Object -NoElement | Sort-Object -Property Count -Descending | Select-Object -First 10
+  ```
+
+* [Get count of all items in a folder by extension](https://stackoverflow.com/q/73884330/1366033)
+
+  ```ps1
+  Get-ChildItem -File -Recurse |
+    Group-Object Extension -NoElement |
+    Sort-Object Count -Descending
+  ```
+
 
 * [How to use powershell to determine the frequency of objects in a collection based on a specific member](https://stackoverflow.com/q/55975372/1366033)
 
   ```ps1
   ('a','a','b') | Group-Object -NoElement | Sort-Object Count -Descending
+  ```
+
+* [Group array objects by properties and sum](https://stackoverflow.com/q/68680733/1366033)
+
+  ```ps1
+  $data = @(
+      [PSCustomObject]@{ Id=1; Price=5 }
+      [PSCustomObject]@{ Id=1; Price=4 }
+      [PSCustomObject]@{ Id=2; Price=3 }
+  )  
+
+  $data | Group-Object Id | ForEach-Object {
+      [PSCustomObject]@{
+          Id  = $_.Name
+          Sum = $_.Group | Measure-Object Price -Sum | ForEach-Object Sum
+      }
+  }
+
+  # Id  Sum
+  # --  ---
+  # 1  9.00
+  # 2  3.00
   ```
 
 * [Creating hard and soft links using PowerShell](https://stackoverflow.com/q/894430/1366033)
@@ -1296,13 +1412,6 @@ $env:LOCALAPPDATA
   }
   ```
 
-* [Get count of all items in a folder by extension](https://stackoverflow.com/q/73884330/1366033)
-
-  ```ps1
-  Get-ChildItem -File -Recurse |
-    Group-Object Extension -NoElement |
-    Sort-Object Count -Descending
-  ```
 
 * [How do I find files by their extension in a specific directory and go through them with Power Shell?](https://stackoverflow.com/q/42034488/1366033)
 
@@ -1691,6 +1800,12 @@ $env:LOCALAPPDATA
   @($true, $true) | Test-All   # True
   ```
 
+* [Get Object Type](http://stackoverflow.com/q/7634555/1366033)
+
+  ```bash
+  $a.GetType();
+  ```
+
 * [Capturing command output in Powershell as string instead of array of strings](https://stackoverflow.com/q/21028162/1366033)
 
   Use [`Out-String`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-string)
@@ -1774,5 +1889,90 @@ $env:LOCALAPPDATA
   ❯ "a$([Environment]::NewLine)b"
   # a
   # b
+  ```
+
+* [Convert a string to datetime in PowerShell](https://stackoverflow.com/q/38717490/1366033)
+
+  Cast to date
+
+  ```ps1
+  [DateTime]"2020-7-16"
+  ```
+
+* [Get the ISO 8601 Week of Year of a given date in Powershell](https://stackoverflow.com/q/46691143/1366033)
+
+  ```ps1
+  # simple
+  Get-Date -UFormat %V
+
+  # ISO8601
+  $(Get-Culture).Calendar.GetWeekOfYear(
+      (Get-Date),
+      [System.Globalization.CalendarWeekRule]::FirstDay,
+      [DayOfWeek]::Sunday)
+  ```
+
+* [Format variable as 4 digits with leading zeroes](https://stackoverflow.com/q/51912486/1366033)
+
+  Use [Format operator `-f`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3#format-operator--f)
+
+  ```ps1
+  '{0}-{1:d2}' -f 2023,1
+  # 2023-01
+  ```
+
+* [Unexpected token `-UFormat`` in expression or statement](https://stackoverflow.com/q/53596500/1366033)
+
+  Use [`Get-Date`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.3#notes) with `UFormat` specifier
+
+  ```ps1
+  # bad
+  [DateTime]"2023-10-21" -UFormat %Y
+
+  # good
+  Get-Date -Date "2023-10-21" -UFormat %Y
+  ```
+
+* [Changing an array column name](https://stackoverflow.com/q/29676378/1366033)
+
+  Use [Calculated Property](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_calculated_properties?view=powershell-7.3)
+
+  ```ps1
+  $person = [PSCustomObject]@{
+      FirstName = "Kyle"
+      Last = "Mit"
+  }
+
+  $person | Select-Object FirstName,
+                          @{
+                              Name="LastName";
+                              Expression={$_.Last}
+                          }
+
+  # FirstName LastName
+  # --------- --------
+  # Kyle      Mit
+  ```
+
+  **See Also**: [Windows PowerShell Tip: Using Calculated Properties](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-powershell-1.0/ff730948(v=technet.10))
+
+* [PowerShell steps to fix slow startup](https://stackoverflow.com/q/59341482/1366033)
+
+  ```ps1
+  echo $env:PSModulePath
+  # C:\Users\kmitofsky\Documents\PowerShell\Modules
+  # C:\Program Files\PowerShell\Modules
+  # C:\program files\powershell\7\Modules
+  # C:\Program Files\WindowsPowerShell\Modules
+  # C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+  # C:\Program Files (x86)\Microsoft SQL Server\150\Tools\PowerShell\Modules\
+
+  $profile | select *                             
+
+  # AllUsersAllHosts       : C:\Program Files\PowerShell\7\profile.ps1                               
+  # AllUsersCurrentHost    : C:\Program Files\PowerShell\7\Microsoft.PowerShell_profile.ps1          
+  # CurrentUserAllHosts    : C:\Users\kmitofsky\Documents\PowerShell\profile.ps1                     
+  # CurrentUserCurrentHost : C:\Users\kmitofsky\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+  # Length                 : 72    
   ```
 

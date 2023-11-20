@@ -9,6 +9,11 @@
 * <https://github.com/vitest-dev/vitest>
 
 
+## Docs
+
+* [Configuring Vitest](https://vitest.dev/config/)
+
+
 ## Example
 
 ```js
@@ -30,4 +35,16 @@ describe('suite name', () => {
 })
 ```
 
+
+## Questions
+
+* [Error: No test suite found #847](https://github.com/vitest-dev/vitest/issues/847)
+
+  Change `vitest` to `npx vitest`
+
+* [describe is not defined](https://stackoverflow.com/q/75971024/1366033)
+
+  ```js
+  import { describe } from 'vitest';
+  ```
 

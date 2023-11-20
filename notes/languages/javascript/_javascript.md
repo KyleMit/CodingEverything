@@ -384,6 +384,16 @@ winget install graphviz
   <script src="file1.js" type="module" ></script>
   ```
 
+* [How to create a stopwatch using JavaScript?](https://stackoverflow.com/q/20318822/1366033)
+
+  Use [`performance.now`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+
+  ```js
+  const t0 = performance.now();
+  doSomething();
+  const t1 = performance.now();
+  console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
+  ```
 
 * Console timer
 
@@ -537,14 +547,6 @@ winget install graphviz
   }
   ```
 
-* [How to convert number to date in JavaScript](https://stackoverflow.com/q/53975796/1366033)
-
-  ```js
-  let epochToDate = (epoch) => new Date(epoch * 1000)
-  console.log(epochToDate(1546108200))
-  ```
-
-
 * [How to sort an array of integers correctly](https://stackoverflow.com/q/1063007/1366033)
 
   ```js
@@ -571,6 +573,22 @@ winget install graphviz
   ```js
   String(1).padStart(2, '0'); // '01'
   ```
+
+* [How do I get a date in YYYY-MM-DD format?](https://stackoverflow.com/q/32192922/1366033)
+
+  Use [`toISOString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+
+  ```js
+  var date = (new Date()).toISOString().split('T')[0];
+  ```
+
+* [How to convert number to date in JavaScript](https://stackoverflow.com/q/53975796/1366033)
+
+  ```js
+  let epochToDate = (epoch) => new Date(epoch * 1000)
+  console.log(epochToDate(1546108200))
+  ```
+
 
 * [Get number days in a specified month using JavaScript?](https://stackoverflow.com/q/1184334/1366033)
 
@@ -1039,4 +1057,22 @@ winget install graphviz
   });
   ```
 
-  
+* [How to do a "flat push" in javascript?](https://stackoverflow.com/q/1374126/1366033)
+
+  ```js
+  var arr1 = [1,2,3] 
+  var arr2 = [4,5,6] 
+  arr1.push(...arr2) //arr1 now contains [1,2,3,4,5,6]
+  ```
+
+
+* [Find elements in array that are not in another array](https://stackoverflow.com/q/2963281/1366033)
+
+  Use [`set.prototype.difference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.difference)
+
+  ```js
+  var x = new Set(["a","b","c","t"]);
+  var y = new Set(["d","a","t","e","g"]);
+
+  var z = y.difference(x) // [ "d", "e", "g" ]
+  ```

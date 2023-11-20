@@ -264,3 +264,22 @@ Document Object Model
       window.location.reload();
   });
   ```
+
+* [Get all user defined window properties?](https://stackoverflow.com/q/17246309/1366033)
+
+
+  ```js
+  // get the current list of properties on window
+  var currentProps = Object.getOwnPropertyNames(window);
+
+  // create an iframe and append to body to load a clean window object
+  var iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+  var iframeProps = new Set(Object.getOwnPropertyNames(iframe.contentWindow));
+  document.body.removeChild(iframe);
+
+  // get the difference
+  var diff = currentProps.filter(x => !iframeProps.has(x))
+  console.log(diff)
+  ```

@@ -30,6 +30,12 @@
   Settings > Chat > Hide Hangouts
 
 * [Search operators you can use with Gmail](https://support.google.com/mail/answer/7190?hl=en)
+  * `has:`
+  * `after:`
+  * `AROUND`
+  * `is:read`
+  * `is:unread`
+  * `category:forums`
 
 * [How do I switch between Gmail tabs using keyboard shortcuts?](https://webapps.stackexchange.com/q/46563/38656)
 
