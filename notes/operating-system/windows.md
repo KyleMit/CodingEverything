@@ -181,25 +181,6 @@
     * [Lid switch close action](https://docs.microsoft.com/en-us/windows-hardware/customize/power-settings/power-button-and-lid-settings-lid-switch-close-action)
 
 
-## Winget
-
-* Links
-  * [winget-cli](https://github.com/microsoft/winget-cli) - Windows Package Manager CLI (aka winget)
-  * [winget-pkgs](https://github.com/microsoft/winget-pkgs) - The Microsoft community Windows Package Manager manifest repository
-  * [winstall](https://winstall.app/) - GUI for Windows Package Manager
-
-
-* [Add Native PowerShell Support to Winget](https://github.com/microsoft/winget-cli/issues/221)
-
-* [How to create a list of non upgradable software for winget](https://www.codewrecks.com/post/general/winget-update-selective/)
-
-
-* [List installed Apps](https://github.com/microsoft/winget-cli/issues/119)
-
-  ```bash
-  winget list
-  ```
-
 ## Questions
 
 * [How to Modify the Icon of an EXE File](https://www.howtogeek.com/75983/stupid-geek-tricks-how-to-modify-the-icon-of-an-.exe-file/)
@@ -312,3 +293,11 @@
 * [File Explorer features in Windows 11 22H2](https://www.techrepublic.com/article/how-to-use-new-file-explorer-features-windows-11-22h2/)
 
 * [Disable Recent Files in Quick Access](https://www.makeuseof.com/windows-11-fix-quick-access-not-showing-recent-files/)
+
+* [Dim screen below minimum brightness level](https://superuser.com/q/1086993/180163)
+
+  a. Use [Dimmer](https://www.nelsonpires.com/software/dimmer)
+
+  b. Use Intel Graphics Command Center
+
+  c. Use [f.lux](https://justgetflux.com/)

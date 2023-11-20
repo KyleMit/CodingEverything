@@ -324,6 +324,14 @@ npm install -g nodemon
     fs.rmdirSync(dir, { recursive: true });
     ```
 
+* [recursive directory search](https://stackoverflow.com/a/77512570/1366033)
+
+    ```js
+    const fs = require('fs').promises;
+
+    const files = await fs.readdir(".", { recursive: true })
+    ```
+
 * [Copy Folder](https://stackoverflow.com/a/64255382/1366033)
 
     ```js
