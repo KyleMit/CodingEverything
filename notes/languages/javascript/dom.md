@@ -182,6 +182,21 @@ Document Object Model
   [...el.childNodes].find(child => child.nodeType === Node.TEXT_NODE);
   ```
 
+* [How to find that DOM node that contains a text?](https://stackoverflow.com/q/52653657/1366033)
+
+  Using jQuery
+  
+  ```js
+  `$(":contains('hello')")`
+  ```
+
+  Using JS
+
+  ```js
+  [...document.querySelectorAll("h2")].filter(el => el.textContent.includes("Naps"))
+  ```
+
+
 * [Multiple OnBeforeUnload](https://stackoverflow.com/q/8999439/1366033)
 
   ```js
@@ -283,3 +298,8 @@ Document Object Model
   var diff = currentProps.filter(x => !iframeProps.has(x))
   console.log(diff)
   ```
+
+* [Should cookie values be URL encoded?](https://stackoverflow.com/q/49205195/1366033)
+
+  Not required, but sure.  Should at least encode `;` and `=`
+
