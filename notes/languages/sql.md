@@ -191,6 +191,18 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ELSE CAST(0 AS BIT) END
     ```
 
+* [How to check if value exists in each group (after group by)](https://stackoverflow.com/q/33784786/1366033)
+
+    ```sql
+    SELECT uid,
+        MAX(CASE WHEN subscription_type = 'type1' THEN 1 ELSE 0 END) AS type1,
+        MAX(CASE WHEN subscription_type = 'type2' THEN 1 ELSE 0 END) AS type2,
+        MAX(CASE WHEN subscription_type = 'type3' THEN 1 ELSE 0 END) AS type3,
+        MAX(CASE WHEN subscription_type = 'type4' THEN 1 ELSE 0 END) AS type4
+    FROM subscribes
+    GROUP BY uid
+    ```
+
 * [Finding longest date gap between dates](https://stackoverflow.com/q/1315262/1366033)
 
     ```sql
@@ -352,6 +364,14 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     INSERT INTO table (name)
     VALUES('bob');
     SELECT SCOPE_IDENTITY()
+    ```
+
+* [How can I select from list of values in SQL Server](https://stackoverflow.com/q/1564956/1366033)
+
+    Use a [**Table Value Constructor**](https://learn.microsoft.com/en-us/sql/t-sql/queries/table-value-constructor-transact-sql)
+
+    ```sql
+    SELECT id, [name] FROM (VALUES (1, 'Kyle'), (2, 'Beth') ) AS User(id, [name]);  
     ```
 
 * [Table Naming Dilemma: Singular vs. Plural Names](https://stackoverflow.com/q/338156/1366033)
