@@ -63,21 +63,6 @@ kramdown:
 [KyleMit Gists](https://gist.github.com/KyleMit)
 
 
-## Github CLI
-
-* [cli.github.com](https://cli.github.com)
-* [github/hub](https://github.com/github/hub)
-* [cli/cli](https://github.com/cli/cli)
-
-* [GitHub CLI vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
-
-```bash
-gh repo clone github/hub
-git clone git@github.com:github/hub.git
-```
-
-[Installation on Windows](https://github.com/cli/cli#windows)
-
 ## Blocks
 
 <https://blocks.githubnext.com/>

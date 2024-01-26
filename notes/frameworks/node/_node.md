@@ -324,6 +324,14 @@ npm install -g nodemon
     fs.rmdirSync(dir, { recursive: true });
     ```
 
+* [recursive directory search](https://stackoverflow.com/a/77512570/1366033)
+
+    ```js
+    const fs = require('fs').promises;
+
+    const files = await fs.readdir(".", { recursive: true })
+    ```
+
 * [Copy Folder](https://stackoverflow.com/a/64255382/1366033)
 
     ```js
@@ -428,6 +436,21 @@ npm install -g nodemon
     let doc = yaml.safeLoad();
     console.log(doc);
     ```
+
+* [Trying to use the DOMParser with node js](https://stackoverflow.com/q/11398419/1366033)
+
+  Use [**jsdom**](https://www.npmjs.com/package/jsdom)
+
+  ```js
+  const jsdom = require("jsdom");
+  const dom = new jsdom.JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+  dom.window.document.querySelector("p").textContent; // 'Hello world'
+  ```
+
+* [Parse HTML](https://stackoverflow.com/a/77874305/1366033)
+
+    Use [JSDOM](https://www.npmjs.com/package/jsdom)
+
 
 * [How to set shell for npm run-scripts in Windows](https://stackoverflow.com/q/23243353/1366033)
 

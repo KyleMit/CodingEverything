@@ -705,6 +705,16 @@ winget install graphviz
 
   Basically the same, some minor nuance, but use either
 
+* [Create object from array](https://stackoverflow.com/q/42974735/1366033)
+
+  Use [`Object.fromEntries()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+
+  ```js
+  const xs = ['a','b','c']
+  const obj = Object.fromEntries(xs.map(x => [x, x + x]))
+  // {a: 'aa', b: 'bb', c: 'cc'}
+  ```
+
 * [Object spread vs. Object.assign](https://stackoverflow.com/q/32925460/1366033)
 
   ```js
@@ -918,15 +928,6 @@ winget install graphviz
   }, {});
   ```
 
-* [Trying to use the DOMParser with node js](https://stackoverflow.com/q/11398419/1366033)
-
-  Use [**jsdom**](https://www.npmjs.com/package/jsdom)
-
-  ```js
-  const jsdom = require("jsdom");
-  const dom = new jsdom.JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
-  dom.window.document.querySelector("p").textContent; // 'Hello world'
-  ```
 
 * [How to group by and sum an array of objects?](https://stackoverflow.com/q/19233283/1366033)
 

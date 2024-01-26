@@ -9,13 +9,6 @@
   * [Windows Terminal 1.0 - Blog](https://devblogs.microsoft.com/commandline/windows-terminal-1-0/)
   * [Windows Terminal Docs](https://docs.microsoft.com/en-us/windows/terminal/)
   * Requires Build 1903+ (run `winver`)
-* Windows Package Manager - winget
-  * [Winget - docs](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
-  * [Github winget-cli](https://github.com/microsoft/winget-cli)
-  * [Windows Package Manager Preview - Blog](https://devblogs.microsoft.com/commandline/windows-package-manager-preview/)
-  * Replaces npm / chocolatey
-    * [Github Packages](https://github.com/features/packages)
-    * [Azure Artifacts](https://azure.microsoft.com/en-us/services/devops/artifacts/)
 * Azure Static Web Apps (SWA)
   * [Azure Static Web Apps (SWA) - Azure](https://azure.microsoft.com/en-us/services/app-service/static/)
   * [Azure Static Web Apps - Docs](https://docs.microsoft.com/en-us/azure/static-web-apps/)

@@ -1135,6 +1135,8 @@ Hotkeys=72 ;F3
 
    ![change preferred band](/assets/posts/computer-setup/preferred-band.png)
 
+   * [How to Change Between 2.4GHz and 5GHz WiFi Bands on Windows 10](https://wccftech.com/how-to/how-to-change-between-2-4ghz-and-5ghz-wifi-bands-on-windows-10)
+
 * [Create alias in windows start menu search](https://superuser.com/q/1599285/180163)
 
 

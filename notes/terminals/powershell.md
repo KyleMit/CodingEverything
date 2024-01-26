@@ -1419,6 +1419,12 @@ $env:LOCALAPPDATA
   Get-ChildItem $path -Recurse -Filter *.ext
   ```
 
+* [How to change the file extension of a specific selected file](https://stackoverflow.com/q/47094130/1366033)
+
+  ```ps1
+  Get-ChildItem -Filter *.txt | Rename-Item -NewName { [System.IO.Path]::ChangeExtension($_.Name, ".json") }
+  ```
+
 * [How to fix truncated PowerShell output, even when I've specified -width 300](https://superuser.com/q/1049531/180163)
 
   ```ps1
