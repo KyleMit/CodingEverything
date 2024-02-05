@@ -48,6 +48,16 @@
   C:\Users\<username>\AppData\Roaming\obsidian\Custom Dictionary.txt
   ```
 
+  ```none
+  %AppData%\obsidian\Custom Dictionary.txt
+  ```
+
+  ```none
+  checksum_v1 = 72638e9d188dde714de51f3a82a1ff1d
+  ```
+  
+  Settings > Editor > Behavior > Spellcheck > Cog
+
   * [Adding Custom Dictionaries to Spellcheck](https://forum.obsidian.md/t/adding-custom-dictionaries-to-spellcheck/5221)
   * [Where is the user spell check dictionary file located?](https://forum.obsidian.md/t/where-is-the-user-spell-check-dictionary-file-located/35714)
   * [Terrible spellcheck/Custom dictionaries/Improving spellcheck](https://forum.obsidian.md/t/terrible-spellcheck-custom-dictionaries-improving-spellcheck/32302)
