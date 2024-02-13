@@ -1029,3 +1029,19 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
     .Select(g => g.Key);
   ```
 
+* [Combine URL Paths](https://stackoverflow.com/q/372865/1366033)
+
+  Use [Flurl](https://flurl.dev/) `Url.Combine`
+
+  ```cs
+  public static class UriExtensions
+  {
+      public static Uri Append(this Uri uri, params string[] paths)
+      {
+          return new Uri(paths.Aggregate(uri.AbsoluteUri, (current, path) => string.Format("{0}/{1}", current.TrimEnd('/'), path.TrimStart('/'))));
+      }
+  }
+  ```
+
+
+  

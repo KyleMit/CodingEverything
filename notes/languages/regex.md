@@ -144,3 +144,9 @@
   ```js
   /[0-9A-F]{8}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{4}-?[0-9A-F]{12}/i
   ```
+
+* [Regex exactly n OR m times](https://stackoverflow.com/q/13874777/1366033)
+
+  **See Also**: [Regex Quantifier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
+
+  `/X{m}(X{k})?/

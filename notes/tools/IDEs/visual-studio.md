@@ -43,11 +43,14 @@
 * <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
 * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
-* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `View.Terminal`
+  * Previously <kbd>Ctrl</kbd> + <kbd>`</kbd>
+  * Does not toggle closed if open
 
 ### Custom Shortcuts
 
 * <kbd>Ctrl</kbd> + <kbd>,</kbd> - `Tools.Options`
+* <kbd>Ctrl</kbd> + <kbd>T</kbd> - `Window.NextTab`
 
 ## Terminal
 
