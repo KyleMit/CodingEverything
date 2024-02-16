@@ -144,3 +144,5 @@
   * [Exclude all paths containing "attachments" from Quick Switcher](https://www.reddit.com/r/ObsidianMD/comments/vqdf4m/exclude_all_paths_containing_attachments_from/)
   * [Config to ignore/hide select files and folders](https://forum.obsidian.md/t/config-to-ignore-hide-select-files-and-folders/4186)
 
+* [Use asterisk for list format when pasting rich text](https://forum.obsidian.md/t/use-asterisk-for-list-format-when-pasting-rich-text/77035)
+
