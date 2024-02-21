@@ -1,4 +1,4 @@
-# Static Analysis
+# Static Analysis / Code Analysis
 
 
 [Code analysis in .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)
@@ -54,6 +54,7 @@
 ### Rules
 
 * [CA2007: Do not directly await a Task (code analysis)](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2007)
+* [CA1849: Call async methods when in an async method - .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1849)
 
 
 

@@ -167,7 +167,14 @@ namespace ExtensionMethods
 * [What's new in C# 10](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10)
 * [**Constant interpolated strings**](https://github.com/dotnet/csharplang/issues/2951)
 
+### C# 11
 
+* Parameter Null Checking (Removed)
+  * [Question: How is !! envisaged to be used? · dotnet/csharplang · Discussion #5735](https://github.com/dotnet/csharplang/discussions/5735)
+  * [Initial roll out of !! by stephentoub · Pull Request #64720 · dotnet/runtime](https://github.com/dotnet/runtime/pull/64720)
+  * [csharplang/proposals/param-nullchecking.md at AlekseyTs-patch-3 · dotnet/csharplang](https://github.com/dotnet/csharplang/blob/AlekseyTs-patch-3/proposals/param-nullchecking.md)
+  * [Early peek at C# 11 features - .NET Blog](https://devblogs.microsoft.com/dotnet/early-peek-at-csharp-11-features/#c-11-preview-parameter-null-checking)
+  * [C# 11 Preview Updates - Raw string literals, UTF-8 and more! - .NET Blog](https://devblogs.microsoft.com/dotnet/csharp-11-preview-updates/#remove-parameter-null-checking-from-c-11)
 
 ## Questions
 

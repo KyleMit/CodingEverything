@@ -1,6 +1,9 @@
 # ASP.NET
 
 
+## Minimal APIs
+
+* [Create responses in Minimal API applications | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses?view=aspnetcore-8.0)
 
 ## Questions
 
