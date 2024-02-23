@@ -51,3 +51,11 @@
   winget list --upgrade-available
   ```
 
+* How to up upgrade app
+
+  Use [`upgrade`](https://learn.microsoft.com/en-us/windows/package-manager/winget/upgrade) command like this
+
+  ```bash
+  winget upgrade Github.Cli
+  ```
+

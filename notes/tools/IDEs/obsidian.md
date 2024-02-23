@@ -116,6 +116,13 @@
 
   Use [obsidian-paste-image-rename](https://github.com/reorx/obsidian-paste-image-rename) - Renames pasted images and all the other attachments added to the vault
 
+* Convert from obsidian image markdown to standard
+
+  ```none
+  Find: !\[\[((.*)\.png)\]\]
+  Replace: ![$2](/assets/obsidian/$1)
+  ```
+
 * [How to add your theme to the community theme store](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/How+to+add+your+theme+to+the+community+theme+store)
 
 * Syncing across devices
