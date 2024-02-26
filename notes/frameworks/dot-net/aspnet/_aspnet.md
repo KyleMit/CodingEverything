@@ -1,9 +1,10 @@
 # ASP.NET
 
+## Docs
 
-## Minimal APIs
-
-* [Create responses in Minimal API applications | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses?view=aspnetcore-8.0)
+* [Overview of ASP.NET Core | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0)
+* [ASP.NET Core fundamentals overview | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-8.0&tabs=windows)
+* [Make HTTP requests using IHttpClientFactory in ASP.NET Core | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-8.0#typed-clients)
 
 ## Questions
 
