@@ -11,7 +11,16 @@
 
 ## Deprecations
 
-* [`.andSelf()`](https://api.jquery.com/andself/)
+* 1.8
+  * [`.andSelf()`](https://api.jquery.com/andself/)
+* 3.3
+  * [`.click()`](https://api.jquery.com/click-shorthand/)
+  * [`.focus()`](https://api.jquery.com/focus-shorthand/)
+  * [`.keyup()`](https://api.jquery.com/keyup-shorthand/)
+* 3.0
+  * [`.bind()`](https://api.jquery.com/bind/)
+  * [`.unbind()`](https://api.jquery.com/unbind/)
+  * [`.delegate()`](https://api.jquery.com/delegate/)
 
 ## Questions
 
