@@ -47,9 +47,10 @@
 
 ## Changelog / History / Versions / What's New
 
-* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What's new in 2018-2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
 * [What’s New in 2022-3](https://www.jetbrains.com/rider/whatsnew/2022-3/)
-* [What's new in 2018.2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
+* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What’s New in 2024-1](https://www.jetbrains.com/rider/whatsnew/2024-1/)
 
 
 ## Blog
