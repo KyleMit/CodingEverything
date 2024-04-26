@@ -52,6 +52,12 @@
 * [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
 * [What’s New in 2024-1](https://www.jetbrains.com/rider/whatsnew/2024-1/)
 
+## Code Coverage - dotCover
+
+* [Analyze Coverage of Unit Tests](https://www.jetbrains.com/help/rider/Cover_Unit_Tests_(Basic_Scenario).html)
+* [Unit Tests Coverage window](https://www.jetbrains.com/help/rider/Unit_Tests_Coverage_window.html)
+* [How do you enable test coverage in Rider](https://stackoverflow.com/questions/72132532/)
+
 
 ## Blog
 
