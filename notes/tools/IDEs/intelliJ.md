@@ -260,3 +260,7 @@
   * Shelve - IntelliJ feature
 
 
+* [Show Recent Files](https://stackoverflow.com/q/64897764/1366033)
+
+  * <kbd>Ctrl</kbd> + <kbd>E</kbd> - **Recent Files** list
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - **Recent Locations** switcher
