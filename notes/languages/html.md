@@ -54,6 +54,8 @@
     ```
 
 
+## Questions
+
 * [Are there two ways to jump to a fragment identifier in HTML?](https://stackoverflow.com/q/35032130/1366033)
 
 
@@ -84,3 +86,29 @@
 * [Should `ol/ul` be inside `<p>` or outside?](https://stackoverflow.com/q/5681481/1366033)
 
   `ol` elements are not legally allowed inside `p` elements
+
+* Datalist
+  * SO
+    * [Autocomplete text input](https://stackoverflow.com/q/13568609/1366033)
+    * [HTML select form with option to enter custom value](https://stackoverflow.com/q/5650457/1366033)
+    * [html - Drop Down Menu/Text Field in one](https://stackoverflow.com/q/18309059/1366033)
+    * [HTML Form: Select-Option vs Datalist-Option](https://stackoverflow.com/q/6865943/1366033)
+    * [combobox - How can I create an editable dropdownlist in HTML?](https://stackoverflow.com/q/264640/1366033)
+  * MDN
+    * [`<datalist>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
+
+  ```html
+  <label>Choose a browser from this list:
+  <input list="browsers" name="myBrowser" /></label>
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Internet Explorer">
+    <option value="Opera">
+    <option value="Safari">
+    <option value="Microsoft Edge">
+  </datalist>
+  ```
+
+
+  
