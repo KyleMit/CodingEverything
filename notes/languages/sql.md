@@ -614,3 +614,11 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```
 
     **See Also**: [How to upsert (update or insert) in SQL Server 2005](https://stackoverflow.com/q/11010511/1366033)
+
+
+* [Use variable with TOP in select statement](https://stackoverflow.com/q/1927450/1366033)
+
+    ```sql
+    declare @top int = 5
+    select top (@top) * from tablename
+    ```
