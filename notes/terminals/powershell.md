@@ -218,6 +218,8 @@ winget upgrade --id Microsoft.PowerShell
 
 > The cmdlet 'Get-CommandExists' uses a plural noun. A singular noun should be used instead.
 
+* [Feature request: Mark specific lines or blocks to ignore for specific rules · Issue #849 · PowerShell/PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer/issues/849)
+
 ### Approved Verbs
 
 * [Approved Verbs for PowerShell Commands](https://learn.microsoft.com/en-us/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
