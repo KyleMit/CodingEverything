@@ -1,3 +1,8 @@
+---
+aliases:
+  - Code Analysis
+---
+
 # Static Analysis / Code Analysis
 
 

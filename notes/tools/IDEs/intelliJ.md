@@ -1,4 +1,10 @@
-# JetBrains IDE / IntelliJ IDE / Rider
+---
+aliases:
+  - JetBrains IDE
+  - Rider
+---
+
+# IntelliJ IDE / JetBrains IDE / Rider
 
 ## Products
 

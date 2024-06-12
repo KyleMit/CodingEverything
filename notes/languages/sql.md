@@ -622,3 +622,29 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     declare @top int = 5
     select top (@top) * from tablename
     ```
+
+* [Get top 1 row of each group](https://stackoverflow.com/q/6841605/1366033)
+
+    ```sql
+    -- get most recent history type for each history type
+    WITH MostRecentUserHistoryByType AS (
+        SELECT *,
+            ROW_NUMBER() OVER (
+                PARTITION BY UserHistoryTypeId 
+                ORDER BY CreationDate DESC
+            ) AS RowNum
+        FROM UserHistory
+    )
+    SELECT * 
+    FROM MostRecentUserHistoryByType
+    WHERE RowNum = 1;
+    ```
+
+    ```sql
+    SELECT TOP 1 WITH TIES *
+    FROM UserHistory
+    ORDER BY ROW_NUMBER() OVER (
+            PARTITION BY UserHistoryTypeId 
+            ORDER BY CreationDate DESC)
+    ```
+

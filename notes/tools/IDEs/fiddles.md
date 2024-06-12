@@ -1,5 +1,9 @@
+---
+aliases:
+  - Code Playgrounds
+---
 
-# Code Fiddles / Playgrounds
+# Code Fiddles / Code Playgrounds
 
 * Web
   * [JSFiddle](https://jsfiddle.net/user/KyleMit/fiddles/)

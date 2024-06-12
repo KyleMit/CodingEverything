@@ -163,9 +163,20 @@
   * Threads
     * [Click links/files to open in new tab by default - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/click-links-files-to-open-in-new-tab-by-default/7347)
     * [When I open a note that overwrites my current TAB, where do I set the default to open a new TAB for display? - Help - Obsidian Forum](https://forum.obsidian.md/t/when-i-open-a-note-that-overwrites-my-current-tab-where-do-i-set-the-default-to-open-a-new-tab-for-display/55914/2)
-    * [Seach results are opened in new tabs - how to stop? - Help - Obsidian Forum](https://forum.obsidian.md/t/seach-results-are-opened-in-new-tabs-how-to-stop/62842/3)
+    * [Search results are opened in new tabs - how to stop? - Help - Obsidian Forum](https://forum.obsidian.md/t/seach-results-are-opened-in-new-tabs-how-to-stop/62842/3)
 
 * [Easy removal of empty ‘Untitled’ notes](https://forum.obsidian.md/t/ease-removal-of-empty-untitled-notes/4120)
 
   * **Plugin**: [obsidian-janitor](https://github.com/Canna71/obsidian-janitor)
     * [Feature Request: Option for delete selection (obsidian trash vs system) when Ask Confirmation disabled · Issue #24 · Canna71/obsidian-janitor](https://github.com/Canna71/obsidian-janitor/issues/24)
+
+* [Aliases - Obsidian Help](https://help.obsidian.md/Linking+notes+and+files/Aliases)
+
+    ```yaml
+    ---
+    aliases:
+      - Doggo
+      - Woofer
+      - Yapper
+    ---
+    ```
