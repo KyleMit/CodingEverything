@@ -168,6 +168,12 @@ document.head.insertAdjacentHTML("beforeend", `<style>body{background:red}</styl
   * NPM - [live-server](https://www.npmjs.com/package/live-server)
   * Python - [http-server](https://docs.python.org/3/library/http.server.html)
 
+* [Viewing localhost website from mobile device](https://stackoverflow.com/questions/17316692/viewing-localhost-website-from-mobile-device)
+
+* [ngrok - npm](https://www.npmjs.com/package/ngrok)
+  * [ngrok | Unified Application Delivery Platform for Developers](https://ngrok.com/)
+* [localtunnel - npm](https://www.npmjs.com/package/localtunnel)
+  * [Localtunnel ~ Expose yourself to the world](https://theboroer.github.io/localtunnel-www/)
 
 * [SVG - How to “use” local “defs” in SVG](https://stackoverflow.com/q/16123721/1366033)
 * [Img - Convert SVG to ICO](https://convertio.co/svg-ico/)
