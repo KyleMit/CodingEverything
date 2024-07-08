@@ -23,6 +23,23 @@
 
 * [What’s new in Slack: simplified search, channel bookmarks and more](https://slack.com/blog/productivity/whats-new-in-slack-simplified-search-channel-bookmarks)
 
+
+## Shortcuts
+
+[Get around faster with keyboard shortcuts | Slack](https://slack.com/help/articles/217626598-Get-around-faster-with-keyboard-shortcuts)
+[Slack keyboard shortcuts | Slack](https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts)
+
+
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> - All Unreads
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> - Threads
+* <kbd>Ctrl</kbd> + <kbd>/</kbd> - Display available shortcuts
+* <kbd>Ctrl</kbd> + <kbd>K</kbd> - Open the Quick Switcher
+* <kbd>Alt</kbd> + <kbd>←/→</kbd> - Navigate to previous/next channel
+* <kbd>Ctrl</kbd> + <kbd>F</kbd> - Find in channel
+* <kbd>Ctrl</kbd> + <kbd>G</kbd> - Find All
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> - Toggle Channel Details Pane
+
+
 ## Slash Commands
 
 [Enabling interactivity with Slash Commands](https://api.slack.com/interactivity/slash-commands)
@@ -56,67 +73,11 @@
 * `/shrug your text` - appends shrug to your message
 
 
-## Shortcuts
-
-[Get around faster with keyboard shortcuts | Slack](https://slack.com/help/articles/217626598-Get-around-faster-with-keyboard-shortcuts)
-[Slack keyboard shortcuts | Slack](https://slack.com/help/articles/201374536-Slack-keyboard-shortcuts)
-
-
 
 ## Notifications
 
 [Guide to desktop notifications](https://slack.com/help/articles/201355156-Guide-to-desktop-notifications#windows-1)
 
-
-
-<kbd>Ctrl</kbd> + <kbd>/</kbd> - Display available shortcuts
-<kbd>Ctrl</kbd> + <kbd>K</kbd> - Open the Quick Switcher
-<kbd>Alt</kbd> + <kbd>←/→</kbd> - Navigate to previous/next channel
-<kbd>Ctrl</kbd> + <kbd>F</kbd> - Find in channel
-<kbd>Ctrl</kbd> + <kbd>G</kbd> - Find All
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> - Toggle Channel Details Pane
-
-## Build Slack Bot
-
-
-### Links
-
-https://slack.com/create#email
-https://join.slack.com/t/vdhgroup/shared_invite/enQtOTczNDM0OTc5NDE0LWZhNDU0NzVjMGI1MTE2YWI5MzQwMDBjMjU1MzMzMWEwMDUxYWU4N2RiZTJjZTE0YTQ2YTQ4ODNjZTU3MWEyOTQ
-https://slack.com/help/articles/204379773-Upload-a-Slack-icon
-https://slack.com/help/articles/115005265703-Create-a-bot-for-your-workspace
-https://api.slack.com/apps?new_app=1
-https://slackhq.com/mind-the-bot-a-guide-to-slackbot-custom-responses
-https://slack.com/help/articles/202026038-An-introduction-to-Slackbot#add-customized-automatic-responses
-https://vdhgroup.slack.com/customize/slackbot
-
-
-### Prior Art - Guys Language
-
-https://betterallies.com/language/
-https://twitter.com/kmelve/status/1072253704663912448
-https://dev.to/kmelve/the-problem-with-you-guys-51h7
-https://www.vox.com/2015/6/11/8761227/you-guys-sexism-language
-
-### 18F
-
-https://technical.ly/dc/2016/04/19/18f-using-slackbot-encourage-inclusive-language/
-https://web.archive.org/web/20170317125656/https://18f.gsa.gov/2016/01/12/hacking-inclusion-by-customizing-a-slack-bot/
-https://github.com/18F/18f.gsa.gov/pull/2881
-
-
-### Account APIS
-
-https://api.slack.com/apps/AUM2WT1M5/oauth?
-
-### Glitch
-
-https://glitch.com/edit/#!/guys-bot-for-slack
-
-https://glitch.com/edit/#!/inclusive-copy-bot?path=.env:18:0
-https://github.com/KyleMit/inclusive-copy-bot/tree/glitch
-
-[How can I download or backup my Glitch project?](https://glitch.com/help/how-can-i-download-backup-my-glitch-project/)
 
 ## Questions
 

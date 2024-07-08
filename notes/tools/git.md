@@ -576,3 +576,9 @@ git rev-list --count <revision>
   ```bash
   git checkout HEAD~N
   ```
+
+* Show the last commit where a file was deleted
+
+  ```bash
+  git log --diff-filter=D -- .\Content\Img\list-1.svg
+  ```

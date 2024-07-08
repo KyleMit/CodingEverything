@@ -306,3 +306,6 @@
 
   Close MS Paint
 
+* [How to sign in to Windows 10 with local account?](https://superuser.com/q/1682844/180163)
+
+  For username, type `.\` and then local account name
