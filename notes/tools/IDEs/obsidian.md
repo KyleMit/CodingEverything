@@ -163,7 +163,7 @@
   * **Plugin**: [obsidian-janitor](https://github.com/Canna71/obsidian-janitor)
     * [Feature Request: Option for delete selection (obsidian trash vs system) when Ask Confirmation disabled · Issue #24 · Canna71/obsidian-janitor](https://github.com/Canna71/obsidian-janitor/issues/24)
 
-* [Aliases - Obsidian Help](https://help.obsidian.md/Linking+notes+and+files/Aliases)
+* [Aliases](https://help.obsidian.md/Linking+notes+and+files/Aliases)
 
     ```yaml
     ---
@@ -173,3 +173,12 @@
       - Yapper
     ---
     ```
+
+* Show outline of current document
+  * [Outline](https://help.obsidian.md/Plugins/Outline) core plugin
+
+
+* [Toggle Outline View](https://forum.obsidian.md/t/keyboard-shortcut-to-toggle-outline-instead-of-opening-a-new-outline-pane/12438/2)
+
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> - Open Outline
+  * <kbd>Ctrl</kbd> + <kbd>\</kbd> - Toggle Right Sidebar
