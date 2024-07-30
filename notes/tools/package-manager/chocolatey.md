@@ -2,7 +2,25 @@
 
 [Upgrade Command](https://chocolatey.org/docs/commandsupgrade)
 
+
+## Chocolatey Installs
+
+* Apps
+* CLI
+  * [curl](https://curl.haxx.se/dlwiz/?type=bin&os=Win64) | [choco](https://chocolatey.org/packages/curl)
+* Fonts
+  * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
+  * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
+  * [Meslo LG](https://github.com/andreberg/Meslo-Font) | [choco](https://community.chocolatey.org/packages/MesloLG.DZ)
+
+
 ## Questions
+
+* [Get installed chocolatey packages](https://chocolatey.org/docs/commandslist)
+
+  ```bash
+  choco list --local-only
+  ```
 
 [How to list installed Chocolatey packages?](https://superuser.com/q/1270151/180163)
 
@@ -32,3 +50,12 @@
   C:\ProgramData\chocolatey\bin
   ```
 
+* [Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
+
+  ```bash
+  choco install jq hub firacode-ttf cascadiacode meslolg.dz
+  ```
+
+* Which installs CLI tools to here:
+
+    `C:\ProgramData\chocolatey\lib\`
