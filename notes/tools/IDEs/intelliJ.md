@@ -270,3 +270,19 @@ aliases:
 
   * <kbd>Ctrl</kbd> + <kbd>E</kbd> - **Recent Files** list
   * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - **Recent Locations** switcher
+
+* [Windows Defender might be impacting your build performance](https://stackoverflow.com/a/78816923/1366033)
+
+  > The IDE has detected Microsoft Defender with Real-Time Protection enabled. It might severely degrade IDE performance. It is recommended to add the following paths to the Defender folder exclusion list:
+  >
+  > * C:\code\repo
+  > * C:\Users\user\.nuget
+  > * C:\Users\user\AppData\Local\JetBrains\Rider2024.1
+  >
+  > Choose "Automatically" to run a script that excludes these paths (note: Windows will ask for administrative privileges). Choose "Manually" to see Defender configuration instructions.
+
+
+  ```ps1
+  Add-MpPreference -ExclusionPath "C:\Path\To\Your\Directory"
+  Get-MpPreference | Select-Object -ExpandProperty ExclusionPath
+  ```
