@@ -286,3 +286,22 @@ aliases:
   Add-MpPreference -ExclusionPath "C:\Path\To\Your\Directory"
   Get-MpPreference | Select-Object -ExpandProperty ExclusionPath
   ```
+
+* [How can I save groups of open tabs in IntelliJ?](https://stackoverflow.com/questions/28800704/1366033)
+
+  * Tools > Tasks & Contexts > Save Context...
+  * Tools > Tasks & Contexts > Load Context...
+
+  **See Also**: [Manage tasks and contexts | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/managing_tasks_and_context.html#work-with-tasks)
+
+* [How can I save list of opened tabs in Intellij Idea, when I switch git branch?](https://stackoverflow.com/questions/50465030/1366033)
+
+  * Version Control > Confirmation > Restore workspace on branch switching
+
+
+  **See Also**: [Manage Git branches | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/Manage_branches.html)
+
+* Connect to JIRA
+
+  [Manage tasks and contexts | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/managing_tasks_and_context.html#connect-to-tracker)
+  [Atlassian account](https://id.atlassian.com/manage-profile/security/api-tokens)
