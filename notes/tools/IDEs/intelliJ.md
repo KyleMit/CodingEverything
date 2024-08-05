@@ -16,7 +16,7 @@ aliases:
 * Rider - DotNet / C#
 
 
-## Shortcuts
+## Keyboard Shortcuts / Hot Keys / Settings / Bindings / Mappings / Commands
 
 [IntelliJ IDEA keyboard shortcuts—IntelliJ IDEA](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)
 
@@ -33,6 +33,9 @@ aliases:
 
 * <kbd>Alt</kbd> + <kbd>1</kbd> - Focus Project tool window
 * <kbd>Esc</kbd> - Focus Editor
+
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> - Toggle Bookmark
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> - Pin Tab
 
 ## Issues
 
@@ -305,3 +308,12 @@ aliases:
 
   [Manage tasks and contexts | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/managing_tasks_and_context.html#connect-to-tracker)
   [Atlassian account](https://id.atlassian.com/manage-profile/security/api-tokens)
+
+
+* [Settings search - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/settings-search/457/5)
+
+  **Plugin**: [settings-search: Adds a search bar to Obsidian.md's settings](https://github.com/javalent/settings-search)
+
+
+* [Move pinned tabs to left - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/move-pinned-tabs-to-left/86446)
+

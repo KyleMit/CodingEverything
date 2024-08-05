@@ -2,6 +2,12 @@
 
 <https://obsidian.md/>
 
+## Keyboard Shortcuts / Hot Keys / Settings / Bindings / Mappings / Commands
+
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> - Command Pallette
+* <kbd>Ctrl</kbd> + <kbd>P</kbd> - QuickSwitcher++
+
+
 ## Docs
 
 * [Custom hotkeys](https://help.obsidian.md/Customization/Custom+hotkeys)
@@ -21,10 +27,6 @@
 * [Create your first plugin](https://marcus.se.net/obsidian-plugin-docs/getting-started/create-your-first-plugin)
 * [Svelte](https://marcus.se.net/obsidian-plugin-docs/getting-started/svelte)
 
-## Hotkeys
-
-* Ctrl + Shift P -> Command Palette
-* Ctrl + P -> QuickSwitcher++
 
 ## Questions
 

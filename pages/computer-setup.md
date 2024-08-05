@@ -1149,6 +1149,18 @@ Hotkeys=72 ;F3
 
   Open Shortcut > Properties > Remove Shortcut Key
 
+  ![Kindle Shortcut Hotkey](/assets/posts/computer-setup/kindle-shortcut-hotkey.png)
+
+
+```ps1
+$shell = New-Object -ComObject WScript.Shell
+$startMenuPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu)
+$shortcutPath = "$startMenuPath\Programs\Amazon\Amazon Kindle\Kindle.lnk"
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.Hotkey = ""
+$shortcut.Save()
+```
+
 * [How to Center Your Windows 10 Taskbar Icons (Like Windows 11)](https://www.howtogeek.com/736658/how-to-center-your-windows-10-taskbar-icons-like-windows-11/)
 
   * [TaskbarX | Center taskbar icons](https://chrisandriessen.nl/taskbarx)
