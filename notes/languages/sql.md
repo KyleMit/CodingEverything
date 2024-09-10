@@ -410,7 +410,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [Create Foreign Key Constraint](https://www.w3schools.com/sql/sql_foreignkey.asp)
 
-    [Demo in SQLFiddle](http://sqlfiddle.com/#!18/e55efa/3)
+    [Demo in SQLFiddle](https://sqlfiddle.com/sql-server/online-compiler?&id=3bb85a56-a1a4-4c0f-a11e-ee7e1ddab2cc)
 
     ```sql
     CREATE TABLE Person (
@@ -452,7 +452,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [Add Cascade Delete to FK](https://stackoverflow.com/q/6260688/1366033)
 
-    [Demo in SQL Fiddle](http://sqlfiddle.com/#!18/fcd80/1)
+    [Demo in SQL Fiddle](https://sqlfiddle.com/sql-server/online-compiler?&id=1836a3ca-c6d8-465b-901c-bfb8645d8727)
 
     ```sql
     CREATE TABLE Person (

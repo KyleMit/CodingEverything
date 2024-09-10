@@ -69,3 +69,6 @@ aliases:
   * [Example](https://dotnetfiddle.net/pWKwSr)
   * [WithIterationTime](https://github.com/dotnet/BenchmarkDotNet/blob/0772ce21aa32914050ccf4339514e9bc05563ec0/src/BenchmarkDotNet/Jobs/JobExtensions.cs#L171)
 
+## SQL Fiddle
+
+* [Japanese Chars - SQL Fiddle](https://sqlfiddle.com/sql-server/online-compiler?&id=5451dde8-283e-4ded-98fe-aa1ab2e21eb8)

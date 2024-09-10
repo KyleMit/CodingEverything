@@ -303,3 +303,9 @@ Document Object Model
 
   Not required, but sure.  Should at least encode `;` and `=`
 
+
+* [Clear element.classList](https://stackoverflow.com/q/15040297/1366033)
+
+    ```js
+    element.className = "";
+    ```

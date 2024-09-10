@@ -12,7 +12,7 @@ I'll do everything on [SQLFiddle][sqlFiddle].  You can follow along by starting 
 
 ### Create A Table
 
-Start by [making a table](http://sqlfiddle.com/#!6/ce75c):
+Start by [making a table](https://sqlfiddle.com/sql-server/online-compiler?&id=c3f859f5-be40-43d9-81fb-6887ba383dd5):
 
 ```sql
 CREATE TABLE Person
@@ -37,7 +37,7 @@ SELECT FirstName, LastName
 FROM Person
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/6):
+[Results](https://sqlfiddle.com/sql-server/online-compiler?&id=67a1c9d7-1be2-4dfb-b42d-43a176201d7a):
 
 <div class="preTable" ></div>
 
@@ -58,7 +58,7 @@ FROM Person
 FOR XML PATH('Person')
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/7):
+[Results](https://sqlfiddle.com/sql-server/online-compiler?&id=ee1e6565-100a-4a4e-a5f1-06395c663f94):
 
 ```xml
 <Person>
@@ -86,7 +86,7 @@ FROM Person
 FOR XML PATH('Person')
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/9):
+[Results](https://sqlfiddle.com/sql-server/online-compiler?&id=bbc55c33-ed19-4833-83f2-80ea0f621ffa):
 
 ```xml
 <Person>
@@ -113,7 +113,7 @@ FROM Person
 FOR XML PATH('Person')
 ```
 
-[Results](http://sqlfiddle.com/#!6/ce75c/10):
+[Results](https://sqlfiddle.com/sql-server/online-compiler?&id=66d303df-02ac-4cc2-be14-9a287a45e77d):
 
 ```xml
 <Person>
