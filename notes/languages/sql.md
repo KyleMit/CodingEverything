@@ -648,3 +648,12 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
             ORDER BY CreationDate DESC)
     ```
 
+* NOT IN () Predicate Returning Zero rows
+
+   When `ansi_nulls` is on, `3 <> null` evaluates to `UNKNOWN`
+
+  **Further Reading**:
+
+  * [NULL values inside NOT IN clause](https://stackoverflow.com/questions/129077/)
+  * [SQL NOT IN not working](https://stackoverflow.com/questions/5231712/)
+  * [Comparisons with NULL and the three-valued logic (3VL)](https://en.wikipedia.org/wiki/Null_(SQL)#Comparisons_with_NULL_and_the_three-valued_logic_(3VL))
