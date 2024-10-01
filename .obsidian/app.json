@@ -8,5 +8,10 @@
   "promptDelete": false,
   "autoPairMarkdown": false,
   "attachmentFolderPath": "/Assets/obsidian",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "archive/",
+    "Assets/"
+  ],
+  "spellcheck": true
 }
