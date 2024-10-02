@@ -184,3 +184,36 @@
 
   * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> - Open Outline
   * <kbd>Ctrl</kbd> + <kbd>\</kbd> - Toggle Right Sidebar
+
+
+* Sync settings between vaults
+
+  Copy the `.obsidian` folder minus the `workspace.json` file from the root of the source vault to the root of the destination vault.
+
+  **Further Reading**
+
+  * [Manage vaults - Obsidian Help](https://help.obsidian.md/Files+and+folders/Manage+vaults#:~:text=To%20use%20the%20same%20settings,Obsidian%20to%20apply%20the%20changes.)
+  * [Sync settings between vaults - Help - Obsidian Forum](https://forum.obsidian.md/t/sync-settings-between-vaults/35730)
+  * [Sync plugins and configs between vaults? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/ojks80/sync_plugins_and_configs_between_vaults/)
+  * [How do I save plugins and settings across vaults? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/x0oypx/how_do_i_save_plugins_and_settings_across_vaults/)
+
+* Save local copy of all urls contents to use in  search results
+
+  **Further Reading**
+
+  * [Best way to save web pages in Obsidian? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/1cksfef/best_way_to_save_web_pages_in_obsidian/)
+  * [plugin to extract specific info from webpage : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/11lxucj/plugin_to_extract_specific_info_from_webpage/)
+  * [Best way to get content from webpage to obsidian? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/18k7t5e/best_way_to_get_content_from_webpage_to_obsidian/)
+
+* Hook up Obsidian to Local LLM for Search
+
+  * [I trained a local LLM on my Obsidian, here’s what I learned | by Bits of Chris | Medium](https://medium.com/@BitsOfChris/i-trained-a-local-llm-on-my-obsidian-heres-what-i-learned-a3e738f9bed0)
+  * [AI / LLMs in your Obsidian - what's actually been useful for you? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/1dedmeu/ai_llms_in_your_obsidian_whats_actually_been/)
+  * [Plugin for AI trained on local notes? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/12dat4z/plugin_for_ai_trained_on_local_notes/)
+  * [Should I Switch to Obsidian to Build an External Brain Using LLM Embedding Vector/Semantic Search? : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/15n25wk/should_i_switch_to_obsidian_to_build_an_external/)
+  * [Running a LLM locally in Obsidian : r/ObsidianMD](https://www.reddit.com/r/ObsidianMD/comments/17ogdlx/running_a_llm_locally_in_obsidian/)
+  * [Local LLM with directory access? : r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1ac5t71/local_llm_with_directory_access/)
+  * [Leveraging LLMs in your Obsidian Notes · Ollama Blog](https://ollama.com/blog/llms-in-obsidian)
+  * [Adding built in LLM/AI support to stay relevant - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/adding-built-in-llm-ai-support-to-stay-relevant/72954)
+  * [Local AI integration? - Help - Obsidian Forum](https://forum.obsidian.md/t/local-ai-integration/71931)
+  * [zatevakhin/obsidian-local-llm: Obsidian Local LLM is a plugin for Obsidian that provides access to a powerful neural network, allowing users to generate text in a wide range of styles and formats using a local LLM.](https://github.com/zatevakhin/obsidian-local-llm)
