@@ -274,6 +274,13 @@ aliases:
   * <kbd>Ctrl</kbd> + <kbd>E</kbd> - **Recent Files** list
   * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - **Recent Locations** switcher
 
+* ReOpen Recently Closed Editor Tabs
+
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> - Keymap > Main Menu > Window > Editor Tabs > Reopen Closed Tab
+
+  * [Re-Open Closed Editor Tabs Keyboard Shortcut : WEB-49099](https://youtrack.jetbrains.com/issue/WEB-49099/Re-Open-Closed-Editor-Tabs-Keyboard-Shortcut)
+  * [How to reopen the latest closed files – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/207017765-How-to-reopen-the-latest-closed-files)
+
 * [Windows Defender might be impacting your build performance](https://stackoverflow.com/a/78816923/1366033)
 
   > The IDE has detected Microsoft Defender with Real-Time Protection enabled. It might severely degrade IDE performance. It is recommended to add the following paths to the Defender folder exclusion list:
