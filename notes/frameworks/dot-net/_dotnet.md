@@ -476,13 +476,6 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
   ```
 
 
-* [How to change C# Language Version for all of the projects in my solution in one place?](https://stackoverflow.com/q/61434436/1366033)
-
-  Add to `Directory.Build.props`
-
-  [Customize your build](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build)
-
-
 * [Setting Authorization Header of HttpClient](https://stackoverflow.com/q/14627399/1366033)
 
 
@@ -1029,3 +1022,19 @@ using (var stream = System.IO.File.Open(fileName, FileMode.Open, FileAccess.Read
     .Select(g => g.Key);
   ```
 
+* [Combine URL Paths](https://stackoverflow.com/q/372865/1366033)
+
+  Use [Flurl](https://flurl.dev/) `Url.Combine`
+
+  ```cs
+  public static class UriExtensions
+  {
+      public static Uri Append(this Uri uri, params string[] paths)
+      {
+          return new Uri(paths.Aggregate(uri.AbsoluteUri, (current, path) => string.Format("{0}/{1}", current.TrimEnd('/'), path.TrimStart('/'))));
+      }
+  }
+  ```
+
+
+  

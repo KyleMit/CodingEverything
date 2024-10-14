@@ -353,6 +353,52 @@ pre[class*="language-"]
 }
 
 
+/* .mtk3 */
+.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line.cm-line {
+    color: #d4d4d4;
+}
+
+
+/* .mtk5 */
+span.cm-comment.cm-hmd-codeblock {
+    color: #6a9955;
+}
+
+
+/* .mtk7 */
+span.cm-hmd-codeblock.cm-number {
+    color: #b5cea8;
+}
+
+
+
+/* .mtk10 */
+span.cm-hmd-codeblock.cm-variable {
+    color: #9cdcfe;
+}
+
+/* .mtk12 */
+span.cm-hmd-codeblock.cm-string {
+    color: #ce9178;
+}
+
+
+/* .mtk12 */
+span.cm-atom.cm-hmd-codeblock {
+    color: #ce9178;
+}
+
+
+/* .mtk18 */
+span.cm-hmd-codeblock.cm-keyword {
+    color: #c586c0;
+}
+
+/* .mtk17 */
+span.cm-hmd-codeblock.cm-variable {
+    color: #4ec9b0;
+}
+
 
 /*
  * Keep list bullet padding the same between viewer and editor.

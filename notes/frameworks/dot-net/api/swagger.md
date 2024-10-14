@@ -28,3 +28,7 @@
 
 [domaindrivendev/Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
 [Get started with Swashbuckle and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio)
+
+## Customization
+
+* [How to customize Swagger UI with custom CSS in .NET 7 | Code4IT](https://www.code4it.dev/blog/customize-swagger-ui-with-css/)

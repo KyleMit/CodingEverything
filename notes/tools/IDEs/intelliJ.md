@@ -1,4 +1,10 @@
-# JetBrains IDE / IntelliJ IDE / Rider
+---
+aliases:
+  - JetBrains IDE
+  - Rider
+---
+
+# IntelliJ IDE / JetBrains IDE / Rider
 
 ## Products
 
@@ -10,7 +16,7 @@
 * Rider - DotNet / C#
 
 
-## Shortcuts
+## Keyboard Shortcuts / Hot Keys / Settings / Bindings / Mappings / Commands
 
 [IntelliJ IDEA keyboard shortcuts—IntelliJ IDEA](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)
 
@@ -27,6 +33,9 @@
 
 * <kbd>Alt</kbd> + <kbd>1</kbd> - Focus Project tool window
 * <kbd>Esc</kbd> - Focus Editor
+
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> - Toggle Bookmark
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> - Pin Tab
 
 ## Issues
 
@@ -47,9 +56,16 @@
 
 ## Changelog / History / Versions / What's New
 
-* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What's new in 2018-2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
 * [What’s New in 2022-3](https://www.jetbrains.com/rider/whatsnew/2022-3/)
-* [What's new in 2018.2](https://www.jetbrains.com/idea/whatsnew/2018-2/)
+* [What’s New in 2023-1](https://www.jetbrains.com/rider/whatsnew/2023-1/)
+* [What’s New in 2024-1](https://www.jetbrains.com/rider/whatsnew/2024-1/)
+
+## Code Coverage - dotCover
+
+* [Analyze Coverage of Unit Tests](https://www.jetbrains.com/help/rider/Cover_Unit_Tests_(Basic_Scenario).html)
+* [Unit Tests Coverage window](https://www.jetbrains.com/help/rider/Unit_Tests_Coverage_window.html)
+* [How do you enable test coverage in Rider](https://stackoverflow.com/questions/72132532/)
 
 
 ## Blog
@@ -252,4 +268,59 @@
   * Stash - Git feature
   * Shelve - IntelliJ feature
 
+
+* [Show Recent Files](https://stackoverflow.com/q/64897764/1366033)
+
+  * <kbd>Ctrl</kbd> + <kbd>E</kbd> - **Recent Files** list
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - **Recent Locations** switcher
+
+* ReOpen Recently Closed Editor Tabs
+
+  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> - Keymap > Main Menu > Window > Editor Tabs > Reopen Closed Tab
+
+  * [Re-Open Closed Editor Tabs Keyboard Shortcut : WEB-49099](https://youtrack.jetbrains.com/issue/WEB-49099/Re-Open-Closed-Editor-Tabs-Keyboard-Shortcut)
+  * [How to reopen the latest closed files – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/207017765-How-to-reopen-the-latest-closed-files)
+
+* [Windows Defender might be impacting your build performance](https://stackoverflow.com/a/78816923/1366033)
+
+  > The IDE has detected Microsoft Defender with Real-Time Protection enabled. It might severely degrade IDE performance. It is recommended to add the following paths to the Defender folder exclusion list:
+  >
+  > * C:\code\repo
+  > * C:\Users\user\.nuget
+  > * C:\Users\user\AppData\Local\JetBrains\Rider2024.1
+  >
+  > Choose "Automatically" to run a script that excludes these paths (note: Windows will ask for administrative privileges). Choose "Manually" to see Defender configuration instructions.
+
+
+  ```ps1
+  Add-MpPreference -ExclusionPath "C:\Path\To\Your\Directory"
+  Get-MpPreference | Select-Object -ExpandProperty ExclusionPath
+  ```
+
+* [How can I save groups of open tabs in IntelliJ?](https://stackoverflow.com/questions/28800704/1366033)
+
+  * Tools > Tasks & Contexts > Save Context...
+  * Tools > Tasks & Contexts > Load Context...
+
+  **See Also**: [Manage tasks and contexts | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/managing_tasks_and_context.html#work-with-tasks)
+
+* [How can I save list of opened tabs in Intellij Idea, when I switch git branch?](https://stackoverflow.com/questions/50465030/1366033)
+
+  * Version Control > Confirmation > Restore workspace on branch switching
+
+
+  **See Also**: [Manage Git branches | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/Manage_branches.html)
+
+* Connect to JIRA
+
+  [Manage tasks and contexts | JetBrains Rider Documentation](https://www.jetbrains.com/help/rider/managing_tasks_and_context.html#connect-to-tracker)
+  [Atlassian account](https://id.atlassian.com/manage-profile/security/api-tokens)
+
+
+* [Settings search - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/settings-search/457/5)
+
+  **Plugin**: [settings-search: Adds a search bar to Obsidian.md's settings](https://github.com/javalent/settings-search)
+
+
+* [Move pinned tabs to left - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/move-pinned-tabs-to-left/86446)
 

@@ -15,3 +15,10 @@
 
   Options > Environment > Fonts and Colors > Grid Results > Size
 
+* [SSMS shortcut to navigate between open query windows](https://stackoverflow.com/q/15138426/1366033)
+
+  * Tools > Options > Keyboard
+
+  * `Window.NextTab` -> <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>PgDn</kbd>
+  * `Window.PreviousTab` -> <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>PgUp</kbd>
+

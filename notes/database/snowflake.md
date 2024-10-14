@@ -1,7 +1,15 @@
 # Snowflake
 
+## Articles
+
+* [Cool Stuff in Snowflake – Part 3: `SPLIT` and `FLATTEN`](https://sqlkover.com/cool-stuff-in-snowflake-part-3-split-and-flatten/)
+* [Snowsight: The Snowflake Web Interface](https://docs.snowflake.com/en/user-guide/ui-snowsight)
+* [Building a Data-Centric Platform for Generative AI and LLMs](https://www.snowflake.com/blog/building-data-centric-platform-ai-llm/)
+* [Language Hints - Snowflake](https://app.snowflake.com/east-us-2.azure/np64869/wTHJDeCtmrh#query)
+
 ## Docs
 
+* [`REGEXP_COUNT`](https://docs.snowflake.com/en/sql-reference/functions/regexp_count)
 * [`GROUP BY`](https://docs.snowflake.com/en/sql-reference/constructs/group-by.html)
 
 ## Questions

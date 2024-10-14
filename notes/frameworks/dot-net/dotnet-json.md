@@ -42,3 +42,16 @@
   };
   ```
 
+* [How to exclude property from Json Serialization](https://stackoverflow.com/q/10169648/1366033)
+
+  ```cs
+  public class Car
+  {
+    // included in JSON
+    public string Model { get; set; }
+
+    // ignored
+    [JsonIgnore]
+    public DateTime LastModified { get; set; }
+  }
+  ```

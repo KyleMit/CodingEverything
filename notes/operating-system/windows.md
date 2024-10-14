@@ -301,3 +301,13 @@
   b. Use Intel Graphics Command Center
 
   c. Use [f.lux](https://justgetflux.com/)
+
+* [Mouse pointer moving on arrow keys pressed in Windows?](https://superuser.com/q/1467313/180163)
+
+  Close MS Paint
+
+* [How to sign in to Windows 10 with local account?](https://superuser.com/q/1682844/180163)
+
+  For username, type `.\` and then local account name
+
+

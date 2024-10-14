@@ -18,6 +18,34 @@
   * [Getting Started with PowerShell Scripting](https://app.pluralsight.com/library/courses/powershell-scripting-getting-started/table-of-contents)
   * [Performing Windows 10 Post-installation Tasks](https://app.pluralsight.com/library/courses/windows-10-performing-post-installation-tasks-cert/table-of-contents)
 
+* K8s
+  * [Getting Started with Kubernetes](https://app.pluralsight.com/library/courses/kubernetes-getting-started-2023/table-of-contents)
+  * [Certified Kubernetes Application Developer (CKAD) Path](https://app.pluralsight.com/paths/certificate/certified-kubernetes-application-developer-ckad-2023)
+
+* Azure Cloud
+  * [Getting Started with Azure Event Hubs with C#](https://app.pluralsight.com/library/courses/azure-event-hub-c-sharp/table-of-contents)
+  * [Microsoft Azure Developer: Implementing Blob Storage](https://app.pluralsight.com/library/courses/microsoft-azure-blob-storage-implementing/table-of-contents)
+  * [AZ-204: Developing Solutions for Microsoft Azure](https://app.pluralsight.com/library/courses/az-204-developing-solutions-microsoft-azure/table-of-contents)
+
+* LLM
+  * [Large Language Models (LLMs) for Data Professionals Path](https://app.pluralsight.com/paths/skill/large-language-models-llms-for-data-professionals)
+
+* Terraform
+  * [Terraform - Getting Started](https://app.pluralsight.com/library/courses/terraform-getting-started-2023/table-of-contents)
+  * [Getting Started with Terraform for Google Cloud](https://app.pluralsight.com/library/courses/getting-started-terraform-google-cloud/table-of-contents)
+  * [Implementing Terraform on Microsoft Azure](https://app.pluralsight.com/library/courses/implementing-terraform-microsoft-azure/table-of-contents)
+
+* Docker
+  * [Getting Started with Docker](https://app.pluralsight.com/library/courses/docker-getting-started-2023/table-of-contents)
+  * [Docker Fundamentals for Developers Path](https://app.pluralsight.com/paths/skill/docker-fundamentals-for-developers)
+
+* ASPNET
+  * [ASP.NET Core Web API Deep Dive](https://app.pluralsight.com/library/courses/asp-dot-net-core-6-web-api-deep-dive/table-of-contents)
+  * [Unit Testing an ASP.NET Core Web API](https://app.pluralsight.com/library/courses/asp-dot-net-core-6-web-api-unit-testing/table-of-contents)
+  * [ASP.NET Core 6 Web API: Best Practices](https://app.pluralsight.com/library/courses/aspdotnet-core-6-web-api-best-practices/table-of-contents)
+  * [Unit Testing an ASP.NET Core MVC Web Application](https://app.pluralsight.com/library/courses/asp-dot-net-core-6-mvc-web-application-unit-testing/table-of-contents)
+  * [What’s New in ASP.NET Core 6.0](https://app.pluralsight.com/library/courses/whats-new-asp-dot-net-core-6/table-of-contents)
+  * [Fault Tolerant Web Service Requests with Polly](https://app.pluralsight.com/library/courses/polly-fault-tolerant-web-service-requests/table-of-contents)
 
 ## Bookmarks
 

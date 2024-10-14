@@ -191,6 +191,18 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ELSE CAST(0 AS BIT) END
     ```
 
+* [How to check if value exists in each group (after group by)](https://stackoverflow.com/q/33784786/1366033)
+
+    ```sql
+    SELECT uid,
+        MAX(CASE WHEN subscription_type = 'type1' THEN 1 ELSE 0 END) AS type1,
+        MAX(CASE WHEN subscription_type = 'type2' THEN 1 ELSE 0 END) AS type2,
+        MAX(CASE WHEN subscription_type = 'type3' THEN 1 ELSE 0 END) AS type3,
+        MAX(CASE WHEN subscription_type = 'type4' THEN 1 ELSE 0 END) AS type4
+    FROM subscribes
+    GROUP BY uid
+    ```
+
 * [Finding longest date gap between dates](https://stackoverflow.com/q/1315262/1366033)
 
     ```sql
@@ -354,6 +366,14 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     SELECT SCOPE_IDENTITY()
     ```
 
+* [How can I select from list of values in SQL Server](https://stackoverflow.com/q/1564956/1366033)
+
+    Use a [**Table Value Constructor**](https://learn.microsoft.com/en-us/sql/t-sql/queries/table-value-constructor-transact-sql)
+
+    ```sql
+    SELECT id, [name] FROM (VALUES (1, 'Kyle'), (2, 'Beth') ) AS User(id, [name]);  
+    ```
+
 * [Table Naming Dilemma: Singular vs. Plural Names](https://stackoverflow.com/q/338156/1366033)
 
    Use Singular
@@ -390,7 +410,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [Create Foreign Key Constraint](https://www.w3schools.com/sql/sql_foreignkey.asp)
 
-    [Demo in SQLFiddle](http://sqlfiddle.com/#!18/e55efa/3)
+    [Demo in SQLFiddle](https://sqlfiddle.com/sql-server/online-compiler?&id=3bb85a56-a1a4-4c0f-a11e-ee7e1ddab2cc)
 
     ```sql
     CREATE TABLE Person (
@@ -432,7 +452,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
 * [Add Cascade Delete to FK](https://stackoverflow.com/q/6260688/1366033)
 
-    [Demo in SQL Fiddle](http://sqlfiddle.com/#!18/fcd80/1)
+    [Demo in SQL Fiddle](https://sqlfiddle.com/sql-server/online-compiler?&id=1836a3ca-c6d8-465b-901c-bfb8645d8727)
 
     ```sql
     CREATE TABLE Person (
@@ -594,3 +614,46 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
     ```
 
     **See Also**: [How to upsert (update or insert) in SQL Server 2005](https://stackoverflow.com/q/11010511/1366033)
+
+
+* [Use variable with TOP in select statement](https://stackoverflow.com/q/1927450/1366033)
+
+    ```sql
+    declare @top int = 5
+    select top (@top) * from tablename
+    ```
+
+* [Get top 1 row of each group](https://stackoverflow.com/q/6841605/1366033)
+
+    ```sql
+    -- get most recent history type for each history type
+    WITH MostRecentUserHistoryByType AS (
+        SELECT *,
+            ROW_NUMBER() OVER (
+                PARTITION BY UserHistoryTypeId 
+                ORDER BY CreationDate DESC
+            ) AS RowNum
+        FROM UserHistory
+    )
+    SELECT * 
+    FROM MostRecentUserHistoryByType
+    WHERE RowNum = 1;
+    ```
+
+    ```sql
+    SELECT TOP 1 WITH TIES *
+    FROM UserHistory
+    ORDER BY ROW_NUMBER() OVER (
+            PARTITION BY UserHistoryTypeId 
+            ORDER BY CreationDate DESC)
+    ```
+
+* NOT IN () Predicate Returning Zero rows
+
+   When `ansi_nulls` is on, `3 <> null` evaluates to `UNKNOWN`
+
+  **Further Reading**:
+
+  * [NULL values inside NOT IN clause](https://stackoverflow.com/questions/129077/)
+  * [SQL NOT IN not working](https://stackoverflow.com/questions/5231712/)
+  * [Comparisons with NULL and the three-valued logic (3VL)](https://en.wikipedia.org/wiki/Null_(SQL)#Comparisons_with_NULL_and_the_three-valued_logic_(3VL))

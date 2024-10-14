@@ -1,4 +1,11 @@
-# Windows CMD / MS DOS / Batch File
+---
+aliases:
+  - Windows CMD
+  - Batch File
+  - Bat File
+---
+
+# MS DOS / Windows CMD / Batch File / Bat File
 
 AKA Batch Script
 

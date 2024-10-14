@@ -958,35 +958,6 @@ netlify login
 eleventy-plugin-embed-tweet
 imgur-downloader
 
-### Chocolatey Installs
-
-[Get installed chocolatey packages](https://chocolatey.org/docs/commandslist)
-
-```bash
-choco list --local-only
-```
-
-* Apps
-* CLI
-  * [jq cli](https://stedolan.github.io/jq/) | [choco](https://chocolatey.org/packages/jq)
-  * [hub cli](https://hub.github.com/) | [choco](https://chocolatey.org/packages/hub)
-  * [curl](https://curl.haxx.se/dlwiz/?type=bin&os=Win64) | [choco](https://chocolatey.org/packages/curl)
-* Fonts
-  * [fira code font](https://github.com/tonsky/FiraCode) | [choco](https://chocolatey.org/packages/firacode-ttf)
-  * [cascadia code font](https://github.com/microsoft/cascadia-code) | [choco](https://chocolatey.org/packages/cascadiacode)
-  * [Meslo LG](https://github.com/andreberg/Meslo-Font) | [choco](https://community.chocolatey.org/packages/MesloLG.DZ)
-
-[Using chocolatey to install multiple apps at once](https://superuser.com/q/1132466/180163)
-
-```bash
-choco install jq hub firacode-ttf cascadiacode meslolg.dz
-```
-
-Which installs CLI tools to here:
-
-`C:\ProgramData\chocolatey\lib\`
-
-
 
 ### Auto Hot Key Scripts
 
@@ -1177,6 +1148,18 @@ Hotkeys=72 ;F3
 * [How to remove hotkey on Amazon Kindle PC that opens application](https://superuser.com/q/1320544/180163)
 
   Open Shortcut > Properties > Remove Shortcut Key
+
+  ![Kindle Shortcut Hotkey](/assets/posts/computer-setup/kindle-shortcut-hotkey.png)
+
+
+```ps1
+$shell = New-Object -ComObject WScript.Shell
+$startMenuPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu)
+$shortcutPath = "$startMenuPath\Programs\Amazon\Amazon Kindle\Kindle.lnk"
+$shortcut = $shell.CreateShortcut($shortcutPath)
+$shortcut.Hotkey = ""
+$shortcut.Save()
+```
 
 * [How to Center Your Windows 10 Taskbar Icons (Like Windows 11)](https://www.howtogeek.com/736658/how-to-center-your-windows-10-taskbar-icons-like-windows-11/)
 

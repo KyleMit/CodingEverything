@@ -1,26 +1,7 @@
 # Visual Studio
 
 
-## Alternatives
-
-* JetBrains - Rider
-
-## Editor
-
-* [Paste JSON and XML as a Class](https://visualstudiomagazine.com/Blogs/Tool-Tracker/2018/02/paste-json-and-xml-as-class.aspx)
-* [Go to commands](https://docs.microsoft.com/en-us/visualstudio/ide/go-to?view=vs-2019)
-
-  | Key          | Action       |
-  | ------------ | ------------ |
-  | <kbd>?</kbd> | Help         |
-  | <kbd>#</kbd> | Symbols      |
-  | <kbd>:</kbd> | Line         |
-  | <kbd>f</kbd> | Files        |
-  | <kbd>m</kbd> | Members      |
-  | <kbd>r</kbd> | Recent Files |
-  | <kbd>t</kbd> | Types        |
-
-## Keyboard Shortcuts
+## Keyboard Shortcuts / Hot Keys / Settings / Bindings / Mappings / Commands
 
 [Default keyboard shortcuts](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019)
 
@@ -43,11 +24,35 @@
 * <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> - Move Lines Down (`Edit.MoveSelectedLinesDown`)
 
 * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> - `Window.NextTab`
-* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `Window.PreviousTab`
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> - `View.Terminal`
+  * Previously <kbd>Ctrl</kbd> + <kbd>`</kbd>
+  * Does not toggle closed if open
 
 ### Custom Shortcuts
 
 * <kbd>Ctrl</kbd> + <kbd>,</kbd> - `Tools.Options`
+* <kbd>Ctrl</kbd> + <kbd>T</kbd> - `Window.NextTab`
+
+
+## Alternatives
+
+* JetBrains - Rider
+
+## Editor
+
+* [Paste JSON and XML as a Class](https://visualstudiomagazine.com/Blogs/Tool-Tracker/2018/02/paste-json-and-xml-as-class.aspx)
+* [Go to commands](https://docs.microsoft.com/en-us/visualstudio/ide/go-to?view=vs-2019)
+
+  | Key          | Action       |
+  | ------------ | ------------ |
+  | <kbd>?</kbd> | Help         |
+  | <kbd>#</kbd> | Symbols      |
+  | <kbd>:</kbd> | Line         |
+  | <kbd>f</kbd> | Files        |
+  | <kbd>m</kbd> | Members      |
+  | <kbd>r</kbd> | Recent Files |
+  | <kbd>t</kbd> | Types        |
+
 
 ## Terminal
 

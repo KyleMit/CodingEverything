@@ -576,3 +576,23 @@ git rev-list --count <revision>
   ```bash
   git checkout HEAD~N
   ```
+
+* Show the last commit where a file was deleted
+
+  ```bash
+  git log --diff-filter=D -- .\Content\Img\list-1.svg
+  ```
+
+* [How can I reset or revert a file to a specific revision?](https://stackoverflow.com/q/215718/1366033)
+
+  ```bash
+  git checkout main -- file1/to/restore file2/to/restore
+  ```
+
+  See Also: [Reset a modified file to the state in another branch?](https://stackoverflow.com/a/78813246/1366033)
+
+  ```bash
+  git restore --source main file1/to/restore
+  ```
+
+  

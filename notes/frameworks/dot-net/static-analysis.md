@@ -1,4 +1,9 @@
-# Static Analysis
+---
+aliases:
+  - Code Analysis
+---
+
+# Static Analysis / Code Analysis
 
 
 [Code analysis in .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)
@@ -53,8 +58,9 @@
 
 ### Rules
 
-* [CA2007: Do not directly await a Task (code analysis)](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2007)
-
+* [CA2007: Do not directly await a Task](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2007)
+* [CA1849: Call async methods when in an async method](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1849)
+* [CA1852: Seal internal types](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1852)
 
 
 ## StyleCop / FX Cop

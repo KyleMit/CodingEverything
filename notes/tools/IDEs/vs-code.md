@@ -8,13 +8,14 @@
 * Cloud
   * [Cloud9](https://aws.amazon.com/cloud9/)
 
-## Keyboard Shortcuts / Hotkeys / Keybindings
+## Keyboard Shortcuts / Hot Keys / Settings / Bindings / Mappings / Commands
 
 * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> - Command Pallette
 * <kbd>Ctrl</kbd> + <kbd>P</kbd> - Find File
 * <kbd>Alt</kbd> - Show Menu
 * <kbd>Ctrl</kbd> + <kbd>E</kbd> - View: Toggle Sidebar Visibility
-* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - View: Toggle Side Panel
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> - View: Toggle 2nd Side Panel
+* <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> - Bookmarks: Toggle
 
 ## Versions / Releases
 

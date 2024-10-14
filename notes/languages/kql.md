@@ -1,3 +1,8 @@
+---
+aliases:
+  - Kusto
+---
+
 # KQL / Kusto
 
 ## Docs
