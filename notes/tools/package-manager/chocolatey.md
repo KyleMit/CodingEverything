@@ -2,6 +2,18 @@
 
 [Upgrade Command](https://chocolatey.org/docs/commandsupgrade)
 
+## Installation
+
+```bash
+winget install --id=Chocolatey.Chocolatey  -e
+winget install --id=Chocolatey.ChocolateyGUI  -e
+```
+
+## Github
+
+* [chocolatey/choco](https://github.com/chocolatey/choco)
+* [chocolatey/ChocolateyGUI](https://github.com/chocolatey/ChocolateyGUI)
+
 ## Questions
 
 [How to list installed Chocolatey packages?](https://superuser.com/q/1270151/180163)
