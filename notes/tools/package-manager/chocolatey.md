@@ -2,8 +2,19 @@
 
 [Upgrade Command](https://chocolatey.org/docs/commandsupgrade)
 
+## Installation
 
-## Chocolatey Installs
+```bash
+winget install --id=Chocolatey.Chocolatey  -e
+winget install --id=Chocolatey.ChocolateyGUI  -e
+```
+
+## Github
+
+* [chocolatey/choco](https://github.com/chocolatey/choco)
+* [chocolatey/ChocolateyGUI](https://github.com/chocolatey/ChocolateyGUI)
+
+## Chocolatey Apps
 
 * Apps
 * CLI
