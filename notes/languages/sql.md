@@ -657,3 +657,27 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
   * [NULL values inside NOT IN clause](https://stackoverflow.com/questions/129077/)
   * [SQL NOT IN not working](https://stackoverflow.com/questions/5231712/)
   * [Comparisons with NULL and the three-valued logic (3VL)](https://en.wikipedia.org/wiki/Null_(SQL)#Comparisons_with_NULL_and_the_three-valued_logic_(3VL))
+
+* Split String
+
+    [STRING_SPLIT](https://sqlfiddle.com/sql-server/online-compiler?id=cd83c0f3-a47c-4e01-884b-745d7d9126e7)
+
+    ```sql
+    DECLARE @IdList VARCHAR(MAX) = '1,2,3,4,5';  -- Comma-delimited list of IDs
+
+    SELECT value FROM STRING_SPLIT(@IdList, ',')
+    ```
+
+    [STRING_SPLIT](https://sqlfiddle.com/sql-server/online-compiler?id=ee0f7cc4-a52a-4e84-aba4-294e5d537087)
+
+    ```sql
+    DECLARE @IdList VARCHAR(MAX) = '1,2,3,4,5';  -- Comma-delimited list of IDs
+
+    CREATE TABLE #TempTable (Id INT);
+
+    INSERT INTO #TempTable (Id) 
+    SELECT CAST(value AS INT)
+    FROM STRING_SPLIT(@IdList, ',');
+
+    SELECT * FROM #TempTable
+    ```

@@ -39,6 +39,25 @@
 * <kbd>Ctrl</kbd> + <kbd>G</kbd> - Find All
 * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> - Toggle Channel Details Pane
 
+## Search Filters
+
+* **Exact match**: "quotation marks"
+* **Negation**: -dash
+* **Channel or person**: in:#team-marketing
+* **From Person**: from:@Sara
+* **Involving Person**: with:@Sara
+* **Emoji Reaction**: has::eyes::
+* **Pinned**: has:pin
+* **Attachment**: has:file
+* **Link**: has:link
+* **Saved**: is:saved
+* **Thread**: is:thread
+* **DM**: is:dm
+* **Date**
+  * during: september
+  * before: 9/29/2023
+  * after: 9/29/2023
+  * on: 9/29/2023
 
 ## Slash Commands
 
