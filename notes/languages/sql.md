@@ -681,3 +681,7 @@ SELECT @myDoc.query('/a:Products/a:ProductDescription/a:Features/a:Warranty'),
 
     SELECT * FROM #TempTable
     ```
+
+* [SSMS Results to Grid - CRLF not preserved in copy/paste](https://stackoverflow.com/a/37284582/1366033)
+
+   Tools > Options > Query Results > Results to Grid > **Retain CR/LF on Copy or Save**

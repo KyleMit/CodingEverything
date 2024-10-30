@@ -28,7 +28,11 @@ Your AI pair programmer
 ## Hotkeys
 
 * <kbd>Tab</kbd> - Accept Suggestion
-* <kbd>Alt</kbd> + <kbd>`[`</kbd> - Previous Suggestion
-* <kbd>Alt</kbd> + <kbd>`]`</kbd> - Next Suggestion
+* <kbd>Ctrl</kbd> + <kbd>→</kbd> - Accept next word of inline suggestion
+* <kbd>Ctrl</kbd> + <kbd>Enter</kbd> - Open Completions Panel
+* <kbd>Alt</kbd> + <kbd>\</kbd> - Trigger inline suggestion
+* <kbd>Alt</kbd> + <kbd>`[`</kbd> - Previous Suggestion (Previous Inline Proposal)
+* <kbd>Alt</kbd> + <kbd>`]`</kbd> - Next Suggestion (Next Inline Proposal)
+* <kbd>Esc</kbd> - Dismiss suggestion
 
 
