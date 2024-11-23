@@ -31,6 +31,12 @@ docker start some-redis
 * [Redis Commands Cheat sheet](https://redis.io/learn/howtos/quick-start/cheat-sheet)
 * [Redis Commands 101: From Basics to Mastery](https://hackthedeveloper.com/redis-commands/)
 
+## Fiddle / Playground
+
+* [Sorted Set](https://onecompiler.com/redis/42vv5h7qp)
+* [Hashset Leaderboard](https://onecompiler.com/redis/42vv5yd84)
+* [Get Set Dict](https://onecompiler.com/redis/42vvg3cve)
+
 ## Commands
 
 * [SET](https://redis.io/docs/latest/commands/set/)

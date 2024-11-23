@@ -141,6 +141,20 @@ namespace ExtensionMethods
   var x = 0xAB_CD_EF;
   ```
 
+* **declaration patterns**
+
+  ```cs
+  object greeting = "Hello, World!";
+  if (greeting is string message)
+  {
+      Console.WriteLine(message.ToLower());  // output: hello, world!
+  }
+  ```
+
+  * [Understanding the Declaration Pattern in C#](https://www.c-sharpcorner.com/blogs/understanding-the-declaration-pattern-in-c-sharp)
+  * [Pattern matching using the is and switch expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns#declaration-and-type-patterns)
+  * [Patterns and pattern matching](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/patterns#1122-declaration-pattern)
+
 ### C#8
 
 * **Pattern Matching**
@@ -718,7 +732,7 @@ namespace ExtensionMethods
   * `long`: -9223372036854775808 to 9223372036854775807
   * `ulong`: 0 to 18446744073709551615
 
-  **See Also**: [Integral numeric types - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
+  **See Also**: [Integral numeric types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
 
 
 * [Best way to check for nullable bool in a condition expression (if ...)](https://stackoverflow.com/q/2673918/1366033)

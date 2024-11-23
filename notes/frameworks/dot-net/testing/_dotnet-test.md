@@ -8,6 +8,20 @@
 * xunit
 * nunit
 
+## Docs
+
+* [Unit testing C# code in .NET using dotnet test and xUnit](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
+* [Unit testing C# with MSTest and .NET](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
+  * [Use MSTest in unit tests](https://learn.microsoft.com/en-us/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests?view=vs-2022)
+
+## Nuget
+
+* [MSTest.TestFramework 3.6.2](https://www.nuget.org/packages/MSTest.TestFramework)
+* [MSTest.TestAdapter 3.6.2](https://www.nuget.org/packages/MSTest.TestAdapter/)
+* [xunit 2.9.2](https://www.nuget.org/packages/xunit)
+* [xunit.runner.visualstudio 2.8.2](https://www.nuget.org/packages/xunit.runner.visualstudio)
+* [coverlet.collector 6.0.2](https://www.nuget.org/packages/coverlet.collector#readme-body-tab)
+
 ## Comparison
 
 * [NUnit vs. XUnit vs. MSTest](https://www.lambdatest.com/blog/nunit-vs-xunit-vs-mstest/)

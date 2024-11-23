@@ -20,6 +20,14 @@
 * [fastapi/fastapi: FastAPI framework, high performance, easy to learn, fast to code, ready for production](https://github.com/fastapi/fastapi)
 * [FastAPI - FastAPI](https://fastapi.tiangolo.com/)
 
+* Async Context Manager
+
+  * [Lifespan Events - FastAPI](https://fastapi.tiangolo.com/advanced/events/#async-context-manager)
+  * [How to initialise a global object or variable and reuse it in every FastAPI endpoint?](https://stackoverflow.com/questions/76322463/)
+  * [What is the proper way to make downstream HTTP requests inside of Uvicorn/FastAPI?](https://stackoverflow.com/questions/73721736/)
+  * [Optimal approach for reusing objects in FastAPI: direct initialization vs. dependency injection](https://stackoverflow.com/questions/76879232/)
+  * [How to process requests from multiple users using ML model and FastAPI?](https://stackoverflow.com/questions/71613305/)
+
 ## Connexion
 
 
