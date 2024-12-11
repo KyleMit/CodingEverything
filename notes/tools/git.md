@@ -412,6 +412,8 @@ git rev-list --count <revision>
   git config --global --add --bool push.autoSetupRemote true
   ```
 
+  **See Also**: [Automatically track remote branch with git](https://stackoverflow.com/questions/29422101/automatically-track-remote-branch-with-git)
+
 * [Merge (with squash) all changes from another branch as a single commit](https://stackoverflow.com/q/3697178/1366033)
 
   ```bash
@@ -595,4 +597,20 @@ git rev-list --count <revision>
   git restore --source main file1/to/restore
   ```
 
-  
+* Remove a directory of files from tracking
+
+  ```bash
+  git rm -r --cached test-svelte-references/wwwroot/lib
+  ```
+
+  `-r` recursive
+  `--cached` remove from index, but keep in working directory
+
+
+* How to tell if a file is matched by gitignore
+
+  ```bash
+  git check-ignore -v test-svelte-references/wwwroot/lib/bootstrap.bundle.js
+  ```
+
+  If it returns nothing, it means gitignore is not matching the file
