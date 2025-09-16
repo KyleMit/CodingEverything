@@ -3,6 +3,7 @@ _site
 .env
 .netlify
 .cache
+.DS_Store
 
 # Obsidian
 .obsidian/workspace.json
