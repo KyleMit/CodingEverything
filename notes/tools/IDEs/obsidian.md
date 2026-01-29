@@ -217,3 +217,7 @@
   * [Adding built in LLM/AI support to stay relevant - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/adding-built-in-llm-ai-support-to-stay-relevant/72954)
   * [Local AI integration? - Help - Obsidian Forum](https://forum.obsidian.md/t/local-ai-integration/71931)
   * [zatevakhin/obsidian-local-llm: Obsidian Local LLM is a plugin for Obsidian that provides access to a powerful neural network, allowing users to generate text in a wide range of styles and formats using a local LLM.](https://github.com/zatevakhin/obsidian-local-llm)
+
+## Format Tables
+
+* [tgrosinger/advanced-tables-obsidian: Improved table navigation, formatting, and manipulation in Obsidian.md](https://github.com/tgrosinger/advanced-tables-obsidian)
