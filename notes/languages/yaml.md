@@ -5,6 +5,16 @@
 * [Spec Version 1.2](https://yaml.org/spec/1.2/spec.html)
 * [Convert JSON to YAML](https://www.json2yaml.com/)
 
+## Syntax Highlighting
+
+* [YAML Embedded Languages - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=harrydowning.yaml-embedded-languages)
+  * [harrydowning/vscode-yaml-embedded-languages: A VS Code syntax extension for embedded language highlighting in YAML](https://github.com/harrydowning/vscode-yaml-embedded-languages)
+* [YAML Embedded Code Highlighting - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=WondaCorp.yaml-code-injection-highlight)
+  * [tinwonda/yaml-embedded-languages: A Visual Studio Code extension that provides syntax highlighting for embedded code (SQL, Python, JavaScript, Bash) in YAML files. Perfect for database migrations, Spark/Databricks configs, ETL pipelines, and YAML-based configurations.](https://github.com/tinwonda/yaml-embedded-languages)
+* [Extended Embedded Languages - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ruschaaf.extended-embedded-languages)
+  * [ruschaaf/extended-embedded-languages: VSCode extension for better syntax highlighting of embedded languages](https://github.com/ruschaaf/extended-embedded-languages)
+
+
 ## Questions
 
 * [Why does yaml start with `---`](https://stackoverflow.com/q/50788277/1366033)
