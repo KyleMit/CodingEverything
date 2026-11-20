@@ -185,7 +185,7 @@
 
 * [How to Modify the Icon of an EXE File](https://www.howtogeek.com/75983/stupid-geek-tricks-how-to-modify-the-icon-of-an-.exe-file/)
 
-  Use [Resource Hacker](http://www.angusj.com/resourcehacker/)
+  Use [Resource Hacker](http://www.angusj.com/resourcehacker/) or [Resource Cracker](https://www.pelock.com/products/resource-cracker)
 
 
 * [Refresh Icon Cache Without Rebooting](https://superuser.com/questions/499078/refresh-icon-cache-without-rebooting)
